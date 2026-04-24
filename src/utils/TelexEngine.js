@@ -14,12 +14,23 @@ export class TelexEngine {
     }
 
     _apply(raw) {
-        let result = raw;
         const toneMarks = "sfrxjz";
+
+        // Build cleanRaw (raw minus tone marks) and position mapping
+        let cleanRaw = "";
+        let rawToCleanMap = [];
+        for (let i = 0; i < raw.length; i++) {
+            if (!toneMarks.includes(raw[i])) {
+                rawToCleanMap.push(i);
+                cleanRaw += raw[i];
+            }
+        }
+
+        // Collect every rule that can match the raw string
+        const matches = [];
         const rules = Object.entries(this.rules).sort((a, b) => b[0].length - a[0].length);
 
         for (const [pattern, replacement] of rules) {
-            // Phân tách pattern thành phần cơ sở (base) và các dấu thanh (tones)
             let pBase = "";
             let pTones = [];
             for (const c of pattern) {
@@ -27,74 +38,63 @@ export class TelexEngine {
                 else pBase += c;
             }
 
-            // Tạo chuỗi chỉ chứa các ký tự cơ sở (bỏ qua dấu thanh đang xen ngang)
-            let cleanRaw = "";
-            let rawToCleanMap = []; // Ánh xạ vị trí từ cleanRaw ngược lại chuỗi gốc
-            for (let i = 0; i < result.length; i++) {
-                if (!toneMarks.includes(result[i])) {
-                    cleanRaw += result[i];
-                    rawToCleanMap.push(i);
+            const baseIdx = pBase ? cleanRaw.indexOf(pBase) : 0;
+            if (pBase && baseIdx === -1) continue;
+
+            const baseIndicesInRaw = pBase
+                ? Array.from({ length: pBase.length }, (_, i) => rawToCleanMap[baseIdx + i])
+                : [];
+
+            // Search for tone marks AFTER the base start position
+            const tempChars = raw.split('');
+            for (const idx of baseIndicesInRaw) tempChars[idx] = null;
+
+            const searchStart = baseIndicesInRaw.length > 0 ? baseIndicesInRaw[0] : 0;
+            let tonesMatch = true;
+            const toneIndicesInRaw = [];
+
+            for (const t of pTones) {
+                const tIdx = tempChars.indexOf(t, searchStart);
+                if (tIdx !== -1) {
+                    toneIndicesInRaw.push(tIdx);
+                    tempChars[tIdx] = null;
+                } else {
+                    tonesMatch = false;
+                    break;
                 }
             }
 
-            // 1. Kiểm tra phần cơ sở phải xuất hiện liên tiếp trong cleanRaw
-            let baseIdx = pBase ? cleanRaw.indexOf(pBase) : 0;
-            
-            if (baseIdx !== -1) {
-                // Xác định vị trí thực tế của các ký tự cơ sở trong chuỗi gốc
-                let baseIndicesInRaw = [];
-                if (pBase) {
-                    for (let i = 0; i < pBase.length; i++) {
-                        baseIndicesInRaw.push(rawToCleanMap[baseIdx + i]);
-                    }
-                }
-
-                // 2. Tìm kiếm các dấu thanh
-                let tempChars = result.split('');
-                for (const idx of baseIndicesInRaw) tempChars[idx] = null; // Bỏ qua phần base
-
-                let tonesMatch = true;
-                let toneIndicesInRaw = [];
-                // QUAN TRỌNG: Dấu thanh phải nằm SAU ký tự cơ sở mà nó bổ nghĩa
-                let searchStart = baseIndicesInRaw.length > 0 ? baseIndicesInRaw[0] : 0;
-
-                for (const t of pTones) {
-                    const tIdx = tempChars.indexOf(t, searchStart);
-                    if (tIdx !== -1) {
-                        toneIndicesInRaw.push(tIdx);
-                        tempChars[tIdx] = null;
-                    } else {
-                        tonesMatch = false;
-                        break;
-                    }
-                }
-
-                if (tonesMatch) {
-                    // 3. Thực hiện thay thế
-                    let finalChars = result.split('');
-                    
-                    if (baseIndicesInRaw.length > 0) {
-                        finalChars[baseIndicesInRaw[0]] = replacement;
-                        // Xóa các ký tự còn lại của base
-                        for (let i = 1; i < baseIndicesInRaw.length; i++) {
-                            finalChars[baseIndicesInRaw[i]] = "";
-                        }
-                    } else if (toneIndicesInRaw.length > 0) {
-                        // Trường hợp rule chỉ toàn dấu thanh
-                        finalChars[toneIndicesInRaw[0]] = replacement;
-                        toneIndicesInRaw.shift();
-                    }
-
-                    // Xóa các ký tự dấu thanh đã dùng
-                    for (const tIdx of toneIndicesInRaw) {
-                        finalChars[tIdx] = "";
-                    }
-                    
-                    result = finalChars.join('');
-                }
+            if (tonesMatch) {
+                const baseStart = baseIndicesInRaw.length > 0
+                    ? baseIndicesInRaw[0]
+                    : (toneIndicesInRaw.length > 0 ? toneIndicesInRaw[0] : 0);
+                matches.push({ baseStart, patternLength: pattern.length, baseIndices: baseIndicesInRaw, toneIndices: toneIndicesInRaw, replacement });
             }
         }
-        return result;
+
+        // Resolve conflicts: earlier base position wins; break ties by longer pattern.
+        // This ensures e.g. "is" (base at pos 1) beats "as" (base at pos 2) when both
+        // compete for the same tone mark, so "mias" → "mía" not "miá".
+        matches.sort((a, b) => a.baseStart - b.baseStart || b.patternLength - a.patternLength);
+
+        const consumed = new Set();
+        const finalChars = raw.split('');
+
+        for (const { baseIndices, toneIndices, replacement } of matches) {
+            const allPos = [...baseIndices, ...toneIndices];
+            if (allPos.some(p => consumed.has(p))) continue;
+
+            if (baseIndices.length > 0) {
+                finalChars[baseIndices[0]] = replacement;
+                for (let i = 1; i < baseIndices.length; i++) finalChars[baseIndices[i]] = "";
+            } else if (toneIndices.length > 0) {
+                finalChars[toneIndices[0]] = replacement;
+            }
+            for (const t of toneIndices) finalChars[t] = "";
+            allPos.forEach(p => consumed.add(p));
+        }
+
+        return finalChars.join('');
     }
 
     static applyRules(raw, rules) {
