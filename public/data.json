@@ -190,12 +190,12 @@
         },
         {
           "display": "cửa",
-          "keys": "cuwra",
+          "keys": "cuwar",
           "reward": "yellow_banana"
         },
         {
           "display": "cứu",
-          "keys": "cuwsu",
+          "keys": "cuwus",
           "reward": "yellow_banana"
         }
       ]
@@ -212,17 +212,17 @@
         },
         {
           "display": "bắt",
-          "keys": "bawst",
+          "keys": "bawts",
           "reward": "yellow_banana"
         },
         {
           "display": "cắt",
-          "keys": "cawst",
+          "keys": "cawts",
           "reward": "yellow_banana"
         },
         {
           "display": "nắm",
-          "keys": "nawsm",
+          "keys": "nawms",
           "reward": "yellow_banana"
         },
         {
@@ -232,7 +232,7 @@
         },
         {
           "display": "bầu",
-          "keys": "baafu",
+          "keys": "baauf",
           "reward": "yellow_banana"
         }
       ]
@@ -248,7 +248,7 @@
         },
         {
           "display": "cửa",
-          "keys": "cuwra",
+          "keys": "cuwar",
           "reward": "yellow_banana"
         },
         {
@@ -335,12 +335,12 @@
         },
         {
           "display": "đội",
-          "keys": "ddooji",
+          "keys": "ddooij",
           "reward": "yellow_banana"
         },
         {
           "display": "mệt",
-          "keys": "meejt",
+          "keys": "meetj",
           "reward": "yellow_banana"
         }
       ]
@@ -387,12 +387,12 @@
       "content": [
         {
           "display": "mắt",
-          "keys": "mawst",
+          "keys": "mawts",
           "reward": "yellow_banana"
         },
         {
           "display": "mặn",
-          "keys": "mawjn",
+          "keys": "mawnj",
           "reward": "yellow_banana"
         },
         {
@@ -402,7 +402,7 @@
         },
         {
           "display": "mầm",
-          "keys": "maafm",
+          "keys": "maamf",
           "reward": "yellow_banana"
         },
         {
@@ -412,7 +412,7 @@
         },
         {
           "display": "cận",
-          "keys": "caajn",
+          "keys": "caanj",
           "reward": "yellow_banana"
         }
       ]
@@ -484,7 +484,7 @@
         },
         {
           "display": "con gián",
-          "keys": "con giasn",
+          "keys": "con gians",
           "reward": "yellow_banana"
         }
       ]
@@ -617,8 +617,8 @@
           "reward": "yellow_banana"
         },
         {
-          "display": "đuà giỡn",
-          "keys": "dduaf gioownx",
+          "display": "đùa giỡn",
+          "keys": "dduaf giownx",
           "reward": "yellow_banana"
         },
         {
@@ -639,7 +639,7 @@
       "content": [
         {
           "display": "buồng chuối",
-          "keys": "buongf chuoiss",
+          "keys": "buoongf chuoois",
           "reward": "yellow_banana"
         },
         {
@@ -649,22 +649,22 @@
         },
         {
           "display": "tiền bạc",
-          "keys": "tiefn bacj",
+          "keys": "tieefn bacj",
           "reward": "yellow_banana"
         },
         {
           "display": "cuối tuần",
-          "keys": "cuois tuafn",
+          "keys": "cuois tuaafn",
           "reward": "yellow_banana"
         },
         {
           "display": "vườn rau",
-          "keys": "vuwornf rau",
+          "keys": "vuwownf rau",
           "reward": "yellow_banana"
         },
         {
           "display": "biển cả",
-          "keys": "bienr car",
+          "keys": "bieenr car",
           "reward": "yellow_banana"
         }
       ]
@@ -680,17 +680,17 @@
         },
         {
           "display": "máy bay",
-          "keys": "mayys bay",
+          "keys": "mays bay",
           "reward": "yellow_banana"
         },
         {
           "display": "đám mây",
-          "keys": "ddaamms may",
+          "keys": "ddaamms maay",
           "reward": "yellow_banana"
         },
         {
           "display": "cái tai",
-          "keys": "cai tai",
+          "keys": "cais tai",
           "reward": "yellow_banana"
         },
         {
@@ -700,7 +700,7 @@
         },
         {
           "display": "thợ xây",
-          "keys": "thowj xay",
+          "keys": "thowj xaay",
           "reward": "yellow_banana"
         }
       ]
@@ -711,17 +711,17 @@
       "content": [
         {
           "display": "cái còi",
-          "keys": "cai coif",
+          "keys": "cais coif",
           "reward": "yellow_banana"
         },
         {
           "display": "bộ nồi",
-          "keys": "booj noif",
+          "keys": "booj nooif",
           "reward": "yellow_banana"
         },
         {
           "display": "đồ chơi",
-          "keys": "ddoo choiw",
+          "keys": "ddoof chowi",
           "reward": "yellow_banana"
         },
         {
@@ -736,7 +736,7 @@
         },
         {
           "display": "bơi lội",
-          "keys": "bowi looj",
+          "keys": "bowi looij",
           "reward": "yellow_banana"
         }
       ]
@@ -747,7 +747,7 @@
       "content": [
         {
           "display": "cái túi",
-          "keys": "cai tuis",
+          "keys": "cais tuis",
           "reward": "yellow_banana"
         },
         {
@@ -757,12 +757,12 @@
         },
         {
           "display": "nải chuối",
-          "keys": "nai chuoiss",
+          "keys": "nair chuoois",
           "reward": "yellow_banana"
         },
         {
           "display": "múi bưởi",
-          "keys": "muis buowir",
+          "keys": "muis buwowir",
           "reward": "yellow_banana"
         },
         {
@@ -772,7 +772,7 @@
         },
         {
           "display": "cuối cùng",
-          "keys": "cuois cungf",
+          "keys": "cuoois cungf",
           "reward": "yellow_banana"
         }
       ]
@@ -793,7 +793,7 @@
         },
         {
           "display": "bồ câu",
-          "keys": "boof cau",
+          "keys": "boof caau",
           "reward": "yellow_banana"
         },
         {
@@ -819,32 +819,32 @@
       "content": [
         {
           "display": "cái phễu",
-          "keys": "cai pheux",
+          "keys": "cais pheeux",
           "reward": "yellow_banana"
         },
         {
           "display": "thả diều",
-          "keys": "thar dieuf",
+          "keys": "thar dieeuf",
           "reward": "yellow_banana"
         },
         {
           "display": "yêu quý",
-          "keys": "yeu quyis",
+          "keys": "yeeu quys",
           "reward": "yellow_banana"
         },
         {
           "display": "nêu cao",
-          "keys": "neu cao",
+          "keys": "neeu cao",
           "reward": "yellow_banana"
         },
         {
           "display": "chiếu phim",
-          "keys": "chieu phim",
+          "keys": "chieeus phim",
           "reward": "yellow_banana"
         },
         {
           "display": "kêu gọi",
-          "keys": "keu goj",
+          "keys": "keeu goij",
           "reward": "yellow_banana"
         }
       ]
@@ -855,7 +855,7 @@
       "content": [
         {
           "display": "trái lựu",
-          "keys": "trais luuj",
+          "keys": "trais luwuj",
           "reward": "yellow_banana"
         },
         {
@@ -864,13 +864,13 @@
           "reward": "yellow_banana"
         },
         {
-          "display": "thuỏ nhỏ",
-          "keys": "thuoar nho",
+          "display": "thuở nhỏ",
+          "keys": "thuowr nhor",
           "reward": "yellow_banana"
         },
         {
           "display": "mưu trí",
-          "keys": "muu tri",
+          "keys": "muwu tris",
           "reward": "yellow_banana"
         },
         {
@@ -880,7 +880,7 @@
         },
         {
           "display": "khua tay",
-          "keys": "khua tayy",
+          "keys": "khua tay",
           "reward": "yellow_banana"
         }
       ]
@@ -891,12 +891,12 @@
       "content": [
         {
           "display": "cái bảng",
-          "keys": "cai bangr",
+          "keys": "cais bangr",
           "reward": "yellow_banana"
         },
         {
           "display": "quyển sách",
-          "keys": "quyenr sachs",
+          "keys": "quyeenr sachs",
           "reward": "yellow_banana"
         },
         {
@@ -906,17 +906,17 @@
         },
         {
           "display": "ánh sáng",
-          "keys": "anhs saangs",
+          "keys": "anhs sangs",
           "reward": "yellow_banana"
         },
         {
           "display": "viên gạch",
-          "keys": "vien gachj",
+          "keys": "vieen gachj",
           "reward": "yellow_banana"
         },
         {
           "display": "làng quê",
-          "keys": "langf que",
+          "keys": "langf quee",
           "reward": "yellow_banana"
         }
       ]
@@ -927,7 +927,7 @@
       "content": [
         {
           "display": "con công",
-          "keys": "con cong",
+          "keys": "con coong",
           "reward": "yellow_banana"
         },
         {
@@ -937,7 +937,7 @@
         },
         {
           "display": "trống trường",
-          "keys": "trongs truwowngf",
+          "keys": "troongs truwowngf",
           "reward": "yellow_banana"
         },
         {
@@ -947,12 +947,12 @@
         },
         {
           "display": "dòng sông",
-          "keys": "dongf song",
+          "keys": "dongf soong",
           "reward": "yellow_banana"
         },
         {
           "display": "không trung",
-          "keys": "khong trung",
+          "keys": "khoong trung",
           "reward": "yellow_banana"
         }
       ]
@@ -963,12 +963,12 @@
       "content": [
         {
           "display": "áo khoác",
-          "keys": "ao khoacs",
+          "keys": "aos khoacs",
           "reward": "yellow_banana"
         },
         {
           "display": "bâng khuâng",
-          "keys": "bang khuang",
+          "keys": "baang khuaang",
           "reward": "yellow_banana"
         },
         {
@@ -988,7 +988,7 @@
         },
         {
           "display": "huân chương",
-          "keys": "huan chuong",
+          "keys": "huaan chuwowng",
           "reward": "yellow_banana"
         }
       ]
@@ -1004,12 +1004,12 @@
         },
         {
           "display": "con công múa xòe",
-          "keys": "con cong muas xoef",
+          "keys": "con coong muas xoef",
           "reward": "yellow_banana"
         },
         {
           "display": "chim đậu cành tre",
-          "keys": "chim ddauj canhf tre",
+          "keys": "chim ddaauj canhf tre",
           "reward": "yellow_banana"
         },
         {
@@ -1019,12 +1019,12 @@
         },
         {
           "display": "mưa rơi tí tách",
-          "keys": "muwa rowi tis tach",
+          "keys": "muwa rowi tis tachs",
           "reward": "yellow_banana"
         },
         {
           "display": "chăm chỉ học hành",
-          "keys": "cham chir hocj hanhf",
+          "keys": "chawm chir hocj hanhf",
           "reward": "yellow_banana"
         }
       ]

@@ -601,7 +601,8 @@ export class PlayScene extends Phaser.Scene {
         const lesson = this.data.lessons[this.currentLessonIndex];
         const isLast = this.currentLessonIndex >= this.data.lessons.length - 1;
 
-        this.input.keyboard.enabled = false;
+        // Ngắt listener gõ phím chính
+        this.input.keyboard.off('keydown', this.handleKeyDown, this);
         this._resetKeys();
 
         const overlay = this.add.graphics();
@@ -656,21 +657,28 @@ export class PlayScene extends Phaser.Scene {
         }).setOrigin(0.5).setAlpha(0);
 
         const hitZone = this.add.zone(cx, btnY, btnW, btnH).setInteractive({ useHandCursor: true });
-
         const allObjects = [overlay, blocker, panel, headerText, subText, starsText, btnBg, btnText, hitZone];
-
-        const origY = this.monkey.y;
+        const lessonBananas = [];
+        const lessonTimers = [];
 
         const advance = () => {
+            this.input.keyboard.off('keydown-SPACE', advance);
+            this.input.keyboard.on('keydown', this.handleKeyDown, this);
+            lessonTimers.forEach(t => t.remove());
+            lessonBananas.forEach(b => { if (b.active) b.destroy(); });
             allObjects.forEach(o => o.destroy());
             this.tweens.killAll();
             this.monkey.y = origY;
-            this.input.keyboard.enabled = true;
             this.currentLessonIndex = isLast ? 0 : this.currentLessonIndex + 1;
             this.currentWordIndex = 0;
             this._saveProgress();
             this.startLesson();
         };
+
+        // Cho phép nhấn SPACE để qua màn
+        this.input.keyboard.once('keydown-SPACE', advance);
+
+        const origY = this.monkey.y;
 
         hitZone.on('pointerover', () => {
             btnBg.clear();
@@ -708,20 +716,28 @@ export class PlayScene extends Phaser.Scene {
         });
 
         for (let i = 0; i < 10; i++) {
-            this.time.delayedCall(i * 130, () => {
+            const timer = this.time.delayedCall(i * 130, () => {
                 const b = this.add.image(
                     Phaser.Math.Between(30, width - 30), -30, 'banana'
                 ).setScale(Phaser.Math.FloatBetween(0.2, 0.4))
                     .setAngle(Phaser.Math.Between(-45, 45));
+                
+                lessonBananas.push(b);
+
                 this.tweens.add({
                     targets: b,
                     y: height + 40,
                     angle: b.angle + Phaser.Math.Between(-180, 180),
                     duration: Phaser.Math.Between(900, 1600),
                     ease: 'Linear',
-                    onComplete: () => b.destroy()
+                    onComplete: () => {
+                        const idx = lessonBananas.indexOf(b);
+                        if (idx > -1) lessonBananas.splice(idx, 1);
+                        b.destroy();
+                    }
                 });
             });
+            lessonTimers.push(timer);
         }
     }
 }
