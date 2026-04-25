@@ -1,0 +1,277 @@
+{
+  "lessons": [
+    {
+      "id": "level_1",
+      "title": "Dấu sắc và huyền (á, à)",
+      "bg_image": "jungle_bg",
+      "content": [
+        {
+          "display": "ba",
+          "keys": "ba",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cá",
+          "keys": "cas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cà",
+          "keys": "caf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lá",
+          "keys": "las",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "là",
+          "keys": "laf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "má",
+          "keys": "mas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mà",
+          "keys": "maf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bà",
+          "keys": "baf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_2",
+      "title": "Nguyên âm ê và ô",
+      "bg_image": "jungle_bg",
+      "content": [
+        {
+          "display": "bê",
+          "keys": "bee",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lê",
+          "keys": "lee",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mê",
+          "keys": "mee",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cô",
+          "keys": "coo",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tô",
+          "keys": "too",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đê",
+          "keys": "ddee",
+          "reward": "red_banana"
+        },
+        {
+          "display": "đô",
+          "keys": "ddoo",
+          "reward": "red_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_3",
+      "title": "Chữ đ và dấu trên ô",
+      "bg_image": "jungle_bg",
+      "content": [
+        {
+          "display": "đi",
+          "keys": "ddi",
+          "reward": "red_banana"
+        },
+        {
+          "display": "đó",
+          "keys": "ddos",
+          "reward": "red_banana"
+        },
+        {
+          "display": "bố",
+          "keys": "boos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bồ",
+          "keys": "boof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cổ",
+          "keys": "coor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bộ",
+          "keys": "booj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_4",
+      "title": "Nguyên âm ơ",
+      "bg_image": "jungle_bg",
+      "content": [
+        {
+          "display": "bơ",
+          "keys": "bow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mơ",
+          "keys": "mow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bơi",
+          "keys": "bowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cờ",
+          "keys": "cowf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mở",
+          "keys": "mowr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bờ",
+          "keys": "bowf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_5",
+      "title": "Nguyên âm ư",
+      "bg_image": "jungle_bg",
+      "content": [
+        {
+          "display": "tư",
+          "keys": "tuw",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "từ",
+          "keys": "tuwf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thư",
+          "keys": "thuw",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa",
+          "keys": "muwa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cửa",
+          "keys": "cuwar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cứu",
+          "keys": "cuwus",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_6",
+      "title": "Nguyên âm ă và â",
+      "bg_image": "jungle_bg",
+      "content": [
+        {
+          "display": "ăn",
+          "keys": "awn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bắt",
+          "keys": "bawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cắt",
+          "keys": "cawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nắm",
+          "keys": "nawms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "câu",
+          "keys": "caau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bầu",
+          "keys": "baauf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_7",
+      "title": "Dấu hỏi và ngã (ả, ã, ẻ, ẽ...)",
+      "content": [
+        {
+          "display": "mở",
+          "keys": "mowr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cửa",
+          "keys": "cuwar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vẽ",
+          "keys": "vex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khẽ",
+          "keys": "khex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngủ",
+          "keys": "ngur",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kỹ",
+          "keys": "kyx",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -14,6 +14,12 @@ export class TelexEngine {
     }
 
     _apply(raw) {
+        return raw.split(' ')
+            .map(word => this._applyToWord(word))
+            .join(' ');
+    }
+
+    _applyToWord(raw) {
         const toneMarks = "sfrxjz";
 
         // Build cleanRaw (raw minus tone marks) and position mapping
@@ -72,10 +78,9 @@ export class TelexEngine {
             }
         }
 
-        // Resolve conflicts: earlier base position wins; break ties by longer pattern.
-        // This ensures e.g. "is" (base at pos 1) beats "as" (base at pos 2) when both
-        // compete for the same tone mark, so "mias" → "mía" not "miá".
-        matches.sort((a, b) => a.baseStart - b.baseStart || b.patternLength - a.patternLength);
+        // Resolve conflicts: longer pattern wins first (prioritizes complex vowels like ê, â, ô);
+        // break ties by earlier base position (ensures "mias" → "mía").
+        matches.sort((a, b) => b.patternLength - a.patternLength || a.baseStart - b.baseStart);
 
         const consumed = new Set();
         const finalChars = raw.split('');

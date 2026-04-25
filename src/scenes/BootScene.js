@@ -29,7 +29,21 @@ export class BootScene extends Phaser.Scene {
         this.load.image('banana', 'assets/banana.png');
         this.load.image('hand_left', 'assets/hand_left.png');
         this.load.image('hand_right', 'assets/hand_right.png');
-        this.load.json('gameData', 'data.json');
+        
+        // Load manifest
+        this.load.json('manifest', 'data.json');
+        
+        // Listen for manifest completion to load sub-files
+        this.load.on('filecomplete-json-manifest', (key, type, data) => {
+            if (data.rulesFile) {
+                this.load.json('rules', data.rulesFile);
+            }
+            if (data.lessonFiles) {
+                data.lessonFiles.forEach((file, index) => {
+                    this.load.json(`lessons_chunk_${index}`, file);
+                });
+            }
+        });
         
         // Progress bar
         const progressBar = this.add.graphics();
@@ -44,6 +58,25 @@ export class BootScene extends Phaser.Scene {
         });
 
         this.load.on('complete', () => {
+            // Reassemble gameData from parts
+            const manifest = this.cache.json.get('manifest');
+            const rules = this.cache.json.get('rules');
+            const allLessons = [];
+            
+            if (manifest && manifest.lessonFiles) {
+                manifest.lessonFiles.forEach((_, index) => {
+                    const chunk = this.cache.json.get(`lessons_chunk_${index}`);
+                    if (chunk && chunk.lessons) {
+                        allLessons.push(...chunk.lessons);
+                    }
+                });
+            }
+
+            this.cache.json.add('gameData', {
+                lessons: allLessons,
+                telex_rules: rules ? rules.telex_rules : {}
+            });
+
             progressBar.destroy();
             progressBox.destroy();
             loadingText.destroy();

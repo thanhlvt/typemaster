@@ -1,0 +1,256 @@
+{
+  "lessons": [
+    {
+      "id": "level_15",
+      "title": "Vần in, im, ip (chim sẻ, nhịp cầu...)",
+      "content": [
+        {
+          "display": "chim sẻ",
+          "keys": "chim ser",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhịp cầu",
+          "keys": "nhipj caauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trái chín",
+          "keys": "trais chins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "màu tím",
+          "keys": "mauf tims",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kịp lúc",
+          "keys": "kipj lucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhìn xem",
+          "keys": "nhinf xem",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_16",
+      "title": "Vần oa, oe, uy (đóa hoa, vàng hoe...)",
+      "content": [
+        {
+          "display": "đoá hoa",
+          "keys": "ddoas hoa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vàng hoe",
+          "keys": "vangf hoe",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "huy hiệu",
+          "keys": "huy hieeuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "toà nhà",
+          "keys": "toaf nhaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muá xoè",
+          "keys": "muas xoef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tàu thủy",
+          "keys": "tauf thuyr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_17",
+      "title": "Vần đôi ia, ua, ưa (cây mía, con cua...)",
+      "content": [
+        {
+          "display": "cây mía",
+          "keys": "caay mias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con cua",
+          "keys": "con cua",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xe ngựa",
+          "keys": "xe nguwaj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đùa giỡn",
+          "keys": "dduaf giownx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa rơi",
+          "keys": "muwa rowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chia sẻ",
+          "keys": "chia ser",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_18",
+      "title": "Vần đôi iê, uô, ươ (buồng chuối, con hươu...)",
+      "content": [
+        {
+          "display": "buồng chuối",
+          "keys": "buoongf chuoois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con hươu",
+          "keys": "con huwowu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiền bạc",
+          "keys": "tieefn bacj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuối tuần",
+          "keys": "cuois tuaafn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vườn rau",
+          "keys": "vuwownf rau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biển cả",
+          "keys": "bieenr car",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_19",
+      "title": "Vần ai, ay, ây (hoa mai, đám mây...)",
+      "content": [
+        {
+          "display": "hoa mai",
+          "keys": "hoa mai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "máy bay",
+          "keys": "mays bay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đám mây",
+          "keys": "ddaamms maay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cái tai",
+          "keys": "cais tai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dạy học",
+          "keys": "dayj hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thợ xây",
+          "keys": "thowj xaay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_20",
+      "title": "Vần oi, ôi, ơi (cái còi, đồ chơi...)",
+      "content": [
+        {
+          "display": "cái còi",
+          "keys": "cais coif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bộ nồi",
+          "keys": "booj nooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồ chơi",
+          "keys": "ddoof chowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngon dẻo",
+          "keys": "ngon deor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thổi sáo",
+          "keys": "thooir saos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bơi lội",
+          "keys": "bowi looij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_21",
+      "title": "Vần ui, ưi, uôi (cái túi, nải chuối...)",
+      "content": [
+        {
+          "display": "cái túi",
+          "keys": "cais tuis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gửi quà",
+          "keys": "guwir quar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nải chuối",
+          "keys": "nair chuoois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "múi bưởi",
+          "keys": "muis buwowir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vui vẻ",
+          "keys": "vui ver",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuối cùng",
+          "keys": "cuoois cungf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "lessons": [
+    {
+      "id": "level_22",
+      "title": "Vần eo, ao, au (con mèo, ngôi sao...)",
+      "content": [
+        {
+          "display": "con mèo",
+          "keys": "con meof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngôi sao",
+          "keys": "ngooi sao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bồ câu",
+          "keys": "boof caau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo tay",
+          "keys": "kheos tay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rau cải",
+          "keys": "rau cair",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tờ báo",
+          "keys": "towf baos",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_23",
+      "title": "Vần êu, iêu, yêu (cái phễu, yêu quý...)",
+      "content": [
+        {
+          "display": "cái phễu",
+          "keys": "cais pheeux",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thả diều",
+          "keys": "thar dieeuf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu quý",
+          "keys": "yeeu quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nêu cao",
+          "keys": "neeu cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiếu phim",
+          "keys": "chieeus phim",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kêu gọi",
+          "keys": "keeu goij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_24",
+      "title": "Vần ưu, ươu, uơ (trái lựu, thuở nhỏ...)",
+      "content": [
+        {
+          "display": "trái lựu",
+          "keys": "trais luwuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con hươu",
+          "keys": "con huwowu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thuở nhỏ",
+          "keys": "thuowr nhor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưu trí",
+          "keys": "muwu tris",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rượu nho",
+          "keys": "ruwowuj nho",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khua tay",
+          "keys": "khua tay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_25",
+      "title": "Vần ang, anh, ach (cái bảng, quyển sách...)",
+      "content": [
+        {
+          "display": "cái bảng",
+          "keys": "cais bangr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyển sách",
+          "keys": "quyeenr sachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cành chanh",
+          "keys": "canhf chanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ánh sáng",
+          "keys": "anhs sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "viên gạch",
+          "keys": "vieen gachj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làng quê",
+          "keys": "langf quee",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_26",
+      "title": "Vần ong, ông, ung (con công, hoa cúc...)",
+      "content": [
+        {
+          "display": "con công",
+          "keys": "con coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoa cúc",
+          "keys": "hoa cucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trống trường",
+          "keys": "troongs truwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vui mừng",
+          "keys": "vui muwngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dòng sông",
+          "keys": "dongf soong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không trung",
+          "keys": "khoong trung",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_27",
+      "title": "Vần oang, oanh, uâng (áo khoác, bâng khuâng...)",
+      "content": [
+        {
+          "display": "áo khoác",
+          "keys": "aos khoacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bâng khuâng",
+          "keys": "baang khuaang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chim oanh",
+          "keys": "chim oanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "loáng thoáng",
+          "keys": "loangs thoangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quanh co",
+          "keys": "quanh co",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "huân chương",
+          "keys": "huaan chuwowng",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_28",
+      "title": "Ôn tập tổng hợp câu ngắn",
+      "content": [
+        {
+          "display": "em yêu trường em",
+          "keys": "em yeeu truwowngf em",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con công múa xòe",
+          "keys": "con coong muas xoef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chim đậu cành tre",
+          "keys": "chim ddaauj canhf tre",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bố mẹ yêu con",
+          "keys": "boos mej yeeu con",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa rơi tí tách",
+          "keys": "muwa rowi tis tachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm chỉ học hành",
+          "keys": "chawm chir hocj hanhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

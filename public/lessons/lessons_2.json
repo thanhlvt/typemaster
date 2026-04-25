@@ -1,0 +1,256 @@
+{
+  "lessons": [
+    {
+      "id": "level_8",
+      "title": "Dấu nặng (ạ, mẹ, chị...)",
+      "content": [
+        {
+          "display": "lạ",
+          "keys": "laj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mẹ",
+          "keys": "mej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chị",
+          "keys": "chij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "họ",
+          "keys": "hoj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nụ",
+          "keys": "nuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vậy",
+          "keys": "vaayj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_9",
+      "title": "Dấu trên nguyên âm ê và ô",
+      "content": [
+        {
+          "display": "ế",
+          "keys": "ees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "về",
+          "keys": "veef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hổ",
+          "keys": "hoor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gỗ",
+          "keys": "goox",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đội",
+          "keys": "ddooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mệt",
+          "keys": "meetj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_10",
+      "title": "Dấu trên nguyên âm ơ và ư",
+      "content": [
+        {
+          "display": "mới",
+          "keys": "mowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mời",
+          "keys": "mowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tới",
+          "keys": "towis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cử",
+          "keys": "cuwr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chữ",
+          "keys": "chuwx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngự",
+          "keys": "nguwj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_11",
+      "title": "Dấu trên nguyên âm ă và â",
+      "content": [
+        {
+          "display": "mắt",
+          "keys": "mawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mặn",
+          "keys": "mawnj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thẳng",
+          "keys": "thawngr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mầm",
+          "keys": "maamf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phấn",
+          "keys": "phaans",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cận",
+          "keys": "caanj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_12",
+      "title": "Thử thách tổng hợp",
+      "content": [
+        {
+          "display": "trường",
+          "keys": "truwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phượng",
+          "keys": "phuwowngj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đường",
+          "keys": "dduwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghiêng",
+          "keys": "nghieeng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chuyện",
+          "keys": "chuyeenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thưởng",
+          "keys": "thuwowngr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_13",
+      "title": "Vần an, am, ap (nhà sàn, quả cam...)",
+      "content": [
+        {
+          "display": "nhà sàn",
+          "keys": "nhaf sanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quả cam",
+          "keys": "quar cam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cá mập",
+          "keys": "cas maapj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bàn gỗ",
+          "keys": "banf goox",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xe đạp",
+          "keys": "xe ddapj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con gián",
+          "keys": "con gians",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_14",
+      "title": "Vần en, em, ep (que kem, đôi dép...)",
+      "content": [
+        {
+          "display": "que kem",
+          "keys": "que kem",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đôi dép",
+          "keys": "ddooi deps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngọn nến",
+          "keys": "ngonj neens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con sen",
+          "keys": "con sen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dọn dẹp",
+          "keys": "donj depj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xem xét",
+          "keys": "xem xets",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
