@@ -333,6 +333,7 @@ export class PlayScene extends Phaser.Scene {
     }
 
     handleSuccess() {
+        this.sound.play('win_sound');
         this.score++;
         this.scoreText.setText('Chuối: ' + this.score);
 
@@ -378,7 +379,7 @@ export class PlayScene extends Phaser.Scene {
     // ── Lesson complete overlay ────────────────────────────────────
 
     showLessonComplete() {
-        this.sound.play('win_sound');
+        this.sound.play('level_sound');
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
         const total = this.totalKeysInLesson || 1;
         const accuracy = Math.round((total / (total + this.errorsInLesson)) * 100);
