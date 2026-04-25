@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_127",
+      "title": "Lòng cha mẹ",
+      "content": [
+        {
+          "display": "nước mắt chảy xuôi",
+          "keys": "nuwowcs mawts chayr xuooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cá chuối đắm đuối vì con",
+          "keys": "cas chuoois ddawms dduoois vif con",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nuôi con mới biết lòng cha mẹ",
+          "keys": "nuooi con mowis bieets longf cha mej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chỗ ướt mẹ nằm",
+          "keys": "choox uwowts mej nawmf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_128",
+      "title": "Sự hiếu thảo",
+      "content": [
+        {
+          "display": "phụng dưỡng sớm chiều",
+          "keys": "phungj duwowngx sowms chieeuf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khi già yếu đuối",
+          "keys": "khi giaf yeeus dduoois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm sóc mẹ cha",
+          "keys": "chawm socs mej cha",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng thành dâng kính",
+          "keys": "longf thanhf daang kinhs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_129",
+      "title": "Sự công bằng & Thực tế",
+      "content": [
+        {
+          "display": "tiền nào của nấy",
+          "keys": "tieenf naof cuar naays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của rẻ là của ôi",
+          "keys": "cuar rer laf cuar ooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiền mất tật mang",
+          "keys": "tieenf maats taatj mang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đắt xắt ra miếng",
+          "keys": "ddawts xawts ra mieengs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_130",
+      "title": "Cách ứng xử",
+      "content": [
+        {
+          "display": "kính trên nhường dưới",
+          "keys": "kinhs treen nhuwowngf duwowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gọi dạ bảo vâng",
+          "keys": "goij daj baor vaang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn trông nồi",
+          "keys": "awn troong nooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngồi trông hướng",
+          "keys": "ngooif troong huwowngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_131",
+      "title": "Sự can trường",
+      "content": [
+        {
+          "display": "vào sinh ra tử",
+          "keys": "vaof sinh ra tuwr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "da ngựa bọc thây",
+          "keys": "da nguwaj bocj thaay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đầu đội trời",
+          "keys": "ddaauf ddooij trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chân đạp đất",
+          "keys": "chaan ddapj ddaats",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_132",
+      "title": "Sự biến chuyển",
+      "content": [
+        {
+          "display": "bãi bể nương dâu",
+          "keys": "baix beer nuwowng daau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vật đổi sao dời",
+          "keys": "vaatj ddooir sao dowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biến hoạ thành phúc",
+          "keys": "bieens hoaj thanhf phucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sông cạn đá mòn",
+          "keys": "soong canj ddas monf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_133",
+      "title": "Vượt qua khó khăn",
+      "content": [
+        {
+          "display": "khổ tận cam lai",
+          "keys": "khoor taanj cam lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sau cơn mưa trời lại sáng",
+          "keys": "sau cown muwa trowif laij sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trong cái rủi",
+          "keys": "trong cais ruir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có cái may",
+          "keys": "cos cais may",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_106",
+      "title": "Sự khiêm nhường",
+      "content": [
+        {
+          "display": "sông sâu tĩnh lặng",
+          "keys": "soong saau tinhx lawngj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lúa chín cúi đầu",
+          "keys": "luas chins cuis ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "núi cao còn có núi cao hơn",
+          "keys": "nuis cao conf cos nuis cao hown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết người biết ta",
+          "keys": "bieets nguwowif bieets ta",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_107",
+      "title": "Sự chăm chỉ",
+      "content": [
+        {
+          "display": "cần cù bù thông minh",
+          "keys": "caanf cuf buf thoong minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một công đôi việc",
+          "keys": "mootj coong ddooi vieecj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm khi lành",
+          "keys": "lamf khi lanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "để dành khi đau",
+          "keys": "ddeer danhf khi ddau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_108",
+      "title": "Sự cẩn thận",
+      "content": [
+        {
+          "display": "sẩy chân còn hơn sẩy miệng",
+          "keys": "saayr chaan conf hown saayr mieengj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn có nơi chơi có chốn",
+          "keys": "awn cos nowi chowi cos choons",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi thưa về trình",
+          "keys": "ddi thuwa veef trinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cẩn thận củi lửa",
+          "keys": "caanr thaanj cuir luwar",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_109",
+      "title": "Tình cảm gia đình",
+      "content": [
+        {
+          "display": "mẹ già như chuối chín cây",
+          "keys": "mej giaf nhuw chuoois chins caay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ba mẹ là tất cả",
+          "keys": "ba mej laf taats car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con nuôi cha mẹ",
+          "keys": "con nuooi cha mej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kể công tháng ngày",
+          "keys": "keer coong thangs ngayf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_110",
+      "title": "Ý chí tình yêu",
+      "content": [
+        {
+          "display": "yêu nhau mấy núi cũng trèo",
+          "keys": "yeeu nhau maays nuis cungx treof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mấy sông cũng lội",
+          "keys": "maays soong cungx looji",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mấy đèo cũng qua",
+          "keys": "maays ddeof cungx qua",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồng sức đồng lòng",
+          "keys": "ddoongf suwcs ddoongf longf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_111",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "khôn ngoan đối đáp người ngoài",
+          "keys": "khoon ngoan ddoois ddaps nguwowif ngoaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gà cùng một mẹ",
+          "keys": "gaf cungf mootj mej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chớ hoài đá nhau",
+          "keys": "chows hoaif ddas nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dĩ hoà vi quý",
+          "keys": "dix hoaf vi quys",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_112",
+      "title": "Lẽ sống",
+      "content": [
+        {
+          "display": "sống gửi thác về",
+          "keys": "soongs guwir thacs veef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sinh ký tử quy",
+          "keys": "sinh kys tuwr quy",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có đức mặc sức mà ăn",
+          "keys": "soongs cos dduwcs mawcj suwcs maf awn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đời người như giấc chiêm bao",
+          "keys": "ddowif nguwowif nhuw giaacs chieem bao",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

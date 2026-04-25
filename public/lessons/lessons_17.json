@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_113",
+      "title": "Sức mạnh tập thể",
+      "content": [
+        {
+          "display": "đông tay vỗ nên bộp",
+          "keys": "ddoong tay voox neen boopj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hợp quần gây sức mạnh",
+          "keys": "howpj quaanf gaay suwcs manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một con ngựa đau",
+          "keys": "mootj con nguwaj ddau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cả tàu bỏ cỏ",
+          "keys": "car tauf bor cor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_114",
+      "title": "Cảnh giác & May mắn",
+      "content": [
+        {
+          "display": "chuột sa hũ nếp",
+          "keys": "chuootj sa hux neeps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cơm treo mèo nhịn",
+          "keys": "cowm treo meof nhinj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "may hơn khôn",
+          "keys": "may hown khoon",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thánh nhân đãi kẻ khờ",
+          "keys": "thanhs nhaan ddaix ker khowf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_115",
+      "title": "Giá trị cuộc sống",
+      "content": [
+        {
+          "display": "tấc đất tấc vàng",
+          "keys": "taacs ddaats taacs vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tấc bóng tấc lòng",
+          "keys": "taacs bongs taacs longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thời gian là vàng bạc",
+          "keys": "thowif gian laf vangf bacj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quý vật tìm quý nhân",
+          "keys": "quys vaatj timf quys nhaan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_116",
+      "title": "Lòng trung thủy",
+      "content": [
+        {
+          "display": "tôi trung không thờ hai chủ",
+          "keys": "tooi trung khoong thowf hai chur",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một lòng thờ mẹ kính cha",
+          "keys": "mootj longf thowf mej kinhs cha",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trung ngôn nghịch nhĩ",
+          "keys": "trung ngoon nghichj nhix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trọn nghĩa vẹn tình",
+          "keys": "tronj nghiax venj tinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_117",
+      "title": "Sự tự lực",
+      "content": [
+        {
+          "display": "nước lã mà vã nên hồ",
+          "keys": "nuwowcs lax maf vax neen hoof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tay trắng làm nên nghiệp lớn",
+          "keys": "tay trawngs lamf neen nghieepj lowns",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có bụng ăn có bụng lo",
+          "keys": "cos bungj awn cos bungj lo",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn ăn thì lăn vào bếp",
+          "keys": "muoons awn thif lawn vaof beeps",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_118",
+      "title": "Sự tương trợ",
+      "content": [
+        {
+          "display": "nhường cơm sẻ áo",
+          "keys": "nhuwowngf cowm ser aos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhường nhịn lẫn nhau",
+          "keys": "nhuwowngf nhinj laanx nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp người là giúp mình",
+          "keys": "giups nguwowif laf giups minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chia ngọt sẻ bùi",
+          "keys": "chia ngotj ser buif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_119",
+      "title": "Bài học nhân quả",
+      "content": [
+        {
+          "display": "ăn mặn khát nước",
+          "keys": "awn mawnj khats nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quýt làm cam chịu",
+          "keys": "quyts lamf cam chiuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đời cha ăn mặn",
+          "keys": "ddowif cha awn mawnj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đời con khát nước",
+          "keys": "ddowif con khats nuwowcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

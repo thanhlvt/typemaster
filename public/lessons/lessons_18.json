@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_120",
+      "title": "Sự trung thực",
+      "content": [
+        {
+          "display": "ăn ngay nói thẳng",
+          "keys": "awn ngay nois thawngr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người ngay nói thật",
+          "keys": "nguwowif ngay nois thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thật thà là cha quỷ quái",
+          "keys": "thaatj thaf laf cha quyr quais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vàng thật không sợ lửa",
+          "keys": "vangf thaatj khoong sowj luwar",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_121",
+      "title": "Sự thực tế",
+      "content": [
+        {
+          "display": "ăn chắc mặc bền",
+          "keys": "awn chawcs mawcj beenf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "liệu cơm gắp mắm",
+          "keys": "lieeuj cowm gawps mawms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chắc như đinh đóng cột",
+          "keys": "chawcs nhuw ddinh ddongs cootj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nồi nào úp vung nấy",
+          "keys": "nooif naof ups vung naays",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_122",
+      "title": "Tình cảm sâu đậm",
+      "content": [
+        {
+          "display": "tay đứt ruột đau",
+          "keys": "tay dduwts ruootj ddau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghĩa nặng tình sâu",
+          "keys": "nghiax nawngj tinhf saau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có nghĩa có tình",
+          "keys": "soongs cos nghiax cos tinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thương nhau lắm cắn nhau đau",
+          "keys": "thuwowng nhau lawms cawns nhau ddau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_123",
+      "title": "Kinh nghiệm tự nhiên",
+      "content": [
+        {
+          "display": "chuồn chuồn bay thấp thì mưa",
+          "keys": "chuoonf chuoonf bay thaaps thif muwa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bay cao thì nắng",
+          "keys": "bay cao thif nawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bay vừa thì râm",
+          "keys": "bay vuwaf thif raam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chớp đông nhay nháy",
+          "keys": "chowps ddoong nhay nhays",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_124",
+      "title": "Sự rèn luyện",
+      "content": [
+        {
+          "display": "gian nan rèn luyện mới thành",
+          "keys": "gian nan renf luyeenj mowis thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lửa thử vàng",
+          "keys": "luwar thuwr vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gian nan thử sức",
+          "keys": "gian nan thuwr suwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững vàng tay lái",
+          "keys": "vuwngx vangf tay lais",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_125",
+      "title": "Thái độ sống",
+      "content": [
+        {
+          "display": "đừng khinh người nghèo",
+          "keys": "dduwngf khinh nguwowif ngheof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cười người chớ vội cười lâu",
+          "keys": "cuwowif nguwowif chows vooij cuwowif laau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cười người hôm trước",
+          "keys": "cuwowif nguwowif hoom truwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hôm sau người cười",
+          "keys": "hoom sau nguwowif cuwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_126",
+      "title": "Tết sum vầy",
+      "content": [
+        {
+          "display": "năm hết tết đến",
+          "keys": "nawm heets teets ddeens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cung chúc tân xuân",
+          "keys": "cung chucs taan xuaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "về quê ăn tết",
+          "keys": "veef quee awn teets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sum họp gia đình",
+          "keys": "sum hopj gia ddinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

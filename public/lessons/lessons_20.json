@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_134",
+      "title": "Lòng kiên định",
+      "content": [
+        {
+          "display": "dù ai nói ngả nói nghiêng",
+          "keys": "duf ai nois ngar nois nghieeng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng ta vẫn vững",
+          "keys": "longf ta vaanx vuwngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "như kiềng ba chân",
+          "keys": "nhuw kieengf ba chaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững như bàn thạch",
+          "keys": "vuwngx nhuw banf thachj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_135",
+      "title": "Sự may mắn bất ngờ",
+      "content": [
+        {
+          "display": "mèo mù vớ cá rán",
+          "keys": "meof muf vows cas rans",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chó ngáp phải ruồi",
+          "keys": "chos ngaps phair ruooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cầu được ước thấy",
+          "keys": "caauf dduwowcj uwowcs thaays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự như ý",
+          "keys": "vanj suwj nhuw ys",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_136",
+      "title": "Sự khoe khoang sớm",
+      "content": [
+        {
+          "display": "chưa đỗ ông nghè",
+          "keys": "chuwa ddoox oong nghef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đã đe hàng tổng",
+          "keys": "ddax dde hangf toongr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cầm đèn chạy trước ô tô",
+          "keys": "caamf ddenf chayj truwowcs oo too",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nói trước bước không qua",
+          "keys": "nois truwowcs buwowcs khoong qua",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_137",
+      "title": "Bản chất & Hiện tượng",
+      "content": [
+        {
+          "display": "thùng rỗng kêu to",
+          "keys": "thungf roongx keeu to",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xanh vỏ đỏ lòng",
+          "keys": "xanh vor ddor longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khẩu xà tâm phật",
+          "keys": "khaaur xaf taam phaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "treo đầu dê bán thịt chó",
+          "keys": "treo ddaauf dee bans thitj chos",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_138",
+      "title": "Sự nỗ lực cuối cùng",
+      "content": [
+        {
+          "display": "còn nước còn tát",
+          "keys": "conf nuwowcs conf tats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nước đến chân mới nhảy",
+          "keys": "nuwowcs ddeens chaan mowis nhayr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cố đấm ăn xôi",
+          "keys": "coos ddaams awn xooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "còn người còn của",
+          "keys": "conf nguwowif conf cuar",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_139",
+      "title": "Bài học muộn màng",
+      "content": [
+        {
+          "display": "mất bò mới lo làm chuồng",
+          "keys": "maats bof mowis lo lamf chuoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sự đã rồi",
+          "keys": "suwj ddax rooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hối không kịp",
+          "keys": "hoois khoong kipj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiền hung hậu kiết",
+          "keys": "tieenf hung haauj kieets",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_140",
+      "title": "Sự viên mãn",
+      "content": [
+        {
+          "display": "kết thúc tốt đẹp",
+          "keys": "keets thucs toots ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự hanh thông",
+          "keys": "vanj suwj hanh thoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công thành danh toại",
+          "keys": "coong thanhf danh toaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mã đáo thành công",
+          "keys": "max ddaos thanhf coong",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
