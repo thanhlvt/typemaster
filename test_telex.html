@@ -205,6 +205,22 @@
         const exampleList = document.getElementById('example-list');
 
         let engine;
+        const fallbackRules = {
+            "oeos": "oéo", "oeof": "oèo", "oeor": "oẻo", "oeox": "oẽo", "oeoj": "oẹo",
+            "oas": "oá", "oaf": "oà", "oar": "oả", "oax": "oã", "oaj": "oạ",
+            "oes": "oé", "oef": "oè", "oer": "oẻ", "oex": "oẽ", "oej": "oẹ",
+            "oaws": "oắ", "oawf": "oằ", "oawr": "oẳ", "oawx": "oẵ", "oawj": "oặ",
+            "oays": "oáy", "oayf": "oày", "oayr": "oảy", "oayx": "oãy", "oayj": "oạy",
+            "quas": "quá", "quaf": "quà", "quar": "quả", "quax": "quã", "quaj": "quạ",
+            "gios": "gió", "giof": "giò", "gior": "giỏ", "giox": "giõ", "gioj": "giọ",
+            "gioos": "giố", "gioof": "giồ", "gioor": "giổ", "gioox": "giỗ", "giooj": "giộ",
+            "giows": "giớ", "giowf": "giờ", "giowr": "giở", "giowx": "giỡ", "giowj": "giợ",
+            "giaas": "giấ", "giaaf": "giầ", "giaar": "giẩ", "giaax": "giẫ", "giaaj": "giậ",
+            "giees": "giế", "gieef": "giề", "gieer": "giể", "gieex": "giễ", "gieej": "giệ",
+            "gius": "giú", "giuf": "giù", "giur": "giủ", "giux": "giũ", "giuj": "giụ",
+            "giuwas": "giứa", "giuwaf": "giừa", "giuwar": "giửa", "giuwax": "giữa", "giuwaj": "giựa",
+            "giuwows": "giướ", "giuwowf": "giườ", "giuwowr": "giưở", "giuwowx": "giưỡ", "giuwowj": "giượ"
+        };
 
         // Load rules from data.json
         async function init() {
@@ -216,7 +232,7 @@
             } catch (err) {
                 console.error(err);
                 statusText.innerText = 'Lỗi khi tải data.json. Đang dùng bộ quy tắc mặc định...';
-                // Fallback basic rules for local testing if fetch fails
+                engine = new TelexEngine(fallbackRules);
             }
         }
 

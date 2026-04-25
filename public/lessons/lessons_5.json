@@ -1,0 +1,246 @@
+{
+  "lessons": [
+    {
+      "id": "level_29",
+      "title": "Vần oai, oay (khoai lang, loay hoay...)",
+      "content": [
+        {
+          "display": "khoai lang",
+          "keys": "khoai lang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "loay hoay",
+          "keys": "loay hoay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thoải mái",
+          "keys": "thoair mais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xoáy nước",
+          "keys": "xoays nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quả xoài",
+          "keys": "quar xoaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "điện thoại",
+          "keys": "ddieenj thoaij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_30",
+      "title": "Vần uyu, uya (khuỷu tay, đêm khuya...)",
+      "content": [
+        {
+          "display": "khuỷu tay",
+          "keys": "khuyur tay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đêm khuya",
+          "keys": "ddeem khuya",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khuỵu chân",
+          "keys": "khuyuj chaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn tuế",
+          "keys": "vanj tuees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thuế nhà",
+          "keys": "thuees nhaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngoằn ngoèo",
+          "keys": "ngoawnf ngoeof",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_31",
+      "title": "Vần iêp, ươp (tấm liếp, quả mướp...)",
+      "content": [
+        {
+          "display": "tấm liếp",
+          "keys": "taams lieeps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quả mướp",
+          "keys": "quar muwowps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "liên tiếp",
+          "keys": "lieen tieeps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ướp muối",
+          "keys": "uwowps muoois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nườm nượp",
+          "keys": "nuwowmf nuwowpj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gián điệp",
+          "keys": "gians ddieepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_32",
+      "title": "Vần iêt, uôt, ươt (viết bài, chuột túi...)",
+      "content": [
+        {
+          "display": "viết bài",
+          "keys": "vieets baif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chuột túi",
+          "keys": "chuootj tuis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lướt ván",
+          "keys": "luwowts vans",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mải miết",
+          "keys": "mair mieets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "buốt giá",
+          "keys": "buoots gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ướt át",
+          "keys": "uwowts ats",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_33",
+      "title": "Các từ ghép phổ biến (gia đình, trường học...)",
+      "content": [
+        {
+          "display": "gia đình",
+          "keys": "gia ddinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trường học",
+          "keys": "truwowngf hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất nước",
+          "keys": "ddaats nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành phố",
+          "keys": "thanhf phoos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công viên",
+          "keys": "coong vieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn bè",
+          "keys": "banj bef",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_34",
+      "title": "Câu ca dao ngắn",
+      "content": [
+        {
+          "display": "bầu ơi thương lấy bí cùng",
+          "keys": "baauf owi thuwowng laays bis cungf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tuy rằng khác giống",
+          "keys": "tuy rawngf khacs gioongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhưng chung một giàn",
+          "keys": "nhuwng chung mootj gianf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công cha như núi thái sơn",
+          "keys": "coong cha nhuw nuis thais sown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghĩa mẹ như nước",
+          "keys": "nghiax mej nhuw nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trong nguồn chảy ra",
+          "keys": "trong nguoonf chayr ra",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_35",
+      "title": "Thử thách tốc độ",
+      "content": [
+        {
+          "display": "việt nam gấm hoa",
+          "keys": "vieetj nam gaams hoa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "non sông hùng vĩ",
+          "keys": "non soong hungf vix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biển bạc rừng vàng",
+          "keys": "bieenr bacj ruwngf vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con rồng cháu tiên",
+          "keys": "con roongf chaus tieen",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
