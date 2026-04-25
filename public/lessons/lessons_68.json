@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_470",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "một cây làm chẳng nên non",
+          "keys": "mootj caay lamf chawngr neen non",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ba cây chụm lại",
+          "keys": "ba caay chumj laij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nên hòn núi cao",
+          "keys": "neen honf nuis cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đoàn kết là sống",
+          "keys": "ddoanf keets laf soongs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_471",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "chia rẽ là chết",
+          "keys": "chia rex laf cheets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hợp quần gây sức mạnh",
+          "keys": "howpj quaanf gaay suwcs manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồng lòng tát biển đông",
+          "keys": "ddoongf longf tats bieenr ddoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cũng cạn",
+          "keys": "cungx canj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_472",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "lá lành đùm lá rách",
+          "keys": "las lanhf ddumf las rachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhường cơm sẻ áo",
+          "keys": "nhuwowngf cowm ser aos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thương người như thể thương thân",
+          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bầu ơi thương lấy bí cùng",
+          "keys": "baauf owi thuwowng laays bis cungf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_473",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "tuy rằng khác giống",
+          "keys": "tuy rawngf khacs gioongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhưng chung một giàn",
+          "keys": "nhuwng chung mootj gianf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đông tay vỗ nên bộp",
+          "keys": "ddoong tay voox neen boopj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "góp sức chung tay",
+          "keys": "gops suwcs chung tay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_474",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "sát cánh bên nhau",
+          "keys": "sats canhs been nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tương thân tương ái",
+          "keys": "tuwowng thaan tuwowng ais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đỡ lẫn nhau",
+          "keys": "giups ddowx laanx nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua gian khó",
+          "keys": "vuwowtj qua gian khos",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_475",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "cùng nhau xây dựng",
+          "keys": "cungf nhau xaay duwngj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất nước mạnh giàu",
+          "keys": "ddaats nuwowcs manhj giauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đoàn kết một lòng",
+          "keys": "ddoanf keets mootj longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì ngăn cản",
+          "keys": "khoong gif ngawn canr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_476",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "sức mạnh tập thể",
+          "keys": "suwcs manhj taapj theer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "là vô hạn",
+          "keys": "laf voo hanj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiến thắng mọi kẻ thù",
+          "keys": "chieens thawngs moij ker thuf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

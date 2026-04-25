@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_232",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "uống nước nhớ nguồn",
+          "keys": "uoongs nuwowcs nhows nguoonf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn quả nhớ kẻ trồng cây",
+          "keys": "awn quar nhows ker troongf caay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn khoai nhớ kẻ cho dây",
+          "keys": "awn khoai nhows ker cho daay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn cơm nhớ kẻ cày bừa",
+          "keys": "awn cowm nhows ker cayf buwaf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_233",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "nhớ ơn thầy cô",
+          "keys": "nhows own thaayf coo",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công cha nghĩa mẹ",
+          "keys": "coong cha nghiax mej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ơn sâu nghĩa nặng",
+          "keys": "own saau nghiax nawngj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đáp đền tiếp nối",
+          "keys": "ddaps ddeenf tieeps noois",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_234",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "không quên nguồn cội",
+          "keys": "khoong queen nguoonf cooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết ơn cuộc sống",
+          "keys": "bieets own cuoocj soongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đỡ mọi người",
+          "keys": "giups ddowx moij nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tri ân tổ tiên",
+          "keys": "tri aan toor tieen",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_235",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "truyền thống lâu đời",
+          "keys": "truyeenf thoongs laau ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng thành dâng kính",
+          "keys": "longf thanhf daang kinhs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành tâm hướng thiện",
+          "keys": "thanhf taam huwowngs thieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhớ người giúp mình",
+          "keys": "nhows nguwowif giups minhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_236",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "lúc gian nan nhất",
+          "keys": "lucs gian nan nhaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ân nhân quý giá",
+          "keys": "aan nhaan quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "như ngọc như vàng",
+          "keys": "nhuw ngocj nhuw vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng tình cảm",
+          "keys": "traan trongj tinhf camr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_237",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "khắc cốt ghi tâm",
+          "keys": "khawcs coots ghi taam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "suốt đời không quên",
+          "keys": "suoots ddowif khoong queen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết ơn là đẹp",
+          "keys": "bieets own laf ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có nghĩa tình",
+          "keys": "soongs cos nghiax tinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_238",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "trước sau như một",
+          "keys": "truwowcs sau nhuw mootj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn nhớ về sau",
+          "keys": "luoon nhows veef sau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi tri ân",
+          "keys": "maix maix tri aan",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

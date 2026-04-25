@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_337",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "lúa chín cúi đầu",
+          "keys": "luas chins cuis ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "núi cao còn có núi cao hơn",
+          "keys": "nuis cao conf cos nuis cao hown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khiêm tốn là mẹ thành công",
+          "keys": "khieem toons laf mej thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thắng không kiêu",
+          "keys": "thawngs khoong kieeu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_338",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "bại không nản",
+          "keys": "baij khoong nanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhún nhường lễ phép",
+          "keys": "nhuns nhuwowngf leex pheps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên khoe khoang",
+          "keys": "khoong neen khoe khoang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thùng rỗng kêu to",
+          "keys": "thungf roongx keeu to",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_339",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "tự cao tự đại",
+          "keys": "tuwj cao tuwj ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thì sẽ thất bại",
+          "keys": "thif sex thaats baij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học hỏi muôn nơi",
+          "keys": "hocj hoir muoon nowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết mình biết ta",
+          "keys": "bieets minhf bieets ta",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_340",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "luôn luôn học hỏi",
+          "keys": "luoon luoon hocj hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng tiến bộ",
+          "keys": "khoong nguwngf tieens booj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn bản sắc",
+          "keys": "giuwx ginf banr sawcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khiêm tốn nhã nhặn",
+          "keys": "khieem toons nhax nhawnj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_341",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "được mọi người yêu mến",
+          "keys": "dduwowcj moij nguwowif yeeu meens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giá trị đích thực",
+          "keys": "gias trij ddichs thuwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không cần phô trương",
+          "keys": "khoong caanf phoo truwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người tài thật sự",
+          "keys": "nguwowif taif thaatj suwj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_342",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "luôn luôn khiêm nhường",
+          "keys": "luoon luoon khieem nhuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gương sáng khiêm tốn",
+          "keys": "guwowng sangs khieem toons",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "để lại cho đời",
+          "keys": "ddeer laij cho ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bản lĩnh thật sự",
+          "keys": "banr linhx thaatj suwj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_343",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "không ngại học hỏi",
+          "keys": "khoong ngaij hocj hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngại lắng nghe",
+          "keys": "khoong ngaij lawngs nghe",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công bền vững",
+          "keys": "thanhf coong beenf vuwngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi ngời sáng",
+          "keys": "maix maix ngowif sangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

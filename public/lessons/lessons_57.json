@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_393",
+      "title": "Cây cối",
+      "content": [
+        {
+          "display": "cây ngay không sợ",
+          "keys": "caay ngay khoong sowj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chết đứng",
+          "keys": "cheets dduwngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lá lành đùm lá rách",
+          "keys": "las lanhf ddumf las rachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn quả nhớ kẻ",
+          "keys": "awn quar nhows ker",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_394",
+      "title": "Cây cối",
+      "content": [
+        {
+          "display": "trồng cây",
+          "keys": "troongf caay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tre già măng mọc",
+          "keys": "tre giaf mawng mocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cội rễ bền vững",
+          "keys": "cooij reex beenf vuwngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoa thơm trái ngọt",
+          "keys": "hoa thowm trais ngotj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_395",
+      "title": "Cây cối",
+      "content": [
+        {
+          "display": "cây cao bóng cả",
+          "keys": "caay cao bongs car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rễ sâu bám đất",
+          "keys": "reex saau bams ddaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn vật sinh sôi",
+          "keys": "vanj vaatj sinh sooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mùa màng bội thu",
+          "keys": "muaf mangf booij thu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_396",
+      "title": "Cây cối",
+      "content": [
+        {
+          "display": "lúa chín cúi đầu",
+          "keys": "luas chins cuis ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khoai sắn đầy bồ",
+          "keys": "khoai sawns ddaayf boof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cây đa bến nước",
+          "keys": "caay dda beens nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con đò xưa cũ",
+          "keys": "con ddof xuwa cux",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_397",
+      "title": "Cây cối",
+      "content": [
+        {
+          "display": "vẻ đẹp cỏ cây",
+          "keys": "ver ddepj cor caay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sức sống mãnh liệt",
+          "keys": "suwcs soongs manhx lieetj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua bão giông",
+          "keys": "vuwowtj qua baox gioong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới ánh sáng",
+          "keys": "vuwown towis anhs sangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_398",
+      "title": "Cây cối",
+      "content": [
+        {
+          "display": "vườn cây trĩu quả",
+          "keys": "vuwownf caay triux quar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hương hoa ngào ngạt",
+          "keys": "huwowng hoa ngaof ngatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sắc màu tự nhiên",
+          "keys": "sawcs mauf tuwj nhieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xanh mát tâm hồn",
+          "keys": "xanh mats taam hoonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_399",
+      "title": "Cây cối",
+      "content": [
+        {
+          "display": "trồng cây gây rừng",
+          "keys": "troongf caay gaay ruwngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phủ xanh đất trống",
+          "keys": "phur xanh ddaats troongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "môi trường trong lành",
+          "keys": "mooi truwowngf trong lanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống xanh sống sạch",
+          "keys": "soongs xanh soongs sachj",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -14,14 +14,14 @@ export class ConfirmDialog extends Phaser.GameObjects.Container {
         const dialogW = 340;
         const dialogH = 180;
         const dialog = scene.add.container(width / 2, height / 2);
-        
+
         const dialogBg = scene.add.graphics();
         dialogBg.fillStyle(0x333333, 1);
         dialogBg.fillRoundedRect(-dialogW / 2, -dialogH / 2, dialogW, dialogH, 15);
         dialogBg.lineStyle(2, 0xffffff, 0.3);
         dialogBg.strokeRoundedRect(-dialogW / 2, -dialogH / 2, dialogW, dialogH, 15);
 
-        const titleText = scene.add.text(0, -40, 'Xác nhận xóa?', {
+        const titleText = scene.add.text(0, -40, 'Xác nhận xoá?', {
             fontFamily: 'Arial', fontSize: '24px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0.5);
 
@@ -46,7 +46,7 @@ export class ConfirmDialog extends Phaser.GameObjects.Container {
         const btnConfirmBg = scene.add.graphics();
         btnConfirmBg.fillStyle(0xd9534f, 1);
         btnConfirmBg.fillRoundedRect(-60, -20, 120, 40, 8);
-        const btnConfirmText = scene.add.text(0, 0, 'Xóa hết', {
+        const btnConfirmText = scene.add.text(0, 0, 'Xoá hết', {
             fontFamily: 'Arial', fontSize: '16px', fontStyle: 'bold', fill: '#ffffff'
         }).setOrigin(0.5);
         btnConfirm.add([btnConfirmBg, btnConfirmText]);
@@ -58,7 +58,7 @@ export class ConfirmDialog extends Phaser.GameObjects.Container {
 
         dialog.add([dialogBg, titleText, descText, btnCancel, btnConfirm]);
         this.add(dialog);
-        
+
         scene.add.existing(this);
     }
 }

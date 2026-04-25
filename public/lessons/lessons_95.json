@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_659",
+      "title": "Sự chính trực",
+      "content": [
+        {
+          "display": "cây ngay không sợ chết đứng",
+          "keys": "caay ngay khoong sowj cheets dduwngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người ngay nói thật",
+          "keys": "nguwowif ngay nois thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống cho chính trực",
+          "keys": "soongs cho chinhs truwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không làm việc khuất",
+          "keys": "khoong lamf vieecj khuaats",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_660",
+      "title": "Sự chính trực",
+      "content": [
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với lòng",
+          "keys": "khoong thenj vowis longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với trời",
+          "keys": "khoong thenj vowis trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chính trực là gốc",
+          "keys": "chinhs truwcj laf goocs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_661",
+      "title": "Sự chính trực",
+      "content": [
+        {
+          "display": "nhân cách quý giá",
+          "keys": "nhaan cachs quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được mọi người kính",
+          "keys": "dduwowcj moij nguwowif kinhs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng uy tín",
+          "keys": "xaay duwngj uy tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bền vững muôn đời",
+          "keys": "beenf vuwngx muoon ddowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_662",
+      "title": "Sự chính trực",
+      "content": [
+        {
+          "display": "không vì lợi lộc",
+          "keys": "khoong vif lowij loocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mà làm việc sai",
+          "keys": "maf lamf vieecj sai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn đạo đức",
+          "keys": "giuwx ginf ddaoj dduwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lương tâm thanh thản",
+          "keys": "luwowng taam thanh thanr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_663",
+      "title": "Sự chính trực",
+      "content": [
+        {
+          "display": "chính trực trong nói",
+          "keys": "chinhs truwcj trong nois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chính trực trong làm",
+          "keys": "chinhs truwcj trong lamf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành thật với mình",
+          "keys": "thanhf thaatj vowis minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành thật với người",
+          "keys": "thanhf thaatj vowis nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_664",
+      "title": "Sự chính trực",
+      "content": [
+        {
+          "display": "giá trị đích thực",
+          "keys": "gias trij ddichs thuwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì thay thế",
+          "keys": "khoong gif thay thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chính trực sáng ngời",
+          "keys": "chinhs truwcj sangs ngowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi bền lâu",
+          "keys": "maix maix beenf laau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_665",
+      "title": "Sự chính trực",
+      "content": [
+        {
+          "display": "gương sáng chính trực",
+          "keys": "guwowng sangs chinhs truwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "để lại cho đời",
+          "keys": "ddeer laij cho ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống ý nghĩa",
+          "keys": "cuoocj soongs ys nghiax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

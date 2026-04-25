@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_386",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "chó không chê chủ",
+          "keys": "chos khoong chee chur",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mèo mù vớ cá",
+          "keys": "meof muf vows cas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhanh như sóc",
+          "keys": "nhanh nhuw socs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chậm như rùa",
+          "keys": "chaamj nhuw ruaf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_387",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "hiền như bụt",
+          "keys": "hieenf nhuw butj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dữ như cọp",
+          "keys": "duwx nhuw copj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khôn như cáo",
+          "keys": "khoon nhuw caos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngu như bò",
+          "keys": "ngu nhuw bof",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_388",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "ngựa non háu đá",
+          "keys": "nguwaj non haus ddas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ếch ngồi đáy giếng",
+          "keys": "eechs ngooif ddays gieengs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đàn gảy tai trâu",
+          "keys": "ddanf gayr tai traau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến tha lâu đầy tổ",
+          "keys": "kieens tha laau ddaayf toor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_389",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "chim sa cá lặn",
+          "keys": "chim sa cas lawnj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vật đổi sao dời",
+          "keys": "vaatj ddooir sao dowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu thương động vật",
+          "keys": "yeeu thuwowng ddoongj vaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn của con người",
+          "keys": "banj cuar con nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_390",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "trâu cày dưới ruộng",
+          "keys": "traau cayf duwowis ruoongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gà gáy báo sáng",
+          "keys": "gaf gays baos sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vịt bơi dưới hồ",
+          "keys": "vitj bowi duwowis hoof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thỏ trắng xinh xắn",
+          "keys": "thor trawngs xinh xawns",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_391",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "voi rừng to lớn",
+          "keys": "voi ruwngf to lowns",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hổ báo rừng sâu",
+          "keys": "hoor baos ruwngf saau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khỉ leo trên cây",
+          "keys": "khir leo treen caay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ong hút mật hoa",
+          "keys": "ong huts maatj hoa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_392",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "thế giới muôn loài",
+          "keys": "thees giowis muoon loaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đa dạng sinh học",
+          "keys": "dda dangj sinh hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bảo tồn quý hiếm",
+          "keys": "baor toonf quys hieems",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi xanh tươi",
+          "keys": "maix maix xanh tuwowi",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

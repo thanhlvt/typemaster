@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_407",
+      "title": "Đời sống nông thôn",
+      "content": [
+        {
+          "display": "con trâu là đầu cơ nghiệp",
+          "keys": "con traau laf ddaauf cow nghieepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làng quê yên bình",
+          "keys": "langf quee yeen binhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cánh đồng lúa chín",
+          "keys": "canhs ddoongf luas chins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cò bay thẳng cánh",
+          "keys": "cof bay thawngr canhs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_408",
+      "title": "Đời sống nông thôn",
+      "content": [
+        {
+          "display": "đường làng quanh co",
+          "keys": "dduwowngf langf quanh co",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mái tranh nghèo",
+          "keys": "mais tranh ngheof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tình làng nghĩa xóm",
+          "keys": "tinhf langf nghiax xoms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đỡ lẫn nhau",
+          "keys": "giups ddowx laanx nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_409",
+      "title": "Đời sống nông thôn",
+      "content": [
+        {
+          "display": "vụ chiêm vụ mùa",
+          "keys": "vuj chieem vuj muaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được mùa no đủ",
+          "keys": "dduwowcj muaf no ddur",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mất mùa đói kém",
+          "keys": "maats muaf ddois kems",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nông dân cần cù",
+          "keys": "noong daan caanf cuf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_410",
+      "title": "Đời sống nông thôn",
+      "content": [
+        {
+          "display": "chân lấm tay bùn",
+          "keys": "chaan laams tay bunf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mồ hôi nước mắt",
+          "keys": "moof hooi nuwowcs mawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thức khuya dậy sớm",
+          "keys": "thuwcs khuya daayj sowms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quanh năm suốt tháng",
+          "keys": "quanh nawm suoots thangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_411",
+      "title": "Đời sống nông thôn",
+      "content": [
+        {
+          "display": "công việc đồng áng",
+          "keys": "coong vieecj ddoongf angs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vất vả ngược xuôi",
+          "keys": "vaats var nguwowcj xuooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống giản đơn",
+          "keys": "cuoocj soongs gianr ddown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ấm áp tình người",
+          "keys": "aams aps tinhf nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_412",
+      "title": "Đời sống nông thôn",
+      "content": [
+        {
+          "display": "lễ hội đình làng",
+          "keys": "leex hooij ddinhf langf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiếng trống hội xuân",
+          "keys": "tieengs troongs hooij xuaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trò chơi dân gian",
+          "keys": "trof chowi daan gian",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nét đẹp văn hoá",
+          "keys": "nets ddepj vawn hoas",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_413",
+      "title": "Đời sống nông thôn",
+      "content": [
+        {
+          "display": "quê hương yêu dấu",
+          "keys": "quee huwowng yeeu daaus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi đâu cũng nhớ",
+          "keys": "ddi ddaau cungx nhows",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "về với cội nguồn",
+          "keys": "veef vowis cooij nguoonf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi không quên",
+          "keys": "maix maix khoong queen",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

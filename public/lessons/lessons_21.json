@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_141",
+      "title": "Cuộc sống gian nan",
+      "content": [
+        {
+          "display": "lên thác xuống ghềnh",
+          "keys": "leen thacs xuoongs gheenhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ba chìm bảy nổi",
+          "keys": "ba chimf bayr nooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chín lênh đênh",
+          "keys": "chins leenh ddeenh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sóng gió cuộc đời",
+          "keys": "songs gios cuoocj ddowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_142",
+      "title": "Sự vất vả cực nhọc",
+      "content": [
+        {
+          "display": "dầm mưa dãi nắng",
+          "keys": "daamf muwa daix nawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thức khuya dậy sớm",
+          "keys": "thuwcs khuya daayj sowms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quanh năm suốt tháng",
+          "keys": "quanh nawm suoots thangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vất vả ngược xuôi",
+          "keys": "vaats var nguwowcj xuooi",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_143",
+      "title": "Sự chân thật",
+      "content": [
+        {
+          "display": "ăn thật làm thật",
+          "keys": "awn thaatj lamf thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nói lời phải giữ lấy lời",
+          "keys": "nois lowif phair giuwx laays lowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng như con bướm",
+          "keys": "dduwngf nhuw con buwowms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đậu rồi lại bay",
+          "keys": "ddaauj rooif laij bay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_144",
+      "title": "Kinh nghiệm ứng xử",
+      "content": [
+        {
+          "display": "ăn cỗ đi trước",
+          "keys": "awn coox ddi truwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lội nước đi sau",
+          "keys": "looij nuwowcs ddi sau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học ăn học nói",
+          "keys": "hocj awn hocj nois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học gói học mở",
+          "keys": "hocj gois hocj mowr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_145",
+      "title": "Sự ích kỷ hẹp hòi",
+      "content": [
+        {
+          "display": "của mình thì giữ bo bo",
+          "keys": "cuar minhf thif giuwx bo bo",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của người thì thả cho bò",
+          "keys": "cuar nguwowif thif thar cho bof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vơ vào cho đầy túi",
+          "keys": "vow vaof cho ddaayf tuis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chỉ biết mình mình",
+          "keys": "chir bieets minhf minhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_146",
+      "title": "Sự lười biếng",
+      "content": [
+        {
+          "display": "ăn không ngồi rồi",
+          "keys": "awn khoong ngooif rooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lười như hủi",
+          "keys": "luwowif nhuw huir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm biếng chảy thây",
+          "keys": "lamf bieengs chayr thaay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn bám gia đình",
+          "keys": "awn bams gia ddinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_147",
+      "title": "Sự lãng phí",
+      "content": [
+        {
+          "display": "ném tiền qua cửa sổ",
+          "keys": "nems tieenf qua cuwar soor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vung tay quá trán",
+          "keys": "vung tay quas trans",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xài tiền như nước",
+          "keys": "xaif tieenf nhuw nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoang phí của công",
+          "keys": "hoang phis cuar coong",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_358",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "ăn cơm mới",
+          "keys": "awn cowm mowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nói chuyện cũ",
+          "keys": "nois chuyeenj cux",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn no mặc ấm",
+          "keys": "awn no mawcj aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn vóc học hay",
+          "keys": "awn vocs hocj hay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_359",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "bát sạch ngon cơm",
+          "keys": "bats sachj ngon cowm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cơm lành canh ngọt",
+          "keys": "cowm lanhf canh ngotj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn trông nồi",
+          "keys": "awn troong nooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngồi trông hướng",
+          "keys": "ngooif troong huwowngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_360",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "miếng ăn là miếng tồi",
+          "keys": "mieengs awn laf mieengs tooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn một mình đau tức",
+          "keys": "awn mootj minhf ddau tuwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm thì lười",
+          "keys": "lamf thif luwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn thì nhanh",
+          "keys": "awn thif nhanh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_361",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "khéo ăn thì no",
+          "keys": "kheos awn thif no",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo co thì ấm",
+          "keys": "kheos co thif aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đặc sản quê hương",
+          "keys": "ddawcj sanr quee huwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "món ăn truyền thống",
+          "keys": "mons awn truyeenf thoongs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_362",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "hương vị đậm đà",
+          "keys": "huwowng vij ddaamj ddaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngon từ thịt",
+          "keys": "ngon tuwf thitj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngọt từ xương",
+          "keys": "ngotj tuwf xuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ẩm thực Việt Nam",
+          "keys": "aamr thuwcj Vieetj Nam",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_363",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "bánh chưng bánh giầy",
+          "keys": "banhs chuwng banhs giaayf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phở bò nam định",
+          "keys": "phowr bof nam ddinhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bún chả hà nội",
+          "keys": "buns char haf nooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cơm tấm sài gòn",
+          "keys": "cowm taams saif gonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_364",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "ăn uống điều độ",
+          "keys": "awn uoongs ddieeuf ddooj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn sức khoẻ",
+          "keys": "giuwx ginf suwcs khoer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thơm ngon bổ dưỡng",
+          "keys": "thowm ngon boor duwowngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mời bạn thưởng thức",
+          "keys": "mowif banj thuwowngr thuwcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

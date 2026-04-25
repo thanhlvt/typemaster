@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_673",
+      "title": "Sự lạc quan",
+      "content": [
+        {
+          "display": "sau cơn mưa trời lại sáng",
+          "keys": "sau cown muwa trowif laij sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn lạc quan",
+          "keys": "luoon luoon lacj quan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tin vào tương lai",
+          "keys": "tin vaof tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tươi đẹp rạng ngời",
+          "keys": "tuwowi ddepj rangj ngowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_674",
+      "title": "Sự lạc quan",
+      "content": [
+        {
+          "display": "vượt qua khó khăn",
+          "keys": "vuwowtj qua khos khawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bằng nụ cười tươi",
+          "keys": "bawngf nuj cuwowif tuwowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tinh thần minh mẫn",
+          "keys": "tinh thaanf minh maanx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết tâm không lùi",
+          "keys": "quyeets taam khoong luif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_675",
+      "title": "Sự lạc quan",
+      "content": [
+        {
+          "display": "lạc quan là sức",
+          "keys": "lacj quan laf suwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mạnh giúp ta thắng",
+          "keys": "manhj giups ta thawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi thử thách đời",
+          "keys": "moij thuwr thachs ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt tới đỉnh cao",
+          "keys": "ddatj towis ddinhr cao",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_676",
+      "title": "Sự lạc quan",
+      "content": [
+        {
+          "display": "gieo mầm lạc quan",
+          "keys": "gieo maamf lacj quan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hái quả hạnh phúc",
+          "keys": "hais quar hanhj phucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống đời an vui",
+          "keys": "soongs ddowif an vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không lo âu phiền",
+          "keys": "khoong lo aau phieenf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_677",
+      "title": "Sự lạc quan",
+      "content": [
+        {
+          "display": "lạc quan lan toả",
+          "keys": "lacj quan lan toar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi người hạnh phúc",
+          "keys": "moij nguwowif hanhj phucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng cộng đồng",
+          "keys": "xaay duwngj coongj ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngày càng tốt đẹp",
+          "keys": "ngayf cangf toots ddepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_678",
+      "title": "Sự lạc quan",
+      "content": [
+        {
+          "display": "không bao giờ bỏ",
+          "keys": "khoong bao giowf bor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hãy cứ lạc quan",
+          "keys": "hayx cuws lacj quan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_679",
+      "title": "Sự lạc quan",
+      "content": [
+        {
+          "display": "lạc quan sáng ngời",
+          "keys": "lacj quan sangs ngowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi vươn xa",
+          "keys": "maix maix vuwown xa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống ý nghĩa",
+          "keys": "cuoocj soongs ys nghiax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc bình an",
+          "keys": "hanhj phucs binhf an",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

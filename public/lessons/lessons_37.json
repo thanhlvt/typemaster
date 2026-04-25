@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_253",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "lời nói chẳng mất tiền mua",
+          "keys": "lowif nois chawngr maats tieenf mua",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lựa lời mà nói cho vừa",
+          "keys": "luwaj lowif maf nois cho vuwaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng nhau",
+          "keys": "longf nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn có nhai nói có nghĩ",
+          "keys": "awn cos nhai nois cos nghix",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_254",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "đi thưa về trình",
+          "keys": "ddi thuwa veef trinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kính trên nhường dưới",
+          "keys": "kinhs treen nhuwowngf duwowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gọi dạ bảo vâng",
+          "keys": "goij daj baor vaang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lễ phép ngoan ngoãn",
+          "keys": "leex pheps ngoan ngoanx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_255",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "học ăn học nói",
+          "keys": "hocj awn hocj nois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học gói học mở",
+          "keys": "hocj gois hocj mowr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn trông nồi ngồi trông hướng",
+          "keys": "awn troong nooif ngooif troong huwowngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cười người hôm trước",
+          "keys": "cuwowif nguwowif hoom truwowcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_256",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "hôm sau người cười",
+          "keys": "hoom sau nguwowif cuwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng khinh người nghèo",
+          "keys": "dduwngf khinh nguwowif ngheof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên kiêu ngạo",
+          "keys": "khoong neen kieeu ngaoj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn khiêm tốn",
+          "keys": "luoon luoon khieem toons",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_257",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "biết lỗi biết sửa",
+          "keys": "bieets looix bieets suwar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xin lỗi chân thành",
+          "keys": "xin looix chaan thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cảm ơn sâu sắc",
+          "keys": "camr own saau sawcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lắng nghe thấu hiểu",
+          "keys": "lawngs nghe thaaus hieeur",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_258",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "nói lời hay",
+          "keys": "nois lowif hay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm việc tốt",
+          "keys": "lamf vieecj toots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_259",
+      "title": "Ứng xử",
+      "content": [
+        {
+          "display": "tránh gây hiềm khích",
+          "keys": "tranhs gaay hieemf khichs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn hoà khí",
+          "keys": "giuwx ginf hoaf khis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dĩ hoà vi quý",
+          "keys": "dix hoaf vi quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống đẹp lòng người",
+          "keys": "soongs ddepj longf nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

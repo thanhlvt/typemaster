@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_498",
+      "title": "Thất bại",
+      "content": [
+        {
+          "display": "thua keo này bày keo khác",
+          "keys": "thua keo nayf bayf keo khacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thất bại là mẹ thành công",
+          "keys": "thaats baij laf mej thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sai một li đi một dặm",
+          "keys": "sai mootj li ddi mootj dawmj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mất bò mới lo làm chuồng",
+          "keys": "maats bof mowis lo lamf chuoongf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_499",
+      "title": "Thất bại",
+      "content": [
+        {
+          "display": "ngã ở đâu đứng dậy ở đó",
+          "keys": "ngax owr ddaau dduwngs daayj owr ddos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên nản chí",
+          "keys": "khoong neen nanr chis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thất bại tạm thời",
+          "keys": "thaats baij tamj thowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học từ sai lầm",
+          "keys": "hocj tuwf sai laamf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_500",
+      "title": "Thất bại",
+      "content": [
+        {
+          "display": "kiên trì bền bỉ",
+          "keys": "kieen trif beenf bir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua nghịch cảnh",
+          "keys": "vuwowtj qua nghichj canhr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì ngăn cản",
+          "keys": "khoong gif ngawn canr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết tâm làm lại",
+          "keys": "quyeets taam lamf laij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_501",
+      "title": "Thất bại",
+      "content": [
+        {
+          "display": "thất bại rèn luyện",
+          "keys": "thaats baij renf luyeenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bản lĩnh kiên cường",
+          "keys": "banr linhx kieen cuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững vàng tâm trí",
+          "keys": "vuwngx vangf taam tris",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiến về phía trước",
+          "keys": "tieens veef phias truwowcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_502",
+      "title": "Thất bại",
+      "content": [
+        {
+          "display": "đừng sợ thất bại",
+          "keys": "dduwngf sowj thaats baij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hãy sợ dừng lại",
+          "keys": "hayx sowj duwngf laij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sai lầm là bài học",
+          "keys": "sai laamf laf baif hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trải nghiệm quý giá",
+          "keys": "trair nghieemj quys gias",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_503",
+      "title": "Thất bại",
+      "content": [
+        {
+          "display": "vượt qua nỗi sợ",
+          "keys": "vuwowtj qua nooix sowj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chinh phục khó khăn",
+          "keys": "chinh phucj khos khawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công sẽ đến",
+          "keys": "thanhf coong sex ddeens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sau những nỗ lực",
+          "keys": "sau nhuwngx noox luwcj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_504",
+      "title": "Thất bại",
+      "content": [
+        {
+          "display": "không ngừng cố gắng",
+          "keys": "khoong nguwngf coos gawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được kết quả",
+          "keys": "ddatj dduwowcj keets quar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang đón chờ",
+          "keys": "vinh quang ddons chowf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi vươn xa",
+          "keys": "maix maix vuwown xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

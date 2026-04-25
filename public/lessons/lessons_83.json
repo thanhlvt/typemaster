@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_575",
+      "title": "Tiền bạc",
+      "content": [
+        {
+          "display": "tiền bạc là phương tiện",
+          "keys": "tieenf bacj laf phuwowng tieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên tham lam",
+          "keys": "khoong neen tham lam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm giàu chân chính",
+          "keys": "lamf giauf chaan chinhs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiết kiệm tích lũy",
+          "keys": "tieets kieemj tichs luyx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_576",
+      "title": "Tiền bạc",
+      "content": [
+        {
+          "display": "sử dụng hợp lý",
+          "keys": "suwr dungj howpj lys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đỡ mọi người",
+          "keys": "giups ddowx moij nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiền nào của nấy",
+          "keys": "tieenf naof cuar naays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giá trị đích thực",
+          "keys": "gias trij ddichs thuwcj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_577",
+      "title": "Tiền bạc",
+      "content": [
+        {
+          "display": "không làm nô lệ",
+          "keys": "khoong lamf noo leej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cho tiền bạc",
+          "keys": "cho tieenf bacj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc không mua được",
+          "keys": "hanhj phucs khoong mua dduwowcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bằng rất nhiều tiền",
+          "keys": "bawngf raats nhieeuf tieenf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_578",
+      "title": "Tiền bạc",
+      "content": [
+        {
+          "display": "biết đủ là vui",
+          "keys": "bieets ddur laf vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống thong dong",
+          "keys": "cuoocj soongs thong dong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiền bạc phân minh",
+          "keys": "tieenf bacj phaan minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ái tình dứt khoát",
+          "keys": "ais tinhf duwts khoats",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_579",
+      "title": "Tiền bạc",
+      "content": [
+        {
+          "display": "quản lý tài chính",
+          "keys": "quanr lys taif chinhs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lo cho tương lai",
+          "keys": "lo cho tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phòng khi túng thiếu",
+          "keys": "phongf khi tungs thieeus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đầu tư đúng đắn",
+          "keys": "ddaauf tuw ddungs ddawns",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_580",
+      "title": "Tiền bạc",
+      "content": [
+        {
+          "display": "giàu nghèo có số",
+          "keys": "giauf ngheof cos soos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhưng phải cố gắng",
+          "keys": "nhuwng phair coos gawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên lãng phí",
+          "keys": "khoong neen langx phis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết quý trọng công",
+          "keys": "bieets quys trongj coong",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_581",
+      "title": "Tiền bạc",
+      "content": [
+        {
+          "display": "sức lao động mình",
+          "keys": "suwcs lao ddoongj minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tạo ra tiền bạc",
+          "keys": "taoj ra tieenf bacj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có ý nghĩa",
+          "keys": "soongs cos ys nghiax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiền bạc bền lâu",
+          "keys": "tieenf bacj beenf laau",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

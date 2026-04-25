@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_323",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "tiền nào của nấy",
+          "keys": "tieenf naof cuar naays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đắt xắt ra miếng",
+          "keys": "ddawts xawts ra mieengs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của rẻ là của ôi",
+          "keys": "cuar rer laf cuar ooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không tham của người",
+          "keys": "khoong tham cuar nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_324",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "trả giá xứng đáng",
+          "keys": "trar gias xuwngs ddangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công minh chính đại",
+          "keys": "coong minh chinhs ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thưởng phạt phân minh",
+          "keys": "thuwowngr phatj phaan minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thiên vị",
+          "keys": "khoong thieen vij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_325",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "lẽ phải luôn thắng",
+          "keys": "lex phair luoon thawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công bằng cho tất cả",
+          "keys": "coong bawngf cho taats car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xã hội văn minh",
+          "keys": "xax hooij vawn minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tôn trọng pháp luật",
+          "keys": "toon trongj phaps luaatj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_326",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "giữ gìn trật tự",
+          "keys": "giuwx ginf traatj tuwj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạo đức làm đầu",
+          "keys": "ddaoj dduwcs lamf ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có trách nhiệm",
+          "keys": "soongs cos trachs nhieemj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không vụ lợi",
+          "keys": "khoong vuj lowij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_327",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "vì lợi ích chung",
+          "keys": "vif lowij ichs chung",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công bằng là gốc",
+          "keys": "coong bawngf laf goocs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc là ngọn",
+          "keys": "hanhj phucs laf ngonj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng giá trị",
+          "keys": "traan trongj gias trij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_328",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "đánh giá khách quan",
+          "keys": "ddanhs gias khachs quan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nhìn vẻ ngoài",
+          "keys": "khoong nhinf ver ngoaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đánh giá bản chất",
+          "keys": "ddanhs gias banr chaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thấu tình đạt lý",
+          "keys": "thaaus tinhf ddatj lys",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_329",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "xử lý công tâm",
+          "keys": "xuwr lys coong taam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi người bình đẳng",
+          "keys": "moij nguwowif binhf ddawngr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hợp tình hợp lý",
+          "keys": "howpj tinhf howpj lys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bền muôn đời",
+          "keys": "vuwngx beenf muoon ddowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

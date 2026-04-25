@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_526",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "oán cừu nên giải không nên kết",
+          "keys": "oans cuwuf neen giair khoong neen keets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đánh kẻ chạy đi không đánh người chạy lại",
+          "keys": "ddanhs ker chayj ddi khoong ddanhs nguwowif chayj laij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng bao dung rộng mở",
+          "keys": "longf bao dung roongj mowr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vị tha nhân ái",
+          "keys": "vij tha nhaan ais",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_527",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "tha thứ lỗi lầm",
+          "keys": "tha thuws looix laamf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cho nhau cơ hội",
+          "keys": "cho nhau cow hooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "buông bỏ hận thù",
+          "keys": "buoong bor haanj thuf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tâm hồn thanh thản",
+          "keys": "taam hoonf thanh thanr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_528",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "sống yêu thương nhau",
+          "keys": "soongs yeeu thuwowng nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đỡ người khác",
+          "keys": "giups ddowx nguwowif khacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhận lỗi chân thành",
+          "keys": "nhaanj looix chaan thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được tha thứ",
+          "keys": "dduwowcj tha thuws",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_529",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "lòng nhẹ nhàng",
+          "keys": "longf nhej nhangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "niềm vui trở lại",
+          "keys": "nieemf vui trowr laij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoà bình hữu nghị",
+          "keys": "hoaf binhf huwux nghij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gắn kết tình thân",
+          "keys": "gawns keets tinhf thaan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_530",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "xoá tan khoảng cách",
+          "keys": "xoas tan khoangr cachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng hiện tại",
+          "keys": "traan trongj hieenj taij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hướng tới tương lai",
+          "keys": "huwowngs towis tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tha thứ là đẹp",
+          "keys": "tha thuws laf ddepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_531",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "sống có nghĩa tình",
+          "keys": "soongs cos nghiax tinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trước sau như một",
+          "keys": "truwowcs sau nhuw mootj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn bao dung",
+          "keys": "luoon luoon bao dung",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_532",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "mãi mãi vị tha",
+          "keys": "maix maix vij tha",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu người như mình",
+          "keys": "yeeu nguwowif nhuw minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên oán hận",
+          "keys": "khoong neen oans haanj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sẻ chia cảm thông",
+          "keys": "ser chia camr thoong",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

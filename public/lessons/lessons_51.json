@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_351",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "cày sâu cuốc bẫm",
+          "keys": "cayf saau cuoocs baamx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con tằm nhả tơ",
+          "keys": "con tawmf nhar tow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thợ rèn đập sắt",
+          "keys": "thowj renf ddaapj sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngư dân bám biển",
+          "keys": "nguw daan bams bieenr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_352",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "nhà giáo ưu tú",
+          "keys": "nhaf giaos uwu tus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lương y như từ mẫu",
+          "keys": "luwowng y nhuw tuwf maaux",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiến sĩ dũng cảm",
+          "keys": "chieens six dungx camr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng quê hương",
+          "keys": "xaay duwngj quee huwowng",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_353",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "làm ruộng thì gia",
+          "keys": "lamf ruoongj thif gia",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm nhà thì tốn",
+          "keys": "lamf nhaf thif toons",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhất nghệ tinh",
+          "keys": "nhaats ngheej tinh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhất thân vinh",
+          "keys": "nhaats thaan vinh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_354",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "nghề nghiệp quý giá",
+          "keys": "ngheef nghieepj quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm chỉ làm việc",
+          "keys": "chawm chir lamf vieecj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghề nào cũng quý",
+          "keys": "ngheef naof cungx quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang lao động",
+          "keys": "vinh quang lao ddoongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_355",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "thợ may khéo tay",
+          "keys": "thowj may kheos tay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bác sĩ tận tâm",
+          "keys": "bacs six taanj taam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kỹ sư sáng tạo",
+          "keys": "kyx suw sangs taoj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nông dân cần cù",
+          "keys": "noong daan caanf cuf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_356",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "buôn có bạn",
+          "keys": "buoon cos banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bán có phường",
+          "keys": "bans cos phuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm công ăn lương",
+          "keys": "lamf coong awn luwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự mình lập nghiệp",
+          "keys": "tuwj minhf laapj nghieepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_357",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "quyết tâm theo nghề",
+          "keys": "quyeets taam theo ngheef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghề nghiệp ổn định",
+          "keys": "ngheef nghieepj oonr ddinhj",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_652",
+      "title": "Lòng trung thành",
+      "content": [
+        {
+          "display": "tận trung với nước",
+          "keys": "taanj trung vowis nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tận hiếu với dân",
+          "keys": "taanj hieeus vowis daan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trước sau như một",
+          "keys": "truwowcs sau nhuw mootj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thủy chung son sắt",
+          "keys": "thuyr chung son sawts",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_653",
+      "title": "Lòng trung thành",
+      "content": [
+        {
+          "display": "không thay lòng dạ",
+          "keys": "khoong thay longf daj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ trọn lời thề",
+          "keys": "giuwx tronj lowif theef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trung thành tuyệt đối",
+          "keys": "trung thanhf tuyeetj ddoois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "với lý tưởng mình",
+          "keys": "vowis lys tuwowngr minhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_654",
+      "title": "Lòng trung thành",
+      "content": [
+        {
+          "display": "lòng trung thành quý",
+          "keys": "longf trung thanhf quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được mọi người trọng",
+          "keys": "dduwowcj moij nguwowif trongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gắn kết bền lâu",
+          "keys": "gawns keets beenf laau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tin tưởng lẫn nhau",
+          "keys": "tin tuwowngr laanx nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_655",
+      "title": "Lòng trung thành",
+      "content": [
+        {
+          "display": "không phản bội bạn",
+          "keys": "khoong phanr booij banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không lừa dối người",
+          "keys": "khoong luwaf doois nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trung thực thẳng ngay",
+          "keys": "trung thuwcj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạo đức sáng ngời",
+          "keys": "ddaoj dduwcs sangs ngowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_656",
+      "title": "Lòng trung thành",
+      "content": [
+        {
+          "display": "lòng trung thành là",
+          "keys": "longf trung thanhf laf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sức mạnh gắn kết",
+          "keys": "suwcs manhj gawns keets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng cộng đồng",
+          "keys": "xaay duwngj coongj ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững mạnh trường tồn",
+          "keys": "vuwngx manhj truwowngf toonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_657",
+      "title": "Lòng trung thành",
+      "content": [
+        {
+          "display": "trung thành với nghề",
+          "keys": "trung thanhf vowis ngheef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nỗ lực hết mình",
+          "keys": "noox luwcj heets minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được thành công",
+          "keys": "ddatj dduwowcj thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang rạng rỡ",
+          "keys": "vinh quang rangj rowx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_658",
+      "title": "Lòng trung thành",
+      "content": [
+        {
+          "display": "mãi mãi trung thành",
+          "keys": "maix maix trung thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bao giờ thay",
+          "keys": "khoong bao giowf thay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giá trị vĩnh cửu",
+          "keys": "gias trij vinhx cuwur",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngời sáng muôn đời",
+          "keys": "ngowif sangs muoon ddowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

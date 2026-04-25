@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_169",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học đi đôi với hành",
+          "keys": "hocj ddi ddooi vowis hanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học hay cày giỏi",
+          "keys": "hocj hay cayf gioir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học một biết mười",
+          "keys": "hocj mootj bieets muwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học tài thi phận",
+          "keys": "hocj taif thi phaanj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_170",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học trước quên sau",
+          "keys": "hocj truwowcs queen sau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "văn ôn võ luyện",
+          "keys": "vawn oon vox luyeenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dốt đến đâu học lâu cũng biết",
+          "keys": "doots ddeens ddaau hocj laau cungx bieets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thầy đố mày làm nên",
+          "keys": "khoong thaayf ddoos mayf lamf neen",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_171",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "muốn biết phải hỏi",
+          "keys": "muoons bieets phair hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn giỏi phải học",
+          "keys": "muoons gioir phair hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn vóc học hay",
+          "keys": "awn vocs hocj hay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dốt như bò",
+          "keys": "doots nhuw bof",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_172",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "chăm học chăm làm",
+          "keys": "chawm hocj chawm lamf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học ăn học nói",
+          "keys": "hocj awn hocj nois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học gói học mở",
+          "keys": "hocj gois hocj mowr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi một ngày đàng",
+          "keys": "ddi mootj ngayf ddangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_173",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học một sàng khôn",
+          "keys": "hocj mootj sangf khoon",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học thầy không tày học bạn",
+          "keys": "hocj thaayf khoong tayf hocj banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sách là kho tàng",
+          "keys": "sachs laf kho tangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến thức vô tận",
+          "keys": "kieens thuwcs voo taanj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_174",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "miệt mài đèn sách",
+          "keys": "mieetj maif ddenf sachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dùi mài kinh sử",
+          "keys": "duif maif kinh suwr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bảng vàng bia đá",
+          "keys": "bangr vangf bia ddas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đỗ đạt thành danh",
+          "keys": "ddoox ddatj thanhf danh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_175",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "rạng danh dòng tộc",
+          "keys": "rangj danh dongf toocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quy bái tổ",
+          "keys": "vinh quy bais toor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chí công mài sắt",
+          "keys": "chis coong maif sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có ngày nên kim",
+          "keys": "cos ngayf neen kim",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

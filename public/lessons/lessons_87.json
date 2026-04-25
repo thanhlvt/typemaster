@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_603",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "tay làm hàm nhai",
+          "keys": "tay lamf hamf nhai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tay quai miệng trễ",
+          "keys": "tay quai mieengj treex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lao động là vinh quang",
+          "keys": "lao ddoongj laf vinh quang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có làm mới có ăn",
+          "keys": "cos lamf mowis cos awn",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_604",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "không dưng ai dễ đem phần đến cho",
+          "keys": "khoong duwng ai deex ddem phaanf ddeens cho",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm chỉ cần cù",
+          "keys": "chawm chir caanf cuf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bù thông minh",
+          "keys": "buf thoong minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành quả xứng đáng",
+          "keys": "thanhf quar xuwngs ddangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_605",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "lao động rèn luyện",
+          "keys": "lao ddoongj renf luyeenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bản lĩnh con người",
+          "keys": "banr linhx con nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua khó khăn",
+          "keys": "vuwowtj qua khos khawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được mục tiêu",
+          "keys": "ddatj dduwowcj mucj tieeu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_606",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "yêu lao động",
+          "keys": "yeeu lao ddoongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quý trọng sức người",
+          "keys": "quys trongj suwcs nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên lười biếng",
+          "keys": "khoong neen luwowif bieengs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phí hoài thời gian",
+          "keys": "phis hoaif thowif gian",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_607",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "lao động sáng tạo",
+          "keys": "lao ddoongj sangs taoj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hiệu quả tối ưu",
+          "keys": "hieeuj quar toois uwu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đóng góp xã hội",
+          "keys": "ddongs gops xax hooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đời thêm đẹp",
+          "keys": "giups ddowif theem ddepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_608",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "lao động hăng say",
+          "keys": "lao ddoongj hawng say",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "niềm vui ngập tràn",
+          "keys": "nieemf vui ngaapj tranf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_609",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "lao động trí óc",
+          "keys": "lao ddoongj tris ocs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lao động chân tay",
+          "keys": "lao ddoongj chaan tay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đều quý như nhau",
+          "keys": "ddeeuf quys nhuw nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lao động là gốc",
+          "keys": "lao ddoongj laf goocs",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

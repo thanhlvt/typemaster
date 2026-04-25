@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_183",
+      "title": "Bạn bè",
+      "content": [
+        {
+          "display": "chọn bạn mà chơi",
+          "keys": "chonj banj maf chowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chọn nơi mà ở",
+          "keys": "chonj nowi maf owr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gần mực thì đen",
+          "keys": "gaanf muwcj thif dden",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gần đèn thì rạng",
+          "keys": "gaanf ddenf thif rangj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_184",
+      "title": "Bạn bè",
+      "content": [
+        {
+          "display": "bạn bè như gương",
+          "keys": "banj bef nhuw guwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "soi mình mỗi ngày",
+          "keys": "soi minhf mooix ngayf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "buôn có bạn bán có phường",
+          "keys": "buoon cos banj bans cos phuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một cây làm chẳng nên non",
+          "keys": "mootj caay lamf chawngr neen non",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_185",
+      "title": "Bạn bè",
+      "content": [
+        {
+          "display": "ba cây chụm lại",
+          "keys": "ba caay chumj laij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nên hòn núi cao",
+          "keys": "neen honf nuis cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tứ hải giai huynh đệ",
+          "keys": "tuws hair giai huynh ddeej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kết giao tâm giao",
+          "keys": "keets giao taam giao",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_186",
+      "title": "Bạn bè",
+      "content": [
+        {
+          "display": "chia ngọt sẻ bùi",
+          "keys": "chia ngotj ser buif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồng cam cộng khổ",
+          "keys": "ddoongf cam coongj khoor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoạn nạn có nhau",
+          "keys": "hoanj nanj cos nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tri kỷ tri âm",
+          "keys": "tri kyr tri aam",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_187",
+      "title": "Bạn bè",
+      "content": [
+        {
+          "display": "đừng tin lời nịnh",
+          "keys": "dduwngf tin lowif ninhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hãy nghe lời thật",
+          "keys": "hayx nghe lowif thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn tốt khó tìm",
+          "keys": "banj toots khos timf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn xấu dễ thấy",
+          "keys": "banj xaaus deex thaays",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_188",
+      "title": "Bạn bè",
+      "content": [
+        {
+          "display": "trân trọng tình bạn",
+          "keys": "traan trongj tinhf banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gắn bó keo sơn",
+          "keys": "gawns bos keo sown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thân thiết mặn nồng",
+          "keys": "thaan thieets mawnj noongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không rời không xa",
+          "keys": "khoong rowif khoong xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_189",
+      "title": "Bạn bè",
+      "content": [
+        {
+          "display": "giúp bạn tiến bộ",
+          "keys": "giups banj tieens booj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cùng nhau vươn lên",
+          "keys": "cungf nhau vuwown leen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn hiền quý giá",
+          "keys": "banj hieenf quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "như ngọc như vàng",
+          "keys": "nhuw ngocj nhuw vangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

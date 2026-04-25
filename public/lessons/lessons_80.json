@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_554",
+      "title": "Sự tự tin",
+      "content": [
+        {
+          "display": "tin vào chính mình",
+          "keys": "tin vaof chinhs minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua nỗi sợ",
+          "keys": "vuwowtj qua nooix sowj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự tin bản lĩnh",
+          "keys": "tuwj tin banr linhx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết tâm thực hiện",
+          "keys": "quyeets taam thuwcj hieenj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_555",
+      "title": "Sự tự tin",
+      "content": [
+        {
+          "display": "không gì ngăn cản",
+          "keys": "khoong gif ngawn canr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiến về phía trước",
+          "keys": "tieens veef phias truwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khám phá tiềm năng",
+          "keys": "khams phas tieemf nawng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được mục tiêu",
+          "keys": "ddatj dduwowcj mucj tieeu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_556",
+      "title": "Sự tự tin",
+      "content": [
+        {
+          "display": "tự tin toả sáng",
+          "keys": "tuwj tin toar sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chinh phục đỉnh cao",
+          "keys": "chinh phucj ddinhr cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngại thử thách",
+          "keys": "khoong ngaij thuwr thachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dám nghĩ dám làm",
+          "keys": "dams nghix dams lamf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_557",
+      "title": "Sự tự tin",
+      "content": [
+        {
+          "display": "tự tin là chìa khoá",
+          "keys": "tuwj tin laf chiaf khoas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mở cửa thành công",
+          "keys": "mowr cuwar thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bao giờ lùi",
+          "keys": "khoong bao giowf luif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_558",
+      "title": "Sự tự tin",
+      "content": [
+        {
+          "display": "bản lĩnh kiên cường",
+          "keys": "banr linhx kieen cuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững vàng tâm trí",
+          "keys": "vuwngx vangf taam tris",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc viên mãn",
+          "keys": "hanhj phucs vieen manx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_559",
+      "title": "Sự tự tin",
+      "content": [
+        {
+          "display": "tự tin giao tiếp",
+          "keys": "tuwj tin giao tieeps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thuyết phục mọi người",
+          "keys": "thuyeets phucj moij nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khẳng định giá trị",
+          "keys": "khawngr ddinhj gias trij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bản thân vươn xa",
+          "keys": "banr thaan vuwown xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_560",
+      "title": "Sự tự tin",
+      "content": [
+        {
+          "display": "mãi mãi tự tin",
+          "keys": "maix maix tuwj tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng vươn lên",
+          "keys": "khoong nguwngf vuwown leen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt tới ước mơ",
+          "keys": "ddatj towis uwowcs mow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự hào chính mình",
+          "keys": "tuwj haof chinhs minhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

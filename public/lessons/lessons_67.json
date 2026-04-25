@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_463",
+      "title": "Nhân quả",
+      "content": [
+        {
+          "display": "gieo nhân nào gặt quả nấy",
+          "keys": "gieo nhaan naof gawtj quar naays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ác giả ác báo",
+          "keys": "acs giar acs baos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích thiện phùng thiện",
+          "keys": "tichs thieenj phungf thieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lưới trời lồng lộng",
+          "keys": "luwowis trowif loongf loongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_464",
+      "title": "Nhân quả",
+      "content": [
+        {
+          "display": "thưa mà khó lọt",
+          "keys": "thuwa maf khos lotj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đời cha ăn mặn",
+          "keys": "ddowif cha awn mawnj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đời con khát nước",
+          "keys": "ddowif con khats nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn mặn khát nước",
+          "keys": "awn mawnj khats nuwowcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_465",
+      "title": "Nhân quả",
+      "content": [
+        {
+          "display": "quýt làm cam chịu",
+          "keys": "quyts lamf cam chiuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gieo gió gặp bão",
+          "keys": "gieo gios gawpj baox",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quả báo nhãn tiền",
+          "keys": "quar baos nhanx tieenf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gieo nhân lành",
+          "keys": "gieo nhaan lanhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_466",
+      "title": "Nhân quả",
+      "content": [
+        {
+          "display": "gặt quả ngọt",
+          "keys": "gawtj quar ngotj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm việc thiện",
+          "keys": "lamf vieecj thieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được phúc báo",
+          "keys": "dduwowcj phucs baos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm việc ác",
+          "keys": "lamf vieecj acs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_467",
+      "title": "Nhân quả",
+      "content": [
+        {
+          "display": "gánh hậu quả",
+          "keys": "ganhs haauj quar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luật nhân quả",
+          "keys": "luaatj nhaan quar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không sai chạy",
+          "keys": "khoong sai chayj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trước sau như một",
+          "keys": "truwowcs sau nhuw mootj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_468",
+      "title": "Nhân quả",
+      "content": [
+        {
+          "display": "cẩn thận lời nói",
+          "keys": "caanr thaanj lowif nois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cẩn thận hành động",
+          "keys": "caanr thaanj hanhf ddoongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích đức cho con cháu",
+          "keys": "tichs dduwcs cho con chaus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống lương thiện",
+          "keys": "soongs luwowng thieenj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_469",
+      "title": "Nhân quả",
+      "content": [
+        {
+          "display": "tâm hồn thanh thản",
+          "keys": "taam hoonf thanh thanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với lòng",
+          "keys": "khoong thenj vowis longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với trời",
+          "keys": "khoong thenj vowis trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn hướng thiện",
+          "keys": "luoon luoon huwowngs thieenj",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

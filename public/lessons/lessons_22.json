@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_148",
+      "title": "Sự nhẫn nhịn",
+      "content": [
+        {
+          "display": "một sự nhịn chín sự lành",
+          "keys": "mootj suwj nhinj chins suwj lanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhẫn một chút sóng yên biển lặng",
+          "keys": "nhaanx mootj chuts songs yeen bieenr lawngj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lùi một bước biển rộng trời cao",
+          "keys": "luif mootj buwowcs bieenr roongj trowif cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chữ nhẫn là chữ vàng",
+          "keys": "chuwx nhaanx laf chuwx vangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_149",
+      "title": "Sự cẩn mật",
+      "content": [
+        {
+          "display": "cẩn tắc vô ưu",
+          "keys": "caanr tawcs voo uwu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tai vách mạch rừng",
+          "keys": "tai vachs machj ruwngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn có nhai nói có nghĩ",
+          "keys": "awn cos nhai nois cos nghix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "suy nghĩ trước sau",
+          "keys": "suy nghix truwowcs sau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_150",
+      "title": "Tình đồng loại",
+      "content": [
+        {
+          "display": "bầu ơi thương lấy bí cùng",
+          "keys": "baauf owi thuwowng laays bis cungf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tuy rằng khác giống",
+          "keys": "tuy rawngf khacs gioongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhưng chung một giàn",
+          "keys": "nhuwng chung mootj gianf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu thương đùm bọc",
+          "keys": "yeeu thuwowng ddumf bocj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_151",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "ăn bát cơm dẻo",
+          "keys": "awn bats cowm deor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhớ nẻo đường đi",
+          "keys": "nhows neor dduwowngf ddi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhớ công ơn người",
+          "keys": "nhows coong own nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng quên cội nguồn",
+          "keys": "dduwngf queen cooij nguoonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_152",
+      "title": "Sự thấu cảm",
+      "content": [
+        {
+          "display": "suy bụng ta ra bụng người",
+          "keys": "suy bungj ta ra bungj nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đặt mình vào người khác",
+          "keys": "ddawtj minhf vaof nguwowif khacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồng bệnh tương lân",
+          "keys": "ddoongf beenhj tuwowng laan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồng cảm sẻ chia",
+          "keys": "ddoongf camr ser chia",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_153",
+      "title": "Sống còn",
+      "content": [
+        {
+          "display": "đoàn kết là sống",
+          "keys": "ddoanf keets laf soongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chia rẽ là chết",
+          "keys": "chia rex laf cheets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "góp sức chung tay",
+          "keys": "gops suwcs chung tay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sát cánh bên nhau",
+          "keys": "sats canhs been nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_154",
+      "title": "Hy vọng & Thành công",
+      "content": [
+        {
+          "display": "xuân sang đắc lộc",
+          "keys": "xuaan sang ddawcs loocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phát tài phát lộc",
+          "keys": "phats taif phats loocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi sự bình an",
+          "keys": "moij suwj binhf an",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sự nghiệp thăng tiến",
+          "keys": "suwj nghieepj thawng tieens",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

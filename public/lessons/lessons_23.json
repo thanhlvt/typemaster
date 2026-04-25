@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_155",
+      "title": "Sự kiên tâm",
+      "content": [
+        {
+          "display": "kiên trì nhẫn nại",
+          "keys": "kieen trif nhaanx naij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "việc gì cũng xong",
+          "keys": "vieecj gif cungx xong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bền gan vững chí",
+          "keys": "beenf gan vuwngx chis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững lòng bền chí",
+          "keys": "vuwngx longf beenf chis",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_156",
+      "title": "Sự bao dung",
+      "content": [
+        {
+          "display": "oán cừu nên giải",
+          "keys": "oans cuwuf neen giair",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên kết",
+          "keys": "khoong neen keets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đánh kẻ chạy đi",
+          "keys": "ddanhs ker chayj ddi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không đánh người chạy lại",
+          "keys": "khoong ddanhs nguwowif chayj laij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_157",
+      "title": "Sự tằn tiện",
+      "content": [
+        {
+          "display": "thắt lưng buộc bụng",
+          "keys": "thawts luwng buoocj bungj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chắt chiu từng đồng",
+          "keys": "chawts chiu tuwngf ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chắt chiu dành dụm",
+          "keys": "chawts chiu danhf dumj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của một đồng công một nén",
+          "keys": "cuar mootj ddoongf coong mootj nens",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_158",
+      "title": "Lòng tự trọng",
+      "content": [
+        {
+          "display": "giấy rách phải giữ lấy lề",
+          "keys": "giaays rachs phair giuwx laays leef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chết trong còn hơn sống đục",
+          "keys": "cheets trong conf hown soongs dducj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn danh dự",
+          "keys": "giuwx ginf danh duwj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trọng nghĩa khinh tài",
+          "keys": "trongj nghiax khinh taif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_159",
+      "title": "Thái độ sống",
+      "content": [
+        {
+          "display": "thắng không kiêu",
+          "keys": "thawngs khoong kieeu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bại không nản",
+          "keys": "baij khoong nanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thua keo này ta bày keo khác",
+          "keys": "thua keo nayf ta bayf keo khacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững vàng bản lĩnh",
+          "keys": "vuwngx vangf banr linhx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_160",
+      "title": "Tinh thần học tập",
+      "content": [
+        {
+          "display": "học không biết chán",
+          "keys": "hocj khoong bieets chans",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dạy không biết mỏi",
+          "keys": "dayj khoong bieets moir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học hỏi muôn nơi",
+          "keys": "hocj hoir muoon nowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mở mang kiến thức",
+          "keys": "mowr mang kieens thuwcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_161",
+      "title": "Lời chúc tốt đẹp",
+      "content": [
+        {
+          "display": "sức khoẻ dồi dào",
+          "keys": "suwcs khoer dooif daof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thân thể tráng kiện",
+          "keys": "thaan theer trangs kieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống lâu trăm tuổi",
+          "keys": "soongs laau trawm tuooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "an khang thịnh vượng",
+          "keys": "an khang thinhj vuwowngj",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

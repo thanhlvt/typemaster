@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_694",
+      "title": "Tổng kết cuộc sống",
+      "content": [
+        {
+          "display": "học đi đôi với hành",
+          "keys": "hocj ddi ddooi vowis hanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có nghĩa có tình",
+          "keys": "soongs cos nghiax cos tinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết ơn nguồn cội",
+          "keys": "bieets own nguoonf cooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên trì nhẫn nại",
+          "keys": "kieen trif nhaanx naij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_695",
+      "title": "Tổng kết cuộc sống",
+      "content": [
+        {
+          "display": "tiết kiệm thời gian",
+          "keys": "tieets kieemj thowif gian",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng tình bạn",
+          "keys": "traan trongj tinhf banj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_696",
+      "title": "Tổng kết cuộc sống",
+      "content": [
+        {
+          "display": "yêu thương gia đình",
+          "keys": "yeeu thuwowng gia ddinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn sức khoẻ",
+          "keys": "giuwx ginf suwcs khoer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn học hỏi",
+          "keys": "luoon luoon hocj hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng vươn lên",
+          "keys": "khoong nguwngf vuwown leen",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_697",
+      "title": "Tổng kết cuộc sống",
+      "content": [
+        {
+          "display": "sống đẹp lòng người",
+          "keys": "soongs ddepj longf nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích đức cho sau",
+          "keys": "tichs dduwcs cho sau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người ngay nói thật",
+          "keys": "nguwowif ngay nois thaatj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_698",
+      "title": "Tổng kết cuộc sống",
+      "content": [
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc viên mãn",
+          "keys": "hanhj phucs vieen manx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất nước mạnh giàu",
+          "keys": "ddaats nuwowcs manhj giauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "văn minh tiến bộ",
+          "keys": "vawn minh tieens booj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_699",
+      "title": "Tổng kết cuộc sống",
+      "content": [
+        {
+          "display": "mãi mãi tri ân",
+          "keys": "maix maix tri aan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống tuyệt vời",
+          "keys": "cuoocj soongs tuyeetj vowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cùng nhau cố gắng",
+          "keys": "cungf nhau coos gawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới tương lai",
+          "keys": "vuwown towis tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_700",
+      "title": "Tổng kết cuộc sống",
+      "content": [
+        {
+          "display": "vạn sự hanh thông",
+          "keys": "vanj suwj hanh thoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mã đáo thành công",
+          "keys": "max ddaos thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phúc lộc thọ toàn",
+          "keys": "phucs loocj thoj toanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xin chào tạm biệt",
+          "keys": "xin chaof tamj bieetj",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

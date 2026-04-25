@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_162",
+      "title": "Tính cách",
+      "content": [
+        {
+          "display": "hiền như bụt",
+          "keys": "hieenf nhuw butj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ác như hùm",
+          "keys": "acs nhuw humf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo miệng thì sống",
+          "keys": "kheos mieengj thif soongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thẳng như ruột ngựa",
+          "keys": "thawngr nhuw ruootj nguwaj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_163",
+      "title": "Tính cách",
+      "content": [
+        {
+          "display": "đa nghi như tào tháo",
+          "keys": "dda nghi nhuw taof thaos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mềm nắn rắn buông",
+          "keys": "meemf nawns rawns buoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mồm loa mép giải",
+          "keys": "moomf loa meps giair",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhát như thỏ đế",
+          "keys": "nhats nhuw thor ddees",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_164",
+      "title": "Tính cách",
+      "content": [
+        {
+          "display": "ngang như cua",
+          "keys": "ngang nhuw cua",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nóng như lửa",
+          "keys": "nongs nhuw luwar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lạnh như tiền",
+          "keys": "lanhj nhuw tieenf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tươi như hoa",
+          "keys": "tuwowi nhuw hoa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_165",
+      "title": "Tính cách",
+      "content": [
+        {
+          "display": "uể oải như sên",
+          "keys": "ueer oair nhuw seen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vui như tết",
+          "keys": "vui nhuw teets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yếu như sên",
+          "keys": "yeeus nhuw seen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chậm như rùa",
+          "keys": "chaamj nhuw ruaf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_166",
+      "title": "Tính cách",
+      "content": [
+        {
+          "display": "nhanh như sóc",
+          "keys": "nhanh nhuw socs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hót như khướu",
+          "keys": "hots nhuw khuwowus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lì như lợn",
+          "keys": "lif nhuw lownj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khôn như cáo",
+          "keys": "khoon nhuw caos",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_167",
+      "title": "Tính cách",
+      "content": [
+        {
+          "display": "ngu như bò",
+          "keys": "ngu nhuw bof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dữ như cọp",
+          "keys": "duwx nhuw copj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hiền như đất",
+          "keys": "hieenf nhuw ddaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thật như đếm",
+          "keys": "thaatj nhuw ddeems",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_168",
+      "title": "Tính cách",
+      "content": [
+        {
+          "display": "giả dối lọc lừa",
+          "keys": "giar doois locj luwaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiêu căng ngạo mạn",
+          "keys": "kieeu cawng ngaoj manj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khiêm tốn nhún nhường",
+          "keys": "khieem toons nhuns nhuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự cao tự đại",
+          "keys": "tuwj cao tuwj ddaij",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

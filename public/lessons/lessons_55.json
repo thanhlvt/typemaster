@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_379",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "đất lành chim đậu",
+          "keys": "ddaats lanhf chim ddaauj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nước chảy đá mòn",
+          "keys": "nuwowcs chayr ddas monf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa thuận gió hoà",
+          "keys": "muwa thuaanj gios hoaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nắng cháy da người",
+          "keys": "nawngs chays da nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_380",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "gió thổi mây bay",
+          "keys": "gios thooir maay bay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoa nở chim hót",
+          "keys": "hoa nowr chim hots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rừng vàng biển bạc",
+          "keys": "ruwngf vangf bieenr bacj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "núi cao sông dài",
+          "keys": "nuis cao soong daif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_381",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "bốn mùa luân chuyển",
+          "keys": "boons muaf luaan chuyeenr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xuân hạ thu đông",
+          "keys": "xuaan haj thu ddoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vẻ đẹp hoang sơ",
+          "keys": "ver ddepj hoang sow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không khí trong lành",
+          "keys": "khoong khis trong lanhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_382",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "bảo vệ rừng xanh",
+          "keys": "baor veej ruwngf xanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn nguồn nước",
+          "keys": "giuwx ginf nguoonf nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "môi trường xanh sạch",
+          "keys": "mooi truwowngf xanh sachj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn vật sinh sôi",
+          "keys": "vanj vaatj sinh sooi",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_383",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "ánh bình minh",
+          "keys": "anhs binhf minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoàng hôn rực rỡ",
+          "keys": "hoangf hoon ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bầu trời xanh ngắt",
+          "keys": "baauf trowif xanh ngawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cánh đồng bao la",
+          "keys": "canhs ddoongf bao la",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_384",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "biển khơi cuộn sóng",
+          "keys": "bieenr khowi cuoonj songs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dòng sông hiền hoà",
+          "keys": "dongf soong hieenf hoaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngọn núi hùng vĩ",
+          "keys": "ngonj nuis hungf vix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thung lũng thơ mộng",
+          "keys": "thung lungx thow moongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_385",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "thiên nhiên kỳ thú",
+          "keys": "thieen nhieen kyf thus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "di sản thế giới",
+          "keys": "di sanr thees giowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng trái đất",
+          "keys": "traan trongj trais ddaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngôi nhà chung",
+          "keys": "ngooi nhaf chung",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

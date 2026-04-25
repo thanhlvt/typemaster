@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_211",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "sông có khúc người có lúc",
+          "keys": "soong cos khucs nguwowif cos lucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vỏ quýt dày có móng tay nhọn",
+          "keys": "vor quyts dayf cos mongs tay nhonj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mềm nắn rắn buông",
+          "keys": "meemf nawns rawns buoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi một ngày đàng học một sàng khôn",
+          "keys": "ddi mootj ngayf ddangf hocj mootj sangf khoon",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_212",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "được voi đòi tiên",
+          "keys": "dduwowcj voi ddoif tieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đứng núi này trông núi nọ",
+          "keys": "dduwngs nuis nayf troong nuis noj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của đi thay người",
+          "keys": "cuar ddi thay nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trong cái rủi có cái may",
+          "keys": "trong cais ruir cos cais may",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_213",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "liệu cơm gắp mắm",
+          "keys": "lieeuj cowm gawps mawms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo co thì ấm",
+          "keys": "kheos co thif aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết người biết ta",
+          "keys": "bieets nguwowif bieets ta",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trăm trận trăm thắng",
+          "keys": "trawm traanj trawm thawngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_214",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "tiền mất tật mang",
+          "keys": "tieenf maats taatj mang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiền nào của nấy",
+          "keys": "tieenf naof cuar naays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của rẻ là của ôi",
+          "keys": "cuar rer laf cuar ooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng nghe lời nịnh",
+          "keys": "dduwngf nghe lowif ninhj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_215",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "hãy tin lời thật",
+          "keys": "hayx tin lowif thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phòng bệnh hơn chữa bệnh",
+          "keys": "phongf beenhj hown chuwax beenhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cẩn tắc vô ưu",
+          "keys": "caanr tawcs voo uwu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thời gian là vàng",
+          "keys": "thowif gian laf vangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_216",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "đừng để mai sau",
+          "keys": "dduwngf ddeer mai sau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "việc hôm nay chớ để ngày mai",
+          "keys": "vieecj hoom nay chows ddeer ngayf mai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sai một li đi một dặm",
+          "keys": "sai mootj li ddi mootj dawmj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mất bò mới lo làm chuồng",
+          "keys": "maats bof mowis lo lamf chuoongf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_217",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "sự đã rồi",
+          "keys": "suwj ddax rooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hối không kịp",
+          "keys": "hoois khoong kipj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết đủ là vui",
+          "keys": "bieets ddur laf vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tham thì thâm",
+          "keys": "tham thif thaam",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

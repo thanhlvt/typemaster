@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_197",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "nắng tốt dưa mưa tốt lúa",
+          "keys": "nawngs toots duwa muwa toots luas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nắng chóng trưa mưa chóng tối",
+          "keys": "nawngs chongs truwa muwa chongs toois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trăng quầng thì hạn",
+          "keys": "trawng quaangf thif hanj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trăng tán thì mưa",
+          "keys": "trawng tans thif muwa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_198",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "đêm tháng năm chưa nằm đã sáng",
+          "keys": "ddeem thangs nawm chuwa nawmf ddax sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngày tháng mười chưa cười",
+          "keys": "ngayf thangs muwowif chuwa cuwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đã tối",
+          "keys": "ddax toois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ếch kêu uôm uôm",
+          "keys": "eechs keeu uoom uoom",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_199",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "ao chuôm đầy nước",
+          "keys": "ao chuoom ddaayf nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chuồn chuồn bay thấp",
+          "keys": "chuoonf chuoonf bay thaaps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thì mưa",
+          "keys": "thif muwa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bay cao thì nắng",
+          "keys": "bay cao thif nawngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_200",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "bay vừa thì râm",
+          "keys": "bay vuwaf thif raam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mống đông vồng tây",
+          "keys": "moongs ddoong voongf taay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chớp đông nhay nháy",
+          "keys": "chowps ddoong nhay nhays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gà gáy thì sáng",
+          "keys": "gaf gays thif sangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_201",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "chim hót thì xuân",
+          "keys": "chim hots thif xuaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoa nở thì đẹp",
+          "keys": "hoa nowr thif ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quả chín thì thơm",
+          "keys": "quar chins thif thowm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gió thổi mây bay",
+          "keys": "gios thooir maay bay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_202",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "mưa dầm dề",
+          "keys": "muwa daamf deef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nắng cháy da",
+          "keys": "nawngs chays da",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rét run cầm cập",
+          "keys": "rets run caamf caapj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bốn mùa xuân hạ",
+          "keys": "boons muaf xuaan haj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_203",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "thu đông luân chuyển",
+          "keys": "thu ddoong luaan chuyeenr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất lành chim đậu",
+          "keys": "ddaats lanhf chim ddaauj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nước chảy đá mòn",
+          "keys": "nuwowcs chayr ddas monf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biển bạc rừng vàng",
+          "keys": "bieenr bacj ruwngf vangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

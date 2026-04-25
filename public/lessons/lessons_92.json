@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_638",
+      "title": "Tự do",
+      "content": [
+        {
+          "display": "không có gì quý hơn độc lập tự do",
+          "keys": "khoong cos gif quys hown ddoocj laapj tuwj do",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự do tự tại",
+          "keys": "tuwj do tuwj taij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bị ràng buộc",
+          "keys": "khoong bij rangf buoocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm điều mình thích",
+          "keys": "lamf ddieeuf minhf thichs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_639",
+      "title": "Tự do",
+      "content": [
+        {
+          "display": "sống đúng với mình",
+          "keys": "soongs ddungs vowis minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự do tư duy",
+          "keys": "tuwj do tuw duy",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sáng tạo không ngừng",
+          "keys": "sangs taoj khoong nguwngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khám phá thế giới",
+          "keys": "khams phas thees giowis",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_640",
+      "title": "Tự do",
+      "content": [
+        {
+          "display": "tự do ngôn luận",
+          "keys": "tuwj do ngoon luaanj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tôn trọng lẫn nhau",
+          "keys": "toon trongj laanx nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xã hội dân chủ",
+          "keys": "xax hooij daan chur",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "văn minh tiến bộ",
+          "keys": "vawn minh tieens booj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_641",
+      "title": "Tự do",
+      "content": [
+        {
+          "display": "tự do lựa chọn",
+          "keys": "tuwj do luwaj chonj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trách nhiệm đi kèm",
+          "keys": "trachs nhieemj ddi kemf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết định cuộc đời",
+          "keys": "quyeets ddinhj cuoocj ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_642",
+      "title": "Tự do",
+      "content": [
+        {
+          "display": "tự do là sức mạnh",
+          "keys": "tuwj do laf suwcs manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp ta vươn xa",
+          "keys": "giups ta vuwown xa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được mục tiêu",
+          "keys": "ddatj dduwowcj mucj tieeu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_643",
+      "title": "Tự do",
+      "content": [
+        {
+          "display": "tôn trọng tự do",
+          "keys": "toon trongj tuwj do",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của mỗi cá nhân",
+          "keys": "cuar mooix cas nhaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng cộng đồng",
+          "keys": "xaay duwngj coongj ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gắn kết bền vững",
+          "keys": "gawns keets beenf vuwngx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_644",
+      "title": "Tự do",
+      "content": [
+        {
+          "display": "tự do ngời sáng",
+          "keys": "tuwj do ngowif sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi bền lâu",
+          "keys": "maix maix beenf laau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc vẹn tròn",
+          "keys": "hanhj phucs venj tronf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống ý nghĩa",
+          "keys": "cuoocj soongs ys nghiax",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

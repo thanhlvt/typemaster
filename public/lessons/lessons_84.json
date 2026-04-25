@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_582",
+      "title": "Tình bạn",
+      "content": [
+        {
+          "display": "chọn bạn mà chơi",
+          "keys": "chonj banj maf chowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gần mực thì đen gần đèn thì rạng",
+          "keys": "gaanf muwcj thif dden gaanf ddenf thif rangj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn tốt khó tìm",
+          "keys": "banj toots khos timf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng bạn hiền",
+          "keys": "traan trongj banj hieenf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_583",
+      "title": "Tình bạn",
+      "content": [
+        {
+          "display": "chia ngọt sẻ bùi",
+          "keys": "chia ngotj ser buif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồng cam cộng khổ",
+          "keys": "ddoongf cam coongj khoor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoạn nạn có nhau",
+          "keys": "hoanj nanj cos nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tri kỷ tri âm",
+          "keys": "tri kyr tri aam",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_584",
+      "title": "Tình bạn",
+      "content": [
+        {
+          "display": "bạn bè như gương",
+          "keys": "banj bef nhuw guwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "soi mình mỗi ngày",
+          "keys": "soi minhf mooix ngayf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đỡ tiến bộ",
+          "keys": "giups ddowx tieens booj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cùng nhau vươn lên",
+          "keys": "cungf nhau vuwown leen",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_585",
+      "title": "Tình bạn",
+      "content": [
+        {
+          "display": "tình bạn keo sơn",
+          "keys": "tinhf banj keo sown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gắn bó lâu dài",
+          "keys": "gawns bos laau daif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không rời không xa",
+          "keys": "khoong rowif khoong xa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tin tưởng lẫn nhau",
+          "keys": "tin tuwowngr laanx nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_586",
+      "title": "Tình bạn",
+      "content": [
+        {
+          "display": "thấu hiểu sẻ chia",
+          "keys": "thaaus hieeur ser chia",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng mối quan hệ",
+          "keys": "xaay duwngj moois quan heej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bền vững muôn đời",
+          "keys": "beenf vuwngx muoon ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "niềm vui nhân đôi",
+          "keys": "nieemf vui nhaan ddooi",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_587",
+      "title": "Tình bạn",
+      "content": [
+        {
+          "display": "nỗi buồn vơi đi",
+          "keys": "nooix buoonf vowi ddi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khi có bạn tốt",
+          "keys": "khi cos banj toots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tình bạn chân thành",
+          "keys": "tinhf banj chaan thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không màng lợi danh",
+          "keys": "khoong mangf lowij danh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_588",
+      "title": "Tình bạn",
+      "content": [
+        {
+          "display": "mãi mãi gắn kết",
+          "keys": "maix maix gawns keets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu thương bạn bè",
+          "keys": "yeeu thuwowng banj bef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "như người thân thích",
+          "keys": "nhuw nguwowif thaan thichs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tình bạn quý giá",
+          "keys": "tinhf banj quys gias",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

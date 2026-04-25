@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_176",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "anh em như thể tay chân",
+          "keys": "anh em nhuw theer tay chaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rách lành đùm bọc",
+          "keys": "rachs lanhf ddumf bocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dở hay đỡ đần",
+          "keys": "dowr hay ddowx ddaanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con hơn cha là nhà có phúc",
+          "keys": "con hown cha laf nhaf cos phucs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_177",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "con nhà tông không giống lông",
+          "keys": "con nhaf toong khoong gioongs loong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thì cũng giống cánh",
+          "keys": "thif cungx gioongs canhs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mẹ tròn con vuông",
+          "keys": "mej tronf con vuoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cha mẹ sinh con trời sinh tính",
+          "keys": "cha mej sinh con trowif sinh tinhs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_178",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "sảy cha còn chú",
+          "keys": "sayr cha conf chus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sảy mẹ bú dì",
+          "keys": "sayr mej bus dif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chị ngã em nâng",
+          "keys": "chij ngax em naang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "máu chảy ruột mềm",
+          "keys": "maus chayr ruootj meemf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_179",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "một giọt máu đào",
+          "keys": "mootj giotj maus ddaof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hơn ao nước lã",
+          "keys": "hown ao nuwowcs lax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con có cha như nhà có nóc",
+          "keys": "con cos cha nhuw nhaf cos nocs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con không cha như nòng nọc",
+          "keys": "con khoong cha nhuw nongf nocj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_180",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "đứt đuôi",
+          "keys": "dduwts dduooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "môi hở răng lạnh",
+          "keys": "mooi howr rawng lanhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thuận vợ thuận chồng",
+          "keys": "thuaanj vowj thuaanj choongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tát biển đông cũng cạn",
+          "keys": "tats bieenr ddoong cungx canj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_181",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "anh em thảo hiền",
+          "keys": "anh em thaor hieenf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lá lành đùm lá rách",
+          "keys": "las lanhf ddumf las rachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gia đình là tổ ấm",
+          "keys": "gia ddinhf laf toor aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nuôi con khôn lớn",
+          "keys": "nuooi con khoon lowns",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_182",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "đáp đền nghĩa nặng",
+          "keys": "ddaps ddeenf nghiax nawngj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tình thâm như bể",
+          "keys": "tinhf thaam nhuw beer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kính lão đắc thọ",
+          "keys": "kinhs laox ddawcs thoj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kính già già để tuổi cho",
+          "keys": "kinhs giaf giaf ddeer tuooir cho",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

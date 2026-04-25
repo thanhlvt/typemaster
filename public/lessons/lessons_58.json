@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_400",
+      "title": "Thời tiết",
+      "content": [
+        {
+          "display": "nắng tốt dưa",
+          "keys": "nawngs toots duwa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa tốt lúa",
+          "keys": "muwa toots luas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chuồn chuồn bay thấp",
+          "keys": "chuoonf chuoonf bay thaaps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thì mưa",
+          "keys": "thif muwa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_401",
+      "title": "Thời tiết",
+      "content": [
+        {
+          "display": "bay cao thì nắng",
+          "keys": "bay cao thif nawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bay vừa thì râm",
+          "keys": "bay vuwaf thif raam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trăng quầng thì hạn",
+          "keys": "trawng quaangf thif hanj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trăng tán thì mưa",
+          "keys": "trawng tans thif muwa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_402",
+      "title": "Thời tiết",
+      "content": [
+        {
+          "display": "đêm tháng năm",
+          "keys": "ddeem thangs nawm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chưa nằm đã sáng",
+          "keys": "chuwa nawmf ddax sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngày tháng mười",
+          "keys": "ngayf thangs muwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chưa cười đã tối",
+          "keys": "chuwa cuwowif ddax toois",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_403",
+      "title": "Thời tiết",
+      "content": [
+        {
+          "display": "rét run cầm cập",
+          "keys": "rets run caamf caapj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nóng cháy da cháy thịt",
+          "keys": "nongs chays da chays thitj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa dầm dề",
+          "keys": "muwa daamf deef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gió thổi mạnh",
+          "keys": "gios thooir manhj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_404",
+      "title": "Thời tiết",
+      "content": [
+        {
+          "display": "bão bùng nổi lên",
+          "keys": "baox bungf nooir leen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trời quang mây tạnh",
+          "keys": "trowif quang maay tanhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ánh nắng chan hoà",
+          "keys": "anhs nawngs chan hoaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giọt sương ban mai",
+          "keys": "giotj suwowng ban mai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_405",
+      "title": "Thời tiết",
+      "content": [
+        {
+          "display": "cầu vồng sau mưa",
+          "keys": "caauf voongf sau muwa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mùa xuân ấm áp",
+          "keys": "muaf xuaan aams aps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mùa hè oi bức",
+          "keys": "muaf hef oi buwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mùa thu dịu mát",
+          "keys": "muaf thu diuj mats",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_406",
+      "title": "Thời tiết",
+      "content": [
+        {
+          "display": "mùa đông giá lạnh",
+          "keys": "muaf ddoong gias lanhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thời tiết thay đổi",
+          "keys": "thowif tieets thay ddooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cần phải chú ý",
+          "keys": "caanf phair chus ys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn sức khoẻ",
+          "keys": "giuwx ginf suwcs khoer",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

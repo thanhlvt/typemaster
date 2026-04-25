@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_295",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "người ngay nói thật",
+          "keys": "nguwowif ngay nois thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vàng thật không sợ lửa",
+          "keys": "vangf thaatj khoong sowj luwar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thật thà là cha quỷ quái",
+          "keys": "thaatj thaf laf cha quyr quais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cây ngay không sợ chết đứng",
+          "keys": "caay ngay khoong sowj cheets dduwngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_296",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "nói có sách mách có chứng",
+          "keys": "nois cos sachs machs cos chuwngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sự thật luôn thắng",
+          "keys": "suwj thaatj luoon thawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên giả dối",
+          "keys": "khoong neen giar doois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thẳng như ruột ngựa",
+          "keys": "thawngr nhuw ruootj nguwaj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_297",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "ăn ngay nói thẳng",
+          "keys": "awn ngay nois thawngr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với lòng",
+          "keys": "khoong thenj vowis longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với trời",
+          "keys": "khoong thenj vowis trowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_298",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "sống thật với mình",
+          "keys": "soongs thaatj vowis minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống thật với người",
+          "keys": "soongs thaatj vowis nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng lòng tin",
+          "keys": "traan trongj longf tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng lừa dối nhau",
+          "keys": "dduwngf luwaf doois nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_299",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "sự thật mất lòng",
+          "keys": "suwj thaatj maats longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhưng được lòng tin",
+          "keys": "nhuwng dduwowcj longf tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành thật là tốt nhất",
+          "keys": "thanhf thaatj laf toots nhaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn trung thực",
+          "keys": "luoon luoon trung thuwcj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_300",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "giữ gìn chữ tín",
+          "keys": "giuwx ginf chuwx tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một lần mất tin",
+          "keys": "mootj laanf maats tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn lần bất tín",
+          "keys": "vanj laanf baats tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người thật việc thật",
+          "keys": "nguwowif thaatj vieecj thaatj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_301",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "kết quả thật",
+          "keys": "keets quar thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giá trị thật",
+          "keys": "gias trij thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi bền lâu",
+          "keys": "maix maix beenf laau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì thay thế",
+          "keys": "khoong gif thay thees",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

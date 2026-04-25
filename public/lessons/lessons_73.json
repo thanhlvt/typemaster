@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_505",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "vào sinh ra tử",
+          "keys": "vaof sinh ra tuwr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "da ngựa bọc thây",
+          "keys": "da nguwaj bocj thaay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đầu đội trời chân đạp đất",
+          "keys": "ddaauf ddooij trowif chaan ddapj ddaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gan vàng dạ sắt",
+          "keys": "gan vangf daj sawts",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_506",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "không sợ hiểm nguy",
+          "keys": "khoong sowj hieemr nguy",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dũng cảm đương đầu",
+          "keys": "dungx camr dduwowng ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua nỗi sợ",
+          "keys": "vuwowtj qua nooix sowj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiến đấu tới cùng",
+          "keys": "chieens ddaaus towis cungf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_507",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "bảo vệ lẽ phải",
+          "keys": "baor veej lex phair",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vì nước quên thân",
+          "keys": "vif nuwowcs queen thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vì dân phục vụ",
+          "keys": "vif daan phucj vuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "anh hùng hào kiệt",
+          "keys": "anh hungf haof kieetj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_508",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "không lùi bước",
+          "keys": "khoong luif buwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững vàng tay lái",
+          "keys": "vuwngx vangf tay lais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bản lĩnh kiên cường",
+          "keys": "banr linhx kieen cuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dám nghĩ dám làm",
+          "keys": "dams nghix dams lamf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_509",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "khám phá cái mới",
+          "keys": "khams phas cais mowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới tầm cao",
+          "keys": "vuwown towis taamf cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngại gian khổ",
+          "keys": "khoong ngaij gian khoor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sẵn sàng hy sinh",
+          "keys": "sawnx sangf hy sinh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_510",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "vì mục đích cao cả",
+          "keys": "vif mucj ddichs cao car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng yêu nước nồng nàn",
+          "keys": "longf yeeu nuwowcs noongf nanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tinh thần bất khuất",
+          "keys": "tinh thaanf baats khuaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi ngời sáng",
+          "keys": "maix maix ngowif sangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_511",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "gương sáng cho đời",
+          "keys": "guwowng sangs cho ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con rồng cháu tiên",
+          "keys": "con roongf chaus tieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hào khí ngất trời",
+          "keys": "haof khis ngaats trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì lay chuyển",
+          "keys": "khoong gif lay chuyeenr",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

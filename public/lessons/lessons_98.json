@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_680",
+      "title": "Sự kiên định",
+      "content": [
+        {
+          "display": "vững như bàn thạch",
+          "keys": "vuwngx nhuw banf thachj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên định lập trường",
+          "keys": "kieen ddinhj laapj truwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bị lay chuyển",
+          "keys": "khoong bij lay chuyeenr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bởi những ngoại quan",
+          "keys": "bowir nhuwngx ngoaij quan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_681",
+      "title": "Sự kiên định",
+      "content": [
+        {
+          "display": "giữ vững niềm tin",
+          "keys": "giuwx vuwngx nieemf tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết tâm thực hiện",
+          "keys": "quyeets taam thuwcj hieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mục tiêu đã đề",
+          "keys": "mucj tieeu ddax ddeef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được kết quả",
+          "keys": "ddatj dduwowcj keets quar",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_682",
+      "title": "Sự kiên định",
+      "content": [
+        {
+          "display": "kiên định ý chí",
+          "keys": "kieen ddinhj ys chis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua thử thách",
+          "keys": "vuwowtj qua thuwr thachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chinh phục đỉnh cao",
+          "keys": "chinh phucj ddinhr cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngại khó khăn",
+          "keys": "khoong ngaij khos khawn",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_683",
+      "title": "Sự kiên định",
+      "content": [
+        {
+          "display": "bản lĩnh kiên cường",
+          "keys": "banr linhx kieen cuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững vàng tay lái",
+          "keys": "vuwngx vangf tay lais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiến về phía trước",
+          "keys": "tieens veef phias truwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bao giờ lùi",
+          "keys": "khoong bao giowf luif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_684",
+      "title": "Sự kiên định",
+      "content": [
+        {
+          "display": "kiên định mục tiêu",
+          "keys": "kieen ddinhj mucj tieeu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công sẽ đến",
+          "keys": "thanhf coong sex ddeens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang đón chờ",
+          "keys": "vinh quang ddons chowf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi bền lâu",
+          "keys": "maix maix beenf laau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_685",
+      "title": "Sự kiên định",
+      "content": [
+        {
+          "display": "kiên định với nghề",
+          "keys": "kieen ddinhj vowis ngheef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nỗ lực hết mình",
+          "keys": "noox luwcj heets minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tạo ra giá trị",
+          "keys": "taoj ra gias trij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phục vụ cộng đồng",
+          "keys": "phucj vuj coongj ddoongf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_686",
+      "title": "Sự kiên định",
+      "content": [
+        {
+          "display": "kiên định sáng ngời",
+          "keys": "kieen ddinhj sangs ngowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngời sáng tương lai",
+          "keys": "ngowif sangs tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc viên mãn",
+          "keys": "hanhj phucs vieen manx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự thành công",
+          "keys": "vanj suwj thanhf coong",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

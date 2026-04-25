@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_512",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "thông minh vốn sẵn tính trời",
+          "keys": "thoong minh voons sawnx tinhs trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khôn ngoan đối đáp người ngoài",
+          "keys": "khoon ngoan ddoois ddaps nguwowif ngoaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn biết phải hỏi",
+          "keys": "muoons bieets phair hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn giỏi phải học",
+          "keys": "muoons gioir phair hocj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_513",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "học một biết mười",
+          "keys": "hocj mootj bieets muwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhanh trí kịp thời",
+          "keys": "nhanh tris kipj thowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xử lý tình huống",
+          "keys": "xuwr lys tinhf huoongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_514",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "mưu trí dũng cảm",
+          "keys": "muwu tris dungx camr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tài cao hiểu rộng",
+          "keys": "taif cao hieeur roongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến thức uyên thâm",
+          "keys": "kieens thuwcs uyeen thaam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sáng tạo không ngừng",
+          "keys": "sangs taoj khoong nguwngf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_515",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "khám phá điều hay",
+          "keys": "khams phas ddieeuf hay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "áp dụng thực tế",
+          "keys": "aps dungj thuwcj tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hiệu quả bất ngờ",
+          "keys": "hieeuj quar baats ngowf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tầm nhìn xa trông rộng",
+          "keys": "taamf nhinf xa troong roongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_516",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "chiến lược đúng đắn",
+          "keys": "chieens luwowcj ddungs ddawns",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thông tuệ sáng suốt",
+          "keys": "thoong tueej sangs suoots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết định chính xác",
+          "keys": "quyeets ddinhj chinhs xacs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_517",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "không bị lừa dối",
+          "keys": "khoong bij luwaf doois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhận biết đúng sai",
+          "keys": "nhaanj bieets ddungs sai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phân tích thấu đáo",
+          "keys": "phaan tichs thaaus ddaos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hiểu thấu lòng người",
+          "keys": "hieeur thaaus longf nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_518",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tuyệt đỉnh thông minh",
+          "keys": "tuyeetj ddinhr thoong minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tài năng thiên bẩm",
+          "keys": "taif nawng thieen baamr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngời sáng tương lai",
+          "keys": "ngowif sangs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

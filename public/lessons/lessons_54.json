@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_372",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "đi một ngày đàng",
+          "keys": "ddi mootj ngayf ddangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học một sàng khôn",
+          "keys": "hocj mootj sangf khoon",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "non xanh nước biếc",
+          "keys": "non xanh nuwowcs bieecs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phong cảnh hữu tình",
+          "keys": "phong canhr huwux tinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_373",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "du lịch bốn phương",
+          "keys": "du lichj boons phuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khám phá thế giới",
+          "keys": "khams phas thees giowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vẻ đẹp thiên nhiên",
+          "keys": "ver ddepj thieen nhieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "danh lam thắng cảnh",
+          "keys": "danh lam thawngs canhr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_374",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "vịnh hạ long",
+          "keys": "vinhj haj long",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phố cổ hội an",
+          "keys": "phoos coor hooij an",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cố đô huế",
+          "keys": "coos ddoo huees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biển nha trang",
+          "keys": "bieenr nha trang",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_375",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "lên rừng xuống biển",
+          "keys": "leen ruwngf xuoongs bieenr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trải nghiệm thú vị",
+          "keys": "trair nghieemj thus vij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kỷ niệm khó quên",
+          "keys": "kyr nieemj khos queen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hành trình mới",
+          "keys": "hanhf trinhf mowis",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_376",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "xách ba lô lên",
+          "keys": "xachs ba loo leen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "và đi thôi",
+          "keys": "vaf ddi thooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu thiên nhiên",
+          "keys": "yeeu thieen nhieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bảo vệ môi trường",
+          "keys": "baor veej mooi truwowngf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_377",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "du lịch văn hoá",
+          "keys": "du lichj vawn hoas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tìm hiểu lịch sử",
+          "keys": "timf hieeur lichj suwr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con người thân thiện",
+          "keys": "con nguwowif thaan thieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mến khách nhiệt tình",
+          "keys": "meens khachs nhieetj tinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_378",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "khám phá bản thân",
+          "keys": "khams phas banr thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mở rộng tầm mắt",
+          "keys": "mowr roongj taamf mawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống là",
+          "keys": "cuoocj soongs laf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "những chuyến đi",
+          "keys": "nhuwngx chuyeens ddi",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

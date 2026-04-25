@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_239",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "có công mài sắt",
+          "keys": "cos coong maif sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có ngày nên kim",
+          "keys": "cos ngayf neen kim",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có chí thì nên",
+          "keys": "cos chis thif neen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chớ thấy sóng cả",
+          "keys": "chows thaays songs car",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_240",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "mà ngã tay chèo",
+          "keys": "maf ngax tay cheof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nước chảy đá mòn",
+          "keys": "nuwowcs chayr ddas monf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên trì nhẫn nại",
+          "keys": "kieen trif nhaanx naij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "việc gì cũng xong",
+          "keys": "vieecj gif cungx xong",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_241",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "bền gan vững chí",
+          "keys": "beenf gan vuwngx chis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững lòng bền chí",
+          "keys": "vuwngx longf beenf chis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thất bại là mẹ thành công",
+          "keys": "thaats baij laf mej thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự khởi đầu nan",
+          "keys": "vanj suwj khowir ddaauf nan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_242",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "không bỏ cuộc",
+          "keys": "khoong bor cuoocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết tâm đến cùng",
+          "keys": "quyeets taam ddeens cungf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua thử thách",
+          "keys": "vuwowtj qua thuwr thachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiến thắng chính mình",
+          "keys": "chieens thawngs chinhs minhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_243",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "chinh phục đỉnh cao",
+          "keys": "chinh phucj ddinhr cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mài sắt nên kim",
+          "keys": "maif sawts neen kim",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "từng bước vững chắc",
+          "keys": "tuwngf buwowcs vuwngx chawcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiến về phía trước",
+          "keys": "tieens veef phias truwowcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_244",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "gian nan rèn luyện",
+          "keys": "gian nan renf luyeenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mới thành công",
+          "keys": "mowis thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lửa thử vàng",
+          "keys": "luwar thuwr vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gian nan thử sức",
+          "keys": "gian nan thuwr suwcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_245",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "không ngại khó khăn",
+          "keys": "khoong ngaij khos khawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không sợ khổ cực",
+          "keys": "khoong sowj khoor cuwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được mục tiêu",
+          "keys": "ddatj dduwowcj mucj tieeu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "viên mãn cuối cùng",
+          "keys": "vieen manx cuoois cungf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

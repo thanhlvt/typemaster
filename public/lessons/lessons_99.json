@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_687",
+      "title": "Sự tinh tế",
+      "content": [
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thấu hiểu lòng người",
+          "keys": "thaaus hieeur longf nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ứng xử thông minh",
+          "keys": "uwngs xuwr thoong minh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_688",
+      "title": "Sự tinh tế",
+      "content": [
+        {
+          "display": "giữ gìn hoà khí",
+          "keys": "giuwx ginf hoaf khis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dĩ hoà vi quý",
+          "keys": "dix hoaf vi quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lời nói nhẹ nhàng",
+          "keys": "lowif nois nhej nhangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hành động lịch thiệp",
+          "keys": "hanhf ddoongj lichj thieepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_689",
+      "title": "Sự tinh tế",
+      "content": [
+        {
+          "display": "tinh tế trong ăn",
+          "keys": "tinh tees trong awn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tinh tế trong nói",
+          "keys": "tinh tees trong nois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng cái đẹp",
+          "keys": "traan trongj cais ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tâm hồn nhạy cảm",
+          "keys": "taam hoonf nhayj camr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_690",
+      "title": "Sự tinh tế",
+      "content": [
+        {
+          "display": "xây dựng mối quan",
+          "keys": "xaay duwngj moois quan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hệ bền vững lâu",
+          "keys": "heej beenf vuwngx laau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được mọi người quý",
+          "keys": "dduwowcj moij nguwowif quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tin tưởng yêu mến",
+          "keys": "tin tuwowngr yeeu meens",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_691",
+      "title": "Sự tinh tế",
+      "content": [
+        {
+          "display": "tinh tế trong việc",
+          "keys": "tinh tees trong vieecj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt hiệu quả cao",
+          "keys": "ddatj hieeuj quar cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giải quyết vấn đề",
+          "keys": "giair quyeets vaans ddeef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một cách nhẹ nhàng",
+          "keys": "mootj cachs nhej nhangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_692",
+      "title": "Sự tinh tế",
+      "content": [
+        {
+          "display": "giá trị đích thực",
+          "keys": "gias trij ddichs thuwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đến từ tinh tế",
+          "keys": "ddeens tuwf tinh tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống đẹp mỗi ngày",
+          "keys": "soongs ddepj mooix ngayf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngời sáng tâm hồn",
+          "keys": "ngowif sangs taam hoonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_693",
+      "title": "Sự tinh tế",
+      "content": [
+        {
+          "display": "tinh tế lan toả",
+          "keys": "tinh tees lan toar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc ngập tràn",
+          "keys": "hanhj phucs ngaapj tranf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống tuyệt vời",
+          "keys": "cuoocj soongs tuyeetj vowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi vươn xa",
+          "keys": "maix maix vuwown xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

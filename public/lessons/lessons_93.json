@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_645",
+      "title": "Trách nhiệm",
+      "content": [
+        {
+          "display": "dám làm dám chịu",
+          "keys": "dams lamf dams chiuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có trách nhiệm",
+          "keys": "soongs cos trachs nhieemj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "với bản thân mình",
+          "keys": "vowis banr thaan minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "với gia đình mình",
+          "keys": "vowis gia ddinhf minhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_646",
+      "title": "Trách nhiệm",
+      "content": [
+        {
+          "display": "với xã hội này",
+          "keys": "vowis xax hooij nayf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoàn thành nhiệm vụ",
+          "keys": "hoanf thanhf nhieemj vuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt kết quả tốt",
+          "keys": "ddatj keets quar toots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được mọi người tin",
+          "keys": "dduwowcj moij nguwowif tin",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_647",
+      "title": "Trách nhiệm",
+      "content": [
+        {
+          "display": "trách nhiệm là gốc",
+          "keys": "trachs nhieemj laf goocs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "uy tín là ngọn",
+          "keys": "uy tins laf ngonj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn chữ tín",
+          "keys": "giuwx ginf chuwx tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một lần mất tin",
+          "keys": "mootj laanf maats tin",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_648",
+      "title": "Trách nhiệm",
+      "content": [
+        {
+          "display": "vạn lần bất tín",
+          "keys": "vanj laanf baats tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên đùn đẩy",
+          "keys": "khoong neen ddunf ddaayr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trách nhiệm cho ai",
+          "keys": "trachs nhieemj cho ai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hãy tự gánh vác",
+          "keys": "hayx tuwj ganhs vacs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_649",
+      "title": "Trách nhiệm",
+      "content": [
+        {
+          "display": "trưởng thành hơn nữa",
+          "keys": "truwowngr thanhf hown nuwax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "qua từng việc làm",
+          "keys": "qua tuwngf vieecj lamf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trách nhiệm cao cả",
+          "keys": "trachs nhieemj cao car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang đón chờ",
+          "keys": "vinh quang ddons chowf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_650",
+      "title": "Trách nhiệm",
+      "content": [
+        {
+          "display": "tận tâm tận lực",
+          "keys": "taanj taam taanj luwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phục vụ cộng đồng",
+          "keys": "phucj vuj coongj ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng quê hương",
+          "keys": "xaay duwngj quee huwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngày càng đẹp hơn",
+          "keys": "ngayf cangf ddepj hown",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_651",
+      "title": "Trách nhiệm",
+      "content": [
+        {
+          "display": "trách nhiệm sáng ngời",
+          "keys": "trachs nhieemj sangs ngowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi khắc ghi",
+          "keys": "maix maix khawcs ghi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống ý nghĩa",
+          "keys": "cuoocj soongs ys nghiax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_568",
+      "title": "Trí tuệ",
+      "content": [
+        {
+          "display": "trí tuệ là ánh sáng",
+          "keys": "tris tueej laf anhs sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học hỏi muôn đời",
+          "keys": "hocj hoir muoon ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến thức uyên thâm",
+          "keys": "kieens thuwcs uyeen thaam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sáng suốt minh mẫn",
+          "keys": "sangs suoots minh maanx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_569",
+      "title": "Trí tuệ",
+      "content": [
+        {
+          "display": "quyết định đúng đắn",
+          "keys": "quyeets ddinhj ddungs ddawns",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tầm nhìn sâu rộng",
+          "keys": "taamf nhinf saau roongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hiểu thấu đạo lý",
+          "keys": "hieeur thaaus ddaoj lys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có trí tuệ",
+          "keys": "soongs cos tris tueej",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_570",
+      "title": "Trí tuệ",
+      "content": [
+        {
+          "display": "trí tuệ vượt thời gian",
+          "keys": "tris tueej vuwowtj thowif gian",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "di sản quý giá",
+          "keys": "di sanr quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng học tập",
+          "keys": "khoong nguwngf hocj taapj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nâng cao hiểu biết",
+          "keys": "naang cao hieeur bieets",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_571",
+      "title": "Trí tuệ",
+      "content": [
+        {
+          "display": "trí tuệ và nhân cách",
+          "keys": "tris tueej vaf nhaan cachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi đôi với nhau",
+          "keys": "ddi ddooi vowis nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công bền vững",
+          "keys": "thanhf coong beenf vuwngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc đích thực",
+          "keys": "hanhj phucs ddichs thuwcj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_572",
+      "title": "Trí tuệ",
+      "content": [
+        {
+          "display": "trí tuệ là sức mạnh",
+          "keys": "tris tueej laf suwcs manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiến thắng mọi khó",
+          "keys": "chieens thawngs moij khos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua thử thách",
+          "keys": "vuwowtj qua thuwr thachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt tới đỉnh cao",
+          "keys": "ddatj towis ddinhr cao",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_573",
+      "title": "Trí tuệ",
+      "content": [
+        {
+          "display": "khám phá tri thức",
+          "keys": "khams phas tri thuwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lan toả ánh sáng",
+          "keys": "lan toar anhs sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trí tuệ ngời sáng",
+          "keys": "tris tueej ngowif sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dẫn lối tương lai",
+          "keys": "daanx loois tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_574",
+      "title": "Trí tuệ",
+      "content": [
+        {
+          "display": "học một biết mười",
+          "keys": "hocj mootj bieets muwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thông tuệ sáng suốt",
+          "keys": "thoong tueej sangs suoots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng trí tuệ",
+          "keys": "traan trongj tris tueej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi vươn xa",
+          "keys": "maix maix vuwown xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

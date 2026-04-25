@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_617",
+      "title": "Đạo đức",
+      "content": [
+        {
+          "display": "đói cho sạch rách cho thơm",
+          "keys": "ddois cho sachj rachs cho thowm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giấy rách phải giữ lấy lề",
+          "keys": "giaays rachs phair giuwx laays leef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tốt gỗ hơn tốt nước sơn",
+          "keys": "toots goox hown toots nuwowcs sown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thật thà là cha",
+          "keys": "thaatj thaf laf cha",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_618",
+      "title": "Đạo đức",
+      "content": [
+        {
+          "display": "quỷ quái lọc lừa",
+          "keys": "quyr quais locj luwaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhân đức là gốc",
+          "keys": "nhaan dduwcs laf goocs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giàu sang là ngọn",
+          "keys": "giauf sang laf ngonj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tu thân tích đức",
+          "keys": "tu thaan tichs dduwcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_619",
+      "title": "Đạo đức",
+      "content": [
+        {
+          "display": "sống có đạo đức",
+          "keys": "soongs cos ddaoj dduwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được mọi người kính",
+          "keys": "dduwowcj moij nguwowif kinhs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với lòng",
+          "keys": "khoong thenj vowis longf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_620",
+      "title": "Đạo đức",
+      "content": [
+        {
+          "display": "không thẹn với trời",
+          "keys": "khoong thenj vowis trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạo đức làm đầu",
+          "keys": "ddaoj dduwcs lamf ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhân cách quý giá",
+          "keys": "nhaan cachs quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "suốt đời giữ gìn",
+          "keys": "suoots ddowif giuwx ginf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_621",
+      "title": "Đạo đức",
+      "content": [
+        {
+          "display": "sống đẹp lòng người",
+          "keys": "soongs ddepj longf nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tránh gây hiềm khích",
+          "keys": "tranhs gaay hieemf khichs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_622",
+      "title": "Đạo đức",
+      "content": [
+        {
+          "display": "giữ gìn hoà khí",
+          "keys": "giuwx ginf hoaf khis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dĩ hoà vi quý",
+          "keys": "dix hoaf vi quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lương tâm thanh thản",
+          "keys": "luwowng taam thanh thanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chết trong còn hơn",
+          "keys": "cheets trong conf hown",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_623",
+      "title": "Đạo đức",
+      "content": [
+        {
+          "display": "sống đục tầm thường",
+          "keys": "soongs dducj taamf thuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trọng nghĩa khinh tài",
+          "keys": "trongj nghiax khinh taif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạo đức sáng ngời",
+          "keys": "ddaoj dduwcs sangs ngowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi bền lâu",
+          "keys": "maix maix beenf laau",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

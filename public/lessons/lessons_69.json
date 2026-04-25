@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_477",
+      "title": "Lời khuyên",
+      "content": [
+        {
+          "display": "ăn có nhai nói có nghĩ",
+          "keys": "awn cos nhai nois cos nghix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi một ngày đàng",
+          "keys": "ddi mootj ngayf ddangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học một sàng khôn",
+          "keys": "hocj mootj sangf khoon",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cẩn tắc vô ưu",
+          "keys": "caanr tawcs voo uwu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_478",
+      "title": "Lời khuyên",
+      "content": [
+        {
+          "display": "phòng bệnh hơn chữa bệnh",
+          "keys": "phongf beenhj hown chuwax beenhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sai một li đi một dặm",
+          "keys": "sai mootj li ddi mootj dawmj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết lỗi biết sửa",
+          "keys": "bieets looix bieets suwar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người ngay nói thật",
+          "keys": "nguwowif ngay nois thaatj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_479",
+      "title": "Lời khuyên",
+      "content": [
+        {
+          "display": "thật thà là cha quỷ quái",
+          "keys": "thaatj thaf laf cha quyr quais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "liệu cơm gắp mắm",
+          "keys": "lieeuj cowm gawps mawms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo co thì ấm",
+          "keys": "kheos co thif aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tốt gỗ hơn tốt nước sơn",
+          "keys": "toots goox hown toots nuwowcs sown",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_480",
+      "title": "Lời khuyên",
+      "content": [
+        {
+          "display": "đừng nghe lời nịnh",
+          "keys": "dduwngf nghe lowif ninhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hãy tin lời thật",
+          "keys": "hayx tin lowif thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "việc hôm nay chớ để ngày mai",
+          "keys": "vieecj hoom nay chows ddeer ngayf mai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiết kiệm thời gian",
+          "keys": "tieets kieemj thowif gian",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_481",
+      "title": "Lời khuyên",
+      "content": [
+        {
+          "display": "trân trọng tình bạn",
+          "keys": "traan trongj tinhf banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết ơn nguồn cội",
+          "keys": "bieets own nguoonf cooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống lương thiện",
+          "keys": "soongs luwowng thieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích đức cho sau",
+          "keys": "tichs dduwcs cho sau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_482",
+      "title": "Lời khuyên",
+      "content": [
+        {
+          "display": "kiên trì nhẫn nại",
+          "keys": "kieen trif nhaanx naij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua khó khăn",
+          "keys": "vuwowtj qua khos khawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự tin vào mình",
+          "keys": "tuwj tin vaof minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng học hỏi",
+          "keys": "khoong nguwngf hocj hoir",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_483",
+      "title": "Lời khuyên",
+      "content": [
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn sức khoẻ",
+          "keys": "giuwx ginf suwcs khoer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống an vui",
+          "keys": "cuoocj soongs an vui",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

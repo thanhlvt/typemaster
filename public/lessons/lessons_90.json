@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_624",
+      "title": "Hy vọng",
+      "content": [
+        {
+          "display": "còn nước còn tát",
+          "keys": "conf nuwowcs conf tats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sau cơn mưa trời lại sáng",
+          "keys": "sau cown muwa trowif laij sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hy vọng là sức mạnh",
+          "keys": "hy vongj laf suwcs manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp ta vượt khó",
+          "keys": "giups ta vuwowtj khos",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_625",
+      "title": "Hy vọng",
+      "content": [
+        {
+          "display": "luôn luôn lạc quan",
+          "keys": "luoon luoon lacj quan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tin vào ngày mai",
+          "keys": "tin vaof ngayf mai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tươi đẹp rạng ngời",
+          "keys": "tuwowi ddepj rangj ngowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi việc sẽ tốt",
+          "keys": "moij vieecj sex toots",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_626",
+      "title": "Hy vọng",
+      "content": [
+        {
+          "display": "không nên tuyệt vọng",
+          "keys": "khoong neen tuyeetj vongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hãy cứ hy vọng",
+          "keys": "hayx cuws hy vongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết tâm không lùi",
+          "keys": "quyeets taam khoong luif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được mục tiêu",
+          "keys": "ddatj dduwowcj mucj tieeu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_627",
+      "title": "Hy vọng",
+      "content": [
+        {
+          "display": "hy vọng nảy mầm",
+          "keys": "hy vongj nayr maamf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trong lòng mỗi người",
+          "keys": "trong longf mooix nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lan toả ánh sáng",
+          "keys": "lan toar anhs sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xua tan bóng tối",
+          "keys": "xua tan bongs toois",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_628",
+      "title": "Hy vọng",
+      "content": [
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chinh phục ước mơ",
+          "keys": "chinh phucj uwowcs mow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc ngập tràn",
+          "keys": "hanhj phucs ngaapj tranf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_629",
+      "title": "Hy vọng",
+      "content": [
+        {
+          "display": "hy vọng là người bạn",
+          "keys": "hy vongj laf nguwowif banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đồng hành suốt đời",
+          "keys": "ddoongf hanhf suoots ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bao giờ mất",
+          "keys": "khoong bao giowf maats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nếu ta còn tin",
+          "keys": "neeus ta conf tin",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_630",
+      "title": "Hy vọng",
+      "content": [
+        {
+          "display": "sức sống mãnh liệt",
+          "keys": "suwcs soongs manhx lieetj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới tầm cao",
+          "keys": "vuwown towis taamf cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hy vọng ngời sáng",
+          "keys": "hy vongj ngowif sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi vươn xa",
+          "keys": "maix maix vuwown xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_547",
+      "title": "Lòng trắc ẩn",
+      "content": [
+        {
+          "display": "thương người như thể thương thân",
+          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lá lành đùm lá rách",
+          "keys": "las lanhf ddumf las rachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhường cơm sẻ áo",
+          "keys": "nhuwowngf cowm ser aos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cứu nhân độ thế",
+          "keys": "cuwus nhaan ddooj thees",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_548",
+      "title": "Lòng trắc ẩn",
+      "content": [
+        {
+          "display": "lòng thương người",
+          "keys": "longf thuwowng nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vô bờ bến",
+          "keys": "voo bowf beens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thấu hiểu nỗi đau",
+          "keys": "thaaus hieeur nooix ddau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp người qua khó",
+          "keys": "giups nguwowif qua khos",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_549",
+      "title": "Lòng trắc ẩn",
+      "content": [
+        {
+          "display": "trái tim nhân từ",
+          "keys": "trais tim nhaan tuwf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sẵn lòng giúp đỡ",
+          "keys": "sawnx longf giups ddowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bỏ rơi ai",
+          "keys": "khoong bor rowi ai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lúc gian nan nhất",
+          "keys": "lucs gian nan nhaats",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_550",
+      "title": "Lòng trắc ẩn",
+      "content": [
+        {
+          "display": "lòng trắc ẩn cao đẹp",
+          "keys": "longf trawcs aanr cao ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gương sáng muôn đời",
+          "keys": "guwowng sangs muoon ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gieo mầm yêu thương",
+          "keys": "gieo maamf yeeu thuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hái quả hạnh phúc",
+          "keys": "hais quar hanhj phucs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_551",
+      "title": "Lòng trắc ẩn",
+      "content": [
+        {
+          "display": "sống vì mọi người",
+          "keys": "soongs vif moij nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quên đi bản thân",
+          "keys": "queen ddi banr thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giúp đời thêm đẹp",
+          "keys": "giups ddowif theem ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người người ấm no",
+          "keys": "nguwowif nguwowif aams no",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_552",
+      "title": "Lòng trắc ẩn",
+      "content": [
+        {
+          "display": "nhân ái vị tha",
+          "keys": "nhaan ais vij tha",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bao dung độ lượng",
+          "keys": "bao dung ddooj luwowngj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thấu cảm chân thành",
+          "keys": "thaaus camr chaan thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chia sẻ nỗi buồn",
+          "keys": "chia ser nooix buoonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_553",
+      "title": "Lòng trắc ẩn",
+      "content": [
+        {
+          "display": "niềm vui nhân đôi",
+          "keys": "nieemf vui nhaan ddooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống tốt lành",
+          "keys": "cuoocj soongs toots lanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi yêu thương",
+          "keys": "maix maix yeeu thuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trắc ẩn tình người",
+          "keys": "trawcs aanr tinhf nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

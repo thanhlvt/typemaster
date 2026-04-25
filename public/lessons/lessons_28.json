@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_190",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "tay làm hàm nhai",
+          "keys": "tay lamf hamf nhai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tay quai miệng trễ",
+          "keys": "tay quai mieengj treex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn làm sao làm làm vậy",
+          "keys": "awn lamf sao lamf lamf vaayj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm ruộng thì gia",
+          "keys": "lamf ruoongj thif gia",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_191",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "làm nhà thì tốn",
+          "keys": "lamf nhaf thif toons",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhất canh trì nhị canh viên",
+          "keys": "nhaats canh trif nhij canh vieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tam canh điền",
+          "keys": "tam canh ddieenf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn ăn thì lăn vào bếp",
+          "keys": "muoons awn thif lawn vaof beeps",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_192",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "muốn giàu thì nuôi trâu cái",
+          "keys": "muoons giauf thif nuooi traau cais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đầu tắt mặt tối",
+          "keys": "ddaauf tawts mawtj toois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một nắng hai sương",
+          "keys": "mootj nawngs hai suwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chân lấm tay bùn",
+          "keys": "chaan laams tay bunf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_193",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "mồ hôi nước mắt",
+          "keys": "moof hooi nuwowcs mawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thức khuya dậy sớm",
+          "keys": "thuwcs khuya daayj sowms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "siêng làm thì ấm",
+          "keys": "sieeng lamf thif aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "siêng học thì thông",
+          "keys": "sieeng hocj thif thoong",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_194",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "cần cù bù thông minh",
+          "keys": "caanf cuf buf thoong minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm khi lành để dành khi đau",
+          "keys": "lamf khi lanhf ddeer danhf khi ddau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tháng tám đói qua",
+          "keys": "thangs tams ddois qua",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tháng ba đói chết",
+          "keys": "thangs ba ddois cheets",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_195",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "làm giả ăn thật",
+          "keys": "lamf giar awn thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm thật ăn thật",
+          "keys": "lamf thaatj awn thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lao động là vinh quang",
+          "keys": "lao ddoongj laf vinh quang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có làm thì mới có ăn",
+          "keys": "cos lamf thif mowis cos awn",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_196",
+      "title": "Lao động",
+      "content": [
+        {
+          "display": "không dưng ai dễ",
+          "keys": "khoong duwng ai deex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đem phần đến cho",
+          "keys": "ddem phaanf ddeens cho",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm làm thì giàu",
+          "keys": "chawm lamf thif giauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lười làm thì đói",
+          "keys": "luwowif lamf thif ddois",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_596",
+      "title": "Quê hương",
+      "content": [
+        {
+          "display": "quê hương là chùm khế ngọt",
+          "keys": "quee huwowng laf chumf khees ngotj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi đâu cũng nhớ về quê",
+          "keys": "ddi ddaau cungx nhows veef quee",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu nước thương dân",
+          "keys": "yeeu nuwowcs thuwowng daan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn bờ cõi",
+          "keys": "giuwx ginf bowf coix",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_597",
+      "title": "Quê hương",
+      "content": [
+        {
+          "display": "vẻ đẹp non sông",
+          "keys": "ver ddepj non soong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "danh lam thắng cảnh",
+          "keys": "danh lam thawngs canhr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "địa linh nhân kiệt",
+          "keys": "ddiaj linh nhaan kieetj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hào khí dân tộc",
+          "keys": "haof khis daan toocj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_598",
+      "title": "Quê hương",
+      "content": [
+        {
+          "display": "quê hương yêu dấu",
+          "keys": "quee huwowng yeeu daaus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nơi ta sinh ra",
+          "keys": "nowi ta sinh ra",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khôn lớn trưởng thành",
+          "keys": "khoon lowns truwowngr thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không quên nguồn cội",
+          "keys": "khoong queen nguoonf cooij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_599",
+      "title": "Quê hương",
+      "content": [
+        {
+          "display": "xây dựng quê hương",
+          "keys": "xaay duwngj quee huwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngày càng giàu đẹp",
+          "keys": "ngayf cangf giauf ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự hào dân tộc",
+          "keys": "tuwj haof daan toocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con rồng cháu tiên",
+          "keys": "con roongf chaus tieen",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_600",
+      "title": "Quê hương",
+      "content": [
+        {
+          "display": "văn hiến ngàn năm",
+          "keys": "vawn hieens nganf nawm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất nước thanh bình",
+          "keys": "ddaats nuwowcs thanh binhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhân dân ấm no",
+          "keys": "nhaan daan aams no",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi xanh tươi",
+          "keys": "maix maix xanh tuwowi",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_601",
+      "title": "Quê hương",
+      "content": [
+        {
+          "display": "quê hương là mẹ",
+          "keys": "quee huwowng laf mej",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "che chở vỗ về",
+          "keys": "che chowr voox veef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ấm áp tình quê",
+          "keys": "aams aps tinhf quee",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi xa vẫn nhớ",
+          "keys": "ddi xa vaanx nhows",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_602",
+      "title": "Quê hương",
+      "content": [
+        {
+          "display": "về với quê hương",
+          "keys": "veef vowis quee huwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng tràn niềm vui",
+          "keys": "longf tranf nieemf vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự hào nguồn cội",
+          "keys": "tuwj haof nguoonf cooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giang sơn gấm vóc",
+          "keys": "giang sown gaams vocs",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

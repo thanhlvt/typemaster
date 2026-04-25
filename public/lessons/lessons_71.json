@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_491",
+      "title": "Thành công",
+      "content": [
+        {
+          "display": "thất bại là mẹ thành công",
+          "keys": "thaats baij laf mej thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thắng không kiêu bại không nản",
+          "keys": "thawngs khoong kieeu baij khoong nanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thua keo này ta bày keo khác",
+          "keys": "thua keo nayf ta bayf keo khacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự khởi đầu nan",
+          "keys": "vanj suwj khowir ddaauf nan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_492",
+      "title": "Thành công",
+      "content": [
+        {
+          "display": "có công mài sắt",
+          "keys": "cos coong maif sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có ngày nên kim",
+          "keys": "cos ngayf neen kim",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có chí thì nên",
+          "keys": "cos chis thif neen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bỏ cuộc",
+          "keys": "khoong bor cuoocj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_493",
+      "title": "Thành công",
+      "content": [
+        {
+          "display": "quyết tâm đến cùng",
+          "keys": "quyeets taam ddeens cungf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chinh phục đỉnh cao",
+          "keys": "chinh phucj ddinhr cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua thử thách",
+          "keys": "vuwowtj qua thuwr thachs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_494",
+      "title": "Thành công",
+      "content": [
+        {
+          "display": "chiến thắng chính mình",
+          "keys": "chieens thawngs chinhs minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rút kinh nghiệm sâu sắc",
+          "keys": "ruts kinh nghieemj saau sawcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học từ thất bại",
+          "keys": "hocj tuwf thaats baij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn lên mạnh mẽ",
+          "keys": "vuwown leen manhj mex",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_495",
+      "title": "Thành công",
+      "content": [
+        {
+          "display": "không ngại khó khăn",
+          "keys": "khoong ngaij khos khawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên trì theo đuổi",
+          "keys": "kieen trif theo dduooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đam mê cháy bỏng",
+          "keys": "ddam mee chays bongr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nỗ lực không ngừng",
+          "keys": "noox luwcj khoong nguwngf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_496",
+      "title": "Thành công",
+      "content": [
+        {
+          "display": "thành quả xứng đáng",
+          "keys": "thanhf quar xuwngs ddangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang chói lọi",
+          "keys": "vinh quang chois loij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rạng danh dòng tộc",
+          "keys": "rangj danh dongf toocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quy bái tổ",
+          "keys": "vinh quy bais toor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_497",
+      "title": "Thành công",
+      "content": [
+        {
+          "display": "đỉnh cao sự nghiệp",
+          "keys": "ddinhr cao suwj nghieepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc viên mãn",
+          "keys": "hanhj phucs vieen manx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mục tiêu đã đạt",
+          "keys": "mucj tieeu ddax ddatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự hào bản thân",
+          "keys": "tuwj haof banr thaan",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

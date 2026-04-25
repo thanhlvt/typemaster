@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_260",
+      "title": "Thời gian",
+      "content": [
+        {
+          "display": "thời gian là vàng bạc",
+          "keys": "thowif gian laf vangf bacj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thời gian trôi nhanh",
+          "keys": "thowif gian trooi nhanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "như bóng câu cửa sổ",
+          "keys": "nhuw bongs caau cuwar soor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng lãng phí thời gian",
+          "keys": "dduwngf langx phis thowif gian",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_261",
+      "title": "Thời gian",
+      "content": [
+        {
+          "display": "việc hôm nay chớ để ngày mai",
+          "keys": "vieecj hoom nay chows ddeer ngayf mai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một phút quý giá",
+          "keys": "mootj phuts quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngàn vàng không đổi",
+          "keys": "nganf vangf khoong ddooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thời gian đi không trở lại",
+          "keys": "thowif gian ddi khoong trowr laij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_262",
+      "title": "Thời gian",
+      "content": [
+        {
+          "display": "trân trọng từng phút giây",
+          "keys": "traan trongj tuwngf phuts giaay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sử dụng thời gian hợp lý",
+          "keys": "suwr dungj thowif gian howpj lys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm việc có kế hoạch",
+          "keys": "lamf vieecj cos kees hoachj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng để thời gian trôi vô ích",
+          "keys": "dduwngf ddeer thowif gian trooi voo ichs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_263",
+      "title": "Thời gian",
+      "content": [
+        {
+          "display": "thanh xuân ngắn ngủi",
+          "keys": "thanh xuaan ngawns nguir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tuổi trẻ tài cao",
+          "keys": "tuooir trer taif cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "già néo đứt dây",
+          "keys": "giaf neos dduwts daay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đến lúc phải đi",
+          "keys": "ddeens lucs phair ddi",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_264",
+      "title": "Thời gian",
+      "content": [
+        {
+          "display": "thời gian chữa lành",
+          "keys": "thowif gian chuwax lanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi vết thương",
+          "keys": "moij veets thuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đợi chờ là hạnh phúc",
+          "keys": "ddowij chowf laf hanhj phucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên nhẫn chờ đợi",
+          "keys": "kieen nhaanx chowf ddowij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_265",
+      "title": "Thời gian",
+      "content": [
+        {
+          "display": "thời cơ chín muồi",
+          "keys": "thowif cow chins muooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nắm bắt cơ hội",
+          "keys": "nawms bawts cow hooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên chậm trễ",
+          "keys": "khoong neen chaamj treex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhanh chân thì được",
+          "keys": "nhanh chaan thif dduwowcj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_266",
+      "title": "Thời gian",
+      "content": [
+        {
+          "display": "chậm chân thì mất",
+          "keys": "chaamj chaan thif maats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thời gian công bằng",
+          "keys": "thowif gian coong bawngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "với tất cả mọi người",
+          "keys": "vowis taats car moij nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tận dụng triệt để",
+          "keys": "taanj dungj trieetj ddeer",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

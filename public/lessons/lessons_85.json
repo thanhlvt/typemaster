@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_589",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "gia đình là tổ ấm",
+          "keys": "gia ddinhf laf toor aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nơi ta quay về",
+          "keys": "nowi ta quay veef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu thương đùm bọc",
+          "keys": "yeeu thuwowng ddumf bocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cha mẹ kính yêu",
+          "keys": "cha mej kinhs yeeu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_590",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "anh em thảo hiền",
+          "keys": "anh em thaor hieenf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lá lành đùm lá rách",
+          "keys": "las lanhf ddumf las rachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gia đình hạnh phúc",
+          "keys": "gia ddinhf hanhj phucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi người vui vẻ",
+          "keys": "moij nguwowif vui ver",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_591",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "chia sẻ yêu thương",
+          "keys": "chia ser yeeu thuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua gian khó",
+          "keys": "vuwowtj qua gian khos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng tổ ấm",
+          "keys": "xaay duwngj toor aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngày càng tốt hơn",
+          "keys": "ngayf cangf toots hown",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_592",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "gia đình là số một",
+          "keys": "gia ddinhf laf soos mootj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì thay thế",
+          "keys": "khoong gif thay thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng từng phút",
+          "keys": "traan trongj tuwngf phuts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bên cạnh người thân",
+          "keys": "been canhj nguwowif thaan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_593",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "giữ gìn truyền thống",
+          "keys": "giuwx ginf truyeenf thoongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nếp nhà tốt đẹp",
+          "keys": "neeps nhaf toots ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con cháu hiếu thảo",
+          "keys": "con chaus hieeus thaor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ông bà mẫu mực",
+          "keys": "oong baf maaux muwcj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_594",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "gia đình hoà thuận",
+          "keys": "gia ddinhf hoaf thuaanj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự hanh thông",
+          "keys": "vanj suwj hanh thoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ấm áp tình thân",
+          "keys": "aams aps tinhf thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "suốt đời không quên",
+          "keys": "suoots ddowif khoong queen",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_595",
+      "title": "Gia đình",
+      "content": [
+        {
+          "display": "gia đình yêu dấu",
+          "keys": "gia ddinhf yeeu daaus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nguồn sống của tôi",
+          "keys": "nguoonf soongs cuar tooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi gắn bó",
+          "keys": "maix maix gawns bos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc bình an",
+          "keys": "hanhj phucs binhf an",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

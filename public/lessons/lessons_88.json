@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_610",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học học nữa học mãi",
+          "keys": "hocj hocj nuwax hocj maix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học đi đôi với hành",
+          "keys": "hocj ddi ddooi vowis hanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học một biết mười",
+          "keys": "hocj mootj bieets muwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn biết phải hỏi",
+          "keys": "muoons bieets phair hoir",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_611",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "muốn giỏi phải học",
+          "keys": "muoons gioir phair hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thầy đố mày làm nên",
+          "keys": "khoong thaayf ddoos mayf lamf neen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học thầy không tày học bạn",
+          "keys": "hocj thaayf khoong tayf hocj banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đi một ngày đàng",
+          "keys": "ddi mootj ngayf ddangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_612",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học một sàng khôn",
+          "keys": "hocj mootj sangf khoon",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến thức là sức mạnh",
+          "keys": "kieens thuwcs laf suwcs manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng học tập",
+          "keys": "khoong nguwngf hocj taapj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nâng cao hiểu biết",
+          "keys": "naang cao hieeur bieets",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_613",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học tập suốt đời",
+          "keys": "hocj taapj suoots ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thích nghi thay đổi",
+          "keys": "thichs nghi thay ddooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới tầm cao",
+          "keys": "vuwown towis taamf cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chinh phục đỉnh cao",
+          "keys": "chinh phucj ddinhr cao",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_614",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học tập hăng say",
+          "keys": "hocj taapj hawng say",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt kết quả tốt",
+          "keys": "ddatj keets quar toots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rạng danh dòng tộc",
+          "keys": "rangj danh dongf toocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quy bái tổ",
+          "keys": "vinh quy bais toor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_615",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học hỏi muôn nơi",
+          "keys": "hocj hoir muoon nowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khám phá tri thức",
+          "keys": "khams phas tri thuwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lan toả ánh sáng",
+          "keys": "lan toar anhs sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mở cửa tương lai",
+          "keys": "mowr cuwar tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_616",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "quyết tâm học hành",
+          "keys": "quyeets taam hocj hanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạt được ước mơ",
+          "keys": "ddatj dduwowcj uwowcs mow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công bền vững",
+          "keys": "thanhf coong beenf vuwngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi vươn xa",
+          "keys": "maix maix vuwown xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

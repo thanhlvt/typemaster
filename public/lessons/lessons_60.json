@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_414",
+      "title": "Đời sống thành thị",
+      "content": [
+        {
+          "display": "phố xá đông vui",
+          "keys": "phoos xas ddoong vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người xe tấp nập",
+          "keys": "nguwowif xe taaps naapj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhà cao tầng",
+          "keys": "nhaf cao taangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ánh đèn lung linh",
+          "keys": "anhs ddenf lung linh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_415",
+      "title": "Đời sống thành thị",
+      "content": [
+        {
+          "display": "nhịp sống hối hả",
+          "keys": "nhipj soongs hoois har",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thời gian là vàng",
+          "keys": "thowif gian laf vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công nghệ hiện đại",
+          "keys": "coong ngheej hieenj ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiện nghi đầy đủ",
+          "keys": "tieenj nghi ddaayf ddur",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_416",
+      "title": "Đời sống thành thị",
+      "content": [
+        {
+          "display": "thành phố thông minh",
+          "keys": "thanhf phoos thoong minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phát triển không ngừng",
+          "keys": "phats trieenr khoong nguwngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cơ hội rộng mở",
+          "keys": "cow hooij roongj mowr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới tương lai",
+          "keys": "vuwown towis tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_417",
+      "title": "Đời sống thành thị",
+      "content": [
+        {
+          "display": "văn minh đô thị",
+          "keys": "vawn minh ddoo thij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn trật tự",
+          "keys": "giuwx ginf traatj tuwj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "môi trường xanh sạch",
+          "keys": "mooi truwowngf xanh sachj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công viên cây xanh",
+          "keys": "coong vieen caay xanh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_418",
+      "title": "Đời sống thành thị",
+      "content": [
+        {
+          "display": "giáo dục tiên tiến",
+          "keys": "giaos ducj tieen tieens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "y tế hiện đại",
+          "keys": "y tees hieenj ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trung tâm văn hoá",
+          "keys": "trung taam vawn hoas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vui chơi giải trí",
+          "keys": "vui chowi giair tris",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_419",
+      "title": "Đời sống thành thị",
+      "content": [
+        {
+          "display": "người dân thân thiện",
+          "keys": "nguwowif daan thaan thieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gắn kết cộng đồng",
+          "keys": "gawns keets coongj ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chia sẻ yêu thương",
+          "keys": "chia ser yeeu thuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng thành phố",
+          "keys": "xaay duwngj thanhf phoos",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_420",
+      "title": "Đời sống thành thị",
+      "content": [
+        {
+          "display": "ngày càng đẹp hơn",
+          "keys": "ngayf cangf ddepj hown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự hào thành phố",
+          "keys": "tuwj haof thanhf phoos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nơi ta sinh sống",
+          "keys": "nowi ta sinh soongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi yêu thương",
+          "keys": "maix maix yeeu thuwowng",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

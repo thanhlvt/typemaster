@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_435",
+      "title": "Tiết kiệm",
+      "content": [
+        {
+          "display": "buôn tàu bán bè",
+          "keys": "buoon tauf bans bef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bằng ăn dè hà tiện",
+          "keys": "khoong bawngf awn def haf tieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích tiểu thành đại",
+          "keys": "tichs tieeur thanhf ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến tha lâu đầy tổ",
+          "keys": "kieens tha laau ddaayf toor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_436",
+      "title": "Tiết kiệm",
+      "content": [
+        {
+          "display": "khéo ăn thì no",
+          "keys": "kheos awn thif no",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo co thì ấm",
+          "keys": "kheos co thif aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của bền tại người",
+          "keys": "cuar beenf taij nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiết kiệm là quốc",
+          "keys": "tieets kieemj laf quoocs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_437",
+      "title": "Tiết kiệm",
+      "content": [
+        {
+          "display": "ăn chắc mặc bền",
+          "keys": "awn chawcs mawcj beenf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thắt lưng buộc bụng",
+          "keys": "thawts luwng buoocj bungj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chắt chiu từng đồng",
+          "keys": "chawts chiu tuwngf ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chắt chiu dành dụm",
+          "keys": "chawts chiu danhf dumj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_438",
+      "title": "Tiết kiệm",
+      "content": [
+        {
+          "display": "không nên hoang phí",
+          "keys": "khoong neen hoang phis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của một đồng công một nén",
+          "keys": "cuar mootj ddoongf coong mootj nens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích cốc phòng cơ",
+          "keys": "tichs coocs phongf cow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích y phòng hàn",
+          "keys": "tichs y phongf hanf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_439",
+      "title": "Tiết kiệm",
+      "content": [
+        {
+          "display": "tiết kiệm thời gian",
+          "keys": "tieets kieemj thowif gian",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiết kiệm công sức",
+          "keys": "tieets kieemj coong suwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không xài hoang phí",
+          "keys": "khoong xaif hoang phis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết lo xa",
+          "keys": "bieets lo xa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_440",
+      "title": "Tiết kiệm",
+      "content": [
+        {
+          "display": "lo khi còn sớm",
+          "keys": "lo khi conf sowms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phòng khi túng thiếu",
+          "keys": "phongf khi tungs thieeus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "để dành khi đau",
+          "keys": "ddeer danhf khi ddau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm khi lành",
+          "keys": "lamf khi lanhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_441",
+      "title": "Tiết kiệm",
+      "content": [
+        {
+          "display": "của để dành",
+          "keys": "cuar ddeer danhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giàu nhờ tiết kiệm",
+          "keys": "giauf nhowf tieets kieemj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghèo vì hoang phí",
+          "keys": "ngheof vif hoang phis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết đủ là vui",
+          "keys": "bieets ddur laf vui",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
