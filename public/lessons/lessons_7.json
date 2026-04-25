@@ -1,0 +1,191 @@
+{
+  "lessons": [
+    {
+      "id": "level_43",
+      "title": "Thú vui tao nhã",
+      "content": [
+        {
+          "display": "thả diều trên đồng cỏ xanh",
+          "keys": "thar dieeuf treen ddoongf cor xanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiếng sáo diều vi vu gió",
+          "keys": "tieengs saos dieeuf vi vu gios",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chạy tung tăng khắp bãi bồi",
+          "keys": "chayj tung tawng khawps baix booif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cánh diều bay cao tít tắp",
+          "keys": "canhs dieeuf bay cao tits tawps",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_44",
+      "title": "Chăm sóc cây cối",
+      "content": [
+        {
+          "display": "tưới hoa cho lá xanh tươi",
+          "keys": "tuwowis hoa cho las xanh tuwowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhổ cỏ cho cây chóng lớn",
+          "keys": "nhoor cor cho caay chongs lowns",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bắt sâu cho lá thêm mượt",
+          "keys": "bawts saau cho las theem muwowtj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vườn cây trái ngọt trĩu cành",
+          "keys": "vuwownf caay trais ngotj triux canhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_45",
+      "title": "Bảo vệ môi trường",
+      "content": [
+        {
+          "display": "giữ gìn vệ sinh sạch sẽ",
+          "keys": "giuwx ginf veej sinh sachj sex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không xả rác bừa bãi nhé",
+          "keys": "khoong xar racs buwaf baix nhes",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trồng thêm cây cho mát rượi",
+          "keys": "troongf theem caay cho mats ruwowij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bảo vệ nguồn nước trong xanh",
+          "keys": "baor veej nguoonf nuwowcs trong xanh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_46",
+      "title": "Trân trọng thời gian",
+      "content": [
+        {
+          "display": "thời gian trôi đi không đợi",
+          "keys": "thowif gian trooi ddi khoong ddowij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hãy trân trọng từng phút giây",
+          "keys": "hayx traan trongj tuwngf phuts giaay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm chỉ khi còn trẻ tuổi",
+          "keys": "chawm chir khi conf trer tuooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tương lai tươi sáng đang chờ",
+          "keys": "tuwowng lai tuwowi sangs ddang chowf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_47",
+      "title": "Ước mơ hồng",
+      "content": [
+        {
+          "display": "bay cao những giấc mơ hồng",
+          "keys": "bay cao nhuwngx giaacs mow hoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới những vì sao xa",
+          "keys": "vuwown towis nhuwngx vif sao xa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khám phá thế giới bao la",
+          "keys": "khams phas thees giowis bao la",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự tin vững bước đường đời",
+          "keys": "tuwj tin vuwngx buwowcs dduwowngf ddowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_48",
+      "title": "Lòng kiên trì",
+      "content": [
+        {
+          "display": "nước chảy đá cũng phải mòn",
+          "keys": "nuwowcs chayr ddas cungx phair monf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có công mài sắt",
+          "keys": "cos coong maif sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có ngày nên kim",
+          "keys": "cos ngayf neen kim",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên trì sẽ gặt thành công",
+          "keys": "kieen trif sex gawtj thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngại gian khổ khó khăn",
+          "keys": "khoong ngaij gian khoor khos khawn",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_49",
+      "title": "Hạnh phúc quanh ta",
+      "content": [
+        {
+          "display": "niềm vui hiện diện quanh ta",
+          "keys": "nieemf vui hieenj dieenj quanh ta",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc từ những điều nhỏ",
+          "keys": "hanhj phucs tuwf nhuwngx ddieeuf nhor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chia sẻ yêu thương cho đời",
+          "keys": "chia ser yeeu thuwowng cho ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống tươi đẹp biết bao",
+          "keys": "cuoocj soongs tuwowi ddepj bieets bao",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

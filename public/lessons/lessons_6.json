@@ -1,0 +1,191 @@
+{
+  "lessons": [
+    {
+      "id": "level_36",
+      "title": "Tình cảm gia đình",
+      "content": [
+        {
+          "display": "con hiếu thảo cha mẹ vui",
+          "keys": "con hieeus thaor cha mej vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gia đình hạnh phúc ấm áp",
+          "keys": "gia ddinhf hanhj phucs aams aps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kính trên nhường dưới",
+          "keys": "kinhs treen nhuwowngf duwowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con ngoan trò giỏi",
+          "keys": "con ngoan trof gioir",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_37",
+      "title": "Vẻ đẹp quê hương",
+      "content": [
+        {
+          "display": "quê hương là chùm khế ngọt",
+          "keys": "quee huwowng laf chumf khees ngotj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cánh đồng lúa chín vàng ươm",
+          "keys": "canhs ddoongf luas chins vangf uwowm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dòng sông xanh ngắt hiền hoà",
+          "keys": "dongf soong xanh ngawts hieenf hoaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "núi non hùng vĩ bao la",
+          "keys": "nuis non hungf vix bao la",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_38",
+      "title": "Chăm chỉ học hành",
+      "content": [
+        {
+          "display": "đi một ngày đàng",
+          "keys": "ddi mootj ngayf ddangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học một tràng khôn",
+          "keys": "hocj mootj trangf khoon",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sách là kho tàng tri thức",
+          "keys": "sachs laf kho tangf tri thuwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học đi đôi với hành",
+          "keys": "hocj ddi ddooi vowis hanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn biết phải hỏi",
+          "keys": "muoons bieets phair hoir",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_39",
+      "title": "Tình bạn đoàn kết",
+      "content": [
+        {
+          "display": "lá lành đùm lá rách",
+          "keys": "las lanhf ddumf las rachs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một cây làm chẳng nên non",
+          "keys": "mootj caay lamf chawngr neen non",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đoàn kết là sức mạnh",
+          "keys": "ddoanf keets laf suwcs manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tương thân tương ái",
+          "keys": "tuwowng thaan tuwowng ais",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_40",
+      "title": "Thiên nhiên tươi đẹp",
+      "content": [
+        {
+          "display": "hoa hồng khoe sắc thắm",
+          "keys": "hoa hoongf khoe sawcs thawms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nắng vàng rực rỡ sân trường",
+          "keys": "nawngs vangf ruwcj rowx saan truwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa rơi tí tách trên hiên",
+          "keys": "muwa rowi tis tachs treen hieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gió mát đêm trăng thanh",
+          "keys": "gios mats ddeem trawng thanh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_41",
+      "title": "Đạo lý làm người",
+      "content": [
+        {
+          "display": "ăn quả nhớ kẻ trồng cây",
+          "keys": "awn quar nhows ker troongf caay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "uống nước nhớ nguồn",
+          "keys": "uoongs nuwowcs nhows nguoonf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có chí thì nên",
+          "keys": "cos chis thif neen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thất bại là mẹ thành công",
+          "keys": "thaats baij laf mej thanhf coong",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_42",
+      "title": "Lời chúc tốt đẹp",
+      "content": [
+        {
+          "display": "chúc mừng năm mới an khang",
+          "keys": "chucs muwngf nawm mowis an khang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự như ý cát tường",
+          "keys": "vanj suwj nhuw ys cats tuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sức khoẻ dồi dào hạnh phúc",
+          "keys": "suwcs khoer dooif daof hanhj phucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "may mắn luôn mỉm cười",
+          "keys": "may mawns luoon mimr cuwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
