@@ -115,27 +115,27 @@ export class PlayScene extends Phaser.Scene {
 
     createContentUI(width, height) {
         const bgTop = height * 0.52;
-        const bgHeight = height * 0.18;
+        const bgHeight = height * 0.22;
 
         const bg = this.add.graphics();
         bg.fillStyle(0xffffff, 0.8);
-        bg.fillRoundedRect(width * 0.1, bgTop, width * 0.8, bgHeight, 20);
+        bg.fillRoundedRect(width * 0.02, bgTop, width * 0.96, bgHeight, 20);
 
-        this.targetText = this.add.text(width / 2, bgTop + bgHeight * 0.21, '', {
+        this.targetText = this.add.text(width / 2, bgTop + bgHeight * 0.18, '', {
             fontFamily: 'Verdana, sans-serif',
             fontSize: '48px',
             fontStyle: 'bold',
             fill: '#333'
         }).setOrigin(0.5);
 
-        this.ruleHint = this.add.text(width / 2, bgTop + bgHeight * 0.52, '', {
+        this.ruleHint = this.add.text(width / 2, bgTop + bgHeight * 0.46, '', {
             fontFamily: 'Arial',
             fontSize: '24px',
             fontStyle: 'bold',
             fill: '#E65100'
         }).setOrigin(0.5);
 
-        this.typedText = this.add.text(width / 2, bgTop + bgHeight * 0.81, '', {
+        this.typedText = this.add.text(width / 2, bgTop + bgHeight * 0.70, '', {
             fontFamily: 'Verdana, sans-serif',
             fontSize: '44px',
             fontStyle: 'bold',

@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_64",
+      "title": "Những vì sao đêm",
+      "content": [
+        {
+          "display": "lấp lánh những vì sao đêm",
+          "keys": "laaps lanhs nhuwngx vif sao ddeem",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chị hằng ngồi gốc cây đa",
+          "keys": "chij hawngf ngooif goocs caay dda",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ánh trăng soi sáng sân nhà",
+          "keys": "anhs trawng soi sangs saan nhaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngàn vì sao sáng lung linh",
+          "keys": "nganf vif sao sangs lung linh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_65",
+      "title": "Vườn rau của bé",
+      "content": [
+        {
+          "display": "màu xanh tươi mát vườn rau",
+          "keys": "mauf xanh tuwowi mats vuwownf rau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bắp cải xanh mướt mượt mà",
+          "keys": "bawps cair xanh muwowts muwowtj maf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quả cà chua chín đỏ mọng",
+          "keys": "quar caf chua chins ddor mongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luống rau thơm ngát hương quê",
+          "keys": "luoongs rau thowm ngats huwowng quee",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_66",
+      "title": "Thể thao rèn luyện",
+      "content": [
+        {
+          "display": "chạy bộ mỗi sáng sớm mai",
+          "keys": "chayj booj mooix sangs sowms mai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sức khoẻ là vàng bạn nhé",
+          "keys": "suwcs khoer laf vangf banj nhes",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đá bóng cùng bạn thật vui",
+          "keys": "ddas bongs cungf banj thaatj vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rèn luyện thân thể dẻo dai",
+          "keys": "renf luyeenj thaan theer deor dai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_67",
+      "title": "Lòng tốt quanh ta",
+      "content": [
+        {
+          "display": "giúp đỡ cụ già qua đường",
+          "keys": "giups ddowx cuj giaf qua dduwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhường chỗ cho người cần hơn",
+          "keys": "nhuwowngf choox cho nguwowif caanf hown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lời chào đi trước niềm vui",
+          "keys": "lowif chaof ddi truwowcs nieemf vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống đẹp lòng người biết bao",
+          "keys": "soongs ddepj longf nguwowif bieets bao",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_68",
+      "title": "Nghệ thuật sáng tạo",
+      "content": [
+        {
+          "display": "vẽ tranh tô điểm cuộc đời",
+          "keys": "vex tranh too ddieemr cuoocj ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "màu sắc rực rỡ vui tươi",
+          "keys": "mauf sawcs ruwcj rowx vui tuwowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "những nốt nhạc vang rộn rã",
+          "keys": "nhuwngx noots nhacj vang roonj rax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghệ thuật làm đẹp tâm hồn",
+          "keys": "ngheej thuaatj lamf ddepj taam hoonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_69",
+      "title": "Khám phá không gian",
+      "content": [
+        {
+          "display": "con tàu bay vào vũ trụ",
+          "keys": "con tauf bay vaof vux truj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khám phá những hành tinh xa",
+          "keys": "khams phas nhuwngx hanhf tinh xa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phi hành gia thật dũng cảm",
+          "keys": "phi hanhf gia thaatj dungx camr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khoa học soi sáng tương lai",
+          "keys": "khoa hocj soi sangs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_70",
+      "title": "Tương lai rạng ngời",
+      "content": [
+        {
+          "display": "cùng nhau xây dựng ngày mai",
+          "keys": "cungf nhau xaay duwngj ngayf mai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất nước ngày càng giàu đẹp",
+          "keys": "ddaats nuwowcs ngayf cangf giauf ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tri thức chắp cánh ước mơ",
+          "keys": "tri thuwcs chawps canhs uwowcs mow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tiến vào kỷ nguyên",
+          "keys": "vuwngx buwowcs tieens vaof kyr nguyeen",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

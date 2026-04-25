@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_50",
+      "title": "Lời hay ý đẹp",
+      "content": [
+        {
+          "display": "lời nói chẳng mất tiền mua",
+          "keys": "lowif nois chawngr maats tieenf mua",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lựa lời mà nói",
+          "keys": "luwaj lowif maf nois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cho vừa lòng nhau",
+          "keys": "cho vuwaf longf nhau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người khôn nói tiếng dịu dàng",
+          "keys": "nguwowif khoon nois tieengs diuj dangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_51",
+      "title": "Tình yêu động vật",
+      "content": [
+        {
+          "display": "con mèo lười nằm sưởi nắng",
+          "keys": "con meof luwowif nawmf suwowir nawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chú chó nhỏ sủa gâu gâu",
+          "keys": "chus chos nhor suar gaau gaau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đàn gà con lông vàng óng",
+          "keys": "ddanf gaf con loong vangf ongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chim hót líu lo đầu cành",
+          "keys": "chim hots lius lo ddaauf canhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_52",
+      "title": "Mùa hè rực rỡ",
+      "content": [
+        {
+          "display": "tiếng ve kêu râm ran hè",
+          "keys": "tieengs ve keeu raam ran hef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoa phượng vĩ đỏ rực trời",
+          "keys": "hoa phuwowngj vix ddor ruwcj trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "em đi biển cùng gia đình",
+          "keys": "em ddi bieenr cungf gia ddinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bầu trời xanh ngắt nắng vàng",
+          "keys": "baauf trowif xanh ngawts nawngs vangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_53",
+      "title": "Mùa thu dịu dàng",
+      "content": [
+        {
+          "display": "lá vàng rơi nhẹ trên đường",
+          "keys": "las vangf rowi nhej treen dduwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gió thu thổi mát tâm hồn",
+          "keys": "gios thu thooir mats taam hoonf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cánh đồng lúa chín thơm hương",
+          "keys": "canhs ddoongf luas chins thowm huwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bầu trời thu trong xanh quá",
+          "keys": "baauf trowif thu trong xanh quas",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_54",
+      "title": "Mùa đông ấm áp",
+      "content": [
+        {
+          "display": "bên bếp lửa hồng ấm áp",
+          "keys": "been beeps luwar hoongf aams aps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gió đông thổi lạnh ngoài kia",
+          "keys": "gios ddoong thooir lanhj ngoaif kia",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "em mặc áo len dày ấm",
+          "keys": "em mawcj aos len dayf aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi người quây quần bên nhau",
+          "keys": "moij nguwowif quaay quaanf been nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_55",
+      "title": "Mùa xuân tươi mới",
+      "content": [
+        {
+          "display": "hoa mai nở rộ đón xuân",
+          "keys": "hoa mai nowr rooj ddons xuaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chim én bay về báo tin",
+          "keys": "chim ens bay veef baos tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bé mặc quần áo mới",
+          "keys": "bes mawcj quaanf aos mowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cả nhà đi chúc tết ông",
+          "keys": "car nhaf ddi chucs teets oong",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_56",
+      "title": "Kỷ niệm trường xưa",
+      "content": [
+        {
+          "display": "hàng phượng vĩ đỏ thắm",
+          "keys": "hangf phuwowngj vix ddor thawms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kỷ niệm ngày đầu đến lớp",
+          "keys": "kyr nieemj ngayf ddaauf ddeens lowps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thầy cô tận tình dạy bảo",
+          "keys": "thaayf coo taanj tinhf dayj baor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn bè cùng nhau tiến bộ",
+          "keys": "banj bef cungf nhau tieens booj",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

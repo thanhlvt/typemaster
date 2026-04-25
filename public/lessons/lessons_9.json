@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_57",
+      "title": "Tình yêu biển đảo",
+      "content": [
+        {
+          "display": "biển xanh sóng vỗ dạt dào",
+          "keys": "bieenr xanh songs voox datj daof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thuyền cá về bến đầy khoang",
+          "keys": "thuyeenf cas veef beens ddaayf khoang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "những hòn đảo xa vẫy gọi",
+          "keys": "nhuwngx honf ddaor xa vaayx goij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngư dân bám biển quê hương",
+          "keys": "nguw daan bams bieenr quee huwowng",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_58",
+      "title": "Cánh đồng quê em",
+      "content": [
+        {
+          "display": "cánh đồng lúa rộng mênh mông",
+          "keys": "canhs ddoongf luas roongj meenh moong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đàn cò bay lả bay la",
+          "keys": "ddanf cof bay lar bay la",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hương lúa thơm nồng trong gió",
+          "keys": "huwowng luas thowm noongf trong gios",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nông dân hăng hái cày bừa",
+          "keys": "noong daan hawng hais cayf buwaf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_59",
+      "title": "Những con đường nhỏ",
+      "content": [
+        {
+          "display": "đường làng uốn lượn quanh co",
+          "keys": "dduwowngf langf uoons luwownj quanh co",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hàng cây xanh mát rợp bóng",
+          "keys": "hangf caay xanh mats rowpj bongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiếng cười vang dậy xóm nhỏ",
+          "keys": "tieengs cuwowif vang daayj xoms nhor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bé đi học trên đường quê",
+          "keys": "bes ddi hocj treen dduwowngf quee",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_60",
+      "title": "Trò chơi dân gian",
+      "content": [
+        {
+          "display": "rồng rắn lên mây rộn rã",
+          "keys": "roongf rawns leen maay roonj rax",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chi chi chành chành vui quá",
+          "keys": "chi chi chanhf chanhf vui quas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thả diều bắt bướm trên đồng",
+          "keys": "thar dieeuf bawts buwowms treen ddoongf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tuổi thơ dữ dội ngọt ngào",
+          "keys": "tuooir thow duwx dooij ngotj ngaof",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_61",
+      "title": "Nghề nghiệp tương lai",
+      "content": [
+        {
+          "display": "em mơ làm bác sĩ giỏi",
+          "keys": "em mow lamf bacs six gioir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chữa bệnh giúp đỡ mọi người",
+          "keys": "chuwax beenhj giups ddowx moij nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ước mơ làm chú công an",
+          "keys": "uwowcs mow lamf chus coong an",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bảo vệ bình yên phố phường",
+          "keys": "baor veej binhf yeen phoos phuwowngf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_62",
+      "title": "Bảo vệ hành tinh",
+      "content": [
+        {
+          "display": "cùng nhau bảo vệ trái đất",
+          "keys": "cungf nhau baor veej trais ddaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trồng thêm thật nhiều cây xanh",
+          "keys": "troongf theem thaatj nhieeuf caay xanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiết kiệm nước sạch bạn nhé",
+          "keys": "tieets kieemj nuwowcs sachj banj nhes",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ cho môi trường luôn sạch",
+          "keys": "giuwx cho mooi truwowngf luoon sachj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_63",
+      "title": "Niềm vui đến trường",
+      "content": [
+        {
+          "display": "tung tăng chân bước đến trường",
+          "keys": "tung tawng chaan buwowcs ddeens truwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sách vở nằm gọn trong cặp",
+          "keys": "sachs vowr nawmf gonj trong cawpj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gặp thầy gặp bạn thật vui",
+          "keys": "gawpj thaayf gawpj banj thaatj vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mỗi ngày học thêm điều mới",
+          "keys": "mooix ngayf hocj theem ddieeuf mowis",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
