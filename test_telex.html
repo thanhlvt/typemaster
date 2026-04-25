@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telex Test Pad - TypeMaster</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg: #0f172a;
@@ -153,13 +155,15 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Telex Test Pad</h1>
         <p class="subtitle">Kiểm tra bộ gõ Tiếng Việt thời gian thực của TypeMaster</p>
 
         <div class="input-group">
-            <input type="text" id="telex-input" placeholder="Gõ thử vào đây (vd: chuyeenj)..." autofocus autocomplete="off">
+            <input type="text" id="telex-input" placeholder="Gõ thử vào đây (vd: chuyeenj)..." autofocus
+                autocomplete="off">
         </div>
 
         <div class="result-container">
@@ -213,15 +217,6 @@
                 console.error(err);
                 statusText.innerText = 'Lỗi khi tải data.json. Đang dùng bộ quy tắc mặc định...';
                 // Fallback basic rules for local testing if fetch fails
-                engine = new TelexEngine({
-                    "ee": "ê", "eej": "ệ", "ees": "ế", "aa": "â", "aw": "ă", "oo": "ô", "ow": "ơ", "uw": "ư",
-                    "as": "á", "af": "à", "ar": "ả", "ax": "ã", "aj": "ạ",
-                    "is": "í", "if": "ì", "ir": "ỉ", "ix": "ĩ", "ij": "ị",
-                    "uj": "ụ",
-                    "uyus": "uýu", "uyuf": "uỳu", "uyur": "uỷu", "uyux": "uỹu", "uyuj": "uỵu",
-                    "oaos": "oáo", "oaof": "oào", "oaor": "oảo", "oaox": "oão", "oaoj": "oạo",
-                    "oeos": "oéo", "oeof": "oèo", "oeor": "oẻo", "oeox": "oẽo", "oeoj": "oẹo"
-                });
             }
         }
 
@@ -252,4 +247,5 @@
         init();
     </script>
 </body>
+
 </html>
