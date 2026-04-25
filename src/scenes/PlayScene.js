@@ -42,8 +42,18 @@ export class PlayScene extends Phaser.Scene {
         });
 
         this._createResetButton(width);
-
         this.startLesson();
+
+        // AudioContext resume on interaction
+        const resumeAudio = () => {
+            if (this.sound.context && this.sound.context.state === 'suspended') {
+                this.sound.context.resume();
+            }
+            this.input.off('pointerdown', resumeAudio);
+            this.input.keyboard.off('keydown', resumeAudio);
+        };
+        this.input.on('pointerdown', resumeAudio);
+        this.input.keyboard.on('keydown', resumeAudio);
     }
 
     // ── Progress ───────────────────────────────────────────────────
@@ -304,6 +314,7 @@ export class PlayScene extends Phaser.Scene {
 
         if (this._isPossible(rawBuffer + key)) {
             this.telexEngine.processKey(key);
+            this.sound.play('key_sound');
             const vietnameseBuffer = this._getVietnameseBufferForRaw(this.telexEngine.getRawBuffer());
             this.updateDisplayText(vietnameseBuffer);
             this.highlightNextKey();
@@ -345,6 +356,7 @@ export class PlayScene extends Phaser.Scene {
     }
 
     handleFail() {
+        this.sound.play('error_sound');
         this.cameras.main.shake(200, 0.01);
         this.monkey.setTint(0xff0000);
         this.time.delayedCall(200, () => this.monkey.clearTint());
@@ -366,6 +378,7 @@ export class PlayScene extends Phaser.Scene {
     // ── Lesson complete overlay ────────────────────────────────────
 
     showLessonComplete() {
+        this.sound.play('win_sound');
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
         const total = this.totalKeysInLesson || 1;
         const accuracy = Math.round((total / (total + this.errorsInLesson)) * 100);

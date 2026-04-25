@@ -30,6 +30,15 @@ export class BootScene extends Phaser.Scene {
         this.load.image('hand_left', 'assets/hand_left.png');
         this.load.image('hand_right', 'assets/hand_right.png');
         
+        // Load audio
+        this.load.audio('key_sound', 'assets/key.mp3');
+        this.load.audio('error_sound', 'assets/error.mp3');
+        this.load.audio('win_sound', 'assets/win.mp3');
+        
+        this.load.on('filecomplete-audio-key_sound', () => console.log('key_sound loaded'));
+        this.load.on('filecomplete-audio-error_sound', () => console.log('error_sound loaded'));
+        this.load.on('filecomplete-audio-win_sound', () => console.log('win_sound loaded'));
+        
         // Load manifest
         this.load.json('manifest', 'data.json');
         
