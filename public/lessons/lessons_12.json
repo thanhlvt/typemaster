@@ -1,0 +1,191 @@
+{
+  "lessons": [
+    {
+      "id": "level_78",
+      "title": "Kinh nghiệm sống",
+      "content": [
+        {
+          "display": "thức khuya mới biết đêm dài",
+          "keys": "thuwcs khuya mowis bieets ddeem daif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ở lâu mới biết lòng người",
+          "keys": "owr laau mowis bieets longf nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một kho vàng không bằng",
+          "keys": "mootj kho vangf khoong bawngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một nang chữ",
+          "keys": "mootj nang chuwx",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_79",
+      "title": "Đức tính tốt",
+      "content": [
+        {
+          "display": "thắng không kiêu",
+          "keys": "thawngs khoong kieeu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bại không nản",
+          "keys": "baij khoong nanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khiêm tốn là tự trọng",
+          "keys": "khieem toons laf tuwj trongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ở hiền gặp lành",
+          "keys": "owr hieenf gawpj lanhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_80",
+      "title": "Lời ăn tiếng nói",
+      "content": [
+        {
+          "display": "lời chào cao hơn mâm cỗ",
+          "keys": "lowif chaof cao hown maam coox",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một câu nhịn chín câu lành",
+          "keys": "mootj caau nhinj chins caau lanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn có nhai nói có nghĩ",
+          "keys": "awn cos nhai nois cos nghix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lời nói gió bay",
+          "keys": "lowif nois gios bay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_81",
+      "title": "Quan hệ xóm giềng",
+      "content": [
+        {
+          "display": "bán anh em xa",
+          "keys": "bans anh em xa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mua láng giềng gần",
+          "keys": "mua langs gieengf gaanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tình làng nghĩa xóm",
+          "keys": "tinhf langf nghiax xoms",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tối lửa tắt đèn có nhau",
+          "keys": "toois luwar tawts ddenf cos nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_82",
+      "title": "Ý chí vươn lên",
+      "content": [
+        {
+          "display": "dám nghĩ dám làm",
+          "keys": "dams nghix dams lamf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự khởi đầu nan",
+          "keys": "vanj suwj khowir ddaauf nan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gian nan tỏ mặt anh hùng",
+          "keys": "gian nan tor mawtj anh hungf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưu sự tại nhân",
+          "keys": "muwu suwj taij nhaan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_83",
+      "title": "Tiết kiệm & Tích lũy",
+      "content": [
+        {
+          "display": "tích tiểu thành đại",
+          "keys": "tichs tieeur thanhf ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "góp gió thành bão",
+          "keys": "gops gios thanhf baox",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "năng nhặt chặt bị",
+          "keys": "nawng nhawtj chawtj bij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo ăn thì no",
+          "keys": "kheos awn thif no",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo co thì ấm",
+          "keys": "kheos co thif aams",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_84",
+      "title": "Cội nguồn & Gia đình",
+      "content": [
+        {
+          "display": "lá rụng về cội",
+          "keys": "las rungj veef cooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trâu chậm uống nước đục",
+          "keys": "traau chaamj uoongs nuwowcs dducj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con có cha như nhà có nóc",
+          "keys": "con cos cha nhuw nhaf cos nocs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nước có nguồn cây có gốc",
+          "keys": "nuwowcs cos nguoonf caay cos goocs",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

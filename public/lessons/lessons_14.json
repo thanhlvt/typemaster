@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_92",
+      "title": "Nhận thức",
+      "content": [
+        {
+          "display": "xem bói cho người",
+          "keys": "xem bois cho nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lại không xem bói mình",
+          "keys": "laij khoong xem bois minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ếch ngồi đáy giếng",
+          "keys": "eechs ngooif ddays gieengs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "coi trời bằng vung",
+          "keys": "coi trowif bawngf vung",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_93",
+      "title": "Chăm chỉ & Lười biếng",
+      "content": [
+        {
+          "display": "tay làm hàm nhai",
+          "keys": "tay lamf hamf nhai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tay quai miệng trễ",
+          "keys": "tay quai mieengj treex",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lười biếng là mẹ nghèo khổ",
+          "keys": "luwowif bieengs laf mej ngheof khoor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm làm thì no",
+          "keys": "chawm lamf thif no",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_94",
+      "title": "Lòng tham & Hậu quả",
+      "content": [
+        {
+          "display": "tham thì thâm",
+          "keys": "tham thif thaam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tham bát bỏ mâm",
+          "keys": "tham bats bor maam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được voi đòi tiên",
+          "keys": "dduwowcj voi ddoif tieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trèo cao ngã đau",
+          "keys": "treof cao ngax ddau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_95",
+      "title": "Sự lựa chọn & Định mệnh",
+      "content": [
+        {
+          "display": "chọn mặt gửi vàng",
+          "keys": "chonj mawtj guwir vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chạy trời không khỏi nắng",
+          "keys": "chayj trowif khoong khoir nawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoạ vô đơn chí",
+          "keys": "hoaj voo ddown chis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phúc bất trùng lai",
+          "keys": "phucs baats trungf lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_96",
+      "title": "Tình cảm & Đoàn kết",
+      "content": [
+        {
+          "display": "yêu trẻ trẻ đến nhà",
+          "keys": "yeeu trer trer ddeens nhaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kính già già để tuổi cho",
+          "keys": "kinhs giaf giaf ddeer tuooir cho",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một lòng một dạ",
+          "keys": "mootj longf mootj daj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chung sức chung lòng",
+          "keys": "chung suwcs chung longf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_97",
+      "title": "Sự thật & Lẽ phải",
+      "content": [
+        {
+          "display": "mắt thấy tai nghe",
+          "keys": "mawts thaays tai nghe",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sự thật mất lòng",
+          "keys": "suwj thaatj maats longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cây ngay bóng thẳng",
+          "keys": "caay ngay bongs thawngr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nói có sách mách có chứng",
+          "keys": "nois cos sachs machs cos chuwngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_98",
+      "title": "Nghị lực & Hành động",
+      "content": [
+        {
+          "display": "chân cứng đá mềm",
+          "keys": "chaan cuwngs ddas meemf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt nắng thắng mưa",
+          "keys": "vuwowtj nawngs thawngs muwa",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết tâm sắt đá",
+          "keys": "quyeets taam sawts ddas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gạo đã thành cơm",
+          "keys": "gaoj ddax thanhf cowm",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

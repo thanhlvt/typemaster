@@ -1,0 +1,191 @@
+{
+  "lessons": [
+    {
+      "id": "level_85",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "gieo gió gặt bão",
+          "keys": "gieo gios gawtj baox",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ác giả ác báo",
+          "keys": "acs giar acs baos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cây ngay không sợ chết đứng",
+          "keys": "caay ngay khoong sowj cheets dduwngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lưới trời lồng lộng",
+          "keys": "luwowis trowif loongf loongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_86",
+      "title": "Trí tuệ & Tài năng",
+      "content": [
+        {
+          "display": "tài cao đức trọng",
+          "keys": "taif cao dduwcs trongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tuổi nhỏ làm việc nhỏ",
+          "keys": "tuooir nhor lamf vieecj nhor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thông minh vốn sẵn tính trời",
+          "keys": "thoong minh voons sawnx tinhs trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học một biết mười",
+          "keys": "hocj mootj bieets muwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_87",
+      "title": "Sự chuẩn bị",
+      "content": [
+        {
+          "display": "phòng bệnh hơn chữa bệnh",
+          "keys": "phongf beenhj hown chuwax beenhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cẩn tắc vô ưu",
+          "keys": "caanr tawcs voo uwu",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lo trước tính sau",
+          "keys": "lo truwowcs tinhs sau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chuẩn bị kỹ càng",
+          "keys": "chuaanr bij kyx cangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_88",
+      "title": "Tình yêu quê hương",
+      "content": [
+        {
+          "display": "ta về ta tắm ao ta",
+          "keys": "ta veef ta tawms ao ta",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dù trong dù đục",
+          "keys": "duf trong duf dducj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ao nhà vẫn hơn",
+          "keys": "ao nhaf vaanx hown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất lành chim đậu",
+          "keys": "ddaats lanhf chim ddaauj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quê hương là tất cả",
+          "keys": "quee huwowng laf taats car",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_89",
+      "title": "Sự hòa thuận",
+      "content": [
+        {
+          "display": "hoà khí sinh tài",
+          "keys": "hoaf khis sinh taif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chồng thuận vợ hoà",
+          "keys": "choongf thuaanj vowj hoaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhà có phúc mới có con ngoan",
+          "keys": "nhaf cos phucs mowis cos con ngoan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "anh em thảo hiền",
+          "keys": "anh em thaor hieenf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_90",
+      "title": "Tính cách con người",
+      "content": [
+        {
+          "display": "tốt gỗ hơn tốt nước sơn",
+          "keys": "toots goox hown toots nuwowcs sown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người đẹp vì lụa",
+          "keys": "nguwowif ddepj vif luaj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tâm sinh tướng",
+          "keys": "taam sinh tuwowngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cái nết đánh chết cái đẹp",
+          "keys": "cais neets ddanhs cheets cais ddepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_91",
+      "title": "Bài học đường đời",
+      "content": [
+        {
+          "display": "gần bùn mà chẳng hôi tanh",
+          "keys": "gaanf bunf maf chawngr hooi tanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sông có khúc người có lúc",
+          "keys": "soong cos khucs nguwowif cos lucs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngựa non háu đá",
+          "keys": "nguwaj non haus ddas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng nhìn mặt mà bắt hình dong",
+          "keys": "dduwngf nhinf mawtj maf bawts hinhf dong",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}

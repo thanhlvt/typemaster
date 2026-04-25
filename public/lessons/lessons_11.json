@@ -1,0 +1,186 @@
+{
+  "lessons": [
+    {
+      "id": "level_71",
+      "title": "Đoàn kết",
+      "content": [
+        {
+          "display": "gần mực thì đen",
+          "keys": "gaanf muwcj thif dden",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gần đèn thì sáng",
+          "keys": "gaanf ddenf thif sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chị ngã em nâng",
+          "keys": "chij ngax em naang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "môi hở răng lạnh",
+          "keys": "mooi howr rawng lanhj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_72",
+      "title": "Học tập",
+      "content": [
+        {
+          "display": "học thầy không tày học bạn",
+          "keys": "hocj thaayf khoong tayf hocj banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tiên học lễ hậu học văn",
+          "keys": "tieen hocj leex haauj hocj vawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn lành nghề phải chăm học",
+          "keys": "muoons lanhf ngheef phair chawm hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến tha lâu cũng đầy tổ",
+          "keys": "kieens tha laau cungx ddaayf toor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_73",
+      "title": "Lòng biết ơn",
+      "content": [
+        {
+          "display": "trọng thầy mới được làm thầy",
+          "keys": "trongj thaayf mowis dduwowcj lamf thaayf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhớ người cho cá cho cơm",
+          "keys": "nhows nguwowif cho cas cho cowm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ơn cha nghĩa mẹ cao vời",
+          "keys": "own cha nghiax mej cao vowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đền đáp công ơn thầy cô",
+          "keys": "ddeenf ddaps coong own thaayf coo",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_74",
+      "title": "Tính trung thực",
+      "content": [
+        {
+          "display": "đói cho sạch rách cho thơm",
+          "keys": "ddois cho sachj rachs cho thowm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thẳng như ruột ngựa",
+          "keys": "thawngr nhuw ruootj nguwaj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một lần bất tín",
+          "keys": "mootj laanf baats tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn lần bất tin",
+          "keys": "vanj laanf baats tin",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_75",
+      "title": "Sự kiên trì",
+      "content": [
+        {
+          "display": "có công mài sắt",
+          "keys": "cos coong maif sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có ngày nên kim",
+          "keys": "cos ngayf neen kim",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chớ thấy sóng cả",
+          "keys": "chows thaays songs car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mà ngã tay chèo",
+          "keys": "maf ngax tay cheof",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_76",
+      "title": "Tình anh em",
+      "content": [
+        {
+          "display": "anh em như thể tay chân",
+          "keys": "anh em nhuw theer tay chaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rách lành đùm bọc",
+          "keys": "rachs lanhf ddumf bocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dở hay đỡ đần",
+          "keys": "dowr hay ddowx ddaanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thuận vợ thuận chồng",
+          "keys": "thuaanj vowj thuaanj choongf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_77",
+      "title": "Đạo làm người",
+      "content": [
+        {
+          "display": "giấy rách phải giữ lấy lề",
+          "keys": "giaays rachs phair giuwx laays leef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tôn sư trọng đạo",
+          "keys": "toon suw trongj ddaoj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thương người như thể thương thân",
+          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bầu ơi thương lấy bí cùng",
+          "keys": "baauf owi thuwowng laays bis cungf",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
