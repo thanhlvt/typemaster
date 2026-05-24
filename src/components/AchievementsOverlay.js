@@ -153,12 +153,12 @@ export class AchievementsOverlay extends Phaser.GameObjects.Container {
 
             // Hover interactions for unlocked card
             if (isUnlocked) {
-                const cardZone = scene.add.zone(0, 0, cardW, cardH)
-                    .setInteractive({ useHandCursor: true });
-                card.add(cardZone);
+                card.setScrollFactor(0);
+                card.setInteractive(new Phaser.Geom.Rectangle(-cardW / 2, -cardH / 2, cardW, cardH), Phaser.Geom.Rectangle.Contains);
+                card.input.cursor = 'pointer';
 
-                cardZone.on('pointerover', () => {
-                    card.setDepth(2);
+                card.on('pointerover', () => {
+                    dialog.bringToTop(card);
                     scene.tweens.add({
                         targets: card,
                         scaleX: 1.06,
@@ -169,8 +169,7 @@ export class AchievementsOverlay extends Phaser.GameObjects.Container {
                     drawCardBg(mainBgColor, 0xFBBF24, 2.5, 0.95); // Bright gold border on hover
                 });
 
-                cardZone.on('pointerout', () => {
-                    card.setDepth(1);
+                card.on('pointerout', () => {
                     scene.tweens.add({
                         targets: card,
                         scaleX: 1.0,

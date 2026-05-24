@@ -282,6 +282,30 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                         }).setOrigin(0.5);
                         card.add(sprite);
                         card.add(nameText);
+
+                        // Make the monkey sprite zoomable on click
+                        sprite.setScrollFactor(0).setInteractive({ useHandCursor: true });
+                        sprite.on('pointerdown', (pointer, localX, localY, event) => {
+                            event.stopPropagation(); // Prevent equipping the skin when clicking to zoom
+                            this.showZoom(`monkey_${i}`, true);
+                        });
+                        sprite.on('pointerover', (pointer, localX, localY, event) => {
+                            event.stopPropagation();
+                            this.scene.tweens.add({
+                                targets: sprite,
+                                scaleX: 0.10,
+                                scaleY: 0.10,
+                                duration: 80
+                            });
+                        });
+                        sprite.on('pointerout', () => {
+                            this.scene.tweens.add({
+                                targets: sprite,
+                                scaleX: 0.09,
+                                scaleY: 0.09,
+                                duration: 80
+                            });
+                        });
                     } else {
                         const bgImg = this.scene.add.image(0, -12, `bg_${i}`).setDisplaySize(90, 50);
                         const nameText = this.scene.add.text(0, 38, `Hình Nền ${i}`, {
@@ -289,6 +313,30 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                         }).setOrigin(0.5);
                         card.add(bgImg);
                         card.add(nameText);
+
+                        // Make the background image zoomable on click
+                        bgImg.setScrollFactor(0).setInteractive({ useHandCursor: true });
+                        bgImg.on('pointerdown', (pointer, localX, localY, event) => {
+                            event.stopPropagation(); // Prevent equipping the skin when clicking to zoom
+                            this.showZoom(`bg_${i}`, false);
+                        });
+                        bgImg.on('pointerover', (pointer, localX, localY, event) => {
+                            event.stopPropagation();
+                            this.scene.tweens.add({
+                                targets: bgImg,
+                                displayWidth: 98,
+                                displayHeight: 54,
+                                duration: 80
+                            });
+                        });
+                        bgImg.on('pointerout', () => {
+                            this.scene.tweens.add({
+                                targets: bgImg,
+                                displayWidth: 90,
+                                displayHeight: 50,
+                                duration: 80
+                            });
+                        });
                     }
                 }
 
@@ -305,13 +353,12 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                     card.add(eqText);
                 }
 
-                // Make interactive zone
-                const zone = this.scene.add.zone(0, 0, cardW, cardH)
-                    .setInteractive({ useHandCursor: true });
-                card.add(zone);
+                card.setScrollFactor(0);
+                card.setInteractive(new Phaser.Geom.Rectangle(-cardW / 2, -cardH / 2, cardW, cardH), Phaser.Geom.Rectangle.Contains);
+                card.input.cursor = 'pointer';
 
-                zone.on('pointerover', () => {
-                    card.setDepth(2);
+                card.on('pointerover', () => {
+                    this.gridContainer.bringToTop(card);
                     this.scene.tweens.add({
                         targets: card,
                         scaleX: 1.05,
@@ -321,8 +368,7 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                     drawCardBg(normalBg, 0xFBBF24, 2.5, 1.0); // Gold glow on hover
                 });
 
-                zone.on('pointerout', () => {
-                    card.setDepth(1);
+                card.on('pointerout', () => {
                     this.scene.tweens.add({
                         targets: card,
                         scaleX: 1.0,
@@ -332,7 +378,7 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                     drawCardBg(normalBg, borderCol, isEquipped ? 2.5 : 1.5, 1.0);
                 });
 
-                zone.on('pointerdown', () => {
+                card.on('pointerdown', () => {
                     this.scene.sound.play('key_sound');
                     if (this.activeTab === 'monkey') {
                         equipped.monkey = isRandom ? 'random' : `monkey_${i}`;
@@ -346,5 +392,85 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                 });
             }
         }
+    }
+
+    showZoom(key, isMonkey) {
+        const { width, height } = this.scene.scale;
+
+        // Container for zoom overlay
+        const zoomOverlay = this.scene.add.container(0, 0).setDepth(30).setScrollFactor(0);
+        this.add(zoomOverlay);
+
+        // Dark background backdrop
+        const backdrop = this.scene.add.rectangle(0, 0, width, height, 0x000000, 0.8)
+            .setOrigin(0).setInteractive().setScrollFactor(0);
+        zoomOverlay.add(backdrop);
+
+        // Content container
+        const zoomContent = this.scene.add.container(width / 2, height / 2);
+        zoomOverlay.add(zoomContent);
+
+        // Click backdrop to close
+        backdrop.on('pointerdown', () => {
+            this.scene.sound.play('key_sound');
+            this.scene.tweens.add({
+                targets: zoomContent,
+                scaleX: 0.8,
+                scaleY: 0.8,
+                alpha: 0,
+                duration: 200,
+                onComplete: () => {
+                    zoomOverlay.destroy();
+                }
+            });
+        });
+
+        // Renders preview image/sprite
+        let preview;
+        if (isMonkey) {
+            // Radial glow behind the monkey
+            const glow = this.scene.add.graphics();
+            glow.fillStyle(0x10b981, 0.15);
+            glow.fillCircle(0, 0, 180);
+            glow.lineStyle(2, 0x10b981, 0.4);
+            glow.strokeCircle(0, 0, 180);
+            zoomContent.add(glow);
+
+            preview = this.scene.add.sprite(0, -30, key).setScale(0.4);
+        } else {
+            // Background image (standard 4:3 ratio: 640x480)
+            preview = this.scene.add.image(0, -30, key).setDisplaySize(640, 480);
+            
+            // Emerald frame border
+            const border = this.scene.add.graphics();
+            border.lineStyle(4, 0x10b981, 1);
+            border.strokeRect(-322, -272, 644, 484);
+            zoomContent.add(border);
+        }
+        zoomContent.add(preview);
+
+        // Title and instruction text
+        const titleText = isMonkey ? "TRANG PHỤC KHỈ" : "HÌNH NỀN BẢN ĐỒ";
+        const label = this.scene.add.text(0, isMonkey ? 180 : 255, `${titleText}\n(Bấm bất cứ đâu để đóng)`, {
+            fontFamily: 'Outfit, Arial',
+            fontSize: '18px',
+            fontStyle: 'bold',
+            fill: '#E2E8F0',
+            align: 'center',
+            lineSpacing: 8
+        }).setOrigin(0.5);
+        zoomContent.add(label);
+
+        // Smooth zoom opening animation
+        zoomContent.setScale(0.8);
+        zoomContent.setAlpha(0);
+        this.scene.tweens.add({
+            targets: zoomContent,
+            scaleX: 1,
+            scaleY: 1,
+            alpha: 1,
+            duration: 250,
+            ease: 'Back.easeOut'
+        });
     }
 }

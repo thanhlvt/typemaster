@@ -50,16 +50,16 @@ export class ComboManager {
      */
     showPopup(scene, multiplier) {
         const { width, height } = scene.scale;
-        const textColors  = { 2: '#FCD34D', 3: '#F87171', 4: '#C084FC' };
+        const textColors  = { 2: '#F59E0B', 3: '#E11D48', 4: '#7C3AED' }; // Richer/darker colors
         const flashColors = { 2: 0xD97706,  3: 0xDC2626,  4: 0x7C3AED  };
 
-        const txtColor  = textColors[multiplier]  || '#FCD34D';
+        const txtColor  = textColors[multiplier]  || '#F59E0B';
         const flashFill = flashColors[multiplier] || 0xD97706;
         const fontSize  = multiplier >= 4 ? '120px' : multiplier >= 3 ? '108px' : '96px';
 
-        // Random position within center 40% of screen
+        // Random position within center 40% of screen (shifted up to avoid overlapping typing area)
         const rx    = Phaser.Math.Between(width  * 0.3, width  * 0.7);
-        const ry    = Phaser.Math.Between(height * 0.3, height * 0.65);
+        const ry    = Phaser.Math.Between(height * 0.15, height * 0.42);
         const angle = Phaser.Math.Between(-20, 20);
 
         // ── Full-screen color flash ───────────────────────────────
@@ -77,8 +77,8 @@ export class ComboManager {
             fontSize,
             fontStyle: 'bold',
             fill: txtColor,
-            stroke: '#000',
-            strokeThickness: 10
+            stroke: '#000000',
+            strokeThickness: 14 // Increased border thickness
         }).setOrigin(0.5).setDepth(9).setAngle(angle).setScale(0.2).setAlpha(0);
 
         // ── Sub-label ─────────────────────────────────────────────
@@ -88,8 +88,8 @@ export class ComboManager {
             fontSize: '38px',
             fontStyle: 'bold',
             fill: '#FFFFFF',
-            stroke: '#000',
-            strokeThickness: 7
+            stroke: '#000000',
+            strokeThickness: 12 // Increased border thickness
         }).setOrigin(0.5).setDepth(9).setAngle(angle).setAlpha(0);
 
         // Phase 1 → overshoot pop-in
@@ -180,12 +180,13 @@ export class ComboManager {
             30: '🚀 COMBO THIÊN HÀ!'
         };
         const labelText  = labels[this.comboCount] || `🔥 COMBO ×${multiplier}!`;
-        const textColors = { 2: '#FCD34D', 3: '#F87171', 4: '#C084FC' };
-        const txtColor   = textColors[multiplier] || '#FCD34D';
+        const textColors = { 2: '#F59E0B', 3: '#E11D48', 4: '#7C3AED' };
+        const txtColor   = textColors[multiplier] || '#F59E0B';
 
-        const milestoneText = scene.add.text(width / 2, height / 2 - 60, labelText, {
+        // Milestone text shifted up to avoid overlapping typing area
+        const milestoneText = scene.add.text(width / 2, height / 2 - 140, labelText, {
             fontFamily: 'Arial', fontSize: '36px', fontStyle: 'bold',
-            fill: txtColor, stroke: '#000', strokeThickness: 5
+            fill: txtColor, stroke: '#000000', strokeThickness: 10
         }).setOrigin(0.5).setDepth(10).setScale(0.5);
 
         // Pop in → float up → fade out

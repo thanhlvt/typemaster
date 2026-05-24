@@ -195,7 +195,7 @@ export class MapScene extends Phaser.Scene {
             listContainer.add(btnBg);
 
             const btnText = this.add.text(btnX, btnLocalY, `${startL}`, {
-                fontFamily: 'Arial', fontSize: '11px', fontStyle: 'bold', fill: '#94A3B8'
+                fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#94A3B8'
             }).setOrigin(0.5);
             listContainer.add(btnText);
 
@@ -251,9 +251,17 @@ export class MapScene extends Phaser.Scene {
 
             const hit = isDraggingSidebar ? null : getSidebarBtn(pointer.x, pointer.y);
             if (hit !== hoveredBtn) {
-                if (hoveredBtn) { hoveredBtn.drawBtnBg(0x1e293b, 0x475569); hoveredBtn.btnText.setFill('#94A3B8'); }
+                if (hoveredBtn) { 
+                    hoveredBtn.drawBtnBg(0x1e293b, 0x475569); 
+                    hoveredBtn.btnText.setFill('#94A3B8'); 
+                    this.input.setDefaultCursor('default');
+                }
                 hoveredBtn = hit;
-                if (hit) { hit.drawBtnBg(0x334155, 0x38bdf8); hit.btnText.setFill('#FFFFFF'); }
+                if (hit) { 
+                    hit.drawBtnBg(0x334155, 0x38bdf8); 
+                    hit.btnText.setFill('#FFFFFF'); 
+                    this.input.setDefaultCursor('pointer');
+                }
             }
         });
 
@@ -271,6 +279,10 @@ export class MapScene extends Phaser.Scene {
             }
             if (hoveredBtn) hoveredBtn.drawBtnBg(0x334155, 0x38bdf8);
             isDraggingSidebar = false;
+        });
+
+        this.events.once('shutdown', () => {
+            this.input.setDefaultCursor('default');
         });
     }
 

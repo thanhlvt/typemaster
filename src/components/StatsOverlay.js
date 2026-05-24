@@ -119,22 +119,22 @@ export class StatsOverlay extends Phaser.GameObjects.Container {
             cardContainer.add(cardBg);
 
             // Icon + Value
-            const iconText = scene.add.text(-cardW / 2 + 15, -15, data.icon, { fontSize: '24px' }).setOrigin(0, 0.5);
+            const iconText = scene.add.text(-cardW / 2 + 15, -15, data.icon, { fontSize: '26px' }).setOrigin(0, 0.5);
             const valueText = scene.add.text(cardW / 2 - 15, -15, data.value, {
-                fontFamily: 'Outfit, Arial', fontSize: '22px', fontStyle: 'bold', fill: '#FFFFFF'
+                fontFamily: 'Outfit, Arial', fontSize: '24px', fontStyle: 'bold', fill: '#FFFFFF'
             }).setOrigin(1, 0.5);
             cardContainer.add(iconText);
             cardContainer.add(valueText);
 
             // Title
             const titleText = scene.add.text(-cardW / 2 + 15, 12, data.title, {
-                fontFamily: 'Arial', fontSize: '11px', fontStyle: 'bold', fill: '#94A3B8'
+                fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#94A3B8'
             }).setOrigin(0, 0.5);
             cardContainer.add(titleText);
 
             // Subtext
             const subtextVal = scene.add.text(-cardW / 2 + 15, 28, data.subtext, {
-                fontFamily: 'Arial', fontSize: '10px', fill: '#64748B'
+                fontFamily: 'Arial', fontSize: '11px', fill: '#64748B'
             }).setOrigin(0, 0.5);
             cardContainer.add(subtextVal);
         });
@@ -177,7 +177,7 @@ export class StatsOverlay extends Phaser.GameObjects.Container {
         const chartTitleY = -35;
         const chartTitle = scene.add.text(0, chartTitleY, '📈 BIỂU ĐỒ TIẾN TRÌNH WPM (20 LẦN GẦN NHẤT)', {
             fontFamily: 'Outfit, Arial',
-            fontSize: '18px',
+            fontSize: '20px',
             fontStyle: 'bold',
             fill: '#FBBF24'
         }).setOrigin(0.5);
@@ -236,7 +236,7 @@ export class StatsOverlay extends Phaser.GameObjects.Container {
 
                 // Y label
                 const label = scene.add.text(plotLeft - 15, py, `${v}`, {
-                    fontFamily: 'Arial', fontSize: '11px', fill: '#64748B'
+                    fontFamily: 'Arial', fontSize: '12px', fill: '#64748B'
                 }).setOrigin(1, 0.5);
                 dialog.add(label);
             }
@@ -277,7 +277,7 @@ export class StatsOverlay extends Phaser.GameObjects.Container {
 
                 // Draw small lesson index label on X axis
                 const xLabel = scene.add.text(barX, plotBottom + 15, `B.${entry.lessonIndex + 1}`, {
-                    fontFamily: 'Arial', fontSize: '9px', fontStyle: 'bold', fill: '#64748B'
+                    fontFamily: 'Arial', fontSize: '10px', fontStyle: 'bold', fill: '#64748B'
                 }).setOrigin(0.5);
                 dialog.add(xLabel);
 
@@ -297,31 +297,31 @@ export class StatsOverlay extends Phaser.GameObjects.Container {
             dialog.add(hoverGraphics);
 
             // Tooltip UI Container
-            const tooltipW = 190;
-            const tooltipH = 95;
+            const tooltipW = 210;
+            const tooltipH = 100;
             const tooltipContainer = scene.add.container(0, 0).setVisible(false).setDepth(30);
             dialog.add(tooltipContainer);
 
             const tooltipBg = scene.add.graphics();
             tooltipContainer.add(tooltipBg);
 
-            const tooltipTitle = scene.add.text(0, -tooltipH / 2 + 16, '', {
-                fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: '#FFFFFF'
+            const tooltipTitle = scene.add.text(0, -tooltipH / 2 + 18, '', {
+                fontFamily: 'Outfit, Arial', fontSize: '14px', fontStyle: 'bold', fill: '#FFFFFF'
             }).setOrigin(0.5);
             tooltipContainer.add(tooltipTitle);
 
-            const tooltipWpm = scene.add.text(0, -tooltipH / 2 + 40, '', {
-                fontFamily: 'Arial', fontSize: '12px', fill: '#E2E8F0'
+            const tooltipWpm = scene.add.text(0, -tooltipH / 2 + 42, '', {
+                fontFamily: 'Arial', fontSize: '13px', fill: '#E2E8F0'
             }).setOrigin(0.5);
             tooltipContainer.add(tooltipWpm);
 
-            const tooltipStarsText = scene.add.text(0, -tooltipH / 2 + 62, '', {
-                fontFamily: 'Arial', fontSize: '14px', fill: '#FBBF24'
+            const tooltipStarsText = scene.add.text(0, -tooltipH / 2 + 65, '', {
+                fontFamily: 'Arial', fontSize: '15px', fill: '#FBBF24'
             }).setOrigin(0.5);
             tooltipContainer.add(tooltipStarsText);
 
-            const tooltipTime = scene.add.text(0, -tooltipH / 2 + 80, '', {
-                fontFamily: 'Arial', fontSize: '9px', fill: '#64748B'
+            const tooltipTime = scene.add.text(0, -tooltipH / 2 + 84, '', {
+                fontFamily: 'Arial', fontSize: '11px', fill: '#64748B'
             }).setOrigin(0.5);
             tooltipContainer.add(tooltipTime);
 
