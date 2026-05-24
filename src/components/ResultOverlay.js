@@ -81,27 +81,44 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
 
         // Layout Buttons
         if (isLastLesson) {
-            // Only Map button (full width)
+            // Two buttons: Map (left, x = -90) and Retry (right, x = 90)
             const mapBtnBg = scene.add.graphics();
             const drawMapBg = (color) => {
                 mapBtnBg.clear();
                 mapBtnBg.fillStyle(color, 1);
-                mapBtnBg.fillRoundedRect(-170, 130, 340, 50, 25);
-                mapBtnBg.lineStyle(3, 0xffffff, 0.3);
-                mapBtnBg.strokeRoundedRect(-170, 130, 340, 50, 25);
+                mapBtnBg.fillRoundedRect(-170, 130, 160, 50, 25);
+                mapBtnBg.lineStyle(2, 0xffffff, 0.2);
+                mapBtnBg.strokeRoundedRect(-170, 130, 160, 50, 25);
             };
             drawMapBg(0x1565C0);
             mapBtnBg.setAlpha(0);
 
-            const mapBtnText = scene.add.text(0, 155, '🗺️ Quay lại Bản đồ', {
-                fontFamily: 'Arial', fontSize: '22px', fontStyle: 'bold', fill: '#FFFFFF'
+            const mapBtnText = scene.add.text(-90, 155, '🗺️ Bản đồ', {
+                fontFamily: 'Arial', fontSize: '20px', fontStyle: 'bold', fill: '#FFFFFF'
             }).setOrigin(0.5).setAlpha(0);
             mapBtnText.setShadow(0, 2, '#000000', 4, true, true);
 
-            container.add([mapBtnBg, mapBtnText]);
+            const retryBtnBg = scene.add.graphics();
+            const drawRetryBg = (color) => {
+                retryBtnBg.clear();
+                retryBtnBg.fillStyle(color, 1);
+                retryBtnBg.fillRoundedRect(10, 130, 160, 50, 25);
+                retryBtnBg.lineStyle(2, 0xffffff, 0.2);
+                retryBtnBg.strokeRoundedRect(10, 130, 160, 50, 25);
+            };
+            drawRetryBg(0xF57C00);
+            retryBtnBg.setAlpha(0);
 
-            const mapZone = scene.add.zone(0, 155, 340, 50).setInteractive({ useHandCursor: true });
-            container.add(mapZone);
+            const retryBtnText = scene.add.text(90, 155, '🔄 Thử lại', {
+                fontFamily: 'Arial', fontSize: '20px', fontStyle: 'bold', fill: '#FFFFFF'
+            }).setOrigin(0.5).setAlpha(0);
+            retryBtnText.setShadow(0, 2, '#000000', 4, true, true);
+
+            container.add([mapBtnBg, mapBtnText, retryBtnBg, retryBtnText]);
+
+            const mapZone = scene.add.zone(-90, 155, 160, 50).setInteractive({ useHandCursor: true });
+            const retryZone = scene.add.zone(90, 155, 160, 50).setInteractive({ useHandCursor: true });
+            container.add([mapZone, retryZone]);
 
             mapZone.on('pointerover', () => drawMapBg(0x1E88E5));
             mapZone.on('pointerout', () => drawMapBg(0x1565C0));
@@ -110,53 +127,81 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
                 if (onBackToMap) onBackToMap();
             });
 
-            scene.tweens.add({ targets: [mapBtnBg, mapBtnText], alpha: 1, duration: 300, delay: 850 });
+            retryZone.on('pointerover', () => drawRetryBg(0xFF9800));
+            retryZone.on('pointerout', () => drawRetryBg(0xF57C00));
+            retryZone.on('pointerdown', () => {
+                this.emit('retry');
+            });
+
+            scene.tweens.add({ targets: [mapBtnBg, mapBtnText, retryBtnBg, retryBtnText], alpha: 1, duration: 300, delay: 850 });
         } else {
-            // Map button (left)
+            // Three buttons: Map (left, x = -125), Retry (middle, x = 0), Continue (right, x = 125)
             const mapBtnBg = scene.add.graphics();
             const drawMapBg = (color) => {
                 mapBtnBg.clear();
                 mapBtnBg.fillStyle(color, 1);
-                mapBtnBg.fillRoundedRect(-180, 130, 160, 50, 25);
+                mapBtnBg.fillRoundedRect(-180, 130, 110, 50, 25);
                 mapBtnBg.lineStyle(2, 0xffffff, 0.2);
-                mapBtnBg.strokeRoundedRect(-180, 130, 160, 50, 25);
+                mapBtnBg.strokeRoundedRect(-180, 130, 110, 50, 25);
             };
             drawMapBg(0x1565C0);
             mapBtnBg.setAlpha(0);
 
-            const mapBtnText = scene.add.text(-100, 155, '🗺️ Bản đồ', {
-                fontFamily: 'Arial', fontSize: '20px', fontStyle: 'bold', fill: '#FFFFFF'
+            const mapBtnText = scene.add.text(-125, 155, '🗺️ Bản đồ', {
+                fontFamily: 'Arial', fontSize: '16px', fontStyle: 'bold', fill: '#FFFFFF'
             }).setOrigin(0.5).setAlpha(0);
             mapBtnText.setShadow(0, 2, '#000000', 4, true, true);
 
-            // Continue button (right)
+            const retryBtnBg = scene.add.graphics();
+            const drawRetryBg = (color) => {
+                retryBtnBg.clear();
+                retryBtnBg.fillStyle(color, 1);
+                retryBtnBg.fillRoundedRect(-55, 130, 110, 50, 25);
+                retryBtnBg.lineStyle(2, 0xffffff, 0.2);
+                retryBtnBg.strokeRoundedRect(-55, 130, 110, 50, 25);
+            };
+            drawRetryBg(0xF57C00);
+            retryBtnBg.setAlpha(0);
+
+            const retryBtnText = scene.add.text(0, 155, '🔄 Thử lại', {
+                fontFamily: 'Arial', fontSize: '16px', fontStyle: 'bold', fill: '#FFFFFF'
+            }).setOrigin(0.5).setAlpha(0);
+            retryBtnText.setShadow(0, 2, '#000000', 4, true, true);
+
             const contBtnBg = scene.add.graphics();
             const drawContBg = (color) => {
                 contBtnBg.clear();
                 contBtnBg.fillStyle(color, 1);
-                contBtnBg.fillRoundedRect(20, 130, 160, 50, 25);
+                contBtnBg.fillRoundedRect(70, 130, 110, 50, 25);
                 contBtnBg.lineStyle(2, 0xffffff, 0.2);
-                contBtnBg.strokeRoundedRect(20, 130, 160, 50, 25);
+                contBtnBg.strokeRoundedRect(70, 130, 110, 50, 25);
             };
             drawContBg(0x4CAF50);
             contBtnBg.setAlpha(0);
 
-            const contBtnText = scene.add.text(100, 155, 'Tiếp tục ➔', {
-                fontFamily: 'Arial', fontSize: '20px', fontStyle: 'bold', fill: '#FFFFFF'
+            const contBtnText = scene.add.text(125, 155, 'Tiếp tục ➔', {
+                fontFamily: 'Arial', fontSize: '16px', fontStyle: 'bold', fill: '#FFFFFF'
             }).setOrigin(0.5).setAlpha(0);
             contBtnText.setShadow(0, 2, '#000000', 4, true, true);
 
-            container.add([mapBtnBg, mapBtnText, contBtnBg, contBtnText]);
+            container.add([mapBtnBg, mapBtnText, retryBtnBg, retryBtnText, contBtnBg, contBtnText]);
 
-            const mapZone = scene.add.zone(-100, 155, 160, 50).setInteractive({ useHandCursor: true });
-            const contZone = scene.add.zone(100, 155, 160, 50).setInteractive({ useHandCursor: true });
-            container.add([mapZone, contZone]);
+            const mapZone = scene.add.zone(-125, 155, 110, 50).setInteractive({ useHandCursor: true });
+            const retryZone = scene.add.zone(0, 155, 110, 50).setInteractive({ useHandCursor: true });
+            const contZone = scene.add.zone(125, 155, 110, 50).setInteractive({ useHandCursor: true });
+            container.add([mapZone, retryZone, contZone]);
 
             mapZone.on('pointerover', () => drawMapBg(0x1E88E5));
             mapZone.on('pointerout', () => drawMapBg(0x1565C0));
             mapZone.on('pointerdown', () => {
                 this.destroy();
                 if (onBackToMap) onBackToMap();
+            });
+
+            retryZone.on('pointerover', () => drawRetryBg(0xFF9800));
+            retryZone.on('pointerout', () => drawRetryBg(0xF57C00));
+            retryZone.on('pointerdown', () => {
+                this.emit('retry');
             });
 
             contZone.on('pointerover', () => drawContBg(0x66BB6A));
@@ -165,11 +210,11 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
                 this.emit('continue');
             });
 
-            scene.tweens.add({ targets: [mapBtnBg, mapBtnText, contBtnBg, contBtnText], alpha: 1, duration: 300, delay: 850 });
+            scene.tweens.add({ targets: [mapBtnBg, mapBtnText, retryBtnBg, retryBtnText, contBtnBg, contBtnText], alpha: 1, duration: 300, delay: 850 });
         }
 
         // Shortcut hint text at the bottom
-        const hintStr = isLastLesson ? 'Phím tắt: [Esc] Bản đồ' : 'Phím tắt: [Space/Enter] Tiếp tục  •  [Esc] Bản đồ';
+        const hintStr = isLastLesson ? 'Phím tắt: [Enter] Thử lại  •  [Esc] Bản đồ' : 'Phím tắt: [Space] Tiếp tục  •  [Enter] Thử lại  •  [Esc] Bản đồ';
         const shortcutHintText = scene.add.text(0, 205, hintStr, {
             fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#94A3B8'
         }).setOrigin(0.5).setAlpha(0);

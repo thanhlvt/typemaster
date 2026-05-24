@@ -3,8 +3,8 @@ import { TelexEngine } from '../utils/TelexEngine';
 import { VirtualKeyboard } from '../components/VirtualKeyboard';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { ResultOverlay } from '../components/ResultOverlay';
-
-const SAVE_KEY = 'typemaster_progress';
+import { ProgressManager } from '../utils/ProgressManager';
+import { TypingValidator } from '../utils/TypingValidator';
 
 export class PlayScene extends Phaser.Scene {
     constructor() {
@@ -17,7 +17,13 @@ export class PlayScene extends Phaser.Scene {
         this.currentWordIndex = 0;
         this.telexEngine = new TelexEngine(this.data.telex_rules);
         this.score = 0;
-        this._loadProgress();
+        
+        const progress = ProgressManager.loadProgress(this.data.lessons.length);
+        this.currentLessonIndex = progress.lessonIndex;
+        this.score = progress.score;
+        this.lessonStars = progress.lessonStars;
+        this.streakDays = progress.streakDays;
+
         if (data && data.lessonIndex !== undefined) {
             this.currentLessonIndex = data.lessonIndex;
         }
@@ -35,13 +41,26 @@ export class PlayScene extends Phaser.Scene {
 
         this.input.keyboard.on('keydown', this.handleKeyDown, this);
 
-        this.scoreText = this.add.text(20, 20, 'Chuối: ' + this.score, {
+        // Overall progress elements
+        this.progressText = this.add.text(20, 20, '', {
             fontFamily: 'Arial',
-            fontSize: '40px',
+            fontSize: '24px',
             fontStyle: 'bold',
             fill: '#FFF',
             stroke: '#000',
-            strokeThickness: 5
+            strokeThickness: 4
+        });
+
+        this.progressBarBg = this.add.graphics();
+        this.progressBarFill = this.add.graphics();
+
+        this.scoreText = this.add.text(20, 72, '', {
+            fontFamily: 'Arial',
+            fontSize: '20px',
+            fontStyle: 'bold',
+            fill: '#FBBF24',
+            stroke: '#000',
+            strokeThickness: 3
         });
 
         // Add Streak Text
@@ -74,61 +93,12 @@ export class PlayScene extends Phaser.Scene {
         this.input.keyboard.on('keydown', resumeAudio);
     }
 
-    // ── Progress ───────────────────────────────────────────────────
-
-    _loadProgress() {
-        this.lessonStars = {};
-        try {
-            const saved = JSON.parse(localStorage.getItem(SAVE_KEY));
-            if (saved) {
-                this.currentLessonIndex = Math.min(saved.lessonIndex || 0, this.data.lessons.length - 1);
-                this.score = saved.score || 0;
-                this.lessonStars = saved.lessonStars || {};
-            }
-        } catch (_) { }
-
-        // Load streak for display
-        this.streakDays = 0;
-        try {
-            const streakData = JSON.parse(localStorage.getItem('typemaster_streak'));
-            if (streakData) {
-                this.streakDays = streakData.streakDays || 0;
-                const lastPlayDate = streakData.lastPlayDate;
-                
-                if (lastPlayDate) {
-                    const today = new Date();
-                    const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-                    const yesterday = new Date(today);
-                    yesterday.setDate(yesterday.getDate() - 1);
-                    const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth()+1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
-                    
-                    if (lastPlayDate !== todayStr && lastPlayDate !== yesterdayStr) {
-                        this.streakDays = 0;
-                        localStorage.setItem('typemaster_streak', JSON.stringify({
-                            streakDays: 0,
-                            lastPlayDate: lastPlayDate
-                        }));
-                    }
-                }
-            }
-        } catch (_) { }
-    }
-
-    _saveProgress() {
-        localStorage.setItem(SAVE_KEY, JSON.stringify({
-            lessonIndex: this.currentLessonIndex,
-            score: this.score,
-            lessonStars: this.lessonStars
-        }));
-    }
-
     _doReset() {
-        localStorage.clear();
+        ProgressManager.clearAll();
         this.tweens.killAll();
         this.currentLessonIndex = 0;
         this.currentWordIndex = 0;
         this.score = 0;
-        this.scoreText.setText('Chuối: 0');
         this.streakDays = 0;
         this.lessonStars = {};
         if (this.streakText) {
@@ -240,23 +210,9 @@ export class PlayScene extends Phaser.Scene {
         this.virtualKeyboard.resetKeys();
     }
 
-    _targetKeysLower() {
-        return this.targetKeys.toLowerCase();
-    }
-
-    _getVietnameseBufferForRaw(raw) {
-        return raw.split(' ')
-            .map(chunk => this.telexEngine._apply(chunk))
-            .join(' ');
-    }
-
-    _normalizeForMatch(value) {
-        return value.normalize('NFC').replace(/\s/g, '');
-    }
-
     highlightNextKey() {
         const rawBuffer = this.telexEngine.getRawBuffer();
-        const targetKeysStr = this._targetKeysLower();
+        const targetKeysStr = this.targetKeys.toLowerCase();
 
         const currentCounts = {};
         for (const c of rawBuffer) {
@@ -277,83 +233,6 @@ export class PlayScene extends Phaser.Scene {
         this.virtualKeyboard.highlightKey(nextCharToHighlight);
     }
 
-    getFingerForKey(key) {
-        const fingerMap = {
-            'q': 'L1', 'a': 'L1', 'z': 'L1',
-            'w': 'L2', 's': 'L2', 'x': 'L2',
-            'e': 'L3', 'd': 'L3', 'c': 'L3',
-            'r': 'L4', 't': 'L4', 'f': 'L4', 'g': 'L4', 'v': 'L4', 'b': 'L4',
-            'y': 'R4', 'u': 'R4', 'h': 'R4', 'j': 'R4', 'n': 'R4', 'm': 'R4',
-            'i': 'R3', 'k': 'R3',
-            'o': 'R2', 'l': 'R2',
-            'p': 'R1'
-        };
-        return fingerMap[key];
-    }
-
-    _isPossible(testRaw) {
-        const targetKeysStr = this._targetKeysLower();
-        if (targetKeysStr.startsWith(testRaw)) return true;
-
-        const toneMarks = "sfrxjz";
-        const vowels = "aeiouy";
-
-        let targetBase = "";
-        let targetTones = {};
-
-        for (let i = 0; i < targetKeysStr.length; i++) {
-            const c = targetKeysStr[i];
-            let isTone = false;
-
-            if ("fjz".includes(c)) {
-                isTone = true;
-            } else if ("srx".includes(c)) {
-                const nextChar = i < targetKeysStr.length - 1 ? targetKeysStr[i + 1] : '';
-                if (!vowels.includes(nextChar)) {
-                    isTone = true;
-                }
-            }
-
-            if (isTone) {
-                targetTones[c] = (targetTones[c] || 0) + 1;
-            } else {
-                targetBase += c;
-            }
-        }
-
-        let testBase = "";
-        let testTones = {};
-        let basePtr = 0;
-
-        for (const c of testRaw) {
-            if (basePtr < targetBase.length && c === targetBase[basePtr]) {
-                testBase += c;
-                basePtr++;
-            } else if (toneMarks.includes(c)) {
-                testTones[c] = (testTones[c] || 0) + 1;
-            } else {
-                return false;
-            }
-        }
-
-        for (const t in testTones) {
-            if ((testTones[t] || 0) > (targetTones[t] || 0)) return false;
-        }
-
-        let remainingBase = targetBase.slice(testBase.length);
-
-        let remainingTones = "";
-        for (const t in targetTones) {
-            const count = targetTones[t] - (testTones[t] || 0);
-            for (let i = 0; i < count; i++) remainingTones += t;
-        }
-
-        const trial = testRaw + remainingBase + remainingTones;
-        const resultWord = this._getVietnameseBufferForRaw(trial);
-
-        return this._normalizeForMatch(resultWord) === this._normalizeForMatch(this.targetWord);
-    }
-
     // ── Lesson flow ────────────────────────────────────────────────
 
     startLesson() {
@@ -371,6 +250,7 @@ export class PlayScene extends Phaser.Scene {
         if (this.monkey) this.monkey.setTexture(`monkey_${randomMonkey}`);
 
         this.showWord();
+        this._updateProgressBar();
     }
 
     showWord() {
@@ -393,14 +273,13 @@ export class PlayScene extends Phaser.Scene {
 
         const rawBuffer = this.telexEngine.getRawBuffer();
 
-        if (this._isPossible(rawBuffer + key)) {
-            this.telexEngine.processKey(key);
+        if (TypingValidator.isPossible(rawBuffer + key, this.targetKeys, this.targetWord, this.telexEngine)) {
+            const vietnameseBuffer = this.telexEngine.processKey(key);
             this.sound.play('key_sound');
-            const vietnameseBuffer = this._getVietnameseBufferForRaw(this.telexEngine.getRawBuffer());
             this.updateDisplayText(vietnameseBuffer);
             this.highlightNextKey();
 
-            if (this._normalizeForMatch(vietnameseBuffer) === this._normalizeForMatch(this.targetWord)) {
+            if (TypingValidator.normalizeForMatch(vietnameseBuffer) === TypingValidator.normalizeForMatch(this.targetWord)) {
                 this.handleSuccess();
             }
         } else {
@@ -416,7 +295,7 @@ export class PlayScene extends Phaser.Scene {
     handleSuccess() {
         this.sound.play('win_sound');
         this.score++;
-        this.scoreText.setText('Chuối: ' + this.score);
+        this._updateProgressBar();
 
         this.tweens.add({
             targets: this.monkey,
@@ -474,11 +353,11 @@ export class PlayScene extends Phaser.Scene {
         if (stars > oldStars) {
             this.lessonStars[this.currentLessonIndex] = stars;
         }
-        this._saveProgress();
+        ProgressManager.saveProgress(this.currentLessonIndex, this.score, this.lessonStars);
 
         const handleCleanUpListeners = () => {
             this.input.keyboard.off('keyup-SPACE', handleContinue);
-            this.input.keyboard.off('keyup-ENTER', handleContinue);
+            this.input.keyboard.off('keyup-ENTER', handleRetry);
             this.input.keyboard.off('keyup-ESC', handleBackToMap);
         };
 
@@ -489,9 +368,17 @@ export class PlayScene extends Phaser.Scene {
                 this._checkAndUpdateStreak();
                 this.input.keyboard.on('keydown', this.handleKeyDown, this);
                 this.currentLessonIndex++;
-                this._saveProgress();
+                ProgressManager.saveProgress(this.currentLessonIndex, this.score, this.lessonStars);
                 this.startLesson();
             }
+        };
+
+        const handleRetry = () => {
+            handleCleanUpListeners();
+            overlay.destroy();
+            this._checkAndUpdateStreak();
+            this.input.keyboard.on('keydown', this.handleKeyDown, this);
+            this.startLesson();
         };
 
         const handleBackToMap = () => {
@@ -504,49 +391,27 @@ export class PlayScene extends Phaser.Scene {
         const overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson, handleBackToMap);
 
         this.input.keyboard.once('keyup-SPACE', handleContinue);
-        this.input.keyboard.once('keyup-ENTER', handleContinue);
+        this.input.keyboard.once('keyup-ENTER', handleRetry);
         this.input.keyboard.once('keyup-ESC', handleBackToMap);
 
         overlay.on('continue', () => {
             handleCleanUpListeners();
             handleContinue();
         });
+
+        overlay.on('retry', () => {
+            handleCleanUpListeners();
+            handleRetry();
+        });
     }
 
     // ── Streak logic helper ───────────────────────────────────────
     
     _checkAndUpdateStreak() {
-        let storedStreak = 0;
-        let storedDate = null;
-        try {
-            const data = JSON.parse(localStorage.getItem('typemaster_streak'));
-            if (data) {
-                storedStreak = data.streakDays || 0;
-                storedDate = data.lastPlayDate;
-            }
-        } catch(e) {}
-
-        const today = new Date();
-        const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        const { streakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
+        this.streakDays = streakDays;
         
-        if (storedDate !== todayStr) {
-            const yesterday = new Date(today);
-            yesterday.setDate(yesterday.getDate() - 1);
-            const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth()+1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
-            
-            let newStreak = storedStreak;
-            if (storedDate === yesterdayStr) {
-                newStreak++;
-            } else {
-                newStreak = 1;
-            }
-            
-            localStorage.setItem('typemaster_streak', JSON.stringify({
-                lastPlayDate: todayStr,
-                streakDays: newStreak
-            }));
-            
-            this.streakDays = newStreak;
+        if (isNewStreakDay) {
             this.streakText.setText('🔥 ' + this.streakDays + ' ngày');
             this.streakText.setVisible(true);
             
@@ -577,5 +442,31 @@ export class PlayScene extends Phaser.Scene {
                 });
             }
         }
+    }
+
+    _updateProgressBar() {
+        const current = this.currentLessonIndex + 1;
+        const total = this.data.lessons.length;
+        
+        this.progressText.setText(`Bài ${current}/${total}`);
+        this.scoreText.setText(`🍌 Chuối: ${this.score}`);
+
+        const barWidth = 200;
+        const barHeight = 10;
+        const x = 20;
+        const y = 52;
+
+        this.progressBarBg.clear();
+        this.progressBarBg.fillStyle(0x334155, 0.8);
+        this.progressBarBg.fillRoundedRect(x, y, barWidth, barHeight, 5);
+        this.progressBarBg.lineStyle(1.5, 0x475569, 1);
+        this.progressBarBg.strokeRoundedRect(x, y, barWidth, barHeight, 5);
+
+        const progressPercent = current / total;
+        const fillWidth = barWidth * progressPercent;
+
+        this.progressBarFill.clear();
+        this.progressBarFill.fillStyle(0x10B981, 1);
+        this.progressBarFill.fillRoundedRect(x, y, fillWidth, barHeight, 5);
     }
 }

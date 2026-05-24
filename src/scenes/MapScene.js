@@ -1,6 +1,5 @@
 import * as Phaser from 'phaser';
-
-const SAVE_KEY = 'typemaster_progress';
+import { ProgressManager } from '../utils/ProgressManager';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -15,23 +14,18 @@ export class MapScene extends Phaser.Scene {
     _loadProgress() {
         this.completedLessonsCount = 0;
         this.totalStarsCount = 0;
-        this.lessonStars = {};
         
-        try {
-            const saved = JSON.parse(localStorage.getItem(SAVE_KEY));
-            if (saved) {
-                this.lessonStars = saved.lessonStars || {};
-                
-                // Count completed lessons and total stars
-                for (const key in this.lessonStars) {
-                    const stars = this.lessonStars[key] || 0;
-                    if (stars > 0) {
-                        this.completedLessonsCount++;
-                        this.totalStarsCount += stars;
-                    }
-                }
+        const progress = ProgressManager.loadProgress(this.data.lessons.length);
+        this.lessonStars = progress.lessonStars || {};
+        
+        // Count completed lessons and total stars
+        for (const key in this.lessonStars) {
+            const stars = this.lessonStars[key] || 0;
+            if (stars > 0) {
+                this.completedLessonsCount++;
+                this.totalStarsCount += stars;
             }
-        } catch (_) {}
+        }
     }
 
     create() {
