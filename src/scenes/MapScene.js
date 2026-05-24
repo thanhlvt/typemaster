@@ -1,5 +1,7 @@
 import * as Phaser from 'phaser';
 import { ProgressManager } from '../utils/ProgressManager';
+import { AchievementsOverlay } from '../components/AchievementsOverlay';
+import { ACHIEVEMENTS } from '../utils/AchievementManager';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -16,7 +18,13 @@ export class MapScene extends Phaser.Scene {
         this.totalStarsCount = 0;
         
         const progress = ProgressManager.loadProgress(this.data.lessons.length);
-        this.lessonStars = progress.lessonStars || {};
+        this.lessonStars = {};
+        if (progress.lessonStats) {
+            for (const key in progress.lessonStats) {
+                this.lessonStars[key] = progress.lessonStats[key].stars || 0;
+            }
+        }
+        this.unlockedAchievements = progress.unlockedAchievements || [];
         
         // Count completed lessons and total stars
         for (const key in this.lessonStars) {
@@ -25,6 +33,13 @@ export class MapScene extends Phaser.Scene {
                 this.completedLessonsCount++;
                 this.totalStarsCount += stars;
             }
+        }
+
+        // Update achievement button text if it exists
+        if (this.achText) {
+            const unlockedCount = this.unlockedAchievements.length;
+            const totalBadges = ACHIEVEMENTS.length;
+            this.achText.setText(`🏆 Huy hiệu (${unlockedCount}/${totalBadges})`);
         }
     }
 
@@ -256,5 +271,40 @@ export class MapScene extends Phaser.Scene {
             fontStyle: 'bold',
             fill: '#38BDF8'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        // Achievement Button at top-right (wider to fit the count)
+        const btnW = 160, btnH = 36;
+        const btnX = width - btnW / 2 - 20; // 1024 - 80 - 20 = 924
+        const btnY = 40;
+
+        const achBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawAchBg = (color) => {
+            achBg.clear();
+            achBg.fillStyle(color, 0.85);
+            achBg.fillRoundedRect(btnX - btnW / 2, btnY - btnH / 2, btnW, btnH, 18);
+            achBg.lineStyle(1.5, 0xffffff, 0.2);
+            achBg.strokeRoundedRect(btnX - btnW / 2, btnY - btnH / 2, btnW, btnH, 18);
+        };
+        drawAchBg(0xD97706); // Gold
+
+        const unlockedCount = this.unlockedAchievements.length;
+        const totalBadges = ACHIEVEMENTS.length;
+        this.achText = this.add.text(btnX, btnY, `🏆 Huy hiệu (${unlockedCount}/${totalBadges})`, {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        const achZone = this.add.zone(btnX, btnY, btnW, btnH)
+            .setScrollFactor(0)
+            .setInteractive({ useHandCursor: true });
+        achZone.setDepth(11);
+
+        achZone.on('pointerover', () => drawAchBg(0xF59E0B));
+        achZone.on('pointerout', () => drawAchBg(0xD97706));
+        achZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            new AchievementsOverlay(this, this.unlockedAchievements, () => {
+                this._loadProgress();
+            });
+        });
     }
 }

@@ -4,7 +4,9 @@ export class ProgressManager {
     static loadProgress(totalLessons) {
         let lessonIndex = 0;
         let score = 0;
-        let lessonStars = {};
+        let lessonStats = {};
+        let unlockedAchievements = [];
+        let consecutivePerfects = 0;
         let streakDays = 0;
 
         try {
@@ -12,7 +14,22 @@ export class ProgressManager {
             if (saved) {
                 lessonIndex = Math.min(saved.lessonIndex || 0, totalLessons - 1);
                 score = saved.score || 0;
-                lessonStars = saved.lessonStars || {};
+                unlockedAchievements = saved.unlockedAchievements || [];
+                consecutivePerfects = saved.consecutivePerfects || 0;
+
+                // Handle migration from old lessonStars to new lessonStats
+                if (saved.lessonStats) {
+                    lessonStats = saved.lessonStats;
+                } else if (saved.lessonStars) {
+                    const oldStars = saved.lessonStars;
+                    for (const key in oldStars) {
+                        lessonStats[key] = {
+                            stars: oldStars[key],
+                            wpm: 0,
+                            accuracy: 0
+                        };
+                    }
+                }
             }
         } catch (_) { }
 
@@ -41,14 +58,16 @@ export class ProgressManager {
             }
         } catch (_) { }
 
-        return { lessonIndex, score, lessonStars, streakDays };
+        return { lessonIndex, score, lessonStats, unlockedAchievements, consecutivePerfects, streakDays };
     }
 
-    static saveProgress(lessonIndex, score, lessonStars) {
+    static saveProgress(lessonIndex, score, lessonStats, unlockedAchievements = [], consecutivePerfects = 0) {
         localStorage.setItem(SAVE_KEY, JSON.stringify({
             lessonIndex,
             score,
-            lessonStars
+            lessonStats,
+            unlockedAchievements,
+            consecutivePerfects
         }));
     }
 

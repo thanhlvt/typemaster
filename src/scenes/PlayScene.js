@@ -5,6 +5,8 @@ import { ConfirmDialog } from '../components/ConfirmDialog';
 import { ResultOverlay } from '../components/ResultOverlay';
 import { ProgressManager } from '../utils/ProgressManager';
 import { TypingValidator } from '../utils/TypingValidator';
+import { AchievementManager } from '../utils/AchievementManager';
+import { AchievementToast } from '../components/AchievementToast';
 
 export class PlayScene extends Phaser.Scene {
     constructor() {
@@ -21,7 +23,9 @@ export class PlayScene extends Phaser.Scene {
         const progress = ProgressManager.loadProgress(this.data.lessons.length);
         this.currentLessonIndex = progress.lessonIndex;
         this.score = progress.score;
-        this.lessonStars = progress.lessonStars;
+        this.lessonStats = progress.lessonStats || {};
+        this.unlockedAchievements = progress.unlockedAchievements || [];
+        this.consecutivePerfects = progress.consecutivePerfects || 0;
         this.streakDays = progress.streakDays;
 
         if (data && data.lessonIndex !== undefined) {
@@ -100,7 +104,9 @@ export class PlayScene extends Phaser.Scene {
         this.currentWordIndex = 0;
         this.score = 0;
         this.streakDays = 0;
-        this.lessonStars = {};
+        this.lessonStats = {};
+        this.unlockedAchievements = [];
+        this.consecutivePerfects = 0;
         if (this.streakText) {
             this.streakText.setText('🔥 0 ngày');
             this.streakText.setVisible(false);
@@ -347,13 +353,56 @@ export class PlayScene extends Phaser.Scene {
         const wpm = Math.round((total / 5) / durationMin) || 0;
         const isLastLesson = this.currentLessonIndex === this.data.lessons.length - 1;
 
-        // Calculate and update stars
+        // Calculate and update stars/stats
         const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
-        const oldStars = this.lessonStars[this.currentLessonIndex] || 0;
-        if (stars > oldStars) {
-            this.lessonStars[this.currentLessonIndex] = stars;
+        const oldStats = this.lessonStats[this.currentLessonIndex] || { stars: 0, wpm: 0, accuracy: 0 };
+        
+        // Update lesson stats preserving personal bests
+        this.lessonStats[this.currentLessonIndex] = {
+            stars: Math.max(oldStats.stars || 0, stars),
+            wpm: Math.max(oldStats.wpm || 0, wpm),
+            accuracy: Math.max(oldStats.accuracy || 0, accuracy)
+        };
+
+        // Update consecutive perfects
+        if (accuracy === 100) {
+            this.consecutivePerfects++;
+        } else {
+            this.consecutivePerfects = 0;
         }
-        ProgressManager.saveProgress(this.currentLessonIndex, this.score, this.lessonStars);
+
+        // Verify and trigger new achievements
+        const sessionData = {
+            lessonIndex: this.currentLessonIndex,
+            stars: stars,
+            wpm: wpm,
+            accuracy: accuracy,
+            totalKeys: total,
+            timeOfCompletion: new Date()
+        };
+        const progress = {
+            lessonStats: this.lessonStats,
+            unlockedAchievements: this.unlockedAchievements,
+            consecutivePerfects: this.consecutivePerfects,
+            streakDays: this.streakDays,
+            score: this.score
+        };
+
+        const newlyUnlocked = AchievementManager.checkAchievements(sessionData, progress, oldStats);
+        if (newlyUnlocked.length > 0) {
+            this.unlockedAchievements.push(...newlyUnlocked);
+            newlyUnlocked.forEach(id => {
+                AchievementToast.show(this, id);
+            });
+        }
+
+        ProgressManager.saveProgress(
+            this.currentLessonIndex,
+            this.score,
+            this.lessonStats,
+            this.unlockedAchievements,
+            this.consecutivePerfects
+        );
 
         const handleCleanUpListeners = () => {
             this.input.keyboard.off('keyup-SPACE', handleContinue);
@@ -368,7 +417,13 @@ export class PlayScene extends Phaser.Scene {
                 this._checkAndUpdateStreak();
                 this.input.keyboard.on('keydown', this.handleKeyDown, this);
                 this.currentLessonIndex++;
-                ProgressManager.saveProgress(this.currentLessonIndex, this.score, this.lessonStars);
+                ProgressManager.saveProgress(
+                    this.currentLessonIndex,
+                    this.score,
+                    this.lessonStats,
+                    this.unlockedAchievements,
+                    this.consecutivePerfects
+                );
                 this.startLesson();
             }
         };
