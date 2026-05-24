@@ -1,71 +1,186 @@
 import * as Phaser from 'phaser';
 
 export class ResultOverlay extends Phaser.GameObjects.Container {
-    constructor(scene, accuracy, wpm, isLastLesson, onAdvance) {
+    constructor(scene, accuracy, wpm, isLastLesson, onBackToMap) {
         const { width, height } = scene.scale;
         super(scene, 0, 0);
         this.scene = scene;
 
+        // Dark background overlay
         const overlay = scene.add.rectangle(0, 0, width, height, 0x000000, 0.8)
             .setOrigin(0).setInteractive();
         this.add(overlay);
 
         const container = scene.add.container(width / 2, height / 2 - 40);
 
-        // Stars background/shine
+        // Stars background/shine glow
         const shine = scene.add.graphics();
-        shine.fillStyle(0xFFC107, 0.1);
+        shine.fillStyle(0xFFC107, 0.08);
         shine.fillCircle(0, -60, 150);
         container.add(shine);
 
-        const title = scene.add.text(0, -110, 'XUẤT SẮC!', {
+        const title = scene.add.text(0, -135, 'XUẤT SẮC!', {
             fontFamily: 'Outfit, Arial', fontSize: '56px', fontStyle: 'bold', fill: '#FFC107'
         }).setOrigin(0.5).setAlpha(0).setScale(0.5);
 
+        // Draw animated stars
+        const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
+        const starCoords = [
+            { x: -65, y: -60, rOut: 24, rIn: 10 },  // Left star
+            { x: 0,   y: -80, rOut: 32, rIn: 13 },  // Middle star (larger & slightly higher)
+            { x: 65,  y: -60, rOut: 24, rIn: 10 }   // Right star
+        ];
+
+        // Draw 3 grey outline background stars
+        const starsBg = scene.add.graphics();
+        container.add(starsBg);
+        starCoords.forEach(coord => {
+            this.drawStar(starsBg, coord.x, coord.y, 5, coord.rOut, coord.rIn, 0x444444, 0x222222);
+        });
+
+        // Add and animate active gold stars
+        for (let i = 0; i < stars; i++) {
+            const coord = starCoords[i];
+            const goldStar = scene.add.graphics();
+            goldStar.x = coord.x;
+            goldStar.y = coord.y;
+            goldStar.setScale(0); // Starts at scale 0
+            
+            // Draw star centered at 0,0 inside its graphics context
+            this.drawStar(goldStar, 0, 0, 5, coord.rOut, coord.rIn, 0xFFC107, 0xFF8F00);
+            container.add(goldStar);
+
+            // Pop-in tween with elastic bounce
+            scene.tweens.add({
+                targets: goldStar,
+                scaleX: 1,
+                scaleY: 1,
+                duration: 400,
+                delay: 200 + i * 200,
+                ease: 'Back.easeOut'
+            });
+        }
+
+        // Stats Box
         const statsBg = scene.add.graphics();
-        statsBg.fillStyle(0x333333, 1);
-        statsBg.fillRoundedRect(-150, -40, 300, 120, 15);
+        statsBg.fillStyle(0x1e293b, 1); // Slate 800
+        statsBg.fillRoundedRect(-150, -10, 300, 110, 15);
         statsBg.lineStyle(2, 0xffffff, 0.1);
-        statsBg.strokeRoundedRect(-150, -40, 300, 120, 15);
+        statsBg.strokeRoundedRect(-150, -10, 300, 110, 15);
         statsBg.setAlpha(0);
 
-        const accText = scene.add.text(-80, 20, `Chính xác\n${accuracy}%`, {
-            fontFamily: 'Arial', fontSize: '20px', align: 'center', fill: '#ffffff'
+        const accText = scene.add.text(-80, 45, `Chính xác\n${accuracy}%`, {
+            fontFamily: 'Arial', fontSize: '20px', align: 'center', fill: '#ffffff', fontStyle: 'bold'
         }).setOrigin(0.5).setAlpha(0);
 
-        const wpmText = scene.add.text(80, 20, `Tốc độ\n${wpm} WPM`, {
-            fontFamily: 'Arial', fontSize: '20px', align: 'center', fill: '#ffffff'
+        const wpmText = scene.add.text(80, 45, `Tốc độ\n${wpm} WPM`, {
+            fontFamily: 'Arial', fontSize: '20px', align: 'center', fill: '#ffffff', fontStyle: 'bold'
         }).setOrigin(0.5).setAlpha(0);
 
-        const promptStr = isLastLesson ? 'Chúc mừng! Bạn đã hoàn thành.' : 'Nhấn SPACE để tiếp tục';
-        const btnText = scene.add.text(0, 155, promptStr, {
-            fontFamily: 'Arial', fontSize: '28px', fontStyle: 'bold', fill: '#FFFFFF'
+        container.add([statsBg, accText, wpmText, title]);
+
+        // Layout Buttons
+        if (isLastLesson) {
+            // Only Map button (full width)
+            const mapBtnBg = scene.add.graphics();
+            const drawMapBg = (color) => {
+                mapBtnBg.clear();
+                mapBtnBg.fillStyle(color, 1);
+                mapBtnBg.fillRoundedRect(-170, 130, 340, 50, 25);
+                mapBtnBg.lineStyle(3, 0xffffff, 0.3);
+                mapBtnBg.strokeRoundedRect(-170, 130, 340, 50, 25);
+            };
+            drawMapBg(0x1565C0);
+            mapBtnBg.setAlpha(0);
+
+            const mapBtnText = scene.add.text(0, 155, '🗺️ Quay lại Bản đồ', {
+                fontFamily: 'Arial', fontSize: '22px', fontStyle: 'bold', fill: '#FFFFFF'
+            }).setOrigin(0.5).setAlpha(0);
+            mapBtnText.setShadow(0, 2, '#000000', 4, true, true);
+
+            container.add([mapBtnBg, mapBtnText]);
+
+            const mapZone = scene.add.zone(0, 155, 340, 50).setInteractive({ useHandCursor: true });
+            container.add(mapZone);
+
+            mapZone.on('pointerover', () => drawMapBg(0x1E88E5));
+            mapZone.on('pointerout', () => drawMapBg(0x1565C0));
+            mapZone.on('pointerdown', () => {
+                this.destroy();
+                if (onBackToMap) onBackToMap();
+            });
+
+            scene.tweens.add({ targets: [mapBtnBg, mapBtnText], alpha: 1, duration: 300, delay: 850 });
+        } else {
+            // Map button (left)
+            const mapBtnBg = scene.add.graphics();
+            const drawMapBg = (color) => {
+                mapBtnBg.clear();
+                mapBtnBg.fillStyle(color, 1);
+                mapBtnBg.fillRoundedRect(-180, 130, 160, 50, 25);
+                mapBtnBg.lineStyle(2, 0xffffff, 0.2);
+                mapBtnBg.strokeRoundedRect(-180, 130, 160, 50, 25);
+            };
+            drawMapBg(0x1565C0);
+            mapBtnBg.setAlpha(0);
+
+            const mapBtnText = scene.add.text(-100, 155, '🗺️ Bản đồ', {
+                fontFamily: 'Arial', fontSize: '20px', fontStyle: 'bold', fill: '#FFFFFF'
+            }).setOrigin(0.5).setAlpha(0);
+            mapBtnText.setShadow(0, 2, '#000000', 4, true, true);
+
+            // Continue button (right)
+            const contBtnBg = scene.add.graphics();
+            const drawContBg = (color) => {
+                contBtnBg.clear();
+                contBtnBg.fillStyle(color, 1);
+                contBtnBg.fillRoundedRect(20, 130, 160, 50, 25);
+                contBtnBg.lineStyle(2, 0xffffff, 0.2);
+                contBtnBg.strokeRoundedRect(20, 130, 160, 50, 25);
+            };
+            drawContBg(0x4CAF50);
+            contBtnBg.setAlpha(0);
+
+            const contBtnText = scene.add.text(100, 155, 'Tiếp tục ➔', {
+                fontFamily: 'Arial', fontSize: '20px', fontStyle: 'bold', fill: '#FFFFFF'
+            }).setOrigin(0.5).setAlpha(0);
+            contBtnText.setShadow(0, 2, '#000000', 4, true, true);
+
+            container.add([mapBtnBg, mapBtnText, contBtnBg, contBtnText]);
+
+            const mapZone = scene.add.zone(-100, 155, 160, 50).setInteractive({ useHandCursor: true });
+            const contZone = scene.add.zone(100, 155, 160, 50).setInteractive({ useHandCursor: true });
+            container.add([mapZone, contZone]);
+
+            mapZone.on('pointerover', () => drawMapBg(0x1E88E5));
+            mapZone.on('pointerout', () => drawMapBg(0x1565C0));
+            mapZone.on('pointerdown', () => {
+                this.destroy();
+                if (onBackToMap) onBackToMap();
+            });
+
+            contZone.on('pointerover', () => drawContBg(0x66BB6A));
+            contZone.on('pointerout', () => drawContBg(0x4CAF50));
+            contZone.on('pointerdown', () => {
+                this.emit('continue');
+            });
+
+            scene.tweens.add({ targets: [mapBtnBg, mapBtnText, contBtnBg, contBtnText], alpha: 1, duration: 300, delay: 850 });
+        }
+
+        // Shortcut hint text at the bottom
+        const hintStr = isLastLesson ? 'Phím tắt: [Esc] Bản đồ' : 'Phím tắt: [Space/Enter] Tiếp tục  •  [Esc] Bản đồ';
+        const shortcutHintText = scene.add.text(0, 205, hintStr, {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#94A3B8'
         }).setOrigin(0.5).setAlpha(0);
-        btnText.setShadow(0, 2, '#000000', 4, true, true);
+        container.add(shortcutHintText);
 
-        const btnBg = scene.add.graphics();
-        btnBg.fillStyle(0x4CAF50, 1);
-        btnBg.fillRoundedRect(-170, 130, 340, 50, 25);
-        btnBg.lineStyle(3, 0xffffff, 0.3);
-        btnBg.strokeRoundedRect(-170, 130, 340, 50, 25);
-        btnBg.setAlpha(0);
-
-        container.add([statsBg, accText, wpmText, title, btnBg, btnText]);
         this.add(container);
 
-        // Animations
+        // Animations for title and stats
         scene.tweens.add({ targets: title, alpha: 1, scale: 1, duration: 600, ease: 'Back.Out' });
         scene.tweens.add({ targets: [statsBg, accText, wpmText], alpha: 1, y: '+=15', duration: 500, delay: 300, ease: 'Power2' });
-        scene.tweens.add({ targets: [accText, wpmText], alpha: 1, duration: 400, delay: 600 });
-        scene.tweens.add({ targets: [btnBg, btnText], alpha: 1, duration: 300, delay: 850 });
-
-        scene.time.delayedCall(1150, () => {
-            scene.tweens.add({
-                targets: [btnText, btnBg],
-                scaleX: 1.05, scaleY: 1.05,
-                duration: 600, yoyo: true, repeat: -1, ease: 'Sine.InOut'
-            });
-        });
+        scene.tweens.add({ targets: shortcutHintText, alpha: 1, duration: 300, delay: 850 });
 
         // Monkey jump animation if scene has it
         if (scene.monkey) {
@@ -81,7 +196,6 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         }
 
         // Banana rain
-        const lessonBananas = [];
         for (let i = 0; i < 10; i++) {
             scene.time.delayedCall(i * 130, () => {
                 const b = scene.add.image(
@@ -89,8 +203,7 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
                 ).setScale(Phaser.Math.FloatBetween(0.2, 0.4))
                     .setAngle(Phaser.Math.Between(-45, 45));
 
-                lessonBananas.push(b);
-                this.add(b); // Add to overlay container so it's cleaned up
+                this.add(b);
 
                 scene.tweens.add({
                     targets: b,
@@ -106,5 +219,33 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         }
 
         scene.add.existing(this);
+    }
+
+    drawStar(graphics, x, y, points, outerRadius, innerRadius, fillColor, strokeColor) {
+        graphics.fillStyle(fillColor, 1);
+        graphics.lineStyle(2, strokeColor, 1);
+        
+        let rot = Math.PI / 2 * 3;
+        let cx = x;
+        let cy = y;
+        let step = Math.PI / points;
+
+        graphics.beginPath();
+        graphics.moveTo(cx, cy - outerRadius);
+        for (let i = 0; i < points; i++) {
+            cx = x + Math.cos(rot) * outerRadius;
+            cy = y + Math.sin(rot) * outerRadius;
+            graphics.lineTo(cx, cy);
+            rot += step;
+
+            cx = x + Math.cos(rot) * innerRadius;
+            cy = y + Math.sin(rot) * innerRadius;
+            graphics.lineTo(cx, cy);
+            rot += step;
+        }
+        graphics.lineTo(x, y - outerRadius);
+        graphics.closePath();
+        graphics.fillPath();
+        graphics.strokePath();
     }
 }

@@ -91,7 +91,7 @@ export class BootScene extends Phaser.Scene {
             progressBar.destroy();
             progressBox.destroy();
             loadingText.destroy();
-            this.scene.start('PlayScene');
+            this.scene.start('MapScene');
         });
     }
 }

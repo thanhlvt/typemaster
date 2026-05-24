@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser';
 console.log('Phaser imported:', Phaser.VERSION);
 import { BootScene } from './scenes/BootScene';
+import { MapScene } from './scenes/MapScene';
 import { PlayScene } from './scenes/PlayScene';
 
 const config = {
@@ -20,7 +21,7 @@ const config = {
             debug: false
         }
     },
-    scene: [BootScene, PlayScene]
+    scene: [BootScene, MapScene, PlayScene]
 };
 
 console.log('Script main.js is running');

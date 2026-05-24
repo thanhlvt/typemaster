@@ -11,13 +11,16 @@ export class PlayScene extends Phaser.Scene {
         super('PlayScene');
     }
 
-    init() {
+    init(data) {
         this.data = this.cache.json.get('gameData');
         this.currentLessonIndex = 0;
         this.currentWordIndex = 0;
         this.telexEngine = new TelexEngine(this.data.telex_rules);
         this.score = 0;
         this._loadProgress();
+        if (data && data.lessonIndex !== undefined) {
+            this.currentLessonIndex = data.lessonIndex;
+        }
     }
 
     create() {
@@ -56,6 +59,7 @@ export class PlayScene extends Phaser.Scene {
         }
 
         this._createResetButton(width);
+        this._createMapButton(width);
         this.startLesson();
 
         // AudioContext resume on interaction
@@ -73,11 +77,13 @@ export class PlayScene extends Phaser.Scene {
     // ── Progress ───────────────────────────────────────────────────
 
     _loadProgress() {
+        this.lessonStars = {};
         try {
             const saved = JSON.parse(localStorage.getItem(SAVE_KEY));
             if (saved) {
                 this.currentLessonIndex = Math.min(saved.lessonIndex || 0, this.data.lessons.length - 1);
                 this.score = saved.score || 0;
+                this.lessonStars = saved.lessonStars || {};
             }
         } catch (_) { }
 
@@ -111,7 +117,8 @@ export class PlayScene extends Phaser.Scene {
     _saveProgress() {
         localStorage.setItem(SAVE_KEY, JSON.stringify({
             lessonIndex: this.currentLessonIndex,
-            score: this.score
+            score: this.score,
+            lessonStars: this.lessonStars
         }));
     }
 
@@ -123,6 +130,7 @@ export class PlayScene extends Phaser.Scene {
         this.score = 0;
         this.scoreText.setText('Chuối: 0');
         this.streakDays = 0;
+        this.lessonStars = {};
         if (this.streakText) {
             this.streakText.setText('🔥 0 ngày');
             this.streakText.setVisible(false);
@@ -132,7 +140,7 @@ export class PlayScene extends Phaser.Scene {
         this.startLesson();
     }
 
-    // ── Reset button ───────────────────────────────────────────────
+    // ── Reset & Map buttons ────────────────────────────────────────
 
     _createResetButton(width) {
         const btnW = 94, btnH = 36;
@@ -155,6 +163,34 @@ export class PlayScene extends Phaser.Scene {
         zone.on('pointerover', () => drawBg(0xC62828));
         zone.on('pointerout', () => drawBg(0x8B0000));
         zone.on('pointerdown', () => this.showResetConfirm());
+    }
+
+    _createMapButton(width) {
+        const btnW = 94, btnH = 36;
+        const x = width - btnW - 16 - btnW / 2; // width - 94 - 16 - 47 = width - 157
+        const y = 24;
+
+        const bg = this.add.graphics();
+        const drawBg = (color) => {
+            bg.clear();
+            bg.fillStyle(color, 0.85);
+            bg.fillRoundedRect(x - btnW / 2, y - btnH / 2, btnW, btnH, 18);
+            bg.lineStyle(1.5, 0xffffff, 0.2);
+            bg.strokeRoundedRect(x - btnW / 2, y - btnH / 2, btnW, btnH, 18);
+        };
+        drawBg(0x1565C0); // Dark Blue
+
+        this.add.text(x, y, '🗺️  Bản đồ', {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5);
+
+        const zone = this.add.zone(x, y, btnW, btnH).setInteractive({ useHandCursor: true });
+        zone.on('pointerover', () => drawBg(0x1E88E5));
+        zone.on('pointerout', () => drawBg(0x1565C0));
+        zone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            this.scene.start('MapScene');
+        });
     }
 
     showResetConfirm() {
@@ -432,10 +468,23 @@ export class PlayScene extends Phaser.Scene {
         const wpm = Math.round((total / 5) / durationMin) || 0;
         const isLastLesson = this.currentLessonIndex === this.data.lessons.length - 1;
 
-        const overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson);
+        // Calculate and update stars
+        const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
+        const oldStars = this.lessonStars[this.currentLessonIndex] || 0;
+        if (stars > oldStars) {
+            this.lessonStars[this.currentLessonIndex] = stars;
+        }
+        this._saveProgress();
 
-        this.input.keyboard.once('keyup-SPACE', () => {
+        const handleCleanUpListeners = () => {
+            this.input.keyboard.off('keyup-SPACE', handleContinue);
+            this.input.keyboard.off('keyup-ENTER', handleContinue);
+            this.input.keyboard.off('keyup-ESC', handleBackToMap);
+        };
+
+        const handleContinue = () => {
             if (!isLastLesson) {
+                handleCleanUpListeners();
                 overlay.destroy();
                 this._checkAndUpdateStreak();
                 this.input.keyboard.on('keydown', this.handleKeyDown, this);
@@ -443,6 +492,24 @@ export class PlayScene extends Phaser.Scene {
                 this._saveProgress();
                 this.startLesson();
             }
+        };
+
+        const handleBackToMap = () => {
+            handleCleanUpListeners();
+            overlay.destroy();
+            this._checkAndUpdateStreak();
+            this.scene.start('MapScene');
+        };
+
+        const overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson, handleBackToMap);
+
+        this.input.keyboard.once('keyup-SPACE', handleContinue);
+        this.input.keyboard.once('keyup-ENTER', handleContinue);
+        this.input.keyboard.once('keyup-ESC', handleBackToMap);
+
+        overlay.on('continue', () => {
+            handleCleanUpListeners();
+            handleContinue();
         });
     }
 
