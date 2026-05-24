@@ -4,6 +4,7 @@ import { AchievementsOverlay } from '../components/AchievementsOverlay';
 import { ACHIEVEMENTS } from '../utils/AchievementManager';
 import { StatsOverlay } from '../components/StatsOverlay';
 import { SkinsOverlay } from '../components/SkinsOverlay';
+import { OptionsOverlay } from '../components/OptionsOverlay';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -15,6 +16,11 @@ export class MapScene extends Phaser.Scene {
         this.bg = null;
         this.data = this.cache.json.get('gameData');
         this._loadProgress();
+
+        // Apply audio settings
+        const audioSettings = ProgressManager.getAudioSettings();
+        this.sound.mute = audioSettings.mute;
+        this.sound.volume = audioSettings.volume;
     }
 
     _loadProgress() {
@@ -616,6 +622,35 @@ export class MapScene extends Phaser.Scene {
                 this._loadProgress();
                 this._applyBackground(); // Re-apply equipped background
             });
+        });
+
+        // Options Button to the left of Skin Button
+        const optBtnW = 120, optBtnH = 36;
+        const optBtnX = skinBtnX - skinBtnW / 2 - optBtnW / 2 - 15;
+        const optBtnBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawOptBtnBg = (color) => {
+            optBtnBg.clear();
+            optBtnBg.fillStyle(color, 0.85);
+            optBtnBg.fillRoundedRect(optBtnX - optBtnW / 2, btnY - btnH / 2, optBtnW, btnH, 18);
+            optBtnBg.lineStyle(1.5, 0xffffff, 0.2);
+            optBtnBg.strokeRoundedRect(optBtnX - optBtnW / 2, btnY - btnH / 2, optBtnW, btnH, 18);
+        };
+        drawOptBtnBg(0x4F46E5); // Indigo
+
+        const optText = this.add.text(optBtnX, btnY, '⚙️ Cài đặt', {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        const optZone = this.add.zone(optBtnX, btnY, optBtnW, optBtnH)
+            .setScrollFactor(0)
+            .setInteractive({ useHandCursor: true });
+        optZone.setDepth(11);
+
+        optZone.on('pointerover', () => drawOptBtnBg(0x6366F1));
+        optZone.on('pointerout', () => drawOptBtnBg(0x4F46E5));
+        optZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            new OptionsOverlay(this);
         });
     }
 

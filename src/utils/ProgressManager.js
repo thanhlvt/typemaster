@@ -104,6 +104,20 @@ export class ProgressManager {
         } catch (_) {}
     }
 
+    static getAudioSettings() {
+        try {
+            return JSON.parse(localStorage.getItem('typemaster_audio_settings')) || { mute: false, volume: 1.0 };
+        } catch (_) {
+            return { mute: false, volume: 1.0 };
+        }
+    }
+
+    static saveAudioSettings(settings) {
+        try {
+            localStorage.setItem('typemaster_audio_settings', JSON.stringify(settings));
+        } catch (_) {}
+    }
+
     static clearAll() {
         localStorage.clear();
     }
