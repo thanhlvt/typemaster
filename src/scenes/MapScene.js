@@ -5,6 +5,7 @@ import { ACHIEVEMENTS } from '../utils/AchievementManager';
 import { StatsOverlay } from '../components/StatsOverlay';
 import { SkinsOverlay } from '../components/SkinsOverlay';
 import { OptionsOverlay } from '../components/OptionsOverlay';
+import { ConfirmDialog } from '../components/ConfirmDialog';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -29,6 +30,7 @@ export class MapScene extends Phaser.Scene {
         const progress = ProgressManager.loadProgress(this.gameData.lessons.length);
         this.totalScoreCount      = progress.score || 0;
         this.lessonStars          = {};
+        this.lessonStats          = progress.lessonStats || {};
         this.unlockedAchievements = progress.unlockedAchievements || [];
         this.currentLessonIndex   = progress.lessonIndex || 0;
 
@@ -63,7 +65,7 @@ export class MapScene extends Phaser.Scene {
         const totalLessons = this.gameData.lessons.length;
         const columns      = 5;
         const rows         = Math.ceil(totalLessons / columns);
-        const startY       = 190;
+        const startY       = 195;
         const rowHeight    = 150;
         const colWidth     = 180;
         const gridWidth    = (columns - 1) * colWidth;
@@ -101,6 +103,10 @@ export class MapScene extends Phaser.Scene {
 
         // ── Header + auto-scroll ──────────────────────────────────
         this.createHeader(width);
+
+        // Block pointer events from reaching lesson buttons hidden beneath the fixed header
+        this.add.rectangle(0, 0, width, 138, 0x000000, 0)
+            .setOrigin(0).setScrollFactor(0).setDepth(9).setInteractive();
 
         const activeRow    = Math.floor(this.currentLessonIndex / columns);
         const targetActiveY = startY + activeRow * rowHeight;
@@ -144,6 +150,44 @@ export class MapScene extends Phaser.Scene {
         fabZone.on('pointerdown', () => {
             this.sound.play('key_sound');
             this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 500, ease: 'Cubic.easeOut' });
+        });
+
+        // ── FAB "Reset Data" ──────────────────────────────────────
+        const resetW = 80, resetH = 40;
+        const resetX = 20 + resetW / 2;
+        const resetY = height - resetH / 2 - 20;
+
+        const resetBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawResetBg = (color, strokeColor = 0xFCA5A5) => {
+            resetBg.clear();
+            resetBg.fillStyle(color, 0.9);
+            resetBg.fillRoundedRect(resetX - resetW / 2, resetY - resetH / 2, resetW, resetH, 20);
+            resetBg.lineStyle(2, strokeColor, 1);
+            resetBg.strokeRoundedRect(resetX - resetW / 2, resetY - resetH / 2, resetW, resetH, 20);
+        };
+        drawResetBg(0x7f1d1d); // dark red base
+
+        const resetText = this.add.text(resetX, resetY, '↺ Reset', {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FCA5A5'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        const resetZone = this.add.zone(resetX, resetY, resetW, resetH)
+            .setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+
+        resetZone.on('pointerover', () => {
+            drawResetBg(0x991b1b, 0xFEE2E2); // lighter red on hover
+            this.tweens.add({ targets: resetText, scaleX: 1.05, scaleY: 1.05, duration: 100 });
+        });
+        resetZone.on('pointerout', () => {
+            drawResetBg(0x7f1d1d, 0xFCA5A5);
+            this.tweens.add({ targets: resetText, scaleX: 1.0, scaleY: 1.0, duration: 100 });
+        });
+        resetZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            new ConfirmDialog(this, () => {
+                ProgressManager.clearAll();
+                this.scene.restart();
+            });
         });
 
         // ── Sidebar ───────────────────────────────────────────────
@@ -281,6 +325,20 @@ export class MapScene extends Phaser.Scene {
             isDraggingSidebar = false;
         });
 
+        // Create a global tooltip container
+        this.tooltip = this.add.container(0, 0).setDepth(100).setVisible(false);
+        const tooltipBg = this.add.graphics();
+        tooltipBg.fillStyle(0x0f172a, 0.95);
+        tooltipBg.fillRoundedRect(0, 0, 180, 55, 8);
+        tooltipBg.lineStyle(1.5, 0x38bdf8, 1);
+        tooltipBg.strokeRoundedRect(0, 0, 180, 55, 8);
+        this.tooltip.add(tooltipBg);
+        
+        this.tooltipText = this.add.text(10, 10, '', {
+            fontFamily: 'Arial', fontSize: '12px', fill: '#ffffff', lineSpacing: 4
+        });
+        this.tooltip.add(this.tooltipText);
+
         this.events.once('shutdown', () => {
             this.input.setDefaultCursor('default');
         });
@@ -319,8 +377,13 @@ export class MapScene extends Phaser.Scene {
             itemContainer.add(this.add.text(0, -20, `${index + 1}`, {
                 fontFamily: 'Outfit, Arial', fontSize: '32px', fontStyle: 'bold', fill: '#FFFFFF'
             }).setOrigin(0.5));
-            itemContainer.add(this.add.text(0, 10, 'Bài học', {
-                fontFamily: 'Arial', fontSize: '14px', fill: '#93C5FD'
+
+            const stats = this.lessonStats[index] || { stars: 0, wpm: 0, accuracy: 0, timestamp: null };
+            const bestWpm = stats.wpm || 0;
+            const wpmStr = bestWpm > 0 ? `${bestWpm} WPM` : '-- WPM';
+
+            itemContainer.add(this.add.text(0, 10, wpmStr, {
+                fontFamily: 'Arial', fontSize: '14px', fill: '#93C5FD', fontStyle: 'bold'
             }).setOrigin(0.5));
 
             const starStr = stars === 3 ? '⭐⭐⭐' : stars === 2 ? '⭐⭐☆' : stars === 1 ? '⭐☆☆' : '☆☆☆';
@@ -335,11 +398,28 @@ export class MapScene extends Phaser.Scene {
                 itemContainer.setDepth(2);
                 this.tweens.add({ targets: itemContainer, scaleX: 1.1, scaleY: 1.1, duration: 100, ease: 'Power1' });
                 drawBg(mainColor, 0xFBBF24, 3, 0.95);
+
+                // Position and show tooltip
+                if (this.tooltip && this.tooltipText) {
+                    this.tooltip.setPosition(x - 90, y - 115);
+                    const bestAcc = stats.accuracy || 0;
+                    let dateStr = 'N/A';
+                    if (stats.timestamp) {
+                        const date = new Date(stats.timestamp);
+                        dateStr = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+                    }
+                    this.tooltipText.setText(`Chính xác tốt: ${bestAcc}%\nGần nhất: ${dateStr}`);
+                    this.tooltip.setVisible(true);
+                }
             });
             zone.on('pointerout', () => {
                 itemContainer.setDepth(1);
                 this.tweens.add({ targets: itemContainer, scaleX: 1.0, scaleY: 1.0, duration: 100, ease: 'Power1' });
                 drawBg(mainColor, borderCol, 2, 0.9);
+
+                if (this.tooltip) {
+                    this.tooltip.setVisible(false);
+                }
             });
             zone.on('pointerdown', () => {
                 this.tweens.add({ targets: itemContainer, scaleX: 0.95, scaleY: 0.95, duration: 50 });
@@ -361,34 +441,90 @@ export class MapScene extends Phaser.Scene {
     createHeader(width) {
         const headerBg = this.add.graphics().setScrollFactor(0).setDepth(10);
         headerBg.fillStyle(0x0f172a, 0.95);
-        headerBg.fillRoundedRect(0, 0, width, 130, { tl: 0, tr: 0, bl: 20, br: 20 });
+        headerBg.fillRoundedRect(0, 0, width, 138, { tl: 0, tr: 0, bl: 20, br: 20 });
         headerBg.lineStyle(3, 0xFBBF24, 1);
         headerBg.beginPath();
-        headerBg.moveTo(0, 130);
-        headerBg.lineTo(width, 130);
+        headerBg.moveTo(0, 138);
+        headerBg.lineTo(width, 138);
         headerBg.strokePath();
 
-        this.add.text(50, 40, 'BẢN ĐỒ BÀI HỌC', {
-            fontFamily: 'Outfit, Arial', fontSize: '36px', fontStyle: 'bold',
+        this.add.text(40, 40, 'BẢN ĐỒ BÀI HỌC', {
+            fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold',
             fill: '#FBBF24', stroke: '#000000', strokeThickness: 4
         }).setOrigin(0, 0.5).setScrollFactor(0).setDepth(10);
 
         const totalLessons = this.gameData.lessons.length;
         const progressStr  = `Tiến độ: ${this.completedLessonsCount}/${totalLessons} bài học  |  Tổng: ⭐ ${this.totalStarsCount}`;
-        this.add.text(50, 85, progressStr, {
+        this.add.text(40, 85, progressStr, {
             fontFamily: 'Arial', fontSize: '18px', fontStyle: 'bold', fill: '#38BDF8'
         }).setOrigin(0, 0.5).setScrollFactor(0).setDepth(10);
 
-        const btnH = 36, btnY = 40;
+        const btnH = 36, btnY = 40, btnY2 = 98;
 
         const optBtnW  = 36;
         const optBtnX  = width - optBtnW / 2 - 20;
-        const skinBtnW = 120;
+
+        const skinBtnW = 90;
         const skinBtnX = optBtnX - optBtnW / 2 - skinBtnW / 2 - 15;
-        const achBtnW  = 160;
+
+        const achBtnW  = 155;
         const achBtnX  = skinBtnX - skinBtnW / 2 - achBtnW / 2 - 15;
-        const statsBtnW = 140;
+
+        const statsBtnW = 120;
         const statsBtnX = achBtnX - achBtnW / 2 - statsBtnW / 2 - 15;
+
+        const dailyBtnW = 140;
+        const dailyBtnX = width - dailyBtnW / 2 - 20;
+
+        const sprintBtnW = 110;
+        const sprintBtnX = dailyBtnX - dailyBtnW / 2 - sprintBtnW / 2 - 15;
+
+        // Daily Challenge button
+        const dailyBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const progress = ProgressManager.loadProgress(totalLessons);
+        const todayStr = ProgressManager._toDateStr(new Date());
+        const isDailyCompleted = progress.dailyChallengeDate === todayStr;
+        const dailyBaseColor = isDailyCompleted ? 0x059669 : 0xEA580C;
+        const dailyHoverColor = isDailyCompleted ? 0x10B981 : 0xF97316;
+        const dailyTextStr = isDailyCompleted ? '📅 Thử thách ✓' : '📅 Thử thách 🔥';
+
+        const drawDailyBg = (color) => {
+            dailyBg.clear(); dailyBg.fillStyle(color, 0.85);
+            dailyBg.fillRoundedRect(dailyBtnX - dailyBtnW / 2, btnY2 - btnH / 2, dailyBtnW, btnH, 18);
+            dailyBg.lineStyle(1.5, 0xffffff, 0.2);
+            dailyBg.strokeRoundedRect(dailyBtnX - dailyBtnW / 2, btnY2 - btnH / 2, dailyBtnW, btnH, 18);
+        };
+        drawDailyBg(dailyBaseColor);
+        this.add.text(dailyBtnX, btnY2, dailyTextStr, {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+        const dailyZone = this.add.zone(dailyBtnX, btnY2, dailyBtnW, btnH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+        dailyZone.on('pointerover', () => drawDailyBg(dailyHoverColor));
+        dailyZone.on('pointerout',  () => drawDailyBg(dailyBaseColor));
+        dailyZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            this.scene.start('PlayScene', { isDailyChallenge: true });
+        });
+
+        // Sprint button
+        const sprintBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawSprintBg = (color) => {
+            sprintBg.clear(); sprintBg.fillStyle(color, 0.85);
+            sprintBg.fillRoundedRect(sprintBtnX - sprintBtnW / 2, btnY2 - btnH / 2, sprintBtnW, btnH, 18);
+            sprintBg.lineStyle(1.5, 0xffffff, 0.2);
+            sprintBg.strokeRoundedRect(sprintBtnX - sprintBtnW / 2, btnY2 - btnH / 2, sprintBtnW, btnH, 18);
+        };
+        drawSprintBg(0x7C3AED);
+        this.add.text(sprintBtnX, btnY2, '⚡ Sprint', {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+        const sprintZone = this.add.zone(sprintBtnX, btnY2, sprintBtnW, btnH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+        sprintZone.on('pointerover', () => drawSprintBg(0x8B5CF6));
+        sprintZone.on('pointerout',  () => drawSprintBg(0x7C3AED));
+        sprintZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            this.scene.start('SprintScene');
+        });
 
         // Achievement button
         const achBg = this.add.graphics().setScrollFactor(0).setDepth(10);

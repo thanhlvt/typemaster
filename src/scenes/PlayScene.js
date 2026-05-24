@@ -33,8 +33,14 @@ export class PlayScene extends Phaser.Scene {
         this.consecutivePerfects  = progress.consecutivePerfects  || 0;
         this.streakDays           = progress.streakDays;
 
-        if (data && data.lessonIndex !== undefined) {
-            this.currentLessonIndex = data.lessonIndex;
+        this.isDailyChallenge = false;
+        if (data) {
+            if (data.lessonIndex !== undefined) {
+                this.currentLessonIndex = data.lessonIndex;
+            }
+            if (data.isDailyChallenge !== undefined) {
+                this.isDailyChallenge = data.isDailyChallenge;
+            }
         }
     }
 
@@ -173,12 +179,38 @@ export class PlayScene extends Phaser.Scene {
         this.lessonStartTime  = Date.now();
         // combo intentionally NOT reset here — persists across lessons
 
-        const lesson = this.gameData.lessons[this.currentLessonIndex];
-        this.totalKeysInLesson = lesson.content.reduce((sum, item) => sum + item.keys.length, 0);
+        if (this.isDailyChallenge) {
+            const today = new Date();
+            const seedNum = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+            const rnd = new Phaser.Math.RandomDataGenerator([seedNum.toString()]);
+            
+            const progress = ProgressManager.loadProgress(this.gameData.lessons.length);
+            const unlockedIndices = [];
+            for (let i = 0; i < this.gameData.lessons.length; i++) {
+                const isUnlocked = (i === 0) || (progress.lessonStats[i - 1] && progress.lessonStats[i - 1].stars > 0);
+                if (isUnlocked) unlockedIndices.push(i);
+            }
+            const pool = [];
+            for (const idx of unlockedIndices) {
+                pool.push(...this.gameData.lessons[idx].content);
+            }
+            const shuffled = rnd.shuffle(pool);
+            const count = Math.min(shuffled.length, rnd.integerInRange(5, 8));
+            this.dailyWords = shuffled.slice(0, count);
+            this.totalKeysInLesson = this.dailyWords.reduce((sum, item) => sum + item.keys.length, 0);
+        } else {
+            const lesson = this.gameData.lessons[this.currentLessonIndex];
+            this.totalKeysInLesson = lesson.content.reduce((sum, item) => sum + item.keys.length, 0);
+        }
 
         this._applySkins();
         this.showWord();
-        this.hud.updateProgress(this.currentLessonIndex, this.gameData.lessons.length, this.score);
+        
+        if (this.isDailyChallenge) {
+            this.hud.updateProgress(-1, 0, this.score, 0, this.dailyWords.length);
+        } else {
+            this.hud.updateProgress(this.currentLessonIndex, this.gameData.lessons.length, this.score);
+        }
     }
 
     _applySkins() {
@@ -205,8 +237,13 @@ export class PlayScene extends Phaser.Scene {
     }
 
     showWord() {
-        const lesson   = this.gameData.lessons[this.currentLessonIndex];
-        const wordData = lesson.content[this.currentWordIndex];
+        let wordData;
+        if (this.isDailyChallenge) {
+            wordData = this.dailyWords[this.currentWordIndex];
+        } else {
+            const lesson = this.gameData.lessons[this.currentLessonIndex];
+            wordData = lesson.content[this.currentWordIndex];
+        }
         this.targetWord = wordData.display;
         this.targetKeys = wordData.keys;
 
@@ -222,7 +259,13 @@ export class PlayScene extends Phaser.Scene {
 
         const multiplier = this.combo.onSuccess();
         this.score += multiplier;
-        this.hud.updateProgress(this.currentLessonIndex, this.gameData.lessons.length, this.score);
+        
+        if (this.isDailyChallenge) {
+            this.hud.updateProgress(-1, 0, this.score, this.currentWordIndex + 1, this.dailyWords.length);
+        } else {
+            this.hud.updateProgress(this.currentLessonIndex, this.gameData.lessons.length, this.score);
+        }
+        
         this.combo.checkMilestone(this);
         if (multiplier >= 2) this.combo.showPopup(this, multiplier);
 
@@ -267,9 +310,9 @@ export class PlayScene extends Phaser.Scene {
 
     nextWord() {
         this.currentWordIndex++;
-        const lesson = this.gameData.lessons[this.currentLessonIndex];
+        const totalWords = this.isDailyChallenge ? this.dailyWords.length : this.gameData.lessons[this.currentLessonIndex].content.length;
 
-        if (this.currentWordIndex >= lesson.content.length) {
+        if (this.currentWordIndex >= totalWords) {
             this.lessonEndTime = Date.now();
             this.showLessonComplete();
             return;
@@ -297,42 +340,61 @@ export class PlayScene extends Phaser.Scene {
 
         const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
 
-        ProgressManager.saveHistory({
-            lessonIndex: this.currentLessonIndex, wpm, accuracy, stars, timestamp: Date.now()
-        });
+        let oldStats = { stars: 0, wpm: 0, accuracy: 0 };
 
-        const oldStats = this.lessonStats[this.currentLessonIndex] || { stars: 0, wpm: 0, accuracy: 0 };
-        this.lessonStats[this.currentLessonIndex] = {
-            stars:    Math.max(oldStats.stars    || 0, stars),
-            wpm:      Math.max(oldStats.wpm      || 0, wpm),
-            accuracy: Math.max(oldStats.accuracy || 0, accuracy)
-        };
+        let dailyBonusAwarded = false;
+        if (this.isDailyChallenge) {
+            const todayStr = ProgressManager._toDateStr(new Date());
+            const progressObj = ProgressManager.loadProgress(this.gameData.lessons.length);
 
-        if (accuracy === 100) { this.consecutivePerfects++; }
-        else                  { this.consecutivePerfects = 0; }
+            if (progressObj.dailyChallengeDate !== todayStr) {
+                this.score += 20;
+                dailyBonusAwarded = true;
+                ProgressManager.saveProgress(
+                    this.currentLessonIndex, this.score,
+                    this.lessonStats, this.unlockedAchievements, this.consecutivePerfects,
+                    todayStr
+                );
+            }
+        } else {
+            ProgressManager.saveHistory({
+                lessonIndex: this.currentLessonIndex, wpm, accuracy, stars, timestamp: Date.now()
+            });
 
-        const sessionData = {
-            lessonIndex: this.currentLessonIndex, stars, wpm, accuracy,
-            totalKeys: total, timeOfCompletion: new Date()
-        };
-        const progress = {
-            lessonStats:          this.lessonStats,
-            unlockedAchievements: this.unlockedAchievements,
-            consecutivePerfects:  this.consecutivePerfects,
-            streakDays:           this.streakDays,   // accurate: updated above
-            score:                this.score
-        };
+            oldStats = { ... (this.lessonStats[this.currentLessonIndex] || { stars: 0, wpm: 0, accuracy: 0 }) };
+            this.lessonStats[this.currentLessonIndex] = {
+                stars:    Math.max(oldStats.stars    || 0, stars),
+                wpm:      Math.max(oldStats.wpm      || 0, wpm),
+                accuracy: Math.max(oldStats.accuracy || 0, accuracy),
+                timestamp: Date.now()
+            };
 
-        const newlyUnlocked = AchievementManager.checkAchievements(sessionData, progress, oldStats);
-        if (newlyUnlocked.length > 0) {
-            this.unlockedAchievements.push(...newlyUnlocked);
-            newlyUnlocked.forEach(id => AchievementToast.show(this, id));
+            if (accuracy === 100) { this.consecutivePerfects++; }
+            else                  { this.consecutivePerfects = 0; }
+
+            const sessionData = {
+                lessonIndex: this.currentLessonIndex, stars, wpm, accuracy,
+                totalKeys: total, timeOfCompletion: new Date()
+            };
+            const progress = {
+                lessonStats:          this.lessonStats,
+                unlockedAchievements: this.unlockedAchievements,
+                consecutivePerfects:  this.consecutivePerfects,
+                streakDays:           this.streakDays,   // accurate: updated above
+                score:                this.score
+            };
+
+            const newlyUnlocked = AchievementManager.checkAchievements(sessionData, progress, oldStats);
+            if (newlyUnlocked.length > 0) {
+                this.unlockedAchievements.push(...newlyUnlocked);
+                newlyUnlocked.forEach(id => AchievementToast.show(this, id));
+            }
+
+            ProgressManager.saveProgress(
+                this.currentLessonIndex, this.score,
+                this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
+            );
         }
-
-        ProgressManager.saveProgress(
-            this.currentLessonIndex, this.score,
-            this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
-        );
 
         const cleanUp = () => {
             this.input.keyboard.off('keyup-SPACE',  handleContinue);
@@ -344,7 +406,7 @@ export class PlayScene extends Phaser.Scene {
         const showStreakVisual = () => { if (isNewStreakDay) this.hud.showStreak(newStreakDays); };
 
         const handleContinue = () => {
-            if (!isLastLesson) {
+            if (!isLastLesson && !this.isDailyChallenge) {
                 cleanUp(); overlay.destroy();
                 showStreakVisual();
                 this.input.keyboard.on('keydown', this.handleKeyDown, this);
@@ -370,7 +432,7 @@ export class PlayScene extends Phaser.Scene {
             this.scene.start('MapScene');
         };
 
-        const overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson, handleBackToMap);
+        const overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson || this.isDailyChallenge, handleBackToMap, oldStats, this.isDailyChallenge, null, dailyBonusAwarded);
 
         this.input.keyboard.once('keyup-SPACE',  handleContinue);
         this.input.keyboard.once('keyup-ENTER',  handleRetry);

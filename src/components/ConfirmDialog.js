@@ -7,9 +7,15 @@ export class ConfirmDialog extends Phaser.GameObjects.Container {
         this.scene = scene;
         this.onConfirm = onConfirm;
 
+        this.setScrollFactor(0);
+        this.setDepth(200);
+
         const overlay = scene.add.rectangle(0, 0, width, height, 0x000000, 0.7)
-            .setOrigin(0).setInteractive();
+            .setOrigin(0).setInteractive().setDepth(200);
         this.add(overlay);
+        const stopEvent = (_p, _x, _y, event) => { if (event) event.stopPropagation(); };
+        overlay.on('pointerdown', stopEvent);
+        overlay.on('pointerup',   stopEvent);
 
         const dialogW = 340;
         const dialogH = 180;
@@ -32,32 +38,67 @@ export class ConfirmDialog extends Phaser.GameObjects.Container {
         // Cancel
         const btnCancel = scene.add.container(-80, 45);
         const btnCancelBg = scene.add.graphics();
-        btnCancelBg.fillStyle(0x444444, 1);
-        btnCancelBg.fillRoundedRect(-60, -20, 120, 40, 8);
+        const drawCancelBg = (color) => {
+            btnCancelBg.clear();
+            btnCancelBg.fillStyle(color, 1);
+            btnCancelBg.fillRoundedRect(-60, -20, 120, 40, 8);
+        };
+        drawCancelBg(0x444444);
+        
         const btnCancelText = scene.add.text(0, 0, 'Hủy bỏ', {
             fontFamily: 'Arial', fontSize: '16px', fill: '#ffffff'
         }).setOrigin(0.5);
         btnCancel.add([btnCancelBg, btnCancelText]);
-        btnCancel.setSize(120, 40).setInteractive({ useHandCursor: true })
-            .on('pointerdown', () => this.destroy());
 
         // Confirm
         const btnConfirm = scene.add.container(80, 45);
         const btnConfirmBg = scene.add.graphics();
-        btnConfirmBg.fillStyle(0xd9534f, 1);
-        btnConfirmBg.fillRoundedRect(-60, -20, 120, 40, 8);
+        const drawConfirmBg = (color) => {
+            btnConfirmBg.clear();
+            btnConfirmBg.fillStyle(color, 1);
+            btnConfirmBg.fillRoundedRect(-60, -20, 120, 40, 8);
+        };
+        drawConfirmBg(0xd9534f);
+
         const btnConfirmText = scene.add.text(0, 0, 'Xoá hết', {
             fontFamily: 'Arial', fontSize: '16px', fontStyle: 'bold', fill: '#ffffff'
         }).setOrigin(0.5);
         btnConfirm.add([btnConfirmBg, btnConfirmText]);
-        btnConfirm.setSize(120, 40).setInteractive({ useHandCursor: true })
-            .on('pointerdown', () => {
-                this.onConfirm();
-                this.destroy();
-            });
 
         dialog.add([dialogBg, titleText, descText, btnCancel, btnConfirm]);
         this.add(dialog);
+
+        // Interactive zones in screen space for reliable click detection
+        const cancelX = width / 2 - 80;
+        const cancelY = height / 2 + 45;
+        const cancelZone = scene.add.zone(cancelX, cancelY, 120, 40)
+            .setScrollFactor(0)
+            .setDepth(201)
+            .setInteractive({ useHandCursor: true });
+        this.add(cancelZone);
+        cancelZone.on('pointerover', () => drawCancelBg(0x555555));
+        cancelZone.on('pointerout', () => drawCancelBg(0x444444));
+        cancelZone.on('pointerdown', stopEvent);
+        cancelZone.on('pointerup', (_p, _x, _y, event) => {
+            if (event) event.stopPropagation();
+            this.destroy();
+        });
+
+        const confirmX = width / 2 + 80;
+        const confirmY = height / 2 + 45;
+        const confirmZone = scene.add.zone(confirmX, confirmY, 120, 40)
+            .setScrollFactor(0)
+            .setDepth(201)
+            .setInteractive({ useHandCursor: true });
+        this.add(confirmZone);
+        confirmZone.on('pointerover', () => drawConfirmBg(0xc9302c));
+        confirmZone.on('pointerout', () => drawConfirmBg(0xd9534f));
+        confirmZone.on('pointerdown', stopEvent);
+        confirmZone.on('pointerup', (_p, _x, _y, event) => {
+            if (event) event.stopPropagation();
+            this.onConfirm();
+            this.destroy();
+        });
 
         scene.add.existing(this);
     }

@@ -10,7 +10,7 @@ export class ProgressManager {
 
     static loadProgress(totalLessons) {
         let lessonIndex = 0, score = 0, lessonStats = {}, unlockedAchievements = [],
-            consecutivePerfects = 0, streakDays = 0;
+            consecutivePerfects = 0, streakDays = 0, dailyChallengeDate = null, sprintHighScore = 0;
 
         try {
             const saved = JSON.parse(localStorage.getItem(SAVE_KEY));
@@ -19,6 +19,8 @@ export class ProgressManager {
                 score                = saved.score || 0;
                 unlockedAchievements = saved.unlockedAchievements || [];
                 consecutivePerfects  = saved.consecutivePerfects  || 0;
+                dailyChallengeDate   = saved.dailyChallengeDate || null;
+                sprintHighScore      = saved.sprintHighScore || 0;
 
                 if (saved.lessonStats) {
                     lessonStats = saved.lessonStats;
@@ -50,13 +52,25 @@ export class ProgressManager {
             }
         } catch (_) { }
 
-        return { lessonIndex, score, lessonStats, unlockedAchievements, consecutivePerfects, streakDays };
+        return { lessonIndex, score, lessonStats, unlockedAchievements, consecutivePerfects, streakDays, dailyChallengeDate, sprintHighScore };
     }
 
-    static saveProgress(lessonIndex, score, lessonStats, unlockedAchievements = [], consecutivePerfects = 0) {
-        localStorage.setItem(SAVE_KEY, JSON.stringify({
-            lessonIndex, score, lessonStats, unlockedAchievements, consecutivePerfects
-        }));
+    static saveProgress(lessonIndex, score, lessonStats, unlockedAchievements = [], consecutivePerfects = 0, dailyChallengeDate = undefined, sprintHighScore = undefined) {
+        let existing = {};
+        try {
+            existing = JSON.parse(localStorage.getItem(SAVE_KEY)) || {};
+        } catch (_) {}
+
+        const data = {
+            lessonIndex,
+            score,
+            lessonStats,
+            unlockedAchievements,
+            consecutivePerfects,
+            dailyChallengeDate: dailyChallengeDate !== undefined ? dailyChallengeDate : (existing.dailyChallengeDate || null),
+            sprintHighScore: sprintHighScore !== undefined ? sprintHighScore : (existing.sprintHighScore || 0)
+        };
+        localStorage.setItem(SAVE_KEY, JSON.stringify(data));
     }
 
     static saveHistory(entry) {

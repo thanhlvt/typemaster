@@ -3,6 +3,7 @@ console.log('Phaser imported:', Phaser.VERSION);
 import { BootScene } from './scenes/BootScene';
 import { MapScene } from './scenes/MapScene';
 import { PlayScene } from './scenes/PlayScene';
+import { SprintScene } from './scenes/SprintScene';
 
 const config = {
     type: Phaser.AUTO,
@@ -21,7 +22,7 @@ const config = {
             debug: false
         }
     },
-    scene: [BootScene, MapScene, PlayScene]
+    scene: [BootScene, MapScene, PlayScene, SprintScene]
 };
 
 console.log('Script main.js is running');

@@ -1,7 +1,7 @@
 import * as Phaser from 'phaser';
 
 export class ResultOverlay extends Phaser.GameObjects.Container {
-    constructor(scene, accuracy, wpm, isLastLesson, onBackToMap) {
+    constructor(scene, accuracy, wpm, isLastLesson, onBackToMap, oldStats = null, isDailyChallenge = false, customTitle = null, dailyBonusAwarded = false) {
         const { width, height } = scene.scale;
         super(scene, 0, 0);
         this.scene = scene;
@@ -17,8 +17,9 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         shine.fillCircle(0, -60, 150);
         container.add(shine);
 
-        const title = scene.add.text(0, -135, 'XUẤT SẮC!', {
-            fontFamily: 'Outfit, Arial', fontSize: '56px', fontStyle: 'bold', fill: '#FFC107'
+        const titleStr = customTitle || (isDailyChallenge ? 'THÀNH CÔNG!' : 'XUẤT SẮC!');
+        const title = scene.add.text(0, -135, titleStr, {
+            fontFamily: 'Outfit, Arial', fontSize: (isDailyChallenge || customTitle) ? '48px' : '56px', fontStyle: 'bold', fill: '#FFC107'
         }).setOrigin(0.5).setAlpha(0).setScale(0.5);
 
         // Stars
@@ -42,46 +43,79 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
             scene.tweens.add({ targets: goldStar, scaleX: 1, scaleY: 1, duration: 400, delay: 200 + i * 200, ease: 'Back.easeOut' });
         }
 
-        // Stats box
+        // Stats box container to ensure everything slides down as a single unit
+        const statsBoxContainer = scene.add.container(0, -15); // Start 15px higher for the entrance tween
+        statsBoxContainer.setAlpha(0);
+
+        const boxW = 360;
+        const boxH = 165;
         const statsBg = scene.add.graphics();
         statsBg.fillStyle(0x1e293b, 1);
-        statsBg.fillRoundedRect(-150, -10, 300, 110, 15);
+        statsBg.fillRoundedRect(-boxW / 2, -10, boxW, boxH, 15);
         statsBg.lineStyle(2, 0xffffff, 0.1);
-        statsBg.strokeRoundedRect(-150, -10, 300, 110, 15);
-        statsBg.setAlpha(0);
+        statsBg.strokeRoundedRect(-boxW / 2, -10, boxW, boxH, 15);
 
-        const accText = scene.add.text(-80, 45, `Chính xác\n${accuracy}%`, {
+        const accText = scene.add.text(-90, 45, `Chính xác\n${accuracy}%`, {
             fontFamily: 'Arial', fontSize: '20px', align: 'center', fill: '#ffffff', fontStyle: 'bold'
-        }).setOrigin(0.5).setAlpha(0);
+        }).setOrigin(0.5);
 
-        const wpmText = scene.add.text(80, 45, `Tốc độ\n${wpm} WPM`, {
+        const wpmText = scene.add.text(90, 45, `Tốc độ\n${wpm} WPM`, {
             fontFamily: 'Arial', fontSize: '20px', align: 'center', fill: '#ffffff', fontStyle: 'bold'
-        }).setOrigin(0.5).setAlpha(0);
+        }).setOrigin(0.5);
 
-        container.add([statsBg, accText, wpmText, title]);
+        statsBoxContainer.add([statsBg, accText, wpmText]);
+        container.add([statsBoxContainer, title]);
+
+        // Feedback deltas / challenge rewards
+        const feedbackLines = [];
+        if (!isDailyChallenge && oldStats) {
+            const oldWpm = oldStats.wpm || 0;
+            const oldStars = oldStats.stars || 0;
+            const deltaWpm = wpm - oldWpm;
+
+            if (oldWpm > 0 && deltaWpm > 0) {
+                feedbackLines.push({ text: `Kỷ lục mới! ⭐ (+${deltaWpm} WPM)`, color: '#86EFAC' });
+            }
+            if (stars === 3 && oldStars < 3) {
+                feedbackLines.push({ text: `Lần đầu đạt 3 sao! 🌟`, color: '#38BDF8' });
+            }
+        } else if (isDailyChallenge) {
+            feedbackLines.push({ text: `Thử thách ngày hoàn thành! 🏆`, color: '#FCD34D' });
+            if (dailyBonusAwarded) {
+                feedbackLines.push({ text: `Thưởng thêm: +20 🍌 Chuối`, color: '#86EFAC' });
+            }
+        }
+
+        feedbackLines.forEach((line, idx) => {
+            const yPos = feedbackLines.length === 1 ? 120 : 106 + idx * 30;
+            const fbText = scene.add.text(0, yPos, line.text, {
+                fontFamily: 'Arial', fontSize: '18px', fontStyle: 'bold', fill: line.color
+            }).setOrigin(0.5);
+            statsBoxContainer.add(fbText);
+        });
 
         // Buttons
         let btnTargets = [];
         if (isLastLesson) {
             const { bg: mb, text: mt } = this._makeButton(scene, container, -90, 160, '🗺️ Bản đồ', '20px', 0x1565C0, 0x1E88E5,
-                () => { this.destroy(); if (onBackToMap) onBackToMap(); });
+                () => { this.destroy(); if (onBackToMap) onBackToMap(); }, 35);
             const { bg: rb, text: rt } = this._makeButton(scene, container,  90, 160, '🔄 Thử lại', '20px', 0xF57C00, 0xFF9800,
-                () => this.emit('retry'));
+                () => this.emit('retry'), 35);
             btnTargets = [mb, mt, rb, rt];
         } else {
             const { bg: mb, text: mt } = this._makeButton(scene, container, -125, 110, '🗺️ Bản đồ',  '16px', 0x1565C0, 0x1E88E5,
-                () => { this.destroy(); if (onBackToMap) onBackToMap(); });
+                () => { this.destroy(); if (onBackToMap) onBackToMap(); }, 35);
             const { bg: rb, text: rt } = this._makeButton(scene, container,    0, 110, '🔄 Thử lại',  '16px', 0xF57C00, 0xFF9800,
-                () => this.emit('retry'));
+                () => this.emit('retry'), 35);
             const { bg: cb, text: ct } = this._makeButton(scene, container,  125, 110, 'Tiếp tục ➔', '16px', 0x4CAF50, 0x66BB6A,
-                () => this.emit('continue'));
+                () => this.emit('continue'), 35);
             btnTargets = [mb, mt, rb, rt, cb, ct];
         }
 
         const hintStr = isLastLesson
-            ? 'Phím tắt: [Enter] Thử lại  •  [Esc] Bản đồ'
-            : 'Phím tắt: [Space] Tiếp tục  •  [Enter] Thử lại  •  [Esc] Bản đồ';
-        const hintText = scene.add.text(0, 205, hintStr, {
+            ? 'Phím tắt: [Esc] Bản đồ  •  [Enter] Thử lại'
+            : 'Phím tắt: [Esc] Bản đồ  •  [Enter] Thử lại  •  [Space] Tiếp tục';
+        const hintText = scene.add.text(0, 240, hintStr, {
             fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#94A3B8'
         }).setOrigin(0.5).setAlpha(0);
         container.add(hintText);
@@ -90,7 +124,7 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
 
         // Animations
         scene.tweens.add({ targets: title, alpha: 1, scale: 1, duration: 600, ease: 'Back.Out' });
-        scene.tweens.add({ targets: [statsBg, accText, wpmText], alpha: 1, y: '+=15', duration: 500, delay: 300, ease: 'Power2' });
+        scene.tweens.add({ targets: statsBoxContainer, alpha: 1, y: 0, duration: 500, delay: 300, ease: 'Power2' });
         scene.tweens.add({ targets: [...btnTargets, hintText], alpha: 1, duration: 300, delay: 850 });
 
         if (scene.monkey) {
@@ -119,8 +153,8 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
 
     // ── Helpers ───────────────────────────────────────────────────
 
-    _makeButton(scene, container, cx, w, label, fontSize, baseColor, hoverColor, onDown) {
-        const yTop = 130, h = 50, yCtr = 155;
+    _makeButton(scene, container, cx, w, label, fontSize, baseColor, hoverColor, onDown, yOffset = 0) {
+        const yTop = 130 + yOffset, h = 50, yCtr = 155 + yOffset;
 
         const bg = scene.add.graphics();
         const draw = (color) => {

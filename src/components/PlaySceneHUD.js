@@ -49,7 +49,6 @@ export class PlaySceneHUD {
         }).setOrigin(0.5);
 
         // ── Buttons ───────────────────────────────────────────────
-        this._createResetButton(width);
         this._createMapButton(width);
     }
 
@@ -62,9 +61,14 @@ export class PlaySceneHUD {
     }
 
     /** Refresh progress bar, lesson label, and score */
-    updateProgress(lessonIndex, totalLessons, score) {
-        const current = lessonIndex + 1;
-        this.progressText.setText(`Bài ${current}/${totalLessons}`);
+    updateProgress(lessonIndex, totalLessons, score, wordIndex = null, totalWords = null) {
+        const isDaily = lessonIndex === -1;
+        if (isDaily) {
+            this.progressText.setText(`Thử thách ngày`);
+        } else {
+            const current = lessonIndex + 1;
+            this.progressText.setText(`Bài ${current}/${totalLessons}`);
+        }
         this.scoreText.setText(`🍌 Chuối: ${score}`);
 
         const barWidth = 200, barHeight = 10, x = 20, y = 52;
@@ -75,7 +79,13 @@ export class PlaySceneHUD {
         this.progressBarBg.lineStyle(1.5, 0x475569, 1);
         this.progressBarBg.strokeRoundedRect(x, y, barWidth, barHeight, 5);
 
-        const fillWidth = barWidth * (current / totalLessons);
+        let fillPercent = 0;
+        if (isDaily && totalWords) {
+            fillPercent = wordIndex / totalWords;
+        } else {
+            fillPercent = (lessonIndex + 1) / totalLessons;
+        }
+        const fillWidth = barWidth * fillPercent;
         this.progressBarFill.clear();
         this.progressBarFill.fillStyle(0x10B981, 1);
         this.progressBarFill.fillRoundedRect(x, y, fillWidth, barHeight, 5);
@@ -116,34 +126,10 @@ export class PlaySceneHUD {
 
     // ── Private helpers ───────────────────────────────────────────
 
-    _createResetButton(width) {
-        const scene = this.scene;
-        const btnW = 94, btnH = 36;
-        const x = width - btnW / 2 - 12;
-        const y = 24;
-
-        const bg = scene.add.graphics();
-        const drawBg = (color) => {
-            bg.clear();
-            bg.fillStyle(color, 0.85);
-            bg.fillRoundedRect(x - btnW / 2, y - btnH / 2, btnW, btnH, 18);
-        };
-        drawBg(0x8B0000);
-
-        scene.add.text(x, y, '↺  Reset', {
-            fontFamily: 'Arial', fontSize: '16px', fill: '#FFF'
-        }).setOrigin(0.5);
-
-        const zone = scene.add.zone(x, y, btnW, btnH).setInteractive({ useHandCursor: true });
-        zone.on('pointerover', () => drawBg(0xC62828));
-        zone.on('pointerout',  () => drawBg(0x8B0000));
-        zone.on('pointerdown', () => scene.showResetConfirm());
-    }
-
     _createMapButton(width) {
         const scene = this.scene;
         const btnW = 94, btnH = 36;
-        const x = width - btnW - 16 - btnW / 2;
+        const x = width - btnW / 2 - 12;
         const y = 24;
 
         const bg = scene.add.graphics();
