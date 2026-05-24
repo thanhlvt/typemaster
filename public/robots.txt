@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thanhlvt.github.io/typemaster/sitemap.xml
