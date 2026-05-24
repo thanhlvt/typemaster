@@ -2,6 +2,7 @@ import * as Phaser from 'phaser';
 import { ProgressManager } from '../utils/ProgressManager';
 import { AchievementsOverlay } from '../components/AchievementsOverlay';
 import { ACHIEVEMENTS } from '../utils/AchievementManager';
+import { StatsOverlay } from '../components/StatsOverlay';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -549,6 +550,37 @@ export class MapScene extends Phaser.Scene {
         achZone.on('pointerdown', () => {
             this.sound.play('key_sound');
             new AchievementsOverlay(this, this.unlockedAchievements, () => {
+                this._loadProgress();
+            });
+        });
+
+        // Stats Button to the left of Achievement Button
+        const statsBtnW = 140;
+        const statsBtnX = btnX - btnW / 2 - statsBtnW / 2 - 15;
+        const statsBtnBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawStatsBtnBg = (color) => {
+            statsBtnBg.clear();
+            statsBtnBg.fillStyle(color, 0.85);
+            statsBtnBg.fillRoundedRect(statsBtnX - statsBtnW / 2, btnY - btnH / 2, statsBtnW, btnH, 18);
+            statsBtnBg.lineStyle(1.5, 0xffffff, 0.2);
+            statsBtnBg.strokeRoundedRect(statsBtnX - statsBtnW / 2, btnY - btnH / 2, statsBtnW, btnH, 18);
+        };
+        drawStatsBtnBg(0x0D9488); // Teal
+
+        const statsText = this.add.text(statsBtnX, btnY, '📊 Thống kê', {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        const statsZone = this.add.zone(statsBtnX, btnY, statsBtnW, btnH)
+            .setScrollFactor(0)
+            .setInteractive({ useHandCursor: true });
+        statsZone.setDepth(11);
+
+        statsZone.on('pointerover', () => drawStatsBtnBg(0x14B8A6));
+        statsZone.on('pointerout', () => drawStatsBtnBg(0x0D9488));
+        statsZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            new StatsOverlay(this, () => {
                 this._loadProgress();
             });
         });

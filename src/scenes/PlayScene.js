@@ -276,6 +276,16 @@ export class PlayScene extends Phaser.Scene {
 
         // Stars & stats
         const stars    = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
+        
+        // Save to attempt history
+        ProgressManager.saveHistory({
+            lessonIndex: this.currentLessonIndex,
+            wpm,
+            accuracy,
+            stars,
+            timestamp: Date.now()
+        });
+
         const oldStats = this.lessonStats[this.currentLessonIndex] || { stars: 0, wpm: 0, accuracy: 0 };
         this.lessonStats[this.currentLessonIndex] = {
             stars:    Math.max(oldStats.stars    || 0, stars),

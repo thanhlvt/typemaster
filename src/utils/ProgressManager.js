@@ -71,6 +71,25 @@ export class ProgressManager {
         }));
     }
 
+    static saveHistory(entry) {
+        try {
+            const history = ProgressManager.loadHistory();
+            history.push(entry);
+            if (history.length > 50) {
+                history.splice(0, history.length - 50);
+            }
+            localStorage.setItem('typemaster_history', JSON.stringify(history));
+        } catch (_) {}
+    }
+
+    static loadHistory() {
+        try {
+            return JSON.parse(localStorage.getItem('typemaster_history')) || [];
+        } catch (_) {
+            return [];
+        }
+    }
+
     static clearAll() {
         localStorage.clear();
     }
