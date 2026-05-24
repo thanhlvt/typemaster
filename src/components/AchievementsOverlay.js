@@ -10,11 +10,11 @@ export class AchievementsOverlay extends Phaser.GameObjects.Container {
 
         // Solid dark background overlay to block inputs and hide the map background
         const overlay = scene.add.rectangle(0, 0, width, height, 0x0a0f1d, 0.95)
-            .setOrigin(0).setInteractive();
+            .setOrigin(0).setInteractive().setScrollFactor(0);
         this.add(overlay);
 
         // Dialog center container
-        const dialog = scene.add.container(width / 2, height / 2);
+        const dialog = scene.add.container(width / 2, height / 2).setScrollFactor(0);
         this.add(dialog);
 
         // Dialog Background
@@ -50,9 +50,13 @@ export class AchievementsOverlay extends Phaser.GameObjects.Container {
         dialog.add(progressText);
 
         // Close button (X) at top right of dialog
+        // closeBtnX/Y are local coords inside dialog container;
+        // screenCloseX/Y are absolute screen coords (dialog is centered at width/2, height/2)
         const closeBtnX = dialogW / 2 - 40;
         const closeBtnY = -dialogH / 2 + 40;
-        
+        const screenCloseX = width / 2 + closeBtnX;
+        const screenCloseY = height / 2 + closeBtnY;
+
         const closeBtnBg = scene.add.graphics();
         const drawCloseBg = (color) => {
             closeBtnBg.clear();
@@ -67,9 +71,12 @@ export class AchievementsOverlay extends Phaser.GameObjects.Container {
         }).setOrigin(0.5);
         dialog.add(closeText);
 
-        const closeZone = scene.add.zone(closeBtnX, closeBtnY, 40, 40)
+        // Zone must be outside the scrollFactor(0) container to hit-test correctly
+        const closeZone = scene.add.zone(screenCloseX, screenCloseY, 40, 40)
+            .setScrollFactor(0)
+            .setDepth(21)
             .setInteractive({ useHandCursor: true });
-        dialog.add(closeZone);
+        this.add(closeZone);
 
         closeZone.on('pointerover', () => drawCloseBg(0x475569));
         closeZone.on('pointerout', () => drawCloseBg(0x334155));

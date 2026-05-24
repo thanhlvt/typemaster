@@ -44,6 +44,12 @@ export class PlayScene extends Phaser.Scene {
         this.virtualKeyboard = new VirtualKeyboard(this, 0, 0);
 
         this.input.keyboard.on('keydown', this.handleKeyDown, this);
+        this.input.keyboard.addCapture(Phaser.Input.Keyboard.KeyCodes.ESC);
+
+        // Remove ESC capture when leaving this scene so MapScene keyboard works correctly
+        this.events.once('shutdown', () => {
+            this.input.keyboard.removeCapture(Phaser.Input.Keyboard.KeyCodes.ESC);
+        });
 
         // Overall progress elements
         this.progressText = this.add.text(20, 20, '', {
@@ -407,7 +413,7 @@ export class PlayScene extends Phaser.Scene {
         const handleCleanUpListeners = () => {
             this.input.keyboard.off('keyup-SPACE', handleContinue);
             this.input.keyboard.off('keyup-ENTER', handleRetry);
-            this.input.keyboard.off('keyup-ESC', handleBackToMap);
+            this.input.keyboard.off('keydown-ESC', handleBackToMap);
         };
 
         const handleContinue = () => {
@@ -447,7 +453,7 @@ export class PlayScene extends Phaser.Scene {
 
         this.input.keyboard.once('keyup-SPACE', handleContinue);
         this.input.keyboard.once('keyup-ENTER', handleRetry);
-        this.input.keyboard.once('keyup-ESC', handleBackToMap);
+        this.input.keyboard.once('keydown-ESC', handleBackToMap);
 
         overlay.on('continue', () => {
             handleCleanUpListeners();

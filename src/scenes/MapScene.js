@@ -25,6 +25,7 @@ export class MapScene extends Phaser.Scene {
             }
         }
         this.unlockedAchievements = progress.unlockedAchievements || [];
+        this.currentLessonIndex = progress.lessonIndex || 0; // Save current lesson index
         
         // Count completed lessons and total stars
         for (const key in this.lessonStars) {
@@ -88,9 +89,21 @@ export class MapScene extends Phaser.Scene {
             this.createLessonButton(x, y, i, isUnlocked, stars);
         }
 
-        // Setup mouse wheel scroll
+        // Sidebar bounds — defined early so main scroll handlers can exclude sidebar area
+        const sidebarW = 60;
+        const sidebarH = 300;
+        const sidebarX = 40;
+        const sidebarY = height / 2 + 50;
+        const isSidebarHit = (p) =>
+            p.x >= sidebarX - sidebarW / 2 && p.x <= sidebarX + sidebarW / 2 &&
+            p.y >= sidebarY - sidebarH / 2 && p.y <= sidebarY + sidebarH / 2;
+        let isDraggingSidebar = false;
+
+        // Setup mouse wheel scroll — skip when pointer is over sidebar
         this.input.on('wheel', (pointer, gameObjects, deltaX, deltaY, deltaZ) => {
-            this.cameras.main.scrollY += deltaY * 0.7;
+            if (!isSidebarHit(pointer)) {
+                this.cameras.main.scrollY += deltaY * 0.7;
+            }
         });
 
         // Setup drag to scroll
@@ -102,7 +115,7 @@ export class MapScene extends Phaser.Scene {
         });
 
         this.input.on('pointermove', (pointer) => {
-            if (pointer.isDown) {
+            if (pointer.isDown && !isDraggingSidebar) {
                 const dy = pointer.y - dragStartY;
                 if (Math.abs(dy) > 10) {
                     isDragging = true;
@@ -116,6 +129,239 @@ export class MapScene extends Phaser.Scene {
 
         // Render fixed UI elements (depth = 10, scrollFactor = 0)
         this.createHeader(width);
+
+        // Auto-scroll to current lesson on MapScene load
+        const activeRow = Math.floor(this.currentLessonIndex / 5);
+        const targetActiveY = startY + activeRow * rowHeight;
+        const targetScrollY = Phaser.Math.Clamp(targetActiveY - height / 2, 0, totalScrollHeight - height);
+        
+        this.cameras.main.scrollY = 0; // Start at top
+        this.time.delayedCall(100, () => {
+            this.tweens.add({
+                targets: this.cameras.main,
+                scrollY: targetScrollY,
+                duration: 600,
+                ease: 'Cubic.easeOut'
+            });
+        });
+
+        // Floating action button "📍 Đến bài hiện tại" at bottom-right
+        const fabW = 160;
+        const fabH = 40;
+        const fabX = width - fabW / 2 - 20; // 1024 - 80 - 20 = 924
+        const fabY = height - fabH / 2 - 20; // 768 - 20 - 20 = 728
+
+        const fabBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawFabBg = (color, strokeColor = 0xFBBF24) => {
+            fabBg.clear();
+            fabBg.fillStyle(color, 0.9);
+            fabBg.fillRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
+            fabBg.lineStyle(2, strokeColor, 1);
+            fabBg.strokeRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
+        };
+        drawFabBg(0x0f172a); // Slate 900 background with gold border
+
+        const fabText = this.add.text(fabX, fabY, '📍 Bài hiện tại', {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FBBF24'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        const fabZone = this.add.zone(fabX, fabY, fabW, fabH)
+            .setScrollFactor(0)
+            .setInteractive({ useHandCursor: true });
+        fabZone.setDepth(11);
+
+        fabZone.on('pointerover', () => {
+            drawFabBg(0x1e293b, 0xFCD34D); // Lighter background and border
+            this.tweens.add({
+                targets: fabText,
+                scaleX: 1.05,
+                scaleY: 1.05,
+                duration: 100
+            });
+        });
+        fabZone.on('pointerout', () => {
+            drawFabBg(0x0f172a, 0xFBBF24);
+            this.tweens.add({
+                targets: fabText,
+                scaleX: 1.0,
+                scaleY: 1.0,
+                duration: 100
+            });
+        });
+        fabZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            this.tweens.add({
+                targets: this.cameras.main,
+                scrollY: targetScrollY,
+                duration: 500,
+                ease: 'Cubic.easeOut'
+            });
+        });
+
+        // Quick Jump Segmented Sidebar
+        const segmentSize = 50;
+        const totalSegments = Math.ceil(totalLessons / segmentSize);
+
+        const sbBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        sbBg.fillStyle(0x0f172a, 0.85); // Slate 900 Glassmorphic
+        sbBg.fillRoundedRect(sidebarX - sidebarW / 2, sidebarY - sidebarH / 2, sidebarW, sidebarH, 18);
+        sbBg.lineStyle(1.5, 0x38bdf8, 0.4); // Subtle blue border
+        sbBg.strokeRoundedRect(sidebarX - sidebarW / 2, sidebarY - sidebarH / 2, sidebarW, sidebarH, 18);
+
+        // Sidebar title label
+        this.add.text(sidebarX, sidebarY - sidebarH / 2 + 15, 'Tới bài', {
+            fontFamily: 'Arial', fontSize: '11px', fontStyle: 'bold', fill: '#38BDF8'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        // Container to hold the list of buttons
+        const listContainer = this.add.container(0, 0).setScrollFactor(0).setDepth(10);
+
+        // Mask to clip buttons outside the sidebar scrolling viewport
+        const maskW = sidebarW - 8;
+        const maskH = sidebarH - 45;
+        const maskX = sidebarX - maskW / 2;
+        const maskY = sidebarY - sidebarH / 2 + 32;
+
+        const maskShape = this.add.graphics().setScrollFactor(0).setVisible(false);
+        maskShape.fillStyle(0xffffff);
+        maskShape.fillRect(maskX, maskY, maskW, maskH);
+        const mask = maskShape.createGeometryMask();
+        listContainer.setMask(mask);
+
+        // Layout parameters
+        const btnW = 50;
+        const btnH = 30;
+        const itemSpacing = 38;
+        const contentHeight = totalSegments * itemSpacing;
+        const maxScroll = Math.max(0, contentHeight - maskH + 10);
+
+        let scrollYOffset = 0;
+        const updateScroll = (dy) => {
+            scrollYOffset = Phaser.Math.Clamp(scrollYOffset - dy, -maxScroll, 0);
+            listContainer.y = scrollYOffset;
+        };
+
+        // Custom bounds checking for scroll interactions to avoid overlay zone blocking clicks
+        this.input.on('wheel', (pointer, gameObjects, deltaX, deltaY, deltaZ) => {
+            const isOverSidebar = (pointer.x >= sidebarX - sidebarW/2 && 
+                                   pointer.x <= sidebarX + sidebarW/2 &&
+                                   pointer.y >= sidebarY - sidebarH/2 &&
+                                   pointer.y <= sidebarY + sidebarH/2);
+            if (isOverSidebar) {
+                updateScroll(deltaY * 0.4);
+            }
+        });
+
+        let dragSidebarStartY = 0;
+        let sidebarDragDistance = 0;
+
+        this.input.on('pointerdown', (pointer) => {
+            const isOverSidebar = (pointer.x >= sidebarX - sidebarW/2 && 
+                                   pointer.x <= sidebarX + sidebarW/2 &&
+                                   pointer.y >= sidebarY - sidebarH/2 &&
+                                   pointer.y <= sidebarY + sidebarH/2);
+            if (isOverSidebar) {
+                isDraggingSidebar = true;
+                dragSidebarStartY = pointer.y;
+                sidebarDragDistance = 0;
+            }
+        });
+
+        this.input.on('pointermove', (pointer) => {
+            if (isDraggingSidebar && pointer.isDown) {
+                const dy = pointer.y - dragSidebarStartY;
+                sidebarDragDistance += Math.abs(dy);
+                dragSidebarStartY = pointer.y;
+                updateScroll(-dy);
+            }
+        });
+
+        this.input.on('pointerup', () => {
+            isDraggingSidebar = false;
+        });
+
+        // Sidebar buttons — zones inside a scrollFactor-0 container use world coords for hit
+        // testing, which breaks after the main camera scrolls. Use manual screen-coord detection.
+        const sidebarBtnData = [];
+        for (let j = 0; j < totalSegments; j++) {
+            const startL = j * segmentSize + 1;
+            const btnX = sidebarX;
+            const btnLocalY = sidebarY - sidebarH / 2 + 50 + j * itemSpacing;
+
+            const btnBg = this.add.graphics();
+            const drawBtnBg = (color, strokeColor = 0x475569) => {
+                btnBg.clear();
+                btnBg.fillStyle(color, 0.9);
+                btnBg.fillRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 8);
+                btnBg.lineStyle(1.5, strokeColor, 1);
+                btnBg.strokeRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 8);
+            };
+            drawBtnBg(0x1e293b);
+            listContainer.add(btnBg);
+
+            const btnText = this.add.text(btnX, btnLocalY, `${startL}`, {
+                fontFamily: 'Arial', fontSize: '11px', fontStyle: 'bold', fill: '#94A3B8'
+            }).setOrigin(0.5);
+            listContainer.add(btnText);
+
+            sidebarBtnData.push({ j, drawBtnBg, btnText, btnX, btnLocalY });
+        }
+
+        // visY = btnLocalY + scrollYOffset because listContainer.y = scrollYOffset
+        const getSidebarBtn = (px, py) => {
+            if (!isSidebarHit({ x: px, y: py })) return null;
+            if (py < maskY || py > maskY + maskH) return null;
+            for (const btn of sidebarBtnData) {
+                const visY = btn.btnLocalY + scrollYOffset;
+                if (px >= btn.btnX - btnW / 2 && px <= btn.btnX + btnW / 2 &&
+                    py >= visY - btnH / 2 && py <= visY + btnH / 2) {
+                    return btn;
+                }
+            }
+            return null;
+        };
+
+        let hoveredBtn = null;
+
+        this.input.on('pointermove', (pointer) => {
+            const hit = isDraggingSidebar ? null : getSidebarBtn(pointer.x, pointer.y);
+            if (hit !== hoveredBtn) {
+                if (hoveredBtn) {
+                    hoveredBtn.drawBtnBg(0x1e293b, 0x475569);
+                    hoveredBtn.btnText.setFill('#94A3B8');
+                }
+                hoveredBtn = hit;
+                if (hit) {
+                    hit.drawBtnBg(0x334155, 0x38bdf8);
+                    hit.btnText.setFill('#FFFFFF');
+                }
+            }
+        });
+
+        this.input.on('pointerdown', (pointer) => {
+            const hit = getSidebarBtn(pointer.x, pointer.y);
+            if (hit) hit.drawBtnBg(0x0f172a, 0x38bdf8);
+        });
+
+        this.input.on('pointerup', (pointer) => {
+            if (sidebarDragDistance < 8 && isSidebarHit(pointer)) {
+                const hit = getSidebarBtn(pointer.x, pointer.y);
+                if (hit) {
+                    this.sound.play('key_sound');
+                    const firstLessonIndex = hit.j * segmentSize;
+                    const segRow = Math.floor(firstLessonIndex / columns);
+                    const targetSegY = startY + segRow * rowHeight;
+                    const targetSegScrollY = Phaser.Math.Clamp(targetSegY - height / 2, 0, totalScrollHeight - height);
+                    this.tweens.add({
+                        targets: this.cameras.main,
+                        scrollY: targetSegScrollY,
+                        duration: 500,
+                        ease: 'Cubic.easeOut'
+                    });
+                }
+            }
+            if (hoveredBtn) hoveredBtn.drawBtnBg(0x334155, 0x38bdf8);
+        });
     }
 
     createLessonButton(x, y, index, isUnlocked, stars) {
