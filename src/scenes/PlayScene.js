@@ -178,11 +178,40 @@ export class PlayScene extends Phaser.Scene {
         const lesson = this.data.lessons[this.currentLessonIndex];
         this.totalKeysInLesson = lesson.content.reduce((sum, item) => sum + item.keys.length, 0);
 
-        if (this.bgImage) this.bgImage.setTexture(`bg_${Phaser.Math.Between(1, 10)}`);
-        if (this.monkey)  this.monkey.setTexture(`monkey_${Phaser.Math.Between(1, 10)}`);
+        this._applySkins();
 
         this.showWord();
         this.hud.updateProgress(this.currentLessonIndex, this.data.lessons.length, this.score);
+    }
+
+    _applySkins() {
+        const equipped = ProgressManager.getEquippedSkins();
+        const UNLOCK_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1050, 1400, 1800, 2300];
+        
+        let bgTexture = equipped.background;
+        if (bgTexture === 'random') {
+            const unlockedBgs = [];
+            for (let i = 1; i <= 10; i++) {
+                if (this.score >= UNLOCK_THRESHOLDS[i - 1]) {
+                    unlockedBgs.push(`bg_${i}`);
+                }
+            }
+            bgTexture = Phaser.Math.RND.pick(unlockedBgs) || 'bg_1';
+        }
+        
+        let monkeyTexture = equipped.monkey;
+        if (monkeyTexture === 'random') {
+            const unlockedMonkeys = [];
+            for (let i = 1; i <= 10; i++) {
+                if (this.score >= UNLOCK_THRESHOLDS[i - 1]) {
+                    unlockedMonkeys.push(`monkey_${i}`);
+                }
+            }
+            monkeyTexture = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
+        }
+
+        if (this.bgImage) this.bgImage.setTexture(bgTexture);
+        if (this.monkey)  this.monkey.setTexture(monkeyTexture);
     }
 
     showWord() {

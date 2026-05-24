@@ -90,6 +90,20 @@ export class ProgressManager {
         }
     }
 
+    static getEquippedSkins() {
+        try {
+            return JSON.parse(localStorage.getItem('typemaster_equipped_skins')) || { monkey: 'random', background: 'random' };
+        } catch (_) {
+            return { monkey: 'random', background: 'random' };
+        }
+    }
+
+    static saveEquippedSkins(skins) {
+        try {
+            localStorage.setItem('typemaster_equipped_skins', JSON.stringify(skins));
+        } catch (_) {}
+    }
+
     static clearAll() {
         localStorage.clear();
     }

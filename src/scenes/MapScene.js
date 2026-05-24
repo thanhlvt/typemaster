@@ -3,6 +3,7 @@ import { ProgressManager } from '../utils/ProgressManager';
 import { AchievementsOverlay } from '../components/AchievementsOverlay';
 import { ACHIEVEMENTS } from '../utils/AchievementManager';
 import { StatsOverlay } from '../components/StatsOverlay';
+import { SkinsOverlay } from '../components/SkinsOverlay';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -10,6 +11,8 @@ export class MapScene extends Phaser.Scene {
     }
 
     init() {
+        this.achText = null;
+        this.bg = null;
         this.data = this.cache.json.get('gameData');
         this._loadProgress();
     }
@@ -19,6 +22,7 @@ export class MapScene extends Phaser.Scene {
         this.totalStarsCount = 0;
         
         const progress = ProgressManager.loadProgress(this.data.lessons.length);
+        this.totalScoreCount = progress.score || 0;
         this.lessonStars = {};
         if (progress.lessonStats) {
             for (const key in progress.lessonStats) {
@@ -49,10 +53,7 @@ export class MapScene extends Phaser.Scene {
         const { width, height } = this.scale;
 
         // Fixed background image with dark overlay
-        const randomBg = Phaser.Math.Between(1, 10);
-        this.bg = this.add.image(width / 2, height / 2, `bg_${randomBg}`)
-            .setDisplaySize(width, height)
-            .setScrollFactor(0);
+        this._applyBackground();
             
         this.overlay = this.add.graphics()
             .fillStyle(0x0a0f1d, 0.75) // Deep premium dark blue overlay
@@ -499,25 +500,25 @@ export class MapScene extends Phaser.Scene {
         headerBg.lineTo(width, 130);
         headerBg.strokePath();
 
-        // Main Title
-        const titleText = this.add.text(width / 2, 40, 'BẢN ĐỒ BÀI HỌC', {
+        // Main Title (left-aligned to prevent overlap with header buttons)
+        const titleText = this.add.text(50, 40, 'BẢN ĐỒ BÀI HỌC', {
             fontFamily: 'Outfit, Arial',
-            fontSize: '38px',
+            fontSize: '36px',
             fontStyle: 'bold',
             fill: '#FBBF24',
             stroke: '#000000',
             strokeThickness: 4
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+        }).setOrigin(0, 0.5).setScrollFactor(0).setDepth(10);
 
         // Progress Text
         const totalLessons = this.data.lessons.length;
         const progressStr = `Tiến độ: ${this.completedLessonsCount}/${totalLessons} bài học  |  Tổng: ⭐ ${this.totalStarsCount}`;
-        const progressText = this.add.text(width / 2, 85, progressStr, {
+        const progressText = this.add.text(50, 85, progressStr, {
             fontFamily: 'Arial',
             fontSize: '18px',
             fontStyle: 'bold',
             fill: '#38BDF8'
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+        }).setOrigin(0, 0.5).setScrollFactor(0).setDepth(10);
 
         // Achievement Button at top-right (wider to fit the count)
         const btnW = 160, btnH = 36;
@@ -584,5 +585,62 @@ export class MapScene extends Phaser.Scene {
                 this._loadProgress();
             });
         });
+
+        // Skin Selection Button to the left of Stats Button
+        const skinBtnW = 120;
+        const skinBtnX = statsBtnX - statsBtnW / 2 - skinBtnW / 2 - 15;
+        const skinBtnBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawSkinBtnBg = (color) => {
+            skinBtnBg.clear();
+            skinBtnBg.fillStyle(color, 0.85);
+            skinBtnBg.fillRoundedRect(skinBtnX - skinBtnW / 2, btnY - btnH / 2, skinBtnW, btnH, 18);
+            skinBtnBg.lineStyle(1.5, 0xffffff, 0.2);
+            skinBtnBg.strokeRoundedRect(skinBtnX - skinBtnW / 2, btnY - btnH / 2, skinBtnW, btnH, 18);
+        };
+        drawSkinBtnBg(0x059669); // Emerald Green
+
+        const skinText = this.add.text(skinBtnX, btnY, '👕 Skin', {
+            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        const skinZone = this.add.zone(skinBtnX, btnY, skinBtnW, btnH)
+            .setScrollFactor(0)
+            .setInteractive({ useHandCursor: true });
+        skinZone.setDepth(11);
+
+        skinZone.on('pointerover', () => drawSkinBtnBg(0x10B981));
+        skinZone.on('pointerout', () => drawSkinBtnBg(0x059669));
+        skinZone.on('pointerdown', () => {
+            this.sound.play('key_sound');
+            new SkinsOverlay(this, () => {
+                this._loadProgress();
+                this._applyBackground(); // Re-apply equipped background
+            });
+        });
+    }
+
+    _applyBackground() {
+        const { width, height } = this.scale;
+        const equipped = ProgressManager.getEquippedSkins();
+        const UNLOCK_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1050, 1400, 1800, 2300];
+        
+        let bgTexture = equipped.background;
+        if (bgTexture === 'random') {
+            const unlockedBgs = [];
+            for (let i = 1; i <= 10; i++) {
+                if (this.totalScoreCount >= UNLOCK_THRESHOLDS[i - 1]) {
+                    unlockedBgs.push(`bg_${i}`);
+                }
+            }
+            bgTexture = Phaser.Math.RND.pick(unlockedBgs) || 'bg_1';
+        }
+        
+        if (this.bg) {
+            this.bg.setTexture(bgTexture);
+        } else {
+            this.bg = this.add.image(width / 2, height / 2, bgTexture)
+                .setDisplaySize(width, height)
+                .setScrollFactor(0);
+        }
     }
 }
