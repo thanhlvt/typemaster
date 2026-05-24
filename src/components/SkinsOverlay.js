@@ -1,18 +1,5 @@
 import * as Phaser from 'phaser';
-import { ProgressManager } from '../utils/ProgressManager';
-
-const UNLOCK_THRESHOLDS = [
-    0,     // Item 1 (Default)
-    50,    // Item 2
-    150,   // Item 3
-    300,   // Item 4
-    500,   // Item 5
-    750,   // Item 6
-    1050,  // Item 7
-    1400,  // Item 8
-    1800,  // Item 9
-    2300   // Item 10
-];
+import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 
 export class SkinsOverlay extends Phaser.GameObjects.Container {
     constructor(scene, onClose) {
@@ -53,7 +40,7 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
         dialog.add(title);
 
         // Load progress for score
-        const totalLessons = scene.data.lessons.length;
+        const totalLessons = scene.gameData.lessons.length;
         const progress = ProgressManager.loadProgress(totalLessons);
         this.score = progress.score;
 

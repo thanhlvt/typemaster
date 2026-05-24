@@ -1,14 +1,14 @@
 import * as Phaser from 'phaser';
-import { TelexEngine }        from '../utils/TelexEngine';
-import { VirtualKeyboard }    from '../components/VirtualKeyboard';
-import { ConfirmDialog }      from '../components/ConfirmDialog';
-import { ResultOverlay }      from '../components/ResultOverlay';
-import { ProgressManager }    from '../utils/ProgressManager';
-import { TypingValidator }    from '../utils/TypingValidator';
-import { AchievementManager } from '../utils/AchievementManager';
-import { AchievementToast }   from '../components/AchievementToast';
-import { PlaySceneHUD }       from '../components/PlaySceneHUD';
-import { ComboManager }       from '../components/ComboManager';
+import { TelexEngine }           from '../utils/TelexEngine';
+import { VirtualKeyboard }       from '../components/VirtualKeyboard';
+import { ConfirmDialog }         from '../components/ConfirmDialog';
+import { ResultOverlay }         from '../components/ResultOverlay';
+import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
+import { TypingValidator }       from '../utils/TypingValidator';
+import { AchievementManager }    from '../utils/AchievementManager';
+import { AchievementToast }      from '../components/AchievementToast';
+import { PlaySceneHUD }          from '../components/PlaySceneHUD';
+import { ComboManager }          from '../components/ComboManager';
 
 export class PlayScene extends Phaser.Scene {
     constructor() {
@@ -18,19 +18,20 @@ export class PlayScene extends Phaser.Scene {
     // ── Lifecycle ─────────────────────────────────────────────────
 
     init(data) {
-        this.data = this.cache.json.get('gameData');
+        // Use gameData to avoid collision with Phaser's built-in Scene.data (DataManager)
+        this.gameData         = this.cache.json.get('gameData');
         this.currentLessonIndex = 0;
         this.currentWordIndex   = 0;
-        this.telexEngine        = new TelexEngine(this.data.telex_rules);
+        this.telexEngine        = new TelexEngine(this.gameData.telex_rules);
         this.score              = 0;
 
-        const progress = ProgressManager.loadProgress(this.data.lessons.length);
-        this.currentLessonIndex  = progress.lessonIndex;
-        this.score               = progress.score;
-        this.lessonStats         = progress.lessonStats         || {};
+        const progress = ProgressManager.loadProgress(this.gameData.lessons.length);
+        this.currentLessonIndex   = progress.lessonIndex;
+        this.score                = progress.score;
+        this.lessonStats          = progress.lessonStats          || {};
         this.unlockedAchievements = progress.unlockedAchievements || [];
-        this.consecutivePerfects = progress.consecutivePerfects  || 0;
-        this.streakDays          = progress.streakDays;
+        this.consecutivePerfects  = progress.consecutivePerfects  || 0;
+        this.streakDays           = progress.streakDays;
 
         if (data && data.lessonIndex !== undefined) {
             this.currentLessonIndex = data.lessonIndex;
@@ -46,12 +47,10 @@ export class PlayScene extends Phaser.Scene {
         this._createContentUI(width, height);
         this.virtualKeyboard = new VirtualKeyboard(this, 0, 0);
 
-        // Sub-modules
         this.hud   = new PlaySceneHUD(this);
         this.combo = new ComboManager();
         this.hud.initStreak(this.streakDays);
 
-        // Keyboard
         this.input.keyboard.on('keydown', this.handleKeyDown, this);
         this.input.keyboard.addCapture(Phaser.Input.Keyboard.KeyCodes.ESC);
         this.events.once('shutdown', () => {
@@ -60,7 +59,6 @@ export class PlayScene extends Phaser.Scene {
 
         this.startLesson();
 
-        // AudioContext resume on first interaction
         const resumeAudio = () => {
             if (this.sound.context && this.sound.context.state === 'suspended') {
                 this.sound.context.resume();
@@ -75,13 +73,13 @@ export class PlayScene extends Phaser.Scene {
     _doReset() {
         ProgressManager.clearAll();
         this.tweens.killAll();
-        this.currentLessonIndex  = 0;
-        this.currentWordIndex    = 0;
-        this.score               = 0;
-        this.streakDays          = 0;
-        this.lessonStats         = {};
+        this.currentLessonIndex   = 0;
+        this.currentWordIndex     = 0;
+        this.score                = 0;
+        this.streakDays           = 0;
+        this.lessonStats          = {};
         this.unlockedAchievements = [];
-        this.consecutivePerfects = 0;
+        this.consecutivePerfects  = 0;
         this.combo.reset();
         this.hud.hideStreak();
         this.monkey.y = this.scale.height * 0.4;
@@ -89,7 +87,7 @@ export class PlayScene extends Phaser.Scene {
         this.startLesson();
     }
 
-    // ── Content UI (typing area) ──────────────────────────────────
+    // ── Content UI ────────────────────────────────────────────────
 
     _createContentUI(width, height) {
         const bgTop    = height * 0.52;
@@ -124,7 +122,7 @@ export class PlayScene extends Phaser.Scene {
     // ── Keyboard logic ────────────────────────────────────────────
 
     highlightNextKey() {
-        const rawBuffer    = this.telexEngine.getRawBuffer();
+        const rawBuffer     = this.telexEngine.getRawBuffer();
         const targetKeysStr = this.targetKeys.toLowerCase();
         const currentCounts = {};
 
@@ -175,38 +173,30 @@ export class PlayScene extends Phaser.Scene {
         this.lessonStartTime  = Date.now();
         // combo intentionally NOT reset here — persists across lessons
 
-        const lesson = this.data.lessons[this.currentLessonIndex];
+        const lesson = this.gameData.lessons[this.currentLessonIndex];
         this.totalKeysInLesson = lesson.content.reduce((sum, item) => sum + item.keys.length, 0);
 
         this._applySkins();
-
         this.showWord();
-        this.hud.updateProgress(this.currentLessonIndex, this.data.lessons.length, this.score);
+        this.hud.updateProgress(this.currentLessonIndex, this.gameData.lessons.length, this.score);
     }
 
     _applySkins() {
         const equipped = ProgressManager.getEquippedSkins();
-        const UNLOCK_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1050, 1400, 1800, 2300];
-        
+
         let bgTexture = equipped.background;
         if (bgTexture === 'random') {
-            const unlockedBgs = [];
-            for (let i = 1; i <= 10; i++) {
-                if (this.score >= UNLOCK_THRESHOLDS[i - 1]) {
-                    unlockedBgs.push(`bg_${i}`);
-                }
-            }
+            const unlockedBgs = UNLOCK_THRESHOLDS
+                .map((threshold, i) => this.score >= threshold ? `bg_${i + 1}` : null)
+                .filter(Boolean);
             bgTexture = Phaser.Math.RND.pick(unlockedBgs) || 'bg_1';
         }
-        
+
         let monkeyTexture = equipped.monkey;
         if (monkeyTexture === 'random') {
-            const unlockedMonkeys = [];
-            for (let i = 1; i <= 10; i++) {
-                if (this.score >= UNLOCK_THRESHOLDS[i - 1]) {
-                    unlockedMonkeys.push(`monkey_${i}`);
-                }
-            }
+            const unlockedMonkeys = UNLOCK_THRESHOLDS
+                .map((threshold, i) => this.score >= threshold ? `monkey_${i + 1}` : null)
+                .filter(Boolean);
             monkeyTexture = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
         }
 
@@ -215,7 +205,7 @@ export class PlayScene extends Phaser.Scene {
     }
 
     showWord() {
-        const lesson   = this.data.lessons[this.currentLessonIndex];
+        const lesson   = this.gameData.lessons[this.currentLessonIndex];
         const wordData = lesson.content[this.currentWordIndex];
         this.targetWord = wordData.display;
         this.targetKeys = wordData.keys;
@@ -232,11 +222,10 @@ export class PlayScene extends Phaser.Scene {
 
         const multiplier = this.combo.onSuccess();
         this.score += multiplier;
-        this.hud.updateProgress(this.currentLessonIndex, this.data.lessons.length, this.score);
+        this.hud.updateProgress(this.currentLessonIndex, this.gameData.lessons.length, this.score);
         this.combo.checkMilestone(this);
         if (multiplier >= 2) this.combo.showPopup(this, multiplier);
 
-        // Monkey jump
         this.tweens.add({
             targets: this.monkey,
             y: this.monkey.y - 50,
@@ -244,7 +233,6 @@ export class PlayScene extends Phaser.Scene {
             onComplete: () => this.nextWord()
         });
 
-        // Floating +N score popup
         const { width } = this.scale;
         const popupColor = multiplier >= 4 ? '#C084FC'
                          : multiplier >= 3 ? '#F87171'
@@ -262,7 +250,6 @@ export class PlayScene extends Phaser.Scene {
             onComplete: () => scorePopup.destroy()
         });
 
-        // Falling banana
         const banana = this.add.image(this.monkey.x, 0, 'banana').setScale(0.3);
         this.tweens.add({
             targets: banana, y: this.monkey.y, alpha: 0, duration: 500,
@@ -280,7 +267,7 @@ export class PlayScene extends Phaser.Scene {
 
     nextWord() {
         this.currentWordIndex++;
-        const lesson = this.data.lessons[this.currentLessonIndex];
+        const lesson = this.gameData.lessons[this.currentLessonIndex];
 
         if (this.currentWordIndex >= lesson.content.length) {
             this.lessonEndTime = Date.now();
@@ -297,22 +284,21 @@ export class PlayScene extends Phaser.Scene {
         this.sound.play('level_sound');
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
-        const total       = this.totalKeysInLesson || 1;
-        const accuracy    = Math.round((total / (total + this.errorsInLesson)) * 100);
-        const durationMin = (this.lessonEndTime - this.lessonStartTime) / 60000;
-        const wpm         = Math.round((total / 5) / durationMin) || 0;
-        const isLastLesson = this.currentLessonIndex === this.data.lessons.length - 1;
+        // Update streak data immediately so achievement check gets the correct value.
+        // The visual animation is deferred until the user dismisses the overlay.
+        const { streakDays: newStreakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
+        this.streakDays = newStreakDays;
 
-        // Stars & stats
-        const stars    = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
-        
-        // Save to attempt history
+        const total        = this.totalKeysInLesson || 1;
+        const accuracy     = Math.round((total / (total + this.errorsInLesson)) * 100);
+        const durationMin  = (this.lessonEndTime - this.lessonStartTime) / 60000;
+        const wpm          = Math.round((total / 5) / durationMin) || 0;
+        const isLastLesson = this.currentLessonIndex === this.gameData.lessons.length - 1;
+
+        const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
+
         ProgressManager.saveHistory({
-            lessonIndex: this.currentLessonIndex,
-            wpm,
-            accuracy,
-            stars,
-            timestamp: Date.now()
+            lessonIndex: this.currentLessonIndex, wpm, accuracy, stars, timestamp: Date.now()
         });
 
         const oldStats = this.lessonStats[this.currentLessonIndex] || { stars: 0, wpm: 0, accuracy: 0 };
@@ -325,17 +311,16 @@ export class PlayScene extends Phaser.Scene {
         if (accuracy === 100) { this.consecutivePerfects++; }
         else                  { this.consecutivePerfects = 0; }
 
-        // Achievement check
         const sessionData = {
             lessonIndex: this.currentLessonIndex, stars, wpm, accuracy,
             totalKeys: total, timeOfCompletion: new Date()
         };
         const progress = {
-            lessonStats: this.lessonStats,
+            lessonStats:          this.lessonStats,
             unlockedAchievements: this.unlockedAchievements,
-            consecutivePerfects: this.consecutivePerfects,
-            streakDays: this.streakDays,
-            score: this.score
+            consecutivePerfects:  this.consecutivePerfects,
+            streakDays:           this.streakDays,   // accurate: updated above
+            score:                this.score
         };
 
         const newlyUnlocked = AchievementManager.checkAchievements(sessionData, progress, oldStats);
@@ -349,17 +334,19 @@ export class PlayScene extends Phaser.Scene {
             this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
         );
 
-        // Result overlay + keyboard shortcuts
         const cleanUp = () => {
             this.input.keyboard.off('keyup-SPACE',  handleContinue);
             this.input.keyboard.off('keyup-ENTER',  handleRetry);
             this.input.keyboard.off('keydown-ESC',  handleBackToMap);
         };
 
+        // Show streak animation after overlay is dismissed so it's clearly visible
+        const showStreakVisual = () => { if (isNewStreakDay) this.hud.showStreak(newStreakDays); };
+
         const handleContinue = () => {
             if (!isLastLesson) {
                 cleanUp(); overlay.destroy();
-                this._checkAndUpdateStreak();
+                showStreakVisual();
                 this.input.keyboard.on('keydown', this.handleKeyDown, this);
                 this.currentLessonIndex++;
                 ProgressManager.saveProgress(
@@ -372,14 +359,14 @@ export class PlayScene extends Phaser.Scene {
 
         const handleRetry = () => {
             cleanUp(); overlay.destroy();
-            this._checkAndUpdateStreak();
+            showStreakVisual();
             this.input.keyboard.on('keydown', this.handleKeyDown, this);
             this.startLesson();
         };
 
         const handleBackToMap = () => {
             cleanUp(); overlay.destroy();
-            this._checkAndUpdateStreak();
+            showStreakVisual();
             this.scene.start('MapScene');
         };
 
@@ -391,13 +378,5 @@ export class PlayScene extends Phaser.Scene {
 
         overlay.on('continue', () => { cleanUp(); handleContinue(); });
         overlay.on('retry',    () => { cleanUp(); handleRetry(); });
-    }
-
-    // ── Streak helper ─────────────────────────────────────────────
-
-    _checkAndUpdateStreak() {
-        const { streakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
-        this.streakDays = streakDays;
-        if (isNewStreakDay) this.hud.showStreak(streakDays);
     }
 }

@@ -1,58 +1,50 @@
 const SAVE_KEY = 'typemaster_progress';
 
+export const UNLOCK_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1050, 1400, 1800, 2300];
+
 export class ProgressManager {
+
+    static _toDateStr(date) {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    }
+
     static loadProgress(totalLessons) {
-        let lessonIndex = 0;
-        let score = 0;
-        let lessonStats = {};
-        let unlockedAchievements = [];
-        let consecutivePerfects = 0;
-        let streakDays = 0;
+        let lessonIndex = 0, score = 0, lessonStats = {}, unlockedAchievements = [],
+            consecutivePerfects = 0, streakDays = 0;
 
         try {
             const saved = JSON.parse(localStorage.getItem(SAVE_KEY));
             if (saved) {
-                lessonIndex = Math.min(saved.lessonIndex || 0, totalLessons - 1);
-                score = saved.score || 0;
+                lessonIndex          = Math.min(saved.lessonIndex || 0, totalLessons - 1);
+                score                = saved.score || 0;
                 unlockedAchievements = saved.unlockedAchievements || [];
-                consecutivePerfects = saved.consecutivePerfects || 0;
+                consecutivePerfects  = saved.consecutivePerfects  || 0;
 
-                // Handle migration from old lessonStars to new lessonStats
                 if (saved.lessonStats) {
                     lessonStats = saved.lessonStats;
                 } else if (saved.lessonStars) {
-                    const oldStars = saved.lessonStars;
-                    for (const key in oldStars) {
-                        lessonStats[key] = {
-                            stars: oldStars[key],
-                            wpm: 0,
-                            accuracy: 0
-                        };
+                    for (const key in saved.lessonStars) {
+                        lessonStats[key] = { stars: saved.lessonStars[key], wpm: 0, accuracy: 0 };
                     }
                 }
             }
         } catch (_) { }
 
-        // Load streak for display
         try {
             const streakData = JSON.parse(localStorage.getItem('typemaster_streak'));
             if (streakData) {
                 streakDays = streakData.streakDays || 0;
                 const lastPlayDate = streakData.lastPlayDate;
-                
                 if (lastPlayDate) {
-                    const today = new Date();
-                    const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-                    const yesterday = new Date(today);
+                    const today        = new Date();
+                    const todayStr     = ProgressManager._toDateStr(today);
+                    const yesterday    = new Date(today);
                     yesterday.setDate(yesterday.getDate() - 1);
-                    const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth()+1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
-                    
+                    const yesterdayStr = ProgressManager._toDateStr(yesterday);
+
                     if (lastPlayDate !== todayStr && lastPlayDate !== yesterdayStr) {
                         streakDays = 0;
-                        localStorage.setItem('typemaster_streak', JSON.stringify({
-                            streakDays: 0,
-                            lastPlayDate: lastPlayDate
-                        }));
+                        localStorage.setItem('typemaster_streak', JSON.stringify({ streakDays: 0, lastPlayDate }));
                     }
                 }
             }
@@ -63,11 +55,7 @@ export class ProgressManager {
 
     static saveProgress(lessonIndex, score, lessonStats, unlockedAchievements = [], consecutivePerfects = 0) {
         localStorage.setItem(SAVE_KEY, JSON.stringify({
-            lessonIndex,
-            score,
-            lessonStats,
-            unlockedAchievements,
-            consecutivePerfects
+            lessonIndex, score, lessonStats, unlockedAchievements, consecutivePerfects
         }));
     }
 
@@ -75,86 +63,59 @@ export class ProgressManager {
         try {
             const history = ProgressManager.loadHistory();
             history.push(entry);
-            if (history.length > 50) {
-                history.splice(0, history.length - 50);
-            }
+            if (history.length > 50) history.splice(0, history.length - 50);
             localStorage.setItem('typemaster_history', JSON.stringify(history));
-        } catch (_) {}
+        } catch (_) { }
     }
 
     static loadHistory() {
-        try {
-            return JSON.parse(localStorage.getItem('typemaster_history')) || [];
-        } catch (_) {
-            return [];
-        }
+        try { return JSON.parse(localStorage.getItem('typemaster_history')) || []; }
+        catch (_) { return []; }
     }
 
     static getEquippedSkins() {
-        try {
-            return JSON.parse(localStorage.getItem('typemaster_equipped_skins')) || { monkey: 'random', background: 'random' };
-        } catch (_) {
-            return { monkey: 'random', background: 'random' };
-        }
+        try { return JSON.parse(localStorage.getItem('typemaster_equipped_skins')) || { monkey: 'random', background: 'random' }; }
+        catch (_) { return { monkey: 'random', background: 'random' }; }
     }
 
     static saveEquippedSkins(skins) {
-        try {
-            localStorage.setItem('typemaster_equipped_skins', JSON.stringify(skins));
-        } catch (_) {}
+        try { localStorage.setItem('typemaster_equipped_skins', JSON.stringify(skins)); } catch (_) { }
     }
 
     static getAudioSettings() {
-        try {
-            return JSON.parse(localStorage.getItem('typemaster_audio_settings')) || { mute: false, volume: 1.0 };
-        } catch (_) {
-            return { mute: false, volume: 1.0 };
-        }
+        try { return JSON.parse(localStorage.getItem('typemaster_audio_settings')) || { mute: false, volume: 1.0 }; }
+        catch (_) { return { mute: false, volume: 1.0 }; }
     }
 
     static saveAudioSettings(settings) {
-        try {
-            localStorage.setItem('typemaster_audio_settings', JSON.stringify(settings));
-        } catch (_) {}
+        try { localStorage.setItem('typemaster_audio_settings', JSON.stringify(settings)); } catch (_) { }
     }
 
     static clearAll() {
-        localStorage.clear();
+        ['typemaster_progress', 'typemaster_streak', 'typemaster_history',
+         'typemaster_equipped_skins', 'typemaster_audio_settings']
+            .forEach(key => localStorage.removeItem(key));
     }
 
     static checkAndUpdateStreak() {
-        let storedStreak = 0;
-        let storedDate = null;
+        let storedStreak = 0, storedDate = null;
         try {
             const data = JSON.parse(localStorage.getItem('typemaster_streak'));
-            if (data) {
-                storedStreak = data.streakDays || 0;
-                storedDate = data.lastPlayDate;
-            }
-        } catch(e) {}
+            if (data) { storedStreak = data.streakDays || 0; storedDate = data.lastPlayDate; }
+        } catch (_) { }
 
-        const today = new Date();
-        const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-        
-        let newStreak = storedStreak;
+        const today        = new Date();
+        const todayStr     = ProgressManager._toDateStr(today);
+        let newStreak      = storedStreak;
         let isNewStreakDay = false;
 
         if (storedDate !== todayStr) {
-            const yesterday = new Date(today);
+            const yesterday    = new Date(today);
             yesterday.setDate(yesterday.getDate() - 1);
-            const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth()+1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
-            
-            if (storedDate === yesterdayStr) {
-                newStreak++;
-            } else {
-                newStreak = 1;
-            }
-            
-            localStorage.setItem('typemaster_streak', JSON.stringify({
-                lastPlayDate: todayStr,
-                streakDays: newStreak
-            }));
-            
+            const yesterdayStr = ProgressManager._toDateStr(yesterday);
+
+            newStreak = (storedDate === yesterdayStr) ? storedStreak + 1 : 1;
+            localStorage.setItem('typemaster_streak', JSON.stringify({ lastPlayDate: todayStr, streakDays: newStreak }));
             isNewStreakDay = true;
         }
 

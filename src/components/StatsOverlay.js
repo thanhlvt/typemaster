@@ -39,7 +39,7 @@ export class StatsOverlay extends Phaser.GameObjects.Container {
         dialog.add(title);
 
         // Fetch data
-        const totalLessons = scene.data.lessons.length;
+        const totalLessons = scene.gameData.lessons.length;
         const progress = ProgressManager.loadProgress(totalLessons);
         const history = ProgressManager.loadHistory();
 
@@ -379,7 +379,7 @@ export class StatsOverlay extends Phaser.GameObjects.Container {
 
                         // Update Tooltip Contents
                         const entry = bar.entry;
-                        const lesson = scene.data.lessons[entry.lessonIndex];
+                        const lesson = scene.gameData.lessons[entry.lessonIndex];
                         const lessonTitle = lesson ? lesson.title : 'Bài học';
 
                         tooltipTitle.setText(`Bài ${entry.lessonIndex + 1}: ${lessonTitle}`);

@@ -1,4 +1,5 @@
 import * as Phaser from 'phaser';
+import { TypingValidator } from '../utils/TypingValidator';
 
 export class VirtualKeyboard extends Phaser.GameObjects.Container {
     constructor(scene, x, y) {
@@ -167,7 +168,7 @@ export class VirtualKeyboard extends Phaser.GameObjects.Container {
             });
 
             // Highlight finger
-            const finger = this.getFingerForKey(nextCharToHighlight);
+            const finger = TypingValidator.getFingerForKey(nextCharToHighlight);
             if (finger && this.fingerDots[finger]) {
                 const dot = this.fingerDots[finger];
                 this.scene.tweens.add({
@@ -194,17 +195,4 @@ export class VirtualKeyboard extends Phaser.GameObjects.Container {
         }
     }
 
-    getFingerForKey(key) {
-        const fingerMap = {
-            'q': 'L1', 'a': 'L1', 'z': 'L1',
-            'w': 'L2', 's': 'L2', 'x': 'L2',
-            'e': 'L3', 'd': 'L3', 'c': 'L3',
-            'r': 'L4', 't': 'L4', 'f': 'L4', 'g': 'L4', 'v': 'L4', 'b': 'L4',
-            'y': 'R4', 'u': 'R4', 'h': 'R4', 'j': 'R4', 'n': 'R4', 'm': 'R4',
-            'i': 'R3', 'k': 'R3',
-            'o': 'R2', 'l': 'R2',
-            'p': 'R1'
-        };
-        return fingerMap[key];
-    }
 }

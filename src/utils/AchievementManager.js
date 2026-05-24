@@ -3,7 +3,6 @@ export const ACHIEVEMENTS = [
     { id: 'beginner', title: 'Người mới', desc: 'Hoàn thành bài 1', icon: '👶' },
     { id: 'explorer', title: 'Nhà thám hiểm', desc: 'Hoàn thành bài 50', icon: '🗺️' },
     { id: 'star_100', title: 'Ngôi sao', desc: 'Hoàn thành bài 100', icon: '⭐' },
-    { id: 'star_200', title: 'Siêu sao', desc: 'Hoàn thành bài 200', icon: '🌟' },
 
     // --- Group 2: Typing Speed (Tốc độ gõ) ---
     { id: 'speedy', title: 'Tốc ký', desc: 'Tốc độ gõ WPM ≥ 50', icon: '⚡' },
@@ -53,10 +52,6 @@ export class AchievementManager {
 
         // 3. star_100
         checkUnlock('star_100', sessionData.lessonIndex === 99);
-
-        // 4. star_200
-        checkUnlock('star_200', sessionData.lessonIndex === 199);
-
 
         // --- Group 2: Typing Speed (Tốc độ gõ) ---
         // 5. speedy
