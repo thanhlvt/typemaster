@@ -6,7 +6,7 @@ import { StatsOverlay } from '../components/StatsOverlay';
 import { SkinsOverlay } from '../components/SkinsOverlay';
 import { OptionsOverlay } from '../components/OptionsOverlay';
 import { ConfirmDialog } from '../components/ConfirmDialog';
-import { CHAPTERS, getChapterForLesson, getChapterProgress, isChapterUnlocked } from '../data/chapters';
+import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson, getChapterProgress, isChapterUnlocked } from '../data/chapters';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -63,14 +63,33 @@ export class MapScene extends Phaser.Scene {
             .fillRect(0, 0, width, height)
             .setScrollFactor(0);
 
+        // Sidebar geometry (defined early so grid can leave room for it).
+        // Sidebar pinned right, spans most of the vertical area between header and reset button.
+        const sidebarW           = 220;
+        const sidebarRightMargin = 20;
+        const sidebarTopMargin   = 195; // sits just below the fixed header (175 tall) + 20 gap
+        const sidebarBottomMargin = 80; // leaves room for the Reset FAB below
+        const sidebarH           = height - sidebarTopMargin - sidebarBottomMargin;
+        const sidebarX           = width - sidebarW / 2 - sidebarRightMargin;
+        const sidebarY           = sidebarTopMargin + sidebarH / 2;
+        const sidebarGap         = 30; // gap between grid right edge and sidebar
+
         const totalLessons = this.gameData.lessons.length;
-        const columns      = 5;
+        const columns      = 4;
         const rows         = Math.ceil(totalLessons / columns);
         const startY       = 230;
         const rowHeight    = 150;
         const colWidth     = 180;
-        const gridWidth    = (columns - 1) * colWidth;
-        const startX       = (width - gridWidth) / 2;
+        const cardHalfW    = 70;
+        const gridWidth    = (columns - 1) * colWidth;             // center-to-center span
+        const gridVisualSpan = gridWidth + 2 * cardHalfW;          // edge-to-edge span
+
+        // Center grid within the area left of the sidebar.
+        const gridLeftMargin = 40;
+        const gridRightEdge  = sidebarX - sidebarW / 2 - sidebarGap;
+        const availableW     = gridRightEdge - gridLeftMargin;
+        const startX         = gridLeftMargin + cardHalfW + Math.max(0, (availableW - gridVisualSpan) / 2);
+
         const totalScrollHeight = startY + rows * rowHeight + 80;
 
         this.cameras.main.setBounds(0, 0, width, totalScrollHeight);
@@ -85,8 +104,7 @@ export class MapScene extends Phaser.Scene {
             this.createLessonButton(x, y, i, isUnlocked, stars);
         }
 
-        // ── Sidebar bounds ────────────────────────────────────────
-        const sidebarW = 180, sidebarH = 300, sidebarX = width - sidebarW / 2 - 20, sidebarY = height / 2 + 50;
+        // ── Sidebar hit test (geometry defined earlier near grid layout) ──
         const isSidebarHit = (p) =>
             p.x >= sidebarX - sidebarW / 2 && p.x <= sidebarX + sidebarW / 2 &&
             p.y >= sidebarY - sidebarH / 2 && p.y <= sidebarY + sidebarH / 2;
@@ -116,11 +134,27 @@ export class MapScene extends Phaser.Scene {
         this.cameras.main.scrollY = 0;
         this.time.delayedCall(100, () => {
             this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 600, ease: 'Cubic.easeOut' });
+            
+            // Sync Sidebar scroll initially
+            const currentCh = getChapterForLesson(this.currentLessonIndex);
+            const btn = sidebarBtnData.find(b => b.chapter.id === currentCh.id);
+            if (btn) {
+                const targetScroll = Phaser.Math.Clamp((maskY + maskH / 2) - btn.btnLocalY, -maxScroll, 0);
+                this.tweens.add({
+                    targets: listContainer,
+                    y: targetScroll,
+                    duration: 600,
+                    ease: 'Cubic.easeOut',
+                    onUpdate: () => {
+                        scrollYOffset = listContainer.y;
+                    }
+                });
+            }
         });
 
 
 
-        // ── FAB "Reset Data" ──────────────────────────────────────
+        // ── FAB "Reset Data" (left side) ──────────────────────────
         const resetW = 80, resetH = 40;
         const resetX = 20 + resetW / 2;
         const resetY = height - resetH / 2 - 20;
@@ -142,6 +176,8 @@ export class MapScene extends Phaser.Scene {
         const resetZone = this.add.zone(resetX, resetY, resetW, resetH)
             .setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
 
+        const stopEvent = (_p, _x, _y, event) => { if (event) event.stopPropagation(); };
+
         resetZone.on('pointerover', () => {
             drawResetBg(0x991b1b, 0xFEE2E2); // lighter red on hover
             this.tweens.add({ targets: resetText, scaleX: 1.05, scaleY: 1.05, duration: 100 });
@@ -150,12 +186,72 @@ export class MapScene extends Phaser.Scene {
             drawResetBg(0x7f1d1d, 0xFCA5A5);
             this.tweens.add({ targets: resetText, scaleX: 1.0, scaleY: 1.0, duration: 100 });
         });
-        resetZone.on('pointerdown', () => {
+        resetZone.on('pointerdown', stopEvent);
+        resetZone.on('pointerup', (pointer, localX, localY, event) => {
+            if (event) event.stopPropagation();
             this.sound.play('key_sound');
             new ConfirmDialog(this, () => {
                 ProgressManager.clearAll();
                 this.scene.restart();
             });
+        });
+
+        // ── FAB "Bài hiện tại" (right side, below sidebar) ────────
+        const fabW = 120, fabH = 40;
+        const fabX = sidebarX;
+        const fabY = height - fabH / 2 - 20;
+
+        const fabBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawFabBg = (color, strokeColor = 0xFBBF24) => {
+            fabBg.clear();
+            fabBg.fillStyle(color, 0.9);
+            fabBg.fillRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
+            fabBg.lineStyle(1.5, strokeColor, 1);
+            fabBg.strokeRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
+        };
+        drawFabBg(0x0f172a, 0xFBBF24); // Deep Slate background, Gold border
+
+        const fabText = this.add.text(fabX, fabY, '📍 Bài hiện tại', {
+            fontFamily: 'Arial', fontSize: '14px', fontStyle: 'bold', fill: '#FBBF24'
+        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+
+        const fabZone = this.add.zone(fabX, fabY, fabW, fabH)
+            .setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+
+        fabZone.on('pointerover', () => {
+            drawFabBg(0x1e293b, 0xFFD700);
+            this.tweens.add({ targets: fabText, scaleX: 1.05, scaleY: 1.05, duration: 100 });
+        });
+        fabZone.on('pointerout', () => {
+            drawFabBg(0x0f172a, 0xFBBF24);
+            this.tweens.add({ targets: fabText, scaleX: 1.0, scaleY: 1.0, duration: 100 });
+        });
+        fabZone.on('pointerdown', stopEvent);
+        fabZone.on('pointerup', (pointer, localX, localY, event) => {
+            if (event) event.stopPropagation();
+            this.sound.play('key_sound');
+            this.tweens.add({
+                targets: this.cameras.main,
+                scrollY: targetScrollY,
+                duration: 500,
+                ease: 'Cubic.easeOut'
+            });
+
+            // Sync Sidebar scroll
+            const currentCh = getChapterForLesson(this.currentLessonIndex);
+            const btn = sidebarBtnData.find(b => b.chapter.id === currentCh.id);
+            if (btn) {
+                const targetScroll = Phaser.Math.Clamp((maskY + maskH / 2) - btn.btnLocalY, -maxScroll, 0);
+                this.tweens.add({
+                    targets: listContainer,
+                    y: targetScroll,
+                    duration: 500,
+                    ease: 'Cubic.easeOut',
+                    onUpdate: () => {
+                        scrollYOffset = listContainer.y;
+                    }
+                });
+            }
         });
 
         // ── Sidebar ───────────────────────────────────────────────
@@ -166,9 +262,12 @@ export class MapScene extends Phaser.Scene {
         const sbBlocker = this.add.rectangle(sidebarX, sidebarY, sidebarW, sidebarH, 0x000000, 0)
             .setOrigin(0.5).setScrollFactor(0).setDepth(9.5).setInteractive();
 
-        const totalChapters = CHAPTERS.length;
-        const btnW = 160, btnH = 46, itemSpacing = 54;
-        const contentHeight = totalChapters * itemSpacing;
+        const btnW = sidebarW - 20, btnH = 46, itemSpacing = 54;
+        const groupHeaderHeight = 28; // height for "🌿 Khu rừng" separator label
+        const groupGap          = 10; // extra gap above each group header (except first)
+        // Total content = sum of (header + N*itemSpacing) per group, plus inter-group gaps.
+        const contentHeight =
+            CHAPTER_GROUPS.reduce((sum, g, idx) => sum + groupHeaderHeight + g.chapterIds.length * itemSpacing + (idx > 0 ? groupGap : 0), 0);
 
         const sbBg = this.add.graphics().setScrollFactor(0).setDepth(10);
         sbBg.fillStyle(0x0f172a, 0.85);
@@ -196,55 +295,79 @@ export class MapScene extends Phaser.Scene {
         };
 
         const sidebarBtnData = [];
-        for (let j = 0; j < totalChapters; j++) {
-            const chapter = CHAPTERS[j];
-            const btnX    = sidebarX;
-            const btnLocalY = sidebarY - sidebarH / 2 + 55 + j * itemSpacing;
-            
-            const progress = getChapterProgress(chapter, this.lessonStars);
-            const unlocked = isChapterUnlocked(chapter, this.lessonStars);
+        const btnX = sidebarX;
+        let cursorY = sidebarY - sidebarH / 2 + 38; // top of list area (below sidebar title)
+        let btnIndex = 0;
 
-            const btnBg = this.add.graphics();
-            const drawBtnBg = (color, strokeColor = 0x475569) => {
-                btnBg.clear();
-                btnBg.fillStyle(color, 0.9);
-                btnBg.fillRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 12);
-                btnBg.lineStyle(1.5, strokeColor, 1);
-                btnBg.strokeRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 12);
-            };
-            
-            if (unlocked) {
-                drawBtnBg(0x1e293b);
-            } else {
-                drawBtnBg(0x0f172a, 0x1e293b);
+        for (let gIdx = 0; gIdx < CHAPTER_GROUPS.length; gIdx++) {
+            const group = CHAPTER_GROUPS[gIdx];
+            if (gIdx > 0) cursorY += groupGap;
+
+            // Group separator label
+            const groupLabelY = cursorY + groupHeaderHeight / 2;
+            const groupLabel = this.add.text(btnX, groupLabelY, `${group.emoji}  ${group.name.toUpperCase()}`, {
+                fontFamily: 'Arial', fontSize: '11px', fontStyle: 'bold', fill: '#64748B'
+            }).setOrigin(0.5).setAlpha(0.85);
+            listContainer.add(groupLabel);
+
+            // Thin divider line under group label
+            const div = this.add.graphics();
+            div.lineStyle(1, 0x334155, 0.5);
+            div.lineBetween(btnX - btnW / 2 + 8, groupLabelY + 12, btnX + btnW / 2 - 8, groupLabelY + 12);
+            listContainer.add(div);
+
+            cursorY += groupHeaderHeight;
+
+            // Chapters in this group
+            for (const chapterId of group.chapterIds) {
+                const chapter = CHAPTERS.find(c => c.id === chapterId);
+                if (!chapter) continue;
+
+                const btnLocalY = cursorY + itemSpacing / 2;
+                const progress = getChapterProgress(chapter, this.lessonStars);
+                const unlocked = isChapterUnlocked(chapter, this.lessonStars);
+
+                const btnBg = this.add.graphics();
+                const drawBtnBg = (color, strokeColor = 0x475569) => {
+                    btnBg.clear();
+                    btnBg.fillStyle(color, 0.9);
+                    btnBg.fillRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 12);
+                    btnBg.lineStyle(1.5, strokeColor, 1);
+                    btnBg.strokeRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 12);
+                };
+
+                if (unlocked) {
+                    drawBtnBg(0x1e293b);
+                } else {
+                    drawBtnBg(0x0f172a, 0x1e293b);
+                }
+                listContainer.add(btnBg);
+
+                // Body: emoji + chapter name (no status dot)
+                const btnText = this.add.text(btnX - btnW/2 + 14, btnLocalY, `${chapter.emoji} ${chapter.name}`, {
+                    fontFamily: 'Outfit, Arial', fontSize: '14px', fontStyle: 'bold', fill: unlocked ? '#FFFFFF' : '#64748B'
+                }).setOrigin(0, 0.5);
+                listContainer.add(btnText);
+
+                // Progress right
+                const rightText = this.add.text(btnX + btnW/2 - 12, btnLocalY, `${progress.done}/${progress.total}`, {
+                    fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: unlocked ? '#94A3B8' : '#475569'
+                }).setOrigin(1, 0.5);
+                listContainer.add(rightText);
+
+                sidebarBtnData.push({ j: btnIndex++, chapter, unlocked, drawBtnBg, btnText, btnX, btnLocalY, btnW, btnH });
+
+                cursorY += itemSpacing;
             }
-            listContainer.add(btnBg);
+        }
 
-            // Dot
-            const dot = this.add.graphics();
-            if (progress.isComplete) {
-                dot.fillStyle(0x2dd4bf, 1);
-            } else if (progress.isActive || (unlocked && progress.done === 0)) {
-                dot.fillStyle(0xf59e0b, 1);
-            } else {
-                dot.fillStyle(0x475569, 1);
-            }
-            dot.fillCircle(btnX - btnW/2 + 16, btnLocalY, 5);
-            listContainer.add(dot);
-
-            // Body
-            const btnText = this.add.text(btnX - btnW/2 + 30, btnLocalY, `${chapter.emoji} ${chapter.name}`, {
-                fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: unlocked ? '#FFFFFF' : '#64748B'
-            }).setOrigin(0, 0.5);
-            listContainer.add(btnText);
-            
-            // Progress Right
-            const rightText = this.add.text(btnX + btnW/2 - 10, btnLocalY, `${progress.done}/${progress.total}`, {
-                fontFamily: 'Arial', fontSize: '11px', fill: unlocked ? '#94A3B8' : '#475569'
-            }).setOrigin(1, 0.5);
-            listContainer.add(rightText);
-
-            sidebarBtnData.push({ j, chapter, unlocked, drawBtnBg, btnText, btnX, btnLocalY, btnW, btnH });
+        // Auto-scroll sidebar so the user's current chapter is centered (essential with 50 chapters).
+        const activeChapter = getChapterForLesson(this.currentLessonIndex);
+        const activeBtn = sidebarBtnData.find(b => b.chapter.id === activeChapter.id);
+        if (activeBtn) {
+            const desiredScroll = maskY + maskH / 2 - activeBtn.btnLocalY;
+            scrollYOffset = Phaser.Math.Clamp(desiredScroll, -maxScroll, 0);
+            listContainer.y = scrollYOffset;
         }
 
         const getSidebarBtn = (px, py) => {
