@@ -39,10 +39,32 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
+
+      - name: Minify JSON files in dist
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+            let count = 0, saved = 0;
+            function walk(dir) {
+              for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+                const full = path.join(dir, entry.name);
+                if (entry.isDirectory()) { walk(full); }
+                else if (entry.name.endsWith('.json')) {
+                  const before = fs.statSync(full).size;
+                  fs.writeFileSync(full, JSON.stringify(JSON.parse(fs.readFileSync(full, 'utf8'))));
+                  saved += before - fs.statSync(full).size;
+                  count++;
+                }
+              }
+            }
+            walk('dist');
+            console.log('Minified ' + count + ' JSON files, saved ' + (saved / 1024).toFixed(1) + ' KB');
+          "
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
