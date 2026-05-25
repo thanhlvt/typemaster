@@ -25,7 +25,7 @@ export class BootScene extends Phaser.Scene {
         // Load chapter-based backgrounds: bg_<groupId>_<positionInGroup>
         for (const chapter of CHAPTERS) {
             const key = getChapterBgKey(chapter);
-            this.load.image(key, `assets/${key}.png`);
+            this.load.image(key, `assets/${key}.jpg`);
         }
         // Load monkey skins (still score-based)
         for (let i = 1; i <= 10; i++) {
