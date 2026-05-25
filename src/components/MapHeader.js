@@ -30,7 +30,7 @@ export class MapHeader extends Phaser.GameObjects.Container {
         const row1Y = 35;
         
         // Title
-        const titleText = scene.add.text(20, row1Y - 10, '🐵 BẢN ĐỒ RỪNG', {
+        const titleText = scene.add.text(20, row1Y - 10, '🐵 TYPING MONKEY', {
             fontFamily: 'Outfit, Arial', fontSize: '26px', fontStyle: 'bold',
             fill: '#FBBF24', stroke: '#000000', strokeThickness: 4
         }).setOrigin(0, 0.5);

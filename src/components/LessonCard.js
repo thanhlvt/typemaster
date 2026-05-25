@@ -64,7 +64,9 @@ export class LessonCard extends Phaser.GameObjects.Container {
                 fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#64748B', alpha: 0.3
             }).setOrigin(0.5));
             this.add(scene.add.text(0, 20, '🔒', {
-                fontSize: '28px'
+                fontFamily: 'Segoe UI Emoji, Arial',
+                fontSize: '28px',
+                padding: { top: 10, bottom: 10, left: 10, right: 10 }
             }).setOrigin(0.5));
             scene.add.existing(this);
             return; // Not interactive
@@ -75,7 +77,8 @@ export class LessonCard extends Phaser.GameObjects.Container {
                 fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.7
             }).setOrigin(0.5));
             this.add(scene.add.text(0, 20, '🔓 Sắp mở', {
-                fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.8
+                fontFamily: 'Segoe UI Emoji, Arial', fontSize: '15px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.8,
+                padding: { top: 6, bottom: 6, left: 6, right: 6 }
             }).setOrigin(0.5));
             scene.add.existing(this);
             return; // Not interactive
