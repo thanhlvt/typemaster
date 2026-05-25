@@ -1,5 +1,4 @@
 import * as Phaser from 'phaser';
-console.log('Phaser imported:', Phaser.VERSION);
 import { BootScene } from './scenes/BootScene';
 import { MapScene } from './scenes/MapScene';
 import { PlayScene } from './scenes/PlayScene';
@@ -25,15 +24,6 @@ const config = {
     scene: [BootScene, MapScene, PlayScene, SprintScene]
 };
 
-console.log('Script main.js is running');
-
 window.addEventListener('load', () => {
-    console.log('Window loaded, initializing game');
-    try {
-        console.log('Phaser version:', Phaser.VERSION);
-        const game = new Phaser.Game(config);
-        console.log('Game instance created:', game);
-    } catch (e) {
-        console.error('Error initializing Phaser:', e);
-    }
+    new Phaser.Game(config);
 });

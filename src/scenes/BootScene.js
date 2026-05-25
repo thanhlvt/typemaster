@@ -54,6 +54,9 @@ export class BootScene extends Phaser.Scene {
     }
 
     preload() {
+        // Hide HTML splash before drawing progress bar
+        document.getElementById('splash-lcp')?.remove();
+
         console.log('BootScene: preload started');
         // Display loading progress
         const width = this.cameras.main.width;

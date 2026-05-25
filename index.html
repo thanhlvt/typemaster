@@ -324,7 +324,15 @@
     </style>
 </head>
 <body>
-    <div id="game-container"></div>
+    <div id="game-container">
+        <!-- LCP anchor: visible instantly while JS/Phaser loads, removed when game starts -->
+        <img id="splash-lcp"
+             src="/assets/bg_1_1.jpg"
+             alt="Học Gõ Telex cùng Khỉ Con"
+             fetchpriority="high"
+             width="1024" height="768"
+             style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);aspect-ratio:1024/768;max-width:100%;max-height:100%;object-fit:cover;z-index:1;">
+    </div>
 
     <!-- Landing section — visible to users & crawlers -->
     <section class="landing">
