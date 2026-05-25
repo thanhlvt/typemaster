@@ -11,6 +11,7 @@ import { PlaySceneHUD }          from '../components/PlaySceneHUD';
 import { ComboManager }          from '../components/ComboManager';
 import { TypingBox }             from '../components/TypingBox';
 import { getChapterForLesson, getChapterBgKey, CHAPTERS } from '../data/chapters';
+import { ensureTextures } from '../utils/TextureLoader';
 
 export class PlayScene extends Phaser.Scene {
     constructor() {
@@ -215,8 +216,13 @@ export class PlayScene extends Phaser.Scene {
             monkeyTexture = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
         }
 
-        if (this.bgImage) this.bgImage.setTexture(bgTexture);
-        if (this.monkey)  this.monkey.setTexture(monkeyTexture);
+        ensureTextures(this, [
+            { key: bgTexture,     url: `assets/${bgTexture}.jpg` },
+            { key: monkeyTexture, url: `assets/${monkeyTexture}.png` }
+        ], () => {
+            if (this.bgImage) this.bgImage.setTexture(bgTexture);
+            if (this.monkey)  this.monkey.setTexture(monkeyTexture);
+        });
     }
 
     showWord() {

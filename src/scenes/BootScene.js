@@ -1,5 +1,52 @@
 import * as Phaser from 'phaser';
-import { CHAPTERS, getChapterBgKey } from '../data/chapters';
+import { CHAPTERS, getChapterBgKey, getChapterForLesson } from '../data/chapters';
+
+function getLastUnlockedBg(lessonStats) {
+    let lastKey = 'bg_1_1';
+    for (const chapter of CHAPTERS) {
+        const firstLesson = chapter.range[0];
+        if (chapter.id === 1 || (lessonStats[firstLesson] && lessonStats[firstLesson].stars > 0)) {
+            lastKey = getChapterBgKey(chapter);
+        } else {
+            break; // chapters unlock sequentially
+        }
+    }
+    return lastKey;
+}
+
+function getCriticalAssets() {
+    const bgs = new Set(['bg_1_1']);  // always have fallback
+    const skins = new Set(['monkey_1']); // always have fallback
+
+    try {
+        // Current chapter background
+        const saved = JSON.parse(localStorage.getItem('typemaster_progress'));
+        if (saved && saved.lessonIndex !== undefined) {
+            const chapter = getChapterForLesson(saved.lessonIndex);
+            if (chapter) {
+                bgs.add(getChapterBgKey(chapter));
+            }
+        }
+
+        // Last unlocked background (used for MapScene)
+        if (saved && saved.lessonStats) {
+            const lastBg = getLastUnlockedBg(saved.lessonStats);
+            if (lastBg) {
+                bgs.add(lastBg);
+            }
+        }
+    } catch (_) {}
+
+    try {
+        // Equipped monkey skin
+        const equipped = JSON.parse(localStorage.getItem('typemaster_equipped_skins'));
+        if (equipped && equipped.monkey && equipped.monkey !== 'random') {
+            skins.add(equipped.monkey);
+        }
+    } catch (_) {}
+
+    return { bgs: [...bgs], skins: [...skins] };
+}
 
 export class BootScene extends Phaser.Scene {
     constructor() {
@@ -22,14 +69,13 @@ export class BootScene extends Phaser.Scene {
         });
         loadingText.setOrigin(0.5, 0.5);
 
-        // Load chapter-based backgrounds: bg_<groupId>_<positionInGroup>
-        for (const chapter of CHAPTERS) {
-            const key = getChapterBgKey(chapter);
+        // Load critical backgrounds and skins only
+        const { bgs, skins } = getCriticalAssets();
+        for (const key of bgs) {
             this.load.image(key, `assets/${key}.jpg`);
         }
-        // Load monkey skins (still score-based)
-        for (let i = 1; i <= 10; i++) {
-            this.load.image(`monkey_${i}`, `assets/monkey_${i}.png`);
+        for (const key of skins) {
+            this.load.image(key, `assets/${key}.png`);
         }
         this.load.image('banana', 'assets/banana.png');
         this.load.image('hand_left', 'assets/hand_left.png');

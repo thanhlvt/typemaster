@@ -2,6 +2,7 @@ import * as Phaser from 'phaser';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson } from '../data/chapters';
 import { LessonCard } from '../components/LessonCard';
+import { ensureTextures } from '../utils/TextureLoader';
 import { MapHeader } from '../components/MapHeader';
 import { MapSidebar } from '../components/MapSidebar';
 
@@ -283,7 +284,6 @@ export class MapScene extends Phaser.Scene {
     }
 
     _applyBackground() {
-        const { width, height } = this.scale;
         const equipped = ProgressManager.getEquippedSkins();
         const homeBackground = equipped.homeBackground || 'default';
 
@@ -296,12 +296,16 @@ export class MapScene extends Phaser.Scene {
         }
         console.log('MapScene: homeBackground =', homeBackground, 'bgTexture =', bgTexture, 'lessonStats =', this.lessonStats);
 
-        if (this.bg) {
-            this.bg.setTexture(bgTexture);
-        } else {
-            this.bg = this.add.image(width / 2, height / 2, bgTexture)
-                .setDisplaySize(width, height).setScrollFactor(0);
-        }
+        ensureTextures(this, [{ key: bgTexture, url: `assets/${bgTexture}.jpg` }], () => {
+            if (this.bg) {
+                this.bg.setTexture(bgTexture);
+            } else {
+                const { width, height } = this.scale;
+                this.bg = this.add.image(width / 2, height / 2, bgTexture)
+                    .setDisplaySize(width, height).setScrollFactor(0);
+                this.children.sendToBack(this.bg);
+            }
+        });
     }
 
     _computeCurrentLessonIndex() {

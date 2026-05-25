@@ -5,6 +5,7 @@ import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { TypingValidator }       from '../utils/TypingValidator';
 import { CHAPTERS }              from '../data/chapters';
 import { ResultOverlay }         from '../components/ResultOverlay';
+import { ensureTextures } from '../utils/TextureLoader';
 
 export class SprintScene extends Phaser.Scene {
     constructor() {
@@ -53,7 +54,7 @@ export class SprintScene extends Phaser.Scene {
     create() {
         const { width, height } = this.scale;
 
-        this.bgImage = this.add.image(width / 2, height / 2, this.bgTexture).setDisplaySize(width, height);
+        this.bgImage = this.add.image(width / 2, height / 2, 'bg_1_1').setDisplaySize(width, height);
         this.monkey = this.add.sprite(width / 2, height * 0.35, 'monkey_1').setScale(0.75);
 
         this._createContentUI(width, height);
@@ -171,8 +172,13 @@ export class SprintScene extends Phaser.Scene {
             monkeyTexture = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
         }
 
-        if (this.bgImage) this.bgImage.setTexture(bgTexture).setDisplaySize(this.scale.width, this.scale.height);
-        if (this.monkey)  this.monkey.setTexture(monkeyTexture);
+        ensureTextures(this, [
+            { key: bgTexture,     url: `assets/${bgTexture}.jpg` },
+            { key: monkeyTexture, url: `assets/${monkeyTexture}.png` }
+        ], () => {
+            if (this.bgImage) this.bgImage.setTexture(bgTexture).setDisplaySize(this.scale.width, this.scale.height);
+            if (this.monkey)  this.monkey.setTexture(monkeyTexture);
+        });
     }
 
     tick() {
