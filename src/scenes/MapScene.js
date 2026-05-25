@@ -6,6 +6,7 @@ import { StatsOverlay } from '../components/StatsOverlay';
 import { SkinsOverlay } from '../components/SkinsOverlay';
 import { OptionsOverlay } from '../components/OptionsOverlay';
 import { ConfirmDialog } from '../components/ConfirmDialog';
+import { CHAPTERS, getChapterForLesson, getChapterProgress, isChapterUnlocked } from '../data/chapters';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -65,7 +66,7 @@ export class MapScene extends Phaser.Scene {
         const totalLessons = this.gameData.lessons.length;
         const columns      = 5;
         const rows         = Math.ceil(totalLessons / columns);
-        const startY       = 195;
+        const startY       = 230;
         const rowHeight    = 150;
         const colWidth     = 180;
         const gridWidth    = (columns - 1) * colWidth;
@@ -85,7 +86,7 @@ export class MapScene extends Phaser.Scene {
         }
 
         // ── Sidebar bounds ────────────────────────────────────────
-        const sidebarW = 60, sidebarH = 300, sidebarX = 40, sidebarY = height / 2 + 50;
+        const sidebarW = 180, sidebarH = 300, sidebarX = width - sidebarW / 2 - 20, sidebarY = height / 2 + 50;
         const isSidebarHit = (p) =>
             p.x >= sidebarX - sidebarW / 2 && p.x <= sidebarX + sidebarW / 2 &&
             p.y >= sidebarY - sidebarH / 2 && p.y <= sidebarY + sidebarH / 2;
@@ -105,7 +106,7 @@ export class MapScene extends Phaser.Scene {
         this.createHeader(width);
 
         // Block pointer events from reaching lesson buttons hidden beneath the fixed header
-        this.add.rectangle(0, 0, width, 138, 0x000000, 0)
+        this.add.rectangle(0, 0, width, 175, 0x000000, 0)
             .setOrigin(0).setScrollFactor(0).setDepth(9).setInteractive();
 
         const activeRow    = Math.floor(this.currentLessonIndex / columns);
@@ -117,40 +118,7 @@ export class MapScene extends Phaser.Scene {
             this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 600, ease: 'Cubic.easeOut' });
         });
 
-        // ── FAB "Bài hiện tại" ────────────────────────────────────
-        const fabW = 160, fabH = 40;
-        const fabX = width - fabW / 2 - 20;
-        const fabY = height - fabH / 2 - 20;
 
-        const fabBg = this.add.graphics().setScrollFactor(0).setDepth(10);
-        const drawFabBg = (color, strokeColor = 0xFBBF24) => {
-            fabBg.clear();
-            fabBg.fillStyle(color, 0.9);
-            fabBg.fillRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
-            fabBg.lineStyle(2, strokeColor, 1);
-            fabBg.strokeRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
-        };
-        drawFabBg(0x0f172a);
-
-        const fabText = this.add.text(fabX, fabY, '📍 Bài hiện tại', {
-            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FBBF24'
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-
-        const fabZone = this.add.zone(fabX, fabY, fabW, fabH)
-            .setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
-
-        fabZone.on('pointerover', () => {
-            drawFabBg(0x1e293b, 0xFCD34D);
-            this.tweens.add({ targets: fabText, scaleX: 1.05, scaleY: 1.05, duration: 100 });
-        });
-        fabZone.on('pointerout', () => {
-            drawFabBg(0x0f172a, 0xFBBF24);
-            this.tweens.add({ targets: fabText, scaleX: 1.0, scaleY: 1.0, duration: 100 });
-        });
-        fabZone.on('pointerdown', () => {
-            this.sound.play('key_sound');
-            this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 500, ease: 'Cubic.easeOut' });
-        });
 
         // ── FAB "Reset Data" ──────────────────────────────────────
         const resetW = 80, resetH = 40;
@@ -191,10 +159,16 @@ export class MapScene extends Phaser.Scene {
         });
 
         // ── Sidebar ───────────────────────────────────────────────
-        const segmentSize   = 50;
-        const totalSegments = Math.ceil(totalLessons / segmentSize);
-        const btnW = 50, btnH = 30, itemSpacing = 38;
-        const contentHeight = totalSegments * itemSpacing;
+        // Blocker to prevent pointer events from leaking to lesson buttons behind the sidebar
+        // Note: We do NOT use stopPropagation on sbBlocker's events because that would block the
+        // Scene Input Manager's global pointerdown/pointerup listeners, which handle the Sidebar scroll/click.
+        // Phaser's default topOnly = true handles blocking of underlying lesson card inputs since sbBlocker is at depth 9.5.
+        const sbBlocker = this.add.rectangle(sidebarX, sidebarY, sidebarW, sidebarH, 0x000000, 0)
+            .setOrigin(0.5).setScrollFactor(0).setDepth(9.5).setInteractive();
+
+        const totalChapters = CHAPTERS.length;
+        const btnW = 160, btnH = 46, itemSpacing = 54;
+        const contentHeight = totalChapters * itemSpacing;
 
         const sbBg = this.add.graphics().setScrollFactor(0).setDepth(10);
         sbBg.fillStyle(0x0f172a, 0.85);
@@ -202,8 +176,8 @@ export class MapScene extends Phaser.Scene {
         sbBg.lineStyle(1.5, 0x38bdf8, 0.4);
         sbBg.strokeRoundedRect(sidebarX - sidebarW / 2, sidebarY - sidebarH / 2, sidebarW, sidebarH, 18);
 
-        this.add.text(sidebarX, sidebarY - sidebarH / 2 + 15, 'Tới bài', {
-            fontFamily: 'Arial', fontSize: '11px', fontStyle: 'bold', fill: '#38BDF8'
+        this.add.text(sidebarX, sidebarY - sidebarH / 2 + 15, '🗺 Hành trình', {
+            fontFamily: 'Arial', fontSize: '13px', fontStyle: 'bold', fill: '#38BDF8'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
 
         const listContainer = this.add.container(0, 0).setScrollFactor(0).setDepth(10);
@@ -222,37 +196,63 @@ export class MapScene extends Phaser.Scene {
         };
 
         const sidebarBtnData = [];
-        for (let j = 0; j < totalSegments; j++) {
-            const startL  = j * segmentSize + 1;
+        for (let j = 0; j < totalChapters; j++) {
+            const chapter = CHAPTERS[j];
             const btnX    = sidebarX;
-            const btnLocalY = sidebarY - sidebarH / 2 + 50 + j * itemSpacing;
+            const btnLocalY = sidebarY - sidebarH / 2 + 55 + j * itemSpacing;
+            
+            const progress = getChapterProgress(chapter, this.lessonStars);
+            const unlocked = isChapterUnlocked(chapter, this.lessonStars);
 
             const btnBg = this.add.graphics();
             const drawBtnBg = (color, strokeColor = 0x475569) => {
                 btnBg.clear();
                 btnBg.fillStyle(color, 0.9);
-                btnBg.fillRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 8);
+                btnBg.fillRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 12);
                 btnBg.lineStyle(1.5, strokeColor, 1);
-                btnBg.strokeRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 8);
+                btnBg.strokeRoundedRect(btnX - btnW / 2, btnLocalY - btnH / 2, btnW, btnH, 12);
             };
-            drawBtnBg(0x1e293b);
+            
+            if (unlocked) {
+                drawBtnBg(0x1e293b);
+            } else {
+                drawBtnBg(0x0f172a, 0x1e293b);
+            }
             listContainer.add(btnBg);
 
-            const btnText = this.add.text(btnX, btnLocalY, `${startL}`, {
-                fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#94A3B8'
-            }).setOrigin(0.5);
-            listContainer.add(btnText);
+            // Dot
+            const dot = this.add.graphics();
+            if (progress.isComplete) {
+                dot.fillStyle(0x2dd4bf, 1);
+            } else if (progress.isActive || (unlocked && progress.done === 0)) {
+                dot.fillStyle(0xf59e0b, 1);
+            } else {
+                dot.fillStyle(0x475569, 1);
+            }
+            dot.fillCircle(btnX - btnW/2 + 16, btnLocalY, 5);
+            listContainer.add(dot);
 
-            sidebarBtnData.push({ j, drawBtnBg, btnText, btnX, btnLocalY });
+            // Body
+            const btnText = this.add.text(btnX - btnW/2 + 30, btnLocalY, `${chapter.emoji} ${chapter.name}`, {
+                fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: unlocked ? '#FFFFFF' : '#64748B'
+            }).setOrigin(0, 0.5);
+            listContainer.add(btnText);
+            
+            // Progress Right
+            const rightText = this.add.text(btnX + btnW/2 - 10, btnLocalY, `${progress.done}/${progress.total}`, {
+                fontFamily: 'Arial', fontSize: '11px', fill: unlocked ? '#94A3B8' : '#475569'
+            }).setOrigin(1, 0.5);
+            listContainer.add(rightText);
+
+            sidebarBtnData.push({ j, chapter, unlocked, drawBtnBg, btnText, btnX, btnLocalY, btnW, btnH });
         }
 
         const getSidebarBtn = (px, py) => {
-            if (!isSidebarHit({ x: px, y: py })) return null;
             if (py < maskY || py > maskY + maskH) return null;
             for (const btn of sidebarBtnData) {
                 const visY = btn.btnLocalY + scrollYOffset;
-                if (px >= btn.btnX - btnW / 2 && px <= btn.btnX + btnW / 2 &&
-                    py >= visY - btnH / 2      && py <= visY + btnH / 2) {
+                if (px >= btn.btnX - btn.btnW / 2 && px <= btn.btnX + btn.btnW / 2 &&
+                    py >= visY - btn.btnH / 2      && py <= visY + btn.btnH / 2) {
                     return btn;
                 }
             }
@@ -296,15 +296,13 @@ export class MapScene extends Phaser.Scene {
             const hit = isDraggingSidebar ? null : getSidebarBtn(pointer.x, pointer.y);
             if (hit !== hoveredBtn) {
                 if (hoveredBtn) { 
-                    hoveredBtn.drawBtnBg(0x1e293b, 0x475569); 
-                    hoveredBtn.btnText.setFill('#94A3B8'); 
+                    hoveredBtn.drawBtnBg(hoveredBtn.unlocked ? 0x1e293b : 0x0f172a, hoveredBtn.unlocked ? 0x475569 : 0x1e293b); 
                     this.input.setDefaultCursor('default');
                 }
                 hoveredBtn = hit;
                 if (hit) { 
-                    hit.drawBtnBg(0x334155, 0x38bdf8); 
-                    hit.btnText.setFill('#FFFFFF'); 
-                    this.input.setDefaultCursor('pointer');
+                    hit.drawBtnBg(hit.unlocked ? 0x334155 : 0x0f172a, hit.unlocked ? 0x38bdf8 : 0x1e293b); 
+                    if (hit.unlocked) this.input.setDefaultCursor('pointer');
                 }
             }
         });
@@ -312,16 +310,16 @@ export class MapScene extends Phaser.Scene {
         this.input.on('pointerup', (pointer) => {
             if (isDraggingSidebar && sidebarDragDistance < 8 && isSidebarHit(pointer)) {
                 const hit = getSidebarBtn(pointer.x, pointer.y);
-                if (hit) {
+                if (hit && hit.unlocked) {
                     this.sound.play('key_sound');
-                    const firstLessonIndex = hit.j * segmentSize;
+                    const firstLessonIndex = hit.chapter.range[0];
                     const segRow     = Math.floor(firstLessonIndex / columns);
                     const targetSegY = startY + segRow * rowHeight;
                     const targetSegScrollY = Phaser.Math.Clamp(targetSegY - height / 2, 0, totalScrollHeight - height);
                     this.tweens.add({ targets: this.cameras.main, scrollY: targetSegScrollY, duration: 500, ease: 'Cubic.easeOut' });
                 }
             }
-            if (hoveredBtn) hoveredBtn.drawBtnBg(0x334155, 0x38bdf8);
+            if (hoveredBtn) hoveredBtn.drawBtnBg(hoveredBtn.unlocked ? 0x334155 : 0x0f172a, hoveredBtn.unlocked ? 0x38bdf8 : 0x1e293b);
             isDraggingSidebar = false;
         });
 
@@ -352,258 +350,479 @@ export class MapScene extends Phaser.Scene {
         const bg = this.add.graphics();
         itemContainer.add(bg);
 
-        const drawBg = (color, strokeColor, strokeWidth = 2, fillAlpha = 0.85) => {
+        const currentIndex = this._computeCurrentLessonIndex();
+        let state = 'locked';
+        if (stars > 0) {
+            state = 'done';
+        } else if (index === currentIndex) {
+            state = 'current';
+        } else if (isUnlocked) {
+            state = 'unlocked';
+        } else if (index === currentIndex + 1) {
+            state = 'next';
+        } else {
+            state = 'locked';
+        }
+
+        const drawBg = () => {
             bg.clear();
-            bg.fillStyle(color, fillAlpha);
-            bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-            bg.lineStyle(strokeWidth, strokeColor, 1);
-            bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+            if (state === 'done') {
+                bg.fillGradientStyle(0x1bb893, 0x1bb893, 0x0d8268, 0x0d8268, 1);
+                bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+            } else if (state === 'current') {
+                bg.fillGradientStyle(0xffb547, 0xffb547, 0xff7e3d, 0xff7e3d, 1);
+                bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                bg.lineStyle(3, 0xFFD700, 1);
+                bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+            } else if (state === 'unlocked') {
+                bg.fillStyle(0x1e3a8a, 1);
+                bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                bg.lineStyle(2, 0x3b82f6, 1);
+                bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+            } else if (state === 'next') {
+                bg.fillStyle(0x443477, 1);
+                bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                
+                // Simulate dashed border
+                bg.lineStyle(2, 0xFFD700, 0.8);
+                const r = 16, w = btnWidth, h = btnHeight;
+                bg.strokeRoundedRect(-w / 2, -h / 2, w, h, r); // Quick workaround for dashed
+            } else {
+                bg.fillStyle(0x111827, 1);
+                bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                bg.lineStyle(2, 0x475569, 1);
+                bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+            }
         };
 
-        if (!isUnlocked) {
-            drawBg(0x1E293B, 0x475569, 2, 0.4);
+        drawBg();
+
+        if (state === 'locked') {
             itemContainer.add(this.add.text(0, -20, `${index + 1}`, {
-                fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#64748B'
+                fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#64748B', alpha: 0.3
             }).setOrigin(0.5));
             itemContainer.add(this.add.text(0, 20, '🔒', {
-                fontSize: '24px', padding: { top: 8, bottom: 8, left: 8, right: 8 }
+                fontSize: '28px'
             }).setOrigin(0.5));
-        } else {
-            const isCompleted = stars > 0;
-            const mainColor   = isCompleted ? 0x0F766E : 0x1E3A8A;
-            const borderCol   = isCompleted ? 0x0EA5E9 : 0x3B82F6;
-            drawBg(mainColor, borderCol, 2, 0.9);
-
-            itemContainer.add(this.add.text(0, -20, `${index + 1}`, {
-                fontFamily: 'Outfit, Arial', fontSize: '32px', fontStyle: 'bold', fill: '#FFFFFF'
-            }).setOrigin(0.5));
-
-            const stats = this.lessonStats[index] || { stars: 0, wpm: 0, accuracy: 0, timestamp: null };
-            const bestWpm = stats.wpm || 0;
-            const wpmStr = bestWpm > 0 ? `${bestWpm} WPM` : '-- WPM';
-
-            itemContainer.add(this.add.text(0, 10, wpmStr, {
-                fontFamily: 'Arial', fontSize: '14px', fill: '#93C5FD', fontStyle: 'bold'
-            }).setOrigin(0.5));
-
-            const starStr = stars === 3 ? '⭐⭐⭐' : stars === 2 ? '⭐⭐☆' : stars === 1 ? '⭐☆☆' : '☆☆☆';
-            itemContainer.add(this.add.text(0, 32, starStr, {
-                fontFamily: 'Arial', fontSize: '16px', fill: '#FFD700'
-            }).setOrigin(0.5));
-
-            const zone = this.add.zone(0, 0, btnWidth, btnHeight).setInteractive({ useHandCursor: true });
-            itemContainer.add(zone);
-
-            zone.on('pointerover', () => {
-                itemContainer.setDepth(2);
-                this.tweens.add({ targets: itemContainer, scaleX: 1.1, scaleY: 1.1, duration: 100, ease: 'Power1' });
-                drawBg(mainColor, 0xFBBF24, 3, 0.95);
-
-                // Position and show tooltip
-                if (this.tooltip && this.tooltipText) {
-                    this.tooltip.setPosition(x - 90, y - 115);
-                    const bestAcc = stats.accuracy || 0;
-                    let dateStr = 'N/A';
-                    if (stats.timestamp) {
-                        const date = new Date(stats.timestamp);
-                        dateStr = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
-                    }
-                    this.tooltipText.setText(`Chính xác tốt: ${bestAcc}%\nGần nhất: ${dateStr}`);
-                    this.tooltip.setVisible(true);
-                }
-            });
-            zone.on('pointerout', () => {
-                itemContainer.setDepth(1);
-                this.tweens.add({ targets: itemContainer, scaleX: 1.0, scaleY: 1.0, duration: 100, ease: 'Power1' });
-                drawBg(mainColor, borderCol, 2, 0.9);
-
-                if (this.tooltip) {
-                    this.tooltip.setVisible(false);
-                }
-            });
-            zone.on('pointerdown', () => {
-                this.tweens.add({ targets: itemContainer, scaleX: 0.95, scaleY: 0.95, duration: 50 });
-            });
-            zone.on('pointerup', () => {
-                this.tweens.add({
-                    targets: itemContainer, scaleX: 1.0, scaleY: 1.0, duration: 50,
-                    onComplete: () => {
-                        if (!this.isDraggingRef()) {
-                            this.sound.play('key_sound');
-                            this.scene.start('PlayScene', { lessonIndex: index });
-                        }
-                    }
-                });
-            });
+            return; // Not interactive
         }
+
+        if (state === 'next') {
+            itemContainer.add(this.add.text(0, -15, `${index + 1}`, {
+                fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.7
+            }).setOrigin(0.5));
+            itemContainer.add(this.add.text(0, 20, '🔓 Sắp mở', {
+                fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.8
+            }).setOrigin(0.5));
+            return; // Not interactive
+        }
+
+        itemContainer.add(this.add.text(0, -20, `${index + 1}`, {
+            fontFamily: 'Outfit, Arial', fontSize: '32px', fontStyle: 'bold', fill: '#FFFFFF'
+        }).setOrigin(0.5));
+
+        const stats = this.lessonStats[index] || { stars: 0, wpm: 0, accuracy: 0, timestamp: null };
+        const bestWpm = stats.wpm || 0;
+        const wpmStr = bestWpm > 0 ? `${bestWpm} WPM` : '-- WPM';
+
+        itemContainer.add(this.add.text(0, 10, wpmStr, {
+            fontFamily: 'Arial', fontSize: '14px', fill: state === 'done' ? '#A7F3D0' : '#FFEDD5', fontStyle: 'bold'
+        }).setOrigin(0.5));
+
+        const starStr = stars === 3 ? '⭐⭐⭐' : stars === 2 ? '⭐⭐☆' : stars === 1 ? '⭐☆☆' : '☆☆☆';
+        itemContainer.add(this.add.text(0, 32, starStr, {
+            fontFamily: 'Arial', fontSize: '16px', fill: '#FFD700'
+        }).setOrigin(0.5));
+
+        if (state === 'done') {
+            const checkBg = this.add.graphics();
+            checkBg.fillStyle(0xFFD700, 1);
+            checkBg.fillCircle(btnWidth/2 - 15, -btnHeight/2 + 15, 12);
+            itemContainer.add(checkBg);
+            itemContainer.add(this.add.text(btnWidth/2 - 15, -btnHeight/2 + 15, '✓', {
+                fontFamily: 'Arial', fontSize: '14px', fontStyle: 'bold', fill: '#000000'
+            }).setOrigin(0.5));
+        } else if (state === 'current') {
+            this.tweens.add({ targets: itemContainer, scaleX: 1.04, scaleY: 1.04, duration: 1600, yoyo: true, repeat: -1 });
+            
+            const flagBg = this.add.graphics();
+            flagBg.fillStyle(0xFFFFFF, 1);
+            flagBg.fillRoundedRect(-50, -btnHeight/2 - 25, 100, 24, 12);
+            itemContainer.add(flagBg);
+            itemContainer.add(this.add.text(0, -btnHeight/2 - 13, '🏃 BẠN Ở ĐÂY', {
+                fontFamily: 'Arial', fontSize: '11px', fontStyle: 'bold', fill: '#D97706'
+            }).setOrigin(0.5));
+        }
+
+        const zone = this.add.zone(0, 0, btnWidth, btnHeight).setInteractive({ useHandCursor: true });
+        itemContainer.add(zone);
+
+        zone.on('pointerover', () => {
+            itemContainer.setDepth(2);
+            this.tweens.killTweensOf(itemContainer);
+            this.tweens.add({ targets: itemContainer, scaleX: state === 'current' ? 1.14 : 1.1, scaleY: state === 'current' ? 1.14 : 1.1, duration: 100, ease: 'Power1' });
+            
+            bg.clear();
+            if (state === 'done') {
+                bg.fillGradientStyle(0x1bb893, 0x1bb893, 0x0d8268, 0x0d8268, 1);
+            } else if (state === 'current') {
+                bg.fillGradientStyle(0xffb547, 0xffb547, 0xff7e3d, 0xff7e3d, 1);
+            } else if (state === 'unlocked') {
+                bg.fillStyle(0x1e3a8a, 1);
+            } else if (state === 'next') {
+                bg.fillStyle(0x443477, 1);
+            }
+            bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+            bg.lineStyle(3, 0xFFD700, 1);
+            bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+
+            // Position and show tooltip
+            if (state !== 'next' && this.tooltip && this.tooltipText) {
+                this.tooltip.setPosition(x - 90, y - 115);
+                const stats = this.lessonStats[index] || { stars: 0, wpm: 0, accuracy: 0, timestamp: null };
+                const bestAcc = stats.accuracy || 0;
+                let dateStr = 'N/A';
+                if (stats.timestamp) {
+                    const date = new Date(stats.timestamp);
+                    dateStr = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+                }
+                this.tooltipText.setText(`Chính xác tốt: ${bestAcc}%\nGần nhất: ${dateStr}`);
+                this.tooltip.setVisible(true);
+            }
+        });
+        zone.on('pointerout', () => {
+            itemContainer.setDepth(1);
+            this.tweens.killTweensOf(itemContainer);
+            this.tweens.add({
+                targets: itemContainer,
+                scaleX: 1.0,
+                scaleY: 1.0,
+                duration: 100,
+                ease: 'Power1',
+                onComplete: () => {
+                    if (state === 'current') {
+                        this.tweens.add({ targets: itemContainer, scaleX: 1.04, scaleY: 1.04, duration: 1600, yoyo: true, repeat: -1 });
+                    }
+                }
+            });
+            drawBg();
+
+            if (this.tooltip) {
+                this.tooltip.setVisible(false);
+            }
+        });
+        zone.on('pointerdown', () => {
+            this.tweens.add({ targets: itemContainer, scaleX: state === 'current' ? 0.99 : 0.95, scaleY: state === 'current' ? 0.99 : 0.95, duration: 50 });
+        });
+        zone.on('pointerup', () => {
+            this.tweens.add({
+                targets: itemContainer, scaleX: state === 'current' ? 1.04 : 1.0, scaleY: state === 'current' ? 1.04 : 1.0, duration: 50,
+                onComplete: () => {
+                    if (!this.isDraggingRef()) {
+                        this.sound.play('key_sound');
+                        this.scene.start('PlayScene', { lessonIndex: index });
+                    }
+                }
+            });
+        });
     }
 
     createHeader(width) {
+        const headerHeight = 175;
         const headerBg = this.add.graphics().setScrollFactor(0).setDepth(10);
         headerBg.fillStyle(0x0f172a, 0.95);
-        headerBg.fillRoundedRect(0, 0, width, 138, { tl: 0, tr: 0, bl: 20, br: 20 });
+        headerBg.fillRoundedRect(0, 0, width, headerHeight, { tl: 0, tr: 0, bl: 24, br: 24 });
         headerBg.lineStyle(3, 0xFBBF24, 1);
         headerBg.beginPath();
-        headerBg.moveTo(0, 138);
-        headerBg.lineTo(width, 138);
+        headerBg.moveTo(0, headerHeight);
+        headerBg.lineTo(width, headerHeight);
         headerBg.strokePath();
 
-        this.add.text(40, 40, 'BẢN ĐỒ BÀI HỌC', {
-            fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold',
+        // --- ROW 1 ---
+        const row1Y = 35;
+        
+        // Title
+        this.add.text(20, row1Y - 10, '🐵 BẢN ĐỒ RỪNG', {
+            fontFamily: 'Outfit, Arial', fontSize: '26px', fontStyle: 'bold',
             fill: '#FBBF24', stroke: '#000000', strokeThickness: 4
         }).setOrigin(0, 0.5).setScrollFactor(0).setDepth(10);
 
-        const totalLessons = this.gameData.lessons.length;
-        const progressStr  = `Tiến độ: ${this.completedLessonsCount}/${totalLessons} bài học  |  Tổng: ⭐ ${this.totalStarsCount}`;
-        this.add.text(40, 85, progressStr, {
-            fontFamily: 'Arial', fontSize: '18px', fontStyle: 'bold', fill: '#38BDF8'
-        }).setOrigin(0, 0.5).setScrollFactor(0).setDepth(10);
+        // Chapter chip
+        const currentIndex = this._computeCurrentLessonIndex();
+        const currentChapter = getChapterForLesson(currentIndex);
+        const chapterProgress = getChapterProgress(currentChapter, this.lessonStars);
+        
+        const chapterChipStr = `${currentChapter.emoji} Chương ${currentChapter.id} · ${currentChapter.name} · ${chapterProgress.done}/${chapterProgress.total} bài`;
+        const chapChipContainer = this.add.container(20, row1Y + 18).setScrollFactor(0).setDepth(10);
+        const chapBg = this.add.graphics();
+        const chapTxt = this.add.text(12, 0, chapterChipStr, {
+            fontFamily: 'Arial', fontSize: '13px', fontStyle: 'bold', fill: '#FFFFFF'
+        }).setOrigin(0, 0.5);
+        const chapW = chapTxt.width + 24;
+        const chapH = 24;
+        chapBg.fillGradientStyle(0xf97316, 0xf97316, 0xa855f7, 0xa855f7, 1);
+        chapBg.fillRoundedRect(0, -chapH/2, chapW, chapH, chapH/2);
+        chapChipContainer.add([chapBg, chapTxt]);
 
-        const btnH = 36, btnY = 40, btnY2 = 98;
+        // Right side Row 1
+        let currentRightX = width - 20;
 
-        const optBtnW  = 36;
-        const optBtnX  = width - optBtnW / 2 - 20;
-
-        const skinBtnW = 90;
-        const skinBtnX = optBtnX - optBtnW / 2 - skinBtnW / 2 - 15;
-
-        const achBtnW  = 155;
-        const achBtnX  = skinBtnX - skinBtnW / 2 - achBtnW / 2 - 15;
-
-        const statsBtnW = 120;
-        const statsBtnX = achBtnX - achBtnW / 2 - statsBtnW / 2 - 15;
-
-        const dailyBtnW = 140;
-        const dailyBtnX = width - dailyBtnW / 2 - 20;
-
-        const sprintBtnW = 110;
-        const sprintBtnX = dailyBtnX - dailyBtnW / 2 - sprintBtnW / 2 - 15;
-
-        // Daily Challenge button
-        const dailyBg = this.add.graphics().setScrollFactor(0).setDepth(10);
-        const progress = ProgressManager.loadProgress(totalLessons);
-        const todayStr = ProgressManager._toDateStr(new Date());
-        const isDailyCompleted = progress.dailyChallengeDate === todayStr;
-        const dailyBaseColor = isDailyCompleted ? 0x059669 : 0xEA580C;
-        const dailyHoverColor = isDailyCompleted ? 0x10B981 : 0xF97316;
-        const dailyTextStr = isDailyCompleted ? '📅 Thử thách ✓' : '📅 Thử thách 🔥';
-
-        const drawDailyBg = (color) => {
-            dailyBg.clear(); dailyBg.fillStyle(color, 0.85);
-            dailyBg.fillRoundedRect(dailyBtnX - dailyBtnW / 2, btnY2 - btnH / 2, dailyBtnW, btnH, 18);
-            dailyBg.lineStyle(1.5, 0xffffff, 0.2);
-            dailyBg.strokeRoundedRect(dailyBtnX - dailyBtnW / 2, btnY2 - btnH / 2, dailyBtnW, btnH, 18);
+        // Settings
+        const optW = 32;
+        currentRightX -= optW / 2;
+        const optX = currentRightX;
+        const optBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawOptBg = (color) => {
+            optBg.clear(); optBg.fillStyle(color, 0.85);
+            optBg.fillCircle(optX, row1Y, optW/2);
+            optBg.lineStyle(1.5, 0xffffff, 0.2);
+            optBg.strokeCircle(optX, row1Y, optW/2);
         };
-        drawDailyBg(dailyBaseColor);
-        this.add.text(dailyBtnX, btnY2, dailyTextStr, {
-            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-        const dailyZone = this.add.zone(dailyBtnX, btnY2, dailyBtnW, btnH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
-        dailyZone.on('pointerover', () => drawDailyBg(dailyHoverColor));
-        dailyZone.on('pointerout',  () => drawDailyBg(dailyBaseColor));
-        dailyZone.on('pointerdown', () => {
-            this.sound.play('key_sound');
-            this.scene.start('PlayScene', { isDailyChallenge: true });
-        });
+        drawOptBg(0x4F46E5);
+        this.add.text(currentRightX, row1Y, '⚙️', { fontSize: '16px' }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
+        const optZone = this.add.zone(currentRightX, row1Y, optW, optW).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+        optZone.on('pointerover', () => drawOptBg(0x6366F1));
+        optZone.on('pointerout',  () => drawOptBg(0x4F46E5));
+        optZone.on('pointerdown', () => { this.sound.play('key_sound'); new OptionsOverlay(this); });
 
-        // Sprint button
-        const sprintBg = this.add.graphics().setScrollFactor(0).setDepth(10);
-        const drawSprintBg = (color) => {
-            sprintBg.clear(); sprintBg.fillStyle(color, 0.85);
-            sprintBg.fillRoundedRect(sprintBtnX - sprintBtnW / 2, btnY2 - btnH / 2, sprintBtnW, btnH, 18);
-            sprintBg.lineStyle(1.5, 0xffffff, 0.2);
-            sprintBg.strokeRoundedRect(sprintBtnX - sprintBtnW / 2, btnY2 - btnH / 2, sprintBtnW, btnH, 18);
-        };
-        drawSprintBg(0x7C3AED);
-        this.add.text(sprintBtnX, btnY2, '⚡ Sprint', {
-            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-        const sprintZone = this.add.zone(sprintBtnX, btnY2, sprintBtnW, btnH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
-        sprintZone.on('pointerover', () => drawSprintBg(0x8B5CF6));
-        sprintZone.on('pointerout',  () => drawSprintBg(0x7C3AED));
-        sprintZone.on('pointerdown', () => {
-            this.sound.play('key_sound');
-            this.scene.start('SprintScene');
-        });
+        currentRightX -= optW / 2 + 8;
 
-        // Achievement button
-        const achBg = this.add.graphics().setScrollFactor(0).setDepth(10);
-        const drawAchBg = (color) => {
-            achBg.clear(); achBg.fillStyle(color, 0.85);
-            achBg.fillRoundedRect(achBtnX - achBtnW / 2, btnY - btnH / 2, achBtnW, btnH, 18);
-            achBg.lineStyle(1.5, 0xffffff, 0.2);
-            achBg.strokeRoundedRect(achBtnX - achBtnW / 2, btnY - btnH / 2, achBtnW, btnH, 18);
-        };
-        drawAchBg(0xD97706);
-        this.achText = this.add.text(achBtnX, btnY, `🏆 Huy hiệu (${this.unlockedAchievements.length}/${ACHIEVEMENTS.length})`, {
-            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-        const achZone = this.add.zone(achBtnX, btnY, achBtnW, btnH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
-        achZone.on('pointerover', () => drawAchBg(0xF59E0B));
-        achZone.on('pointerout',  () => drawAchBg(0xD97706));
-        achZone.on('pointerdown', () => {
-            this.sound.play('key_sound');
-            new AchievementsOverlay(this, this.unlockedAchievements, () => { this._loadProgress(); });
-        });
-
-        // Stats button
-        const statsBg = this.add.graphics().setScrollFactor(0).setDepth(10);
-        const drawStatsBg = (color) => {
-            statsBg.clear(); statsBg.fillStyle(color, 0.85);
-            statsBg.fillRoundedRect(statsBtnX - statsBtnW / 2, btnY - btnH / 2, statsBtnW, btnH, 18);
-            statsBg.lineStyle(1.5, 0xffffff, 0.2);
-            statsBg.strokeRoundedRect(statsBtnX - statsBtnW / 2, btnY - btnH / 2, statsBtnW, btnH, 18);
-        };
-        drawStatsBg(0x0D9488);
-        this.add.text(statsBtnX, btnY, '📊 Thống kê', {
-            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-        const statsZone = this.add.zone(statsBtnX, btnY, statsBtnW, btnH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
-        statsZone.on('pointerover', () => drawStatsBg(0x14B8A6));
-        statsZone.on('pointerout',  () => drawStatsBg(0x0D9488));
-        statsZone.on('pointerdown', () => {
-            this.sound.play('key_sound');
-            new StatsOverlay(this, () => { this._loadProgress(); });
-        });
-
-        // Skin button
+        // Skin
+        const skinW = 90;
+        const skinH = 32;
+        currentRightX -= skinW / 2;
+        const skinX = currentRightX;
         const skinBg = this.add.graphics().setScrollFactor(0).setDepth(10);
         const drawSkinBg = (color) => {
             skinBg.clear(); skinBg.fillStyle(color, 0.85);
-            skinBg.fillRoundedRect(skinBtnX - skinBtnW / 2, btnY - btnH / 2, skinBtnW, btnH, 18);
+            skinBg.fillRoundedRect(skinX - skinW / 2, row1Y - skinH / 2, skinW, skinH, skinH / 2);
             skinBg.lineStyle(1.5, 0xffffff, 0.2);
-            skinBg.strokeRoundedRect(skinBtnX - skinBtnW / 2, btnY - btnH / 2, skinBtnW, btnH, 18);
+            skinBg.strokeRoundedRect(skinX - skinW / 2, row1Y - skinH / 2, skinW, skinH, skinH / 2);
         };
         drawSkinBg(0x059669);
-        this.add.text(skinBtnX, btnY, '👕 Skin', {
-            fontFamily: 'Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
+        this.add.text(skinX, row1Y, '👕 Skin', {
+            fontFamily: 'Arial', fontSize: '13px', fontStyle: 'bold', fill: '#FFF'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-        const skinZone = this.add.zone(skinBtnX, btnY, skinBtnW, btnH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+        const skinZone = this.add.zone(skinX, row1Y, skinW, skinH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
         skinZone.on('pointerover', () => drawSkinBg(0x10B981));
         skinZone.on('pointerout',  () => drawSkinBg(0x059669));
         skinZone.on('pointerdown', () => {
             this.sound.play('key_sound');
-            new SkinsOverlay(this, () => { this._loadProgress(); this._applyBackground(); });
+            new SkinsOverlay(this, () => {
+                this._loadProgress();
+                this._applyBackground();
+            });
         });
 
-        // Options button
-        const optBg = this.add.graphics().setScrollFactor(0).setDepth(10);
-        const drawOptBg = (color) => {
-            optBg.clear(); optBg.fillStyle(color, 0.85);
-            optBg.fillRoundedRect(optBtnX - optBtnW / 2, btnY - optBtnW / 2, optBtnW, optBtnW, 18);
-            optBg.lineStyle(1.5, 0xffffff, 0.2);
-            optBg.strokeRoundedRect(optBtnX - optBtnW / 2, btnY - optBtnW / 2, optBtnW, optBtnW, 18);
+        currentRightX -= skinW / 2 + 8;
+
+        // Achievement
+        const achW = 140;
+        const achH = 32;
+        currentRightX -= achW / 2;
+        const achX = currentRightX;
+        const achBg = this.add.graphics().setScrollFactor(0).setDepth(10);
+        const drawAchBg = (color) => {
+            achBg.clear(); achBg.fillStyle(color, 0.85);
+            achBg.fillRoundedRect(achX - achW/2, row1Y - achH/2, achW, achH, achH/2);
+            achBg.lineStyle(1.5, 0xffffff, 0.2);
+            achBg.strokeRoundedRect(achX - achW/2, row1Y - achH/2, achW, achH, achH/2);
         };
-        drawOptBg(0x4F46E5);
-        this.add.text(optBtnX, btnY, '⚙️', {
-            fontFamily: 'Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFF'
+        drawAchBg(0xD97706);
+        this.achText = this.add.text(achX, row1Y, `🏆 Huy hiệu (${this.unlockedAchievements.length}/${ACHIEVEMENTS.length})`, {
+            fontFamily: 'Arial', fontSize: '13px', fontStyle: 'bold', fill: '#FFF'
         }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-        const optZone = this.add.zone(optBtnX, btnY, optBtnW, optBtnW).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
-        optZone.on('pointerover', () => drawOptBg(0x6366F1));
-        optZone.on('pointerout',  () => drawOptBg(0x4F46E5));
-        optZone.on('pointerdown', () => {
-            this.sound.play('key_sound');
-            new OptionsOverlay(this);
+        const achZone = this.add.zone(achX, row1Y, achW, achH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+        achZone.on('pointerover', () => drawAchBg(0xF59E0B));
+        achZone.on('pointerout',  () => drawAchBg(0xD97706));
+        achZone.on('pointerdown', () => { this.sound.play('key_sound'); new AchievementsOverlay(this, this.unlockedAchievements, () => this._loadProgress()); });
+
+        currentRightX -= achW / 2 + 8;
+
+        // Stars Chip
+        const progress = ProgressManager.loadProgress(this.gameData.lessons.length);
+        const starsChip = this._createChip(0, row1Y, '⭐', `${this.totalStarsCount}`, 0x46391E, 1, { fontFamily: 'Arial', fontSize: '14px', fontStyle: 'bold', fill: '#FEF08A' });
+        currentRightX -= starsChip.width / 2;
+        starsChip.container.setX(currentRightX);
+        currentRightX -= starsChip.width / 2 + 8;
+
+        // Banana Chip
+        const bananaChip = this._createChip(0, row1Y, '🍌', `${this.totalScoreCount}`, 0x46391E, 1, { fontFamily: 'Arial', fontSize: '14px', fontStyle: 'bold', fill: '#FEF08A' });
+        currentRightX -= bananaChip.width / 2;
+        bananaChip.container.setX(currentRightX);
+        currentRightX -= bananaChip.width / 2 + 8;
+
+        // Streak Chip
+        const streakDays = progress.streakDays || 0;
+        let streakBgColor = 0x475569; // gray
+        let streakTextFill = '#94A3B8'; // gray
+        if (streakDays > 0) {
+            streakTextFill = '#FFFFFF';
+        }
+        
+        // custom chip for gradient
+        const streakContainer = this.add.container(0, row1Y).setScrollFactor(0).setDepth(10);
+        const streakBg = this.add.graphics();
+        const streakEmojiTxt = this.add.text(-5, 0, '🔥', { fontSize: '16px' }).setOrigin(1, 0.5);
+        const streakValTxt = this.add.text(5, 0, `${streakDays} ngày`, { fontFamily: 'Arial', fontSize: '14px', fontStyle: 'bold', fill: streakTextFill }).setOrigin(0, 0.5);
+        
+        const streakW = streakEmojiTxt.width + streakValTxt.width + 30;
+        const streakH = 32;
+        
+        if (streakDays > 0) {
+            streakBg.fillGradientStyle(0xf97316, 0xf97316, 0xec4899, 0xec4899, 1);
+        } else {
+            streakBg.fillStyle(0x2B3649, 1);
+        }
+        streakBg.fillRoundedRect(-streakW/2, -streakH/2, streakW, streakH, streakH/2);
+        
+        const totalStreakW = streakEmojiTxt.width + streakValTxt.width + 5;
+        streakEmojiTxt.setX(-totalStreakW/2 + streakEmojiTxt.width);
+        streakValTxt.setX(-totalStreakW/2 + streakEmojiTxt.width + 5);
+
+        streakContainer.add([streakBg, streakEmojiTxt, streakValTxt]);
+        
+        currentRightX -= streakW / 2;
+        streakContainer.setX(currentRightX);
+
+        // --- ROW 2: MEGA CTAs ---
+        const row2Y = 115;
+        const gap16 = 16;
+        const paddingHorizontal = 20;
+        const megaW = (width - paddingHorizontal * 2 - gap16) / 2;
+        const megaH = 76;
+
+        // SPRINT
+        const sprintX = paddingHorizontal + megaW / 2;
+        const sprintContainer = this.add.container(sprintX, row2Y).setScrollFactor(0).setDepth(10);
+        const sprintBgGraphics = this.add.graphics();
+        const drawSprint = (scale = 1) => {
+            sprintBgGraphics.clear();
+            sprintBgGraphics.fillGradientStyle(0xa36bff, 0xa36bff, 0x6a3fd6, 0x6a3fd6, 1);
+            const w = megaW * scale; const h = megaH * scale;
+            sprintBgGraphics.fillRoundedRect(-w/2, -h/2, w, h, 18);
+            sprintBgGraphics.lineStyle(scale > 1 ? 4 : 2, 0x9b6dff, scale > 1 ? 0.4 : 0.18);
+            sprintBgGraphics.strokeRoundedRect(-w/2 - 2, -h/2 - 2, w + 4, h + 4, 20);
+        };
+        drawSprint();
+        
+        // white circle left
+        const spLeftCirc = this.add.graphics();
+        spLeftCirc.fillStyle(0xFFFFFF, 1);
+        spLeftCirc.fillCircle(-megaW/2 + 36, 0, 24);
+        const spIcon = this.add.text(-megaW/2 + 36, 0, '⚡', { fontSize: '26px' }).setOrigin(0.5);
+        
+        // Title & Sub
+        const sprintTitle = this.add.text(-megaW/2 + 76, -10, 'Sprint 60 giây', { fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF' }).setOrigin(0, 0.5);
+        const spHighScore = progress.sprintHighScore || 0;
+        const sprintSub = this.add.text(-megaW/2 + 76, 14, `Best của bé: ${spHighScore} WPM`, { fontFamily: 'Arial', fontSize: '13px', fill: 'rgba(255,255,255,0.9)' }).setOrigin(0, 0.5);
+        
+        // right chevron
+        const spRightCirc = this.add.graphics();
+        spRightCirc.fillStyle(0x000000, 0.18);
+        spRightCirc.fillCircle(megaW/2 - 24, 0, 15);
+        const spChevron = this.add.text(megaW/2 - 24, 0, '→', { fontSize: '16px', fill: '#FFFFFF' }).setOrigin(0.5);
+
+        // shimmer
+        const shimmer = this.add.graphics();
+        shimmer.fillGradientStyle(0xffffff, 0xffffff, 0xffffff, 0xffffff, 0, 0.2, 0.2, 0);
+        shimmer.fillRect(-megaW * 0.3, -megaH/2, megaW * 0.6, megaH);
+        const shimmerMaskBg = this.add.graphics().setVisible(false);
+        shimmerMaskBg.fillRoundedRect(-megaW/2 + sprintX, -megaH/2 + row2Y, megaW, megaH, 18);
+        shimmer.setMask(shimmerMaskBg.createGeometryMask());
+        
+        this.tweens.add({
+            targets: shimmer,
+            x: megaW * 1.5,
+            duration: 2500,
+            repeat: -1,
+            onRepeat: () => { shimmer.x = -megaW; }
+        });
+        shimmer.x = -megaW;
+
+        sprintContainer.add([sprintBgGraphics, spLeftCirc, spIcon, sprintTitle, sprintSub, spRightCirc, spChevron, shimmer]);
+
+        const sprintZone = this.add.zone(sprintX, row2Y, megaW, megaH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+        sprintZone.on('pointerover', () => { drawSprint(1.02); sprintContainer.setScale(1.02); });
+        sprintZone.on('pointerout', () => { drawSprint(1); sprintContainer.setScale(1); });
+        sprintZone.on('pointerdown', () => { sprintContainer.setScale(0.98); });
+        sprintZone.on('pointerup', () => { sprintContainer.setScale(1); this.sound.play('key_sound'); this.scene.start('SprintScene'); });
+
+
+        // CHALLENGE
+        const chalX = paddingHorizontal + megaW + gap16 + megaW / 2;
+        const chalContainer = this.add.container(chalX, row2Y).setScrollFactor(0).setDepth(10);
+        const chalBgGraphics = this.add.graphics();
+        
+        const todayStr = ProgressManager._toDateStr(new Date());
+        const isDailyCompleted = progress.dailyChallengeDate === todayStr;
+        
+        const drawChal = (scale = 1) => {
+            chalBgGraphics.clear();
+            if (isDailyCompleted) {
+                chalBgGraphics.fillGradientStyle(0x475569, 0x475569, 0x334155, 0x334155, 1);
+            } else {
+                chalBgGraphics.fillGradientStyle(0xff9a3d, 0xff9a3d, 0xff5fa2, 0xff5fa2, 1);
+            }
+            const w = megaW * scale; const h = megaH * scale;
+            chalBgGraphics.fillRoundedRect(-w/2, -h/2, w, h, 18);
+            chalBgGraphics.lineStyle(scale > 1 ? 4 : 2, isDailyCompleted ? 0x94A3B8 : 0xff9a3d, scale > 1 ? 0.4 : 0.18);
+            chalBgGraphics.strokeRoundedRect(-w/2 - 2, -h/2 - 2, w + 4, h + 4, 20);
+        };
+        drawChal();
+        
+        // left emoji wiggle
+        const chalEmoji = this.add.text(-megaW/2 + 36, 0, '🎁', { fontSize: '38px', alpha: isDailyCompleted ? 0.5 : 1 }).setOrigin(0.5);
+        if (!isDailyCompleted) {
+            this.tweens.add({ targets: chalEmoji, angle: 5, duration: 600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+            this.tweens.add({ targets: chalEmoji, angle: -5, duration: 600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut', delay: 600 });
+        }
+        
+        // Title & Sub
+        const chalTitle = this.add.text(-megaW/2 + 76, -10, 'Thử thách hôm nay', { fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF', alpha: isDailyCompleted ? 0.7 : 1 }).setOrigin(0, 0.5);
+        const chalSub = this.add.text(-megaW/2 + 76, 14, '', { fontFamily: 'Arial', fontSize: '13px', fill: 'rgba(255,255,255,0.9)' }).setOrigin(0, 0.5);
+        
+        const updateCountdown = () => {
+            const ms = this._msUntilMidnight();
+            if (isDailyCompleted) {
+                chalSub.setText(`✓ Đã nhận · Mở lại sau ${this._formatCountdown(ms)}`);
+                chalSub.setAlpha(0.7);
+            } else {
+                chalSub.setText(`+20 🍌 · Còn ${this._formatCountdown(ms)}`);
+            }
+        };
+        updateCountdown();
+        this.time.addEvent({ delay: 1000, loop: true, callback: updateCountdown });
+        
+        // Pulse dot
+        let pulseDot = null;
+        if (!isDailyCompleted) {
+            pulseDot = this.add.graphics();
+            pulseDot.fillStyle(0xFFD700, 1);
+            pulseDot.fillCircle(megaW/2 - 20, -15, 6);
+            
+            const pulseGlow = this.add.graphics();
+            pulseGlow.fillStyle(0xFFD700, 0.5);
+            pulseGlow.fillCircle(megaW/2 - 20, -15, 6);
+            this.tweens.add({ targets: pulseGlow, scaleX: 2.5, scaleY: 2.5, alpha: 0, duration: 1500, repeat: -1 });
+            chalContainer.add(pulseGlow);
+        }
+
+        chalContainer.add([chalBgGraphics, chalEmoji, chalTitle, chalSub]);
+        if (pulseDot) chalContainer.add(pulseDot);
+
+        const chalZone = this.add.zone(chalX, row2Y, megaW, megaH).setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
+        chalZone.on('pointerover', () => { if(!isDailyCompleted) { drawChal(1.02); chalContainer.setScale(1.02); } });
+        chalZone.on('pointerout', () => { drawChal(1); chalContainer.setScale(1); });
+        chalZone.on('pointerdown', () => { if(!isDailyCompleted) chalContainer.setScale(0.98); });
+        chalZone.on('pointerup', () => { 
+            chalContainer.setScale(1); 
+            if (!isDailyCompleted) {
+                this.sound.play('key_sound'); 
+                this.scene.start('PlayScene', { isDailyChallenge: true }); 
+            } else {
+                this.cameras.main.shake(100, 0.005);
+            }
         });
     }
 
@@ -625,5 +844,56 @@ export class MapScene extends Phaser.Scene {
             this.bg = this.add.image(width / 2, height / 2, bgTexture)
                 .setDisplaySize(width, height).setScrollFactor(0);
         }
+    }
+
+    _computeCurrentLessonIndex() {
+        const totalLessons = this.gameData.lessons.length;
+        for (let i = 0; i < totalLessons; i++) {
+            if ((i === 0 || this.lessonStars[i - 1] > 0) && (!this.lessonStars[i] || this.lessonStars[i] === 0)) {
+                return i;
+            }
+        }
+        return totalLessons - 1; // All completed
+    }
+
+    _msUntilMidnight() {
+        const now = new Date();
+        const midnight = new Date(now);
+        midnight.setHours(24, 0, 0, 0);
+        return midnight - now;
+    }
+
+    _formatCountdown(ms) {
+        if (ms <= 0) return "00:00:00";
+        const totalSeconds = Math.floor(ms / 1000);
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    _createChip(x, y, emoji, text, bgColor, bgAlpha, textStyle) {
+        const container = this.add.container(x, y).setScrollFactor(0).setDepth(10);
+        const bg = this.add.graphics();
+        
+        const emojiTxt = this.add.text(-5, 0, emoji, { fontSize: '16px' }).setOrigin(1, 0.5);
+        const valTxt = this.add.text(5, 0, text, textStyle).setOrigin(0, 0.5);
+        
+        const width = emojiTxt.width + valTxt.width + 30;
+        const height = 32;
+        
+        bg.fillStyle(bgColor, bgAlpha);
+        bg.fillRoundedRect(-width/2, -height/2, width, height, height/2);
+        
+        // Reposition text to center
+        const totalW = emojiTxt.width + valTxt.width + 5;
+        emojiTxt.setX(-totalW/2 + emojiTxt.width);
+        valTxt.setX(-totalW/2 + emojiTxt.width + 5);
+
+        container.add(bg);
+        container.add(emojiTxt);
+        container.add(valTxt);
+        
+        return { container, width };
     }
 }

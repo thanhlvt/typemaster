@@ -12,6 +12,9 @@ export class AchievementsOverlay extends Phaser.GameObjects.Container {
         const overlay = scene.add.rectangle(0, 0, width, height, 0x0a0f1d, 0.95)
             .setOrigin(0).setInteractive().setScrollFactor(0);
         this.add(overlay);
+        const stopEvent = (_p, _x, _y, event) => { if (event) event.stopPropagation(); };
+        overlay.on('pointerdown', stopEvent);
+        overlay.on('pointerup',   stopEvent);
 
         // Dialog center container
         const dialog = scene.add.container(width / 2, height / 2).setScrollFactor(0);
@@ -80,7 +83,9 @@ export class AchievementsOverlay extends Phaser.GameObjects.Container {
 
         closeZone.on('pointerover', () => drawCloseBg(0x475569));
         closeZone.on('pointerout', () => drawCloseBg(0x334155));
-        closeZone.on('pointerdown', () => {
+        closeZone.on('pointerdown', stopEvent);
+        closeZone.on('pointerup', (_p, _x, _y, event) => {
+            if (event) event.stopPropagation();
             scene.sound.play('key_sound');
             this.destroy();
             if (onClose) onClose();

@@ -6,6 +6,8 @@
  *   - Reset button
  *   - Map button
  */
+import { getChapterForLesson } from '../data/chapters';
+
 export class PlaySceneHUD {
     constructor(scene) {
         this.scene = scene;
@@ -66,8 +68,12 @@ export class PlaySceneHUD {
         if (isDaily) {
             this.progressText.setText(`Thử thách ngày`);
         } else {
-            const current = lessonIndex + 1;
-            this.progressText.setText(`Bài ${current}/${totalLessons}`);
+            const chapter = getChapterForLesson(lessonIndex);
+            const chapterStart = chapter.range[0];
+            const chapterEnd = chapter.range[1];
+            const chapterTotal = chapterEnd - chapterStart + 1;
+            const currentInChapter = lessonIndex - chapterStart + 1;
+            this.progressText.setText(`Chương ${chapter.id} · Bài ${currentInChapter}/${chapterTotal}`);
         }
         this.scoreText.setText(`🍌 Chuối: ${score}`);
 
@@ -83,7 +89,12 @@ export class PlaySceneHUD {
         if (isDaily && totalWords) {
             fillPercent = wordIndex / totalWords;
         } else {
-            fillPercent = (lessonIndex + 1) / totalLessons;
+            const chapter = getChapterForLesson(lessonIndex);
+            const chapterStart = chapter.range[0];
+            const chapterEnd = chapter.range[1];
+            const chapterTotal = chapterEnd - chapterStart + 1;
+            const currentInChapter = lessonIndex - chapterStart + 1;
+            fillPercent = currentInChapter / chapterTotal;
         }
         const fillWidth = barWidth * fillPercent;
         this.progressBarFill.clear();
