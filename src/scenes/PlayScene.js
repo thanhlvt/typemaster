@@ -9,6 +9,7 @@ import { AchievementManager }    from '../utils/AchievementManager';
 import { AchievementToast }      from '../components/AchievementToast';
 import { PlaySceneHUD }          from '../components/PlaySceneHUD';
 import { ComboManager }          from '../components/ComboManager';
+import { TypingBox }             from '../components/TypingBox';
 
 export class PlayScene extends Phaser.Scene {
     constructor() {
@@ -18,7 +19,6 @@ export class PlayScene extends Phaser.Scene {
     // ── Lifecycle ─────────────────────────────────────────────────
 
     init(data) {
-        // Use gameData to avoid collision with Phaser's built-in Scene.data (DataManager)
         this.gameData         = this.cache.json.get('gameData');
         this.currentLessonIndex = 0;
         this.currentWordIndex   = 0;
@@ -50,7 +50,7 @@ export class PlayScene extends Phaser.Scene {
         this.bgImage = this.add.image(width / 2, height / 2, 'bg_1').setDisplaySize(width, height);
         this.monkey  = this.add.sprite(width / 2, height * 0.4, 'monkey_1').setScale(0.5);
 
-        this._createContentUI(width, height);
+        this.typingBox = new TypingBox(this);
         this.virtualKeyboard = new VirtualKeyboard(this, 0, 0);
 
         this.hud   = new PlaySceneHUD(this);
@@ -93,32 +93,6 @@ export class PlayScene extends Phaser.Scene {
         this.startLesson();
     }
 
-    // ── Content UI ────────────────────────────────────────────────
-
-    _createContentUI(width, height) {
-        const bgTop    = height * 0.52;
-        const bgHeight = height * 0.22;
-
-        const bg = this.add.graphics();
-        bg.fillStyle(0xffffff, 0.8);
-        bg.fillRoundedRect(width * 0.02, bgTop, width * 0.96, bgHeight, 20);
-
-        this.targetText = this.add.text(width / 2, bgTop + bgHeight * 0.18, '', {
-            fontFamily: 'Verdana, sans-serif',
-            fontSize: '48px', fontStyle: 'bold', fill: '#333'
-        }).setOrigin(0.5);
-
-        this.ruleHint = this.add.text(width / 2, bgTop + bgHeight * 0.46, '', {
-            fontFamily: 'Arial',
-            fontSize: '24px', fontStyle: 'bold', fill: '#E65100'
-        }).setOrigin(0.5);
-
-        this.typedText = this.add.text(width / 2, bgTop + bgHeight * 0.70, '', {
-            fontFamily: 'Verdana, sans-serif',
-            fontSize: '44px', fontStyle: 'bold', fill: '#2E7D32'
-        }).setOrigin(0.5);
-    }
-
     showResetConfirm() {
         this.input.keyboard.enabled = false;
         new ConfirmDialog(this, () => this._doReset())
@@ -159,7 +133,7 @@ export class PlayScene extends Phaser.Scene {
         if (TypingValidator.isPossible(rawBuffer + key, this.targetKeys, this.targetWord, this.telexEngine)) {
             const vietnameseBuffer = this.telexEngine.processKey(key);
             this.sound.play('key_sound');
-            this.typedText.setText(vietnameseBuffer);
+            this.typingBox.setTypedText(vietnameseBuffer);
             this.highlightNextKey();
 
             if (TypingValidator.normalizeForMatch(vietnameseBuffer) === TypingValidator.normalizeForMatch(this.targetWord)) {
@@ -177,7 +151,6 @@ export class PlayScene extends Phaser.Scene {
         this.currentWordIndex = 0;
         this.errorsInLesson   = 0;
         this.lessonStartTime  = Date.now();
-        // combo intentionally NOT reset here — persists across lessons
 
         if (this.isDailyChallenge) {
             const today = new Date();
@@ -247,10 +220,10 @@ export class PlayScene extends Phaser.Scene {
         this.targetWord = wordData.display;
         this.targetKeys = wordData.keys;
 
-        this.targetText.setText(this.targetWord);
-        this.typedText.setText('');
+        this.typingBox.setTargetText(this.targetWord);
+        this.typingBox.setTypedText('');
         this.telexEngine.clear();
-        this.ruleHint.setText('Gõ: ' + wordData.keys);
+        this.typingBox.setRuleHint('Gõ: ' + wordData.keys);
         this.highlightNextKey();
     }
 
@@ -323,26 +296,11 @@ export class PlayScene extends Phaser.Scene {
 
     // ── Lesson complete ───────────────────────────────────────────
 
-    showLessonComplete() {
-        this.sound.play('level_sound');
-        this.input.keyboard.off('keydown', this.handleKeyDown, this);
-
-        // Update streak data immediately so achievement check gets the correct value.
-        // The visual animation is deferred until the user dismisses the overlay.
-        const { streakDays: newStreakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
-        this.streakDays = newStreakDays;
-
-        const total        = this.totalKeysInLesson || 1;
-        const accuracy     = Math.round((total / (total + this.errorsInLesson)) * 100);
-        const durationMin  = (this.lessonEndTime - this.lessonStartTime) / 60000;
-        const wpm          = Math.round((total / 5) / durationMin) || 0;
-        const isLastLesson = this.currentLessonIndex === this.gameData.lessons.length - 1;
-
-        const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
-
+    _saveProgressAndCheckAchievements(stars, wpm, accuracy) {
+        const total = this.totalKeysInLesson || 1;
         let oldStats = { stars: 0, wpm: 0, accuracy: 0 };
-
         let dailyBonusAwarded = false;
+
         if (this.isDailyChallenge) {
             const todayStr = ProgressManager._toDateStr(new Date());
             const progressObj = ProgressManager.loadProgress(this.gameData.lessons.length);
@@ -380,7 +338,7 @@ export class PlayScene extends Phaser.Scene {
                 lessonStats:          this.lessonStats,
                 unlockedAchievements: this.unlockedAchievements,
                 consecutivePerfects:  this.consecutivePerfects,
-                streakDays:           this.streakDays,   // accurate: updated above
+                streakDays:           this.streakDays,
                 score:                this.score
             };
 
@@ -396,13 +354,32 @@ export class PlayScene extends Phaser.Scene {
             );
         }
 
+        return { oldStats, dailyBonusAwarded };
+    }
+
+    showLessonComplete() {
+        this.sound.play('level_sound');
+        this.input.keyboard.off('keydown', this.handleKeyDown, this);
+
+        const { streakDays: newStreakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
+        this.streakDays = newStreakDays;
+
+        const total        = this.totalKeysInLesson || 1;
+        const accuracy     = Math.round((total / (total + this.errorsInLesson)) * 100);
+        const durationMin  = (this.lessonEndTime - this.lessonStartTime) / 60000;
+        const wpm          = Math.round((total / 5) / durationMin) || 0;
+        const isLastLesson = this.currentLessonIndex === this.gameData.lessons.length - 1;
+
+        const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
+
+        const { oldStats, dailyBonusAwarded } = this._saveProgressAndCheckAchievements(stars, wpm, accuracy);
+
         const cleanUp = () => {
             this.input.keyboard.off('keyup-SPACE',  handleContinue);
             this.input.keyboard.off('keyup-ENTER',  handleRetry);
             this.input.keyboard.off('keydown-ESC',  handleBackToMap);
         };
 
-        // Show streak animation after overlay is dismissed so it's clearly visible
         const showStreakVisual = () => { if (isNewStreakDay) this.hud.showStreak(newStreakDays); };
 
         const handleContinue = () => {

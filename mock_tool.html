@@ -279,7 +279,7 @@
                 lessonIndex: n, // Bài tiếp theo cần chơi (0-based) sẽ là bài thứ n + 1 (tức index n)
                 score: totalScore,
                 lessonStats: lessonStats,
-                unlockedAchievements: ["ach_1", "ach_2"], // Mock mở khóa 2 achievement đầu
+                unlockedAchievements: ["beginner", "speedy"], // Mock mở khóa 2 achievement đầu "Người mới" và "Tốc ký"
                 consecutivePerfects: 0,
                 dailyChallengeDate: null,
                 sprintHighScore: Math.floor(Math.random() * 20) + 40 // High score ngẫu nhiên
@@ -293,10 +293,24 @@
                 streakDays: Math.min(5, n) // Mock tối đa 5 ngày streak dựa trên số bài học
             };
 
+            // Sinh lịch sử chơi để vẽ biểu đồ WPM
+            const history = [];
+            for (let i = 0; i < n; i++) {
+                const stat = lessonStats[i];
+                history.push({
+                    lessonIndex: i,
+                    wpm: stat.wpm,
+                    accuracy: stat.accuracy,
+                    stars: stat.stars,
+                    timestamp: stat.timestamp
+                });
+            }
+
             try {
                 // Lưu vào Local Storage
                 localStorage.setItem(SAVE_KEY, JSON.stringify(progress));
                 localStorage.setItem(STREAK_KEY, JSON.stringify(streak));
+                localStorage.setItem('typemaster_history', JSON.stringify(history));
 
                 // Khởi tạo equipped skins mặc định nếu chưa có
                 if (!localStorage.getItem(SKINS_KEY)) {

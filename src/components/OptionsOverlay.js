@@ -1,5 +1,6 @@
 import * as Phaser from 'phaser';
 import { ProgressManager } from '../utils/ProgressManager';
+import { ConfirmDialog } from './ConfirmDialog';
 
 export class OptionsOverlay extends Phaser.GameObjects.Container {
     constructor(scene, onClose) {
@@ -22,7 +23,7 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
 
         // Dialog Background
         const dialogW = 600;
-        const dialogH = 340;
+        const dialogH = 400;
         const bg = scene.add.graphics();
         bg.fillStyle(0x0f172a, 1.0); // Solid Deep Slate 900
         bg.fillRoundedRect(-dialogW / 2, -dialogH / 2, dialogW, dialogH, 24);
@@ -193,6 +194,51 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
                     scene.sound.play('key_sound');
                 }
             }
+        });
+
+        // --- Reset Data Button Section (Y = 135) ---
+        const resetY = 135;
+        const resetW = 240;
+        const resetH = 42;
+
+        const resetBg = scene.add.graphics();
+        dialog.add(resetBg);
+
+        const drawResetBg = (color, strokeColor = 0xFCA5A5) => {
+            resetBg.clear();
+            resetBg.fillStyle(color, 0.9);
+            resetBg.fillRoundedRect(-resetW / 2, resetY - resetH / 2, resetW, resetH, 12);
+            resetBg.lineStyle(2, strokeColor, 1);
+            resetBg.strokeRoundedRect(-resetW / 2, resetY - resetH / 2, resetW, resetH, 12);
+        };
+        drawResetBg(0x7f1d1d); // Dark red base
+
+        const resetText = scene.add.text(0, resetY, '↺ Reset data học tập', {
+            fontFamily: 'Outfit, Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FCA5A5'
+        }).setOrigin(0.5);
+        dialog.add(resetText);
+
+        const resetZone = scene.add.zone(width / 2, height / 2 + resetY, resetW, resetH)
+            .setScrollFactor(0)
+            .setInteractive({ useHandCursor: true });
+        this.add(resetZone);
+
+        resetZone.on('pointerover', () => {
+            drawResetBg(0x991b1b, 0xFEE2E2); // lighter red on hover
+            scene.tweens.add({ targets: resetText, scaleX: 1.05, scaleY: 1.05, duration: 100 });
+        });
+        resetZone.on('pointerout', () => {
+            drawResetBg(0x7f1d1d, 0xFCA5A5);
+            scene.tweens.add({ targets: resetText, scaleX: 1.0, scaleY: 1.0, duration: 100 });
+        });
+        resetZone.on('pointerdown', stopEvent);
+        resetZone.on('pointerup', (_p, _x, _y, event) => {
+            if (event) event.stopPropagation();
+            scene.sound.play('key_sound');
+            new ConfirmDialog(scene, () => {
+                ProgressManager.clearAll();
+                scene.scene.restart();
+            });
         });
 
         // --- Close Button ---
