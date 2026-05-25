@@ -282,13 +282,14 @@ export class MapScene extends Phaser.Scene {
     _applyBackground() {
         const { width, height } = this.scale;
         const equipped = ProgressManager.getEquippedSkins();
+        const homeBackground = equipped.homeBackground || 'default';
 
-        let bgTexture = equipped.background;
-        if (bgTexture === 'random') {
-            const unlockedBgs = UNLOCK_THRESHOLDS
-                .map((threshold, i) => this.totalScoreCount >= threshold ? `bg_${i + 1}` : null)
-                .filter(Boolean);
-            bgTexture = Phaser.Math.RND.pick(unlockedBgs) || 'bg_1';
+        let bgTexture;
+        if (homeBackground === 'random') {
+            const unlocked = ProgressManager.getUnlockedBackgrounds(this.lessonStats, CHAPTERS);
+            bgTexture = Phaser.Math.RND.pick(unlocked);
+        } else {
+            bgTexture = ProgressManager.getLastUnlockedBackground(this.lessonStats, CHAPTERS);
         }
 
         if (this.bg) {

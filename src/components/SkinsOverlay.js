@@ -32,7 +32,7 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
         dialog.add(bg);
 
         // Header Title
-        const title = scene.add.text(0, -dialogH / 2 + 45, '👕 CỬA HÀNG TRANG PHỤC', {
+        const title = scene.add.text(0, -dialogH / 2 + 45, '🐵 TRANG PHỤC KHỈ CON', {
             fontFamily: 'Outfit, Arial',
             fontSize: '32px',
             fontStyle: 'bold',
@@ -63,56 +63,11 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
         }).setOrigin(0.5);
         dialog.add(scoreText);
 
-        // --- Tabs ---
-        this.activeTab = 'monkey'; // Default tab
-
-        this.tabMonkeyBg = scene.add.graphics();
-        this.tabBgBg = scene.add.graphics();
-        dialog.add(this.tabMonkeyBg);
-        dialog.add(this.tabBgBg);
-
-        this.tabMonkeyText = scene.add.text(-120, -165, '🐵 KHỈ CON', {
-            fontFamily: 'Outfit, Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
-        }).setOrigin(0.5);
-        dialog.add(this.tabMonkeyText);
-
-        this.tabBgText = scene.add.text(120, -165, '🖼️ HÌNH NỀN', {
-            fontFamily: 'Outfit, Arial', fontSize: '15px', fontStyle: 'bold', fill: '#FFF'
-        }).setOrigin(0.5);
-        dialog.add(this.tabBgText);
-
-        const tabMonkeyZone = scene.add.zone(width / 2 - 120, height / 2 - 165, 200, 40)
-            .setScrollFactor(0).setInteractive({ useHandCursor: true });
-        this.add(tabMonkeyZone);
-
-        const tabBgZone = scene.add.zone(width / 2 + 120, height / 2 - 165, 200, 40)
-            .setScrollFactor(0).setInteractive({ useHandCursor: true });
-        this.add(tabBgZone);
-
-        tabMonkeyZone.on('pointerdown', () => {
-            if (this.activeTab !== 'monkey') {
-                scene.sound.play('key_sound');
-                this.activeTab = 'monkey';
-                this.updateTabs();
-                this.renderGrid();
-            }
-        });
-
-        tabBgZone.on('pointerdown', () => {
-            if (this.activeTab !== 'background') {
-                scene.sound.play('key_sound');
-                this.activeTab = 'background';
-                this.updateTabs();
-                this.renderGrid();
-            }
-        });
-
-        // Grid Container
+        // Grid Container (no tabs — monkey only)
         this.gridContainer = scene.add.container(0, 0);
         dialog.add(this.gridContainer);
 
-        // Render initially
-        this.updateTabs();
+        // Render monkey grid immediately
         this.renderGrid();
 
         // --- Close Button ---
@@ -166,31 +121,6 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
         scene.add.existing(this);
     }
 
-    updateTabs() {
-        const tabW = 200;
-        const tabH = 36;
-        const drawTab = (graphics, x, active) => {
-            graphics.clear();
-            if (active) {
-                graphics.fillStyle(0x1e293b, 1.0); // Slate-800 active
-                graphics.fillRoundedRect(x - tabW / 2, -183, tabW, tabH, 10);
-                graphics.lineStyle(2, 0x10b981, 1); // Emerald border active
-                graphics.strokeRoundedRect(x - tabW / 2, -183, tabW, tabH, 10);
-            } else {
-                graphics.fillStyle(0x090d16, 1.0); // Slate-950 inactive
-                graphics.fillRoundedRect(x - tabW / 2, -183, tabW, tabH, 10);
-                graphics.lineStyle(1.5, 0x1e293b, 1);
-                graphics.strokeRoundedRect(x - tabW / 2, -183, tabW, tabH, 10);
-            }
-        };
-
-        const isMonkey = this.activeTab === 'monkey';
-        drawTab(this.tabMonkeyBg, -120, isMonkey);
-        drawTab(this.tabBgBg, 120, !isMonkey);
-
-        this.tabMonkeyText.setFill(isMonkey ? '#10b981' : '#64748B');
-        this.tabBgText.setFill(!isMonkey ? '#10b981' : '#64748B');
-    }
 
     renderGrid() {
         // Clear old grid items
@@ -224,13 +154,8 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
             const isUnlocked = isRandom || this.score >= UNLOCK_THRESHOLDS[i - 1];
             const threshold = isRandom ? 0 : UNLOCK_THRESHOLDS[i - 1];
 
-            // Check if active equipped
-            let isEquipped = false;
-            if (this.activeTab === 'monkey') {
-                isEquipped = isRandom ? (equipped.monkey === 'random') : (equipped.monkey === `monkey_${i}`);
-            } else {
-                isEquipped = isRandom ? (equipped.background === 'random') : (equipped.background === `bg_${i}`);
-            }
+            // Monkey skin is always equipped.monkey
+            const isEquipped = isRandom ? (equipped.monkey === 'random') : (equipped.monkey === `monkey_${i}`);
 
             // Create item card container
             const card = this.scene.add.container(cx, cy);
@@ -279,70 +204,27 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                     card.add(qText);
                     card.add(nameText);
                 } else {
-                    // Preview
-                    if (this.activeTab === 'monkey') {
-                        const sprite = this.scene.add.sprite(0, -12, `monkey_${i}`).setScale(0.09);
-                        const nameText = this.scene.add.text(0, 38, `Khỉ Con ${i}`, {
-                            fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#FFFFFF'
-                        }).setOrigin(0.5);
-                        card.add(sprite);
-                        card.add(nameText);
+                        // Preview (monkey only)
+                    const sprite = this.scene.add.sprite(0, -12, `monkey_${i}`).setScale(0.09);
+                    const nameText = this.scene.add.text(0, 38, `Khỉ Con ${i}`, {
+                        fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#FFFFFF'
+                    }).setOrigin(0.5);
+                    card.add(sprite);
+                    card.add(nameText);
 
-                        // Make the monkey sprite zoomable on click
-                        sprite.setScrollFactor(0).setInteractive({ useHandCursor: true });
-                        sprite.on('pointerdown', (pointer, localX, localY, event) => {
-                            event.stopPropagation(); // Prevent equipping the skin when clicking to zoom
-                            this.showZoom(`monkey_${i}`, true);
-                        });
-                        sprite.on('pointerover', (pointer, localX, localY, event) => {
-                            event.stopPropagation();
-                            this.scene.tweens.add({
-                                targets: sprite,
-                                scaleX: 0.10,
-                                scaleY: 0.10,
-                                duration: 80
-                            });
-                        });
-                        sprite.on('pointerout', () => {
-                            this.scene.tweens.add({
-                                targets: sprite,
-                                scaleX: 0.09,
-                                scaleY: 0.09,
-                                duration: 80
-                            });
-                        });
-                    } else {
-                        const bgImg = this.scene.add.image(0, -12, `bg_${i}`).setDisplaySize(90, 50);
-                        const nameText = this.scene.add.text(0, 38, `Hình Nền ${i}`, {
-                            fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#FFFFFF'
-                        }).setOrigin(0.5);
-                        card.add(bgImg);
-                        card.add(nameText);
-
-                        // Make the background image zoomable on click
-                        bgImg.setScrollFactor(0).setInteractive({ useHandCursor: true });
-                        bgImg.on('pointerdown', (pointer, localX, localY, event) => {
-                            event.stopPropagation(); // Prevent equipping the skin when clicking to zoom
-                            this.showZoom(`bg_${i}`, false);
-                        });
-                        bgImg.on('pointerover', (pointer, localX, localY, event) => {
-                            event.stopPropagation();
-                            this.scene.tweens.add({
-                                targets: bgImg,
-                                displayWidth: 98,
-                                displayHeight: 54,
-                                duration: 80
-                            });
-                        });
-                        bgImg.on('pointerout', () => {
-                            this.scene.tweens.add({
-                                targets: bgImg,
-                                displayWidth: 90,
-                                displayHeight: 50,
-                                duration: 80
-                            });
-                        });
-                    }
+                    // Make the monkey sprite zoomable on click
+                    sprite.setScrollFactor(0).setInteractive({ useHandCursor: true });
+                    sprite.on('pointerdown', (pointer, localX, localY, event) => {
+                        event.stopPropagation();
+                        this.showZoom(`monkey_${i}`);
+                    });
+                    sprite.on('pointerover', (pointer, localX, localY, event) => {
+                        event.stopPropagation();
+                        this.scene.tweens.add({ targets: sprite, scaleX: 0.10, scaleY: 0.10, duration: 80 });
+                    });
+                    sprite.on('pointerout', () => {
+                        this.scene.tweens.add({ targets: sprite, scaleX: 0.09, scaleY: 0.09, duration: 80 });
+                    });
                 }
 
                 // Equip state label
@@ -385,97 +267,55 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
 
                 card.on('pointerdown', () => {
                     this.scene.sound.play('key_sound');
-                    if (this.activeTab === 'monkey') {
-                        equipped.monkey = isRandom ? 'random' : `monkey_${i}`;
-                    } else {
-                        equipped.background = isRandom ? 'random' : `bg_${i}`;
-                    }
+                    equipped.monkey = isRandom ? 'random' : `monkey_${i}`;
                     ProgressManager.saveEquippedSkins(equipped);
-
-                    // Redraw grid to update equip status
                     this.renderGrid();
                 });
             }
         }
     }
 
-    showZoom(key, isMonkey) {
+    showZoom(key) {
         const { width, height } = this.scene.scale;
 
-        // Container for zoom overlay
         const zoomOverlay = this.scene.add.container(0, 0).setDepth(30).setScrollFactor(0);
         this.add(zoomOverlay);
 
-        // Dark background backdrop
         const backdrop = this.scene.add.rectangle(0, 0, width, height, 0x000000, 0.8)
             .setOrigin(0).setInteractive().setScrollFactor(0);
         zoomOverlay.add(backdrop);
 
-        // Content container
         const zoomContent = this.scene.add.container(width / 2, height / 2);
         zoomOverlay.add(zoomContent);
 
-        // Click backdrop to close
         backdrop.on('pointerdown', () => {
             this.scene.sound.play('key_sound');
             this.scene.tweens.add({
-                targets: zoomContent,
-                scaleX: 0.8,
-                scaleY: 0.8,
-                alpha: 0,
-                duration: 200,
-                onComplete: () => {
-                    zoomOverlay.destroy();
-                }
+                targets: zoomContent, scaleX: 0.8, scaleY: 0.8, alpha: 0, duration: 200,
+                onComplete: () => zoomOverlay.destroy()
             });
         });
 
-        // Renders preview image/sprite
-        let preview;
-        if (isMonkey) {
-            // Radial glow behind the monkey
-            const glow = this.scene.add.graphics();
-            glow.fillStyle(0x10b981, 0.15);
-            glow.fillCircle(0, 0, 180);
-            glow.lineStyle(2, 0x10b981, 0.4);
-            glow.strokeCircle(0, 0, 180);
-            zoomContent.add(glow);
+        // Radial glow behind the monkey
+        const glow = this.scene.add.graphics();
+        glow.fillStyle(0x10b981, 0.15);
+        glow.fillCircle(0, 0, 180);
+        glow.lineStyle(2, 0x10b981, 0.4);
+        glow.strokeCircle(0, 0, 180);
+        zoomContent.add(glow);
 
-            preview = this.scene.add.sprite(0, -30, key).setScale(0.4);
-        } else {
-            // Background image (standard 4:3 ratio: 640x480)
-            preview = this.scene.add.image(0, -30, key).setDisplaySize(640, 480);
-            
-            // Emerald frame border
-            const border = this.scene.add.graphics();
-            border.lineStyle(4, 0x10b981, 1);
-            border.strokeRect(-322, -272, 644, 484);
-            zoomContent.add(border);
-        }
+        const preview = this.scene.add.sprite(0, -30, key).setScale(0.4);
         zoomContent.add(preview);
 
-        // Title and instruction text
-        const titleText = isMonkey ? "TRANG PHỤC KHỈ" : "HÌNH NỀN BẢN ĐỒ";
-        const label = this.scene.add.text(0, isMonkey ? 180 : 255, `${titleText}\n(Bấm bất cứ đâu để đóng)`, {
-            fontFamily: 'Outfit, Arial',
-            fontSize: '18px',
-            fontStyle: 'bold',
-            fill: '#E2E8F0',
-            align: 'center',
-            lineSpacing: 8
+        const label = this.scene.add.text(0, 180, `TRANG PHỤC KHỈ\n(Bấm bất cứ đâu để đóng)`, {
+            fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold',
+            fill: '#E2E8F0', align: 'center', lineSpacing: 8
         }).setOrigin(0.5);
         zoomContent.add(label);
 
-        // Smooth zoom opening animation
-        zoomContent.setScale(0.8);
-        zoomContent.setAlpha(0);
+        zoomContent.setScale(0.8).setAlpha(0);
         this.scene.tweens.add({
-            targets: zoomContent,
-            scaleX: 1,
-            scaleY: 1,
-            alpha: 1,
-            duration: 250,
-            ease: 'Back.easeOut'
+            targets: zoomContent, scaleX: 1, scaleY: 1, alpha: 1, duration: 250, ease: 'Back.easeOut'
         });
     }
 }

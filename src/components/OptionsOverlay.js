@@ -23,7 +23,7 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
 
         // Dialog Background
         const dialogW = 600;
-        const dialogH = 400;
+        const dialogH = 500;
         const bg = scene.add.graphics();
         bg.fillStyle(0x0f172a, 1.0); // Solid Deep Slate 900
         bg.fillRoundedRect(-dialogW / 2, -dialogH / 2, dialogW, dialogH, 24);
@@ -32,7 +32,7 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
         dialog.add(bg);
 
         // Header Title
-        const title = scene.add.text(0, -dialogH / 2 + 40, '⚙️ CÀI ĐẶT ÂM THANH', {
+        const title = scene.add.text(0, -dialogH / 2 + 40, '⚙️ CÀI ĐẶT', {
             fontFamily: 'Outfit, Arial',
             fontSize: '26px',
             fontStyle: 'bold',
@@ -51,8 +51,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
         scene.sound.mute = this.isMute;
         scene.sound.volume = this.volume;
 
-        // --- Mute Toggle Section (Y = -30) ---
-        const muteY = -30;
+        // --- Mute Toggle Section (Y = -120) ---
+        const muteY = -100;
         this.muteLabel = scene.add.text(-180, muteY, this.isMute ? 'ÂM THANH: TẮT' : 'ÂM THANH: BẬT', {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -105,8 +105,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- Volume Slider Section (Y = 60) ---
-        const volY = 60;
+        // --- Volume Slider Section (Y = -10) ---
+        const volY = -10;
         this.volumeLabel = scene.add.text(-180, volY, `ÂM LƯỢNG: ${Math.round(this.volume * 100)}%`, {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -196,8 +196,82 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- Reset Data Button Section (Y = 135) ---
-        const resetY = 135;
+        // --- Home Background Mode Section (Y = 100) ---
+        const bgModeY = 80;
+        const bgModeLabel = scene.add.text(-180, bgModeY, 'HÌNH NỀN:', {
+            fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
+        }).setOrigin(0, 0.5);
+        dialog.add(bgModeLabel);
+
+        const equipped = ProgressManager.getEquippedSkins();
+        let homeBgMode = equipped.homeBackground || 'default';
+
+        const btnW = 110, btnH = 36;
+        const btnDefaultX = 0, btnRandomX = 120;
+
+        const bgDefault = scene.add.graphics();
+        const bgRandom  = scene.add.graphics();
+        dialog.add(bgDefault);
+        dialog.add(bgRandom);
+
+        const drawBgModeButtons = () => {
+            bgDefault.clear();
+            bgDefault.fillStyle(homeBgMode === 'default' ? 0x38bdf8 : 0x1e293b, 1);
+            bgDefault.fillRoundedRect(btnDefaultX - btnW / 2, bgModeY - btnH / 2, btnW, btnH, 10);
+            bgDefault.lineStyle(1.5, homeBgMode === 'default' ? 0x38bdf8 : 0x334155, 1);
+            bgDefault.strokeRoundedRect(btnDefaultX - btnW / 2, bgModeY - btnH / 2, btnW, btnH, 10);
+
+            bgRandom.clear();
+            bgRandom.fillStyle(homeBgMode === 'random' ? 0x38bdf8 : 0x1e293b, 1);
+            bgRandom.fillRoundedRect(btnRandomX - btnW / 2, bgModeY - btnH / 2, btnW, btnH, 10);
+            bgRandom.lineStyle(1.5, homeBgMode === 'random' ? 0x38bdf8 : 0x334155, 1);
+            bgRandom.strokeRoundedRect(btnRandomX - btnW / 2, bgModeY - btnH / 2, btnW, btnH, 10);
+        };
+        drawBgModeButtons();
+
+        const defaultFill = homeBgMode === 'default' ? '#0f172a' : '#94a3b8';
+        const randomFill  = homeBgMode === 'random'  ? '#0f172a' : '#94a3b8';
+        const btnDefaultText = scene.add.text(btnDefaultX, bgModeY, 'MẶC ĐỊNH', {
+            fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: defaultFill
+        }).setOrigin(0.5);
+        const btnRandomText = scene.add.text(btnRandomX, bgModeY, 'NGẪU NHIÊN', {
+            fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: randomFill
+        }).setOrigin(0.5);
+        dialog.add(btnDefaultText);
+        dialog.add(btnRandomText);
+
+        const zoneDefault = scene.add.zone(width / 2 + btnDefaultX, height / 2 + bgModeY, btnW, btnH)
+            .setScrollFactor(0).setInteractive({ useHandCursor: true });
+        this.add(zoneDefault);
+        const zoneRandom = scene.add.zone(width / 2 + btnRandomX, height / 2 + bgModeY, btnW, btnH)
+            .setScrollFactor(0).setInteractive({ useHandCursor: true });
+        this.add(zoneRandom);
+
+        zoneDefault.on('pointerdown', () => {
+            if (homeBgMode !== 'default') {
+                scene.sound.play('key_sound');
+                homeBgMode = 'default';
+                equipped.homeBackground = 'default';
+                ProgressManager.saveEquippedSkins(equipped);
+                drawBgModeButtons();
+                btnDefaultText.setFill('#0f172a');
+                btnRandomText.setFill('#94a3b8');
+            }
+        });
+        zoneRandom.on('pointerdown', () => {
+            if (homeBgMode !== 'random') {
+                scene.sound.play('key_sound');
+                homeBgMode = 'random';
+                equipped.homeBackground = 'random';
+                ProgressManager.saveEquippedSkins(equipped);
+                drawBgModeButtons();
+                btnDefaultText.setFill('#94a3b8');
+                btnRandomText.setFill('#0f172a');
+            }
+        });
+
+        // --- Reset Data Button Section (Y = 210) ---
+        const resetY = 210;
         const resetW = 240;
         const resetH = 42;
 

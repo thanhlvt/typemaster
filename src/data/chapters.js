@@ -124,3 +124,16 @@ export function isChapterUnlocked(chapter, lessonStars) {
 export function getGroupForChapter(chapter) {
     return CHAPTER_GROUPS.find(g => g.id === chapter.groupId);
 }
+
+/**
+ * Returns the background texture key for a chapter.
+ * Format: bg_<groupId>_<positionInGroup>  (1-indexed position within the group)
+ * Example: Chapter 8 (Giọt nước, groupId:2, 1st chapter of group 2) → 'bg_2_1'
+ *          Chapter 9 (Suối mát, groupId:2, 2nd chapter of group 2) → 'bg_2_2'
+ */
+export function getChapterBgKey(chapter) {
+    const group = CHAPTER_GROUPS.find(g => g.id === chapter.groupId);
+    if (!group) return 'bg_1_1';
+    const pos = group.chapterIds.indexOf(chapter.id) + 1; // 1-based
+    return `bg_${chapter.groupId}_${pos}`;
+}

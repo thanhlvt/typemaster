@@ -1,4 +1,5 @@
 import * as Phaser from 'phaser';
+import { CHAPTERS, getChapterBgKey } from '../data/chapters';
 
 export class BootScene extends Phaser.Scene {
     constructor() {
@@ -21,9 +22,13 @@ export class BootScene extends Phaser.Scene {
         });
         loadingText.setOrigin(0.5, 0.5);
 
-        // Assets will be loaded here
+        // Load chapter-based backgrounds: bg_<groupId>_<positionInGroup>
+        for (const chapter of CHAPTERS) {
+            const key = getChapterBgKey(chapter);
+            this.load.image(key, `assets/${key}.png`);
+        }
+        // Load monkey skins (still score-based)
         for (let i = 1; i <= 10; i++) {
-            this.load.image(`bg_${i}`, `assets/bg_${i}.png`);
             this.load.image(`monkey_${i}`, `assets/monkey_${i}.png`);
         }
         this.load.image('banana', 'assets/banana.png');

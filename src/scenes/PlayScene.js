@@ -10,6 +10,7 @@ import { AchievementToast }      from '../components/AchievementToast';
 import { PlaySceneHUD }          from '../components/PlaySceneHUD';
 import { ComboManager }          from '../components/ComboManager';
 import { TypingBox }             from '../components/TypingBox';
+import { getChapterForLesson, getChapterBgKey, CHAPTERS } from '../data/chapters';
 
 export class PlayScene extends Phaser.Scene {
     constructor() {
@@ -47,7 +48,7 @@ export class PlayScene extends Phaser.Scene {
     create() {
         const { width, height } = this.scale;
 
-        this.bgImage = this.add.image(width / 2, height / 2, 'bg_1').setDisplaySize(width, height);
+        this.bgImage = this.add.image(width / 2, height / 2, 'bg_1_1').setDisplaySize(width, height);
         this.monkey  = this.add.sprite(width / 2, height * 0.4, 'monkey_1').setScale(0.5);
 
         this.typingBox = new TypingBox(this);
@@ -189,14 +190,17 @@ export class PlayScene extends Phaser.Scene {
     _applySkins() {
         const equipped = ProgressManager.getEquippedSkins();
 
-        let bgTexture = equipped.background;
-        if (bgTexture === 'random') {
-            const unlockedBgs = UNLOCK_THRESHOLDS
-                .map((threshold, i) => this.score >= threshold ? `bg_${i + 1}` : null)
-                .filter(Boolean);
-            bgTexture = Phaser.Math.RND.pick(unlockedBgs) || 'bg_1';
+        // Background is fixed per chapter — always use chapter's own bg texture
+        let bgTexture;
+        if (this.isDailyChallenge) {
+            // For daily challenge, use last unlocked background
+            bgTexture = ProgressManager.getLastUnlockedBackground(this.lessonStats, CHAPTERS);
+        } else {
+            const chapter = getChapterForLesson(this.currentLessonIndex);
+            bgTexture = getChapterBgKey(chapter);
         }
 
+        // Monkey skin follows equipped setting
         let monkeyTexture = equipped.monkey;
         if (monkeyTexture === 'random') {
             const unlockedMonkeys = UNLOCK_THRESHOLDS
