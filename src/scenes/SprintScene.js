@@ -285,7 +285,8 @@ export class SprintScene extends Phaser.Scene {
         const accuracy = Math.round((total / (total + this.errors)) * 100);
         const wpm = Math.round(this.correctKeystrokes / 5) || 0;
 
-        const isNewRecord = wpm > this.sprintHighScore;
+        const oldHighScore = this.sprintHighScore;
+        const isNewRecord = wpm > oldHighScore;
         if (isNewRecord) {
             this.sprintHighScore = wpm;
             ProgressManager.saveProgress(
@@ -305,7 +306,7 @@ export class SprintScene extends Phaser.Scene {
             this.scene.start('MapScene');
         };
 
-        const oldStats = isNewRecord ? { wpm: this.sprintHighScore - 1, stars: 0 } : null;
+        const oldStats = oldHighScore > 0 ? { wpm: oldHighScore, stars: 0 } : null;
         const overlay = new ResultOverlay(this, accuracy, wpm, true, handleBackToMap, oldStats, false, 'HẾT GIỜ!');
 
         this.input.keyboard.once('keyup-ENTER', handleRetry);

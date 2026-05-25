@@ -82,6 +82,36 @@ export class MapHeader extends Phaser.GameObjects.Container {
 
         currentRightX -= optW / 2 + 8;
 
+        // Stats
+        const statsW = 120;
+        const statsH = 32;
+        currentRightX -= statsW / 2;
+        const statsX = currentRightX;
+        const statsBg = scene.add.graphics();
+        const drawStatsBg = (color) => {
+            statsBg.clear(); statsBg.fillStyle(color, 0.85);
+            statsBg.fillRoundedRect(statsX - statsW/2, row1Y - statsH/2, statsW, statsH, statsH/2);
+            statsBg.lineStyle(1.5, 0xffffff, 0.2);
+            statsBg.strokeRoundedRect(statsX - statsW/2, row1Y - statsH/2, statsW, statsH, statsH/2);
+        };
+        drawStatsBg(0x3b82f6);
+        this.add(statsBg);
+
+        const statsText = scene.add.text(statsX, row1Y, '📊 Thống kê', {
+            fontFamily: 'Arial', fontSize: '13px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5);
+        this.add(statsText);
+
+        const statsZone = scene.add.zone(statsX, row1Y, statsW, statsH).setScrollFactor(0).setInteractive({ useHandCursor: true });
+        this.add(statsZone);
+        statsZone.on('pointerover', () => drawStatsBg(0x60a5fa));
+        statsZone.on('pointerout',  () => drawStatsBg(0x3b82f6));
+        statsZone.on('pointerdown', () => {
+            scene.sound.play('key_sound');
+            new StatsOverlay(scene);
+        });
+        currentRightX -= statsW / 2 + 8;
+
         // Skin
         const skinW = 90;
         const skinH = 32;
@@ -113,7 +143,6 @@ export class MapHeader extends Phaser.GameObjects.Container {
                 scene._applyBackground();
             });
         });
-
         currentRightX -= skinW / 2 + 8;
 
         // Achievement
@@ -144,39 +173,7 @@ export class MapHeader extends Phaser.GameObjects.Container {
             scene.sound.play('key_sound');
             new AchievementsOverlay(scene, scene.unlockedAchievements, () => scene._loadProgress());
         });
-
         currentRightX -= achW / 2 + 8;
-
-        // Stats
-        const statsW = 120;
-        const statsH = 32;
-        currentRightX -= statsW / 2;
-        const statsX = currentRightX;
-        const statsBg = scene.add.graphics();
-        const drawStatsBg = (color) => {
-            statsBg.clear(); statsBg.fillStyle(color, 0.85);
-            statsBg.fillRoundedRect(statsX - statsW/2, row1Y - statsH/2, statsW, statsH, statsH/2);
-            statsBg.lineStyle(1.5, 0xffffff, 0.2);
-            statsBg.strokeRoundedRect(statsX - statsW/2, row1Y - statsH/2, statsW, statsH, statsH/2);
-        };
-        drawStatsBg(0x3b82f6);
-        this.add(statsBg);
-
-        const statsText = scene.add.text(statsX, row1Y, '📊 Thống kê', {
-            fontFamily: 'Arial', fontSize: '13px', fontStyle: 'bold', fill: '#FFF'
-        }).setOrigin(0.5);
-        this.add(statsText);
-
-        const statsZone = scene.add.zone(statsX, row1Y, statsW, statsH).setScrollFactor(0).setInteractive({ useHandCursor: true });
-        this.add(statsZone);
-        statsZone.on('pointerover', () => drawStatsBg(0x60a5fa));
-        statsZone.on('pointerout',  () => drawStatsBg(0x3b82f6));
-        statsZone.on('pointerdown', () => {
-            scene.sound.play('key_sound');
-            new StatsOverlay(scene);
-        });
-
-        currentRightX -= statsW / 2 + 8;
 
         // Stars Chip
         const progress = ProgressManager.loadProgress(scene.gameData.lessons.length);
