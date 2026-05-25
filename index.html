@@ -4,39 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Học Gõ Telex cùng Khỉ Con - Luyện Gõ 10 Ngón Tiếng Việt</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Học gõ tiếng Việt Telex miễn phí cùng Khỉ Con - 100 bài luyện tập từ cơ bản đến nâng cao. Phù hợp mọi lứa tuổi, hướng dẫn luyện gõ 10 ngón chuyên nghiệp.">
+    <meta name="description" content="Học gõ tiếng Việt Telex miễn phí cùng Khỉ Con - 700 bài luyện tập từ cơ bản đến nâng cao. Phù hợp mọi lứa tuổi, hướng dẫn luyện gõ 10 ngón chuyên nghiệp.">
     <meta name="keywords" content="học gõ telex, telex tiếng Việt, luyện gõ 10 ngón, game gõ tiếng việt, gõ nhanh, typemaster, khỉ con">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Học Gõ Telex cùng Khỉ Con - Luyện Gõ 10 Ngón">
-    <meta property="og:description" content="Game học gõ tiếng Việt Telex thú vị với 100 bài học, có hướng dẫn ngón tay trực quan và âm thanh sinh động.">
+    <meta property="og:description" content="Game học gõ tiếng Việt Telex thú vị với 700 bài học, có hướng dẫn ngón tay trực quan và âm thanh sinh động.">
     <meta property="og:image" content="/assets/og-thumbnail.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/">
-    
+    <meta property="og:url" content="https://thanhlvt.github.io/typemaster/">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="TypeMaster">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Học Gõ Telex cùng Khỉ Con">
-    <meta name="twitter:description" content="Game học gõ tiếng Việt Telex thú vị với 100 bài học, có hướng dẫn ngón tay và âm thanh sinh động.">
+    <meta name="twitter:description" content="Game học gõ tiếng Việt Telex thú vị với 700 bài học, có hướng dẫn ngón tay và âm thanh sinh động.">
     <meta name="twitter:image" content="/assets/og-thumbnail.png">
 
     <!-- Canonical URL & Manifest -->
-    <link rel="canonical" href="https://your-domain.com/">
+    <link rel="canonical" href="https://thanhlvt.github.io/typemaster/">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2c3e50">
+    <meta name="theme-color" content="#0f172a">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LearningResource",
+      "@type": ["LearningResource", "SoftwareApplication"],
       "name": "Học Gõ Telex cùng Khỉ Con",
       "description": "Game học gõ tiếng Việt bằng phương pháp Telex và luyện gõ 10 ngón trực quan.",
       "inLanguage": "vi",
       "educationalLevel": "beginner",
       "teaches": "Vietnamese Telex typing",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "VND"
+      },
       "provider": {
         "@type": "Organization",
         "name": "TypeMaster Team",
@@ -46,71 +55,331 @@
     </script>
 
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background-color: #2c3e50;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background-color: #0f172a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #e2e8f0;
         }
+
+        /* ── Game container ── */
         #game-container {
             width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
-        /* Style for screen readers / SEO crawlers only, hides element visually but leaves in DOM */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+
+        /* ── Scroll hint ── */
+        #scroll-hint {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 10;
+        }
+        #scroll-hint.hidden {
+            opacity: 0;
+        }
+        #scroll-hint .arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid rgba(255,255,255,0.45);
+            border-bottom: 2px solid rgba(255,255,255,0.45);
+            transform: rotate(45deg);
+            animation: bounce 1.4s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: rotate(45deg) translateY(0); }
+            50%       { transform: rotate(45deg) translateY(5px); }
+        }
+
+        /* ── Landing section ── */
+        .landing {
+            background: #0f172a;
+            padding: 72px 24px 56px;
+        }
+        .landing-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* Hero */
+        .landing-hero {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .landing-hero h1 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 700;
+            color: #f1f5f9;
+            margin: 0 0 16px;
+            line-height: 1.3;
+        }
+        .landing-hero h1 span {
+            color: #38bdf8;
+        }
+        .landing-hero p {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Features */
+        .landing h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin: 0 0 28px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 64px;
+        }
+        .feature-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .feature-card .icon {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .feature-card strong {
+            display: block;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .feature-card p {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* How to play */
+        .how-to-play {
+            margin-bottom: 64px;
+        }
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .step {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .step-num {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+        .step p {
+            color: #cbd5e1;
+            line-height: 1.65;
+            margin: 0;
+        }
+        .step p strong {
+            color: #f1f5f9;
+        }
+
+        /* FAQ */
+        .faq {
+            margin-bottom: 16px;
+        }
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .faq-item {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 18px 20px;
+        }
+        .faq-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #fbbf24;
+            margin: 0 0 8px;
+        }
+        .faq-item p {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+        .faq-item p code {
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85em;
+        }
+
+        /* Footer */
+        footer {
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            padding: 24px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #475569;
+        }
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div id="game-container"></div>
 
-    <!-- Hidden Semantic SEO Landing Section for Crawlers -->
-    <section class="sr-only" aria-hidden="false">
-        <h1>Học Gõ Telex Cùng Khỉ Con - Luyện Gõ Tiếng Việt 10 Ngón</h1>
-        <p>Chào mừng bạn đến với <strong>Học Gõ Telex cùng Khỉ Con</strong> (TypeMaster), game học gõ tiếng Việt bằng phương pháp Telex hoàn toàn miễn phí và cực kỳ hấp dẫn. Với hơn 100 bài học từ cơ bản đến nâng cao, ứng dụng này được thiết kế phù hợp cho mọi lứa tuổi, giúp bạn cải thiện tốc độ và độ chính xác khi gõ bàn phím.</p>
-        
-        <h2>Tính Năng Nổi Bật Của Game Luyện Gõ 10 Ngón</h2>
-        <ul>
-            <li><strong>Phương pháp học gõ Telex trực quan:</strong> Hướng dẫn chi tiết cách gõ các ký tự tiếng Việt có dấu qua Telex một cách tự nhiên nhất.</li>
-            <li><strong>Bàn phím hướng dẫn ngón tay ảo:</strong> Giúp bạn đặt tay đúng vị trí tiêu chuẩn để luyện gõ 10 ngón mà không cần nhìn bàn phím.</li>
-            <li><strong>100 bài học phong phú:</strong> Từ các nguyên âm đơn giản cho đến các từ ghép, câu hoàn chỉnh.</li>
-            <li><strong>Đồ họa sinh động & Âm thanh vui nhộn:</strong> Đồng hành cùng Khỉ Con leo cây hái chuối thông qua các bài luyện gõ đúng.</li>
-            <li><strong>Phản hồi tức thì:</strong> Thống kê tốc độ gõ (WPM - từ mỗi phút) và tỷ lệ gõ chính xác ngay lập tức.</li>
-        </ul>
+    <!-- Landing section — visible to users & crawlers -->
+    <section class="landing">
+        <div class="landing-inner">
 
-        <h2>Cách Chơi Game Luyện Gõ Telex Tiếng Việt</h2>
-        <ol>
-            <li>Nhập chính xác các ký tự hiển thị trên màn hình bằng kiểu gõ Telex.</li>
-            <li>Khi gõ đúng, Khỉ Con sẽ leo lên để hái chuối hoặc thực hiện các hành động tương tác.</li>
-            <li>Tránh gõ sai quá nhiều để không làm giảm điểm số và thời gian của bạn.</li>
-            <li>Đặt 10 ngón tay theo hướng dẫn trên bàn phím ảo để rèn luyện thói quen phản xạ không nhìn bàn phím.</li>
-        </ol>
+            <div class="landing-hero">
+                <h1>Học Gõ <span>Telex</span> Cùng Khỉ Con<br>Luyện Gõ Tiếng Việt 10 Ngón</h1>
+                <p>Game học gõ tiếng Việt hoàn toàn miễn phí với 700 bài học từ cơ bản đến nâng cao.
+                Hướng dẫn ngón tay trực quan, hệ thống thành tích, và nhiều màn chơi thú vị dành cho mọi lứa tuổi.</p>
+            </div>
 
-        <h2>Câu Hỏi Thường Gặp (FAQ) về Luyện Gõ Telex</h2>
-        <div>
-            <h3>Kiểu gõ Telex là gì?</h3>
-            <p>Telex là kiểu gõ tiếng Việt phổ biến nhất hiện nay, sử dụng các phím chữ lặp hoặc phím chữ ở cuối từ để tạo ra các ký tự có dấu (ví dụ: aa thành â, aw thành ă, s thành dấu sắc, f thành dấu huyền, r thành dấu hỏi, x thành dấu ngã, j thành dấu nặng).</p>
-            
-            <h3>Làm thế nào để gõ 10 ngón nhanh hơn?</h3>
-            <p>Bạn cần đặt các ngón tay ở hàng phím cơ sở (ASDF - JKL;), sử dụng bàn phím ảo hướng dẫn trong game và luyện tập đều đặn hàng ngày thông qua game Học Gõ Telex cùng Khỉ Con.</p>
-            
-            <h3>Học gõ Telex cùng Khỉ Con có miễn phí không?</h3>
-            <p>Hoàn toàn miễn phí! Trò chơi có thể chạy trực tiếp trên trình duyệt máy tính hoặc điện thoại mà không cần cài đặt phức tạp.</p>
+            <h2>Tính Năng Nổi Bật</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">⌨️</span>
+                    <strong>Bàn phím hướng dẫn ngón tay</strong>
+                    <p>Hiển thị đúng ngón tay cần dùng cho từng phím, giúp xây dựng thói quen gõ 10 ngón chuẩn xác.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">📚</span>
+                    <strong>700 bài học có lộ trình</strong>
+                    <p>50 chương chia theo 7 chủ đề, mở khoá dần theo tiến độ từ nguyên âm đơn giản đến câu hoàn chỉnh.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🔥</span>
+                    <strong>Hệ thống Combo & Điểm số</strong>
+                    <p>Gõ liên tục không sai để nhân điểm ×2, ×3, ×4 — càng vào guồng càng hào hứng.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🏆</span>
+                    <strong>20 Thành Tích Mở Khoá</strong>
+                    <p>Từ "Người mới bắt đầu" đến "Thánh tốc độ 100 WPM" — luôn có mục tiêu tiếp theo để phấn đấu.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🐒</span>
+                    <strong>10 Skin Khỉ Con</strong>
+                    <p>Tích luỹ điểm để mở khoá các bộ trang phục độc đáo cho nhân vật Khỉ Con đồng hành.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">⚡</span>
+                    <strong>Chế độ Sprint 60 giây</strong>
+                    <p>Thử thách tốc độ tối đa trong 60 giây — luyện phản xạ và phá kỷ lục WPM của chính mình.</p>
+                </div>
+            </div>
+
+            <div class="how-to-play">
+                <h2>Cách Chơi</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <p>Chọn bài học trên bản đồ — bắt đầu từ chương 1 và mở khoá dần các chương tiếp theo.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <p>Gõ từng từ hiển thị trên màn hình bằng <strong>kiểu gõ Telex</strong>. Bàn phím ảo sẽ gợi ý ngón tay cần dùng.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <p>Gõ đúng liên tục để tăng <strong>combo nhân điểm</strong>. Hoàn thành bài để nhận sao và mở khoá bài tiếp theo.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">4</div>
+                        <p>Theo dõi <strong>WPM</strong> (từ/phút) và <strong>độ chính xác</strong> — luyện mỗi ngày để cải thiện điểm streak.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <h2>Câu Hỏi Thường Gặp</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Kiểu gõ Telex là gì?</h3>
+                        <p>Telex là kiểu gõ tiếng Việt phổ biến nhất, dùng phím lặp hoặc phím bổ sung để tạo ký tự có dấu.<br>
+                        Cụ thể: aa → â, aw → ă, ee → ê, oo → ô, ow → ơ, uw → ư, dd → đ,<br>
+                        s → dấu sắc, f → dấu huyền, r → dấu hỏi, x → dấu ngã, j → dấu nặng,<br>
+                        z → xóa dấu (trả về ký tự gốc).</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Game có miễn phí không?</h3>
+                        <p>Hoàn toàn miễn phí, không cần tài khoản, không cần cài đặt. Chạy trực tiếp trên trình duyệt máy tính — chỉ cần bàn phím vật lý để luyện tập hiệu quả nhất.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Phù hợp với độ tuổi nào?</h3>
+                        <p>Phù hợp từ học sinh tiểu học đến người đi làm. Các chương đầu tập trung vào chữ cái cơ bản, dần nâng lên từ ghép và câu hoàn chỉnh theo lộ trình rõ ràng.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Tiến độ có được lưu lại không?</h3>
+                        <p>Có. Toàn bộ tiến độ, điểm số, thành tích và skin được lưu tự động trong trình duyệt — không cần đăng nhập, không mất dữ liệu khi tắt tab.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <footer>
+        <p>© 2026 TypeMaster — Học Gõ Telex cùng Khỉ Con &nbsp;·&nbsp;
+        <a href="https://thanhlvt.github.io/typemaster/">thanhlvt.github.io/typemaster</a></p>
+    </footer>
+
+    <script>
+        const hint = document.getElementById('scroll-hint');
+        window.addEventListener('scroll', () => {
+            hint.classList.toggle('hidden', window.scrollY > 60);
+        }, { passive: true });
+    </script>
 
     <script type="module" src="src/main.js"></script>
 </body>
