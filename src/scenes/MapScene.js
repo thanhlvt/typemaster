@@ -123,7 +123,7 @@ export class MapScene extends Phaser.Scene {
                 if (!chapter) continue;
 
                 // Draw Chapter Header (Small Group, Left-aligned, Font 18px)
-                const chapterHeader = this.add.text(startX - 70, currentY + 25, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
+                const chapterHeader = this.add.text(startX - 70, currentY + 5, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
                     fontFamily: 'Outfit, Arial',
                     fontSize: '18px',
                     fontStyle: 'bold',
@@ -274,8 +274,11 @@ export class MapScene extends Phaser.Scene {
         });
         this.tooltip.add(this.tooltipText);
 
+        this.input.keyboard.addCapture(Phaser.Input.Keyboard.KeyCodes.SPACE);
+
         this.events.once('shutdown', () => {
             this.input.setDefaultCursor('default');
+            this.input.keyboard.removeCapture(Phaser.Input.Keyboard.KeyCodes.SPACE);
         });
     }
 
@@ -291,6 +294,7 @@ export class MapScene extends Phaser.Scene {
         } else {
             bgTexture = ProgressManager.getLastUnlockedBackground(this.lessonStats, CHAPTERS);
         }
+        console.log('MapScene: homeBackground =', homeBackground, 'bgTexture =', bgTexture, 'lessonStats =', this.lessonStats);
 
         if (this.bg) {
             this.bg.setTexture(bgTexture);

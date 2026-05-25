@@ -283,6 +283,44 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* ── Back to Top Button ── */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #10b981;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            padding-bottom: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 1000;
+            opacity: 1;
+            transform: scale(1);
+            outline: none;
+        }
+        .back-to-top.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.8);
+        }
+        .back-to-top:hover {
+            background: #059669;
+            transform: scale(1.1);
+        }
+        .back-to-top:active {
+            transform: scale(0.95);
+        }
     </style>
 </head>
 <body>
@@ -387,11 +425,23 @@
         <a href="https://thanhlvt.github.io/typemaster/">thanhlvt.github.io/typemaster</a></p>
     </footer>
 
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top" class="back-to-top hidden" aria-label="Trở về game" title="Trở về game">🎮</button>
+
     <script>
         const hint = document.getElementById('scroll-hint');
+        const backToTop = document.getElementById('back-to-top');
+
         window.addEventListener('scroll', () => {
-            hint.classList.toggle('hidden', window.scrollY > 60);
+            if (hint) {
+                hint.classList.toggle('hidden', window.scrollY > 60);
+            }
+            backToTop.classList.toggle('hidden', window.scrollY <= 200);
         }, { passive: true });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 
     <script type="module" src="src/main.js"></script>

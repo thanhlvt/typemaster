@@ -87,7 +87,7 @@ export class VirtualKeyboard extends Phaser.GameObjects.Container {
 
         // Left Hand
         const leftContainer = this.scene.add.container(width * 0.15, handY);
-        const leftHandImg = this.scene.add.image(0, 0, 'hand_left').setScale(0.2).setAlpha(0.8);
+        const leftHandImg = this.scene.add.image(0, 0, 'hand_left').setScale(0.8).setAlpha(0.8);
         leftContainer.add(leftHandImg);
 
         const leftOffsets = {
@@ -108,7 +108,7 @@ export class VirtualKeyboard extends Phaser.GameObjects.Container {
 
         // Right Hand
         const rightContainer = this.scene.add.container(width * 0.85, handY);
-        const rightHandImg = this.scene.add.image(0, 0, 'hand_right').setScale(0.2).setAlpha(0.8);
+        const rightHandImg = this.scene.add.image(0, 0, 'hand_right').setScale(0.8).setAlpha(0.8);
         rightContainer.add(rightHandImg);
 
         const rightOffsets = {

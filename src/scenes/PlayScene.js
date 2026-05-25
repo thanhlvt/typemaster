@@ -49,7 +49,7 @@ export class PlayScene extends Phaser.Scene {
         const { width, height } = this.scale;
 
         this.bgImage = this.add.image(width / 2, height / 2, 'bg_1_1').setDisplaySize(width, height);
-        this.monkey  = this.add.sprite(width / 2, height * 0.4, 'monkey_1').setScale(0.5);
+        this.monkey = this.add.sprite(width / 2, height * 0.35, 'monkey_1').setScale(0.75);
 
         this.typingBox = new TypingBox(this);
         this.virtualKeyboard = new VirtualKeyboard(this, 0, 0);
@@ -59,9 +59,15 @@ export class PlayScene extends Phaser.Scene {
         this.hud.initStreak(this.streakDays);
 
         this.input.keyboard.on('keydown', this.handleKeyDown, this);
-        this.input.keyboard.addCapture(Phaser.Input.Keyboard.KeyCodes.ESC);
+        this.input.keyboard.addCapture([
+            Phaser.Input.Keyboard.KeyCodes.ESC,
+            Phaser.Input.Keyboard.KeyCodes.SPACE
+        ]);
         this.events.once('shutdown', () => {
-            this.input.keyboard.removeCapture(Phaser.Input.Keyboard.KeyCodes.ESC);
+            this.input.keyboard.removeCapture([
+                Phaser.Input.Keyboard.KeyCodes.ESC,
+                Phaser.Input.Keyboard.KeyCodes.SPACE
+            ]);
         });
 
         this.startLesson();

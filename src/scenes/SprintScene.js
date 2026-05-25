@@ -3,6 +3,7 @@ import { TelexEngine }           from '../utils/TelexEngine';
 import { VirtualKeyboard }       from '../components/VirtualKeyboard';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { TypingValidator }       from '../utils/TypingValidator';
+import { CHAPTERS }              from '../data/chapters';
 import { ResultOverlay }         from '../components/ResultOverlay';
 
 export class SprintScene extends Phaser.Scene {
@@ -37,13 +38,23 @@ export class SprintScene extends Phaser.Scene {
         this.errors = 0;
         this.timeLeft = 60;
         this.isActive = true;
+
+        // Compute home screen background dynamically
+        const equipped = ProgressManager.getEquippedSkins();
+        const homeBackground = equipped.homeBackground || 'default';
+        if (homeBackground === 'random') {
+            const unlocked = ProgressManager.getUnlockedBackgrounds(this.lessonStats, CHAPTERS);
+            this.bgTexture = Phaser.Math.RND.pick(unlocked);
+        } else {
+            this.bgTexture = ProgressManager.getLastUnlockedBackground(this.lessonStats, CHAPTERS);
+        }
     }
 
     create() {
         const { width, height } = this.scale;
 
-        this.bgImage = this.add.image(width / 2, height / 2, 'bg_1').setDisplaySize(width, height);
-        this.monkey = this.add.sprite(width / 2, height * 0.4, 'monkey_1').setScale(0.5);
+        this.bgImage = this.add.image(width / 2, height / 2, this.bgTexture).setDisplaySize(width, height);
+        this.monkey = this.add.sprite(width / 2, height * 0.35, 'monkey_1').setScale(0.75);
 
         this._createContentUI(width, height);
         this._createHUD(width);
@@ -51,10 +62,16 @@ export class SprintScene extends Phaser.Scene {
         this.virtualKeyboard = new VirtualKeyboard(this, 0, 0);
 
         this.input.keyboard.on('keydown', this.handleKeyDown, this);
-        this.input.keyboard.addCapture(Phaser.Input.Keyboard.KeyCodes.ESC);
+        this.input.keyboard.addCapture([
+            Phaser.Input.Keyboard.KeyCodes.ESC,
+            Phaser.Input.Keyboard.KeyCodes.SPACE
+        ]);
         
         this.events.once('shutdown', () => {
-            this.input.keyboard.removeCapture(Phaser.Input.Keyboard.KeyCodes.ESC);
+            this.input.keyboard.removeCapture([
+                Phaser.Input.Keyboard.KeyCodes.ESC,
+                Phaser.Input.Keyboard.KeyCodes.SPACE
+            ]);
         });
 
         this._applySkins();
@@ -143,14 +160,8 @@ export class SprintScene extends Phaser.Scene {
 
     _applySkins() {
         const equipped = ProgressManager.getEquippedSkins();
-
-        let bgTexture = equipped.background;
-        if (bgTexture === 'random') {
-            const unlockedBgs = UNLOCK_THRESHOLDS
-                .map((threshold, i) => this.score >= threshold ? `bg_${i + 1}` : null)
-                .filter(Boolean);
-            bgTexture = Phaser.Math.RND.pick(unlockedBgs) || 'bg_1';
-        }
+        const bgTexture = this.bgTexture;
+        console.log('SprintScene: bgTexture =', bgTexture);
 
         let monkeyTexture = equipped.monkey;
         if (monkeyTexture === 'random') {
@@ -160,7 +171,7 @@ export class SprintScene extends Phaser.Scene {
             monkeyTexture = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
         }
 
-        if (this.bgImage) this.bgImage.setTexture(bgTexture);
+        if (this.bgImage) this.bgImage.setTexture(bgTexture).setDisplaySize(this.scale.width, this.scale.height);
         if (this.monkey)  this.monkey.setTexture(monkeyTexture);
     }
 

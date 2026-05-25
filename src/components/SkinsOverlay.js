@@ -205,7 +205,7 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                     card.add(nameText);
                 } else {
                         // Preview (monkey only)
-                    const sprite = this.scene.add.sprite(0, -12, `monkey_${i}`).setScale(0.09);
+                    const sprite = this.scene.add.sprite(0, -12, `monkey_${i}`).setScale(0.18);
                     const nameText = this.scene.add.text(0, 38, `Khỉ Con ${i}`, {
                         fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#FFFFFF'
                     }).setOrigin(0.5);
@@ -220,10 +220,10 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
                     });
                     sprite.on('pointerover', (pointer, localX, localY, event) => {
                         event.stopPropagation();
-                        this.scene.tweens.add({ targets: sprite, scaleX: 0.10, scaleY: 0.10, duration: 80 });
+                        this.scene.tweens.add({ targets: sprite, scaleX: 0.20, scaleY: 0.20, duration: 80 });
                     });
                     sprite.on('pointerout', () => {
-                        this.scene.tweens.add({ targets: sprite, scaleX: 0.09, scaleY: 0.09, duration: 80 });
+                        this.scene.tweens.add({ targets: sprite, scaleX: 0.18, scaleY: 0.18, duration: 80 });
                     });
                 }
 
@@ -304,7 +304,7 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
         glow.strokeCircle(0, 0, 180);
         zoomContent.add(glow);
 
-        const preview = this.scene.add.sprite(0, -30, key).setScale(0.4);
+        const preview = this.scene.add.sprite(0, -30, key).setScale(0.8);
         zoomContent.add(preview);
 
         const label = this.scene.add.text(0, 180, `TRANG PHỤC KHỈ\n(Bấm bất cứ đâu để đóng)`, {
