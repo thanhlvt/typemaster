@@ -1,6 +1,6 @@
 import * as Phaser from 'phaser';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
-import { getChapterForLesson } from '../data/chapters';
+import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson } from '../data/chapters';
 import { LessonCard } from '../components/LessonCard';
 import { MapHeader } from '../components/MapHeader';
 import { MapSidebar } from '../components/MapSidebar';
@@ -31,13 +31,15 @@ export class MapScene extends Phaser.Scene {
         this.lessonStars          = {};
         this.lessonStats          = progress.lessonStats || {};
         this.unlockedAchievements = progress.unlockedAchievements || [];
-        this.currentLessonIndex   = progress.lessonIndex || 0;
-
         if (progress.lessonStats) {
             for (const key in progress.lessonStats) {
                 this.lessonStars[key] = progress.lessonStats[key].stars || 0;
             }
         }
+
+        // Dynamically compute the currentLessonIndex as the furthest unlocked lesson (the frontier)
+        // rather than the last played/replayed lesson.
+        this.currentLessonIndex   = this._computeCurrentLessonIndex();
 
         for (const key in this.lessonStars) {
             const stars = this.lessonStars[key] || 0;
@@ -71,10 +73,7 @@ export class MapScene extends Phaser.Scene {
         const sidebarY           = sidebarTopMargin + sidebarH / 2;
         const sidebarGap         = 30;
 
-        const totalLessons = this.gameData.lessons.length;
         const columns      = 4;
-        const rows         = Math.ceil(totalLessons / columns);
-        const startY       = 230;
         const rowHeight    = 150;
         const colWidth     = 180;
         const cardHalfW    = 70;
@@ -86,21 +85,82 @@ export class MapScene extends Phaser.Scene {
         const gridRightEdge  = sidebarX - sidebarW / 2 - sidebarGap;
         const availableW     = gridRightEdge - gridLeftMargin;
         const startX         = gridLeftMargin + cardHalfW + Math.max(0, (availableW - gridVisualSpan) / 2);
+        const gridCenterX    = startX + ((columns - 1) * colWidth) / 2;
 
-        const totalScrollHeight = startY + rows * rowHeight + 80;
+        this.lessonYPositions = {};
+        let currentY = 180;
+        const groupGraphics = this.add.graphics();
+
+        for (let gIdx = 0; gIdx < CHAPTER_GROUPS.length; gIdx++) {
+            const group = CHAPTER_GROUPS[gIdx];
+
+            // Add extra visual padding between themes
+            if (gIdx > 0) {
+                currentY += 45;
+            }
+
+            // 1. Draw Group Header Text (Big Group, Centered, Font 26px)
+            const groupText = `${group.emoji}  ${group.name.toUpperCase()}`;
+            const groupHeader = this.add.text(gridCenterX, currentY + 35, groupText, {
+                fontFamily: 'Outfit, Arial',
+                fontSize: '26px',
+                fontStyle: 'bold',
+                fill: '#f8fafc', // Ultra clean slate-white
+            }).setOrigin(0.5);
+            groupHeader.setStroke('#0f172a', 5);
+            groupHeader.setShadow(0, 2, 'rgba(0,0,0,0.6)', 4, true, true);
+
+            const textWidth = groupHeader.width;
+            groupGraphics.lineStyle(2, 0x334155, 0.7);
+            groupGraphics.lineBetween(gridLeftMargin + 10, currentY + 35, gridCenterX - textWidth / 2 - 20, currentY + 35);
+            groupGraphics.lineBetween(gridCenterX + textWidth / 2 + 20, currentY + 35, gridRightEdge - 10, currentY + 35);
+
+            currentY += 80;
+
+            // 2. Layout Lessons Chapter by Chapter (Small Group)
+            for (const chapterId of group.chapterIds) {
+                const chapter = CHAPTERS.find(c => c.id === chapterId);
+                if (!chapter) continue;
+
+                // Draw Chapter Header (Small Group, Left-aligned, Font 18px)
+                const chapterHeader = this.add.text(startX - 70, currentY + 25, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
+                    fontFamily: 'Outfit, Arial',
+                    fontSize: '18px',
+                    fontStyle: 'bold',
+                    fill: '#38bdf8' // Sky blue accent
+                }).setOrigin(0, 0.5);
+                chapterHeader.setStroke('#0f172a', 3);
+                chapterHeader.setShadow(0, 1, 'rgba(0,0,0,0.5)', 3, true, true);
+
+                const chapterStartY = currentY + 105;
+                const startLesson = chapter.range[0];
+                const endLesson = chapter.range[1];
+                const numLessons = endLesson - startLesson + 1;
+                const rowsInChapter = Math.ceil(numLessons / columns);
+
+                for (let j = 0; j < numLessons; j++) {
+                    const globalIndex = startLesson + j;
+                    const col = j % columns;
+                    const row = Math.floor(j / columns);
+                    const x = startX + col * colWidth;
+                    const y = chapterStartY + row * rowHeight;
+
+                    this.lessonYPositions[globalIndex] = y;
+
+                    const isUnlocked = (globalIndex === 0) || (this.lessonStars[globalIndex - 1] !== undefined && this.lessonStars[globalIndex - 1] > 0);
+                    const stars = this.lessonStars[globalIndex] || 0;
+
+                    new LessonCard(this, x, y, globalIndex, isUnlocked, stars);
+                }
+
+                currentY = chapterStartY + rowsInChapter * rowHeight + 10;
+            }
+        }
+
+        const totalScrollHeight = currentY + 40;
+        this.totalScrollHeight = totalScrollHeight;
 
         this.cameras.main.setBounds(0, 0, width, totalScrollHeight);
-
-        // Instantiate Lesson Cards
-        for (let i = 0; i < totalLessons; i++) {
-            const col = i % columns;
-            const row = Math.floor(i / columns);
-            const x = startX + col * colWidth;
-            const y = startY + row * rowHeight;
-            const isUnlocked = (i === 0) || (this.lessonStars[i - 1] !== undefined && this.lessonStars[i - 1] > 0);
-            const stars = this.lessonStars[i] || 0;
-            new LessonCard(this, x, y, i, isUnlocked, stars);
-        }
 
         // Drag state variables
         let isDragging = false;
@@ -117,9 +177,8 @@ export class MapScene extends Phaser.Scene {
         this.add.rectangle(0, 0, width, 175, 0x000000, 0)
             .setOrigin(0).setScrollFactor(0).setDepth(9).setInteractive();
 
-        // Calculate and set initial camera position
-        const activeRow    = Math.floor(this.currentLessonIndex / columns);
-        const targetActiveY = startY + activeRow * rowHeight;
+        // Calculate and set initial camera position using dynamic coordinates
+        const targetActiveY = this.lessonYPositions[this.currentLessonIndex] || 230;
         const targetScrollY = Phaser.Math.Clamp(targetActiveY - height / 2, 0, totalScrollHeight - height);
 
         this.cameras.main.scrollY = 0;
@@ -165,9 +224,11 @@ export class MapScene extends Phaser.Scene {
         fabZone.on('pointerup', (pointer, localX, localY, event) => {
             if (event) event.stopPropagation();
             this.sound.play('key_sound');
+            const currentActiveY = this.lessonYPositions[this.currentLessonIndex] || 230;
+            const currentScrollY = Phaser.Math.Clamp(currentActiveY - height / 2, 0, this.totalScrollHeight - height);
             this.tweens.add({
                 targets: this.cameras.main,
-                scrollY: targetScrollY,
+                scrollY: currentScrollY,
                 duration: 500,
                 ease: 'Cubic.easeOut'
             });

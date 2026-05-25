@@ -204,13 +204,12 @@ export class MapSidebar extends Phaser.GameObjects.Container {
                 if (hit && hit.unlocked) {
                     scene.sound.play('key_sound');
                     const firstLessonIndex = hit.chapter.range[0];
-                    const columns = 4;
-                    const rowHeight = 150;
-                    const startY = 230;
-                    const segRow     = Math.floor(firstLessonIndex / columns);
-                    const targetSegY = startY + segRow * rowHeight;
-                    const totalScrollHeight = startY + Math.ceil(700 / columns) * rowHeight + 80;
-                    const targetSegScrollY = Phaser.Math.Clamp(targetSegY - height / 2, 0, totalScrollHeight - height);
+                    const targetSegY = scene.lessonYPositions[firstLessonIndex] || 230;
+                    const group = CHAPTER_GROUPS.find(g => g.chapterIds.includes(hit.chapter.id));
+                    const isFirstInGroup = group && group.chapterIds[0] === hit.chapter.id;
+                    const offset = isFirstInGroup ? 365 : 285;
+                    const totalScrollHeight = scene.totalScrollHeight;
+                    const targetSegScrollY = Phaser.Math.Clamp(targetSegY - offset, 0, totalScrollHeight - height);
                     scene.tweens.add({ targets: scene.cameras.main, scrollY: targetSegScrollY, duration: 500, ease: 'Cubic.easeOut' });
                 }
             }
