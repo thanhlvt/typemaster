@@ -10,6 +10,7 @@ export class LessonCard extends Phaser.GameObjects.Container {
 
         this.setDepth(1);
 
+        const isBoss = (index % 14 === 13);
         const btnWidth = 140, btnHeight = 110;
         this.bg = scene.add.graphics();
         this.add(this.bg);
@@ -28,70 +29,118 @@ export class LessonCard extends Phaser.GameObjects.Container {
 
         const drawBg = () => {
             this.bg.clear();
-            if (state === 'done') {
-                this.bg.fillGradientStyle(0x1bb893, 0x1bb893, 0x0d8268, 0x0d8268, 1);
-                this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-            } else if (state === 'current') {
-                this.bg.fillGradientStyle(0xffb547, 0xffb547, 0xff7e3d, 0xff7e3d, 1);
-                this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-                this.bg.lineStyle(3, 0xFFD700, 1);
-                this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-            } else if (state === 'unlocked') {
-                this.bg.fillStyle(0x1e3a8a, 1);
-                this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-                this.bg.lineStyle(2, 0x3b82f6, 1);
-                this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-            } else if (state === 'next') {
-                this.bg.fillStyle(0x443477, 1);
-                this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-                this.bg.lineStyle(2, 0xFFD700, 0.8);
-                const r = 16, w = btnWidth, h = btnHeight;
-                this.bg.strokeRoundedRect(-w / 2, -h / 2, w, h, r);
+            if (isBoss) {
+                if (state === 'done') {
+                    this.bg.fillGradientStyle(0xd97706, 0xd97706, 0x991b1b, 0x991b1b, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(3, 0xFBBF24, 1);
+                    this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                } else if (state === 'current') {
+                    this.bg.fillGradientStyle(0xef4444, 0xef4444, 0x7f1d1d, 0x7f1d1d, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(3, 0xfca5a5, 1);
+                    this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                } else if (state === 'unlocked') {
+                    this.bg.fillStyle(0x7f1d1d, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(2, 0xef4444, 1);
+                    this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                } else {
+                    this.bg.fillStyle(0x180505, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(2, 0x450a0a, 1);
+                    this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                }
             } else {
-                this.bg.fillStyle(0x111827, 1);
-                this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
-                this.bg.lineStyle(2, 0x475569, 1);
-                this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                if (state === 'done') {
+                    this.bg.fillGradientStyle(0x1bb893, 0x1bb893, 0x0d8268, 0x0d8268, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                } else if (state === 'current') {
+                    this.bg.fillGradientStyle(0xffb547, 0xffb547, 0xff7e3d, 0xff7e3d, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(3, 0xFFD700, 1);
+                    this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                } else if (state === 'unlocked') {
+                    this.bg.fillStyle(0x1e3a8a, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(2, 0x3b82f6, 1);
+                    this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                } else if (state === 'next') {
+                    this.bg.fillStyle(0x443477, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(2, 0xFFD700, 0.8);
+                    const r = 16, w = btnWidth, h = btnHeight;
+                    this.bg.strokeRoundedRect(-w / 2, -h / 2, w, h, r);
+                } else {
+                    this.bg.fillStyle(0x111827, 1);
+                    this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                    this.bg.lineStyle(2, 0x475569, 1);
+                    this.bg.strokeRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
+                }
             }
         };
 
         drawBg();
 
         if (state === 'locked') {
-            this.add(scene.add.text(0, -20, `${index + 1}`, {
-                fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#64748B', alpha: 0.3
-            }).setOrigin(0.5));
-            this.add(scene.add.text(0, 20, '🔒', {
-                fontFamily: 'Segoe UI Emoji, Arial',
-                fontSize: '28px',
-                padding: { top: 10, bottom: 10, left: 10, right: 10 }
-            }).setOrigin(0.5));
+            if (isBoss) {
+                this.add(scene.add.text(0, -20, '😈', {
+                    fontFamily: 'Segoe UI Emoji, Arial', fontSize: '32px', alpha: 0.3
+                }).setOrigin(0.5));
+                this.add(scene.add.text(0, 20, '🔒 BOSS', {
+                    fontFamily: 'Outfit, Arial', fontSize: '14px', fontStyle: 'bold', fill: '#64748B', alpha: 0.4
+                }).setOrigin(0.5));
+            } else {
+                this.add(scene.add.text(0, -20, `${index + 1}`, {
+                    fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#64748B', alpha: 0.3
+                }).setOrigin(0.5));
+                this.add(scene.add.text(0, 20, '🔒', {
+                    fontFamily: 'Segoe UI Emoji, Arial',
+                    fontSize: '28px',
+                    padding: { top: 10, bottom: 10, left: 10, right: 10 }
+                }).setOrigin(0.5));
+            }
             scene.add.existing(this);
             return; // Not interactive
         }
 
         if (state === 'next') {
-            this.add(scene.add.text(0, -15, `${index + 1}`, {
-                fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.7
-            }).setOrigin(0.5));
-            this.add(scene.add.text(0, 20, '🔓 Sắp mở', {
-                fontFamily: 'Segoe UI Emoji, Arial', fontSize: '15px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.8,
-                padding: { top: 6, bottom: 6, left: 6, right: 6 }
-            }).setOrigin(0.5));
+            if (isBoss) {
+                this.add(scene.add.text(0, -15, '😈', {
+                    fontFamily: 'Segoe UI Emoji, Arial', fontSize: '32px', alpha: 0.6
+                }).setOrigin(0.5));
+                this.add(scene.add.text(0, 20, '🔓 Sắp mở', {
+                    fontFamily: 'Outfit, Arial', fontSize: '14px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.8
+                }).setOrigin(0.5));
+            } else {
+                this.add(scene.add.text(0, -15, `${index + 1}`, {
+                    fontFamily: 'Outfit, Arial', fontSize: '30px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.7
+                }).setOrigin(0.5));
+                this.add(scene.add.text(0, 20, '🔓 Sắp mở', {
+                    fontFamily: 'Segoe UI Emoji, Arial', fontSize: '15px', fontStyle: 'bold', fill: '#D8B4FE', alpha: 0.8,
+                    padding: { top: 6, bottom: 6, left: 6, right: 6 }
+                }).setOrigin(0.5));
+            }
             scene.add.existing(this);
             return; // Not interactive
         }
 
-        this.add(scene.add.text(0, -20, `${index + 1}`, {
-            fontFamily: 'Outfit, Arial', fontSize: '32px', fontStyle: 'bold', fill: '#FFFFFF'
-        }).setOrigin(0.5));
+        if (isBoss) {
+            this.add(scene.add.text(0, -22, '😈 BOSS', {
+                fontFamily: 'Outfit, Arial', fontSize: '20px', fontStyle: 'bold', fill: '#FF8A8A'
+            }).setOrigin(0.5));
+        } else {
+            this.add(scene.add.text(0, -20, `${index + 1}`, {
+                fontFamily: 'Outfit, Arial', fontSize: '32px', fontStyle: 'bold', fill: '#FFFFFF'
+            }).setOrigin(0.5));
+        }
 
         const stats = scene.lessonStats[index] || { stars: 0, wpm: 0, accuracy: 0, timestamp: null };
         const bestWpm = stats.wpm || 0;
         const wpmStr = bestWpm > 0 ? `${bestWpm} WPM` : '-- WPM';
 
         this.add(scene.add.text(0, 10, wpmStr, {
-            fontFamily: 'Arial', fontSize: '14px', fill: state === 'done' ? '#A7F3D0' : '#FFEDD5', fontStyle: 'bold'
+            fontFamily: 'Arial', fontSize: '14px', fill: state === 'done' ? (isBoss ? '#FECACA' : '#A7F3D0') : '#FFEDD5', fontStyle: 'bold'
         }).setOrigin(0.5));
 
         const starStr = stars === 3 ? '⭐⭐⭐' : stars === 2 ? '⭐⭐☆' : stars === 1 ? '⭐☆☆' : '☆☆☆';
@@ -128,14 +177,24 @@ export class LessonCard extends Phaser.GameObjects.Container {
             scene.tweens.add({ targets: this, scaleX: state === 'current' ? 1.14 : 1.1, scaleY: state === 'current' ? 1.14 : 1.1, duration: 100, ease: 'Power1' });
             
             this.bg.clear();
-            if (state === 'done') {
-                this.bg.fillGradientStyle(0x1bb893, 0x1bb893, 0x0d8268, 0x0d8268, 1);
-            } else if (state === 'current') {
-                this.bg.fillGradientStyle(0xffb547, 0xffb547, 0xff7e3d, 0xff7e3d, 1);
-            } else if (state === 'unlocked') {
-                this.bg.fillStyle(0x1e3a8a, 1);
-            } else if (state === 'next') {
-                this.bg.fillStyle(0x443477, 1);
+            if (isBoss) {
+                if (state === 'done') {
+                    this.bg.fillGradientStyle(0xd97706, 0xd97706, 0x991b1b, 0x991b1b, 1);
+                } else if (state === 'current') {
+                    this.bg.fillGradientStyle(0xef4444, 0xef4444, 0x7f1d1d, 0x7f1d1d, 1);
+                } else if (state === 'unlocked') {
+                    this.bg.fillStyle(0x7f1d1d, 1);
+                }
+            } else {
+                if (state === 'done') {
+                    this.bg.fillGradientStyle(0x1bb893, 0x1bb893, 0x0d8268, 0x0d8268, 1);
+                } else if (state === 'current') {
+                    this.bg.fillGradientStyle(0xffb547, 0xffb547, 0xff7e3d, 0xff7e3d, 1);
+                } else if (state === 'unlocked') {
+                    this.bg.fillStyle(0x1e3a8a, 1);
+                } else if (state === 'next') {
+                    this.bg.fillStyle(0x443477, 1);
+                }
             }
             this.bg.fillRoundedRect(-btnWidth / 2, -btnHeight / 2, btnWidth, btnHeight, 16);
             this.bg.lineStyle(3, 0xFFD700, 1);
@@ -185,7 +244,11 @@ export class LessonCard extends Phaser.GameObjects.Container {
                 onComplete: () => {
                     if (!scene.isDraggingRef()) {
                         scene.sound.play('key_sound');
-                        scene.scene.start('PlayScene', { lessonIndex: index });
+                        if (isBoss) {
+                            scene.scene.start('BossScene', { lessonIndex: index });
+                        } else {
+                            scene.scene.start('PlayScene', { lessonIndex: index });
+                        }
                     }
                 }
             });

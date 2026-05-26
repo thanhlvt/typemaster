@@ -270,22 +270,51 @@ export class PlayScene extends Phaser.Scene {
                          : multiplier >= 3 ? '#F87171'
                          : multiplier >= 2 ? '#FCD34D' : '#86EFAC';
         const scorePopup = this.add.text(
-            width / 2 + Phaser.Math.Between(-40, 40),
-            this.monkey.y - 60,
-            `+${multiplier}`,
-            { fontFamily: 'Arial', fontSize: multiplier > 1 ? '28px' : '22px',
-              fontStyle: 'bold', fill: popupColor, stroke: '#000', strokeThickness: 3 }
-        ).setOrigin(0.5);
+            this.monkey.x + Phaser.Math.Between(-20, 20),
+            this.monkey.y - 80,
+            `+${multiplier} 🍌`,
+            { fontFamily: 'Arial Black, Arial, Segoe UI Emoji',
+              fontSize: multiplier >= 4 ? '72px' : multiplier >= 3 ? '60px' : multiplier >= 2 ? '50px' : '38px',
+              fontStyle: 'bold', fill: popupColor, stroke: '#000000', strokeThickness: 8 }
+        ).setOrigin(0.5).setScale(0.2).setAlpha(0).setDepth(15);
+
         this.tweens.add({
-            targets: scorePopup, y: scorePopup.y - 70, alpha: 0,
-            duration: 700, ease: 'Cubic.easeOut',
-            onComplete: () => scorePopup.destroy()
+            targets: scorePopup,
+            scaleX: 1.1,
+            scaleY: 1.1,
+            alpha: 1,
+            y: this.monkey.y - 120,
+            duration: 250,
+            ease: 'Back.easeOut',
+            onComplete: () => {
+                this.tweens.add({
+                    targets: scorePopup,
+                    y: scorePopup.y - 50,
+                    alpha: 0,
+                    duration: 500,
+                    delay: 150,
+                    ease: 'Cubic.easeIn',
+                    onComplete: () => scorePopup.destroy()
+                });
+            }
         });
 
         const banana = this.add.image(this.monkey.x, 0, 'banana').setScale(0.3);
         this.tweens.add({
-            targets: banana, y: this.monkey.y, alpha: 0, duration: 500,
-            onComplete: () => banana.destroy()
+            targets: banana,
+            y: this.monkey.y,
+            duration: 500,
+            ease: 'Cubic.easeIn',
+            onComplete: () => {
+                this.tweens.add({
+                    targets: banana,
+                    scaleX: 0,
+                    scaleY: 0,
+                    alpha: 0,
+                    duration: 150,
+                    onComplete: () => banana.destroy()
+                });
+            }
         });
     }
 

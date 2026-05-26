@@ -3,6 +3,8 @@ import { BootScene } from './scenes/BootScene';
 import { MapScene } from './scenes/MapScene';
 import { PlayScene } from './scenes/PlayScene';
 import { SprintScene } from './scenes/SprintScene';
+import { BossScene } from './scenes/BossScene';
+import { ChapterIntroScene } from './scenes/ChapterIntroScene';
 
 const config = {
     type: Phaser.AUTO,
@@ -14,7 +16,7 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.NO_CENTER
     },
-    scene: [BootScene, MapScene, PlayScene, SprintScene]
+    scene: [BootScene, MapScene, PlayScene, SprintScene, BossScene, ChapterIntroScene]
 };
 
 window.addEventListener('load', () => {

@@ -13,6 +13,9 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
 
         const container = scene.add.container(width / 2, height / 2 - 20);
 
+        const isBossWin = customTitle === 'CHẾN THẮNG BOSS!';
+        const isBossLose = customTitle === 'THẤT BẠI!';
+
         // 1. Determine card type / state
         const oldWpm = oldStats ? (oldStats.wpm || 0) : 0;
         const isNewRecord = wpm > oldWpm && oldWpm > 0;
@@ -39,7 +42,29 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         let buttonText = 'Tiếp tục ➔';
         let buttonTextColor = 0xe11d48; // Rose 600
 
-        if (state === 'record') {
+        if (isBossWin) {
+            cardGradient = {
+                topLeft: 0xd97706,     // Gold/Red theme
+                topRight: 0xd97706,
+                bottomLeft: 0x991b1b,
+                bottomRight: 0x7f1d1d
+            };
+            titleStr = '⚔️ THẮNG BOSS!';
+            subtitleStr = 'Bé đã gõ xuất sắc và đánh bại Boss!';
+            buttonText = 'Tiếp tục ➔';
+            buttonTextColor = 0x991b1b;
+        } else if (isBossLose) {
+            cardGradient = {
+                topLeft: 0x374151,     // Dark Slate theme
+                topRight: 0x374151,
+                bottomLeft: 0x1f2937,
+                bottomRight: 0x111827
+            };
+            titleStr = '💀 THẤT BẠI!';
+            subtitleStr = 'Hãy cố gắng gõ nhanh hơn nhé!';
+            buttonText = 'Thử lại 🔁';
+            buttonTextColor = 0x374151;
+        } else if (state === 'record') {
             cardGradient = {
                 topLeft: 0x14b8a6,     // Teal/Emerald theme
                 topRight: 0x10b981,
@@ -107,7 +132,7 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         container.add(cardBg);
 
         // 4. Render Stars (display stars achieved like before)
-        const stars = accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1);
+        const stars = isBossLose ? 0 : (isBossWin ? (scene.bossStars !== undefined ? scene.bossStars : 3) : (accuracy >= 95 ? 3 : (accuracy >= 80 ? 2 : 1)));
         const starCoords = [
             { x: -55, y: -125, rOut: 18, rIn: 8 },
             { x:   0, y: -143, rOut: 24, rIn: 11 },
@@ -153,9 +178,17 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         subText.setShadow(0, 1, 'rgba(0,0,0,0.3)', 2, true, true);
         container.add(subText);
 
-        // 6. Render Badges (only in 'record' state)
-        if (state === 'record') {
-            const bananaBonus = isDailyChallenge ? 20 : 15;
+        // 6. Render Badges (only in 'record' state or Boss Win)
+        if (state === 'record' || isBossWin) {
+            let bananaBonus = 15;
+            if (isBossWin) {
+                const bossStars = scene.bossStars !== undefined ? scene.bossStars : 3;
+                if (bossStars === 1) bananaBonus = 5;
+                else if (bossStars === 2) bananaBonus = 10;
+                else bananaBonus = 20;
+            } else if (isDailyChallenge) {
+                bananaBonus = 20;
+            }
             
             const bananaRewardContainer = scene.add.container(0, 110);
             container.add(bananaRewardContainer);
@@ -174,15 +207,55 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
             bText.setShadow(0, 1.5, '#000000', 3, true, true);
             bananaRewardContainer.add(bText);
 
-            // Entry scale animation for reward
-            bananaRewardContainer.setScale(0);
+            // Hide the permanent pill container initially
+            bananaRewardContainer.setAlpha(0).setScale(0);
+
+            // Create a giant transient text popup at the center of the overlay card
+            const giantRewardText = scene.add.text(0, -20, `+${bananaBonus} 🍌`, {
+                fontFamily: 'Arial Black, Arial, Segoe UI Emoji',
+                fontSize: '96px',
+                fontStyle: 'bold',
+                fill: '#FBBF24',
+                stroke: '#000000',
+                strokeThickness: 14
+            }).setOrigin(0.5).setScale(0.1).setAlpha(0).setDepth(200);
+            container.add(giantRewardText);
+
+            // Phase 1: Giant text pops in
             scene.tweens.add({
-                targets: bananaRewardContainer,
-                scaleX: 1,
-                scaleY: 1,
-                duration: 400,
+                targets: giantRewardText,
+                scaleX: 1.1,
+                scaleY: 1.1,
+                alpha: 1,
+                duration: 350,
                 delay: 600,
-                ease: 'Back.easeOut'
+                ease: 'Back.easeOut',
+                onComplete: () => {
+                    // Phase 2: Giant text shrinks and flies down to the pill container
+                    scene.tweens.add({
+                        targets: giantRewardText,
+                        scaleX: 0.15,
+                        scaleY: 0.15,
+                        x: 0,
+                        y: 110,
+                        alpha: 0,
+                        duration: 600,
+                        delay: 600,
+                        ease: 'Cubic.easeInOut',
+                        onComplete: () => {
+                            giantRewardText.destroy();
+                            // Phase 3: Reveal the permanent pill
+                            scene.tweens.add({
+                                targets: bananaRewardContainer,
+                                scaleX: 1,
+                                scaleY: 1,
+                                alpha: 1,
+                                duration: 300,
+                                ease: 'Back.easeOut'
+                            });
+                        }
+                    });
+                }
             });
         }
 

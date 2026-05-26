@@ -1,5 +1,6 @@
 import * as Phaser from 'phaser';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
+import { ensureTextures } from '../utils/TextureLoader';
 
 export class SkinsOverlay extends Phaser.GameObjects.Container {
     constructor(scene, onClose) {
@@ -67,8 +68,24 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
         this.gridContainer = scene.add.container(0, 0);
         dialog.add(this.gridContainer);
 
-        // Render monkey grid immediately
-        this.renderGrid();
+        // Show a temporary loading text while dynamic skins are loaded
+        const loadingText = scene.add.text(0, 0, 'Đang tải trang phục...', {
+            fontFamily: 'Arial', fontSize: '18px', fill: '#94A3B8', fontStyle: 'bold'
+        }).setOrigin(0.5);
+        dialog.add(loadingText);
+
+        // Load all 10 monkey skins dynamically
+        const skinsToLoad = [];
+        for (let i = 1; i <= 10; i++) {
+            skinsToLoad.push({ key: `monkey_${i}`, url: `assets/monkey_${i}.png` });
+        }
+
+        ensureTextures(scene, skinsToLoad, () => {
+            loadingText.destroy();
+            if (this.scene) {
+                this.renderGrid();
+            }
+        });
 
         // --- Close Button ---
         const closeBtnX = dialogW / 2 - 40;

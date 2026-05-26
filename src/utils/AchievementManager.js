@@ -26,7 +26,8 @@ export const ACHIEVEMENTS = [
     { id: 'improver', title: 'Vượt khó', desc: 'Cải thiện bài cũ từ 1-2 sao lên 3 sao', icon: '🧗' },
     { id: 'collector', title: 'Nhà sưu tầm', desc: 'Đạt đủ 3 sao cho bài từ 1 đến 20', icon: '🎒' },
     { id: 'early_bird', title: 'Chào ngày mới', desc: 'Hoàn thành bài học từ 5h00 - 7h00 sáng', icon: '🌅' },
-    { id: 'night_owl', title: 'Cú đêm', desc: 'Hoàn thành bài học từ 23h00 - 4h00 sáng', icon: '🦉' }
+    { id: 'night_owl', title: 'Cú đêm', desc: 'Hoàn thành bài học từ 23h00 - 4h00 sáng', icon: '🦉' },
+    { id: 'boss_slayer', title: 'Sát thủ Boss', desc: 'Đánh bại một Boss cuối chương', icon: '⚔️' }
 ];
 
 export class AchievementManager {
