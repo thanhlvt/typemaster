@@ -168,7 +168,8 @@ export class SkinsOverlay extends Phaser.GameObjects.Container {
             const cy = startY + row * rowHeight;
 
             const isRandom = i === 0;
-            const isUnlocked = isRandom || this.score >= UNLOCK_THRESHOLDS[i - 1];
+            const grantedSkins = ProgressManager.getGrantedSkins();
+            const isUnlocked = isRandom || this.score >= UNLOCK_THRESHOLDS[i - 1] || grantedSkins.includes(`monkey_${i}`);
             const threshold = isRandom ? 0 : UNLOCK_THRESHOLDS[i - 1];
 
             // Monkey skin is always equipped.monkey

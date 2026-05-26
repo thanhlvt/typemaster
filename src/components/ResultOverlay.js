@@ -41,7 +41,7 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         let subtitleStr = '';
         let buttonText = 'Tiếp tục ➔';
         let buttonTextColor = 0xe11d48; // Rose 600
-
+ 
         if (isBossWin) {
             cardGradient = {
                 topLeft: 0xd97706,     // Gold/Red theme
@@ -72,7 +72,7 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
                 bottomRight: 0x047857
             };
             titleStr = '🎉 KỶ LỤC MỚI!';
-            subtitleStr = `WPM (cũ: ${oldWpm})`;
+            subtitleStr = `Bé đã vượt qua kỷ lục cũ (${oldWpm} từ/phút)!`;
             buttonText = (isDailyChallenge || isSprintMode) ? 'Thử lại 🔁' : (isLastLesson ? 'Quay lại Bản đồ 🗺️' : 'Tiếp tục ➔');
             buttonTextColor = 0x047857; // Dark emerald
         } else if (state === 'almost') {
@@ -83,7 +83,7 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
                 bottomRight: 0x4f46e5
             };
             titleStr = '💪 SUÝT NỮA!';
-            subtitleStr = `WPM · Cách kỷ lục ${oldWpm - wpm} từ`;
+            subtitleStr = `Cách kỷ lục cũ chỉ ${oldWpm - wpm} từ/phút!`;
             buttonText = 'Thử lại 🔁';
             buttonTextColor = 0x5b21b6; // Violet 800
         } else {
@@ -91,12 +91,12 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
             titleStr = customTitle ? `${customTitle.toUpperCase()}` : 'GIỎI LẮM!';
             if (customTitle === 'HẾT GIỜ!') {
                 titleStr = `⏰ HẾT GIỜ!`;
-                subtitleStr = `WPM · Bé đã gõ ${wpm} từ trong 60s`;
+                subtitleStr = `Bé đã gõ rất cố gắng trong 60 giây!`;
             } else if (isDailyChallenge) {
                 titleStr = `🏆 THÀNH CÔNG!`;
-                subtitleStr = `WPM · Bé đã hoàn thành thử thách xuất sắc!`;
+                subtitleStr = `Bé đã hoàn thành thử thách xuất sắc!`;
             } else {
-                subtitleStr = `WPM · Bé đã hoàn thành bài học xuất sắc!`;
+                subtitleStr = `Bé đã hoàn thành bài học xuất sắc!`;
             }
             buttonText = (isDailyChallenge || isSprintMode) ? 'Thử lại 🔁' : (isLastLesson ? 'Quay lại Bản đồ 🗺️' : 'Tiếp tục ➔');
             buttonTextColor = 0xe11d48; // Rose 600
@@ -163,19 +163,27 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
         titleText.setShadow(0, 2, 'rgba(0,0,0,0.4)', 4, true, true);
         container.add(titleText);
 
-        // WPM Score
-        const scoreText = scene.add.text(0, 10, `${wpm}`, {
-            fontFamily: 'Outfit, Arial', fontSize: '76px', fontStyle: 'bold', fill: '#ffffff'
+        // Stats: WPM
+        const wpmText = scene.add.text(0, -10, `${wpm} từ/phút`, {
+            fontFamily: 'Outfit, Arial', fontSize: '28px', fontStyle: 'bold', fill: '#FFD700'
         }).setOrigin(0.5);
-        scoreText.setStroke('#0f172a', 6);
-        scoreText.setShadow(0, 4, 'rgba(0,0,0,0.5)', 6, true, true);
-        container.add(scoreText);
+        wpmText.setStroke('#0f172a', 4);
+        wpmText.setShadow(0, 2, 'rgba(0,0,0,0.4)', 3, true, true);
+        container.add(wpmText);
 
-        // Subtitle
-        const subText = scene.add.text(0, 70, subtitleStr, {
-            fontFamily: 'Arial', fontSize: '14px', fill: 'rgba(255, 255, 255, 0.9)', fontStyle: 'bold'
+        // Stats: Accuracy
+        const accuracyText = scene.add.text(0, 30, `Chính xác ${accuracy}%`, {
+            fontFamily: 'Outfit, Arial', fontSize: '28px', fontStyle: 'bold', fill: '#ffffff'
         }).setOrigin(0.5);
-        subText.setShadow(0, 1, 'rgba(0,0,0,0.3)', 2, true, true);
+        accuracyText.setStroke('#0f172a', 4);
+        accuracyText.setShadow(0, 2, 'rgba(0,0,0,0.4)', 3, true, true);
+        container.add(accuracyText);
+
+        // Subtitle (Praise sentence)
+        const subText = scene.add.text(0, 75, subtitleStr, {
+            fontFamily: 'Arial', fontSize: '15px', fill: 'rgba(255, 255, 255, 0.95)', fontStyle: 'bold'
+        }).setOrigin(0.5);
+        subText.setShadow(0, 1.5, 'rgba(0,0,0,0.4)', 2, true, true);
         container.add(subText);
 
         // 6. Render Badges (only in 'record' state or Boss Win)

@@ -98,6 +98,21 @@ export class ProgressManager {
         try { localStorage.setItem('typemaster_equipped_skins', JSON.stringify(skins)); } catch (_) { }
     }
 
+    static getGrantedSkins() {
+        try { return JSON.parse(localStorage.getItem('typemaster_granted_skins')) || []; }
+        catch (_) { return []; }
+    }
+
+    static grantSkin(skinKey) {
+        try {
+            const granted = ProgressManager.getGrantedSkins();
+            if (!granted.includes(skinKey)) {
+                granted.push(skinKey);
+                localStorage.setItem('typemaster_granted_skins', JSON.stringify(granted));
+            }
+        } catch (_) { }
+    }
+
     static getAudioSettings() {
         try { return JSON.parse(localStorage.getItem('typemaster_audio_settings')) || { mute: false, volume: 1.0 }; }
         catch (_) { return { mute: false, volume: 1.0 }; }
@@ -109,7 +124,7 @@ export class ProgressManager {
 
     static clearAll() {
         ['typemaster_progress', 'typemaster_streak', 'typemaster_history',
-         'typemaster_equipped_skins', 'typemaster_audio_settings']
+         'typemaster_equipped_skins', 'typemaster_audio_settings', 'typemaster_granted_skins']
             .forEach(key => localStorage.removeItem(key));
     }
 

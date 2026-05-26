@@ -3,6 +3,7 @@ import { TelexEngine }           from '../utils/TelexEngine';
 import { VirtualKeyboard }       from '../components/VirtualKeyboard';
 import { ConfirmDialog }         from '../components/ConfirmDialog';
 import { ResultOverlay }         from '../components/ResultOverlay';
+import { SpinWheelOverlay }      from '../components/SpinWheelOverlay';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { TypingValidator }       from '../utils/TypingValidator';
 import { AchievementManager }    from '../utils/AchievementManager';
@@ -454,13 +455,34 @@ export class PlayScene extends Phaser.Scene {
             this.scene.start('MapScene');
         };
 
-        const overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson || this.isDailyChallenge, handleBackToMap, oldStats, this.isDailyChallenge, null, dailyBonusAwarded);
+        let overlay = null;
 
-        this.input.keyboard.once('keyup-SPACE',  handleContinue);
-        this.input.keyboard.once('keyup-ENTER',  handleRetry);
-        this.input.keyboard.once('keydown-ESC',  handleBackToMap);
+        const isFirstTime = !this.isDailyChallenge && (!oldStats || oldStats.stars === 0);
 
-        overlay.on('continue', () => { cleanUp(); handleContinue(); });
-        overlay.on('retry',    () => { cleanUp(); handleRetry(); });
+        const showResultOverlay = () => {
+            overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson || this.isDailyChallenge, handleBackToMap, oldStats, this.isDailyChallenge, null, dailyBonusAwarded);
+
+            this.input.keyboard.once('keyup-SPACE',  handleContinue);
+            this.input.keyboard.once('keyup-ENTER',  handleRetry);
+            this.input.keyboard.once('keydown-ESC',  handleBackToMap);
+
+            overlay.on('continue', () => { cleanUp(); handleContinue(); });
+            overlay.on('retry',    () => { cleanUp(); handleRetry(); });
+        };
+
+        if (isFirstTime) {
+            new SpinWheelOverlay(this, (reward) => {
+                if (reward.bananas > 0) {
+                    this.score += reward.bananas;
+                    ProgressManager.saveProgress(
+                        this.currentLessonIndex, this.score,
+                        this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
+                    );
+                }
+                showResultOverlay();
+            });
+        } else {
+            showResultOverlay();
+        }
     }
 }
