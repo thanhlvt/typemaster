@@ -2,7 +2,7 @@ import { getChapterBgKey } from '../data/chapters';
 
 const SAVE_KEY = 'typemaster_progress';
 
-export const UNLOCK_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1050, 1400, 1800, 2300];
+export const UNLOCK_THRESHOLDS = [0, 100, 300, 600, 1000, 1500, 2100, 2800, 3600, 4500];
 
 export class ProgressManager {
 
