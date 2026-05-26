@@ -281,6 +281,12 @@ export class MapScene extends Phaser.Scene {
             this.input.setDefaultCursor('default');
             this.input.keyboard.removeCapture(Phaser.Input.Keyboard.KeyCodes.SPACE);
         });
+
+        // Deferred: load level.mp3 (319 KB) in background after map is visible
+        if (!this.cache.audio.exists('level_sound')) {
+            this.load.audio('level_sound', 'assets/level.mp3');
+            this.load.start();
+        }
     }
 
     _applyBackground() {
@@ -294,7 +300,6 @@ export class MapScene extends Phaser.Scene {
         } else {
             bgTexture = ProgressManager.getLastUnlockedBackground(this.lessonStats, CHAPTERS);
         }
-        console.log('MapScene: homeBackground =', homeBackground, 'bgTexture =', bgTexture, 'lessonStats =', this.lessonStats);
 
         ensureTextures(this, [{ key: bgTexture, url: `assets/${bgTexture}.jpg` }], () => {
             if (this.bg) {

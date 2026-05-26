@@ -13,7 +13,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Học Gõ Telex cùng Khỉ Con - Luyện Gõ 10 Ngón">
     <meta property="og:description" content="Game học gõ tiếng Việt Telex thú vị với 700 bài học, có hướng dẫn ngón tay trực quan và âm thanh sinh động.">
-    <meta property="og:image" content="/assets/og-thumbnail.png">
+    <meta property="og:image" content="/assets/og-thumbnail.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://typemaster-65v.pages.dev/">
     <meta property="og:locale" content="vi_VN">
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Học Gõ Telex cùng Khỉ Con">
     <meta name="twitter:description" content="Game học gõ tiếng Việt Telex thú vị với 700 bài học, có hướng dẫn ngón tay và âm thanh sinh động.">
-    <meta name="twitter:image" content="/assets/og-thumbnail.png">
+    <meta name="twitter:image" content="/assets/og-thumbnail.jpg">
 
     <!-- Canonical URL & Manifest -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -31,16 +31,14 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#0f172a">
 
-    <!-- Google Fonts Preconnect & Font family -->
+    <!-- Google Fonts: preload CSS async, swap to stylesheet when ready -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"></noscript>
 
-    <!-- Preload Critical Game Assets (LCP Optimization) -->
-    <link rel="preload" href="/assets/bg_1_1.jpg" as="image">
-    <link rel="preload" href="/assets/monkey_1.png" as="image">
-    <link rel="preload" href="/assets/hand_left.png" as="image">
-    <link rel="preload" href="/assets/hand_right.png" as="image">
+    <!-- Preload LCP image — consumed by #splash-lcp below -->
+    <link rel="preload" href="/assets/bg_1_1.jpg" as="image" fetchpriority="high">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">

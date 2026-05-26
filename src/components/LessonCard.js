@@ -153,7 +153,7 @@ export class LessonCard extends Phaser.GameObjects.Container {
                     const date = new Date(stats.timestamp);
                     dateStr = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
                 }
-                scene.tooltipText.setText(`Chính xác tốt: ${bestAcc}%\nGần nhất: ${dateStr}`);
+                scene.tooltipText.setText(`Chính xác: ${bestAcc}%\nGần nhất: ${dateStr}`);
                 scene.tooltip.setVisible(true);
             }
         });

@@ -57,7 +57,6 @@ export class BootScene extends Phaser.Scene {
         // Hide HTML splash before drawing progress bar
         document.getElementById('splash-lcp')?.remove();
 
-        console.log('BootScene: preload started');
         // Display loading progress
         const width = this.cameras.main.width;
         const height = this.cameras.main.height;
@@ -84,16 +83,10 @@ export class BootScene extends Phaser.Scene {
         this.load.image('hand_left', 'assets/hand_left.png');
         this.load.image('hand_right', 'assets/hand_right.png');
         
-        // Load audio
+        // Load audio (level.mp3 is deferred — loaded in MapScene background)
         this.load.audio('key_sound', 'assets/key.mp3');
         this.load.audio('error_sound', 'assets/error.mp3');
         this.load.audio('win_sound', 'assets/win.mp3');
-        this.load.audio('level_sound', 'assets/level.mp3');
-        
-        this.load.on('filecomplete-audio-key_sound', () => console.log('key_sound loaded'));
-        this.load.on('filecomplete-audio-error_sound', () => console.log('error_sound loaded'));
-        this.load.on('filecomplete-audio-win_sound', () => console.log('win_sound loaded'));
-        this.load.on('filecomplete-audio-level_sound', () => console.log('level_sound loaded'));
         
         // Load manifest
         this.load.json('manifest', 'data.json');

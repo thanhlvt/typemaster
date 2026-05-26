@@ -1,24 +1,18 @@
 {
   "name": "Học Gõ Telex cùng Khỉ Con",
   "short_name": "TypeMaster",
-  "description": "Game học gõ tiếng Việt Telex miễn phí cùng Khỉ Con - 100 bài luyện tập từ cơ bản đến nâng cao. Phù hợp mọi lứa tuổi.",
+  "description": "Game học gõ tiếng Việt Telex miễn phí cùng Khỉ Con - 700 bài luyện tập từ cơ bản đến nâng cao. Phù hợp mọi lứa tuổi.",
   "start_url": "https://typemaster-65v.pages.dev/",
   "display": "standalone",
-  "background_color": "#2c3e50",
-  "theme_color": "#2c3e50",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "orientation": "landscape",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "192x192 512x512",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons.svg",
-      "sizes": "192x192 512x512",
-      "type": "image/svg+xml",
-      "purpose": "maskable"
+      "src": "/assets/og-thumbnail.jpg",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

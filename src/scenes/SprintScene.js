@@ -295,7 +295,7 @@ export class SprintScene extends Phaser.Scene {
 
     endSprint() {
         this.isActive = false;
-        this.sound.play('level_sound');
+        if (this.cache.audio.exists('level_sound')) this.sound.play('level_sound');
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const total = this.correctKeystrokes || 1;

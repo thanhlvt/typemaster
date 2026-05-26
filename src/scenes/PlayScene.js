@@ -374,7 +374,7 @@ export class PlayScene extends Phaser.Scene {
     }
 
     showLessonComplete() {
-        this.sound.play('level_sound');
+        if (this.cache.audio.exists('level_sound')) this.sound.play('level_sound');
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const { streakDays: newStreakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
