@@ -1,5 +1,5 @@
 import * as Phaser from 'phaser';
-import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
+import { ProgressManager } from '../utils/ProgressManager';
 import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson } from '../data/chapters';
 import { LessonCard } from '../components/LessonCard';
 import { ensureTextures } from '../utils/TextureLoader';
@@ -151,7 +151,7 @@ export class MapScene extends Phaser.Scene {
                     const isUnlocked = (globalIndex === 0) || (this.lessonStars[globalIndex - 1] !== undefined && this.lessonStars[globalIndex - 1] > 0);
                     const stars = this.lessonStars[globalIndex] || 0;
 
-                    new LessonCard(this, x, y, globalIndex, isUnlocked, stars);
+                    new LessonCard(this, x, y, globalIndex, isUnlocked, stars, this.currentLessonIndex);
                 }
 
                 currentY = chapterStartY + rowsInChapter * rowHeight + 10;
@@ -222,7 +222,7 @@ export class MapScene extends Phaser.Scene {
             this.tweens.add({ targets: fabText, scaleX: 1.0, scaleY: 1.0, duration: 100 });
         });
         fabZone.on('pointerdown', stopEvent);
-        fabZone.on('pointerup', (pointer, localX, localY, event) => {
+        fabZone.on('pointerup', (_p, _x, _y, event) => {
             if (event) event.stopPropagation();
             this.sound.play('key_sound');
             const currentActiveY = this.lessonYPositions[this.currentLessonIndex] || 230;

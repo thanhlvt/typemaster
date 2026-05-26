@@ -14,13 +14,6 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.NO_CENTER
     },
-    physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 0 },
-            debug: false
-        }
-    },
     scene: [BootScene, MapScene, PlayScene, SprintScene]
 };
 

@@ -1,7 +1,7 @@
 import * as Phaser from 'phaser';
 
 export class LessonCard extends Phaser.GameObjects.Container {
-    constructor(scene, x, y, index, isUnlocked, stars) {
+    constructor(scene, x, y, index, isUnlocked, stars, currentIndex) {
         super(scene, x, y);
         this.scene = scene;
         this.index = index;
@@ -13,8 +13,6 @@ export class LessonCard extends Phaser.GameObjects.Container {
         const btnWidth = 140, btnHeight = 110;
         this.bg = scene.add.graphics();
         this.add(this.bg);
-
-        const currentIndex = scene._computeCurrentLessonIndex();
         let state = 'locked';
         if (stars > 0) {
             state = 'done';
