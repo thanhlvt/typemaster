@@ -1,0 +1,2552 @@
+{
+  "lessons": [
+    {
+      "id": "level_295",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "người ngay nói thật",
+          "keys": "nguwowif ngay nois thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vàng thật không sợ lửa",
+          "keys": "vangf thaatj khoong sowj luwar",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thật thà là cha quỷ quái",
+          "keys": "thaatj thaf laf cha quyr quais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cây ngay không sợ chết đứng",
+          "keys": "caay ngay khoong sowj cheets dduwngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_296",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "nói có sách mách có chứng",
+          "keys": "nois cos sachs machs cos chuwngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sự thật luôn thắng",
+          "keys": "suwj thaatj luoon thawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên giả dối",
+          "keys": "khoong neen giar doois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thẳng như ruột ngựa",
+          "keys": "thawngr nhuw ruootj nguwaj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_297",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "ăn ngay nói thẳng",
+          "keys": "awn ngay nois thawngr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với lòng",
+          "keys": "khoong thenj vowis longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thẹn với trời",
+          "keys": "khoong thenj vowis trowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_298",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "sống thật với mình",
+          "keys": "soongs thaatj vowis minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống thật với người",
+          "keys": "soongs thaatj vowis nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng lòng tin",
+          "keys": "traan trongj longf tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đừng lừa dối nhau",
+          "keys": "dduwngf luwaf doois nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_299",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "sự thật mất lòng",
+          "keys": "suwj thaatj maats longf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhưng được lòng tin",
+          "keys": "nhuwng dduwowcj longf tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành thật là tốt nhất",
+          "keys": "thanhf thaatj laf toots nhaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn trung thực",
+          "keys": "luoon luoon trung thuwcj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_300",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "giữ gìn chữ tín",
+          "keys": "giuwx ginf chuwx tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "một lần mất tin",
+          "keys": "mootj laanf maats tin",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn lần bất tín",
+          "keys": "vanj laanf baats tins",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người thật việc thật",
+          "keys": "nguwowif thaatj vieecj thaatj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_301",
+      "title": "Sự thật",
+      "content": [
+        {
+          "display": "kết quả thật",
+          "keys": "keets quar thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giá trị thật",
+          "keys": "gias trij thaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi bền lâu",
+          "keys": "maix maix beenf laau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì thay thế",
+          "keys": "khoong gif thay thees",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_302",
+      "title": "Thành công & Thất bại",
+      "content": [
+        {
+          "display": "thất bại là mẹ thành công",
+          "keys": "thaats baij laf mej thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thắng không kiêu bại không nản",
+          "keys": "thawngs khoong kieeu baij khoong nanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thua keo này ta bày keo khác",
+          "keys": "thua keo nayf ta bayf keo khacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn sự khởi đầu nan",
+          "keys": "vanj suwj khowir ddaauf nan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_303",
+      "title": "Thành công & Thất bại",
+      "content": [
+        {
+          "display": "có công mài sắt",
+          "keys": "cos coong maif sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có ngày nên kim",
+          "keys": "cos ngayf neen kim",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "có chí thì nên",
+          "keys": "cos chis thif neen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không bỏ cuộc",
+          "keys": "khoong bor cuoocj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_304",
+      "title": "Thành công & Thất bại",
+      "content": [
+        {
+          "display": "quyết tâm đến cùng",
+          "keys": "quyeets taam ddeens cungf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chinh phục đỉnh cao",
+          "keys": "chinh phucj ddinhr cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua thử thách",
+          "keys": "vuwowtj qua thuwr thachs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_305",
+      "title": "Thành công & Thất bại",
+      "content": [
+        {
+          "display": "chiến thắng chính mình",
+          "keys": "chieens thawngs chinhs minhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rút kinh nghiệm sâu sắc",
+          "keys": "ruts kinh nghieemj saau sawcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học từ thất bại",
+          "keys": "hocj tuwf thaats baij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn lên mạnh mẽ",
+          "keys": "vuwown leen manhj mex",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_306",
+      "title": "Thành công & Thất bại",
+      "content": [
+        {
+          "display": "không ngại khó khăn",
+          "keys": "khoong ngaij khos khawn",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên trì theo đuổi",
+          "keys": "kieen trif theo dduooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đam mê cháy bỏng",
+          "keys": "ddam mee chays bongr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nỗ lực không ngừng",
+          "keys": "noox luwcj khoong nguwngf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_307",
+      "title": "Thành công & Thất bại",
+      "content": [
+        {
+          "display": "thành quả xứng đáng",
+          "keys": "thanhf quar xuwngs ddangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang chói lọi",
+          "keys": "vinh quang chois loij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rạng danh dòng tộc",
+          "keys": "rangj danh dongf toocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quy bái tổ",
+          "keys": "vinh quy bais toor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_308",
+      "title": "Thành công & Thất bại",
+      "content": [
+        {
+          "display": "đỉnh cao sự nghiệp",
+          "keys": "ddinhr cao suwj nghieepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc viên mãn",
+          "keys": "hanhj phucs vieen manx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mục tiêu đã đạt",
+          "keys": "mucj tieeu ddax ddatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự hào bản thân",
+          "keys": "tuwj haof banr thaan",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_309",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "vào sinh ra tử",
+          "keys": "vaof sinh ra tuwr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "da ngựa bọc thây",
+          "keys": "da nguwaj bocj thaay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đầu đội trời chân đạp đất",
+          "keys": "ddaauf ddooij trowif chaan ddapj ddaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gan vàng dạ sắt",
+          "keys": "gan vangf daj sawts",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_310",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "không sợ hiểm nguy",
+          "keys": "khoong sowj hieemr nguy",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dũng cảm đương đầu",
+          "keys": "dungx camr dduwowng ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua nỗi sợ",
+          "keys": "vuwowtj qua nooix sowj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiến đấu tới cùng",
+          "keys": "chieens ddaaus towis cungf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_311",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "bảo vệ lẽ phải",
+          "keys": "baor veej lex phair",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vì nước quên thân",
+          "keys": "vif nuwowcs queen thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vì dân phục vụ",
+          "keys": "vif daan phucj vuj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "anh hùng hào kiệt",
+          "keys": "anh hungf haof kieetj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_312",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "không lùi bước",
+          "keys": "khoong luif buwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững vàng tay lái",
+          "keys": "vuwngx vangf tay lais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bản lĩnh kiên cường",
+          "keys": "banr linhx kieen cuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dám nghĩ dám làm",
+          "keys": "dams nghix dams lamf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_313",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "khám phá cái mới",
+          "keys": "khams phas cais mowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới tầm cao",
+          "keys": "vuwown towis taamf cao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngại gian khổ",
+          "keys": "khoong ngaij gian khoor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sẵn sàng hy sinh",
+          "keys": "sawnx sangf hy sinh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_314",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "vì mục đích cao cả",
+          "keys": "vif mucj ddichs cao car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng yêu nước nồng nàn",
+          "keys": "longf yeeu nuwowcs noongf nanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tinh thần bất khuất",
+          "keys": "tinh thaanf baats khuaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi ngời sáng",
+          "keys": "maix maix ngowif sangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_315",
+      "title": "Lòng can đảm",
+      "content": [
+        {
+          "display": "gương sáng cho đời",
+          "keys": "guwowng sangs cho ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con rồng cháu tiên",
+          "keys": "con roongf chaus tieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hào khí ngất trời",
+          "keys": "haof khis ngaats trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không gì lay chuyển",
+          "keys": "khoong gif lay chuyeenr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_316",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "thông minh vốn sẵn tính trời",
+          "keys": "thoong minh voons sawnx tinhs trowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khôn ngoan đối đáp người ngoài",
+          "keys": "khoon ngoan ddoois ddaps nguwowif ngoaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn biết phải hỏi",
+          "keys": "muoons bieets phair hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "muốn giỏi phải học",
+          "keys": "muoons gioir phair hocj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_317",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "học một biết mười",
+          "keys": "hocj mootj bieets muwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhanh trí kịp thời",
+          "keys": "nhanh tris kipj thowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xử lý tình huống",
+          "keys": "xuwr lys tinhf huoongs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_318",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "mưu trí dũng cảm",
+          "keys": "muwu tris dungx camr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tài cao hiểu rộng",
+          "keys": "taif cao hieeur roongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến thức uyên thâm",
+          "keys": "kieens thuwcs uyeen thaam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sáng tạo không ngừng",
+          "keys": "sangs taoj khoong nguwngf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_319",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "khám phá điều hay",
+          "keys": "khams phas ddieeuf hay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "áp dụng thực tế",
+          "keys": "aps dungj thuwcj tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hiệu quả bất ngờ",
+          "keys": "hieeuj quar baats ngowf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tầm nhìn xa trông rộng",
+          "keys": "taamf nhinf xa troong roongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_320",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "chiến lược đúng đắn",
+          "keys": "chieens luwowcj ddungs ddawns",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thông tuệ sáng suốt",
+          "keys": "thoong tueej sangs suoots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "quyết định chính xác",
+          "keys": "quyeets ddinhj chinhs xacs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_321",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "không bị lừa dối",
+          "keys": "khoong bij luwaf doois",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhận biết đúng sai",
+          "keys": "nhaanj bieets ddungs sai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phân tích thấu đáo",
+          "keys": "phaan tichs thaaus ddaos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hiểu thấu lòng người",
+          "keys": "hieeur thaaus longf nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_322",
+      "title": "Sự thông minh",
+      "content": [
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tuyệt đỉnh thông minh",
+          "keys": "tuyeetj ddinhr thoong minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tài năng thiên bẩm",
+          "keys": "taif nawng thieen baamr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngời sáng tương lai",
+          "keys": "ngowif sangs tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_323",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "tiền nào của nấy",
+          "keys": "tieenf naof cuar naays",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đắt xắt ra miếng",
+          "keys": "ddawts xawts ra mieengs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "của rẻ là của ôi",
+          "keys": "cuar rer laf cuar ooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không tham của người",
+          "keys": "khoong tham cuar nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_324",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "trả giá xứng đáng",
+          "keys": "trar gias xuwngs ddangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công minh chính đại",
+          "keys": "coong minh chinhs ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thưởng phạt phân minh",
+          "keys": "thuwowngr phatj phaan minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không thiên vị",
+          "keys": "khoong thieen vij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_325",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "lẽ phải luôn thắng",
+          "keys": "lex phair luoon thawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công bằng cho tất cả",
+          "keys": "coong bawngf cho taats car",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xã hội văn minh",
+          "keys": "xax hooij vawn minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tôn trọng pháp luật",
+          "keys": "toon trongj phaps luaatj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_326",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "giữ gìn trật tự",
+          "keys": "giuwx ginf traatj tuwj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đạo đức làm đầu",
+          "keys": "ddaoj dduwcs lamf ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có trách nhiệm",
+          "keys": "soongs cos trachs nhieemj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không vụ lợi",
+          "keys": "khoong vuj lowij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_327",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "vì lợi ích chung",
+          "keys": "vif lowij ichs chung",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "công bằng là gốc",
+          "keys": "coong bawngf laf goocs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc là ngọn",
+          "keys": "hanhj phucs laf ngonj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng giá trị",
+          "keys": "traan trongj gias trij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_328",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "đánh giá khách quan",
+          "keys": "ddanhs gias khachs quan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nhìn vẻ ngoài",
+          "keys": "khoong nhinf ver ngoaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đánh giá bản chất",
+          "keys": "ddanhs gias banr chaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thấu tình đạt lý",
+          "keys": "thaaus tinhf ddatj lys",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_329",
+      "title": "Sự công bằng",
+      "content": [
+        {
+          "display": "xử lý công tâm",
+          "keys": "xuwr lys coong taam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mọi người bình đẳng",
+          "keys": "moij nguwowif binhf ddawngr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hợp tình hợp lý",
+          "keys": "howpj tinhf howpj lys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bền muôn đời",
+          "keys": "vuwngx beenf muoon ddowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_330",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "oán cừu nên giải",
+          "keys": "oans cuwuf neen giair",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên kết",
+          "keys": "khoong neen keets",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đánh kẻ chạy đi",
+          "keys": "ddanhs ker chayj ddi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không đánh người chạy lại",
+          "keys": "khoong ddanhs nguwowif chayj laij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_331",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "đánh người chạy lại mới lo",
+          "keys": "ddanhs nguwowif chayj laij mowis lo",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng bao dung rộng mở",
+          "keys": "longf bao dung roongj mowr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vị tha nhân ái",
+          "keys": "vij tha nhaan ais",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tha thứ lỗi lầm",
+          "keys": "tha thuws looix laamf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_332",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "cho nhau cơ hội",
+          "keys": "cho nhau cow hooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "buông bỏ hận thù",
+          "keys": "buoong bor haanj thuf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tâm hồn thanh thản",
+          "keys": "taam hoonf thanh thanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống yêu thương nhau",
+          "keys": "soongs yeeu thuwowng nhau",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_333",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "giúp đỡ người khác",
+          "keys": "giups ddowx nguwowif khacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhận lỗi chân thành",
+          "keys": "nhaanj looix chaan thanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "được tha thứ",
+          "keys": "dduwowcj tha thuws",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng nhẹ nhàng",
+          "keys": "longf nhej nhangf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_334",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "niềm vui trở lại",
+          "keys": "nieemf vui trowr laij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoà bình hữu nghị",
+          "keys": "hoaf binhf huwux nghij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gắn kết tình thân",
+          "keys": "gawns keets tinhf thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xoá tan khoảng cách",
+          "keys": "xoas tan khoangr cachs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_335",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "trân trọng hiện tại",
+          "keys": "traan trongj hieenj taij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hướng tới tương lai",
+          "keys": "huwowngs towis tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tha thứ là đẹp",
+          "keys": "tha thuws laf ddepj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có nghĩa tình",
+          "keys": "soongs cos nghiax tinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_336",
+      "title": "Sự tha thứ",
+      "content": [
+        {
+          "display": "trước sau như một",
+          "keys": "truwowcs sau nhuw mootj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn bao dung",
+          "keys": "luoon luoon bao dung",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi vị tha",
+          "keys": "maix maix vij tha",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_337",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "lúa chín cúi đầu",
+          "keys": "luas chins cuis ddaauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "núi cao còn có núi cao hơn",
+          "keys": "nuis cao conf cos nuis cao hown",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khiêm tốn là mẹ thành công",
+          "keys": "khieem toons laf mej thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thắng không kiêu",
+          "keys": "thawngs khoong kieeu",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_338",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "bại không nản",
+          "keys": "baij khoong nanr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhún nhường lễ phép",
+          "keys": "nhuns nhuwowngf leex pheps",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên khoe khoang",
+          "keys": "khoong neen khoe khoang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thùng rỗng kêu to",
+          "keys": "thungf roongx keeu to",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_339",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "tự cao tự đại",
+          "keys": "tuwj cao tuwj ddaij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thì sẽ thất bại",
+          "keys": "thif sex thaats baij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học hỏi muôn nơi",
+          "keys": "hocj hoir muoon nowi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết mình biết ta",
+          "keys": "bieets minhf bieets ta",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_340",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "luôn luôn học hỏi",
+          "keys": "luoon luoon hocj hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng tiến bộ",
+          "keys": "khoong nguwngf tieens booj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn bản sắc",
+          "keys": "giuwx ginf banr sawcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khiêm tốn nhã nhặn",
+          "keys": "khieem toons nhax nhawnj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_341",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "được mọi người yêu mến",
+          "keys": "dduwowcj moij nguwowif yeeu meens",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giá trị đích thực",
+          "keys": "gias trij ddichs thuwcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không cần phô trương",
+          "keys": "khoong caanf phoo truwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người tài thật sự",
+          "keys": "nguwowif taif thaatj suwj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_342",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "luôn luôn khiêm nhường",
+          "keys": "luoon luoon khieem nhuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gương sáng khiêm tốn",
+          "keys": "guwowng sangs khieem toons",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "để lại cho đời",
+          "keys": "ddeer laij cho ddowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bản lĩnh thật sự",
+          "keys": "banr linhx thaatj suwj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_343",
+      "title": "Sự khiêm tốn",
+      "content": [
+        {
+          "display": "không ngại học hỏi",
+          "keys": "khoong ngaij hocj hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngại lắng nghe",
+          "keys": "khoong ngaij lawngs nghe",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công bền vững",
+          "keys": "thanhf coong beenf vuwngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi ngời sáng",
+          "keys": "maix maix ngowif sangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_344",
+      "title": "Tổng kết bài học",
+      "content": [
+        {
+          "display": "học đi đôi với hành",
+          "keys": "hocj ddi ddooi vowis hanhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sống có nghĩa có tình",
+          "keys": "soongs cos nghiax cos tinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biết ơn nguồn cội",
+          "keys": "bieets own nguoonf cooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiên trì nhẫn nại",
+          "keys": "kieen trif nhaanx naij",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_345",
+      "title": "Tổng kết bài học",
+      "content": [
+        {
+          "display": "tiết kiệm thời gian",
+          "keys": "tieets kieemj thowif gian",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đối nhân xử thế",
+          "keys": "ddoois nhaan xuwr thees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo léo tinh tế",
+          "keys": "kheos leos tinh tees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng tình bạn",
+          "keys": "traan trongj tinhf banj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_346",
+      "title": "Tổng kết bài học",
+      "content": [
+        {
+          "display": "yêu thương gia đình",
+          "keys": "yeeu thuwowng gia ddinhf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn sức khoẻ",
+          "keys": "giuwx ginf suwcs khoer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "luôn luôn học hỏi",
+          "keys": "luoon luoon hocj hoir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không ngừng vươn lên",
+          "keys": "khoong nguwngf vuwown leen",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_347",
+      "title": "Tổng kết bài học",
+      "content": [
+        {
+          "display": "sống đẹp lòng người",
+          "keys": "soongs ddepj longf nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tích đức cho sau",
+          "keys": "tichs dduwcs cho sau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lòng dạ thẳng ngay",
+          "keys": "longf daj thawngr ngay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "người ngay nói thật",
+          "keys": "nguwowif ngay nois thaatj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_348",
+      "title": "Tổng kết bài học",
+      "content": [
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc viên mãn",
+          "keys": "hanhj phucs vieen manx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đất nước mạnh giàu",
+          "keys": "ddaats nuwowcs manhj giauf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "văn minh tiến bộ",
+          "keys": "vawn minh tieens booj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_349",
+      "title": "Tổng kết bài học",
+      "content": [
+        {
+          "display": "mãi mãi tri ân",
+          "keys": "maix maix tri aan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống tuyệt vời",
+          "keys": "cuoocj soongs tuyeetj vowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cùng nhau cố gắng",
+          "keys": "cungf nhau coos gawngs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vươn tới tương lai",
+          "keys": "vuwown towis tuwowng lai",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_350",
+      "title": "Tổng kết bài học",
+      "content": [
+        {
+          "display": "vạn sự hanh thông",
+          "keys": "vanj suwj hanh thoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mã đáo thành công",
+          "keys": "max ddaos thanhf coong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phúc lộc thọ toàn",
+          "keys": "phucs loocj thoj toanf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xin chào tạm biệt",
+          "keys": "xin chaof tamj bieetj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_351",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "cày sâu cuốc bẫm",
+          "keys": "cayf saau cuoocs baamx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con tằm nhả tơ",
+          "keys": "con tawmf nhar tow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thợ rèn đập sắt",
+          "keys": "thowj renf ddaapj sawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngư dân bám biển",
+          "keys": "nguw daan bams bieenr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_352",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "nhà giáo ưu tú",
+          "keys": "nhaf giaos uwu tus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "lương y như từ mẫu",
+          "keys": "luwowng y nhuw tuwf maaux",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chiến sĩ dũng cảm",
+          "keys": "chieens six dungx camr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xây dựng quê hương",
+          "keys": "xaay duwngj quee huwowng",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_353",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "làm ruộng thì gia",
+          "keys": "lamf ruoongj thif gia",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm nhà thì tốn",
+          "keys": "lamf nhaf thif toons",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhất nghệ tinh",
+          "keys": "nhaats ngheej tinh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhất thân vinh",
+          "keys": "nhaats thaan vinh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_354",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "nghề nghiệp quý giá",
+          "keys": "ngheef nghieepj quys gias",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chăm chỉ làm việc",
+          "keys": "chawm chir lamf vieecj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghề nào cũng quý",
+          "keys": "ngheef naof cungx quys",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vinh quang lao động",
+          "keys": "vinh quang lao ddoongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_355",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "thợ may khéo tay",
+          "keys": "thowj may kheos tay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bác sĩ tận tâm",
+          "keys": "bacs six taanj taam",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kỹ sư sáng tạo",
+          "keys": "kyx suw sangs taoj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nông dân cần cù",
+          "keys": "noong daan caanf cuf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_356",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "buôn có bạn",
+          "keys": "buoon cos banj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bán có phường",
+          "keys": "bans cos phuwowngf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm công ăn lương",
+          "keys": "lamf coong awn luwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tự mình lập nghiệp",
+          "keys": "tuwj minhf laapj nghieepj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_357",
+      "title": "Nghề nghiệp",
+      "content": [
+        {
+          "display": "quyết tâm theo nghề",
+          "keys": "quyeets taam theo ngheef",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thành công rực rỡ",
+          "keys": "thanhf coong ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vững bước tương lai",
+          "keys": "vuwngx buwowcs tuwowng lai",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nghề nghiệp ổn định",
+          "keys": "ngheef nghieepj oonr ddinhj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_358",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "ăn cơm mới",
+          "keys": "awn cowm mowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nói chuyện cũ",
+          "keys": "nois chuyeenj cux",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn no mặc ấm",
+          "keys": "awn no mawcj aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn vóc học hay",
+          "keys": "awn vocs hocj hay",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_359",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "bát sạch ngon cơm",
+          "keys": "bats sachj ngon cowm",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cơm lành canh ngọt",
+          "keys": "cowm lanhf canh ngotj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn trông nồi",
+          "keys": "awn troong nooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngồi trông hướng",
+          "keys": "ngooif troong huwowngs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_360",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "miếng ăn là miếng tồi",
+          "keys": "mieengs awn laf mieengs tooif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn một mình đau tức",
+          "keys": "awn mootj minhf ddau tuwcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "làm thì lười",
+          "keys": "lamf thif luwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn thì nhanh",
+          "keys": "awn thif nhanh",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_361",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "khéo ăn thì no",
+          "keys": "kheos awn thif no",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khéo co thì ấm",
+          "keys": "kheos co thif aams",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đặc sản quê hương",
+          "keys": "ddawcj sanr quee huwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "món ăn truyền thống",
+          "keys": "mons awn truyeenf thoongs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_362",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "hương vị đậm đà",
+          "keys": "huwowng vij ddaamj ddaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngon từ thịt",
+          "keys": "ngon tuwf thitj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngọt từ xương",
+          "keys": "ngotj tuwf xuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ẩm thực Việt Nam",
+          "keys": "aamr thuwcj Vieetj Nam",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_363",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "bánh chưng bánh giầy",
+          "keys": "banhs chuwng banhs giaayf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phở bò nam định",
+          "keys": "phowr bof nam ddinhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bún chả hà nội",
+          "keys": "buns char haf nooij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cơm tấm sài gòn",
+          "keys": "cowm taams saif gonf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_364",
+      "title": "Ẩm thực",
+      "content": [
+        {
+          "display": "ăn uống điều độ",
+          "keys": "awn uoongs ddieeuf ddooj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn sức khoẻ",
+          "keys": "giuwx ginf suwcs khoer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thơm ngon bổ dưỡng",
+          "keys": "thowm ngon boor duwowngx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mời bạn thưởng thức",
+          "keys": "mowif banj thuwowngr thuwcs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_365",
+      "title": "Sức khoẻ",
+      "content": [
+        {
+          "display": "sức khoẻ là vàng",
+          "keys": "suwcs khoer laf vangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phòng bệnh hơn chữa bệnh",
+          "keys": "phongf beenhj hown chuwax beenhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thân cường tật nhược",
+          "keys": "thaan cuwowngf taatj nhuwowcj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tâm hồn thanh thản",
+          "keys": "taam hoonf thanh thanr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_366",
+      "title": "Sức khoẻ",
+      "content": [
+        {
+          "display": "thể dục thể thao",
+          "keys": "theer ducj theer thao",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nâng cao sức khoẻ",
+          "keys": "naang cao suwcs khoer",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn chín uống sôi",
+          "keys": "awn chins uoongs sooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "sạch sẽ là mẹ",
+          "keys": "sachj sex laf mej",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_367",
+      "title": "Sức khoẻ",
+      "content": [
+        {
+          "display": "sống lâu trăm tuổi",
+          "keys": "soongs laau trawm tuooir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trẻ mãi không già",
+          "keys": "trer maix khoong giaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tinh thần minh mẫn",
+          "keys": "tinh thaanf minh maanx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cơ thể tráng kiện",
+          "keys": "cow theer trangs kieenj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_368",
+      "title": "Sức khoẻ",
+      "content": [
+        {
+          "display": "ngủ ngon giấc",
+          "keys": "ngur ngon giaacs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ăn uống lành mạnh",
+          "keys": "awn uoongs lanhf manhj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không nên thức khuya",
+          "keys": "khoong neen thuwcs khuya",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dậy sớm tập thể dục",
+          "keys": "daayj sowms taapj theer ducj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_369",
+      "title": "Sức khoẻ",
+      "content": [
+        {
+          "display": "mỗi ngày một niềm vui",
+          "keys": "mooix ngayf mootj nieemf vui",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cười bằng mười",
+          "keys": "cuwowif bawngf muwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thang thuốc bổ",
+          "keys": "thang thuoocs boor",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn vóc dáng",
+          "keys": "giuwx ginf vocs dangs",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_370",
+      "title": "Sức khoẻ",
+      "content": [
+        {
+          "display": "tránh xa bệnh tật",
+          "keys": "tranhs xa beenhj taatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống an khang",
+          "keys": "cuoocj soongs an khang",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thịnh vượng bền lâu",
+          "keys": "thinhj vuwowngj beenf laau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hạnh phúc mỗi ngày",
+          "keys": "hanhj phucs mooix ngayf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_371",
+      "title": "Sức khoẻ",
+      "content": [
+        {
+          "display": "yêu đời yêu người",
+          "keys": "yeeu ddowif yeeu nguwowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vượt qua mệt mỏi",
+          "keys": "vuwowtj qua meetj moir",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "năng lượng dồi dào",
+          "keys": "nawng luwowngj dooif daof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tươi trẻ mỗi ngày",
+          "keys": "tuwowi trer mooix ngayf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_372",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "đi một ngày đàng",
+          "keys": "ddi mootj ngayf ddangf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "học một sàng khôn",
+          "keys": "hocj mootj sangf khoon",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "non xanh nước biếc",
+          "keys": "non xanh nuwowcs bieecs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phong cảnh hữu tình",
+          "keys": "phong canhr huwux tinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_373",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "du lịch bốn phương",
+          "keys": "du lichj boons phuwowng",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khám phá thế giới",
+          "keys": "khams phas thees giowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vẻ đẹp thiên nhiên",
+          "keys": "ver ddepj thieen nhieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "danh lam thắng cảnh",
+          "keys": "danh lam thawngs canhr",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_374",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "vịnh hạ long",
+          "keys": "vinhj haj long",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "phố cổ hội an",
+          "keys": "phoos coor hooij an",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cố đô huế",
+          "keys": "coos ddoo huees",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "biển nha trang",
+          "keys": "bieenr nha trang",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_375",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "lên rừng xuống biển",
+          "keys": "leen ruwngf xuoongs bieenr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trải nghiệm thú vị",
+          "keys": "trair nghieemj thus vij",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kỷ niệm khó quên",
+          "keys": "kyr nieemj khos queen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hành trình mới",
+          "keys": "hanhf trinhf mowis",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_376",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "xách ba lô lên",
+          "keys": "xachs ba loo leen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "và đi thôi",
+          "keys": "vaf ddi thooi",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu thiên nhiên",
+          "keys": "yeeu thieen nhieen",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bảo vệ môi trường",
+          "keys": "baor veej mooi truwowngf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_377",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "du lịch văn hoá",
+          "keys": "du lichj vawn hoas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "tìm hiểu lịch sử",
+          "keys": "timf hieeur lichj suwr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "con người thân thiện",
+          "keys": "con nguwowif thaan thieenj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mến khách nhiệt tình",
+          "keys": "meens khachs nhieetj tinhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_378",
+      "title": "Du lịch",
+      "content": [
+        {
+          "display": "khám phá bản thân",
+          "keys": "khams phas banr thaan",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mở rộng tầm mắt",
+          "keys": "mowr roongj taamf mawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cuộc sống là",
+          "keys": "cuoocj soongs laf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "những chuyến đi",
+          "keys": "nhuwngx chuyeens ddi",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_379",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "đất lành chim đậu",
+          "keys": "ddaats lanhf chim ddaauj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nước chảy đá mòn",
+          "keys": "nuwowcs chayr ddas monf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mưa thuận gió hoà",
+          "keys": "muwa thuaanj gios hoaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nắng cháy da người",
+          "keys": "nawngs chays da nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_380",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "gió thổi mây bay",
+          "keys": "gios thooir maay bay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoa nở chim hót",
+          "keys": "hoa nowr chim hots",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "rừng vàng biển bạc",
+          "keys": "ruwngf vangf bieenr bacj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "núi cao sông dài",
+          "keys": "nuis cao soong daif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_381",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "bốn mùa luân chuyển",
+          "keys": "boons muaf luaan chuyeenr",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "xuân hạ thu đông",
+          "keys": "xuaan haj thu ddoong",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vẻ đẹp hoang sơ",
+          "keys": "ver ddepj hoang sow",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "không khí trong lành",
+          "keys": "khoong khis trong lanhf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_382",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "bảo vệ rừng xanh",
+          "keys": "baor veej ruwngf xanh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "giữ gìn nguồn nước",
+          "keys": "giuwx ginf nguoonf nuwowcs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "môi trường xanh sạch",
+          "keys": "mooi truwowngf xanh sachj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vạn vật sinh sôi",
+          "keys": "vanj vaatj sinh sooi",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_383",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "ánh bình minh",
+          "keys": "anhs binhf minh",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hoàng hôn rực rỡ",
+          "keys": "hoangf hoon ruwcj rowx",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bầu trời xanh ngắt",
+          "keys": "baauf trowif xanh ngawts",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "cánh đồng bao la",
+          "keys": "canhs ddoongf bao la",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_384",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "biển khơi cuộn sóng",
+          "keys": "bieenr khowi cuoonj songs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dòng sông hiền hoà",
+          "keys": "dongf soong hieenf hoaf",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngọn núi hùng vĩ",
+          "keys": "ngonj nuis hungf vix",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thung lũng thơ mộng",
+          "keys": "thung lungx thow moongj",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_385",
+      "title": "Thiên nhiên",
+      "content": [
+        {
+          "display": "thiên nhiên kỳ thú",
+          "keys": "thieen nhieen kyf thus",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "di sản thế giới",
+          "keys": "di sanr thees giowis",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "trân trọng trái đất",
+          "keys": "traan trongj trais ddaats",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngôi nhà chung",
+          "keys": "ngooi nhaf chung",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_386",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "chó không chê chủ",
+          "keys": "chos khoong chee chur",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mèo mù vớ cá",
+          "keys": "meof muf vows cas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "nhanh như sóc",
+          "keys": "nhanh nhuw socs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "chậm như rùa",
+          "keys": "chaamj nhuw ruaf",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_387",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "hiền như bụt",
+          "keys": "hieenf nhuw butj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "dữ như cọp",
+          "keys": "duwx nhuw copj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khôn như cáo",
+          "keys": "khoon nhuw caos",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ngu như bò",
+          "keys": "ngu nhuw bof",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_388",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "ngựa non háu đá",
+          "keys": "nguwaj non haus ddas",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ếch ngồi đáy giếng",
+          "keys": "eechs ngooif ddays gieengs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đàn gảy tai trâu",
+          "keys": "ddanf gayr tai traau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "kiến tha lâu đầy tổ",
+          "keys": "kieens tha laau ddaayf toor",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_389",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "chim sa cá lặn",
+          "keys": "chim sa cas lawnj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vật đổi sao dời",
+          "keys": "vaatj ddooir sao dowif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "yêu thương động vật",
+          "keys": "yeeu thuwowng ddoongj vaatj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bạn của con người",
+          "keys": "banj cuar con nguwowif",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_390",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "trâu cày dưới ruộng",
+          "keys": "traau cayf duwowis ruoongj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "gà gáy báo sáng",
+          "keys": "gaf gays baos sangs",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "vịt bơi dưới hồ",
+          "keys": "vitj bowi duwowis hoof",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "thỏ trắng xinh xắn",
+          "keys": "thor trawngs xinh xawns",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_391",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "voi rừng to lớn",
+          "keys": "voi ruwngf to lowns",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "hổ báo rừng sâu",
+          "keys": "hoor baos ruwngf saau",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "khỉ leo trên cây",
+          "keys": "khir leo treen caay",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "ong hút mật hoa",
+          "keys": "ong huts maatj hoa",
+          "reward": "yellow_banana"
+        }
+      ]
+    },
+    {
+      "id": "level_392",
+      "title": "Động vật",
+      "content": [
+        {
+          "display": "thế giới muôn loài",
+          "keys": "thees giowis muoon loaif",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "đa dạng sinh học",
+          "keys": "dda dangj sinh hocj",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "bảo tồn quý hiếm",
+          "keys": "baor toonf quys hieems",
+          "reward": "yellow_banana"
+        },
+        {
+          "display": "mãi mãi xanh tươi",
+          "keys": "maix maix xanh tuwowi",
+          "reward": "yellow_banana"
+        }
+      ]
+    }
+  ]
+}
