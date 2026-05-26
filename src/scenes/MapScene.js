@@ -1,7 +1,8 @@
 import * as Phaser from 'phaser';
 import { ProgressManager } from '../utils/ProgressManager';
 import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson } from '../data/chapters';
-import { LessonCard } from '../components/LessonCard';
+import { PathNode } from '../components/PathNode';
+import { buildNodePositions, getDecorations, getFogAlpha } from '../utils/PathLayout';
 import { ensureTextures } from '../utils/TextureLoader';
 import { MapHeader } from '../components/MapHeader';
 import { MapSidebar } from '../components/MapSidebar';
@@ -60,11 +61,12 @@ export class MapScene extends Phaser.Scene {
 
         this._applyBackground();
         this.overlay = this.add.graphics()
-            .fillStyle(0x0a0f1d, 0.75)
+            .fillStyle(0x0a0f1d, 1.0)
             .fillRect(0, 0, width, height)
             .setScrollFactor(0);
+        this.overlay.setAlpha(0.55);
 
-        // Sidebar geometry (needed for grid layout centering)
+        // Sidebar geometry (needed for coordinate referencing)
         const sidebarW           = 220;
         const sidebarRightMargin = 20;
         const sidebarTopMargin   = 195;
@@ -72,93 +74,171 @@ export class MapScene extends Phaser.Scene {
         const sidebarH           = height - sidebarTopMargin - sidebarBottomMargin;
         const sidebarX           = width - sidebarW / 2 - sidebarRightMargin;
         const sidebarY           = sidebarTopMargin + sidebarH / 2;
-        const sidebarGap         = 30;
 
-        const columns      = 4;
-        const rowHeight    = 150;
-        const colWidth     = 180;
-        const cardHalfW    = 70;
-        const gridWidth    = (columns - 1) * colWidth;
-        const gridVisualSpan = gridWidth + 2 * cardHalfW;
+        // 1. Compute node coordinates
+        const positions = buildNodePositions(CHAPTERS);
 
-        // Center grid within the area left of the sidebar
-        const gridLeftMargin = 40;
-        const gridRightEdge  = sidebarX - sidebarW / 2 - sidebarGap;
-        const availableW     = gridRightEdge - gridLeftMargin;
-        const startX         = gridLeftMargin + cardHalfW + Math.max(0, (availableW - gridVisualSpan) / 2);
-        const gridCenterX    = startX + ((columns - 1) * colWidth) / 2;
-
+        // 2. Populate lessonYPositions
         this.lessonYPositions = {};
-        let currentY = 180;
-        const groupGraphics = this.add.graphics();
+        positions.forEach(pos => {
+            this.lessonYPositions[pos.lessonIndex] = pos.y;
+        });
 
-        for (let gIdx = 0; gIdx < CHAPTER_GROUPS.length; gIdx++) {
-            const group = CHAPTER_GROUPS[gIdx];
+        // Calculate yStart and yEnd for Fog of War background dimming
+        const currentY = this.lessonYPositions[this.currentLessonIndex] || 300;
+        const lastNodeIndex = positions.length - 1;
+        const lastY = this.lessonYPositions[lastNodeIndex] || currentY;
+        this.yStart = this.lessonYPositions[this.currentLessonIndex + 10] || (lastY + 120);
+        this.yEnd = this.lessonYPositions[this.currentLessonIndex + 50] || (this.yStart + 40 * 120);
 
-            // Add extra visual padding between themes
-            if (gIdx > 0) {
-                currentY += 45;
+        // 3. Draw connecting roads
+        const roadGraphics = this.add.graphics();
+        
+        const drawRoadOutline = (p1, p2) => {
+            const fog1 = getFogAlpha(p1.lessonIndex, this.currentLessonIndex);
+            const fog2 = getFogAlpha(p2.lessonIndex, this.currentLessonIndex);
+            const avgFog = (fog1 + fog2) / 2;
+            if (avgFog <= 0) return;
+
+            roadGraphics.lineStyle(22, 0x090d16, 0.5 * avgFog);
+            if (p1.y === p2.y) {
+                roadGraphics.beginPath();
+                roadGraphics.moveTo(p1.x, p1.y);
+                roadGraphics.lineTo(p2.x, p2.y);
+                roadGraphics.strokePath();
+            } else if (p1.x === p2.x) {
+                const isRightEdge = p1.x > 400;
+                const bendX = isRightEdge ? p1.x + 50 : p1.x - 50;
+                const curve = new Phaser.Curves.QuadraticBezier(
+                    new Phaser.Geom.Point(p1.x, p1.y),
+                    new Phaser.Geom.Point(bendX, p1.y + (p2.y - p1.y) / 2),
+                    new Phaser.Geom.Point(p2.x, p2.y)
+                );
+                curve.draw(roadGraphics, 32);
+            } else {
+                const midY = p1.y + (p2.y - p1.y) / 2;
+                const curve = new Phaser.Curves.CubicBezier(
+                    new Phaser.Geom.Point(p1.x, p1.y),
+                    new Phaser.Geom.Point(p1.x, midY),
+                    new Phaser.Geom.Point(p2.x, midY),
+                    new Phaser.Geom.Point(p2.x, p2.y)
+                );
+                curve.draw(roadGraphics, 32);
             }
+        };
 
-            // 1. Draw Group Header Text (Big Group, Centered, Font 26px)
-            const groupText = `${group.emoji}  ${group.name.toUpperCase()}`;
-            const groupHeader = this.add.text(gridCenterX, currentY + 35, groupText, {
-                fontFamily: 'Outfit, Arial',
-                fontSize: '26px',
-                fontStyle: 'bold',
-                fill: '#f8fafc', // Ultra clean slate-white
-            }).setOrigin(0.5);
-            groupHeader.setStroke('#0f172a', 5);
-            groupHeader.setShadow(0, 2, 'rgba(0,0,0,0.6)', 4, true, true);
+        const drawRoadFill = (p1, p2, isUnlocked) => {
+            const fog1 = getFogAlpha(p1.lessonIndex, this.currentLessonIndex);
+            const fog2 = getFogAlpha(p2.lessonIndex, this.currentLessonIndex);
+            const avgFog = (fog1 + fog2) / 2;
+            if (avgFog <= 0) return;
 
-            const textWidth = groupHeader.width;
-            groupGraphics.lineStyle(2, 0x334155, 0.7);
-            groupGraphics.lineBetween(gridLeftMargin + 10, currentY + 35, gridCenterX - textWidth / 2 - 20, currentY + 35);
-            groupGraphics.lineBetween(gridCenterX + textWidth / 2 + 20, currentY + 35, gridRightEdge - 10, currentY + 35);
-
-            currentY += 80;
-
-            // 2. Layout Lessons Chapter by Chapter (Small Group)
-            for (const chapterId of group.chapterIds) {
-                const chapter = CHAPTERS.find(c => c.id === chapterId);
-                if (!chapter) continue;
-
-                // Draw Chapter Header (Small Group, Left-aligned, Font 18px)
-                const chapterHeader = this.add.text(startX - 70, currentY + 5, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
-                    fontFamily: 'Outfit, Arial',
-                    fontSize: '18px',
-                    fontStyle: 'bold',
-                    fill: '#38bdf8' // Sky blue accent
-                }).setOrigin(0, 0.5);
-                chapterHeader.setStroke('#0f172a', 3);
-                chapterHeader.setShadow(0, 1, 'rgba(0,0,0,0.5)', 3, true, true);
-
-                const chapterStartY = currentY + 105;
-                const startLesson = chapter.range[0];
-                const endLesson = chapter.range[1];
-                const numLessons = endLesson - startLesson + 1;
-                const rowsInChapter = Math.ceil(numLessons / columns);
-
-                for (let j = 0; j < numLessons; j++) {
-                    const globalIndex = startLesson + j;
-                    const col = j % columns;
-                    const row = Math.floor(j / columns);
-                    const x = startX + col * colWidth;
-                    const y = chapterStartY + row * rowHeight;
-
-                    this.lessonYPositions[globalIndex] = y;
-
-                    const isUnlocked = (globalIndex === 0) || (this.lessonStars[globalIndex - 1] !== undefined && this.lessonStars[globalIndex - 1] > 0);
-                    const stars = this.lessonStars[globalIndex] || 0;
-
-                    new LessonCard(this, x, y, globalIndex, isUnlocked, stars, this.currentLessonIndex);
-                }
-
-                currentY = chapterStartY + rowsInChapter * rowHeight + 10;
+            const fillColor = isUnlocked ? 0x10b981 : 0x334155;
+            const fillAlpha = (isUnlocked ? 0.6 : 0.25) * avgFog;
+            roadGraphics.lineStyle(14, fillColor, fillAlpha);
+            if (p1.y === p2.y) {
+                roadGraphics.beginPath();
+                roadGraphics.moveTo(p1.x, p1.y);
+                roadGraphics.lineTo(p2.x, p2.y);
+                roadGraphics.strokePath();
+            } else if (p1.x === p2.x) {
+                const isRightEdge = p1.x > 400;
+                const bendX = isRightEdge ? p1.x + 50 : p1.x - 50;
+                const curve = new Phaser.Curves.QuadraticBezier(
+                    new Phaser.Geom.Point(p1.x, p1.y),
+                    new Phaser.Geom.Point(bendX, p1.y + (p2.y - p1.y) / 2),
+                    new Phaser.Geom.Point(p2.x, p2.y)
+                );
+                curve.draw(roadGraphics, 32);
+            } else {
+                const midY = p1.y + (p2.y - p1.y) / 2;
+                const curve = new Phaser.Curves.CubicBezier(
+                    new Phaser.Geom.Point(p1.x, p1.y),
+                    new Phaser.Geom.Point(p1.x, midY),
+                    new Phaser.Geom.Point(p2.x, midY),
+                    new Phaser.Geom.Point(p2.x, p2.y)
+                );
+                curve.draw(roadGraphics, 32);
             }
+        };
+
+        // Draw outlines first
+        for (let i = 0; i < positions.length - 1; i++) {
+            drawRoadOutline(positions[i], positions[i + 1]);
+        }
+        // Draw fills second
+        for (let i = 0; i < positions.length - 1; i++) {
+            const isUnlocked = positions[i + 1].lessonIndex <= this.currentLessonIndex;
+            drawRoadFill(positions[i], positions[i + 1], isUnlocked);
         }
 
-        const totalScrollHeight = currentY + 40;
+        // 4. Draw Group and Chapter Headers
+        const gridCenterX = 395;
+        const groupGraphics = this.add.graphics();
+
+        CHAPTERS.forEach((chapter) => {
+            const firstLessonIndex = chapter.range[0];
+            const firstNode = positions.find(p => p.lessonIndex === firstLessonIndex);
+            if (!firstNode) return;
+
+            const headerFogAlpha = getFogAlpha(firstLessonIndex, this.currentLessonIndex);
+            if (headerFogAlpha <= 0) return;
+
+            // Check if this chapter is the first of a group
+            const group = CHAPTER_GROUPS.find(g => g.chapterIds[0] === chapter.id);
+            if (group) {
+                // Draw Group Header Text (Big Group, Centered, Font 26px)
+                const groupText = `${group.emoji}  ${group.name.toUpperCase()}`;
+                const groupHeader = this.add.text(gridCenterX, firstNode.y - 95, groupText, {
+                    fontFamily: 'Outfit, Arial',
+                    fontSize: '26px',
+                    fontStyle: 'bold',
+                    fill: '#f8fafc',
+                }).setOrigin(0.5).setAlpha(headerFogAlpha);
+                groupHeader.setStroke('#0f172a', 5);
+                groupHeader.setShadow(0, 2, 'rgba(0,0,0,0.6)', 4, true, true);
+
+                const textWidth = groupHeader.width;
+                groupGraphics.lineStyle(2, 0x334155, 0.7 * headerFogAlpha);
+                groupGraphics.lineBetween(40, firstNode.y - 95, gridCenterX - textWidth / 2 - 20, firstNode.y - 95);
+                groupGraphics.lineBetween(gridCenterX + textWidth / 2 + 20, firstNode.y - 95, 750, firstNode.y - 95);
+            }
+
+            // Draw Chapter Header (Small Group, Left-aligned at X=72, Font 18px)
+            const chapterHeader = this.add.text(72, firstNode.y - 54, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
+                fontFamily: 'Outfit, Arial',
+                fontSize: '18px',
+                fontStyle: 'bold',
+                fill: '#38bdf8'
+            }).setOrigin(0, 0.5).setAlpha(headerFogAlpha);
+            chapterHeader.setStroke('#0f172a', 3);
+            chapterHeader.setShadow(0, 1, 'rgba(0,0,0,0.5)', 3, true, true);
+        });
+
+        // 5. Instantiate Nodes
+        this.pathNodes = [];
+        positions.forEach((pos) => {
+            const isUnlocked = (pos.lessonIndex === 0) || (this.lessonStars[pos.lessonIndex - 1] !== undefined && this.lessonStars[pos.lessonIndex - 1] > 0);
+            const stars = this.lessonStars[pos.lessonIndex] || 0;
+
+            const node = new PathNode(this, pos.x, pos.y, pos.lessonIndex, isUnlocked, stars, this.currentLessonIndex);
+            this.pathNodes.push(node);
+        });
+
+        // 6. Draw decorations
+        const decorations = getDecorations(positions, CHAPTERS);
+        decorations.forEach((dec) => {
+            const decFogAlpha = getFogAlpha(dec.lessonIndex, this.currentLessonIndex);
+            if (decFogAlpha <= 0) return;
+            this.add.text(dec.x, dec.y, dec.emoji, {
+                fontFamily: 'Segoe UI Emoji, Arial',
+                fontSize: '26px'
+            }).setOrigin(0.5).setScale(dec.scale).setAlpha(0.65 * decFogAlpha);
+        });
+
+        // Set total scroll height and camera bounds
+        const lastNode = positions[positions.length - 1];
+        const totalScrollHeight = lastNode.y + 180;
         this.totalScrollHeight = totalScrollHeight;
 
         this.cameras.main.setBounds(0, 0, width, totalScrollHeight);
@@ -178,7 +258,7 @@ export class MapScene extends Phaser.Scene {
         this.add.rectangle(0, 0, width, 175, 0x000000, 0)
             .setOrigin(0).setScrollFactor(0).setDepth(9).setInteractive();
 
-        // Calculate and set initial camera position using dynamic coordinates
+        // Calculate and set initial camera position
         const targetActiveY = this.lessonYPositions[this.currentLessonIndex] || 230;
         const targetScrollY = Phaser.Math.Clamp(targetActiveY - height / 2, 0, totalScrollHeight - height);
 
@@ -261,19 +341,58 @@ export class MapScene extends Phaser.Scene {
             this.isMapDragging = false;
         });
 
-        // Create global tooltip container (accessed by LessonCard)
-        this.tooltip = this.add.container(0, 0).setDepth(100).setVisible(false);
+        // Create global rich tooltip container
+        this.richTooltip = this.add.container(0, 0).setDepth(100).setVisible(false);
+
+        const cardW = 220;
+        const cardH = 115;
+
+        // Draw background & gold border
         const tooltipBg = this.add.graphics();
         tooltipBg.fillStyle(0x0f172a, 0.95);
-        tooltipBg.fillRoundedRect(0, 0, 180, 55, 8);
-        tooltipBg.lineStyle(1.5, 0x38bdf8, 1);
-        tooltipBg.strokeRoundedRect(0, 0, 180, 55, 8);
-        this.tooltip.add(tooltipBg);
-        
-        this.tooltipText = this.add.text(10, 10, '', {
-            fontFamily: 'Arial', fontSize: '12px', fill: '#ffffff', lineSpacing: 4
-        });
-        this.tooltip.add(this.tooltipText);
+        tooltipBg.fillRoundedRect(-cardW / 2, -147, cardW, cardH, 12);
+        tooltipBg.lineStyle(1.5, 0xFBBF24, 1); // gold border
+        tooltipBg.strokeRoundedRect(-cardW / 2, -147, cardW, cardH, 12);
+
+        // Draw pointing diamond/triangle at the bottom
+        tooltipBg.fillStyle(0x0f172a, 0.95);
+        tooltipBg.lineStyle(1.5, 0xFBBF24, 1);
+        tooltipBg.beginPath();
+        tooltipBg.moveTo(-8, -32);
+        tooltipBg.lineTo(8, -32);
+        tooltipBg.lineTo(0, -20);
+        tooltipBg.closePath();
+        tooltipBg.fillPath();
+        tooltipBg.strokePath();
+
+        // Divider line in tooltip
+        tooltipBg.lineStyle(1, 0x334155, 0.6);
+        tooltipBg.lineBetween(-100, -118, 100, -118);
+
+        this.richTooltip.add(tooltipBg);
+
+        // Add texts to tooltip container
+        this.tooltipTitle = this.add.text(-100, -132, '', {
+            fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: '#38bdf8'
+        }).setOrigin(0, 0.5);
+
+        this.tooltipStars = this.add.text(100, -132, '', {
+            fontFamily: 'Arial', fontSize: '12px', fill: '#FFD700'
+        }).setOrigin(1, 0.5);
+
+        this.tooltipWpm = this.add.text(-100, -95, '', {
+            fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#a7f3d0'
+        }).setOrigin(0, 0.5);
+
+        this.tooltipAcc = this.add.text(100, -95, '', {
+            fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#a7f3d0'
+        }).setOrigin(1, 0.5);
+
+        this.tooltipDate = this.add.text(0, -62, '', {
+            fontFamily: 'Arial', fontSize: '11px', fill: '#94a3b8'
+        }).setOrigin(0.5, 0.5);
+
+        this.richTooltip.add([this.tooltipTitle, this.tooltipStars, this.tooltipWpm, this.tooltipAcc, this.tooltipDate]);
 
         this.input.keyboard.addCapture(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
@@ -287,6 +406,37 @@ export class MapScene extends Phaser.Scene {
             this.load.audio('level_sound', 'assets/level.mp3');
             this.load.start();
         }
+    }
+
+    showTooltip(index, x, y, isBoss) {
+        const chapter = getChapterForLesson(index);
+        const stars = this.lessonStars[index] || 0;
+        const stats = this.lessonStats[index] || { wpm: 0, accuracy: 0, timestamp: null };
+
+        const starStr = stars === 3 ? '⭐⭐⭐' : stars === 2 ? '⭐⭐☆' : stars === 1 ? '⭐☆☆' : '☆☆☆';
+        const titleText = isBoss ? `⚔️ BOSS: Bài ${index + 1}` : `Bài ${index + 1}: ${chapter.name}`;
+        const wpmText = `Tốc độ: ${stats.wpm || 0} WPM`;
+        const accText = `Chính xác: ${stats.accuracy || 0}%`;
+
+        let dateStr = 'Chưa chơi';
+        if (stats.timestamp) {
+            const date = new Date(stats.timestamp);
+            dateStr = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+        }
+        const dateText = `Gần nhất: ${dateStr}`;
+
+        this.tooltipTitle.setText(titleText);
+        this.tooltipStars.setText(starStr);
+        this.tooltipWpm.setText(wpmText);
+        this.tooltipAcc.setText(accText);
+        this.tooltipDate.setText(dateText);
+
+        this.richTooltip.setPosition(x, y - (isBoss ? 28 : 22));
+        this.richTooltip.setVisible(true);
+    }
+
+    hideTooltip() {
+        this.richTooltip.setVisible(false);
     }
 
     _applyBackground() {
@@ -321,5 +471,25 @@ export class MapScene extends Phaser.Scene {
             }
         }
         return totalLessons - 1;
+    }
+
+    updateCurrentMonkeySkin() {
+        if (!this.pathNodes) return;
+        const currentNode = this.pathNodes.find(node => node.index === this.currentLessonIndex);
+        if (currentNode) {
+            currentNode.updateMonkeySkin();
+        }
+    }
+
+    update() {
+        if (this.overlay && this.yStart !== undefined && this.yEnd !== undefined) {
+            const { height } = this.scale;
+            const centerY = this.cameras.main.scrollY + height / 2;
+            let darkness = 0;
+            if (centerY > this.yStart) {
+                darkness = Phaser.Math.Clamp((centerY - this.yStart) / (this.yEnd - this.yStart), 0, 1);
+            }
+            this.overlay.setAlpha(0.55 + darkness * 0.40);
+        }
     }
 }

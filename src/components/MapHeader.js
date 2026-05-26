@@ -18,7 +18,7 @@ export class MapHeader extends Phaser.GameObjects.Container {
         const headerHeight = 175;
         const headerBg = scene.add.graphics();
         headerBg.fillStyle(0x0f172a, 0.95);
-        headerBg.fillRoundedRect(0, 0, width, headerHeight, { tl: 0, tr: 0, bl: 24, br: 24 });
+        headerBg.fillRect(0, 0, width, headerHeight);
         headerBg.lineStyle(3, 0xFBBF24, 1);
         headerBg.beginPath();
         headerBg.moveTo(0, headerHeight);
@@ -141,6 +141,9 @@ export class MapHeader extends Phaser.GameObjects.Container {
             new SkinsOverlay(scene, () => {
                 scene._loadProgress();
                 scene._applyBackground();
+                if (scene.updateCurrentMonkeySkin) {
+                    scene.updateCurrentMonkeySkin();
+                }
             });
         });
         currentRightX -= skinW / 2 + 8;
