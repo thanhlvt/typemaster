@@ -3,6 +3,49 @@ import { ProgressManager } from '../utils/ProgressManager';
 import { ensureTextures } from '../utils/TextureLoader';
 import { getFogAlpha } from '../utils/PathLayout';
 
+// Pre-render gradient circle textures once per scene using Canvas 2D API
+function createNodeTextures(scene) {
+    const DEFS = [
+        { key: 'pn_done',         r: 38, light: '#34d399', mid: '#10b981', dark: '#064e3b' },
+        { key: 'pn_current',      r: 38, light: '#fde68a', mid: '#f59e0b', dark: '#78350f' },
+        { key: 'pn_locked',       r: 38, light: '#475569', mid: '#1e293b', dark: '#0f172a' },
+        { key: 'pn_boss_done',    r: 44, light: '#fde68a', mid: '#d97706', dark: '#78350f' },
+        { key: 'pn_boss_current', r: 44, light: '#fca5a5', mid: '#ef4444', dark: '#7f1d1d' },
+        { key: 'pn_boss_locked',  r: 44, light: '#3b1515', mid: '#180505', dark: '#050101' },
+    ];
+
+    for (const def of DEFS) {
+        if (scene.textures.exists(def.key)) continue;
+
+        const size = def.r * 2 + 2; // +2 so stroke isn't clipped
+        const tex  = scene.textures.createCanvas(def.key, size, size);
+        const ctx  = tex.context;
+        const cx   = size / 2;
+        const cy   = size / 2;
+
+        // Clip to circle
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(cx, cy, def.r, 0, Math.PI * 2);
+        ctx.clip();
+
+        // Radial gradient: light source at top-left
+        const g = ctx.createRadialGradient(
+            cx - def.r * 0.28, cy - def.r * 0.3,  def.r * 0.05,  // inner (bright spot)
+            cx + def.r * 0.1,  cy + def.r * 0.15, def.r          // outer (dark edge)
+        );
+        g.addColorStop(0,    def.light);
+        g.addColorStop(0.42, def.mid);
+        g.addColorStop(1,    def.dark);
+
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, size, size);
+        ctx.restore();
+
+        tex.refresh();
+    }
+}
+
 export class PathNode extends Phaser.GameObjects.Container {
     constructor(scene, x, y, index, isUnlocked, stars, currentIndex) {
         super(scene, x, y);
@@ -31,12 +74,22 @@ export class PathNode extends Phaser.GameObjects.Container {
             this.state = 'locked';
         }
 
-        // Draw Circle Graphics
-        this.bg = scene.add.graphics();
-        this.add(this.bg);
-        this.drawCircle(false);
+        // ── Layer 1: shadow (Graphics, drawn first = behind) ──────────
+        this.shadowGfx = scene.add.graphics();
+        this.add(this.shadowGfx);
+        this._drawShadow();
 
-        // Add Inside Content
+        // ── Layer 2: gradient circle (pre-rendered Canvas texture) ────
+        createNodeTextures(scene);
+        this.nodeImage = scene.add.image(0, 0, this._texKey());
+        this.add(this.nodeImage);
+
+        // ── Layer 3: stroke + glow rings (Graphics, drawn on top) ─────
+        this.strokeGfx = scene.add.graphics();
+        this.add(this.strokeGfx);
+        this._drawStroke(false);
+
+        // ── Content (emoji / number) ───────────────────────────────────
         if (this.state === 'locked') {
             const lockEmoji = scene.add.text(0, 0, '🔒', {
                 fontFamily: 'Segoe UI Emoji, Arial',
@@ -62,11 +115,10 @@ export class PathNode extends Phaser.GameObjects.Container {
             }
         }
 
-        // Add Labels below
+        // ── Labels below node ─────────────────────────────────────────
         let labelYOffset = this.radius + 12;
 
         if (this.isBoss) {
-            // Label "BOSS · BÀI X"
             const bossText = scene.add.text(0, labelYOffset, `BOSS · BÀI ${index + 1}`, {
                 fontFamily: 'Outfit, Arial',
                 fontSize: '13px',
@@ -78,7 +130,6 @@ export class PathNode extends Phaser.GameObjects.Container {
             labelYOffset += 18;
         }
 
-        // Stars row (for done and unlocked/current)
         if (this.state !== 'locked') {
             const starStr = stars === 3 ? '⭐⭐⭐' : stars === 2 ? '⭐⭐☆' : stars === 1 ? '⭐☆☆' : '☆☆☆';
             const starText = scene.add.text(0, labelYOffset, starStr, {
@@ -89,9 +140,8 @@ export class PathNode extends Phaser.GameObjects.Container {
             this.add(starText);
         }
 
-        // If current, add pulsing animation and resolve monkey skin
+        // ── Pulse animation for current node ──────────────────────────
         if (this.state === 'current') {
-            // Pulsing tween for node scale
             this.scene.tweens.add({
                 targets: this,
                 scaleX: 1.05,
@@ -106,7 +156,7 @@ export class PathNode extends Phaser.GameObjects.Container {
             this.updateMonkeySkin();
         }
 
-        // Add Interactive Zone
+        // ── Interactive zone ──────────────────────────────────────────
         const hitArea = new Phaser.Geom.Circle(this.radius, this.radius, this.radius);
         const zone = scene.add.zone(0, 0, this.radius * 2, this.radius * 2)
             .setInteractive(hitArea, Phaser.Geom.Circle.Contains);
@@ -117,66 +167,34 @@ export class PathNode extends Phaser.GameObjects.Container {
 
             zone.on('pointerover', () => {
                 this.setDepth(10);
-                this.drawCircle(true); // draw hover golden border
+                this._drawStroke(true);
                 this.scene.tweens.killTweensOf(this);
-                this.scene.tweens.add({
-                    targets: this,
-                    scaleX: 1.1,
-                    scaleY: 1.1,
-                    duration: 100,
-                    ease: 'Power1'
-                });
-
-                if (this.scene.showTooltip) {
-                    this.scene.showTooltip(this.index, this.x, this.y, this.isBoss);
-                }
+                this.scene.tweens.add({ targets: this, scaleX: 1.1, scaleY: 1.1, duration: 100, ease: 'Power1' });
+                if (this.scene.showTooltip) this.scene.showTooltip(this.index, this.x, this.y, this.isBoss);
             });
 
             zone.on('pointerout', () => {
                 this.setDepth(2);
-                this.drawCircle(false); // remove hover golden border
+                this._drawStroke(false);
                 this.scene.tweens.killTweensOf(this);
                 this.scene.tweens.add({
-                    targets: this,
-                    scaleX: 1.0,
-                    scaleY: 1.0,
-                    duration: 100,
-                    ease: 'Power1',
+                    targets: this, scaleX: 1.0, scaleY: 1.0, duration: 100, ease: 'Power1',
                     onComplete: () => {
                         if (this.state === 'current') {
-                            this.scene.tweens.add({
-                                targets: this,
-                                scaleX: 1.05,
-                                scaleY: 1.05,
-                                duration: 1200,
-                                yoyo: true,
-                                repeat: -1,
-                                ease: 'Sine.easeInOut'
-                            });
+                            this.scene.tweens.add({ targets: this, scaleX: 1.05, scaleY: 1.05, duration: 1200, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
                         }
                     }
                 });
-
-                if (this.scene.hideTooltip) {
-                    this.scene.hideTooltip();
-                }
+                if (this.scene.hideTooltip) this.scene.hideTooltip();
             });
 
             zone.on('pointerdown', () => {
-                this.scene.tweens.add({
-                    targets: this,
-                    scaleX: 0.95,
-                    scaleY: 0.95,
-                    duration: 50
-                });
+                this.scene.tweens.add({ targets: this, scaleX: 0.95, scaleY: 0.95, duration: 50 });
             });
 
             zone.on('pointerup', () => {
                 this.scene.tweens.add({
-                    targets: this,
-                    scaleX: 1.0,
-                    scaleY: 1.0,
-                    duration: 50,
+                    targets: this, scaleX: 1.0, scaleY: 1.0, duration: 50,
                     onComplete: () => {
                         if (!this.scene.isDraggingRef()) {
                             this.scene.sound.play('key_sound');
@@ -194,54 +212,62 @@ export class PathNode extends Phaser.GameObjects.Container {
         scene.add.existing(this);
     }
 
-    drawCircle(isHovered) {
-        this.bg.clear();
+    _texKey() {
+        const prefix = this.isBoss ? 'pn_boss_' : 'pn_';
+        return prefix + this.state;
+    }
 
-        let fillColor, strokeColor, strokeWidth;
+    _drawShadow() {
+        this.shadowGfx.clear();
+        const r  = this.radius;
+        const sx = 2, sy = 6;
+        // Soft drop shadow: multiple semi-transparent circles, offset down-right
+        this.shadowGfx.fillStyle(0x000000, 0.07); this.shadowGfx.fillCircle(sx, sy, r + 10);
+        this.shadowGfx.fillStyle(0x000000, 0.10); this.shadowGfx.fillCircle(sx, sy, r + 6);
+        this.shadowGfx.fillStyle(0x000000, 0.14); this.shadowGfx.fillCircle(sx, sy, r + 3);
+        this.shadowGfx.fillStyle(0x000000, 0.22); this.shadowGfx.fillCircle(sx, sy, r);
+    }
+
+    _drawStroke(isHovered) {
+        this.strokeGfx.clear();
+        const r = this.radius;
+
+        let strokeColor, strokeWidth;
 
         if (this.isBoss) {
             if (this.state === 'done') {
-                fillColor = 0xd97706; // Amber
-                strokeColor = isHovered ? 0xFFD700 : 0x991b1b;
-                strokeWidth = isHovered ? 3.5 : 2.5;
+                strokeColor = isHovered ? 0xFDE68A : 0xb45309; strokeWidth = isHovered ? 4 : 2.5;
             } else if (this.state === 'current') {
-                fillColor = 0xef4444; // Red
-                strokeColor = isHovered ? 0xFFD700 : 0xfca5a5;
-                strokeWidth = isHovered ? 3.5 : 2.5;
+                strokeColor = isHovered ? 0xFCA5A5 : 0xfca5a5; strokeWidth = isHovered ? 4 : 2.5;
             } else {
-                fillColor = 0x180505; // Locked Dark Red
-                strokeColor = 0x450a0a;
-                strokeWidth = 1.5;
+                strokeColor = 0x450a0a; strokeWidth = 1.5;
             }
         } else {
             if (this.state === 'done') {
-                fillColor = 0x10b981; // Emerald Green
-                strokeColor = isHovered ? 0xFFD700 : 0x047857;
-                strokeWidth = isHovered ? 3.5 : 2;
+                strokeColor = isHovered ? 0xA7F3D0 : 0x047857; strokeWidth = isHovered ? 4 : 2;
             } else if (this.state === 'current') {
-                fillColor = 0xf59e0b; // Amber Yellow
-                strokeColor = isHovered ? 0xFFD700 : 0xfffbeb;
-                strokeWidth = isHovered ? 3.5 : 2;
+                strokeColor = isHovered ? 0xFBBF24 : 0xfde68a; strokeWidth = isHovered ? 4 : 2.5;
             } else {
-                fillColor = 0x1e293b; // Locked Slate
-                strokeColor = 0x334155;
-                strokeWidth = 1.5;
+                strokeColor = 0x334155; strokeWidth = 1.5;
             }
         }
 
-        // Draw outer ring glow for current node
+        // Glow rings for current node
         if (this.state === 'current' && !isHovered) {
-            this.bg.lineStyle(1.5, 0xFFD700, 0.4);
-            this.bg.strokeCircle(0, 0, this.radius + 6);
+            this.strokeGfx.lineStyle(8, 0xFFD700, 0.10);
+            this.strokeGfx.strokeCircle(0, 0, r + 12);
+            this.strokeGfx.lineStyle(4, 0xFFD700, 0.25);
+            this.strokeGfx.strokeCircle(0, 0, r + 7);
         }
 
-        // Fill circle
-        this.bg.fillStyle(fillColor, 1);
-        this.bg.fillCircle(0, 0, this.radius);
+        // Border
+        this.strokeGfx.lineStyle(strokeWidth, strokeColor, 1);
+        this.strokeGfx.strokeCircle(0, 0, r);
+    }
 
-        // Stroke circle
-        this.bg.lineStyle(strokeWidth, strokeColor, 1);
-        this.bg.strokeCircle(0, 0, this.radius);
+    // Keep old name as alias so any external call still works
+    drawCircle(isHovered) {
+        this._drawStroke(isHovered);
     }
 
     updateMonkeySkin() {
@@ -250,7 +276,6 @@ export class PathNode extends Phaser.GameObjects.Container {
         const equipped = ProgressManager.getEquippedSkins();
         let monkeySkin = equipped.monkey || 'monkey_1';
 
-        // Resolve random skin
         if (monkeySkin === 'random') {
             const totalLessons = this.scene.gameData.lessons.length;
             const progress = ProgressManager.loadProgress(totalLessons);
@@ -263,7 +288,6 @@ export class PathNode extends Phaser.GameObjects.Container {
             monkeySkin = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
         }
 
-        // Dynamically load the skin texture if it isn't in the cache
         ensureTextures(this.scene, [{ key: monkeySkin, url: `assets/${monkeySkin}.png` }], () => {
             if (this.scene && this.active) {
                 if (this.monkeySprite) {
@@ -274,7 +298,6 @@ export class PathNode extends Phaser.GameObjects.Container {
                         .setOrigin(0.5);
                     this.add(this.monkeySprite);
 
-                    // Add floating micro-animation
                     this.scene.tweens.add({
                         targets: this.monkeySprite,
                         y: this.monkeySprite.y - 6,

@@ -73,8 +73,8 @@ export class AchievementToast extends Phaser.GameObjects.Container {
         }).setOrigin(0, 0.5);
         this.add(nameText);
 
-        // Add to scene at high depth so it sits above everything
-        this.setDepth(100);
+        // Above SpinWheelOverlay (150–153) and ResultOverlay, below banana rain (200)
+        this.setDepth(190);
         this.setScrollFactor(0); // Fixed position relative to camera
         scene.add.existing(this);
 

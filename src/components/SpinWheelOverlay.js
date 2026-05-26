@@ -39,7 +39,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         this.setDepth(150);
 
         // Dark backdrop
-        const backdrop = scene.add.rectangle(0, 0, width, height, 0x0a0f1d, 0.92)
+        const backdrop = scene.add.rectangle(0, 0, width, height, 0x0a0f1d, 0.85)
             .setOrigin(0).setInteractive();
         this.add(backdrop);
 
@@ -47,7 +47,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const cy = height / 2 - 20;
 
         // Title
-        const title = scene.add.text(cx, cy - 260, '🎁 PHẦN THƯỞNG', {
+        const title = scene.add.text(cx, cy - 230, '🎁 PHẦN THƯỞNG', {
             fontFamily: 'Outfit, Arial',
             fontSize: '32px',
             fontStyle: 'bold',
@@ -59,9 +59,9 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
 
         scene.tweens.add({
             targets: title,
-            scaleX: 1.25,
-            scaleY: 1.25,
-            duration: 450,
+            scaleX: 2.5,
+            scaleY: 2.5,
+            duration: 950,
             ease: 'Back.easeOut',
             onComplete: () => {
                 scene.tweens.add({
@@ -75,7 +75,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         });
 
         // Subtitle
-        const subtitle = scene.add.text(cx, cy - 210, 'Quay rương để nhận quà!', {
+        const subtitle = scene.add.text(cx, cy - 195, 'Quay rương để nhận quà!', {
             fontFamily: 'Arial',
             fontSize: '16px',
             fill: '#e2e8f0'
@@ -84,7 +84,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
 
         // ── Spin Wheel ──────────────────────────────────
         const wheelRadius = 140;
-        this.wheelContainer = scene.add.container(cx, cy + 10);
+        this.wheelContainer = scene.add.container(cx, cy + 20);
         this.wheelContainer.angle = -30; // Aligns pointer with the middle of the first sector initially
         this.add(this.wheelContainer);
 
@@ -109,7 +109,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
             const startAngle = angleStep * i - Math.PI / 2;
             const endAngle = angleStep * (i + 1) - Math.PI / 2;
 
-            wheelBg.fillStyle(sectorColors[i], 0.45);
+            wheelBg.fillStyle(sectorColors[i], 0.85);
             wheelBg.slice(0, 0, wheelRadius + 20, startAngle, endAngle, false);
             wheelBg.fillPath();
         }
@@ -173,9 +173,9 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const pointer = scene.add.graphics();
         pointer.fillStyle(0xFBBF24, 1);
         pointer.beginPath();
-        pointer.moveTo(cx, cy + 10 - wheelRadius - 30);
-        pointer.lineTo(cx - 14, cy + 10 - wheelRadius - 55);
-        pointer.lineTo(cx + 14, cy + 10 - wheelRadius - 55);
+        pointer.moveTo(cx, cy + 20 - wheelRadius - 30);
+        pointer.lineTo(cx - 14, cy + 20 - wheelRadius - 55);
+        pointer.lineTo(cx + 14, cy + 20 - wheelRadius - 55);
         pointer.closePath();
         pointer.fillPath();
         pointer.lineStyle(2, 0xF59E0B, 1);
@@ -185,7 +185,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         // Small dot at pointer tip
         const pointerDot = scene.add.graphics();
         pointerDot.fillStyle(0xFBBF24, 1);
-        pointerDot.fillCircle(cx, cy + 10 - wheelRadius - 28, 5);
+        pointerDot.fillCircle(cx, cy + 20 - wheelRadius - 28, 5);
         this.add(pointerDot);
 
         // ── "QUAY!" Button ──────────────────────────────
@@ -476,6 +476,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const { width, height } = this.scene.scale;
         for (let i = 0; i < 12; i++) {
             this.scene.time.delayedCall(i * 120, () => {
+                if (!this.scene || !this.scene.sys || !this.scene.sys.isActive()) return;
                 const b = this.scene.add.image(Phaser.Math.Between(30, width - 30), -30, 'banana')
                     .setScale(Phaser.Math.FloatBetween(0.2, 0.4))
                     .setAngle(Phaser.Math.Between(-45, 45))
