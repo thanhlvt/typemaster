@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // Set base to './' so that the build uses relative paths for all assets.
-  // This is essential for deploying to GitHub Pages in a subfolder like /typemaster/
-  base: './',
+  // '/' for Cloudflare Pages / Netlify with custom domain (root deployment)
+  // Change to './' if deploying to GitHub Pages subfolder (e.g. /typemaster/)
+  base: '/',
   build: {
-    // Ensure the build output is clean
     outDir: 'dist',
     assetsDir: 'assets',
   },
