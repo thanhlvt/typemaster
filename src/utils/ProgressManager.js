@@ -124,7 +124,8 @@ export class ProgressManager {
 
     static clearAll() {
         ['typemaster_progress', 'typemaster_streak', 'typemaster_history',
-         'typemaster_equipped_skins', 'typemaster_audio_settings', 'typemaster_granted_skins']
+         'typemaster_equipped_skins', 'typemaster_audio_settings', 'typemaster_granted_skins',
+         'typemaster_ftue_completed']
             .forEach(key => localStorage.removeItem(key));
     }
 

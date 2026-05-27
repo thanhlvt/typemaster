@@ -193,6 +193,12 @@ export class MapHeader extends Phaser.GameObjects.Container {
         this.add(bananaChip.container);
         currentRightX -= bananaChip.width / 2 + 8;
 
+        // Expose coordinates for FTUE tutorial spotlight highlights
+        this.skinButtonX = skinX;
+        this.skinButtonY = row1Y;
+        this.bananaChipX = bananaChip.container.x;
+        this.bananaChipY = row1Y;
+
         // Streak Chip
         const streakDays = progress.streakDays || 0;
         let streakTextFill = '#94A3B8';

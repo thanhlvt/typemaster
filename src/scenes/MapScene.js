@@ -7,6 +7,7 @@ import { buildNodePositions, getDecorations, getFogAlpha } from '../utils/PathLa
 import { ensureTextures } from '../utils/TextureLoader';
 import { MapHeader } from '../components/MapHeader';
 import { MapSidebar } from '../components/MapSidebar';
+import { FTUEOverlay } from '../components/FTUEOverlay';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -439,6 +440,12 @@ export class MapScene extends Phaser.Scene {
         });
 
         AudioManager.playThemeMusic(this, this.currentLessonIndex);
+
+        // Instantiate First Time User Experience (FTUE) if not completed yet
+        const ftueCompleted = localStorage.getItem('typemaster_ftue_completed');
+        if (!ftueCompleted) {
+            this.ftueOverlay = new FTUEOverlay(this);
+        }
     }
 
     showTooltip(index, x, y, isBoss) {
@@ -646,7 +653,7 @@ export class MapScene extends Phaser.Scene {
         });
     }
 
-    update() {
+    update(time, delta) {
         if (this.overlay && this.yStart !== undefined && this.yEnd !== undefined) {
             const { height } = this.scale;
             const centerY = this.cameras.main.scrollY + height / 2;
@@ -655,6 +662,10 @@ export class MapScene extends Phaser.Scene {
                 darkness = Phaser.Math.Clamp((centerY - this.yStart) / (this.yEnd - this.yStart), 0, 1);
             }
             this.overlay.setAlpha(0.55 + darkness * 0.40);
+        }
+
+        if (this.ftueOverlay && this.ftueOverlay.active) {
+            this.ftueOverlay.update(time, delta);
         }
     }
 }
