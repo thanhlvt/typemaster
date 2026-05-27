@@ -152,6 +152,7 @@ export class PathNode extends Phaser.GameObjects.Container {
                 ease: 'Sine.easeInOut'
             });
 
+            this.monkeyVisible = true;
             this.monkeySprite = null;
             this.updateMonkeySkin();
         }
@@ -271,36 +272,25 @@ export class PathNode extends Phaser.GameObjects.Container {
     }
 
     updateMonkeySkin() {
-        if (this.state !== 'current') return;
+        if (this.state !== 'current' && !this.forceMonkey) return;
 
-        const equipped = ProgressManager.getEquippedSkins();
-        let monkeySkin = equipped.monkey || 'monkey_1';
-
-        if (monkeySkin === 'random') {
-            const totalLessons = this.scene.gameData.lessons.length;
-            const progress = ProgressManager.loadProgress(totalLessons);
-            const score = progress.score || 0;
-
-            const UNLOCK_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1000, 1500, 2000, 3000];
-            const unlockedMonkeys = UNLOCK_THRESHOLDS
-                .map((threshold, i) => score >= threshold ? `monkey_${i + 1}` : null)
-                .filter(Boolean);
-            monkeySkin = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
-        }
+        const monkeySkin = (this.scene && this.scene.monkeySkin) ? this.scene.monkeySkin : 'monkey_1';
 
         ensureTextures(this.scene, [{ key: monkeySkin, url: `assets/${monkeySkin}.png` }], () => {
             if (this.scene && this.active) {
                 if (this.monkeySprite) {
                     this.monkeySprite.setTexture(monkeySkin);
+                    this.monkeySprite.setVisible(this.monkeyVisible);
                 } else {
-                    this.monkeySprite = this.scene.add.sprite(0, -this.radius - 12, monkeySkin)
-                        .setScale(0.12)
+                    this.monkeySprite = this.scene.add.sprite(0, -this.radius - 3, monkeySkin)
+                        .setScale(0.10)
                         .setOrigin(0.5);
+                    this.monkeySprite.setVisible(this.monkeyVisible);
                     this.add(this.monkeySprite);
 
                     this.scene.tweens.add({
                         targets: this.monkeySprite,
-                        y: this.monkeySprite.y - 6,
+                        y: this.monkeySprite.y - 3,
                         duration: 1000,
                         yoyo: true,
                         repeat: -1,
@@ -309,5 +299,12 @@ export class PathNode extends Phaser.GameObjects.Container {
                 }
             }
         });
+    }
+
+    setMonkeyVisible(visible) {
+        this.monkeyVisible = visible;
+        if (this.monkeySprite) {
+            this.monkeySprite.setVisible(visible);
+        }
     }
 }

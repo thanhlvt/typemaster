@@ -1,5 +1,5 @@
 import * as Phaser from 'phaser';
-import { ProgressManager } from '../utils/ProgressManager';
+import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson } from '../data/chapters';
 import { PathNode } from '../components/PathNode';
 import { buildNodePositions, getDecorations, getFogAlpha } from '../utils/PathLayout';
@@ -54,6 +54,19 @@ export class MapScene extends Phaser.Scene {
         if (this.header) {
             this.header.updateAchievements(this.unlockedAchievements.length);
         }
+        this._determineMonkeySkin();
+    }
+
+    _determineMonkeySkin() {
+        const equipped = ProgressManager.getEquippedSkins();
+        let monkeySkin = equipped.monkey || 'monkey_1';
+        if (monkeySkin === 'random') {
+            const unlockedMonkeys = UNLOCK_THRESHOLDS
+                .map((threshold, i) => this.totalScoreCount >= threshold ? `monkey_${i + 1}` : null)
+                .filter(Boolean);
+            monkeySkin = Phaser.Math.RND.pick(unlockedMonkeys) || 'monkey_1';
+        }
+        this.monkeySkin = monkeySkin;
     }
 
     create() {
@@ -189,7 +202,7 @@ export class MapScene extends Phaser.Scene {
             if (group) {
                 // Draw Group Header Text (Big Group, Centered, Font 26px)
                 const groupText = `${group.emoji}  ${group.name.toUpperCase()}`;
-                const groupHeader = this.add.text(gridCenterX, firstNode.y - 95, groupText, {
+                const groupHeader = this.add.text(gridCenterX, firstNode.y - 105, groupText, {
                     fontFamily: 'Outfit, Arial',
                     fontSize: '26px',
                     fontStyle: 'bold',
@@ -200,12 +213,12 @@ export class MapScene extends Phaser.Scene {
 
                 const textWidth = groupHeader.width;
                 groupGraphics.lineStyle(2, 0x334155, 0.7 * headerFogAlpha);
-                groupGraphics.lineBetween(40, firstNode.y - 95, gridCenterX - textWidth / 2 - 20, firstNode.y - 95);
-                groupGraphics.lineBetween(gridCenterX + textWidth / 2 + 20, firstNode.y - 95, 750, firstNode.y - 95);
+                groupGraphics.lineBetween(40, firstNode.y - 105, gridCenterX - textWidth / 2 - 20, firstNode.y - 105);
+                groupGraphics.lineBetween(gridCenterX + textWidth / 2 + 20, firstNode.y - 105, 750, firstNode.y - 105);
             }
 
             // Draw Chapter Header (Small Group, Left-aligned at X=72, Font 18px)
-            const chapterHeader = this.add.text(72, firstNode.y - 54, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
+            const chapterHeader = this.add.text(72, firstNode.y - 74, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
                 fontFamily: 'Outfit, Arial',
                 fontSize: '18px',
                 fontStyle: 'bold',
@@ -224,6 +237,22 @@ export class MapScene extends Phaser.Scene {
             const node = new PathNode(this, pos.x, pos.y, pos.lessonIndex, isUnlocked, stars, this.currentLessonIndex);
             this.pathNodes.push(node);
         });
+
+        // Hide monkey on the current node initially
+        const currentNode = this.pathNodes.find(node => node.index === this.currentLessonIndex);
+        if (currentNode) {
+            currentNode.setMonkeyVisible(false);
+        }
+
+        // Show monkey on the previous node initially (if applicable)
+        if (this.currentLessonIndex > 0) {
+            const prevNode = this.pathNodes.find(node => node.index === this.currentLessonIndex - 1);
+            if (prevNode) {
+                prevNode.forceMonkey = true;
+                prevNode.monkeyVisible = true;
+                prevNode.updateMonkeySkin();
+            }
+        }
 
         // 6. Draw decorations
         const decorations = getDecorations(positions, CHAPTERS);
@@ -264,9 +293,12 @@ export class MapScene extends Phaser.Scene {
 
         this.cameras.main.scrollY = 0;
         this.time.delayedCall(100, () => {
-            this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 600, ease: 'Cubic.easeOut' });
+            this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 800, ease: 'Cubic.easeOut' });
             const currentCh = getChapterForLesson(this.currentLessonIndex);
-            this.sidebar.scrollToChapter(currentCh.id, 600);
+            this.sidebar.scrollToChapter(currentCh.id, 800);
+            this.time.delayedCall(200, () => {
+                this.playMonkeyTransitionAnimation();
+            });
         });
 
         // ── FAB "Bài hiện tại" (below sidebar) ────────
@@ -479,6 +511,128 @@ export class MapScene extends Phaser.Scene {
         if (currentNode) {
             currentNode.updateMonkeySkin();
         }
+    }
+
+    playMonkeyTransitionAnimation() {
+        if (!this.pathNodes) return;
+        const currentNode = this.pathNodes.find(node => node.index === this.currentLessonIndex);
+        if (!currentNode) return;
+
+        const monkeySkin = this.monkeySkin;
+
+        // Hide the permanent monkey first
+        currentNode.setMonkeyVisible(false);
+
+        // Hide monkey on the previous node as we start the transition
+        if (this.currentLessonIndex > 0) {
+            const prevNode = this.pathNodes.find(node => node.index === this.currentLessonIndex - 1);
+            if (prevNode) {
+                prevNode.setMonkeyVisible(false);
+            }
+        }
+
+        const x2 = currentNode.x;
+        const y2 = currentNode.y - currentNode.radius - 3;
+
+        ensureTextures(this, [{ key: monkeySkin, url: `assets/${monkeySkin}.png` }], () => {
+            if (!this.sys || !this.sys.isActive()) return;
+
+            let tempMonkey;
+            if (this.currentLessonIndex === 0) {
+                // Lesson 1: jump/fall from above
+                const x1 = x2;
+                const y1 = y2 - 200;
+                tempMonkey = this.add.sprite(x1, y1, monkeySkin)
+                    .setScale(0.08, 0.14) // stretched initially
+                    .setOrigin(0.5)
+                    .setDepth(20);
+
+                this.tweens.add({
+                    targets: tempMonkey,
+                    y: y2,
+                    scaleX: 0.10,
+                    scaleY: 0.10,
+                    duration: 900,
+                    ease: 'Bounce.easeOut',
+                    onComplete: () => {
+                        this.sound.play('key_sound', { volume: 0.5 });
+                        // Squash and stretch on landing
+                        this.tweens.add({
+                            targets: tempMonkey,
+                            scaleX: 0.11,
+                            scaleY: 0.09,
+                            duration: 100,
+                            yoyo: true,
+                            repeat: 1,
+                            ease: 'Quad.easeInOut',
+                            onComplete: () => {
+                                tempMonkey.destroy();
+                                currentNode.setMonkeyVisible(true);
+                            }
+                        });
+                    }
+                });
+            } else {
+                // Lesson > 1: jump from previous node
+                const prevNode = this.pathNodes.find(node => node.index === this.currentLessonIndex - 1);
+                const x1 = prevNode ? prevNode.x : x2;
+                const y1 = prevNode ? (prevNode.y - prevNode.radius - 3) : (y2 - 400);
+
+                tempMonkey = this.add.sprite(x1, y1, monkeySkin)
+                    .setScale(0.10)
+                    .setOrigin(0.5)
+                    .setDepth(20);
+
+                if (x2 < x1) {
+                    tempMonkey.setFlipX(true); // Flip if moving left
+                }
+
+                const midX = (x1 + x2) / 2;
+                const midY = Math.min(y1, y2) - 120; // 120px arc height
+
+                const curve = new Phaser.Curves.QuadraticBezier(
+                    new Phaser.Geom.Point(x1, y1),
+                    new Phaser.Geom.Point(midX, midY),
+                    new Phaser.Geom.Point(x2, y2)
+                );
+
+                const animObj = { progress: 0 };
+                this.tweens.add({
+                    targets: animObj,
+                    progress: 1,
+                    duration: 1000,
+                    ease: 'Quad.easeInOut',
+                    onUpdate: () => {
+                        const pt = curve.getPoint(animObj.progress);
+                        tempMonkey.setPosition(pt.x, pt.y);
+                        
+                        // Stretch slightly in the direction of velocity
+                        if (animObj.progress > 0.1 && animObj.progress < 0.9) {
+                            tempMonkey.setScale(0.09, 0.11);
+                        } else {
+                            tempMonkey.setScale(0.10, 0.10);
+                        }
+                    },
+                    onComplete: () => {
+                        this.sound.play('key_sound', { volume: 0.5 });
+                        // Squash and stretch on landing
+                        this.tweens.add({
+                            targets: tempMonkey,
+                            scaleX: 0.11,
+                            scaleY: 0.09,
+                            duration: 100,
+                            yoyo: true,
+                            repeat: 1,
+                            ease: 'Quad.easeInOut',
+                            onComplete: () => {
+                                tempMonkey.destroy();
+                                currentNode.setMonkeyVisible(true);
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 
     update() {

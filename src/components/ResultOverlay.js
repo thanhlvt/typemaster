@@ -84,7 +84,7 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
             };
             titleStr = '💪 SUÝT NỮA!';
             subtitleStr = `Cách kỷ lục cũ chỉ ${oldWpm - wpm} từ/phút!`;
-            buttonText = 'Thử lại 🔁';
+            buttonText = (isDailyChallenge || isSprintMode) ? 'Thử lại 🔁' : (isLastLesson ? 'Quay lại Bản đồ 🗺️' : 'Tiếp tục ➔');
             buttonTextColor = 0x5b21b6; // Violet 800
         } else {
             // state === 'great'

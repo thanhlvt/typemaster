@@ -432,13 +432,25 @@ export class PlayScene extends Phaser.Scene {
             if (!isLastLesson && !this.isDailyChallenge) {
                 cleanUp(); overlay.destroy();
                 showStreakVisual();
-                this.input.keyboard.on('keydown', this.handleKeyDown, this);
-                this.currentLessonIndex++;
+                
+                const nextIndex = this.currentLessonIndex + 1;
                 ProgressManager.saveProgress(
-                    this.currentLessonIndex, this.score,
+                    nextIndex, this.score,
                     this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
                 );
-                this.startLesson();
+
+                const isNextBoss = (nextIndex % 14 === 13);
+                const isNewChapter = (nextIndex % 14 === 0);
+
+                if (isNewChapter) {
+                    this.scene.start('ChapterIntroScene', { lessonIndex: nextIndex });
+                } else if (isNextBoss) {
+                    this.scene.start('BossScene', { lessonIndex: nextIndex });
+                } else {
+                    this.input.keyboard.on('keydown', this.handleKeyDown, this);
+                    this.currentLessonIndex = nextIndex;
+                    this.startLesson();
+                }
             }
         };
 
