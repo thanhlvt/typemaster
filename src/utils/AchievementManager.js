@@ -7,7 +7,6 @@ export const ACHIEVEMENTS = [
     // --- Group 2: Typing Speed (Tốc độ gõ) ---
     { id: 'speedy', title: 'Tốc ký', desc: 'Tốc độ gõ WPM ≥ 50', icon: '⚡' },
     { id: 'supersonic', title: 'Siêu tốc', desc: 'Tốc độ gõ WPM ≥ 80', icon: '🚀' },
-    { id: 'godspeed', title: 'Thần tốc', desc: 'Tốc độ gõ WPM ≥ 100', icon: '👽' },
     { id: 'strong_return', title: 'Trở lại mạnh mẽ', desc: 'Vượt kỷ lục WPM cũ thêm 20 đơn vị', icon: '💪' },
 
     // --- Group 3: Accuracy / Perfection (Độ chính xác / Hoàn hảo) ---
@@ -21,13 +20,14 @@ export const ACHIEVEMENTS = [
     { id: 'persistent_14', title: 'Thói quen tốt', desc: 'Học 14 ngày liên tiếp', icon: '🔥' },
     { id: 'persistent_30', title: 'Kiên trì sắt đá', desc: 'Học 30 ngày liên tiếp', icon: '🛡️' },
     { id: 'banana_king', title: 'Chuối Vương', desc: 'Tích lũy tổng cộng 500 chuối', icon: '👑' },
+    { id: 'banana_1000', title: 'Triệu phú Chuối', desc: 'Tích lũy tổng cộng 1000 chuối', icon: '🍌' },
+    { id: 'banana_2000', title: 'Tỉ phú Chuối', desc: 'Tích lũy tổng cộng 2000 chuối', icon: '👑' },
 
     // --- Group 5: Miscellaneous & Time (Thành tích khác & Thời gian) ---
     { id: 'improver', title: 'Vượt khó', desc: 'Cải thiện bài cũ từ 1-2 sao lên 3 sao', icon: '🧗' },
-    { id: 'collector', title: 'Nhà sưu tầm', desc: 'Đạt đủ 3 sao cho bài từ 1 đến 20', icon: '🎒' },
-    { id: 'early_bird', title: 'Chào ngày mới', desc: 'Hoàn thành bài học từ 5h00 - 7h00 sáng', icon: '🌅' },
-    { id: 'night_owl', title: 'Cú đêm', desc: 'Hoàn thành bài học từ 23h00 - 4h00 sáng', icon: '🦉' },
-    { id: 'boss_slayer', title: 'Sát thủ Boss', desc: 'Đánh bại một Boss cuối chương', icon: '⚔️' }
+    { id: 'collector', title: 'Nhà sưu tầm', desc: 'Đạt 3 sao cho 20 bài', icon: '🎒' },
+    { id: 'star_3_50', title: 'Siêu Sao 50', desc: 'Đạt 3 sao cho 50 bài', icon: '🌟' },
+    { id: 'star_3_100', title: 'Siêu Sao 100', desc: 'Đạt 3 sao cho 100 bài', icon: '🏆' },
 ];
 
 export class AchievementManager {
@@ -60,9 +60,6 @@ export class AchievementManager {
 
         // 6. supersonic
         checkUnlock('supersonic', sessionData.wpm >= 80);
-
-        // 7. godspeed
-        checkUnlock('godspeed', sessionData.wpm >= 100);
 
         // 8. strong_return
         if (oldLessonStats && oldLessonStats.wpm > 0) {
@@ -103,6 +100,12 @@ export class AchievementManager {
         // 16. banana_king
         checkUnlock('banana_king', progress.score >= 500);
 
+        // banana_1000
+        checkUnlock('banana_1000', progress.score >= 1000);
+
+        // banana_2000
+        checkUnlock('banana_2000', progress.score >= 2000);
+
 
         // --- Group 5: Miscellaneous & Time (Thành tích khác & Thời gian) ---
         // 17. improver
@@ -111,23 +114,21 @@ export class AchievementManager {
             checkUnlock('improver', oldStars > 0 && oldStars < 3 && sessionData.stars === 3);
         }
 
-        // 18. collector
-        let collectorMatch = true;
-        for (let i = 0; i < 20; i++) {
-            const stat = progress.lessonStats[i] || {};
-            const starsForL = (i === sessionData.lessonIndex) ? sessionData.stars : (stat.stars || 0);
-            if (starsForL < 3) {
-                collectorMatch = false;
-                break;
+        // 18. collector, star_3_50, star_3_100 (Count total 3-star lessons)
+        let stars3Count = 0;
+        const allLessonIndices = new Set(Object.keys(progress.lessonStats || {}).map(Number));
+        allLessonIndices.add(sessionData.lessonIndex);
+
+        for (const idx of allLessonIndices) {
+            const stat = progress.lessonStats[idx] || {};
+            const starsForL = (idx === sessionData.lessonIndex) ? sessionData.stars : (stat.stars || 0);
+            if (starsForL === 3) {
+                stars3Count++;
             }
         }
-        checkUnlock('collector', collectorMatch);
-
-        // 19. early_bird
-        checkUnlock('early_bird', hour >= 5 && hour < 7);
-
-        // 20. night_owl
-        checkUnlock('night_owl', hour >= 23 || hour < 4);
+        checkUnlock('collector', stars3Count >= 20);
+        checkUnlock('star_3_50', stars3Count >= 50);
+        checkUnlock('star_3_100', stars3Count >= 100);
 
         return newlyUnlocked;
     }

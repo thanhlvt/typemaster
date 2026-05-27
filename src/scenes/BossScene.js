@@ -413,12 +413,6 @@ export class BossScene extends Phaser.Scene {
                 nextIndex = this.currentLessonIndex + 1;
             }
 
-            // Award Boss achievement if first time
-            if (!this.unlockedAchievements.includes('boss_slayer')) {
-                this.unlockedAchievements.push('boss_slayer');
-                AchievementToast.show(this, 'boss_slayer');
-            }
-
             // Update stats for this boss level (give stars)
             const oldStats = this.lessonStats[this.currentLessonIndex] || null;
             const oldStars = oldStats ? (oldStats.stars || 0) : 0;
