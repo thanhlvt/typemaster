@@ -8,6 +8,9 @@ import { ResultOverlay }         from '../components/ResultOverlay';
 import { ensureTextures }        from '../utils/TextureLoader';
 import { AchievementToast }      from '../components/AchievementToast';
 import { AudioManager }          from '../utils/AudioManager';
+import { showBossIntro }         from '../utils/BossIntroAnimation';
+import { BossHPBar }             from '../utils/BossHPBar';
+import { createBossContentUI, playSwordAttack } from '../utils/BossCombat';
 
 export class BossScene extends Phaser.Scene {
     constructor() {
@@ -93,7 +96,11 @@ export class BossScene extends Phaser.Scene {
         this.boss = this.add.sprite(width * 0.78, height * 0.33, 'monkey_1').setScale(0.85).setFlipX(true).setVisible(false);
 
         // Core UI components
-        this._createContentUI(width, height);
+        const contentUI = createBossContentUI(this);
+        this.targetText = contentUI.targetText;
+        this.ruleHint = contentUI.ruleHint;
+        this.typedText = contentUI.typedText;
+
         this._createHUD(width, height);
 
         this.virtualKeyboard = new VirtualKeyboard(this, 0, 0);
@@ -155,205 +162,16 @@ export class BossScene extends Phaser.Scene {
     }
 
     _showIntroWarning(width, height) {
-        const warningContainer = this.add.container(0, 0).setDepth(200);
-
-        // Dark banner backdrop
-        const bannerBg = this.add.graphics();
-        bannerBg.fillStyle(0x7f1d1d, 0.9); // Crimson Red
-        bannerBg.fillRect(0, height * 0.35, width, 140);
-        bannerBg.lineStyle(4, 0xfca5a5, 1);
-        bannerBg.lineBetween(0, height * 0.35, width, height * 0.35);
-        bannerBg.lineBetween(0, height * 0.35 + 140, width, height * 0.35 + 140);
-        warningContainer.add(bannerBg);
-
-        // Warning Text
-        const titleText = this.add.text(width / 2, height * 0.35 + 40, `⚠️ CẢNH BÁO: BOSS ${this.group.name.toUpperCase()} ⚠️`, {
-            fontFamily: 'Outfit, Arial', fontSize: '32px', fontStyle: 'bold', fill: '#ffffff'
-        }).setOrigin(0.5);
-        titleText.setStroke('#000000', 6);
-        warningContainer.add(titleText);
-
-        const subtitleText = this.add.text(width / 2, height * 0.35 + 90, `Hạ gục Boss trong 60 giây để nhận thưởng lớn!`, {
-            fontFamily: 'Arial', fontSize: '18px', fontStyle: 'bold', fill: '#fecaca'
-        }).setOrigin(0.5);
-        subtitleText.setStroke('#000000', 4);
-        warningContainer.add(subtitleText);
-
-        // Alarm Flash Effect
-        const flashOverlay = this.add.rectangle(0, 0, width, height, 0xff0000, 0.25)
-            .setOrigin(0).setDepth(190).setVisible(false);
-        this.tweens.add({
-            targets: flashOverlay,
-            visible: true,
-            yoyo: true,
-            repeat: 5,
-            duration: 250,
-            onComplete: () => flashOverlay.destroy()
-        });
-
-        const musicKeys = ['level_sound', 'music_1', 'music_2', 'music_3', 'music_4', 'music_5', 'music_6', 'music_7'];
-        musicKeys.forEach(k => this.sound.stopByKey(k));
-
-        if (this.cache.audio.exists('boss_sound')) {
-            this.bossMusic = this.sound.add('boss_sound', { volume: 0.4, loop: true });
-            this.bossMusic.play();
-        }
-
-        // Hide warning after introTime and start the match
-        this.time.delayedCall(this.introTime * 1000, () => {
-            this.tweens.add({
-                targets: warningContainer,
-                alpha: 0,
-                scaleY: 0,
-                y: height * 0.42,
-                duration: 300,
-                onComplete: () => {
-                    warningContainer.destroy();
-                    this._showReadyAnimation(width, height, () => {
-                        this.isActive = true;
-                    });
-                }
-            });
-        });
-    }
-
-    _showReadyAnimation(width, height, onComplete) {
-        const readyText = this.add.text(width / 2, height / 2, 'SẴN SÀNG', {
-            fontFamily: 'Outfit, Arial Black, Arial',
-            fontSize: '74px',
-            fontStyle: 'bold',
-            fill: '#FBBF24'
-        }).setOrigin(0.5).setScale(0).setAlpha(0).setDepth(201);
-        readyText.setStroke('#000000', 10);
-        readyText.setShadow(0, 4, 'rgba(0,0,0,0.8)', 6, true, true);
-
-        // Stage 1: Zoom in to center
-        this.tweens.add({
-            targets: readyText,
-            scaleX: 1,
-            scaleY: 1,
-            alpha: 1,
-            duration: 500,
-            ease: 'Back.easeOut',
-            onComplete: () => {
-                if (this.cache.audio.exists('blob')) {
-                    this.sound.play('blob');
-                }
-                
-                // Stage 2: Hold for 600ms, then zoom out
-                this.time.delayedCall(600, () => {
-                    this.tweens.add({
-                        targets: readyText,
-                        scaleX: 2.2,
-                        scaleY: 2.2,
-                        alpha: 0,
-                        duration: 350,
-                        ease: 'Cubic.easeIn',
-                        onComplete: () => {
-                            readyText.destroy();
-                            onComplete();
-                        }
-                    });
-                });
-            }
+        this.bossMusic = showBossIntro(this, this.group, this.introTime, () => {
+            this.isActive = true;
         });
     }
 
     _playSwordAttackAnimation() {
-        const monkeyX = this.monkey.x;
-        const monkeyY = this.monkey.y;
-        
-        const startX = monkeyX + 100;
-        const startY = monkeyY;
-        const endX = monkeyX - 50;
-        const endY = monkeyY;
-
-        const tiltAngle = Phaser.Math.Between(-15, 15);
-
-        // Create the sword emoji text (really big: 96px)
-        const sword = this.add.text(startX, startY, '🗡️', {
-            fontFamily: 'Segoe UI Emoji, Arial',
-            fontSize: '96px'
-        }).setOrigin(0.5).setDepth(30).setAngle(tiltAngle);
-
-        // Animate the sword flying across the monkey
-        this.tweens.add({
-            targets: sword,
-            x: endX,
-            y: endY,
-            duration: 250,
-            ease: 'Linear',
-            onComplete: () => {
-                sword.destroy();
-            }
-        });
-
-        // Add a hit effect on the monkey when the sword passes through it
-        this.time.delayedCall(160, () => {
-            if (!this.sys || !this.sys.isActive() || !this.monkey) return;
-
-            // Flash red on the monkey
-            this.monkey.setTint(0xff0000);
-            this.cameras.main.shake(100, 0.008);
-
-            this.time.delayedCall(150, () => {
-                if (this.monkey) this.monkey.clearTint();
-            });
-
-            // Slash visual effect (6px red outer stroke + 2px white inner core)
-            const slash = this.add.graphics().setDepth(29);
-            
-            // Draw diagonal red slash
-            slash.lineStyle(6, 0xff3b30, 0.95);
-            slash.beginPath();
-            slash.moveTo(monkeyX + 60, monkeyY - 45);
-            slash.lineTo(monkeyX - 60, monkeyY + 45);
-            slash.strokePath();
-
-            // Inner white line for core slash effect
-            slash.lineStyle(2, 0xffffff, 1.0);
-            slash.beginPath();
-            slash.moveTo(monkeyX + 60, monkeyY - 45);
-            slash.lineTo(monkeyX - 60, monkeyY + 45);
-            slash.strokePath();
-
-            // Fade and destroy slash
-            this.tweens.add({
-                targets: slash,
-                alpha: 0,
-                scaleX: 1.1,
-                scaleY: 1.1,
-                duration: 200,
-                onComplete: () => {
-                    slash.destroy();
-                }
-            });
-        });
+        playSwordAttack(this, this.monkey);
     }
 
-    _createContentUI(width, height) {
-        const bgTop    = height * 0.52;
-        const bgHeight = height * 0.22;
-
-        const bg = this.add.graphics();
-        bg.fillStyle(0xffffff, 0.8);
-        bg.fillRoundedRect(width * 0.02, bgTop, width * 0.96, bgHeight, 20);
-
-        this.targetText = this.add.text(width / 2, bgTop + bgHeight * 0.18, '', {
-            fontFamily: 'Verdana, sans-serif',
-            fontSize: '48px', fontStyle: 'bold', fill: '#333'
-        }).setOrigin(0.5);
-
-        this.ruleHint = this.add.text(width / 2, bgTop + bgHeight * 0.46, '', {
-            fontFamily: 'Arial',
-            fontSize: '24px', fontStyle: 'bold', fill: '#E65100'
-        }).setOrigin(0.5);
-
-        this.typedText = this.add.text(width / 2, bgTop + bgHeight * 0.70, '', {
-            fontFamily: 'Verdana, sans-serif',
-            fontSize: '44px', fontStyle: 'bold', fill: '#2E7D32'
-        }).setOrigin(0.5);
-    }
+    // (Removed _createContentUI - using createBossContentUI helper from BossCombat)
 
     _createHUD(width, height) {
         // Timer Text at the top center
@@ -391,48 +209,7 @@ export class BossScene extends Phaser.Scene {
         });
 
         // ── Tug of War HP Bar ──
-        this.barX = width / 2;
-        this.barY = 95;
-        this.barW = 460;
-        this.barH = 26;
-
-        this.hpBarBg = this.add.graphics();
-        this.hpBarFill = this.add.graphics();
-
-        // Marker emoji sliding on the boundary
-        this.hpMarker = this.add.text(width / 2, this.barY, '⚔️', {
-            fontSize: '24px'
-        }).setOrigin(0.5);
-
-        this.drawHPBar();
-    }
-
-    drawHPBar() {
-        this.hpBarBg.clear();
-        this.hpBarFill.clear();
-
-        // 1. Draw outer black container border
-        this.hpBarBg.fillStyle(0x1e293b, 1); // Dark Slate background
-        this.hpBarBg.fillRoundedRect(this.barX - this.barW / 2 - 4, this.barY - this.barH / 2 - 4, this.barW + 8, this.barH + 8, 8);
-        this.hpBarBg.lineStyle(2.5, 0x475569, 1);
-        this.hpBarBg.strokeRoundedRect(this.barX - this.barW / 2 - 4, this.barY - this.barH / 2 - 4, this.barW + 8, this.barH + 8, 8);
-
-        // 2. Draw Boss HP (right side) in red
-        this.hpBarFill.fillStyle(0xef4444, 1); // Red
-        this.hpBarFill.fillRoundedRect(this.barX - this.barW / 2, this.barY - this.barH / 2, this.barW, this.barH, 6);
-
-        // 3. Draw Player HP (left side) in green/blue
-        const fillW = this.barW * (this.playerHP / 100);
-        if (fillW > 0) {
-            this.hpBarFill.fillStyle(0x0ea5e9, 1); // Blue
-            // Draw rounded rect, but clip it properly
-            this.hpBarFill.fillRoundedRect(this.barX - this.barW / 2, this.barY - this.barH / 2, fillW, this.barH, {
-                tl: 6, bl: 6, tr: this.playerHP >= 98 ? 6 : 0, br: this.playerHP >= 98 ? 6 : 0
-            });
-        }
-
-        // 4. Update marker sliding boundary
-        this.hpMarker.setX(this.barX - this.barW / 2 + fillW);
+        this.hpBar = new BossHPBar(this, width / 2, 95, 460, 26);
     }
 
     tick() {
@@ -446,7 +223,7 @@ export class BossScene extends Phaser.Scene {
         const elapsed = 60 - this.timeLeft;
         if (elapsed > 0 && elapsed % 5 === 0 && this.hpDecreaseRate > 0) {
             this.playerHP = Phaser.Math.Clamp(this.playerHP - this.hpDecreaseRate, 0, 100);
-            this.drawHPBar();
+            this.hpBar.draw(this.playerHP);
             this._playSwordAttackAnimation();
         }
 
@@ -523,7 +300,7 @@ export class BossScene extends Phaser.Scene {
 
         // Deal damage: push Player HP bar up by 10%
         this.playerHP = Phaser.Math.Clamp(this.playerHP + 10, 0, 100);
-        this.drawHPBar();
+        this.hpBar.draw(this.playerHP);
 
         // Hit flash effect on Boss
         if (this.boss) {
@@ -554,7 +331,7 @@ export class BossScene extends Phaser.Scene {
 
         // Boss counter attacks!
         this.playerHP = Phaser.Math.Clamp(this.playerHP - 1, 0, 100);
-        this.drawHPBar();
+        this.hpBar.draw(this.playerHP);
 
         if (this.playerHP <= 0) {
             this.endBattle(false);

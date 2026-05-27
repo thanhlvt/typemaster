@@ -3,11 +3,15 @@ import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson } from '../data/chapters';
 import { AudioManager } from '../utils/AudioManager';
 import { PathNode } from '../components/PathNode';
-import { buildNodePositions, getDecorations, getFogAlpha } from '../utils/PathLayout';
+import { buildNodePositions } from '../utils/PathLayout';
 import { ensureTextures } from '../utils/TextureLoader';
 import { MapHeader } from '../components/MapHeader';
 import { MapSidebar } from '../components/MapSidebar';
 import { FTUEOverlay } from '../components/FTUEOverlay';
+import { drawRoads, drawChapterHeaders, drawDecorations } from '../utils/MapRoadRenderer';
+import { createFAB } from '../utils/MapFAB';
+import { createTooltip } from '../utils/MapTooltip';
+import { playMonkeyTransitionAnimation } from '../utils/MapMonkeyAnimation';
 
 export class MapScene extends Phaser.Scene {
     constructor() {
@@ -90,185 +94,33 @@ export class MapScene extends Phaser.Scene {
         const sidebarX           = width - sidebarW / 2 - sidebarRightMargin;
         const sidebarY           = sidebarTopMargin + sidebarH / 2;
 
-        // 1. Compute node coordinates
-        const positions = buildNodePositions(CHAPTERS);
+        // 1. Compute and store all node positions (shared across virtual scroll lifecycle)
+        this.positions = buildNodePositions(CHAPTERS);
 
         // 2. Populate lessonYPositions
         this.lessonYPositions = {};
-        positions.forEach(pos => {
+        this.positions.forEach(pos => {
             this.lessonYPositions[pos.lessonIndex] = pos.y;
         });
 
         // Calculate yStart and yEnd for Fog of War background dimming
         const currentY = this.lessonYPositions[this.currentLessonIndex] || 300;
-        const lastNodeIndex = positions.length - 1;
+        const lastNodeIndex = this.positions.length - 1;
         const lastY = this.lessonYPositions[lastNodeIndex] || currentY;
         this.yStart = this.lessonYPositions[this.currentLessonIndex + 10] || (lastY + 120);
         this.yEnd = this.lessonYPositions[this.currentLessonIndex + 50] || (this.yStart + 40 * 120);
 
         // 3. Draw connecting roads
-        const roadGraphics = this.add.graphics();
-        
-        const drawRoadOutline = (p1, p2) => {
-            const fog1 = getFogAlpha(p1.lessonIndex, this.currentLessonIndex);
-            const fog2 = getFogAlpha(p2.lessonIndex, this.currentLessonIndex);
-            const avgFog = (fog1 + fog2) / 2;
-            if (avgFog <= 0) return;
-
-            roadGraphics.lineStyle(22, 0x090d16, 0.5 * avgFog);
-            if (p1.y === p2.y) {
-                roadGraphics.beginPath();
-                roadGraphics.moveTo(p1.x, p1.y);
-                roadGraphics.lineTo(p2.x, p2.y);
-                roadGraphics.strokePath();
-            } else if (p1.x === p2.x) {
-                const isRightEdge = p1.x > 400;
-                const bendX = isRightEdge ? p1.x + 50 : p1.x - 50;
-                const curve = new Phaser.Curves.QuadraticBezier(
-                    new Phaser.Geom.Point(p1.x, p1.y),
-                    new Phaser.Geom.Point(bendX, p1.y + (p2.y - p1.y) / 2),
-                    new Phaser.Geom.Point(p2.x, p2.y)
-                );
-                curve.draw(roadGraphics, 32);
-            } else {
-                const midY = p1.y + (p2.y - p1.y) / 2;
-                const curve = new Phaser.Curves.CubicBezier(
-                    new Phaser.Geom.Point(p1.x, p1.y),
-                    new Phaser.Geom.Point(p1.x, midY),
-                    new Phaser.Geom.Point(p2.x, midY),
-                    new Phaser.Geom.Point(p2.x, p2.y)
-                );
-                curve.draw(roadGraphics, 32);
-            }
-        };
-
-        const drawRoadFill = (p1, p2, isUnlocked) => {
-            const fog1 = getFogAlpha(p1.lessonIndex, this.currentLessonIndex);
-            const fog2 = getFogAlpha(p2.lessonIndex, this.currentLessonIndex);
-            const avgFog = (fog1 + fog2) / 2;
-            if (avgFog <= 0) return;
-
-            const fillColor = isUnlocked ? 0x10b981 : 0x334155;
-            const fillAlpha = (isUnlocked ? 0.6 : 0.25) * avgFog;
-            roadGraphics.lineStyle(14, fillColor, fillAlpha);
-            if (p1.y === p2.y) {
-                roadGraphics.beginPath();
-                roadGraphics.moveTo(p1.x, p1.y);
-                roadGraphics.lineTo(p2.x, p2.y);
-                roadGraphics.strokePath();
-            } else if (p1.x === p2.x) {
-                const isRightEdge = p1.x > 400;
-                const bendX = isRightEdge ? p1.x + 50 : p1.x - 50;
-                const curve = new Phaser.Curves.QuadraticBezier(
-                    new Phaser.Geom.Point(p1.x, p1.y),
-                    new Phaser.Geom.Point(bendX, p1.y + (p2.y - p1.y) / 2),
-                    new Phaser.Geom.Point(p2.x, p2.y)
-                );
-                curve.draw(roadGraphics, 32);
-            } else {
-                const midY = p1.y + (p2.y - p1.y) / 2;
-                const curve = new Phaser.Curves.CubicBezier(
-                    new Phaser.Geom.Point(p1.x, p1.y),
-                    new Phaser.Geom.Point(p1.x, midY),
-                    new Phaser.Geom.Point(p2.x, midY),
-                    new Phaser.Geom.Point(p2.x, p2.y)
-                );
-                curve.draw(roadGraphics, 32);
-            }
-        };
-
-        // Draw outlines first
-        for (let i = 0; i < positions.length - 1; i++) {
-            drawRoadOutline(positions[i], positions[i + 1]);
-        }
-        // Draw fills second
-        for (let i = 0; i < positions.length - 1; i++) {
-            const isUnlocked = positions[i + 1].lessonIndex <= this.currentLessonIndex;
-            drawRoadFill(positions[i], positions[i + 1], isUnlocked);
-        }
+        drawRoads(this, this.positions, this.currentLessonIndex);
 
         // 4. Draw Group and Chapter Headers
-        const gridCenterX = 395;
-        const groupGraphics = this.add.graphics();
+        drawChapterHeaders(this, this.positions, this.currentLessonIndex);
 
-        CHAPTERS.forEach((chapter) => {
-            const firstLessonIndex = chapter.range[0];
-            const firstNode = positions.find(p => p.lessonIndex === firstLessonIndex);
-            if (!firstNode) return;
-
-            const headerFogAlpha = getFogAlpha(firstLessonIndex, this.currentLessonIndex);
-            if (headerFogAlpha <= 0) return;
-
-            // Check if this chapter is the first of a group
-            const group = CHAPTER_GROUPS.find(g => g.chapterIds[0] === chapter.id);
-            if (group) {
-                // Draw Group Header Text (Big Group, Centered, Font 26px)
-                const groupText = `${group.emoji}  ${group.name.toUpperCase()}`;
-                const groupHeader = this.add.text(gridCenterX, firstNode.y - 105, groupText, {
-                    fontFamily: 'Outfit, Arial',
-                    fontSize: '26px',
-                    fontStyle: 'bold',
-                    fill: '#f8fafc',
-                }).setOrigin(0.5).setAlpha(headerFogAlpha);
-                groupHeader.setStroke('#0f172a', 5);
-                groupHeader.setShadow(0, 2, 'rgba(0,0,0,0.6)', 4, true, true);
-
-                const textWidth = groupHeader.width;
-                groupGraphics.lineStyle(2, 0x334155, 0.7 * headerFogAlpha);
-                groupGraphics.lineBetween(40, firstNode.y - 105, gridCenterX - textWidth / 2 - 20, firstNode.y - 105);
-                groupGraphics.lineBetween(gridCenterX + textWidth / 2 + 20, firstNode.y - 105, 750, firstNode.y - 105);
-            }
-
-            // Draw Chapter Header (Small Group, Left-aligned at X=72, Font 18px)
-            const chapterHeader = this.add.text(72, firstNode.y - 74, `${chapter.emoji} ${chapter.name.toUpperCase()}`, {
-                fontFamily: 'Outfit, Arial',
-                fontSize: '18px',
-                fontStyle: 'bold',
-                fill: '#38bdf8'
-            }).setOrigin(0, 0.5).setAlpha(headerFogAlpha);
-            chapterHeader.setStroke('#0f172a', 3);
-            chapterHeader.setShadow(0, 1, 'rgba(0,0,0,0.5)', 3, true, true);
-        });
-
-        // 5. Instantiate Nodes
-        this.pathNodes = [];
-        positions.forEach((pos) => {
-            const isUnlocked = (pos.lessonIndex === 0) || (this.lessonStars[pos.lessonIndex - 1] !== undefined && this.lessonStars[pos.lessonIndex - 1] > 0);
-            const stars = this.lessonStars[pos.lessonIndex] || 0;
-
-            const node = new PathNode(this, pos.x, pos.y, pos.lessonIndex, isUnlocked, stars, this.currentLessonIndex);
-            this.pathNodes.push(node);
-        });
-
-        // Hide monkey on the current node initially
-        const currentNode = this.pathNodes.find(node => node.index === this.currentLessonIndex);
-        if (currentNode) {
-            currentNode.setMonkeyVisible(false);
-        }
-
-        // Show monkey on the previous node initially (if applicable)
-        if (this.currentLessonIndex > 0) {
-            const prevNode = this.pathNodes.find(node => node.index === this.currentLessonIndex - 1);
-            if (prevNode) {
-                prevNode.forceMonkey = true;
-                prevNode.monkeyVisible = true;
-                prevNode.updateMonkeySkin();
-            }
-        }
-
-        // 6. Draw decorations
-        const decorations = getDecorations(positions, CHAPTERS);
-        decorations.forEach((dec) => {
-            const decFogAlpha = getFogAlpha(dec.lessonIndex, this.currentLessonIndex);
-            if (decFogAlpha <= 0) return;
-            this.add.text(dec.x, dec.y, dec.emoji, {
-                fontFamily: 'Segoe UI Emoji, Arial',
-                fontSize: '26px'
-            }).setOrigin(0.5).setScale(dec.scale).setAlpha(0.65 * decFogAlpha);
-        });
+        // 5. Create decorations
+        drawDecorations(this, this.positions, this.currentLessonIndex);
 
         // Set total scroll height and camera bounds
-        const lastNode = positions[positions.length - 1];
+        const lastNode = this.positions[this.positions.length - 1];
         const totalScrollHeight = lastNode.y + 180;
         this.totalScrollHeight = totalScrollHeight;
 
@@ -298,6 +150,29 @@ export class MapScene extends Phaser.Scene {
         const startScrollY = Phaser.Math.Clamp(startActiveY - height / 2, 0, totalScrollHeight - height);
 
         this.cameras.main.scrollY = startScrollY;
+
+        // 6. Virtual node system — create only what's in viewport + buffer
+        this._activeNodes = new Map();
+        this._lastVirtualScrollY = -9999;
+        this._updateVisibleNodes(startScrollY);
+        // Current and previous nodes are always kept alive (needed for animations)
+        this._ensureNode(this.currentLessonIndex);
+        if (this.currentLessonIndex > 0) this._ensureNode(this.currentLessonIndex - 1);
+
+        // Monkey state init
+        const currentNode = this._activeNodes.get(this.currentLessonIndex);
+        if (currentNode) {
+            currentNode.setMonkeyVisible(false);
+        }
+        if (this.currentLessonIndex > 0) {
+            const prevNode = this._activeNodes.get(this.currentLessonIndex - 1);
+            if (prevNode) {
+                prevNode.forceMonkey = true;
+                prevNode.monkeyVisible = true;
+                prevNode.updateMonkeySkin();
+            }
+        }
+
         this.time.delayedCall(100, () => {
             this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 800, ease: 'Cubic.easeOut' });
             const currentCh = getChapterForLesson(this.currentLessonIndex);
@@ -308,41 +183,8 @@ export class MapScene extends Phaser.Scene {
         });
 
         // ── FAB "Bài hiện tại" (below sidebar) ────────
-        const fabW = 120, fabH = 40;
-        const fabX = sidebarX;
-        const fabY = height - fabH / 2 - 20;
-
-        const fabBg = this.add.graphics().setScrollFactor(0).setDepth(10);
-        const drawFabBg = (color, strokeColor = 0xFBBF24) => {
-            fabBg.clear();
-            fabBg.fillStyle(color, 0.9);
-            fabBg.fillRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
-            fabBg.lineStyle(1.5, strokeColor, 1);
-            fabBg.strokeRoundedRect(fabX - fabW / 2, fabY - fabH / 2, fabW, fabH, 20);
-        };
-        drawFabBg(0x0f172a, 0xFBBF24);
-
-        const fabText = this.add.text(fabX, fabY, '📍 Bài hiện tại', {
-            fontFamily: 'Arial', fontSize: '14px', fontStyle: 'bold', fill: '#FBBF24'
-        }).setOrigin(0.5).setScrollFactor(0).setDepth(10);
-
-        const fabZone = this.add.zone(fabX, fabY, fabW, fabH)
-            .setScrollFactor(0).setInteractive({ useHandCursor: true }).setDepth(11);
-
-        const stopEvent = (_p, _x, _y, event) => { if (event) event.stopPropagation(); };
-
-        fabZone.on('pointerover', () => {
-            drawFabBg(0x1e293b, 0xFFD700);
-            this.tweens.add({ targets: fabText, scaleX: 1.05, scaleY: 1.05, duration: 100 });
-        });
-        fabZone.on('pointerout', () => {
-            drawFabBg(0x0f172a, 0xFBBF24);
-            this.tweens.add({ targets: fabText, scaleX: 1.0, scaleY: 1.0, duration: 100 });
-        });
-        fabZone.on('pointerdown', stopEvent);
-        fabZone.on('pointerup', (_p, _x, _y, event) => {
-            if (event) event.stopPropagation();
-            this.sound.play('key_sound');
+        const fabY = height - 40;
+        createFAB(this, sidebarX, fabY, () => {
             const currentActiveY = this.lessonYPositions[this.currentLessonIndex] || 230;
             const currentScrollY = Phaser.Math.Clamp(currentActiveY - height / 2, 0, this.totalScrollHeight - height);
             this.tweens.add({
@@ -380,57 +222,13 @@ export class MapScene extends Phaser.Scene {
         });
 
         // Create global rich tooltip container
-        this.richTooltip = this.add.container(0, 0).setDepth(100).setVisible(false);
-
-        const cardW = 220;
-        const cardH = 115;
-
-        // Draw background & gold border
-        const tooltipBg = this.add.graphics();
-        tooltipBg.fillStyle(0x0f172a, 0.95);
-        tooltipBg.fillRoundedRect(-cardW / 2, -147, cardW, cardH, 12);
-        tooltipBg.lineStyle(1.5, 0xFBBF24, 1); // gold border
-        tooltipBg.strokeRoundedRect(-cardW / 2, -147, cardW, cardH, 12);
-
-        // Draw pointing diamond/triangle at the bottom
-        tooltipBg.fillStyle(0x0f172a, 0.95);
-        tooltipBg.lineStyle(1.5, 0xFBBF24, 1);
-        tooltipBg.beginPath();
-        tooltipBg.moveTo(-8, -32);
-        tooltipBg.lineTo(8, -32);
-        tooltipBg.lineTo(0, -20);
-        tooltipBg.closePath();
-        tooltipBg.fillPath();
-        tooltipBg.strokePath();
-
-        // Divider line in tooltip
-        tooltipBg.lineStyle(1, 0x334155, 0.6);
-        tooltipBg.lineBetween(-100, -118, 100, -118);
-
-        this.richTooltip.add(tooltipBg);
-
-        // Add texts to tooltip container
-        this.tooltipTitle = this.add.text(-100, -132, '', {
-            fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: '#38bdf8'
-        }).setOrigin(0, 0.5);
-
-        this.tooltipStars = this.add.text(100, -132, '', {
-            fontFamily: 'Arial', fontSize: '12px', fill: '#FFD700'
-        }).setOrigin(1, 0.5);
-
-        this.tooltipWpm = this.add.text(-100, -95, '', {
-            fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#a7f3d0'
-        }).setOrigin(0, 0.5);
-
-        this.tooltipAcc = this.add.text(100, -95, '', {
-            fontFamily: 'Arial', fontSize: '12px', fontStyle: 'bold', fill: '#a7f3d0'
-        }).setOrigin(1, 0.5);
-
-        this.tooltipDate = this.add.text(0, -62, '', {
-            fontFamily: 'Arial', fontSize: '11px', fill: '#94a3b8'
-        }).setOrigin(0.5, 0.5);
-
-        this.richTooltip.add([this.tooltipTitle, this.tooltipStars, this.tooltipWpm, this.tooltipAcc, this.tooltipDate]);
+        const tooltipUI = createTooltip(this);
+        this.richTooltip = tooltipUI.container;
+        this.tooltipTitle = tooltipUI.title;
+        this.tooltipStars = tooltipUI.stars;
+        this.tooltipWpm = tooltipUI.wpm;
+        this.tooltipAcc = tooltipUI.acc;
+        this.tooltipDate = tooltipUI.date;
 
         this.input.keyboard.addCapture(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
@@ -446,6 +244,49 @@ export class MapScene extends Phaser.Scene {
         if (!ftueCompleted) {
             this.ftueOverlay = new FTUEOverlay(this);
         }
+    }
+
+    // Creates a PathNode for the given lessonIndex if it doesn't already exist
+    _ensureNode(index) {
+        if (this._activeNodes.has(index)) return this._activeNodes.get(index);
+        const pos = this.positions[index];
+        if (!pos) return null;
+        const isUnlocked = (pos.lessonIndex === 0) ||
+            (this.lessonStars[pos.lessonIndex - 1] !== undefined && this.lessonStars[pos.lessonIndex - 1] > 0);
+        const stars = this.lessonStars[pos.lessonIndex] || 0;
+        const node = new PathNode(this, pos.x, pos.y, pos.lessonIndex, isUnlocked, stars, this.currentLessonIndex);
+        this._activeNodes.set(index, node);
+        return node;
+    }
+
+    // Creates nodes entering the viewport and destroys those that scrolled far away
+    _updateVisibleNodes(scrollY) {
+        const { height } = this.scale;
+        const BUFFER = 600;
+        const visTop    = scrollY - BUFFER;
+        const visBottom = scrollY + height + BUFFER;
+        const killTop    = scrollY - BUFFER * 1.5;
+        const killBottom = scrollY + height + BUFFER * 1.5;
+
+        this._lastVirtualScrollY = scrollY;
+
+        for (const pos of this.positions) {
+            if (pos.y >= visTop && pos.y <= visBottom && !this._activeNodes.has(pos.lessonIndex)) {
+                this._ensureNode(pos.lessonIndex);
+            }
+        }
+
+        const toDelete = [];
+        for (const [lessonIndex, node] of this._activeNodes) {
+            if (lessonIndex === this.currentLessonIndex || lessonIndex === this.currentLessonIndex - 1) continue;
+            const pos = this.positions[lessonIndex];
+            if (!pos) continue;
+            if (pos.y < killTop || pos.y > killBottom) {
+                node.destroy();
+                toDelete.push(lessonIndex);
+            }
+        }
+        for (const idx of toDelete) this._activeNodes.delete(idx);
     }
 
     showTooltip(index, x, y, isBoss) {
@@ -514,143 +355,15 @@ export class MapScene extends Phaser.Scene {
     }
 
     updateCurrentMonkeySkin() {
-        if (!this.pathNodes) return;
-        const currentNode = this.pathNodes.find(node => node.index === this.currentLessonIndex);
+        if (!this._activeNodes) return;
+        const currentNode = this._activeNodes.get(this.currentLessonIndex);
         if (currentNode) {
             currentNode.updateMonkeySkin();
         }
     }
 
     playMonkeyTransitionAnimation() {
-        if (!this.pathNodes) return;
-        const currentNode = this.pathNodes.find(node => node.index === this.currentLessonIndex);
-        if (!currentNode) return;
-
-        const monkeySkin = this.monkeySkin;
-
-        // Hide the permanent monkey first
-        currentNode.setMonkeyVisible(false);
-
-        // Hide monkey on the previous node as we start the transition
-        if (this.currentLessonIndex > 0) {
-            const prevNode = this.pathNodes.find(node => node.index === this.currentLessonIndex - 1);
-            if (prevNode) {
-                prevNode.setMonkeyVisible(false);
-            }
-        }
-
-        const x2 = currentNode.x;
-        const y2 = currentNode.y - currentNode.radius - 3;
-
-        ensureTextures(this, [{ key: monkeySkin, url: `assets/${monkeySkin}.png` }], () => {
-            if (!this.sys || !this.sys.isActive()) return;
-
-            this.time.delayedCall(100, () => {
-                if (this.cache.audio.exists('whoosh')) {
-                    this.sound.play('whoosh');
-                }
-            })
-
-            let tempMonkey;
-            if (this.currentLessonIndex === 0) {
-                // Lesson 1: jump/fall from above
-                const x1 = x2;
-                const y1 = y2 - 200;
-                tempMonkey = this.add.sprite(x1, y1, monkeySkin)
-                    .setScale(0.08, 0.14) // stretched initially
-                    .setOrigin(0.5)
-                    .setDepth(20);
-
-                this.tweens.add({
-                    targets: tempMonkey,
-                    y: y2,
-                    scaleX: 0.10,
-                    scaleY: 0.10,
-                    duration: 900,
-                    ease: 'Bounce.easeOut',
-                    onComplete: () => {
-                        if (this.cache.audio.exists('blob')) {
-                            this.sound.play('blob');
-                        }
-                        // Squash and stretch on landing
-                        this.tweens.add({
-                            targets: tempMonkey,
-                            scaleX: 0.11,
-                            scaleY: 0.09,
-                            duration: 100,
-                            yoyo: true,
-                            repeat: 1,
-                            ease: 'Quad.easeInOut',
-                            onComplete: () => {
-                                tempMonkey.destroy();
-                                currentNode.setMonkeyVisible(true);
-                            }
-                        });
-                    }
-                });
-            } else {
-                // Lesson > 1: jump from previous node
-                const prevNode = this.pathNodes.find(node => node.index === this.currentLessonIndex - 1);
-                const x1 = prevNode ? prevNode.x : x2;
-                const y1 = prevNode ? (prevNode.y - prevNode.radius - 3) : (y2 - 400);
-
-                tempMonkey = this.add.sprite(x1, y1, monkeySkin)
-                    .setScale(0.10)
-                    .setOrigin(0.5)
-                    .setDepth(20);
-
-                if (x2 < x1) {
-                    tempMonkey.setFlipX(true); // Flip if moving left
-                }
-
-                const midX = (x1 + x2) / 2;
-                const midY = Math.min(y1, y2) - 120; // 120px arc height
-
-                const curve = new Phaser.Curves.QuadraticBezier(
-                    new Phaser.Geom.Point(x1, y1),
-                    new Phaser.Geom.Point(midX, midY),
-                    new Phaser.Geom.Point(x2, y2)
-                );
-
-                const animObj = { progress: 0 };
-                this.tweens.add({
-                    targets: animObj,
-                    progress: 1,
-                    duration: 1000,
-                    ease: 'Quad.easeInOut',
-                    onUpdate: () => {
-                        const pt = curve.getPoint(animObj.progress);
-                        tempMonkey.setPosition(pt.x, pt.y);
-                        
-                        // Stretch slightly in the direction of velocity
-                        if (animObj.progress > 0.1 && animObj.progress < 0.9) {
-                            tempMonkey.setScale(0.09, 0.11);
-                        } else {
-                            tempMonkey.setScale(0.10, 0.10);
-                        }
-                    },
-                    onComplete: () => {
-                        if (this.cache.audio.exists('blob')) {
-                            this.sound.play('blob');
-                        }
-                        // Squash and stretch on landing
-                        this.tweens.add({
-                            targets: tempMonkey,
-                            scaleX: 0.11,
-                            scaleY: 0.09,
-                            duration: 100,
-                            yoyo: true,
-                            repeat: 1,
-                            ease: 'Quad.easeInOut',
-                            onComplete: () => {
-                                tempMonkey.destroy();
-                                currentNode.setMonkeyVisible(true);
-                            }
-                        });
-                    }
-                });
-            }
-        });
+        playMonkeyTransitionAnimation(this);
     }
 
     update(time, delta) {
@@ -662,6 +375,13 @@ export class MapScene extends Phaser.Scene {
                 darkness = Phaser.Math.Clamp((centerY - this.yStart) / (this.yEnd - this.yStart), 0, 1);
             }
             this.overlay.setAlpha(0.55 + darkness * 0.40);
+        }
+
+        if (this._activeNodes && this.positions) {
+            const scrollY = this.cameras.main.scrollY;
+            if (Math.abs(scrollY - this._lastVirtualScrollY) > 50) {
+                this._updateVisibleNodes(scrollY);
+            }
         }
 
         if (this.ftueOverlay && this.ftueOverlay.active) {

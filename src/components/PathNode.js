@@ -4,8 +4,15 @@ import { ensureTextures } from '../utils/TextureLoader';
 import { getFogAlpha } from '../utils/PathLayout';
 import { getChapterForLesson, getGroupForChapter } from '../data/chapters';
 
-// Pre-render gradient circle textures once per scene using Canvas 2D API
+// Module-level flag: skip the per-def loop after textures are created.
+// Resets to false when textures are cleared (pn_done missing = cache evicted).
+let _nodeTexturesCreated = false;
+
+// Pre-render gradient circle textures once per game session using Canvas 2D API
 function createNodeTextures(scene) {
+    if (_nodeTexturesCreated && scene.textures.exists('pn_done')) return;
+    _nodeTexturesCreated = true;
+
     const DEFS = [
         { key: 'pn_done',         r: 38, light: '#34d399', mid: '#10b981', dark: '#064e3b' },
         { key: 'pn_current',      r: 38, light: '#fde68a', mid: '#f59e0b', dark: '#78350f' },
