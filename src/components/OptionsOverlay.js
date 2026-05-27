@@ -285,7 +285,10 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
         const curCh = getChapterForLesson(curLesson);
         const curGroupId = curCh ? curCh.groupId : 1;
 
-        const musicChoices = [{ key: 'auto', label: 'Theo bản đồ' }];
+        const musicChoices = [
+            { key: 'auto', label: 'Theo bản đồ' },
+            { key: 'none', label: 'Tắt nhạc nền' }
+        ];
         for (let i = 1; i <= curGroupId; i++) {
             const groupName = CHAPTER_GROUPS.find(g => g.id === i)?.name || `Nhạc ${i}`;
             musicChoices.push({ key: `music_${i}`, label: `Nhạc ${groupName}` });

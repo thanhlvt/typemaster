@@ -2,6 +2,7 @@ import * as Phaser from 'phaser';
 import { ProgressManager } from '../utils/ProgressManager';
 import { ensureTextures } from '../utils/TextureLoader';
 import { getFogAlpha } from '../utils/PathLayout';
+import { getChapterForLesson, getGroupForChapter } from '../data/chapters';
 
 // Pre-render gradient circle textures once per scene using Canvas 2D API
 function createNodeTextures(scene) {
@@ -89,20 +90,39 @@ export class PathNode extends Phaser.GameObjects.Container {
         this.add(this.strokeGfx);
         this._drawStroke(false);
 
-        // ── Content (emoji / number) ───────────────────────────────────
-        if (this.state === 'locked') {
-            const lockEmoji = scene.add.text(0, 0, '🔒', {
-                fontFamily: 'Segoe UI Emoji, Arial',
-                fontSize: this.isBoss ? '24px' : '20px',
-            }).setOrigin(0.5).setAlpha(0.6);
-            this.add(lockEmoji);
+        // ── Content (emoji / number / boss sprite) ──────────────────────
+        if (this.isBoss) {
+            const chapter = getChapterForLesson(index);
+            const group = getGroupForChapter(chapter);
+            const bossTexture = `boss_${group.id}`;
+
+            ensureTextures(scene, [{ key: bossTexture, url: `assets/${bossTexture}.png` }], () => {
+                if (scene && this.active) {
+                    const bossSprite = scene.add.sprite(0, 0, bossTexture);
+                    bossSprite.setDisplaySize(72, 72);
+                    if (this.state === 'locked') {
+                        bossSprite.setTint(0x334155).setAlpha(0.85);
+                        const lockEmoji = scene.add.text(0, 0, '🔒', {
+                            fontFamily: 'Segoe UI Emoji, Arial',
+                            fontSize: '20px',
+                        }).setOrigin(0.5).setAlpha(0.8);
+                        this.add(lockEmoji);
+                    }
+                    this.add(bossSprite);
+                    // Ensure lock emoji is drawn on top of the boss sprite
+                    if (this.state === 'locked') {
+                        const lock = this.list.find(item => item instanceof Phaser.GameObjects.Text && item.text === '🔒');
+                        if (lock) this.bringToTop(lock);
+                    }
+                }
+            });
         } else {
-            if (this.isBoss) {
-                const crownEmoji = scene.add.text(0, -2, '👑', {
+            if (this.state === 'locked') {
+                const lockEmoji = scene.add.text(0, 0, '🔒', {
                     fontFamily: 'Segoe UI Emoji, Arial',
-                    fontSize: '26px',
-                }).setOrigin(0.5);
-                this.add(crownEmoji);
+                    fontSize: '20px',
+                }).setOrigin(0.5).setAlpha(0.6);
+                this.add(lockEmoji);
             } else {
                 const labelText = scene.add.text(0, 0, `${index + 1}`, {
                     fontFamily: 'Outfit, Arial',
@@ -118,7 +138,7 @@ export class PathNode extends Phaser.GameObjects.Container {
         // ── Labels below node ─────────────────────────────────────────
         let labelYOffset = this.radius + 12;
 
-        if (this.isBoss) {
+        if (this.isBoss && this.state !== 'locked') {
             const bossText = scene.add.text(0, labelYOffset, `BOSS · BÀI ${index + 1}`, {
                 fontFamily: 'Outfit, Arial',
                 fontSize: '13px',

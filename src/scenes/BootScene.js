@@ -86,6 +86,7 @@ export class BootScene extends Phaser.Scene {
         // Load audio
         this.load.audio('key_sound', 'assets/key.mp3');
         this.load.audio('level_sound', 'assets/level.mp3');
+        this.load.audio('lost_sound', 'assets/lost.mp3');
         this.load.audio('error_sound', 'assets/error.mp3');
         this.load.audio('win_sound', 'assets/win.mp3');
         this.load.audio('spin1', 'assets/spin1.mp3');

@@ -209,7 +209,123 @@ export class BossScene extends Phaser.Scene {
                 duration: 300,
                 onComplete: () => {
                     warningContainer.destroy();
-                    this.isActive = true;
+                    this._showReadyAnimation(width, height, () => {
+                        this.isActive = true;
+                    });
+                }
+            });
+        });
+    }
+
+    _showReadyAnimation(width, height, onComplete) {
+        const readyText = this.add.text(width / 2, height / 2, 'SẴN SÀNG', {
+            fontFamily: 'Outfit, Arial Black, Arial',
+            fontSize: '74px',
+            fontStyle: 'bold',
+            fill: '#FBBF24'
+        }).setOrigin(0.5).setScale(0).setAlpha(0).setDepth(201);
+        readyText.setStroke('#000000', 10);
+        readyText.setShadow(0, 4, 'rgba(0,0,0,0.8)', 6, true, true);
+
+        // Stage 1: Zoom in to center
+        this.tweens.add({
+            targets: readyText,
+            scaleX: 1,
+            scaleY: 1,
+            alpha: 1,
+            duration: 500,
+            ease: 'Back.easeOut',
+            onComplete: () => {
+                if (this.cache.audio.exists('blob')) {
+                    this.sound.play('blob');
+                }
+                
+                // Stage 2: Hold for 600ms, then zoom out
+                this.time.delayedCall(600, () => {
+                    this.tweens.add({
+                        targets: readyText,
+                        scaleX: 2.2,
+                        scaleY: 2.2,
+                        alpha: 0,
+                        duration: 350,
+                        ease: 'Cubic.easeIn',
+                        onComplete: () => {
+                            readyText.destroy();
+                            onComplete();
+                        }
+                    });
+                });
+            }
+        });
+    }
+
+    _playSwordAttackAnimation() {
+        const monkeyX = this.monkey.x;
+        const monkeyY = this.monkey.y;
+        
+        const startX = monkeyX + 100;
+        const startY = monkeyY;
+        const endX = monkeyX - 50;
+        const endY = monkeyY;
+
+        const tiltAngle = Phaser.Math.Between(-15, 15);
+
+        // Create the sword emoji text (really big: 96px)
+        const sword = this.add.text(startX, startY, '🗡️', {
+            fontFamily: 'Segoe UI Emoji, Arial',
+            fontSize: '96px'
+        }).setOrigin(0.5).setDepth(30).setAngle(tiltAngle);
+
+        // Animate the sword flying across the monkey
+        this.tweens.add({
+            targets: sword,
+            x: endX,
+            y: endY,
+            duration: 250,
+            ease: 'Linear',
+            onComplete: () => {
+                sword.destroy();
+            }
+        });
+
+        // Add a hit effect on the monkey when the sword passes through it
+        this.time.delayedCall(160, () => {
+            if (!this.sys || !this.sys.isActive() || !this.monkey) return;
+
+            // Flash red on the monkey
+            this.monkey.setTint(0xff0000);
+            this.cameras.main.shake(100, 0.008);
+
+            this.time.delayedCall(150, () => {
+                if (this.monkey) this.monkey.clearTint();
+            });
+
+            // Slash visual effect (6px red outer stroke + 2px white inner core)
+            const slash = this.add.graphics().setDepth(29);
+            
+            // Draw diagonal red slash
+            slash.lineStyle(6, 0xff3b30, 0.95);
+            slash.beginPath();
+            slash.moveTo(monkeyX + 60, monkeyY - 45);
+            slash.lineTo(monkeyX - 60, monkeyY + 45);
+            slash.strokePath();
+
+            // Inner white line for core slash effect
+            slash.lineStyle(2, 0xffffff, 1.0);
+            slash.beginPath();
+            slash.moveTo(monkeyX + 60, monkeyY - 45);
+            slash.lineTo(monkeyX - 60, monkeyY + 45);
+            slash.strokePath();
+
+            // Fade and destroy slash
+            this.tweens.add({
+                targets: slash,
+                alpha: 0,
+                scaleX: 1.1,
+                scaleY: 1.1,
+                duration: 200,
+                onComplete: () => {
+                    slash.destroy();
                 }
             });
         });
@@ -331,24 +447,7 @@ export class BossScene extends Phaser.Scene {
         if (elapsed > 0 && elapsed % 5 === 0 && this.hpDecreaseRate > 0) {
             this.playerHP = Phaser.Math.Clamp(this.playerHP - this.hpDecreaseRate, 0, 100);
             this.drawHPBar();
-            
-            // Screen shake slightly when boss drains HP (if difficulty is high)
-            if (this.hpDecreaseRate >= 3) {
-                this.cameras.main.shake(120, 0.006);
-            }
-
-            // Shake the boss sprite slightly when attacking
-            if (this.boss) {
-                const originalX = this.boss.x;
-                this.tweens.add({
-                    targets: this.boss,
-                    x: originalX - 6,
-                    duration: 50,
-                    yoyo: true,
-                    repeat: 3,
-                    onComplete: () => { if (this.boss) this.boss.x = originalX; }
-                });
-            }
+            this._playSwordAttackAnimation();
         }
 
         // 3. Check Game Over
@@ -451,28 +550,11 @@ export class BossScene extends Phaser.Scene {
 
     handleFail() {
         this.sound.play('error_sound');
-        this.cameras.main.shake(200, 0.012);
-        this.monkey.setTint(0xff0000);
-        this.time.delayedCall(200, () => {
-            if (this.monkey) this.monkey.clearTint();
-        });
+        this._playSwordAttackAnimation();
 
         // Boss counter attacks!
         this.playerHP = Phaser.Math.Clamp(this.playerHP - 1, 0, 100);
         this.drawHPBar();
-
-        // Shake the boss sprite slightly when counter-attacking
-        if (this.boss) {
-            const originalX = this.boss.x;
-            this.tweens.add({
-                targets: this.boss,
-                x: originalX - 8,
-                duration: 50,
-                yoyo: true,
-                repeat: 3,
-                onComplete: () => { if (this.boss) this.boss.x = originalX; }
-            });
-        }
 
         if (this.playerHP <= 0) {
             this.endBattle(false);
@@ -497,7 +579,8 @@ export class BossScene extends Phaser.Scene {
         if (this.bossMusic) {
             this.bossMusic.stop();
         }
-        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex);
+        const jingleKey = isWin ? 'level_sound' : 'lost_sound';
+        AudioManager.playJingle(this, jingleKey, this.currentLessonIndex, true);
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const total = this.correctKeystrokes || 1;

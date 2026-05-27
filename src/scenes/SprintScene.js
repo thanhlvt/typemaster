@@ -87,7 +87,7 @@ export class SprintScene extends Phaser.Scene {
             loop: true
         });
 
-        AudioManager.playThemeMusic(this, this.currentLessonIndex);
+        AudioManager.playThemeMusic(this, this.currentLessonIndex, true);
     }
 
     _createContentUI(width, height) {
@@ -298,7 +298,7 @@ export class SprintScene extends Phaser.Scene {
 
     endSprint() {
         this.isActive = false;
-        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex);
+        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex, true);
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const total = this.correctKeystrokes || 1;

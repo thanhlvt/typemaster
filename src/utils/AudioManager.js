@@ -2,10 +2,10 @@ import { getChapterForLesson } from '../data/chapters';
 import { ProgressManager } from './ProgressManager';
 
 export class AudioManager {
-    static playThemeMusic(scene, lessonIndex) {
+    static playThemeMusic(scene, lessonIndex, ignoreSettings = false) {
         // Read Settings
         const settings = ProgressManager.getAudioSettings();
-        const selection = settings.bgMusic || 'auto';
+        const selection = ignoreSettings ? 'auto' : (settings.bgMusic || 'auto');
 
         let currentMusicKey = selection;
         if (selection === 'auto') {
@@ -39,7 +39,7 @@ export class AudioManager {
         }
     }
 
-    static playJingle(scene, key, lessonIndex) {
+    static playJingle(scene, key, lessonIndex, ignoreSettings = false) {
         // Find active background music and pause it
         const activeBg = scene.sound.sounds.find(s => s.key.startsWith('music_') && s.isPlaying);
         if (activeBg) {
@@ -54,7 +54,7 @@ export class AudioManager {
                 if (activeBg && activeBg.isPaused) {
                     activeBg.resume();
                 } else if (lessonIndex !== undefined) {
-                    AudioManager.playThemeMusic(scene, lessonIndex);
+                    AudioManager.playThemeMusic(scene, lessonIndex, ignoreSettings);
                 }
                 jingle.destroy();
             };
@@ -65,7 +65,7 @@ export class AudioManager {
                 if (activeBg && activeBg.isPaused) {
                     activeBg.resume();
                 } else if (lessonIndex !== undefined) {
-                    AudioManager.playThemeMusic(scene, lessonIndex);
+                    AudioManager.playThemeMusic(scene, lessonIndex, ignoreSettings);
                 }
                 jingle.destroy();
             });

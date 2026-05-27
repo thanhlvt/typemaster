@@ -85,7 +85,7 @@ export class PlayScene extends Phaser.Scene {
         this.input.on('pointerdown', resumeAudio);
         this.input.keyboard.on('keydown', resumeAudio);
 
-        AudioManager.playThemeMusic(this, this.currentLessonIndex);
+        AudioManager.playThemeMusic(this, this.currentLessonIndex, true);
     }
 
     _doReset() {
@@ -407,7 +407,7 @@ export class PlayScene extends Phaser.Scene {
     }
 
     showLessonComplete() {
-        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex);
+        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex, true);
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const { streakDays: newStreakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();

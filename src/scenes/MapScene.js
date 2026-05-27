@@ -292,7 +292,11 @@ export class MapScene extends Phaser.Scene {
         const targetActiveY = this.lessonYPositions[this.currentLessonIndex] || 230;
         const targetScrollY = Phaser.Math.Clamp(targetActiveY - height / 2, 0, totalScrollHeight - height);
 
-        this.cameras.main.scrollY = 0;
+        const startLessonIndex = Math.max(0, this.currentLessonIndex - 30);
+        const startActiveY = this.lessonYPositions[startLessonIndex] || 230;
+        const startScrollY = Phaser.Math.Clamp(startActiveY - height / 2, 0, totalScrollHeight - height);
+
+        this.cameras.main.scrollY = startScrollY;
         this.time.delayedCall(100, () => {
             this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 800, ease: 'Cubic.easeOut' });
             const currentCh = getChapterForLesson(this.currentLessonIndex);

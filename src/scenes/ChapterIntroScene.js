@@ -131,8 +131,8 @@ export class ChapterIntroScene extends Phaser.Scene {
         });
 
         // Play intro jingle sound if loaded
-        AudioManager.playThemeMusic(this, this.nextLessonIndex);
-        AudioManager.playJingle(this, 'level_sound', this.nextLessonIndex);
+        AudioManager.playThemeMusic(this, this.nextLessonIndex, true);
+        AudioManager.playJingle(this, 'level_sound', this.nextLessonIndex, true);
 
         // Action trigger function
         const startPlayScene = () => {

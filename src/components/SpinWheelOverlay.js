@@ -155,7 +155,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
             this.wheelContainer.add(chestEmoji);
         }
 
-        // Center hub
+        // Center hub background (fixed in scale)
         const hub = scene.add.graphics();
         hub.fillStyle(0x0f172a, 1);
         hub.fillCircle(0, 0, 28);
@@ -163,11 +163,22 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         hub.strokeCircle(0, 0, 28);
         this.wheelContainer.add(hub);
 
+        // Center icon (🎰) to animate
         const hubText = scene.add.text(0, 0, '🎰', {
             fontFamily: 'Segoe UI Emoji, Arial',
             fontSize: '28px'
         }).setOrigin(0.5);
         this.wheelContainer.add(hubText);
+
+        scene.tweens.add({
+            targets: hubText,
+            scaleX: 1.25,
+            scaleY: 1.25,
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
 
         // ── Pointer Arrow (fixed, not part of wheel) ──
         const pointer = scene.add.graphics();
@@ -208,6 +219,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const btnZone = scene.add.zone(cx, this.btnY, btnW, btnH)
             .setInteractive({ useHandCursor: true });
         this.add(btnZone);
+        this.btnZone = btnZone;
 
         btnZone.on('pointerover', () => {
             if (!this.isSpinning) {
@@ -225,6 +237,52 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
             if (!this.isSpinning) {
                 this._spin();
             }
+        });
+
+        // Clickable wheel zone (covers the whole wheel)
+        const wheelZone = scene.add.circle(cx, cy + 20, wheelRadius + 20)
+            .setInteractive({ useHandCursor: true });
+        this.add(wheelZone);
+        this.wheelZone = wheelZone;
+
+        wheelZone.on('pointerup', () => {
+            if (!this.isSpinning) {
+                this._spin();
+            }
+        });
+
+        // Guide text below the button
+        this.guideText = scene.add.text(cx, this.btnY + 45, 'Ấn Space hoặc Enter để quay', {
+            fontFamily: 'Arial',
+            fontSize: '14px',
+            fill: '#94a3b8'
+        }).setOrigin(0.5);
+        this.add(this.guideText);
+
+        // Keyboard captures and handlers
+        scene.input.keyboard.addCapture([
+            Phaser.Input.Keyboard.KeyCodes.SPACE,
+            Phaser.Input.Keyboard.KeyCodes.ENTER
+        ]);
+
+        this.onKeyDown = (event) => {
+            if (event.key === ' ' || event.key === 'Enter') {
+                event.preventDefault();
+                event.stopPropagation();
+                if (this.rewardPopupActive && typeof this.onCollectReward === 'function') {
+                    this.onCollectReward();
+                } else if (!this.isSpinning) {
+                    this._spin();
+                }
+            }
+        };
+        scene.input.keyboard.on('keydown', this.onKeyDown);
+
+        this.once('destroy', () => {
+            scene.input.keyboard.off('keydown', this.onKeyDown);
+            scene.input.keyboard.removeCapture([
+                Phaser.Input.Keyboard.KeyCodes.ENTER
+            ]);
         });
 
         // Entrance animation
@@ -253,6 +311,10 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
 
     _spin() {
         this.isSpinning = true;
+
+        if (this.wheelZone) this.wheelZone.disableInteractive();
+        if (this.btnZone) this.btnZone.disableInteractive();
+        if (this.guideText) this.guideText.setVisible(false);
 
         // Disable button visually
         this.btnText.setText('Đang quay...');
@@ -449,7 +511,10 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const collectZone = this.scene.add.zone(cx, cy + collectBtnY, 140, 36)
             .setInteractive({ useHandCursor: true }).setDepth(153);
 
-        collectZone.on('pointerup', () => {
+        this.rewardPopupActive = true;
+        this.onCollectReward = () => {
+            if (!this.rewardPopupActive) return;
+            this.rewardPopupActive = false;
             // Clean up everything
             this.scene.tweens.add({
                 targets: [cardContainer, dimOverlay],
@@ -463,6 +528,10 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
                     onDone();
                 }
             });
+        };
+
+        collectZone.on('pointerup', () => {
+            this.onCollectReward();
         });
 
         // Pop-in animation
