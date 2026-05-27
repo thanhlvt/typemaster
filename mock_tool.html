@@ -164,6 +164,18 @@
             border-color: var(--danger-hover);
         }
 
+        .btn-warning {
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #fde047;
+        }
+
+        .btn-warning:hover {
+            background: rgba(245, 158, 11, 0.25);
+            color: #fff;
+            border-color: #f59e0b;
+        }
+
         .status-box {
             margin-top: 24px;
             padding: 16px;
@@ -226,6 +238,9 @@
         <div class="btn-group">
             <button class="btn-primary" onclick="generateMockData()">
                 ⚡ Sinh Dữ Liệu Thử Nghiệm
+            </button>
+            <button class="btn-warning" onclick="fixBossSlayerAchievement()">
+                🛠️ Sửa Huy Hiệu Sát Thủ Boss
             </button>
             <button class="btn-danger" onclick="clearAllData()">
                 ↺ Reset Toàn Bộ Dữ Liệu Game
@@ -346,6 +361,39 @@
                 );
             } catch (e) {
                 showStatus(`❌ Lỗi reset dữ liệu: ${e.message}`, false);
+            }
+        }
+
+        function fixBossSlayerAchievement() {
+            try {
+                const data = localStorage.getItem(SAVE_KEY);
+                if (!data) {
+                    showStatus('❌ Không tìm thấy tiến trình typemaster_progress trong LocalStorage để sửa!', false);
+                    return;
+                }
+                const progress = JSON.parse(data);
+                if (progress && Array.isArray(progress.unlockedAchievements)) {
+                    const originalLength = progress.unlockedAchievements.length;
+                    progress.unlockedAchievements = progress.unlockedAchievements.filter(ach => ach !== 'boss_slayer');
+                    const newLength = progress.unlockedAchievements.length;
+                    
+                    localStorage.setItem(SAVE_KEY, JSON.stringify(progress));
+                    
+                    if (originalLength > newLength) {
+                        showStatus(
+                            `<strong>🎉 Sửa dữ liệu thành công!</strong><br>` +
+                            `- Đã xoá bỏ huy hiệu <strong>Sát thủ Boss (boss_slayer)</strong>.<br>` +
+                            `- Giữ nguyên các huy hiệu khác: <strong>${progress.unlockedAchievements.join(', ') || 'Không có'}</strong>.<br><br>` +
+                            `👉 Vui lòng quay lại tab game và nhấn <strong>F5</strong> để tải lại!`
+                        );
+                    } else {
+                        showStatus('ℹ️ Huy hiệu "Sát thủ Boss" không tồn tại trong tiến trình của bạn.', true);
+                    }
+                } else {
+                    showStatus('❌ Dữ liệu typemaster_progress không hợp lệ hoặc thiếu mục unlockedAchievements!', false);
+                }
+            } catch (e) {
+                showStatus(`❌ Lỗi sửa dữ liệu: ${e.message}`, false);
             }
         }
     </script>
