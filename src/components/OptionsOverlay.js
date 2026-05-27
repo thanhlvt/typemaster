@@ -1,6 +1,8 @@
 import * as Phaser from 'phaser';
 import { ProgressManager } from '../utils/ProgressManager';
 import { ConfirmDialog } from './ConfirmDialog';
+import { getChapterForLesson, CHAPTER_GROUPS } from '../data/chapters';
+import { AudioManager } from '../utils/AudioManager';
 
 export class OptionsOverlay extends Phaser.GameObjects.Container {
     constructor(scene, onClose) {
@@ -52,7 +54,7 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
         scene.sound.volume = this.volume;
 
         // --- Mute Toggle Section (Y = -120) ---
-        const muteY = -100;
+        const muteY = -120;
         this.muteLabel = scene.add.text(-180, muteY, this.isMute ? 'ÂM THANH: TẮT' : 'ÂM THANH: BẬT', {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -105,8 +107,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- Volume Slider Section (Y = -10) ---
-        const volY = -10;
+        // --- Volume Slider Section (Y = -40) ---
+        const volY = -40;
         this.volumeLabel = scene.add.text(-180, volY, `ÂM LƯỢNG: ${Math.round(this.volume * 100)}%`, {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -196,8 +198,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- Home Background Mode Section (Y = 100) ---
-        const bgModeY = 80;
+        // --- Home Background Mode Section (Y = 40) ---
+        const bgModeY = 40;
         const bgModeLabel = scene.add.text(-180, bgModeY, 'HÌNH NỀN:', {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -270,8 +272,93 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- Reset Data Button Section (Y = 210) ---
-        const resetY = 210;
+        // --- BG Music Choice Section (Y = 120) ---
+        const musicY = 120;
+        const musicLabel = scene.add.text(-180, musicY, 'NHẠC NỀN:', {
+            fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
+        }).setOrigin(0, 0.5);
+        dialog.add(musicLabel);
+
+        // Get unlocked music choices
+        const progress = ProgressManager.loadProgress(700);
+        const curLesson = progress.lessonIndex;
+        const curCh = getChapterForLesson(curLesson);
+        const curGroupId = curCh ? curCh.groupId : 1;
+
+        const musicChoices = [{ key: 'auto', label: 'Theo bản đồ' }];
+        for (let i = 1; i <= curGroupId; i++) {
+            const groupName = CHAPTER_GROUPS.find(g => g.id === i)?.name || `Nhạc ${i}`;
+            musicChoices.push({ key: `music_${i}`, label: `Nhạc ${groupName}` });
+        }
+
+        let selectedMusicIndex = musicChoices.findIndex(c => c.key === settings.bgMusic);
+        if (selectedMusicIndex === -1) selectedMusicIndex = 0;
+
+        const boxW = 190;
+        const boxH = 34;
+        const boxX = 55;
+
+        const musicBg = scene.add.graphics();
+        const drawMusicBg = () => {
+            musicBg.clear();
+            musicBg.fillStyle(0x1e293b, 1);
+            musicBg.fillRoundedRect(boxX - boxW / 2, musicY - boxH / 2, boxW, boxH, 8);
+            musicBg.lineStyle(1.5, 0x334155, 1);
+            musicBg.strokeRoundedRect(boxX - boxW / 2, musicY - boxH / 2, boxW, boxH, 8);
+        };
+        drawMusicBg();
+        dialog.add(musicBg);
+
+        const choiceText = scene.add.text(boxX, musicY, musicChoices[selectedMusicIndex].label, {
+            fontFamily: 'Outfit, Arial', fontSize: '13px', fontStyle: 'bold', fill: '#38bdf8'
+        }).setOrigin(0.5);
+        dialog.add(choiceText);
+
+        const leftArrow = scene.add.text(boxX - boxW / 2 + 18, musicY, '◀', {
+            fontFamily: 'Arial', fontSize: '16px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5);
+        dialog.add(leftArrow);
+
+        const rightArrow = scene.add.text(boxX + boxW / 2 - 18, musicY, '▶', {
+            fontFamily: 'Arial', fontSize: '16px', fontStyle: 'bold', fill: '#FFF'
+        }).setOrigin(0.5);
+        dialog.add(rightArrow);
+
+        // Interaction Zones for arrows
+        const leftZone = scene.add.zone(width / 2 + boxX - boxW / 2 + 18, height / 2 + musicY, 36, boxH)
+            .setScrollFactor(0).setInteractive({ useHandCursor: true });
+        this.add(leftZone);
+
+        const rightZone = scene.add.zone(width / 2 + boxX + boxW / 2 - 18, height / 2 + musicY, 36, boxH)
+            .setScrollFactor(0).setInteractive({ useHandCursor: true });
+        this.add(rightZone);
+
+        const updateMusicSetting = (newIdx) => {
+            selectedMusicIndex = newIdx;
+            choiceText.setText(musicChoices[selectedMusicIndex].label);
+            settings.bgMusic = musicChoices[selectedMusicIndex].key;
+            ProgressManager.saveAudioSettings(settings);
+
+            // Play music in current scene
+            AudioManager.playThemeMusic(scene, scene.currentLessonIndex !== undefined ? scene.currentLessonIndex : curLesson);
+        };
+
+        leftZone.on('pointerdown', () => {
+            if (!this.isMute) scene.sound.play('key_sound');
+            let nextIdx = selectedMusicIndex - 1;
+            if (nextIdx < 0) nextIdx = musicChoices.length - 1;
+            updateMusicSetting(nextIdx);
+        });
+
+        rightZone.on('pointerdown', () => {
+            if (!this.isMute) scene.sound.play('key_sound');
+            let nextIdx = selectedMusicIndex + 1;
+            if (nextIdx >= musicChoices.length) nextIdx = 0;
+            updateMusicSetting(nextIdx);
+        });
+
+        // --- Reset Data Button Section (Y = 200) ---
+        const resetY = 200;
         const resetW = 240;
         const resetH = 42;
 

@@ -7,6 +7,7 @@ import { CHAPTERS, getChapterForLesson, getGroupForChapter, getChapterBgKey } fr
 import { ResultOverlay }         from '../components/ResultOverlay';
 import { ensureTextures }        from '../utils/TextureLoader';
 import { AchievementToast }      from '../components/AchievementToast';
+import { AudioManager }          from '../utils/AudioManager';
 
 export class BossScene extends Phaser.Scene {
     constructor() {
@@ -108,6 +109,9 @@ export class BossScene extends Phaser.Scene {
                 Phaser.Input.Keyboard.KeyCodes.ESC,
                 Phaser.Input.Keyboard.KeyCodes.SPACE
             ]);
+            if (this.bossMusic) {
+                this.bossMusic.stop();
+            }
         });
 
         // Lazy load the appropriate boss texture and backgrounds
@@ -187,8 +191,12 @@ export class BossScene extends Phaser.Scene {
             onComplete: () => flashOverlay.destroy()
         });
 
-        if (this.cache.audio.exists('level_sound')) {
-            this.sound.play('level_sound', { volume: 0.6 });
+        const musicKeys = ['level_sound', 'music_1', 'music_2', 'music_3', 'music_4', 'music_5', 'music_6', 'music_7'];
+        musicKeys.forEach(k => this.sound.stopByKey(k));
+
+        if (this.cache.audio.exists('boss_sound')) {
+            this.bossMusic = this.sound.add('boss_sound', { volume: 0.4, loop: true });
+            this.bossMusic.play();
         }
 
         // Hide warning after introTime and start the match
@@ -486,7 +494,10 @@ export class BossScene extends Phaser.Scene {
     endBattle(isWin, stars = 3) {
         this.isActive = false;
         this.bossStars = stars; // Stored so ResultOverlay can access it
-        if (this.cache.audio.exists('level_sound')) this.sound.play('level_sound');
+        if (this.bossMusic) {
+            this.bossMusic.stop();
+        }
+        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex);
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const total = this.correctKeystrokes || 1;

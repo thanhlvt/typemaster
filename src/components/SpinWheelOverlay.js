@@ -173,9 +173,9 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const pointer = scene.add.graphics();
         pointer.fillStyle(0xFBBF24, 1);
         pointer.beginPath();
-        pointer.moveTo(cx, cy + 20 - wheelRadius - 30);
-        pointer.lineTo(cx - 14, cy + 20 - wheelRadius - 55);
-        pointer.lineTo(cx + 14, cy + 20 - wheelRadius - 55);
+        pointer.moveTo(cx, cy + 30 - wheelRadius - 30);
+        pointer.lineTo(cx - 14, cy + 30 - wheelRadius - 55);
+        pointer.lineTo(cx + 14, cy + 30 - wheelRadius - 55);
         pointer.closePath();
         pointer.fillPath();
         pointer.lineStyle(2, 0xF59E0B, 1);
@@ -185,7 +185,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         // Small dot at pointer tip
         const pointerDot = scene.add.graphics();
         pointerDot.fillStyle(0xFBBF24, 1);
-        pointerDot.fillCircle(cx, cy + 20 - wheelRadius - 28, 5);
+        pointerDot.fillCircle(cx, cy + 30 - wheelRadius - 28, 5);
         this.add(pointerDot);
 
         // ── "QUAY!" Button ──────────────────────────────
@@ -268,12 +268,58 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const fullSpins = Phaser.Math.Between(4, 7);
         const targetAngle = fullSpins * 360 + (360 - (targetChest * angleStep + angleStep / 2));
 
+        // 1. Play key sound immediately
+        if (this.scene.cache.audio.exists('key_sound')) {
+            this.scene.sound.play('key_sound');
+        }
+
+        // 2. Play spin1 (looped) immediately
+        let soundSpin1 = null;
+        if (this.scene.cache.audio.exists('spin1')) {
+            soundSpin1 = this.scene.sound.add('spin1', { loop: true });
+            soundSpin1.play();
+        }
+
+        let soundSpin2 = null;
+        let soundSpin3 = null;
+
+        // 3. At t = 4000ms, stop spin1 and play spin2 (loop) as speed decreases
+        const eventSpin2 = this.scene.time.delayedCall(4000, () => {
+            if (soundSpin1) soundSpin1.stop();
+            if (this.scene.cache.audio.exists('spin2')) {
+                soundSpin2 = this.scene.sound.add('spin2', { loop: true });
+                soundSpin2.play();
+            }
+        });
+
+        // 4. At t = 6700ms, stop spin2 and play spin3
+        const eventSpin3 = this.scene.time.delayedCall(6700, () => {
+            if (soundSpin2) soundSpin2.stop();
+            if (this.scene.cache.audio.exists('spin3')) {
+                soundSpin3 = this.scene.sound.add('spin3', { loop: false });
+                soundSpin3.play();
+            }
+        });
+
+        const stopAllSounds = () => {
+            if (soundSpin1) { soundSpin1.stop(); soundSpin1.destroy(); soundSpin1 = null; }
+            if (soundSpin2) { soundSpin2.stop(); soundSpin2.destroy(); soundSpin2 = null; }
+            if (soundSpin3) { soundSpin3.stop(); soundSpin3.destroy(); soundSpin3 = null; }
+            this.scene.time.removeEvent(eventSpin2);
+            this.scene.time.removeEvent(eventSpin3);
+        };
+
+        // Handle early destroy of overlay to stop audio leaks
+        this.once('destroy', stopAllSounds);
+
         this.scene.tweens.add({
             targets: this.wheelContainer,
             angle: targetAngle,
-            duration: 3500,
+            duration: 8000,
             ease: 'Cubic.easeOut',
             onComplete: () => {
+                this.off('destroy', stopAllSounds);
+                stopAllSounds();
                 this._resolveReward();
             }
         });
@@ -318,6 +364,10 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
         const { width, height } = this.scene.scale;
         const cx = width / 2;
         const cy = height / 2 - 20;
+
+        if (this.scene.cache.audio.exists('congrat')) {
+            this.scene.sound.play('congrat');
+        }
 
         // Darken the wheel
         const dimOverlay = this.scene.add.rectangle(0, 0, width, height, 0x000000, 0.5)

@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser';
 import { getChapterForLesson, getGroupForChapter, getChapterBgKey } from '../data/chapters';
 import { ensureTextures } from '../utils/TextureLoader';
+import { AudioManager } from '../utils/AudioManager';
 
 export class ChapterIntroScene extends Phaser.Scene {
     constructor() {
@@ -130,9 +131,8 @@ export class ChapterIntroScene extends Phaser.Scene {
         });
 
         // Play intro jingle sound if loaded
-        if (this.cache.audio.exists('level_sound')) {
-            this.sound.play('level_sound', { volume: 0.7 });
-        }
+        AudioManager.playThemeMusic(this, this.nextLessonIndex);
+        AudioManager.playJingle(this, 'level_sound', this.nextLessonIndex);
 
         // Action trigger function
         const startPlayScene = () => {

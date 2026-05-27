@@ -3,9 +3,10 @@ import { TelexEngine }           from '../utils/TelexEngine';
 import { VirtualKeyboard }       from '../components/VirtualKeyboard';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { TypingValidator }       from '../utils/TypingValidator';
-import { CHAPTERS }              from '../data/chapters';
+import { getChapterForLesson, CHAPTERS }              from '../data/chapters';
 import { ResultOverlay }         from '../components/ResultOverlay';
 import { ensureTextures } from '../utils/TextureLoader';
+import { AudioManager }          from '../utils/AudioManager';
 
 export class SprintScene extends Phaser.Scene {
     constructor() {
@@ -85,6 +86,8 @@ export class SprintScene extends Phaser.Scene {
             callbackScope: this,
             loop: true
         });
+
+        AudioManager.playThemeMusic(this, this.currentLessonIndex);
     }
 
     _createContentUI(width, height) {
@@ -295,7 +298,7 @@ export class SprintScene extends Phaser.Scene {
 
     endSprint() {
         this.isActive = false;
-        if (this.cache.audio.exists('level_sound')) this.sound.play('level_sound');
+        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex);
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const total = this.correctKeystrokes || 1;

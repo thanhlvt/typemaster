@@ -415,6 +415,13 @@ export class ResultOverlay extends Phaser.GameObjects.Container {
             });
         }
 
+        const levelSound = scene.sound.sounds.find(s => s.key === 'level_sound' && s.isPlaying);
+        if (!levelSound) {
+            if (scene.cache.audio.exists('congrat')) {
+                scene.sound.play('congrat');
+            }
+        }
+
         scene.add.existing(this);
     }
 

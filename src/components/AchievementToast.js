@@ -79,7 +79,11 @@ export class AchievementToast extends Phaser.GameObjects.Container {
         scene.add.existing(this);
 
         // Play alert sound
-        scene.sound.play('win_sound', { volume: 0.8 });
+        if (scene.cache.audio.exists('achievement')) {
+            scene.sound.play('achievement', { volume: 0.8 });
+        } else {
+            scene.sound.play('win_sound', { volume: 0.8 });
+        }
 
         // Slide Down animation
         scene.tweens.add({

@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { CHAPTERS, CHAPTER_GROUPS, getChapterForLesson } from '../data/chapters';
+import { AudioManager } from '../utils/AudioManager';
 import { PathNode } from '../components/PathNode';
 import { buildNodePositions, getDecorations, getFogAlpha } from '../utils/PathLayout';
 import { ensureTextures } from '../utils/TextureLoader';
@@ -433,11 +434,7 @@ export class MapScene extends Phaser.Scene {
             this.input.keyboard.removeCapture(Phaser.Input.Keyboard.KeyCodes.SPACE);
         });
 
-        // Deferred: load level.mp3 (319 KB) in background after map is visible
-        if (!this.cache.audio.exists('level_sound')) {
-            this.load.audio('level_sound', 'assets/level.mp3');
-            this.load.start();
-        }
+        AudioManager.playThemeMusic(this, this.currentLessonIndex);
     }
 
     showTooltip(index, x, y, isBoss) {
@@ -537,6 +534,12 @@ export class MapScene extends Phaser.Scene {
         ensureTextures(this, [{ key: monkeySkin, url: `assets/${monkeySkin}.png` }], () => {
             if (!this.sys || !this.sys.isActive()) return;
 
+            this.time.delayedCall(100, () => {
+                if (this.cache.audio.exists('whoosh')) {
+                    this.sound.play('whoosh');
+                }
+            })
+
             let tempMonkey;
             if (this.currentLessonIndex === 0) {
                 // Lesson 1: jump/fall from above
@@ -555,7 +558,9 @@ export class MapScene extends Phaser.Scene {
                     duration: 900,
                     ease: 'Bounce.easeOut',
                     onComplete: () => {
-                        this.sound.play('key_sound', { volume: 0.5 });
+                        if (this.cache.audio.exists('blob')) {
+                            this.sound.play('blob');
+                        }
                         // Squash and stretch on landing
                         this.tweens.add({
                             targets: tempMonkey,
@@ -614,7 +619,9 @@ export class MapScene extends Phaser.Scene {
                         }
                     },
                     onComplete: () => {
-                        this.sound.play('key_sound', { volume: 0.5 });
+                        if (this.cache.audio.exists('blob')) {
+                            this.sound.play('blob');
+                        }
                         // Squash and stretch on landing
                         this.tweens.add({
                             targets: tempMonkey,

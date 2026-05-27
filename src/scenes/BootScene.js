@@ -83,10 +83,26 @@ export class BootScene extends Phaser.Scene {
         this.load.image('hand_left', 'assets/hand_left.png');
         this.load.image('hand_right', 'assets/hand_right.png');
         
-        // Load audio (level.mp3 is deferred — loaded in MapScene background)
+        // Load audio
         this.load.audio('key_sound', 'assets/key.mp3');
+        this.load.audio('level_sound', 'assets/level.mp3');
         this.load.audio('error_sound', 'assets/error.mp3');
         this.load.audio('win_sound', 'assets/win.mp3');
+        this.load.audio('spin1', 'assets/spin1.mp3');
+        this.load.audio('spin2', 'assets/spin2.mp3');
+        this.load.audio('spin3', 'assets/spin3.mp3');
+        this.load.audio('whoosh', 'assets/whoosh.mp3');
+        this.load.audio('achievement', 'assets/achievement.mp3');
+        this.load.audio('congrat', 'assets/congrat.mp3');
+        this.load.audio('blob', 'assets/blob.mp3');
+        this.load.audio('boss_sound', 'assets/boss.mp3');
+        this.load.audio('music_1', 'assets/music_1.mp3');
+        this.load.audio('music_2', 'assets/music_2.mp3');
+        this.load.audio('music_3', 'assets/music_3.mp3');
+        this.load.audio('music_4', 'assets/music_4.mp3');
+        this.load.audio('music_5', 'assets/music_5.mp3');
+        this.load.audio('music_6', 'assets/music_6.mp3');
+        this.load.audio('music_7', 'assets/music_7.mp3');
         
         // Load manifest
         this.load.json('manifest', 'data.json');

@@ -4,6 +4,7 @@ import { VirtualKeyboard }       from '../components/VirtualKeyboard';
 import { ConfirmDialog }         from '../components/ConfirmDialog';
 import { ResultOverlay }         from '../components/ResultOverlay';
 import { SpinWheelOverlay }      from '../components/SpinWheelOverlay';
+import { AudioManager }          from '../utils/AudioManager';
 import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
 import { TypingValidator }       from '../utils/TypingValidator';
 import { AchievementManager }    from '../utils/AchievementManager';
@@ -83,6 +84,8 @@ export class PlayScene extends Phaser.Scene {
         };
         this.input.on('pointerdown', resumeAudio);
         this.input.keyboard.on('keydown', resumeAudio);
+
+        AudioManager.playThemeMusic(this, this.currentLessonIndex);
     }
 
     _doReset() {
@@ -404,7 +407,7 @@ export class PlayScene extends Phaser.Scene {
     }
 
     showLessonComplete() {
-        if (this.cache.audio.exists('level_sound')) this.sound.play('level_sound');
+        AudioManager.playJingle(this, 'level_sound', this.currentLessonIndex);
         this.input.keyboard.off('keydown', this.handleKeyDown, this);
 
         const { streakDays: newStreakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
