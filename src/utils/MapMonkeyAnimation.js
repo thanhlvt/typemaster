@@ -62,6 +62,9 @@ export function playMonkeyTransitionAnimation(scene) {
                 new Phaser.Geom.Point((x1 + x2) / 2, Math.min(y1, y2) - 120),
                 new Phaser.Geom.Point(x2, y2)
             );
+            if (currentNode && currentNode.unlock) {
+                currentNode.unlock();
+            }
 
             const animObj = { progress: 0 };
             scene.tweens.add({

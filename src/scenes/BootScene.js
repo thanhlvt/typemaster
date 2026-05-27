@@ -97,6 +97,7 @@ export class BootScene extends Phaser.Scene {
         this.load.audio('congrat', 'assets/congrat.mp3');
         this.load.audio('blob', 'assets/blob.mp3');
         this.load.audio('boss_sound', 'assets/boss.mp3');
+        this.load.audio('chime', 'assets/chime.mp3');
         this.load.audio('music_1', 'assets/music_1.mp3');
         this.load.audio('music_2', 'assets/music_2.mp3');
         this.load.audio('music_3', 'assets/music_3.mp3');

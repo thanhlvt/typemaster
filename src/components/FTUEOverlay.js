@@ -351,7 +351,11 @@ export class FTUEOverlay extends Phaser.GameObjects.Container {
             ease: 'Power2',
             onComplete: () => {
                 this._sceneObjects.forEach(obj => obj.destroy());
+                const mapScene = this.scene;
                 this.destroy();
+                if (mapScene && mapScene.currentLessonIndex === 0) {
+                    mapScene.playMonkeyTransitionAnimation();
+                }
             }
         });
     }

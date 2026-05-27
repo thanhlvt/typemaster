@@ -58,7 +58,7 @@ export function showBossIntro(scene, group, introTime, onReady) {
             targets: container, alpha: 0, scaleY: 0, y: height * 0.42, duration: 300,
             onComplete: () => {
                 container.destroy();
-                _showReadyAnimation(scene, width, height, () => onReady(bossMusic));
+                showReadyAnimation(scene, () => onReady(bossMusic));
             }
         });
     });
@@ -66,8 +66,9 @@ export function showBossIntro(scene, group, introTime, onReady) {
     return bossMusic;
 }
 
-function _showReadyAnimation(scene, width, height, onComplete) {
-    const text = scene.add.text(width / 2, height / 2, 'SẴN SÀNG', {
+export function showReadyAnimation(scene, onComplete) {
+    const { width, height } = scene.scale;
+    const text = scene.add.text(width / 2, height / 2 - 70, 'SẴN SÀNG', {
         fontFamily: 'Outfit, Arial Black, Arial',
         fontSize: '74px', fontStyle: 'bold', fill: '#FBBF24'
     }).setOrigin(0.5).setScale(0).setAlpha(0).setDepth(201);
@@ -78,12 +79,17 @@ function _showReadyAnimation(scene, width, height, onComplete) {
         targets: text, scaleX: 1, scaleY: 1, alpha: 1,
         duration: 500, ease: 'Back.easeOut',
         onComplete: () => {
-            if (scene.cache.audio.exists('blob')) scene.sound.play('blob');
             scene.time.delayedCall(600, () => {
                 scene.tweens.add({
                     targets: text, scaleX: 2.2, scaleY: 2.2, alpha: 0,
                     duration: 350, ease: 'Cubic.easeIn',
-                    onComplete: () => { text.destroy(); onComplete(); }
+                    onComplete: () => {
+                        text.destroy();
+                        if (scene.cache.audio.exists('chime')) {
+                            scene.sound.play('chime');
+                        }
+                        onComplete();
+                    }
                 });
             });
         }

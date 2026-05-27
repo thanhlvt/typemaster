@@ -225,6 +225,7 @@ export class BossScene extends Phaser.Scene {
             this.playerHP = Phaser.Math.Clamp(this.playerHP - this.hpDecreaseRate, 0, 100);
             this.hpBar.draw(this.playerHP);
             this._playSwordAttackAnimation();
+            this.sound.play('error_sound');
         }
 
         // 3. Check Game Over
@@ -304,11 +305,7 @@ export class BossScene extends Phaser.Scene {
 
         // Hit flash effect on Boss
         if (this.boss) {
-            this.boss.setTint(0xff0000);
-            this.cameras.main.shake(120, 0.008);
-            this.time.delayedCall(120, () => {
-                if (this.boss) this.boss.clearTint();
-            });
+            playSwordAttack(this, this.boss, false);
         }
 
         // Jump animations

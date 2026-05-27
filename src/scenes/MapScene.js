@@ -177,8 +177,13 @@ export class MapScene extends Phaser.Scene {
             this.tweens.add({ targets: this.cameras.main, scrollY: targetScrollY, duration: 800, ease: 'Cubic.easeOut' });
             const currentCh = getChapterForLesson(this.currentLessonIndex);
             this.sidebar.scrollToChapter(currentCh.id, 800);
-            this.time.delayedCall(200, () => {
-                this.playMonkeyTransitionAnimation();
+            this.time.delayedCall(300, () => {
+                const ftueCompleted = localStorage.getItem('typemaster_ftue_completed');
+                if (this.currentLessonIndex === 0 && !ftueCompleted) {
+                    // Skip initial monkey animation because FTUE is active
+                } else {
+                    this.playMonkeyTransitionAnimation();
+                }
             });
         });
 

@@ -7,6 +7,7 @@ import { getChapterForLesson, CHAPTERS }              from '../data/chapters';
 import { ResultOverlay }         from '../components/ResultOverlay';
 import { ensureTextures } from '../utils/TextureLoader';
 import { AudioManager }          from '../utils/AudioManager';
+import { showReadyAnimation }    from '../utils/BossIntroAnimation';
 
 export class SprintScene extends Phaser.Scene {
     constructor() {
@@ -39,7 +40,7 @@ export class SprintScene extends Phaser.Scene {
         this.correctKeystrokes = 0;
         this.errors = 0;
         this.timeLeft = 60;
-        this.isActive = true;
+        this.isActive = false;
 
         // Compute home screen background dynamically
         const equipped = ProgressManager.getEquippedSkins();
@@ -85,6 +86,10 @@ export class SprintScene extends Phaser.Scene {
             callback: this.tick,
             callbackScope: this,
             loop: true
+        });
+
+        showReadyAnimation(this, () => {
+            this.isActive = true;
         });
 
         AudioManager.playThemeMusic(this, this.currentLessonIndex, true);

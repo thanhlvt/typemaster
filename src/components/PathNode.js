@@ -77,7 +77,7 @@ export class PathNode extends Phaser.GameObjects.Container {
         if (stars > 0) {
             this.state = 'done';
         } else if (index === currentIndex) {
-            this.state = 'current';
+            this.state = (index > 0) ? 'locked' : 'current';
         } else {
             this.state = 'locked';
         }
@@ -192,50 +192,54 @@ export class PathNode extends Phaser.GameObjects.Container {
 
         if (this.state !== 'locked') {
             zone.input.cursor = 'pointer';
-
-            zone.on('pointerover', () => {
-                this.setDepth(10);
-                this._drawStroke(true);
-                this.scene.tweens.killTweensOf(this);
-                this.scene.tweens.add({ targets: this, scaleX: 1.1, scaleY: 1.1, duration: 100, ease: 'Power1' });
-                if (this.scene.showTooltip) this.scene.showTooltip(this.index, this.x, this.y, this.isBoss);
-            });
-
-            zone.on('pointerout', () => {
-                this.setDepth(2);
-                this._drawStroke(false);
-                this.scene.tweens.killTweensOf(this);
-                this.scene.tweens.add({
-                    targets: this, scaleX: 1.0, scaleY: 1.0, duration: 100, ease: 'Power1',
-                    onComplete: () => {
-                        if (this.state === 'current') {
-                            this.scene.tweens.add({ targets: this, scaleX: 1.05, scaleY: 1.05, duration: 1200, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
-                        }
-                    }
-                });
-                if (this.scene.hideTooltip) this.scene.hideTooltip();
-            });
-
-            zone.on('pointerdown', () => {
-                this.scene.tweens.add({ targets: this, scaleX: 0.95, scaleY: 0.95, duration: 50 });
-            });
-
-            zone.on('pointerup', () => {
-                this.scene.tweens.add({
-                    targets: this, scaleX: 1.0, scaleY: 1.0, duration: 50,
-                    onComplete: () => {
-                        if (!this.scene.isDraggingRef()) {
-                            this.scene.sound.play('key_sound');
-                            if (this.isBoss) {
-                                this.scene.scene.start('BossScene', { lessonIndex: this.index });
-                            } else {
-                                this.scene.scene.start('PlayScene', { lessonIndex: this.index });
-                            }
-                        }
-                    }
-                });
-            });
         }
+
+        zone.on('pointerover', () => {
+            if (this.state === 'locked') return;
+            this.setDepth(10);
+            this._drawStroke(true);
+            this.scene.tweens.killTweensOf(this);
+            this.scene.tweens.add({ targets: this, scaleX: 1.1, scaleY: 1.1, duration: 100, ease: 'Power1' });
+            if (this.scene.showTooltip) this.scene.showTooltip(this.index, this.x, this.y, this.isBoss);
+        });
+
+        zone.on('pointerout', () => {
+            if (this.state === 'locked') return;
+            this.setDepth(2);
+            this._drawStroke(false);
+            this.scene.tweens.killTweensOf(this);
+            this.scene.tweens.add({
+                targets: this, scaleX: 1.0, scaleY: 1.0, duration: 100, ease: 'Power1',
+                onComplete: () => {
+                    if (this.state === 'current') {
+                        this.scene.tweens.add({ targets: this, scaleX: 1.05, scaleY: 1.05, duration: 1200, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+                    }
+                }
+            });
+            if (this.scene.hideTooltip) this.scene.hideTooltip();
+        });
+
+        zone.on('pointerdown', () => {
+            if (this.state === 'locked') return;
+            this.scene.tweens.add({ targets: this, scaleX: 0.95, scaleY: 0.95, duration: 50 });
+        });
+
+        zone.on('pointerup', () => {
+            if (this.state === 'locked') return;
+            this.scene.tweens.add({
+                targets: this, scaleX: 1.0, scaleY: 1.0, duration: 50,
+                onComplete: () => {
+                    if (!this.scene.isDraggingRef()) {
+                        this.scene.sound.play('key_sound');
+                        if (this.isBoss) {
+                            this.scene.scene.start('BossScene', { lessonIndex: this.index });
+                        } else {
+                            this.scene.scene.start('PlayScene', { lessonIndex: this.index });
+                        }
+                    }
+                }
+            });
+        });
 
         scene.add.existing(this);
     }
@@ -332,6 +336,151 @@ export class PathNode extends Phaser.GameObjects.Container {
         this.monkeyVisible = visible;
         if (this.monkeySprite) {
             this.monkeySprite.setVisible(visible);
+        }
+    }
+
+    unlock() {
+        if (this.state !== 'locked') return;
+
+        // Initialize monkey skin and sprite
+        this.monkeyVisible = false;
+        this.monkeySprite = null;
+        this.forceMonkey = true;
+        this.updateMonkeySkin();
+        this.forceMonkey = false;
+
+        // 1. Create fading active background
+        const nextTexKey = this.isBoss ? 'pn_boss_current' : 'pn_current';
+        const newImage = this.scene.add.image(0, 0, nextTexKey).setAlpha(0);
+        this.addAt(newImage, this.list.indexOf(this.nodeImage) + 1);
+
+        // 2. Create fading active stroke graphics
+        const r = this.radius;
+        const newStrokeGfx = this.scene.add.graphics().setAlpha(0);
+        this.addAt(newStrokeGfx, this.list.indexOf(this.strokeGfx) + 1);
+
+        const strokeColor = this.isBoss ? 0xfca5a5 : 0xfde68a;
+        const strokeWidth = 2.5;
+
+        // Draw border
+        newStrokeGfx.lineStyle(strokeWidth, strokeColor, 1);
+        newStrokeGfx.strokeCircle(0, 0, r);
+
+        // Draw active glow rings
+        newStrokeGfx.lineStyle(8, 0xFFD700, 0.10);
+        newStrokeGfx.strokeCircle(0, 0, r + 12);
+        newStrokeGfx.lineStyle(4, 0xFFD700, 0.25);
+        newStrokeGfx.strokeCircle(0, 0, r + 7);
+
+        // Crossfade background and border graphics
+        this.scene.tweens.add({
+            targets: [newImage, newStrokeGfx],
+            alpha: 1,
+            duration: 1800,
+            ease: 'Cubic.easeOut',
+            onComplete: () => {
+                this.nodeImage.destroy();
+                this.nodeImage = newImage;
+
+                this.strokeGfx.destroy();
+                this.strokeGfx = newStrokeGfx;
+
+                this.state = 'current';
+            }
+        });
+
+        // 3. Lock icon fade out
+        const lockText = this.list.find(item => item instanceof Phaser.GameObjects.Text && item.text === '🔒');
+        if (lockText) {
+            this.scene.tweens.add({
+                targets: lockText,
+                alpha: 0,
+                scaleX: 1.5,
+                scaleY: 1.5,
+                duration: 300,
+                onComplete: () => lockText.destroy()
+            });
+        }
+
+        // 4. Zoom in label text or animate boss sprite
+        if (!this.isBoss) {
+            const labelText = this.scene.add.text(0, 0, `${this.index + 1}`, {
+                fontFamily: 'Outfit, Arial',
+                fontSize: '22px',
+                fontStyle: 'bold',
+                fill: '#ffffff'
+            }).setOrigin(0.5).setScale(0.5).setAlpha(0);
+            labelText.setStroke('#0f172a', 3);
+            this.add(labelText);
+
+            this.scene.tweens.add({
+                targets: labelText,
+                alpha: 1,
+                scaleX: 1,
+                scaleY: 1,
+                duration: 400,
+                ease: 'Back.easeOut'
+            });
+        } else {
+            const bossSprite = this.list.find(item => item instanceof Phaser.GameObjects.Sprite && item.texture.key.startsWith('boss_'));
+            if (bossSprite) {
+                bossSprite.clearTint().setAlpha(1);
+                this.scene.tweens.add({
+                    targets: bossSprite,
+                    scaleX: 0.17,
+                    scaleY: 0.17,
+                    duration: 300,
+                    yoyo: true,
+                    ease: 'Back.easeOut'
+                });
+            }
+
+            const bossText = this.scene.add.text(0, this.radius + 12, `BOSS · BÀI ${this.index + 1}`, {
+                fontFamily: 'Outfit, Arial',
+                fontSize: '13px',
+                fontStyle: 'bold',
+                fill: '#FCA5A5'
+            }).setOrigin(0.5).setAlpha(0);
+            bossText.setStroke('#0f172a', 3);
+            this.add(bossText);
+
+            this.scene.tweens.add({
+                targets: bossText,
+                alpha: 1,
+                duration: 300
+            });
+        }
+
+        // 5. Star ratings fade in
+        const labelYOffset = this.radius + 12 + (this.isBoss ? 18 : 0);
+        const starText = this.scene.add.text(0, labelYOffset, '☆☆☆', {
+            fontFamily: 'Arial',
+            fontSize: '13px',
+            fill: '#FFD700'
+        }).setOrigin(0.5).setAlpha(0);
+        this.add(starText);
+
+        this.scene.tweens.add({
+            targets: starText,
+            alpha: 1,
+            duration: 300
+        });
+
+        // 6. Pulse scaling animation
+        this.scene.tweens.add({
+            targets: this,
+            scaleX: 1.05,
+            scaleY: 1.05,
+            duration: 1200,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
+
+        // 7. Make zone interactive
+        const zone = this.list.find(item => item instanceof Phaser.GameObjects.Zone);
+        if (zone && zone.input) {
+            zone.input.cursor = 'pointer';
         }
     }
 }

@@ -33,35 +33,51 @@ export function createBossContentUI(scene) {
  * @param {Phaser.Scene} scene
  * @param {Phaser.GameObjects.Sprite} monkey
  */
-export function playSwordAttack(scene, monkey) {
-    const mx = monkey.x, my = monkey.y;
+export function playSwordAttack(scene, target, isToLeft = true) {
+    const tx = target.x, ty = target.y;
     const tilt = Phaser.Math.Between(-15, 15);
 
-    const sword = scene.add.text(mx + 100, my, '🗡️', {
+    const startX = isToLeft ? tx + 100 : tx - 100;
+    const endX = isToLeft ? tx - 50 : tx + 50;
+
+    const sword = scene.add.text(startX, ty, '🗡️', {
         fontFamily: 'Segoe UI Emoji, Arial', fontSize: '96px'
     }).setOrigin(0.5).setDepth(30).setAngle(tilt);
 
+    if (!isToLeft) {
+        sword.setFlipX(true);
+    }
+
     scene.tweens.add({
-        targets: sword, x: mx - 50, duration: 250, ease: 'Linear',
+        targets: sword, x: endX, duration: 250, ease: 'Linear',
         onComplete: () => sword.destroy()
     });
 
     scene.time.delayedCall(160, () => {
-        if (!scene.sys?.isActive() || !monkey) return;
+        if (!scene.sys?.isActive() || !target) return;
 
-        monkey.setTint(0xff0000);
+        target.setTint(0xff0000);
         scene.cameras.main.shake(100, 0.008);
-        scene.time.delayedCall(150, () => { if (monkey) monkey.clearTint(); });
+        scene.time.delayedCall(150, () => { if (target) target.clearTint(); });
 
         const slash = scene.add.graphics().setDepth(29);
+        
         slash.lineStyle(6, 0xff3b30, 0.95);
         slash.beginPath();
-        slash.moveTo(mx + 60, my - 45); slash.lineTo(mx - 60, my + 45);
+        if (isToLeft) {
+            slash.moveTo(tx + 60, ty - 45); slash.lineTo(tx - 60, ty + 45);
+        } else {
+            slash.moveTo(tx - 80, ty - 45); slash.lineTo(tx + 100, ty + 45);
+        }
         slash.strokePath();
 
         slash.lineStyle(2, 0xffffff, 1.0);
         slash.beginPath();
-        slash.moveTo(mx + 60, my - 45); slash.lineTo(mx - 60, my + 45);
+        if (isToLeft) {
+            slash.moveTo(tx + 60, ty - 45); slash.lineTo(tx - 60, ty + 45);
+        } else {
+            slash.moveTo(tx - 80, ty - 45); slash.lineTo(tx + 100, ty + 45);
+        }
         slash.strokePath();
 
         scene.tweens.add({
