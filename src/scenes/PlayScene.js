@@ -15,6 +15,10 @@ import { TypingBox }             from '../components/TypingBox';
 import { getChapterForLesson, getChapterBgKey, CHAPTERS } from '../data/chapters';
 import { ensureTextures } from '../utils/TextureLoader';
 import { showScorePopup, showBananaDrop } from '../utils/PlayScorePopup';
+import { STORY_CONFIGS }         from '../data/story_configs';
+import { MINIGAME_CONFIGS }      from '../data/minigame_configs';
+import { StoryDialogOverlay }    from '../components/StoryDialogOverlay';
+import { MinigameFactory }       from '../components/minigames/MinigameFactory';
 
 export class PlayScene extends Phaser.Scene {
     constructor() {
@@ -29,6 +33,7 @@ export class PlayScene extends Phaser.Scene {
         this.currentWordIndex   = 0;
         this.telexEngine        = new TelexEngine(this.gameData.telex_rules);
         this.score              = 0;
+        this.minigame           = null;
 
         const progress = ProgressManager.loadProgress(this.gameData.lessons.length);
         this.currentLessonIndex   = progress.lessonIndex;
@@ -72,6 +77,10 @@ export class PlayScene extends Phaser.Scene {
                 Phaser.Input.Keyboard.KeyCodes.ESC,
                 Phaser.Input.Keyboard.KeyCodes.SPACE
             ]);
+            if (this.minigame) {
+                this.minigame.destroy();
+                this.minigame = null;
+            }
         });
 
         this.startLesson();
@@ -190,12 +199,87 @@ export class PlayScene extends Phaser.Scene {
         }
 
         this._applySkins();
-        this.showWord();
         
         if (this.isDailyChallenge) {
             this.hud.updateProgress(-1, 0, this.score, 0, this.dailyWords.length);
         } else {
             this.hud.updateProgress(this.currentLessonIndex, this.gameData.lessons.length, this.score);
+        }
+
+        // Dọn dẹp minigame cũ nếu có
+        if (this.minigame) {
+            this.minigame.destroy();
+            this.minigame = null;
+        }
+
+        // Chỉ hiển thị cốt truyện khi mở bài học lần đầu tiên
+        //const hasCompleted = this.lessonStats[this.currentLessonIndex] && this.lessonStats[this.currentLessonIndex].stars > 0;
+        //Debug purpose: always show story
+        const hasCompleted = false;
+        const storyConfig = !hasCompleted ? STORY_CONFIGS[this.currentLessonIndex] : null;
+        const minigameConfig = MINIGAME_CONFIGS[this.currentLessonIndex];
+
+        if (storyConfig && storyConfig.preGame) {
+            // Tắt xử lý gõ phím chơi game trong lúc chạy hội thoại (nhưng vẫn bật bàn phím để StoryDialogOverlay nhận phím tắt)
+            this.input.keyboard.off('keydown', this.handleKeyDown, this);
+            this.monkey.setVisible(false);
+            new StoryDialogOverlay(this, storyConfig.preGame, () => {
+                this.input.keyboard.on('keydown', this.handleKeyDown, this);
+                this.setupMinigameAndStart(minigameConfig);
+            });
+        } else {
+            this.setupMinigameAndStart(minigameConfig);
+        }
+    }
+
+    setupMinigameAndStart(minigameConfig) {
+        if (minigameConfig) {
+            this.monkey.setVisible(false);
+            const totalWords = this.isDailyChallenge 
+                ? this.dailyWords.length 
+                : this.gameData.lessons[this.currentLessonIndex].content.length;
+
+            // Quét các ảnh cần load từ config của minigame
+            const texturesToLoad = [];
+            
+            const getAssetUrl = (imagePath) => {
+                if (imagePath.startsWith('assets/')) {
+                    return imagePath;
+                }
+                return `assets/${imagePath}`;
+            };
+
+            // 1. Ảnh của container
+            if (minigameConfig.config?.container?.image) {
+                texturesToLoad.push({
+                    key: minigameConfig.config.container.texture,
+                    url: getAssetUrl(minigameConfig.config.container.image)
+                });
+            }
+            
+            // 2. Ảnh của các đồ vật (items)
+            if (Array.isArray(minigameConfig.config?.items)) {
+                minigameConfig.config.items.forEach(item => {
+                    if (item.image) {
+                        texturesToLoad.push({
+                            key: item.texture,
+                            url: getAssetUrl(item.image)
+                        });
+                    }
+                });
+            }
+
+            ensureTextures(this, texturesToLoad, () => {
+                this.minigame = MinigameFactory.createMinigame(this, minigameConfig.gameId, minigameConfig.config);
+                if (this.minigame) {
+                    this.minigame.init(totalWords);
+                    this.minigame.create();
+                }
+                this.showWord();
+            });
+        } else {
+            this.monkey.setVisible(true).setAlpha(1);
+            this.showWord();
         }
     }
 
@@ -254,6 +338,10 @@ export class PlayScene extends Phaser.Scene {
         const multiplier = this.combo.onSuccess();
         this.score += multiplier;
         
+        const totalWords = this.isDailyChallenge 
+            ? this.dailyWords.length 
+            : this.gameData.lessons[this.currentLessonIndex].content.length;
+
         if (this.isDailyChallenge) {
             this.hud.updateProgress(-1, 0, this.score, this.currentWordIndex + 1, this.dailyWords.length);
         } else {
@@ -263,15 +351,24 @@ export class PlayScene extends Phaser.Scene {
         this.combo.checkMilestone(this);
         if (multiplier >= 2) this.combo.showPopup(this, multiplier);
 
+        // Kích hoạt tương tác gõ đúng trong Minigame
+        if (this.minigame) {
+            this.minigame.onWordComplete(this.targetWord, this.currentWordIndex + 1, totalWords);
+        }
+
+        const targetSprite = this.minigame ? 
+            (this.minigame.playerContainer || this.minigame.containerSprite || this.minigame.finishedSprite || this.monkey) 
+            : this.monkey;
+
         this.tweens.add({
-            targets: this.monkey,
-            y: this.monkey.y - 50,
+            targets: targetSprite,
+            y: targetSprite.y - 30,
             duration: 200, yoyo: true, ease: 'Power2',
             onComplete: () => this.nextWord()
         });
 
-        showScorePopup(this, this.monkey, multiplier);
-        showBananaDrop(this, this.monkey);
+        showScorePopup(this, targetSprite, multiplier);
+        showBananaDrop(this, targetSprite);
     }
 
     handleFail() {
@@ -280,6 +377,10 @@ export class PlayScene extends Phaser.Scene {
         this.monkey.setTint(0xff0000);
         this.time.delayedCall(200, () => this.monkey.clearTint());
         this.combo.onFail();
+
+        if (this.minigame) {
+            this.minigame.onTypeError();
+        }
     }
 
     nextWord() {
@@ -375,81 +476,100 @@ export class PlayScene extends Phaser.Scene {
 
         const { oldStats, dailyBonusAwarded } = this._saveProgressAndCheckAchievements(stars, wpm, accuracy);
 
-        const cleanUp = () => {
-            this.input.keyboard.off('keyup-SPACE',  handleContinue);
-            this.input.keyboard.off('keyup-ENTER',  handleRetry);
-            this.input.keyboard.off('keydown-ESC',  handleBackToMap);
-        };
+        // Dọn dẹp minigame khi kết thúc bài
+        if (this.minigame) {
+            this.minigame.destroy();
+            this.minigame = null;
+        }
 
-        const showStreakVisual = () => { if (isNewStreakDay) this.hud.showStreak(newStreakDays); };
+        //const isFirstTime = !this.isDailyChallenge && (!oldStats || oldStats.stars === 0);
+        //Debug purpose: always show story
+        const isFirstTime = true;
+        const storyConfig = STORY_CONFIGS[this.currentLessonIndex];
 
-        const handleContinue = () => {
-            if (!isLastLesson && !this.isDailyChallenge) {
+        const proceedToResults = () => {
+            const cleanUp = () => {
+                this.input.keyboard.off('keyup-SPACE',  handleContinue);
+                this.input.keyboard.off('keyup-ENTER',  handleRetry);
+                this.input.keyboard.off('keydown-ESC',  handleBackToMap);
+            };
+
+            const showStreakVisual = () => { if (isNewStreakDay) this.hud.showStreak(newStreakDays); };
+
+            const handleContinue = () => {
+                if (!isLastLesson && !this.isDailyChallenge) {
+                    cleanUp(); overlay.destroy();
+                    showStreakVisual();
+                    
+                    const nextIndex = this.currentLessonIndex + 1;
+                    ProgressManager.saveProgress(
+                        nextIndex, this.score,
+                        this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
+                    );
+
+                    const isNextBoss = (nextIndex % 14 === 13);
+                    const isNewChapter = (nextIndex % 14 === 0);
+
+                    if (isNewChapter) {
+                        this.scene.start('ChapterIntroScene', { lessonIndex: nextIndex });
+                    } else if (isNextBoss) {
+                        this.scene.start('BossScene', { lessonIndex: nextIndex });
+                    } else {
+                        this.input.keyboard.on('keydown', this.handleKeyDown, this);
+                        this.currentLessonIndex = nextIndex;
+                        this.startLesson();
+                    }
+                }
+            };
+
+            const handleRetry = () => {
                 cleanUp(); overlay.destroy();
                 showStreakVisual();
-                
-                const nextIndex = this.currentLessonIndex + 1;
-                ProgressManager.saveProgress(
-                    nextIndex, this.score,
-                    this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
-                );
+                this.input.keyboard.on('keydown', this.handleKeyDown, this);
+                this.startLesson();
+            };
 
-                const isNextBoss = (nextIndex % 14 === 13);
-                const isNewChapter = (nextIndex % 14 === 0);
+            const handleBackToMap = () => {
+                cleanUp(); overlay.destroy();
+                showStreakVisual();
+                this.scene.start('MapScene');
+            };
 
-                if (isNewChapter) {
-                    this.scene.start('ChapterIntroScene', { lessonIndex: nextIndex });
-                } else if (isNextBoss) {
-                    this.scene.start('BossScene', { lessonIndex: nextIndex });
-                } else {
-                    this.input.keyboard.on('keydown', this.handleKeyDown, this);
-                    this.currentLessonIndex = nextIndex;
-                    this.startLesson();
-                }
+            let overlay = null;
+
+            const showResultOverlay = () => {
+                overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson || this.isDailyChallenge, handleBackToMap, oldStats, this.isDailyChallenge, null, dailyBonusAwarded);
+
+                this.input.keyboard.once('keyup-SPACE',  handleContinue);
+                this.input.keyboard.once('keyup-ENTER',  handleRetry);
+                this.input.keyboard.once('keydown-ESC',  handleBackToMap);
+
+                overlay.on('continue', () => { cleanUp(); handleContinue(); });
+                overlay.on('retry',    () => { cleanUp(); handleRetry(); });
+            };
+
+            if (isFirstTime) {
+                new SpinWheelOverlay(this, (reward) => {
+                    if (reward.bananas > 0) {
+                        this.score += reward.bananas;
+                        ProgressManager.saveProgress(
+                            this.currentLessonIndex, this.score,
+                            this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
+                        );
+                    }
+                    showResultOverlay();
+                });
+            } else {
+                showResultOverlay();
             }
         };
 
-        const handleRetry = () => {
-            cleanUp(); overlay.destroy();
-            showStreakVisual();
-            this.input.keyboard.on('keydown', this.handleKeyDown, this);
-            this.startLesson();
-        };
-
-        const handleBackToMap = () => {
-            cleanUp(); overlay.destroy();
-            showStreakVisual();
-            this.scene.start('MapScene');
-        };
-
-        let overlay = null;
-
-        const isFirstTime = !this.isDailyChallenge && (!oldStats || oldStats.stars === 0);
-
-        const showResultOverlay = () => {
-            overlay = new ResultOverlay(this, accuracy, wpm, isLastLesson || this.isDailyChallenge, handleBackToMap, oldStats, this.isDailyChallenge, null, dailyBonusAwarded);
-
-            this.input.keyboard.once('keyup-SPACE',  handleContinue);
-            this.input.keyboard.once('keyup-ENTER',  handleRetry);
-            this.input.keyboard.once('keydown-ESC',  handleBackToMap);
-
-            overlay.on('continue', () => { cleanUp(); handleContinue(); });
-            overlay.on('retry',    () => { cleanUp(); handleRetry(); });
-        };
-
-        if (isFirstTime) {
-            new SpinWheelOverlay(this, (reward) => {
-                if (reward.bananas > 0) {
-                    this.score += reward.bananas;
-                    ProgressManager.saveProgress(
-                        this.currentLessonIndex, this.score,
-                        this.lessonStats, this.unlockedAchievements, this.consecutivePerfects
-                    );
-                }
-                showResultOverlay();
+        if (isFirstTime && storyConfig && storyConfig.postGame) {
+            new StoryDialogOverlay(this, storyConfig.postGame, () => {
+                proceedToResults();
             });
         } else {
-            showResultOverlay();
+            proceedToResults();
         }
     }
 }

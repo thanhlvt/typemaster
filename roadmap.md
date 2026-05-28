@@ -3,6 +3,7 @@
 ## I. Danh Sách Chức Năng Hiện Tại
 
 ### Core Gameplay
+
 - 700 bài học (50 chương × 14 bài), chia 7 nhóm chủ đề có tên và emoji
 - Gõ tiếng Việt Telex thời gian thực với validator lookahead
 - Combo multiplier ×1 → ×4 với animation popup + shake effects
@@ -10,6 +11,7 @@
 - Daily challenge: bài ngẫu nhiên seeded theo ngày
 
 ### Progression & Rewards
+
 - Hệ thống mở khoá bài theo thứ tự (chương N mở sau khi hoàn thành chương N-1)
 - Xếp hạng 1–3 sao mỗi bài (dựa trên accuracy)
 - Lưu WPM tốt nhất, accuracy tốt nhất per lesson
@@ -19,6 +21,7 @@
 - Streak theo dõi ngày liên tiếp (7/14/30 ngày)
 
 ### UI/UX
+
 - MapScene: bản đồ bài học dạng lưới 4 cột, sidebar cuộn 50 chương
 - Virtual keyboard với màu highlight ngón tay
 - StatsOverlay: dashboard tổng hợp (WPM, accuracy, sao, bài hoàn thành)
@@ -33,48 +36,62 @@
 
 ### Điểm Mạnh
 
-| Yếu tố | Đánh giá |
-|--------|----------|
-| Combo system × multiplier | Tốt — tạo cảm giác "flow" khi gõ liên tục |
-| Skin khỉ unlockable | Tốt — nhân vật dễ thương, trẻ thích customize |
-| Background 7 chủ đề | Tốt — visual đa dạng, tạo cảm giác "đi phiêu lưu" |
-| Sound effects (key, error, win) | Tốt — feedback tức thì |
-| 3-sao rating | Tốt — mục tiêu rõ ràng, muốn "full star" |
-| Streak daily | Trung bình — khái niệm streak trẻ 6-8 chưa hiểu rõ |
+| Yếu tố                          | Đánh giá                                           |
+| ------------------------------- | -------------------------------------------------- |
+| Combo system × multiplier       | Tốt — tạo cảm giác "flow" khi gõ liên tục          |
+| Skin khỉ unlockable             | Tốt — nhân vật dễ thương, trẻ thích customize      |
+| Background 7 chủ đề             | Tốt — visual đa dạng, tạo cảm giác "đi phiêu lưu"  |
+| Sound effects (key, error, win) | Tốt — feedback tức thì                             |
+| 3-sao rating                    | Tốt — mục tiêu rõ ràng, muốn "full star"           |
+| Streak daily                    | Trung bình — khái niệm streak trẻ 6-8 chưa hiểu rõ |
 
 ### Điểm Yếu Nghiêm Trọng
 
 **1. Nội dung từ vựng chưa được điều chỉnh cho trẻ em**
-- 700 bài học dạy kỹ thuật gõ (Telex), nhưng không có hình ảnh minh hoạ từ vựng — trẻ 6-8 tuổi cần visual context để ghi nhớ.
+
+- 700 bài học dạy kỹ thuật gõ (Telex), nhưng không có hình ảnh minh hoạ từ vựng
+  — trẻ 6-8 tuổi cần visual context để ghi nhớ.
 - Bài học dạng text-only trong TypingBox khô khan, không kể câu chuyện.
 
 **2. Độ khó không có onboarding cho người mới hoàn toàn**
-- Không có tutorial/hướng dẫn tương tác cho lần đầu tiên. Trẻ mở ra thấy bản đồ 700 bài → bị overwhelm.
-- Telex input phức tạp (aa→â, aw→ă, sfrxjz cho dấu) — không có giải thích in-game.
+
+- Không có tutorial/hướng dẫn tương tác cho lần đầu tiên. Trẻ mở ra thấy bản đồ
+  700 bài → bị overwhelm.
+- Telex input phức tạp (aa→â, aw→ă, sfrxjz cho dấu) — không có giải thích
+  in-game.
 
 **3. MapScene không hấp dẫn về mặt thị giác**
-- Lưới bài học dạng list/grid thuần túy, thiếu yếu tố "adventure map" (bản đồ phiêu lưu có địa hình, nhân vật di chuyển...).
-- Trẻ 6-10 tuổi bị thu hút bởi game như Duolingo, Mario — TypeMaster hiện tại giống phần mềm học hơn là game.
+
+- Lưới bài học dạng list/grid thuần túy, thiếu yếu tố "adventure map" (bản đồ
+  phiêu lưu có địa hình, nhân vật di chuyển...).
+- Trẻ 6-10 tuổi bị thu hút bởi game như Duolingo, Mario — TypeMaster hiện tại
+  giống phần mềm học hơn là game.
 
 **4. Thiếu tính xã hội và cạnh tranh**
+
 - Không có leaderboard, không so sánh với bạn bè, không share kết quả.
 - Trẻ em rất bị động lực bởi peer comparison.
 
 **5. Thiếu vòng lặp ngắn hạn (short feedback loop)**
-- Reward chính là "mở bài tiếp theo" — quá dài hạn. Trẻ cần phần thưởng ngay sau 1-2 phút.
+
+- Reward chính là "mở bài tiếp theo" — quá dài hạn. Trẻ cần phần thưởng ngay sau
+  1-2 phút.
 - Không có mini-game, không có surprise rewards (loot boxes, random bonus...).
 
 **6. Âm thanh và animation còn đơn giản**
+
 - Chưa có nhạc nền, chỉ có SFX rời rạc.
 - Khỉ không animate khi gõ đúng/sai (chỉ là static sprite).
 
-**Điểm Engage Tổng Thể: 5.5/10** — đủ cho người lớn tự học, chưa đủ giữ chân trẻ 6-10.
+**Điểm Engage Tổng Thể: 5.5/10** — đủ cho người lớn tự học, chưa đủ giữ chân trẻ
+6-10.
 
 ---
 
 ## III. Đánh Giá SEO
 
 ### Điểm Mạnh
+
 - `index.html` có semantic HTML, tiếng Việt đúng
 - Có `favicon.svg`
 - Vite build tối ưu bundle size
@@ -82,26 +99,33 @@
 ### Điểm Yếu
 
 **1. App là Phaser Canvas — Google không index được nội dung**
+
 - Toàn bộ UI render trong `<canvas>`. Crawler chỉ thấy shell HTML rỗng.
 - 700 bài học, 20 thành tích, tên chương... không có trong DOM.
 
 **2. Thiếu meta tags cơ bản**
+
 - Cần: `og:title`, `og:description`, `og:image`, `twitter:card`
 - Không có structured data (schema.org `EducationalApp`, `Game`)
 
 **3. Không có landing page content**
+
 - Không có text mô tả về app ngoài canvas — Google không hiểu app này làm gì.
 - Thiếu FAQ, feature list, screenshots dạng HTML.
 
 **4. Không có sitemap.xml, robots.txt**
 
 **5. Core Web Vitals**
-- Canvas game thường có LCP chậm vì phải load toàn bộ assets trước khi hiển thị gì.
+
+- Canvas game thường có LCP chậm vì phải load toàn bộ assets trước khi hiển thị
+  gì.
 - Không có skeleton/loading placeholder thân thiện.
 
-**6. Không có backlink strategy** — cần bài blog, hướng dẫn, so sánh với phần mềm khác.
+**6. Không có backlink strategy** — cần bài blog, hướng dẫn, so sánh với phần
+mềm khác.
 
-**Điểm SEO Tổng Thể: 3/10** — đây là điểm yếu lớn nhất vì canvas app về cơ bản "vô hình" với search engine.
+**Điểm SEO Tổng Thể: 3/10** — đây là điểm yếu lớn nhất vì canvas app về cơ bản
+"vô hình" với search engine.
 
 ---
 
@@ -110,63 +134,143 @@
 ### A. Tăng Engage & Retention
 
 **1. Adventure Map thay Grid List**
-- Chuyển MapScene thành bản đồ phiêu lưu có địa hình (rừng → biển → núi → vũ trụ), nhân vật khỉ di chuyển theo tiến độ.
-- Mỗi "đảo" = 1 chương, có animation khi mở khoá (cầu xuất hiện, màn sương tan...).
+
+- Chuyển MapScene thành bản đồ phiêu lưu có địa hình (rừng → biển → núi → vũ
+  trụ), nhân vật khỉ di chuyển theo tiến độ.
+- Mỗi "đảo" = 1 chương, có animation khi mở khoá (cầu xuất hiện, màn sương
+  tan...).
 - Effort: Cao | Impact: Rất cao
 
+Game:
+
+1. Hái quả / Nhặt nấm
+
+- Thiết kế:Các vật phẩm như quả chuối, nấm, hạt dẻ nằm trên mặt đất, trên cây.
+- Tương tác: Tự động thu nhỏ và bay vào một biểu tượng giỏ đồ ở góc màn hình.
+
+2. Lắp ráp đồ vật Thiết kế:
+
+- Các mảnh ghép ghép lại thành một đồ vật (ví dụ: thân xe, bánh xe, cửa → xe ô
+  tô).
+- Tương tác: Gõ đúng chữ, một mảnh ghép xuất hiện và di chuyển vào đúng vị trí.
+  Khi đủ mảnh ghép → đồ vật hoàn chỉnh xuất hiện, có hiệu ứng phát sáng nhẹ.
+
+3. Giải cứu thú rừng
+
+- Thiết kế: chiếc lồng gỗ nhốt thỏ hoặc sóc.
+- Tương tác: Gõ đúng từ, ảnh lồng gỗ đổi sang trạng thái nứt vỡ rồi biến mất.
+  Con vật vui sướng
+
+4. Bắn bong bóng/đĩa bay
+
+- Thiết kế: Bong bóng/đĩa bay bay lượn
+- Tương tác: Gõ đúng → bong bóng/đĩa bay nổ với hiệu ứng lấp lánh (particle
+  burst).
+
+5. Vợt bướm/Đuổi ong/bắt ngọc trai
+
+- Thiết kế: ong hoặc bướm bay lượn/trai bơi dưới nước
+- Tương tác: Gõ đúng, cái vợt vợt qua, côn trùng nhấp nháy nhanh (blink effect)
+  rồi hiện ra ở cái hộp ở cạnh màn hình.
+
+6. Đua Ếch vượt sông/bơi qua suối
+
+- Thiết kế: Ếch trên các chiếc lá sen lớn trôi nổi trên mặt nước.
+- Tương tác: Gõ đúng từ → ếch ngồi trên lá nhảy vọt sang chiếc lá tiếp theo. Gõ
+  sai ếch bị chìm.
+
+7. Phép thuật lớn nhanh
+
+- Thiết kế: Một mầm cây tĩnh
+- Tương tác: Gõ đúng, giọt nước nhỏ xuống, ảnh mầm cây phóng to (scale up) hoặc
+  đổi trực tiếp sang ảnh cây trưởng thành.
+
+8. Xua tan sương mù
+
+- Thiết kế: Báu vật, rừng, nhà... bị các đám sương mù đen hoặc mây xám che
+  khuất.
+- Tương tác: Gõ đúng chữ, đám sương mù giảm dần độ hiển thị (opacity từ 100% về
+  0%) và biến mất, lộ ra khung cảnh tươi sáng.
+
+9. Đập chuột chũi
+
+- Thiết kế: Chuột chũi chui lên từ các hang.
+- Tương tác: Gõ đúng chữ, búa gõ đúng đầu chuột, chuột ôm đầu đau. Gõ sai chuột
+  lè lưỡi trêu
+
+10. Đua Xe
+
+- Thiết kế: Các xe đua nối tiếp nhau trên đường đua.
+- Tương tác: Gõ đúng chữ, xe tăng tốc về phía trước. Gõ sai xe bị chậm lại.
+
 **2. Tutorial Tương Tác Lần Đầu (FTUE)**
+
 - Bài học 0: hướng dẫn từng bước bằng dialog/mascot khỉ nói chuyện.
 - Giải thích Telex bằng animation ngón tay.
 - Effort: Trung bình | Impact: Cao
 
 **3. Phần Thưởng Ngắn Hạn (Short Reward Loop)**
-- Sau mỗi bài: random "treasure chest" (1-3 loại) — thêm skin item, banana bonus, sticker.
+
+- Sau mỗi bài: random "treasure chest" (1-3 loại) — thêm skin item, banana
+  bonus, sticker.
 - "Lucky Spin" khi đạt combo ×4 lần đầu trong ngày.
 - Effort: Trung bình | Impact: Cao với trẻ em
 
 **4. Nhân Vật Khỉ Animate Theo Trạng Thái**
+
 - Khỉ nhảy vui khi gõ đúng, lắc đầu khi gõ sai, nhảy múa khi hoàn thành bài.
 - Dễ làm với Phaser sprite sheets.
 - Effort: Thấp-Trung | Impact: Cao
 
 **5. Âm Nhạc Nền Theo Chủ Đề**
+
 - Nhạc nền nhẹ nhàng thay đổi theo 7 nhóm chủ đề (rừng, đại dương...).
 - Effort: Thấp (mua nhạc free license) | Impact: Trung bình-Cao
 
 **6. Boss Level / Mini-Game Cuối Chương**
+
 - Sau 14 bài của mỗi chương: "Boss battle" — gõ đua với boss trong 30 giây.
 - Thắng → nhận item hiếm, mở chương mới có cutscene ngắn.
 - Effort: Cao | Impact: Rất cao
 
 **7. Hệ Thống Chia Sẻ Kết Quả**
+
 - Share ảnh kết quả (WPM, sao, nhân vật) lên mạng xã hội.
 - Link mời bạn chơi cùng.
 - Effort: Trung bình | Impact: Cao (viral loop)
 
 **8. Chế Độ Luyện Tập Tự Do (Free Practice)**
+
 - Cho phép gõ bất kỳ từ nào, hiển thị WPM + accuracy không có penalty.
 - Phù hợp trẻ mới hoàn toàn.
 - Effort: Thấp | Impact: Trung bình
 
 **9. Sự Kiện Theo Mùa (Seasonal Events)**
+
 - "Tháng 6: Huy hiệu Mùa Hè", "Tháng 1: Huy hiệu Tết".
 - Skin giới hạn thời gian (limited edition) → FOMO tự nhiên.
 - Effort: Thấp (chủ yếu design) | Impact: Cao cho retention dài hạn
 
 **10. Nhân Vật Đa Dạng Hơn**
-- Thêm nhân vật ngoài khỉ (mèo, gấu trúc...) — trẻ thích chọn nhân vật yêu thích.
+
+- Thêm nhân vật ngoài khỉ (mèo, gấu trúc...) — trẻ thích chọn nhân vật yêu
+  thích.
 - Effort: Trung bình | Impact: Trung bình-Cao
 
 ---
 
 ### B. Tăng SEO
 
-**1. Landing Page HTML Đầy Đủ** *(quan trọng nhất)*
-- Thêm section HTML bên dưới canvas (hoặc trang riêng) với: mô tả app, screenshots, features, FAQ.
+**1. Landing Page HTML Đầy Đủ** _(quan trọng nhất)_
+
+- Thêm section HTML bên dưới canvas (hoặc trang riêng) với: mô tả app,
+  screenshots, features, FAQ.
 - Dùng heading `h1`–`h3`, bullet points, alt text cho ảnh.
-- Keywords mục tiêu: "học gõ 10 ngón tiếng Việt", "tập đánh máy cho trẻ em", "telex typing game"
+- Keywords mục tiêu: "học gõ 10 ngón tiếng Việt", "tập đánh máy cho trẻ em",
+  "telex typing game"
 
 **2. Meta Tags & Open Graph**
+
 ```html
 <meta name="description" content="Game học gõ 10 ngón tiếng Việt cho trẻ em...">
 <meta property="og:title" content="TypeMaster — Học Gõ Tiếng Việt">
@@ -175,6 +279,7 @@
 ```
 
 **3. Structured Data (Schema.org)**
+
 ```json
 {
   "@type": "EducationalApplication",
@@ -185,28 +290,31 @@
 ```
 
 **4. Blog / Content Marketing**
+
 - Bài "Hướng dẫn gõ Telex cho người mới", "Lợi ích gõ 10 ngón với trẻ em"
 - Đây là cách duy nhất để rank từ khoá long-tail.
 
 **5. sitemap.xml + robots.txt**
 
 **6. Performance (Core Web Vitals)**
-- Thêm loading screen có nội dung HTML trong khi Phaser khởi động (thay vì canvas trắng).
+
+- Thêm loading screen có nội dung HTML trong khi Phaser khởi động (thay vì
+  canvas trắng).
 - Preconnect Google Fonts.
 
 ---
 
 ## V. Roadmap Ưu Tiên
 
-| Priority | Task | Effort | Impact |
-|----------|------|--------|--------|
-| P0 | Landing page HTML + meta tags | 2 ngày | SEO critical |
-| P0 | First-time tutorial (khỉ hướng dẫn) | 3 ngày | Retention critical |
-| P1 | Khỉ animate theo trạng thái | 2 ngày | Engagement |
-| P1 | Nhạc nền theo chủ đề | 1 ngày | Immersion |
-| P1 | Short reward loop (treasure after lesson) | 3 ngày | Retention |
-| P2 | Adventure map thay grid | 1 tuần | Engagement cao |
-| P2 | Boss level cuối chương | 1 tuần | Retention cao |
-| P2 | Share kết quả lên mạng | 3 ngày | Viral loop |
-| P3 | Seasonal events / skin giới hạn | ongoing | Long-term retention |
-| P3 | Blog content marketing | ongoing | SEO long-term |
+| Priority | Task                                      | Effort  | Impact              |
+| -------- | ----------------------------------------- | ------- | ------------------- |
+| P0       | Landing page HTML + meta tags             | 2 ngày  | SEO critical        |
+| P0       | First-time tutorial (khỉ hướng dẫn)       | 3 ngày  | Retention critical  |
+| P1       | Khỉ animate theo trạng thái               | 2 ngày  | Engagement          |
+| P1       | Nhạc nền theo chủ đề                      | 1 ngày  | Immersion           |
+| P1       | Short reward loop (treasure after lesson) | 3 ngày  | Retention           |
+| P2       | Adventure map thay grid                   | 1 tuần  | Engagement cao      |
+| P2       | Boss level cuối chương                    | 1 tuần  | Retention cao       |
+| P2       | Share kết quả lên mạng                    | 3 ngày  | Viral loop          |
+| P3       | Seasonal events / skin giới hạn           | ongoing | Long-term retention |
+| P3       | Blog content marketing                    | ongoing | SEO long-term       |
