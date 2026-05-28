@@ -1,54 +1,53 @@
 import { BaseMinigame } from './BaseMinigame';
+import * as Phaser from 'phaser';
 
 export class ClearFogGame extends BaseMinigame {
     constructor(scene, config) {
         super(scene, config);
         this.fogsList = [];
-        this.treasureSprite = null;
     }
 
     create() {
-        const treasureEmoji = this.config?.treasureEmoji || '🏰'; // 🏰, 👑, 💎
-        const fogEmoji = this.config?.fogEmoji || '🌫️'; // 🌫️, ☁️
+        const fogEmoji = this.config?.fogEmoji || '🌫️';
         const count = this.totalWords || 8;
-        const x = this.config?.x || 400;
-        const y = this.config?.y || 220;
 
-        const treasureKey = this.createEmojiTexture('clear_treasure_tex', treasureEmoji, 80);
         const fogKey = this.createEmojiTexture('clear_fog_tex', fogEmoji, 80);
 
-        // 1. Tạo báu vật/lâu đài ẩn giấu làm trung tâm
-        this.treasureSprite = this.scene.add.sprite(x, y, treasureKey)
-            .setDepth(110)
-            .setScale(1.5);
-        this.add(this.treasureSprite);
+        // 1. Xác định vùng không gian rải sương mù x1, y1, x2, y2
+        const x1 = this.config?.x1 !== undefined ? this.config.x1 
+            : (this.config?.area?.x1 !== undefined ? this.config.area.x1 : 320);
+        
+        const y1 = this.config?.y1 !== undefined ? this.config.y1 
+            : (this.config?.area?.y1 !== undefined ? this.config.area.y1 : 170);
 
-        // Cho báu vật phát hào quang lấp lánh nhẹ bằng tween alpha
-        this.scene.tweens.add({
-            targets: this.treasureSprite,
-            alpha: 0.7,
-            duration: 1500,
-            yoyo: true,
-            repeat: -1,
-            ease: 'Sine.easeInOut'
-        });
+        const x2 = this.config?.x2 !== undefined ? this.config.x2 
+            : (this.config?.area?.x2 !== undefined ? this.config.area.x2 : 480);
 
-        // 2. Tạo các đám sương mù phủ ngẫu nhiên xung quanh báu vật
+        const y2 = this.config?.y2 !== undefined ? this.config.y2 
+            : (this.config?.area?.y2 !== undefined ? this.config.area.y2 : 270);
+
+        // 2. Xác định scale của đám sương mù
+        const baseScale = this.config?.fogScale !== undefined ? this.config.fogScale 
+            : (this.config?.scale !== undefined ? this.config.scale : 1.5);
+
+        // 3. Tạo các đám sương mù phủ ngẫu nhiên trong vùng chỉ định
         for (let i = 0; i < count; i++) {
-            const rx = x + Phaser.Math.Between(-80, 80);
-            const ry = y + Phaser.Math.Between(-50, 50);
+            const rx = Phaser.Math.Between(x1, x2);
+            const ry = Phaser.Math.Between(y1, y2);
+
+            const randomScale = Phaser.Math.FloatBetween(baseScale * 0.8, baseScale * 1.2);
 
             const fogSprite = this.scene.add.sprite(rx, ry, fogKey)
                 .setDepth(112)
-                .setScale(Phaser.Math.FloatBetween(1.2, 1.8))
+                .setScale(randomScale)
                 .setAlpha(0.95);
             this.add(fogSprite);
 
             // Cho mây sương mù bay dập dình nhẹ
             this.scene.tweens.add({
                 targets: fogSprite,
-                x: rx + Phaser.Math.Between(-10, 10),
-                y: ry + Phaser.Math.Between(-10, 10),
+                x: rx + Phaser.Math.Between(-20, 20),
+                y: ry + Phaser.Math.Between(-20, 20),
                 duration: Phaser.Math.Between(1500, 3000),
                 yoyo: true,
                 repeat: -1,
@@ -71,14 +70,28 @@ export class ClearFogGame extends BaseMinigame {
             targetFog.cleared = true;
 
             const scene = this.scene;
-            const x = this.config?.x || 400;
-            const y = this.config?.y || 220;
+
+            // Xác định vùng không gian để tính tâm phân tán sương mù
+            const x1 = this.config?.x1 !== undefined ? this.config.x1 
+                : (this.config?.area?.x1 !== undefined ? this.config.area.x1 : 320);
+            
+            const y1 = this.config?.y1 !== undefined ? this.config.y1 
+                : (this.config?.area?.y1 !== undefined ? this.config.area.y1 : 170);
+
+            const x2 = this.config?.x2 !== undefined ? this.config.x2 
+                : (this.config?.area?.x2 !== undefined ? this.config.area.x2 : 480);
+
+            const y2 = this.config?.y2 !== undefined ? this.config.y2 
+                : (this.config?.area?.y2 !== undefined ? this.config.area.y2 : 270);
+
+            const cx = (x1 + x2) / 2;
+            const cy = (y1 + y2) / 2;
 
             // Dừng tween bay nhẹ cũ
             scene.tweens.killTweensOf(targetFog.sprite);
 
-            // Cho sương mù bay dạt ra ngoài rìa và mờ dần
-            const angle = Math.atan2(targetFog.sprite.y - y, targetFog.sprite.x - x);
+            // Cho sương mù bay dạt ra ngoài rìa theo hướng từ tâm và mờ dần
+            const angle = Math.atan2(targetFog.sprite.y - cy, targetFog.sprite.x - cx);
             const targetX = targetFog.sprite.x + Math.cos(angle) * 200;
             const targetY = targetFog.sprite.y + Math.sin(angle) * 150;
 
@@ -87,27 +100,14 @@ export class ClearFogGame extends BaseMinigame {
                 x: targetX,
                 y: targetY,
                 alpha: 0,
-                scaleX: 0.5,
-                scaleY: 0.5,
+                scaleX: 3.5,
+                scaleY: 3.5,
                 duration: 600,
                 ease: 'Quad.easeOut',
                 onComplete: () => {
                     targetFog.sprite.setVisible(false);
                 }
             });
-
-            // Nếu đã xua tan toàn bộ sương mù -> báu vật bừng sáng
-            if (currentWordIndex >= totalWords) {
-                scene.tweens.killTweensOf(this.treasureSprite);
-                scene.tweens.add({
-                    targets: this.treasureSprite,
-                    scaleX: 2.0,
-                    scaleY: 2.0,
-                    alpha: 1.0,
-                    duration: 500,
-                    ease: 'Back.easeOut'
-                });
-            }
         }
     }
 

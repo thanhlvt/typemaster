@@ -202,10 +202,12 @@ export const MINIGAME_CONFIGS = {
     6: {
         gameId: 'clear_fog',
         config: {
-            treasureEmoji: '🏰',
             fogEmoji: '🌫️',
-            x: 490,
-            y: 220
+            fogScale: 2,
+            x1: 200,
+            y1: 140,
+            x2: 750,
+            y2: 330
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
