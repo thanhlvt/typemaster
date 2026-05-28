@@ -118,8 +118,18 @@ export const MINIGAME_CONFIGS = {
     3: {
         gameId: 'rescue_animals',
         config: {
-            animalEmoji: '🐰',
-            cageEmoji: '📦',
+            animal: {
+                texture: 'rescue_rabbit_tex',
+                image: 'rabbit.png',
+                scale: 0.8,
+                animalEmoji: '🐰'
+            },
+            cage: {
+                texture: 'rescue_cage_tex',
+                image: 'cage.png',
+                scale: 1,
+                cageEmoji: '📦'
+            },
             x: 490,
             y: 230
         },
