@@ -41,6 +41,20 @@ export class PlayScene extends Phaser.Scene {
             strokeThickness: 5
         });
 
+        // Add Streak Text
+        this.streakText = this.add.text(width / 2, 40, '🔥 ' + this.streakDays + ' ngày', {
+            fontFamily: 'Arial',
+            fontSize: '32px',
+            fontStyle: 'bold',
+            fill: '#FF9800',
+            stroke: '#000',
+            strokeThickness: 4
+        }).setOrigin(0.5);
+        
+        if (this.streakDays === 0) {
+            this.streakText.setVisible(false);
+        }
+
         this._createResetButton(width);
         this.startLesson();
 
@@ -66,6 +80,32 @@ export class PlayScene extends Phaser.Scene {
                 this.score = saved.score || 0;
             }
         } catch (_) { }
+
+        // Load streak for display
+        this.streakDays = 0;
+        try {
+            const streakData = JSON.parse(localStorage.getItem('typemaster_streak'));
+            if (streakData) {
+                this.streakDays = streakData.streakDays || 0;
+                const lastPlayDate = streakData.lastPlayDate;
+                
+                if (lastPlayDate) {
+                    const today = new Date();
+                    const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+                    const yesterday = new Date(today);
+                    yesterday.setDate(yesterday.getDate() - 1);
+                    const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth()+1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
+                    
+                    if (lastPlayDate !== todayStr && lastPlayDate !== yesterdayStr) {
+                        this.streakDays = 0;
+                        localStorage.setItem('typemaster_streak', JSON.stringify({
+                            streakDays: 0,
+                            lastPlayDate: lastPlayDate
+                        }));
+                    }
+                }
+            }
+        } catch (_) { }
     }
 
     _saveProgress() {
@@ -76,12 +116,17 @@ export class PlayScene extends Phaser.Scene {
     }
 
     _doReset() {
-        localStorage.removeItem(SAVE_KEY);
+        localStorage.clear();
         this.tweens.killAll();
         this.currentLessonIndex = 0;
         this.currentWordIndex = 0;
         this.score = 0;
         this.scoreText.setText('Chuối: 0');
+        this.streakDays = 0;
+        if (this.streakText) {
+            this.streakText.setText('🔥 0 ngày');
+            this.streakText.setVisible(false);
+        }
         this.monkey.y = this.scale.height * 0.4;
         this.input.keyboard.enabled = true;
         this.startLesson();
@@ -392,11 +437,78 @@ export class PlayScene extends Phaser.Scene {
         this.input.keyboard.once('keyup-SPACE', () => {
             if (!isLastLesson) {
                 overlay.destroy();
+                this._checkAndUpdateStreak();
                 this.input.keyboard.on('keydown', this.handleKeyDown, this);
                 this.currentLessonIndex++;
                 this._saveProgress();
                 this.startLesson();
             }
         });
+    }
+
+    // ── Streak logic helper ───────────────────────────────────────
+    
+    _checkAndUpdateStreak() {
+        let storedStreak = 0;
+        let storedDate = null;
+        try {
+            const data = JSON.parse(localStorage.getItem('typemaster_streak'));
+            if (data) {
+                storedStreak = data.streakDays || 0;
+                storedDate = data.lastPlayDate;
+            }
+        } catch(e) {}
+
+        const today = new Date();
+        const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        
+        if (storedDate !== todayStr) {
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+            const yesterdayStr = `${yesterday.getFullYear()}-${String(yesterday.getMonth()+1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
+            
+            let newStreak = storedStreak;
+            if (storedDate === yesterdayStr) {
+                newStreak++;
+            } else {
+                newStreak = 1;
+            }
+            
+            localStorage.setItem('typemaster_streak', JSON.stringify({
+                lastPlayDate: todayStr,
+                streakDays: newStreak
+            }));
+            
+            this.streakDays = newStreak;
+            this.streakText.setText('🔥 ' + this.streakDays + ' ngày');
+            this.streakText.setVisible(true);
+            
+            // Animation for streak text
+            this.tweens.add({
+                targets: this.streakText,
+                scaleX: 1.5,
+                scaleY: 1.5,
+                angle: 15,
+                duration: 300,
+                yoyo: true,
+                ease: 'Back.easeOut'
+            });
+            
+            // Celebration particles
+            for (let i = 0; i < 8; i++) {
+                const p = this.add.image(this.streakText.x, this.streakText.y, 'banana').setScale(0.15);
+                const angle = (i / 8) * Math.PI * 2;
+                this.tweens.add({
+                    targets: p,
+                    x: p.x + Math.cos(angle) * 80,
+                    y: p.y + Math.sin(angle) * 80,
+                    alpha: 0,
+                    angle: 360,
+                    duration: 800,
+                    ease: 'Cubic.easeOut',
+                    onComplete: () => p.destroy()
+                });
+            }
+        }
     }
 }
