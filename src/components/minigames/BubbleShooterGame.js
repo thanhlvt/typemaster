@@ -7,10 +7,16 @@ export class BubbleShooterGame extends BaseMinigame {
     }
 
     create() {
-        const bubbleEmoji = this.config?.bubbleEmoji || '🫧'; // 🫧, 🎈, 🛸
+        const bubbleConfig = this.config?.bubble || {};
+        const bubbleEmoji = bubbleConfig.emoji || this.config?.bubbleEmoji || '🫧';
+        const bubbleTex = bubbleConfig.texture || 'bubble_shoot_tex';
+        const bubbleScale = bubbleConfig.scale !== undefined ? bubbleConfig.scale : 1.0;
+
         const count = this.totalWords || 10;
         
-        const bubbleKey = this.createEmojiTexture('bubble_shoot_tex', bubbleEmoji, 48);
+        const bubbleKey = this.scene.textures.exists(bubbleTex)
+            ? bubbleTex
+            : this.createEmojiTexture(bubbleTex, bubbleEmoji, 48);
 
         const minX = this.config?.area?.minX || 150;
         const maxX = this.config?.area?.maxX || 650;
@@ -21,16 +27,18 @@ export class BubbleShooterGame extends BaseMinigame {
             const rx = Phaser.Math.Between(minX, maxX);
             const ry = Phaser.Math.Between(minY, maxY);
 
+            const randomScale = bubbleScale * Phaser.Math.FloatBetween(0.8, 1);
+
             const bubbleSprite = this.scene.add.sprite(rx, ry, bubbleKey)
                 .setDepth(111)
-                .setScale(Phaser.Math.FloatBetween(0.8, 1.2));
+                .setScale(randomScale);
             this.add(bubbleSprite);
 
             // Cho bong bóng bay lơ lửng nhẹ nhàng
             this.scene.tweens.add({
                 targets: bubbleSprite,
-                y: ry + Phaser.Math.Between(-15, 15),
-                x: rx + Phaser.Math.Between(-15, 15),
+                y: ry + Phaser.Math.Between(-25, 25),
+                x: rx + Phaser.Math.Between(-25, 25),
                 duration: Phaser.Math.Between(1500, 2500),
                 yoyo: true,
                 repeat: -1,
@@ -46,7 +54,7 @@ export class BubbleShooterGame extends BaseMinigame {
         }
     }
 
-    onWordComplete(word, currentWordIndex, totalWords) {
+    onWordComplete(word, currentWordIndex, totalWords, onCompleteCallback) {
         // Tìm bong bóng chưa nổ
         const unpopped = this.bubblesList.filter(b => !b.popped);
         if (unpopped.length > 0) {
@@ -56,19 +64,82 @@ export class BubbleShooterGame extends BaseMinigame {
             const scene = this.scene;
             const self = this;
 
-            // Nổ bong bóng
+            const startX = scene.scale.width / 2;
+            const startY = scene.scale.height * 0.86;
+            const targetX = targetBubble.sprite.x;
+            const targetY = targetBubble.sprite.y;
+
+            // Dừng tween bay lơ lửng của bong bóng này để cố định vị trí trước khi bắn trúng
+            scene.tweens.killTweensOf(targetBubble.sprite);
+
+            // Tạo đồ họa mũi tên vẽ vector
+            const arrow = scene.add.graphics();
+            arrow.lineStyle(4, 0xFBBF24, 1);
+            arrow.fillStyle(0xFBBF24, 1);
+            
+            // Vẽ mũi tên chỉ sang phải (+X)
+            arrow.beginPath();
+            arrow.moveTo(15, 0);
+            arrow.lineTo(-10, -8);
+            arrow.lineTo(-10, 8);
+            arrow.closePath();
+            arrow.fillPath();
+            arrow.lineBetween(-25, 0, -5, 0);
+            arrow.setDepth(120);
+
+            arrow.setPosition(startX, startY);
+            const angle = Phaser.Math.Angle.Between(startX, startY, targetX, targetY);
+            arrow.setRotation(angle);
+
+            // Phát âm thanh bắn tên
+            scene.sound.play('whoosh');
+
+            // Tween bắn mũi tên bay từ bàn phím vào bong bóng
             scene.tweens.add({
-                targets: targetBubble.sprite,
-                scaleX: 1.6,
-                scaleY: 1.6,
-                alpha: 0,
-                duration: 200,
-                onComplete: () => {
+                targets: arrow,
+                x: targetX,
+                y: targetY,
+                duration: 250,
+                ease: 'Quad.easeOut',
+                onUpdate: () => {
                     if (!self.scene) return;
-                    self.showPopParticles(targetBubble.sprite.x, targetBubble.sprite.y);
-                    targetBubble.sprite.setVisible(false);
+                    // Tạo vệt sáng lấp lánh (sparkle trail)
+                    const trailDot = scene.add.circle(arrow.x, arrow.y, 4, 0xFBBF24).setDepth(119);
+                    scene.tweens.add({
+                        targets: trailDot,
+                        alpha: 0,
+                        scale: 0.1,
+                        duration: 200,
+                        onComplete: () => {
+                            trailDot.destroy();
+                        }
+                    });
+                },
+                onComplete: () => {
+                    arrow.destroy();
+                    if (!self.scene) return;
+
+                    // Phát âm thanh nổ bong bóng
+                    scene.sound.play('blob');
+
+                    // Hiệu ứng bong bóng phồng lên rồi nổ
+                    scene.tweens.add({
+                        targets: targetBubble.sprite,
+                        scaleX: targetBubble.sprite.scaleX * 1.5,
+                        scaleY: targetBubble.sprite.scaleY * 1.5,
+                        alpha: 0,
+                        duration: 150,
+                        onComplete: () => {
+                            if (!self.scene) return;
+                            self.showPopParticles(targetBubble.sprite.x, targetBubble.sprite.y);
+                            targetBubble.sprite.setVisible(false);
+                            if (onCompleteCallback) onCompleteCallback();
+                        }
+                    });
                 }
             });
+        } else {
+            if (onCompleteCallback) onCompleteCallback();
         }
     }
 
@@ -105,6 +176,7 @@ export class BubbleShooterGame extends BaseMinigame {
             distance: speed,
             duration: 300,
             onUpdate: (tween, target) => {
+                if (!self.scene) return;
                 graphics.clear();
                 pts.forEach(p => {
                     graphics.fillStyle(color, 1 - (p.distance / speed));

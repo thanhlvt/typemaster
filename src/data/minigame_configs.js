@@ -252,8 +252,13 @@ export const MINIGAME_CONFIGS = {
     8: {
         gameId: 'bubble_shooter',
         config: {
-            bubbleEmoji: '🫧',
-            area: { minX: 150, maxX: 650, minY: 100, maxY: 280 }
+            bubble: {
+                texture: 'bubble_shoot_tex',
+                image: 'bubble.png',
+                scale: 0.8,
+                emoji: '🫧'
+            },
+            area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
         interactions: {
             onWordComplete: { action: 'pop_bubble' },

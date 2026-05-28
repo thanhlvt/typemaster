@@ -167,6 +167,14 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
             });
         }
 
+        // 9. BubbleShooter images (bubble)
+        if (minigameConfig.config?.bubble?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.bubble.texture || 'bubble_shoot_tex',
+                url: getAssetUrl(minigameConfig.config.bubble.image)
+            });
+        }
+
         ensureTextures(scene, texturesToLoad, () => {
             const minigame = MinigameFactory.createMinigame(scene, minigameConfig.gameId, minigameConfig.config);
             if (minigame) {
