@@ -143,10 +143,22 @@ export const MINIGAME_CONFIGS = {
     4: {
         gameId: 'grow_plant',
         config: {
-            cloudEmoji: '☁️',
-            potEmoji: '🪴',
+            cloud: {
+                texture: 'grow_cloud_tex',
+                image: 'cloud.png',
+                scale: 0.35
+            },
+            plant: {
+                stages: [
+                    { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
+                    { texture: 'grow_tree2', image: 'tree2.png', scale: 0.3 },
+                    { texture: 'grow_tree3', image: 'tree3.png', scale: 0.6 },
+                    { texture: 'grow_tree4', image: 'tree4.png', scale: 0.7 },
+                    { texture: 'grow_tree5', image: 'tree5.png', scale: 0.75 }
+                ]
+            },
             x: 490,
-            y: 220
+            y: 390
         },
         interactions: {
             onWordComplete: { action: 'water_plant' },

@@ -1,53 +1,50 @@
 import { BaseMinigame } from './BaseMinigame';
+import * as Phaser from 'phaser';
 
 export class GrowPlantGame extends BaseMinigame {
     constructor(scene, config) {
         super(scene, config);
         this.plantSprite = null;
-        this.cloudSprite = null;
-        this.potSprite = null;
+        this.stages = [];
     }
 
     create() {
-        const cloudEmoji = this.config?.cloudEmoji || '☁️';
-        const potEmoji = this.config?.potEmoji || '🪴';
+        const plantConfig = this.config?.plant || {};
         const x = this.config?.x || 400;
         const y = this.config?.y || 230;
 
-        const cloudKey = this.createEmojiTexture('grow_cloud_tex', cloudEmoji, 64);
-        const potKey = this.createEmojiTexture('grow_pot_tex', potEmoji, 72);
+        // 1. Setup các giai đoạn phát triển (stages), theo thứ tự từ BÉ đến LỚN
+        this.stages = [];
+        if (Array.isArray(plantConfig.stages)) {
+            plantConfig.stages.forEach((stage, idx) => {
+                const stageTex = stage.texture || `grow_plant_stage_${idx}`;
+                const stageScale = stage.scale !== undefined ? stage.scale : 1.0;
+                this.stages.push({
+                    textureKey: stageTex,
+                    scale: stageScale
+                });
+            });
+        } else {
+            // Mặc định: 🌱, 🌿, 🌳 theo thứ tự từ bé đến lớn
+            const sproutKey = this.createEmojiTexture('grow_sprout_tex', '🌱', 64);
+            const bushKey = this.createEmojiTexture('grow_bush_tex', '🌿', 64);
+            const treeKey = this.createEmojiTexture('grow_tree_tex', '🌳', 72);
 
-        // Tạo mầm cây ban đầu
-        this.plantKeySprout = this.createEmojiTexture('grow_sprout_tex', '🌱', 64);
-        this.plantKeyBush = this.createEmojiTexture('grow_bush_tex', '🌿', 64);
-        this.plantKeyTree = this.createEmojiTexture('grow_tree_tex', '🌳', 72);
+            this.stages = [
+                { textureKey: sproutKey, scale: 0.8 },
+                { textureKey: bushKey, scale: 1.0 },
+                { textureKey: treeKey, scale: 1.2 }
+            ];
+        }
 
-        // 1. Tạo chậu cây
-        this.potSprite = this.scene.add.sprite(x, y + 50, potKey)
-            .setDepth(110)
-            .setScale(1.2);
-        this.add(this.potSprite);
-
-        // 2. Tạo đám mây ở trên cao
-        this.cloudSprite = this.scene.add.sprite(x, y - 100, cloudKey)
-            .setDepth(110);
-        this.add(this.cloudSprite);
-
-        // 3. Tạo mầm cây
-        this.plantSprite = this.scene.add.sprite(x, y, this.plantKeySprout)
+        // 2. Tạo cây ban đầu
+        // Sử dụng setOrigin(0.5, 1.0) để tọa độ (x, y) đại diện cho điểm giữa, dưới cùng của ảnh
+        const initialStage = this.stages[0];
+        this.plantSprite = this.scene.add.sprite(x, y, initialStage.textureKey)
             .setDepth(112)
-            .setScale(0.8);
+            .setOrigin(0.5, 1.0)
+            .setScale(initialStage.scale);
         this.add(this.plantSprite);
-
-        // Cho mây đung đưa nhẹ
-        this.scene.tweens.add({
-            targets: this.cloudSprite,
-            x: x + 15,
-            duration: 2000,
-            yoyo: true,
-            repeat: -1,
-            ease: 'Sine.easeInOut'
-        });
     }
 
     onWordComplete(word, currentWordIndex, totalWords) {
@@ -57,56 +54,74 @@ export class GrowPlantGame extends BaseMinigame {
         const y = this.config?.y || 230;
         const self = this;
 
-        // 1. Tạo giọt nước rơi từ đám mây xuống cây
-        const dropKey = this.createEmojiTexture('grow_drop_tex', '💧', 32);
-        const drop = scene.add.sprite(this.cloudSprite.x, this.cloudSprite.y + 10, dropKey)
-            .setDepth(111)
-            .setScale(0.8);
-        this.add(drop);
+        // Giọt nước dùng emoji 💧
+        const dropKey = this.createEmojiTexture('grow_drop_tex', '💧', 40);
 
-        scene.tweens.add({
-            targets: drop,
-            y: y + 20,
-            scaleX: 0.4,
-            scaleY: 0.4,
-            duration: 400,
-            ease: 'Quad.easeIn',
-            onComplete: () => {
-                drop.destroy();
-                if (!self.scene) return;
+        // Tạo 7 giọt nước rơi
+        const numDrops = 10;
+        let dropsFinished = 0;
 
-                // 2. Cây hấp thụ nước, nảy nhẹ và lớn lên
-                let nextTexture = self.plantKeySprout;
-                let nextScale = 0.8 + progress * 0.8; // Lớn dần
+        for (let i = 0; i < numDrops; i++) {
+            // Phân bố giọt nước dọc theo chiều ngang phía trên cây
+            const offsetX = Phaser.Math.Between(-40, 40);
+            const offsetY = Phaser.Math.Between(0, 15);
+            const drop = scene.add.sprite(x + offsetX, y - 180 + offsetY, dropKey)
+                .setDepth(111)
+                .setScale(Phaser.Math.FloatBetween(0.5, 0.8));
+            this.add(drop);
 
-                if (progress >= 0.75) {
-                    nextTexture = self.plantKeyTree;
-                } else if (progress >= 0.35) {
-                    nextTexture = self.plantKeyBush;
-                }
+            const delay = Phaser.Math.Between(0, 200);
+            const duration = Phaser.Math.Between(350, 500);
 
-                // Cập nhật texture cây nếu chuyển đổi giai đoạn
-                self.plantSprite.setTexture(nextTexture);
+            scene.tweens.add({
+                targets: drop,
+                y: y - 20 + Phaser.Math.Between(-10, 10), // Rơi đến phần thân cây
+                scaleX: 0.3,
+                scaleY: 0.3,
+                delay: delay,
+                duration: duration,
+                ease: 'Quad.easeIn',
+                onComplete: () => {
+                    drop.destroy();
+                    dropsFinished++;
 
-                scene.tweens.add({
-                    targets: self.plantSprite,
-                    scaleX: nextScale * 1.3,
-                    scaleY: nextScale * 1.3,
-                    y: y - (progress * 25), // Dịch nhẹ lên cao khi lớn
-                    duration: 150,
-                    yoyo: true,
-                    ease: 'Quad.easeOut',
-                    onComplete: () => {
-                        if (!self.scene) return;
-                        self.plantSprite.setScale(nextScale);
+                    // Khi toàn bộ các giọt nước đã rơi xong, kích hoạt cây lớn lên
+                    if (dropsFinished === numDrops) {
+                        self.triggerPlantGrowth(progress, y);
                     }
-                });
+                }
+            });
+        }
+    }
+
+    triggerPlantGrowth(progress, y) {
+        if (!this.scene) return;
+        const scene = this.scene;
+
+        const N = this.stages.length;
+        const stageIndex = Math.min(Math.floor(progress * N), N - 1);
+        const currentStage = this.stages[stageIndex];
+
+        // Cập nhật texture cây
+        this.plantSprite.setTexture(currentStage.textureKey);
+
+        // Cây phát triển giãn nở hướng lên trên từ gốc cây (gốc cây cố định tại tọa độ y)
+        scene.tweens.add({
+            targets: this.plantSprite,
+            scaleX: currentStage.scale * 1.3,
+            scaleY: currentStage.scale * 1.3,
+            duration: 150,
+            yoyo: true,
+            ease: 'Quad.easeOut',
+            onComplete: () => {
+                if (!this.scene) return;
+                this.plantSprite.setScale(currentStage.scale);
             }
         });
     }
 
     onTypeError(char) {
-        // Gõ sai -> Cây bị rung rinh nhẹ báo hiệu cần nước
+        // Gõ sai -> Cây bị rung rinh nhẹ quanh gốc cây (anchor ở đáy) báo hiệu cần nước
         this.scene.tweens.add({
             targets: this.plantSprite,
             angle: 15,
@@ -114,7 +129,9 @@ export class GrowPlantGame extends BaseMinigame {
             yoyo: true,
             repeat: 2,
             onComplete: () => {
-                this.plantSprite.angle = 0;
+                if (this.plantSprite) {
+                    this.plantSprite.angle = 0;
+                }
             }
         });
     }

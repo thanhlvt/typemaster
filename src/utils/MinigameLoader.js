@@ -103,6 +103,30 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
             });
         }
 
+        // 6. GrowPlant images (plant, pot, cloud, stages)
+        if (minigameConfig.config?.plant?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.plant.texture || 'grow_plant_final_tex',
+                url: getAssetUrl(minigameConfig.config.plant.image)
+            });
+        }
+        if (Array.isArray(minigameConfig.config?.plant?.stages)) {
+            minigameConfig.config.plant.stages.forEach((stage, idx) => {
+                if (stage.image) {
+                    texturesToLoad.push({
+                        key: stage.texture || `grow_plant_stage_${idx}`,
+                        url: getAssetUrl(stage.image)
+                    });
+                }
+            });
+        }
+        if (minigameConfig.config?.pot?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.pot.texture || 'grow_pot_tex',
+                url: getAssetUrl(minigameConfig.config.pot.image)
+            });
+        }
+
         ensureTextures(scene, texturesToLoad, () => {
             const minigame = MinigameFactory.createMinigame(scene, minigameConfig.gameId, minigameConfig.config);
             if (minigame) {
