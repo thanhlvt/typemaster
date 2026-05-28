@@ -301,18 +301,19 @@ export const MINIGAME_CONFIGS = {
         config: {
             finishedObject: {
                 texture: 'fence_complete',
+                image: 'fence_complete.png',
                 emoji: '🚧',
                 x: 490,
                 y: 220,
-                scale: 1.2
+                scale: 1
             },
             parts: [
-                { id: 'part_post1', texture: 'fence_post1', emoji: '🪵', offsetX: -80, offsetY: 0, order: 1 },
-                { id: 'part_post2', texture: 'fence_post2', emoji: '🪵', offsetX: -40, offsetY: 0, order: 2 },
-                { id: 'part_post3', texture: 'fence_post3', emoji: '🪵', offsetX: 0, offsetY: 0, order: 3 },
-                { id: 'part_post4', texture: 'fence_post4', emoji: '🪵', offsetX: 40, offsetY: 0, order: 4 },
-                { id: 'part_post5', texture: 'fence_post5', emoji: '🪵', offsetX: 80, offsetY: 0, order: 5 },
-                { id: 'part_rail1', texture: 'fence_rail1', emoji: '➖', offsetX: 0, offsetY: -20, order: 6 }
+                { id: 'part_post1', texture: 'fence_post1', image: 'fence_post.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: -100, offsetY: 0, order: 1 },
+                { id: 'part_post2', texture: 'fence_post2', image: 'fence_post.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: -50, offsetY: 0, order: 2 },
+                { id: 'part_post3', texture: 'fence_post3', image: 'fence_post.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 3 },
+                { id: 'part_post4', texture: 'fence_post4', image: 'fence_post.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 50, offsetY: 0, order: 4 },
+                { id: 'part_post5', texture: 'fence_post5', image: 'fence_post.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 100, offsetY: 0, order: 5 },
+                { id: 'part_rail1', texture: 'fence_rail1', image: 'fence_rail.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '➖', offsetX: -5, offsetY: -20, order: 6 }
             ]
         },
         interactions: {
@@ -323,6 +324,7 @@ export const MINIGAME_CONFIGS = {
 
     // Lesson 11: Minigame Nuôi trồng cây thần cuối cùng
     11: {
+        gameId: 'grow_plant',
         gameId: 'grow_plant',
         config: {
             cloud: {

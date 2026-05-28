@@ -28,7 +28,7 @@ export function showBossIntro(scene, group, introTime, onReady) {
     container.add(title);
 
     const subtitle = scene.add.text(width / 2, height * 0.35 + 90,
-        'Hạ gục Boss trong 60 giây để nhận thưởng lớn!', {
+        'Hãy chiến đấu và hạ gục Boss trong 60 giây để nhận thưởng lớn!', {
         fontFamily: 'Arial', fontSize: '18px', fontStyle: 'bold', fill: '#fecaca'
     }).setOrigin(0.5);
     subtitle.setStroke('#000000', 4);
