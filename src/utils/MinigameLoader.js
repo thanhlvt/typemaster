@@ -147,6 +147,26 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
             });
         }
 
+        // 8. WhackMole images (hole, mole, hammer)
+        if (minigameConfig.config?.hole?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.hole.texture || 'mole_hole_tex',
+                url: getAssetUrl(minigameConfig.config.hole.image)
+            });
+        }
+        if (minigameConfig.config?.mole?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.mole.texture || 'mole_mole_tex',
+                url: getAssetUrl(minigameConfig.config.mole.image)
+            });
+        }
+        if (minigameConfig.config?.hammer?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.hammer.texture || 'mole_hammer_tex',
+                url: getAssetUrl(minigameConfig.config.hammer.image)
+            });
+        }
+
         ensureTextures(scene, texturesToLoad, () => {
             const minigame = MinigameFactory.createMinigame(scene, minigameConfig.gameId, minigameConfig.config);
             if (minigame) {

@@ -1,4 +1,5 @@
 import { BaseMinigame } from './BaseMinigame';
+import * as Phaser from 'phaser';
 
 export class WhackMoleGame extends BaseMinigame {
     constructor(scene, config) {
@@ -11,38 +12,68 @@ export class WhackMoleGame extends BaseMinigame {
     }
 
     create() {
-        const holeEmoji = this.config?.holeEmoji || '🕳️';
-        const moleEmoji = this.config?.moleEmoji || '🐹'; // 🐹, 🐭
-        const hammerEmoji = this.config?.hammerEmoji || '🔨';
+        const holeConfig = this.config?.hole || {};
+        const moleConfig = this.config?.mole || {};
+        const hammerConfig = this.config?.hammer || {};
 
-        const holeKey = this.createEmojiTexture('mole_hole_tex', holeEmoji, 64);
-        const moleKey = this.createEmojiTexture('mole_mole_tex', moleEmoji, 56);
-        const hammerKey = this.createEmojiTexture('mole_hammer_tex', hammerEmoji, 64);
+        const holeEmoji = holeConfig.emoji || this.config?.holeEmoji || '🕳️';
+        const moleEmoji = moleConfig.emoji || this.config?.moleEmoji || '🐹';
+        const hammerEmoji = hammerConfig.emoji || this.config?.hammerEmoji || '🔨';
 
-        // 1. Tạo 3 chiếc hang chuột hàng ngang
-        const startX = 260;
+        const holeTex = holeConfig.texture || 'mole_hole_tex';
+        const moleTex = moleConfig.texture || 'mole_mole_tex';
+        const hammerTex = hammerConfig.texture || 'mole_hammer_tex';
+
+        // 1. Tạo texture từ cache hoặc emoji
+        const holeKey = this.scene.textures.exists(holeTex)
+            ? holeTex
+            : this.createEmojiTexture(holeTex, holeEmoji, 64);
+
+        const moleKey = this.scene.textures.exists(moleTex)
+            ? moleTex
+            : this.createEmojiTexture(moleTex, moleEmoji, 56);
+
+        const hammerKey = this.scene.textures.exists(hammerTex)
+            ? hammerTex
+            : this.createEmojiTexture(hammerTex, hammerEmoji, 64);
+
+        // 2. Phân tích tỉ lệ scale và offset
+        this.holeScale = holeConfig.scale !== undefined ? holeConfig.scale : 1.1;
+        this.moleScale = moleConfig.scale !== undefined ? moleConfig.scale : 1.1;
+        this.hammerScale = hammerConfig.scale !== undefined ? hammerConfig.scale : 1.0;
+
+        this.moleOffsetX = moleConfig.offsetX !== undefined ? moleConfig.offsetX : 0;
+        this.moleOffsetY = moleConfig.offsetY !== undefined ? moleConfig.offsetY : -15;
+
+        this.hammerOffsetX = hammerConfig.offsetX !== undefined ? hammerConfig.offsetX : 5;
+        this.hammerOffsetY = hammerConfig.offsetY !== undefined ? hammerConfig.offsetY : -45;
+
+        // 3. Tạo 3 chiếc hang chuột hàng ngang
+        const startX = 350;
         const gapX = 140;
-        const y = 240;
+        const y = 280;
 
         for (let i = 0; i < 3; i++) {
             const hx = startX + i * gapX;
             const holeSprite = this.scene.add.sprite(hx, y + 10, holeKey)
                 .setDepth(110)
-                .setScale(1.1);
+                .setScale(this.holeScale);
             this.add(holeSprite);
 
             this.holes.push({ x: hx, y });
         }
 
-        // 2. Tạo chú chuột chũi tàng hình ban đầu
+        // 4. Tạo chú chuột chũi tàng hình ban đầu
         this.moleSprite = this.scene.add.sprite(0, 0, moleKey)
             .setDepth(111)
+            .setScale(this.moleScale)
             .setVisible(false);
         this.add(this.moleSprite);
 
-        // 3. Tạo búa tàng hình ban đầu
+        // 5. Tạo búa tàng hình ban đầu
         this.hammerSprite = this.scene.add.sprite(0, 0, hammerKey)
             .setDepth(115)
+            .setScale(this.hammerScale)
             .setVisible(false);
         this.add(this.hammerSprite);
 
@@ -59,17 +90,18 @@ export class WhackMoleGame extends BaseMinigame {
         this.activeMoleIdx = randIdx;
 
         const mole = this.moleSprite;
-        mole.setPosition(targetHole.x, targetHole.y + 40); // Bắt đầu ở sâu dưới hang
+        mole.setPosition(targetHole.x + this.moleOffsetX, targetHole.y + this.moleOffsetY + 55); // Bắt đầu ở sâu dưới hang
         mole.setVisible(true);
         mole.setAlpha(1);
-        mole.setScale(0.2);
+        mole.setScale(this.moleScale * 0.2);
 
         // Tween chuột trồi lên từ hang
         this.scene.tweens.add({
             targets: mole,
-            y: targetHole.y - 15,
-            scaleX: 1.1,
-            scaleY: 1.1,
+            x: targetHole.x + this.moleOffsetX,
+            y: targetHole.y + this.moleOffsetY,
+            scaleX: this.moleScale,
+            scaleY: this.moleScale,
             duration: 250,
             ease: 'Back.easeOut'
         });
@@ -87,16 +119,21 @@ export class WhackMoleGame extends BaseMinigame {
         // Bỏ chọn hang đang hoạt động để tránh tương tác đè
         this.activeMoleIdx = -1;
 
+        const hitX = targetHole.x + this.hammerOffsetX;
+        const hitY = targetHole.y + this.hammerOffsetY;
+        const startX = hitX + 30;
+        const startY = hitY - 20;
+
         // Di chuyển búa đến gõ
-        hammer.setPosition(targetHole.x + 35, targetHole.y - 65);
-        hammer.setAngle(-45);
+        hammer.setPosition(startX, startY);
+        hammer.setAngle(15);
         hammer.setVisible(true);
 
         scene.tweens.add({
             targets: hammer,
-            angle: 15,
-            x: targetHole.x + 5,
-            y: targetHole.y - 45,
+            angle: -40,
+            x: hitX,
+            y: hitY,
             duration: 150,
             ease: 'Quad.easeIn',
             onComplete: () => {
@@ -104,8 +141,8 @@ export class WhackMoleGame extends BaseMinigame {
                 // Chuột bị đập chui tọt xuống hang
                 scene.tweens.add({
                     targets: mole,
-                    y: targetHole.y + 40,
-                    scaleY: 0.3,
+                    y: targetHole.y + self.moleOffsetY + 30,
+                    scaleY: self.moleScale * 0.1,
                     duration: 150,
                     onComplete: () => {
                         if (!self.scene) return;
@@ -120,7 +157,7 @@ export class WhackMoleGame extends BaseMinigame {
                 });
 
                 // Hiệu ứng ngôi sao lấp lánh (vết đập trúng)
-                self.showWhackStars(targetHole.x, targetHole.y - 25);
+                self.showWhackStars(targetHole.x + self.moleOffsetX, targetHole.y + self.moleOffsetY - 10);
             }
         });
     }
@@ -128,38 +165,26 @@ export class WhackMoleGame extends BaseMinigame {
     onTypeError(char) {
         if (this.activeMoleIdx === -1) return;
 
-        // Gõ sai -> Chuột lè lưỡi trêu chọc bằng cách lắc đầu trái phải rồi thụt xuống
+        // Gõ sai -> Chuột lắc nhẹ qua lại theo chiều ngang
         const scene = this.scene;
         const mole = this.moleSprite;
         const targetHole = this.holes[this.activeMoleIdx];
         const self = this;
 
-        this.activeMoleIdx = -1;
+        scene.tweens.killTweensOf(mole);
+        mole.x = targetHole.x + this.moleOffsetX;
+        mole.y = targetHole.y + this.moleOffsetY;
+        mole.setScale(this.moleScale);
 
         scene.tweens.add({
             targets: mole,
-            x: mole.x + Phaser.Math.Between(-15, 15),
-            duration: 60,
+            x: mole.x + 10,
+            duration: 50,
             yoyo: true,
-            repeat: 2,
+            repeat: 3,
             onComplete: () => {
                 if (!self.scene) return;
-                mole.x = targetHole.x;
-                // Chui xuống hang
-                scene.tweens.add({
-                    targets: mole,
-                    y: targetHole.y + 40,
-                    scaleX: 0.2,
-                    duration: 200,
-                    onComplete: () => {
-                        if (!self.scene) return;
-                        mole.setVisible(false);
-                        // Sinh chuột mới sau 800ms
-                        self.nextMoleTimer = scene.time.delayedCall(800, () => {
-                            self.spawnMole();
-                        });
-                    }
-                });
+                mole.x = targetHole.x + self.moleOffsetX;
             }
         });
     }

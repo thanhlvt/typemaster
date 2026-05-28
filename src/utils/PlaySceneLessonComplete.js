@@ -18,7 +18,7 @@ import { STORY_CONFIGS } from '../data/story_configs';
  */
 export function showLessonComplete(scene) {
     AudioManager.playJingle(scene, 'level_sound', scene.currentLessonIndex, true);
-    scene.input.keyboard.off('keydown', scene._boundHandleKeyDown, scene);
+    scene.input.keyboard.off('keydown', scene._boundHandleKeyDown);
 
     const { streakDays: newStreakDays, isNewStreakDay } = ProgressManager.checkAndUpdateStreak();
     scene.streakDays = newStreakDays;
@@ -69,7 +69,7 @@ export function showLessonComplete(scene) {
                     _destroyMinigame(scene);
                     scene.scene.start('BossScene', { lessonIndex: nextIndex });
                 } else {
-                    scene.input.keyboard.on('keydown', scene._boundHandleKeyDown, scene);
+                    scene.input.keyboard.on('keydown', scene._boundHandleKeyDown);
                     scene.currentLessonIndex = nextIndex;
                     scene.startLesson();
                 }
@@ -79,7 +79,7 @@ export function showLessonComplete(scene) {
         const handleRetry = () => {
             cleanUp(); overlay.destroy();
             showStreakVisual();
-            scene.input.keyboard.on('keydown', scene._boundHandleKeyDown, scene);
+            scene.input.keyboard.on('keydown', scene._boundHandleKeyDown);
             scene.startLesson();
         };
 

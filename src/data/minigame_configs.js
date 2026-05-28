@@ -219,9 +219,28 @@ export const MINIGAME_CONFIGS = {
     7: {
         gameId: 'whack_mole',
         config: {
-            holeEmoji: '🕳️',
-            moleEmoji: '🐹',
-            hammerEmoji: '🔨'
+            hole: {
+                texture: 'mole_hole_tex',
+                image: 'hole.png',
+                scale: 0.4,
+                emoji: '🕳️'
+            },
+            mole: {
+                texture: 'mole_mole_tex',
+                image: 'mole.png',
+                scale: 0.35,
+                emoji: '🐭',
+                offsetX: 0,
+                offsetY: -15
+            },
+            hammer: {
+                texture: 'mole_hammer_tex',
+                image: 'hammer.png',
+                scale: 0.4,
+                emoji: '🔨',
+                offsetX: 20,
+                offsetY: -50
+            }
         },
         interactions: {
             onWordComplete: { action: 'whack' },
@@ -312,10 +331,12 @@ export const MINIGAME_CONFIGS = {
     12: {
         gameId: 'clear_fog',
         config: {
-            treasureEmoji: '🐺',
             fogEmoji: '🌫️',
-            x: 490,
-            y: 220
+            fogScale: 2,
+            x1: 200,
+            y1: 140,
+            x2: 750,
+            y2: 330
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },

@@ -266,6 +266,9 @@ export class PlayScene extends Phaser.Scene {
             : this.monkey;
 
         const isLastWord   = (this.currentWordIndex + 1 >= totalWords);
+        if (isLastWord) {
+            this.input.keyboard.off('keydown', this._boundHandleKeyDown);
+        }
         let nextStepCalled = false;
         const triggerNext  = () => {
             if (nextStepCalled) return;
