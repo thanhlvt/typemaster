@@ -212,11 +212,9 @@ export class PlayScene extends Phaser.Scene {
             this.minigame = null;
         }
 
-        // Chỉ hiển thị cốt truyện khi mở bài học lần đầu tiên
-        //const hasCompleted = this.lessonStats[this.currentLessonIndex] && this.lessonStats[this.currentLessonIndex].stars > 0;
-        //Debug purpose: always show story
-        const hasCompleted = false;
-        const storyConfig = !hasCompleted ? STORY_CONFIGS[this.currentLessonIndex] : null;
+        // Kiểm tra xem Story Mode có được bật trong cài đặt hay không
+        const storyModeEnabled = ProgressManager.getStoryMode();
+        const storyConfig = storyModeEnabled ? STORY_CONFIGS[this.currentLessonIndex] : null;
         const minigameConfig = MINIGAME_CONFIGS[this.currentLessonIndex];
 
         if (storyConfig && storyConfig.preGame) {
@@ -482,10 +480,9 @@ export class PlayScene extends Phaser.Scene {
             this.minigame = null;
         }
 
-        //const isFirstTime = !this.isDailyChallenge && (!oldStats || oldStats.stars === 0);
-        //Debug purpose: always show story
-        const isFirstTime = true;
-        const storyConfig = STORY_CONFIGS[this.currentLessonIndex];
+        const isFirstTime = !this.isDailyChallenge && (!oldStats || oldStats.stars === 0);
+        const storyModeEnabled = ProgressManager.getStoryMode();
+        const storyConfig = storyModeEnabled ? STORY_CONFIGS[this.currentLessonIndex] : null;
 
         const proceedToResults = () => {
             const cleanUp = () => {
@@ -564,7 +561,7 @@ export class PlayScene extends Phaser.Scene {
             }
         };
 
-        if (isFirstTime && storyConfig && storyConfig.postGame) {
+        if (storyConfig && storyConfig.postGame) {
             new StoryDialogOverlay(this, storyConfig.postGame, () => {
                 proceedToResults();
             });

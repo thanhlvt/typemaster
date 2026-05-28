@@ -53,8 +53,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
         scene.sound.mute = this.isMute;
         scene.sound.volume = this.volume;
 
-        // --- Mute Toggle Section (Y = -120) ---
-        const muteY = -120;
+        // --- Mute Toggle Section (Y = -130) ---
+        const muteY = -130;
         this.muteLabel = scene.add.text(-180, muteY, this.isMute ? 'ÂM THANH: TẮT' : 'ÂM THANH: BẬT', {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -107,8 +107,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- Volume Slider Section (Y = -40) ---
-        const volY = -40;
+        // --- Volume Slider Section (Y = -65) ---
+        const volY = -65;
         this.volumeLabel = scene.add.text(-180, volY, `ÂM LƯỢNG: ${Math.round(this.volume * 100)}%`, {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -198,8 +198,53 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- Home Background Mode Section (Y = 40) ---
-        const bgModeY = 40;
+        // --- Story Mode Switch Section (Y = 0) ---
+        const storyY = 0;
+        this.storyModeEnabled = ProgressManager.getStoryMode();
+
+        this.storyLabel = scene.add.text(-180, storyY, this.storyModeEnabled ? 'STORY MODE: ON' : 'STORY MODE: OFF', {
+            fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
+        }).setOrigin(0, 0.5);
+        dialog.add(this.storyLabel);
+
+        this.storySwitchGraphics = scene.add.graphics();
+        dialog.add(this.storySwitchGraphics);
+
+        const drawStorySwitch = () => {
+            this.storySwitchGraphics.clear();
+            const trackColor = this.storyModeEnabled ? 0x10b981 : 0x475569; // Emerald 500 vs Slate 600
+            this.storySwitchGraphics.fillStyle(trackColor, 1.0);
+            this.storySwitchGraphics.fillRoundedRect(switchX - switchW / 2, storyY - switchH / 2, switchW, switchH, 16);
+            this.storySwitchGraphics.lineStyle(1.5, 0xffffff, 0.2);
+            this.storySwitchGraphics.strokeRoundedRect(switchX - switchW / 2, storyY - switchH / 2, switchW, switchH, 16);
+
+            const knobRadius = 12;
+            const knobX = this.storyModeEnabled ? (switchX + switchW / 2 - 16) : (switchX - switchW / 2 + 16);
+            this.storySwitchGraphics.fillStyle(0xffffff, 1.0);
+            this.storySwitchGraphics.fillCircle(knobX, storyY, knobRadius);
+        };
+        drawStorySwitch();
+
+        const screenStoryX = width / 2 + switchX;
+        const screenStoryY = height / 2 + storyY;
+        const storyZone = scene.add.zone(screenStoryX, screenStoryY, switchW + 10, switchH + 10)
+            .setScrollFactor(0)
+            .setInteractive({ useHandCursor: true });
+        this.add(storyZone);
+
+        storyZone.on('pointerdown', () => {
+            this.storyModeEnabled = !this.storyModeEnabled;
+            ProgressManager.setStoryMode(this.storyModeEnabled);
+            this.storyLabel.setText(this.storyModeEnabled ? 'STORY MODE: ON' : 'STORY MODE: OFF');
+            drawStorySwitch();
+
+            if (!this.isMute) {
+                scene.sound.play('key_sound');
+            }
+        });
+
+        // --- Home Background Mode Section (Y = 65) ---
+        const bgModeY = 65;
         const bgModeLabel = scene.add.text(-180, bgModeY, 'HÌNH NỀN:', {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -272,8 +317,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             }
         });
 
-        // --- BG Music Choice Section (Y = 120) ---
-        const musicY = 120;
+        // --- BG Music Choice Section (Y = 130) ---
+        const musicY = 130;
         const musicLabel = scene.add.text(-180, musicY, 'NHẠC NỀN:', {
             fontFamily: 'Outfit, Arial', fontSize: '18px', fontStyle: 'bold', fill: '#FFFFFF'
         }).setOrigin(0, 0.5);
@@ -360,8 +405,8 @@ export class OptionsOverlay extends Phaser.GameObjects.Container {
             updateMusicSetting(nextIdx);
         });
 
-        // --- Reset Data Button Section (Y = 200) ---
-        const resetY = 200;
+        // --- Reset Data Button Section (Y = 205) ---
+        const resetY = 205;
         const resetW = 240;
         const resetH = 42;
 

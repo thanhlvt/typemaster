@@ -122,10 +122,25 @@ export class ProgressManager {
         try { localStorage.setItem('typemaster_audio_settings', JSON.stringify(settings)); } catch (_) { }
     }
 
+    static getStoryMode() {
+        try {
+            const val = localStorage.getItem('typemaster_story_mode');
+            return val !== 'OFF'; // Default is ON (true)
+        } catch (_) {
+            return true;
+        }
+    }
+
+    static setStoryMode(enabled) {
+        try {
+            localStorage.setItem('typemaster_story_mode', enabled ? 'ON' : 'OFF');
+        } catch (_) { }
+    }
+
     static clearAll() {
         ['typemaster_progress', 'typemaster_streak', 'typemaster_history',
          'typemaster_equipped_skins', 'typemaster_audio_settings', 'typemaster_granted_skins',
-         'typemaster_ftue_completed']
+         'typemaster_ftue_completed', 'typemaster_story_mode']
             .forEach(key => localStorage.removeItem(key));
     }
 
