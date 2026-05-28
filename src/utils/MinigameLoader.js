@@ -127,6 +127,26 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
             });
         }
 
+        // 7. CatchInsects images (insect, net, jar)
+        if (minigameConfig.config?.insect?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.insect.texture || 'catch_insect_tex',
+                url: getAssetUrl(minigameConfig.config.insect.image)
+            });
+        }
+        if (minigameConfig.config?.net?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.net.texture || 'catch_net_tex',
+                url: getAssetUrl(minigameConfig.config.net.image)
+            });
+        }
+        if (minigameConfig.config?.jar?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.jar.texture || 'catch_jar_tex',
+                url: getAssetUrl(minigameConfig.config.jar.image)
+            });
+        }
+
         ensureTextures(scene, texturesToLoad, () => {
             const minigame = MinigameFactory.createMinigame(scene, minigameConfig.gameId, minigameConfig.config);
             if (minigame) {

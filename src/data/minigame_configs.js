@@ -170,12 +170,27 @@ export const MINIGAME_CONFIGS = {
     5: {
         gameId: 'catch_insects',
         config: {
-            insectEmoji: '🦋',
-            netEmoji: '🕸️',
-            jarEmoji: '🏺',
-            jarX: 720,
-            jarY: 260,
-            area: { minX: 150, maxX: 550, minY: 100, maxY: 260 }
+            insect: {
+                texture: 'catch_insect_tex',
+                image: 'butterfly.png',
+                scale: 0.3,
+                emoji: '🦋'
+            },
+            net: {
+                texture: 'catch_net_tex',
+                image: 'net.png',
+                scale: 0.3,
+                emoji: '🕸️'
+            },
+            jar: {
+                texture: 'catch_jar_tex',
+                image: 'jar.png',
+                scale: 0.7,
+                emoji: '🏺'
+            },
+            jarX: 940,
+            jarY: 330,
+            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -268,10 +283,22 @@ export const MINIGAME_CONFIGS = {
     11: {
         gameId: 'grow_plant',
         config: {
-            cloudEmoji: '☁️',
-            potEmoji: '🪴',
+            cloud: {
+                texture: 'grow_cloud_tex',
+                image: 'cloud.png',
+                scale: 0.35
+            },
+            plant: {
+                stages: [
+                    { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
+                    { texture: 'grow_tree2', image: 'tree2.png', scale: 0.3 },
+                    { texture: 'grow_tree3', image: 'tree3.png', scale: 0.6 },
+                    { texture: 'grow_tree4', image: 'tree4.png', scale: 0.7 },
+                    { texture: 'grow_tree5', image: 'tree5.png', scale: 0.75 }
+                ]
+            },
             x: 490,
-            y: 220
+            y: 390
         },
         interactions: {
             onWordComplete: { action: 'water_plant' },

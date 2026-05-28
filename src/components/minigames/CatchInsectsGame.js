@@ -1,4 +1,5 @@
 import { BaseMinigame } from './BaseMinigame';
+import * as Phaser from 'phaser';
 
 export class CatchInsectsGame extends BaseMinigame {
     constructor(scene, config) {
@@ -9,30 +10,53 @@ export class CatchInsectsGame extends BaseMinigame {
     }
 
     create() {
-        const insectEmoji = this.config?.insectEmoji || '🦋'; // 🦋, 🐝, 🐞
-        const netEmoji = this.config?.netEmoji || '🕸️'; 
-        const jarEmoji = this.config?.jarEmoji || '🏺'; 
+        const insectConfig = this.config?.insect || {};
+        const netConfig = this.config?.net || {};
+        const jarConfig = this.config?.jar || {};
+
+        const insectEmoji = insectConfig.emoji || this.config?.insectEmoji || '🦋'; 
+        const netEmoji = netConfig.emoji || this.config?.netEmoji || '🕸️'; 
+        const jarEmoji = jarConfig.emoji || this.config?.jarEmoji || '🏺'; 
         const count = this.totalWords || 8;
 
-        const insectKey = this.createEmojiTexture('catch_insect_tex', insectEmoji, 48);
-        const netKey = this.createEmojiTexture('catch_net_tex', netEmoji, 64);
-        const jarKey = this.createEmojiTexture('catch_jar_tex', jarEmoji, 64);
+        const insectTex = insectConfig.texture || 'catch_insect_tex';
+        const netTex = netConfig.texture || 'catch_net_tex';
+        const jarTex = jarConfig.texture || 'catch_jar_tex';
 
-        // 1. Tạo lọ đựng ở góc
+        // 1. Tạo texture từ cache hoặc emoji
+        const insectKey = this.scene.textures.exists(insectTex)
+            ? insectTex
+            : this.createEmojiTexture(insectTex, insectEmoji, 48);
+
+        const netKey = this.scene.textures.exists(netTex)
+            ? netTex
+            : this.createEmojiTexture(netTex, netEmoji, 64);
+
+        const jarKey = this.scene.textures.exists(jarTex)
+            ? jarTex
+            : this.createEmojiTexture(jarTex, jarEmoji, 64);
+
+        // 2. Phân tích tỉ lệ scale
+        this.insectScale = insectConfig.scale !== undefined ? insectConfig.scale : 0.9;
+        this.netScale = netConfig.scale !== undefined ? netConfig.scale : 1.0;
+        this.jarScale = jarConfig.scale !== undefined ? jarConfig.scale : 1.2;
+
+        // 3. Tạo lọ đựng ở góc
         const jarX = this.config?.jarX || 700;
         const jarY = this.config?.jarY || 300;
         this.jarSprite = this.scene.add.sprite(jarX, jarY, jarKey)
             .setDepth(110)
-            .setScale(1.2);
+            .setScale(this.jarScale);
         this.add(this.jarSprite);
 
-        // 2. Tạo vợt tàng hình tạm thời
+        // 4. Tạo vợt tàng hình tạm thời
         this.netSprite = this.scene.add.sprite(0, 0, netKey)
             .setDepth(115)
+            .setScale(this.netScale)
             .setVisible(false);
         this.add(this.netSprite);
 
-        // 3. Tạo các côn trùng bay tự do
+        // 5. Tạo các côn trùng bay tự do
         const minX = this.config?.area?.minX || 100;
         const maxX = this.config?.area?.maxX || 550;
         const minY = this.config?.area?.minY || 100;
@@ -44,7 +68,7 @@ export class CatchInsectsGame extends BaseMinigame {
 
             const sprite = this.scene.add.sprite(rx, ry, insectKey)
                 .setDepth(111)
-                .setScale(0.9);
+                .setScale(this.insectScale);
             this.add(sprite);
 
             // Cho côn trùng bay vòng tròn/lượn sóng nhẹ
@@ -81,53 +105,67 @@ export class CatchInsectsGame extends BaseMinigame {
             // Dừng tween bay lượn cũ
             scene.tweens.killTweensOf(target.sprite);
 
-            // Hiện vợt và di chuyển vợt tới vị trí côn trùng để bắt
-            net.setPosition(target.sprite.x - 30, target.sprite.y - 30);
+            // Vị trí vợt bay ngang qua côn trùng từ trái (-100px) sang phải (+100px)
+            const startX = target.sprite.x - 150;
+            const targetX = target.sprite.x;
+            const endX = target.sprite.x + 150;
+            const centerY = target.sprite.y + 40;
+
+            net.setPosition(startX, centerY);
             net.setVisible(true);
             net.setAlpha(0);
 
+            // Giai đoạn 1: Vợt bay vào đè lên côn trùng, tăng dần alpha
             scene.tweens.add({
                 targets: net,
+                x: targetX,
                 alpha: 1,
-                x: target.sprite.x,
-                y: target.sprite.y,
-                duration: 200,
-                ease: 'Power2',
+                duration: 400,
+                ease: 'Quad.easeOut',
                 onComplete: () => {
                     if (!self.scene) return;
-                    // Nhấp nháy nhanh (blink effect) báo hiệu bị bắt
+
+                    // Khi vợt đè lên côn trùng -> Côn trùng biến mất ngay lập tức
+                    target.sprite.setVisible(false);
+
+                    // Giai đoạn 2: Vợt quét nốt ra bên phải và mờ dần biến mất
                     scene.tweens.add({
-                        targets: target.sprite,
-                        alpha: 0.2,
-                        duration: 50,
-                        yoyo: true,
-                        repeat: 2,
+                        targets: net,
+                        x: endX,
+                        alpha: 0,
+                        duration: 400,
+                        ease: 'Quad.easeIn',
                         onComplete: () => {
                             if (!self.scene) return;
-                            // Ẩn vợt đi
                             net.setVisible(false);
 
-                            // Cho côn trùng bay thu nhỏ dần vào lọ đựng
+                            // Giai đoạn 3: Côn trùng xuất hiện trên miệng lọ đựng, scale x3
+                            target.sprite.setPosition(jar.x, jar.y - 100);
+                            target.sprite.setScale(self.insectScale * 2.0);
+                            target.sprite.setAlpha(1.0);
+                            target.sprite.setVisible(true);
+
+                            // Animate côn trùng thu nhỏ dần xuống x0.5 và chui tọt vào lọ
                             scene.tweens.add({
                                 targets: target.sprite,
-                                x: jar.x,
                                 y: jar.y,
-                                scaleX: 0.2,
-                                scaleY: 0.2,
-                                alpha: 0.5,
-                                duration: 400,
+                                scaleX: self.insectScale * 0.5,
+                                scaleY: self.insectScale * 0.5,
+                                alpha: 0,
+                                duration: 500,
                                 ease: 'Back.easeIn',
                                 onComplete: () => {
                                     if (!self.scene) return;
                                     target.sprite.setVisible(false);
-                                    
-                                    // Lọ đựng nảy nhẹ lên
+
+                                    // Lọ đựng co giãn nảy nhẹ để biểu thị đã nhận
                                     scene.tweens.add({
                                         targets: jar,
-                                        scaleY: 1.4,
-                                        scaleX: 1.4,
+                                        scaleY: self.jarScale * 1.2,
+                                        scaleX: self.jarScale * 1.2,
                                         duration: 100,
-                                        yoyo: true
+                                        yoyo: true,
+                                        ease: 'Quad.easeOut'
                                     });
                                 }
                             });
