@@ -203,6 +203,19 @@ Game:
 - Thiết kế: Các xe đua nối tiếp nhau trên đường đua.
 - Tương tác: Gõ đúng chữ, xe tăng tốc về phía trước. Gõ sai xe bị chậm lại.
 
+| gameId          | Ý tưởng Minigame                   |
+| --------------- | ---------------------------------- |
+| collect_items   | 1. Hái quả / Nhặt nấm              |
+| assemble_object | 2. Lắp ráp đồ vật                  |
+| rescue_animals  | 3. Giải cứu thú rừng               |
+| bubble_shooter  | 4. Bắn bong bóng/đĩa bay           |
+| catch_insects   | 5. Vợt bướm/Đuổi ong/bắt ngọc trai |
+| frog_jump       | 6. Đua Ếch vượt sông/bơi qua suối  |
+| grow_plant      | 7. Phép thuật lớn nhanh            |
+| clear_fog       | 8. Xua tan sương mù                |
+| whack_mole      | 9. Đập chuột chũi                  |
+| racing          | 10. Đua Xe                         |
+
 **2. Tutorial Tương Tác Lần Đầu (FTUE)**
 
 - Bài học 0: hướng dẫn từng bước bằng dialog/mascot khỉ nói chuyện.
