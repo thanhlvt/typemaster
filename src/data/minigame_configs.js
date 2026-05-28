@@ -87,22 +87,188 @@ export const MINIGAME_CONFIGS = {
         config: {
             finishedObject: { 
                 texture: 'truck_complete', 
+                image: 'truck_complete.png',
                 emoji: '🚚', 
-                x: 400, 
+                x: 490, 
                 y: 220, 
-                scale: 1.5 
+                scale: 0.8 
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', emoji: '🟩', offsetX: 0, offsetY: -20, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', emoji: '⚫', offsetX: -50, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', emoji: '⚫', offsetX: 50, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', emoji: '🟦', offsetX: 40, offsetY: -30, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', emoji: '🍌', offsetX: -30, offsetY: -40, order: 5 }
+                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
+                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
+                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
+                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
+                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
+                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
             ]
         },
         interactions: {
             onWordComplete: { action: 'assemble_next_part' },
             onTypeError: { action: 'shake_uncompleted' }
+        }
+    },
+
+    // Lesson 3: Minigame Giải cứu động vật
+    3: {
+        gameId: 'rescue_animals',
+        config: {
+            animalEmoji: '🐰',
+            cageEmoji: '📦',
+            x: 490,
+            y: 230
+        },
+        interactions: {
+            onWordComplete: { action: 'break_cage' },
+            onTypeError: { action: 'shake_cage' }
+        }
+    },
+
+    // Lesson 4: Minigame Nuôi trồng cây thần
+    4: {
+        gameId: 'grow_plant',
+        config: {
+            cloudEmoji: '☁️',
+            potEmoji: '🪴',
+            x: 490,
+            y: 220
+        },
+        interactions: {
+            onWordComplete: { action: 'water_plant' },
+            onTypeError: { action: 'shake_plant' }
+        }
+    },
+
+    // Lesson 5: Minigame Bắt côn trùng
+    5: {
+        gameId: 'catch_insects',
+        config: {
+            insectEmoji: '🦋',
+            netEmoji: '🕸️',
+            jarEmoji: '🏺',
+            jarX: 720,
+            jarY: 260,
+            area: { minX: 150, maxX: 550, minY: 100, maxY: 260 }
+        },
+        interactions: {
+            onWordComplete: { action: 'catch_insect' },
+            onTypeError: { action: 'scare_insects' }
+        }
+    },
+
+    // Lesson 6: Minigame Xua tan sương mù
+    6: {
+        gameId: 'clear_fog',
+        config: {
+            treasureEmoji: '🏰',
+            fogEmoji: '🌫️',
+            x: 490,
+            y: 220
+        },
+        interactions: {
+            onWordComplete: { action: 'clear_fog_segment' },
+            onTypeError: { action: 'darken_fog' }
+        }
+    },
+
+    // Lesson 7: Minigame Đập chuột chũi
+    7: {
+        gameId: 'whack_mole',
+        config: {
+            holeEmoji: '🕳️',
+            moleEmoji: '🐹',
+            hammerEmoji: '🔨'
+        },
+        interactions: {
+            onWordComplete: { action: 'whack' },
+            onTypeError: { action: 'hide' }
+        }
+    },
+
+    // Lesson 8: Minigame Bắn bong bóng
+    8: {
+        gameId: 'bubble_shooter',
+        config: {
+            bubbleEmoji: '🫧',
+            area: { minX: 150, maxX: 650, minY: 100, maxY: 280 }
+        },
+        interactions: {
+            onWordComplete: { action: 'pop_bubble' },
+            onTypeError: { action: 'shake_bubbles' }
+        }
+    },
+
+    // Lesson 9: Minigame Ếch nhảy lá sen
+    9: {
+        gameId: 'frog_jump',
+        config: {
+            leafEmoji: '🪷',
+            frogEmoji: '🐸'
+        },
+        interactions: {
+            onWordComplete: { action: 'jump_next_leaf' },
+            onTypeError: { action: 'fall_and_respawn' }
+        }
+    },
+
+    // Lesson 10: Minigame Lắp ráp hàng rào gỗ
+    10: {
+        gameId: 'assemble_object',
+        config: {
+            finishedObject: {
+                texture: 'fence_complete',
+                emoji: '🚧',
+                x: 490,
+                y: 220,
+                scale: 1.2
+            },
+            parts: [
+                { id: 'part_post1', texture: 'fence_post1', emoji: '🪵', offsetX: -80, offsetY: 0, order: 1 },
+                { id: 'part_post2', texture: 'fence_post2', emoji: '🪵', offsetX: -40, offsetY: 0, order: 2 },
+                { id: 'part_post3', texture: 'fence_post3', emoji: '🪵', offsetX: 0, offsetY: 0, order: 3 },
+                { id: 'part_post4', texture: 'fence_post4', emoji: '🪵', offsetX: 40, offsetY: 0, order: 4 },
+                { id: 'part_post5', texture: 'fence_post5', emoji: '🪵', offsetX: 80, offsetY: 0, order: 5 },
+                { id: 'part_rail1', texture: 'fence_rail1', emoji: '➖', offsetX: 0, offsetY: -20, order: 6 }
+            ]
+        },
+        interactions: {
+            onWordComplete: { action: 'assemble_next_part' },
+            onTypeError: { action: 'shake_uncompleted' }
+        }
+    },
+
+    // Lesson 11: Minigame Nuôi trồng cây thần cuối cùng
+    11: {
+        gameId: 'grow_plant',
+        config: {
+            cloudEmoji: '☁️',
+            potEmoji: '🪴',
+            x: 490,
+            y: 220
+        },
+        interactions: {
+            onWordComplete: { action: 'water_plant' },
+            onTypeError: { action: 'shake_plant' }
+        }
+    },
+
+    // Lesson 12: Minigame Xua tan sương mù ở sào huyệt
+    12: {
+        gameId: 'clear_fog',
+        config: {
+            treasureEmoji: '🐺',
+            fogEmoji: '🌫️',
+            x: 490,
+            y: 220
+        },
+        interactions: {
+            onWordComplete: { action: 'clear_fog_segment' },
+            onTypeError: { action: 'darken_fog' }
         }
     }
 };

@@ -170,6 +170,11 @@ export class PlayScene extends Phaser.Scene {
     // ── Lesson flow ───────────────────────────────────────────────
 
     startLesson() {
+        if (this.minigame) {
+            this.minigame.destroy();
+            this.minigame = null;
+        }
+
         this.currentWordIndex = 0;
         this.errorsInLesson   = 0;
         this.lessonStartTime  = Date.now();
@@ -276,6 +281,26 @@ export class PlayScene extends Phaser.Scene {
                         texturesToLoad.push({
                             key: item.texture,
                             url: getAssetUrl(item.image)
+                        });
+                    }
+                });
+            }
+
+            // 3. Ảnh của finishedObject (Lắp ráp)
+            if (minigameConfig.config?.finishedObject?.image) {
+                texturesToLoad.push({
+                    key: minigameConfig.config.finishedObject.texture,
+                    url: getAssetUrl(minigameConfig.config.finishedObject.image)
+                });
+            }
+
+            // 4. Ảnh của các bộ phận (parts)
+            if (Array.isArray(minigameConfig.config?.parts)) {
+                minigameConfig.config.parts.forEach(part => {
+                    if (part.image) {
+                        texturesToLoad.push({
+                            key: part.texture,
+                            url: getAssetUrl(part.image)
                         });
                     }
                 });
@@ -510,12 +535,6 @@ export class PlayScene extends Phaser.Scene {
 
         const { oldStats, dailyBonusAwarded } = this._saveProgressAndCheckAchievements(stars, wpm, accuracy);
 
-        // Dọn dẹp minigame khi kết thúc bài
-        if (this.minigame) {
-            this.minigame.destroy();
-            this.minigame = null;
-        }
-
         const isFirstTime = !this.isDailyChallenge && (!oldStats || oldStats.stars === 0);
         const storyModeEnabled = ProgressManager.getStoryMode();
         const storyConfig = storyModeEnabled ? STORY_CONFIGS[this.currentLessonIndex] : null;
@@ -544,8 +563,16 @@ export class PlayScene extends Phaser.Scene {
                     const isNewChapter = (nextIndex % 14 === 0);
 
                     if (isNewChapter) {
+                        if (this.minigame) {
+                            this.minigame.destroy();
+                            this.minigame = null;
+                        }
                         this.scene.start('ChapterIntroScene', { lessonIndex: nextIndex });
                     } else if (isNextBoss) {
+                        if (this.minigame) {
+                            this.minigame.destroy();
+                            this.minigame = null;
+                        }
                         this.scene.start('BossScene', { lessonIndex: nextIndex });
                     } else {
                         this.input.keyboard.on('keydown', this.handleKeyDown, this);
@@ -565,6 +592,10 @@ export class PlayScene extends Phaser.Scene {
             const handleBackToMap = () => {
                 cleanUp(); overlay.destroy();
                 showStreakVisual();
+                if (this.minigame) {
+                    this.minigame.destroy();
+                    this.minigame = null;
+                }
                 this.scene.start('MapScene');
             };
 

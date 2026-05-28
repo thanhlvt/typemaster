@@ -1557,9 +1557,271 @@ export const STORY_CONFIGS = {
         postGame: [
             { character: 'monkey', text: "Khiên Gai Tre vô cùng vững chắc! Cầm vũ khí lên, lao về phía trước và cho Cá Sấu một bài học nào!" }
         ]
+    },
+    // Lesson 168 - 180 (Group: Sông nước, Chapter 13:  'Thuyền nhỏ', Boss: Cá Sấu)
+    168: {
+        minigame: 'clear_fog',
+        preGame: [
+            { character: 'monkey', text: "Chúng ta đã tìm thấy bến đỗ Thuyền Nhỏ, nhưng sương mù sông nước dày quá!" },
+            { character: 'boss', text: "Khà khà! Dòng sông này là của ta, các ngươi đừng hòng vác mặt lên thuyền!" },
+            { character: 'monkey', text: "Gõ phím tạo gió thổi tan sương mù để tìm ra chiếc thuyền chắc chắn nhất nào!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Sương mù đã tan. Chiếc Thuyền Nhỏ kia trông rất vững chãi, lên thôi!" }
+        ]
+    },
+    169: {
+        minigame: 'rescue_animals',
+        preGame: [
+            { character: 'monkey', text: "Cá Sấu đã dùng dây thừng trói chặt bạn Rùa Con vào cột neo thuyền." },
+            { character: 'monkey', text: "Gõ đúng để cởi trói và giải cứu Rùa Con trước khi nước lên nhé!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Rùa Con đã an toàn bơi xuống nước. Chúng ta phải ngăn Cá Sấu lại!" }
+        ]
+    },
+    170: {
+        minigame: 'bubble_shooter',
+        preGame: [
+            { character: 'boss', text: "Thuyền của các ngươi sẽ bị nhấn chìm bởi những quả bong bóng xoáy nước của ta!" },
+            { character: 'monkey', text: "Cẩn thận! Mau bắn vỡ những quả bong bóng đó để bảo vệ thuyền!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Bong bóng nổ tung hết rồi. Thuyền Nhỏ vẫn an toàn lướt sóng." }
+        ]
+    },
+    171: {
+        minigame: 'whack_mole',
+        preGame: [
+            { character: 'monkey', text: "Lũ ếch độc tay sai của Cá Sấu đang bám vào mạn thuyền định đục lỗ kìa." },
+            { character: 'monkey', text: "Dùng búa gõ trúng đầu chúng để đuổi đi, không để thuyền bị chìm nhé!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Bọn ếch độc đã nhảy hết xuống sông. Thuyền Nhỏ vẫn lành lặn." }
+        ]
+    },
+    172: {
+        minigame: 'racing',
+        preGame: [
+            { character: 'monkey', text: "Cá Sấu bắt đầu lặn xuống nước trốn thoát. Nhanh chóng chèo thuyền đuổi theo hắn!" },
+            { character: 'monkey', text: "Gõ thật nhanh để mái chèo lướt trên mặt nước, quyết không cho hắn tẩu thoát!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Tốc độ chèo thuyền tuyệt vời! Chúng ta đang bám sát hắn." }
+        ]
+    },
+    173: {
+        minigame: 'grow_plant',
+        preGame: [
+            { character: 'monkey', text: "Dòng nước chảy xiết quá, thuyền đang bị cuốn đi. Cần mỏ neo để giữ lại!" },
+            { character: 'monkey', text: "Dùng phép thuật gieo hạt cây đước, gõ phím để rễ cây vươn sâu xuống đáy sông làm neo giữ thuyền." }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Rễ đước bám rất chắc. Thuyền đã dừng lại an toàn trước thác nước nguy hiểm." }
+        ]
+    },
+    174: {
+        minigame: 'catch_insects',
+        preGame: [
+            { character: 'monkey', text: "Vùng nước tù này có rất nhiều muỗi nước hung dữ cản trở đường đi." },
+            { character: 'monkey', text: "Dùng vợt vung thật chuẩn xác để tóm gọn lũ muỗi, dọn đường cho thuyền tiến lên!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Đàn muỗi nước đã bị dẹp sạch. Hành trình lại êm đềm." }
+        ]
+    },
+    175: {
+        minigame: 'frog_jump',
+        preGame: [
+            { character: 'monkey', text: "Phía trước là bãi đá ngầm lởm chởm. Không thể chèo thuyền qua được!" },
+            { character: 'monkey', text: "Cầm dây thừng và nhảy qua những tảng đá nhấp nhô để kéo thuyền qua đoạn này nhé." }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Bước nhảy rất khéo léo. Thuyền Nhỏ đã vượt qua bãi đá ngầm mà không bị trầy xước." }
+        ]
+    },
+    176: {
+        minigame: 'collect_items',
+        preGame: [
+            { character: 'boss', text: "Ta sẽ quẫy đuôi làm sóng lớn lật tung rương ngọc trai trên thuyền của các ngươi!" },
+            { character: 'monkey', text: "Ngọc trai rơi tung tóe rồi! Gõ nhanh nhặt lại chúng để không bị rơi xuống sông." }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Toàn bộ ngọc trai đã được thu lại. Sức mạnh của chúng ta vẫn nguyên vẹn." }
+        ]
+    },
+    177: {
+        minigame: 'assemble_object',
+        preGame: [
+            { character: 'monkey', text: "Cơn sóng dữ của Cá Sấu đã làm rách cánh buồm rồi." },
+            { character: 'monkey', text: "Hãy gõ phím để ráp các mảnh vải bạt lại, giúp thuyền căng buồm đón gió đi tiếp!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Cánh buồm đã được sửa xong. Thuyền Nhỏ lại no gió rẽ sóng tiến về phía trước." }
+        ]
+    },
+    178: {
+        minigame: 'clear_fog',
+        preGame: [
+            { character: 'boss', text: "Cố chấp bám theo sao? Làn sương độc này sẽ biến dòng sông thành mê cung vĩnh viễn!" },
+            { character: 'monkey', text: "Không có gì cản được chúng ta! Gõ phím tạo gió mạnh thổi tan sương mù, sào huyệt hắn ngay đây rồi!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Tầm nhìn đã rõ ràng. Sào huyệt của Cá Sấu hiện ra ở cuối khúc sông." }
+        ]
+    },
+    179: {
+        minigame: 'bubble_shooter',
+        preGame: [
+            { character: 'monkey', text: "Hắn đang điên cuồng dùng đuôi hất những tảng đá ngầm to lớn về phía chúng ta." },
+            { character: 'monkey', text: "Ngắm chuẩn và bắn nát các tảng đá trên không trung, bảo vệ Thuyền Nhỏ!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Những tảng đá vỡ vụn rơi xuống nước. Đòn tấn công của Cá Sấu đã thất bại." }
+        ]
+    },
+    180: {
+        minigame: 'assemble_object',
+        preGame: [
+            { character: 'monkey', text: "Hang ổ của Cá Sấu ngay trước mặt. Trận chiến lớn sắp bắt đầu rồi." },
+            { character: 'monkey', text: "Hãy ghép những mảnh gỗ lim cứng nhất thành chiếc Khiên Thủy Tùng để cản đòn của hắn!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Khiên Thủy Tùng vô cùng kiên cố. Cầm chắc vũ khí, đánh bại Cá Sấu thôi!" }
+        ]
+    },
+    // Lesson 182 - 194 (Group: Sông nước, Chapter 14:  'Thác bạc', Boss: Cá Sấu)
+    182: {
+        minigame: 'clear_fog',
+        preGame: [
+            { character: 'monkey', text: "Ôi, tiếng nước chảy rầm rập! Chúng ta đã đến Thác Bạc rồi, nhưng bụi nước mù mịt quá." },
+            { character: 'boss', text: "Khà khà! Dòng thác này sẽ cuốn trôi tất cả các ngươi. Bỏ cuộc đi!" },
+            { character: 'monkey', text: "Không bao giờ! Hãy gõ phím thật nhanh để tạo gió thổi tan màn sương mù này nào!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Sương mù đã tan, Thác Bạc trắng xóa hiện ra thật hùng vĩ. Tiến lên thôi!" }
+        ]
+    },
+    183: {
+        minigame: 'rescue_animals',
+        preGame: [
+            { character: 'monkey', text: "Nhìn kìa! Một bạn Cá Chép đang bị mắc kẹt trong lưới rêu của Cá Sấu." },
+            { character: 'monkey', text: "Dòng thác đang đổ xuống rất mạnh, gõ đúng để cắt lưới cứu bạn ấy ngay!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Cá Chép đã quẫy đuôi bơi ngược dòng an toàn. Chúng ta làm tốt lắm!" }
+        ]
+    },
+    184: {
+        minigame: 'bubble_shooter',
+        preGame: [
+            { character: 'boss', text: "Ta ở trên cao này! Nhận lấy cơn mưa bong bóng nước xoáy của ta đi!" },
+            { character: 'monkey', text: "Hắn ném bóng nước từ đỉnh thác xuống! Bắn vỡ chúng ngay trước khi chúng ta bị cuốn trôi!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Mọi quả bóng nước đều vỡ tan. Cá Sấu không thể làm khó chúng ta." }
+        ]
+    },
+    185: {
+        minigame: 'whack_mole',
+        preGame: [
+            { character: 'monkey', text: "Lũ cóc độc tay sai đang nhô đầu ra từ các hốc đá trên vách thác để phục kích." },
+            { character: 'monkey', text: "Nhanh tay cầm búa, gõ trúng đầu chúng để dọn đường leo lên đỉnh thác nhé!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Lũ cóc độc đã sợ hãi thụt hết vào hang. Vách đá đã an toàn để leo." }
+        ]
+    },
+    186: {
+        minigame: 'racing',
+        preGame: [
+            { character: 'monkey', text: "Cá Sấu đang bơi ngược thác để bỏ trốn. Cùng bám vào vây bạn Cá Chép khổng lồ!" },
+            { character: 'monkey', text: "Gõ phím thật nhanh để tăng tốc, vượt qua dòng nước xiết đuổi theo hắn nào!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Cá Chép bơi khỏe quá! Chúng ta đã vượt qua được đoạn thác chảy xiết nhất." }
+        ]
+    },
+    187: {
+        minigame: 'grow_plant',
+        preGame: [
+            { character: 'monkey', text: "Vách đá trơn tuột, chúng ta không thể tự leo lên được nữa." },
+            { character: 'monkey', text: "Hãy gieo hạt giống phép thuật, gõ đúng để dây leo khổng lồ mọc ra bám chặt vào vách thác!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Dây leo vô cùng dẻo dai. Bám chắc vào, chúng ta cùng trèo lên nào!" }
+        ]
+    },
+    188: {
+        minigame: 'catch_insects',
+        preGame: [
+            { character: 'monkey', text: "Lối đi dẫn vào một hang động tối om phía sau dòng thác." },
+            { character: 'monkey', text: "Dùng vợt bắt những bạn đom đóm nước vào lọ để thắp sáng con đường nhé." }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Ánh sáng đom đóm lấp lánh phản chiếu trên vách đá thật đẹp. Đi tiếp thôi." }
+        ]
+    },
+    189: {
+        minigame: 'frog_jump',
+        preGame: [
+            { character: 'monkey', text: "Phải nhảy qua những mỏm đá đầy rêu trơn trượt vắt ngang dòng thác này." },
+            { character: 'monkey', text: "Gõ đúng nhịp để đôi chân chạm đất thật chuẩn xác, đừng để rơi xuống vực nước xoáy!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Thật thót tim! Nhưng chúng ta đã qua được phía bên kia an toàn." }
+        ]
+    },
+    190: {
+        minigame: 'collect_items',
+        preGame: [
+            { character: 'boss', text: "Ta sẽ dùng đuôi đập vỡ kho báu Tinh Thể Thác Bạc, các ngươi đừng mơ có được sức mạnh!" },
+            { character: 'monkey', text: "Tinh thể đang rơi xuống! Nhanh tay nhặt hết chúng vào túi trước khi bị nước cuốn đi." }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Tinh thể lấp lánh đã nằm gọn trong túi. Năng lượng của chúng ta đã được nạp đầy!" }
+        ]
+    },
+    191: {
+        minigame: 'assemble_object',
+        preGame: [
+            { character: 'monkey', text: "Chiếc cần cẩu bằng gỗ giúp vượt qua vách đá cuối cùng đã bị Cá Sấu phá hỏng." },
+            { character: 'monkey', text: "Hãy gõ phím để ghép các bánh răng và thanh gỗ lại, khởi động chiếc cần cẩu nhé!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Cần cẩu đã hoạt động trơn tru. Đỉnh Thác Bạc ở ngay phía trên chúng ta rồi." }
+        ]
+    },
+    192: {
+        minigame: 'clear_fog',
+        preGame: [
+            { character: 'boss', text: "Đã lên tận đây rồi sao? Làn sương băng giá này sẽ đóng băng các ngươi vĩnh viễn!" },
+            { character: 'monkey', text: "Lạnh quá! Gõ phím thật mạnh để tạo luồng gió ấm thổi bay lớp sương băng này ngay!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Sương băng đã tan chảy. Hang ổ của Cá Sấu đã hiện ra rõ mồn một!" }
+        ]
+    },
+    193: {
+        minigame: 'bubble_shooter',
+        preGame: [
+            { character: 'monkey', text: "Hắn đang điên cuồng ném những khúc gỗ mục lớn từ trong hang ra cản đường." },
+            { character: 'monkey', text: "Tuyệt đối không lùi bước! Ngắm chuẩn và bắn nát những khúc gỗ đó trên không trung!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Gỗ mục vỡ vụn thành từng mảnh. Cá Sấu đã hết trò để chống cự rồi!" }
+        ]
+    },
+    194: {
+        minigame: 'assemble_object',
+        preGame: [
+            { character: 'monkey', text: "Cá Sấu đang chờ sẵn. Chúng ta cần một vũ khí hoàn hảo cho trận quyết chiến ở Thác Bạc." },
+            { character: 'monkey', text: "Hãy ráp những viên Tinh Thể Thác Bạc lại thành chiếc Trượng Ánh Bạc đầy quyền năng!" }
+        ],
+        postGame: [
+            { character: 'monkey', text: "Trượng Ánh Bạc tỏa sáng rực rỡ, mang theo sức mạnh của dòng thác. Xông lên và đánh bại Cá Sấu thôi!" }
+        ]
     }
-// Lesson 168 - 180 (Group: Sông nước, Chapter 13:  'Thuyền nhỏ', Boss: Cá Sấu)
-// Lesson 182 - 194 (Group: Sông nước, Chapter 14:  'Thác bạc', Boss: Cá Sấu)
 // Lesson 196 - 208 (Group: Núi rừng, Chapter 15:  'Chân núi', Boss: Hổ Hung Ác)
 // Lesson 210 - 222 (Group: Núi rừng, Chapter 16:  'Đá lăn', Boss: Hổ Hung Ác)
 // Lesson 224 - 236 (Group: Núi rừng, Chapter 17:  'Rừng thông', Boss: Hổ Hung Ác)
