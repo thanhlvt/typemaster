@@ -22,7 +22,7 @@ export class CollectItemsGame extends BaseMinigame {
         } else {
             this.containerSprite.setScale(container.scale || 1);
         }
-        this.containerSprite.setDepth(110);
+        this.containerSprite.setDepth(115);
         this.add(this.containerSprite);
 
         // 2. Tạo danh sách các đồ vật và rải ngẫu nhiên
@@ -68,13 +68,16 @@ export class CollectItemsGame extends BaseMinigame {
 
         // Trộn ngẫu nhiên danh sách vật phẩm để thứ tự thu thập sinh động
         Phaser.Math.RND.shuffle(this.itemsList);
+
+        // Sắp xếp thứ tự render ban đầu dựa trên depth
+        this.sort('depth');
     }
 
     getCollectedCount() {
         return this.itemsList.filter(item => item.collected).length;
     }
 
-    onWordComplete(word, currentWordIndex, totalWords) {
+    onWordComplete(word, currentWordIndex, totalWords, onComplete) {
         // Tính toán số lượng vật phẩm cần thu thập tại tiến độ này
         const targetCount = Math.round((currentWordIndex / totalWords) * this.itemsList.length);
         const currentCount = this.getCollectedCount();
@@ -85,15 +88,18 @@ export class CollectItemsGame extends BaseMinigame {
             
             for (let i = 0; i < this.itemsList.length; i++) {
                 if (!this.itemsList[i].collected) {
-                    this.collectItem(this.itemsList[i]);
+                    const isLastCollectedInBatch = (count === needed - 1);
+                    this.collectItem(this.itemsList[i], isLastCollectedInBatch ? onComplete : null);
                     count++;
                     if (count >= needed) break;
                 }
             }
+        } else {
+            if (onComplete) onComplete();
         }
     }
 
-    collectItem(item) {
+    collectItem(item, onComplete) {
         item.collected = true;
         const scene = this.scene;
         const containerSprite = this.containerSprite;
@@ -102,33 +108,91 @@ export class CollectItemsGame extends BaseMinigame {
         const effect = this.config.interactions?.onWordComplete?.effect;
         const self = this;
 
-        // Tween bay vào giỏ đồ
+        // 1. Animation tại chỗ: Phóng to trước, sau đó mới bay lên và fade out khi được một nửa quãng đường
+        const startScaleX = item.sprite.scaleX;
+        const startScaleY = item.sprite.scaleY;
+        const startY = item.sprite.y;
+
         scene.tweens.add({
             targets: item.sprite,
-            x: containerSprite.x,
-            y: containerSprite.y,
-            scale: 0.3,
-            duration: 500,
-            ease: 'Back.easeIn',
+            scaleX: startScaleX * 2.2,
+            scaleY: startScaleY * 2.2,
+            duration: 250,
+            ease: 'Back.easeOut',
             onComplete: () => {
                 if (!self.scene) return;
-                // Hiệu ứng giỏ đồ nảy lên nhẹ khi nhận được đồ
+
+                // Tween bay lên (y giảm 60px trong 400ms)
                 scene.tweens.add({
-                    targets: containerSprite,
-                    scaleX: baseScaleX * 1.2,
-                    scaleY: baseScaleY * 1.2,
-                    duration: 100,
-                    yoyo: true,
-                    ease: 'Quad.easeOut'
+                    targets: item.sprite,
+                    y: startY - 60,
+                    duration: 400,
+                    ease: 'Quad.easeOut',
+                    onComplete: () => {
+                        if (!self.scene) return;
+                        item.sprite.setVisible(false);
+
+                        // 2. Animation đưa đồ vào giỏ: Rơi đúng đồ vật đó từ trên trời xuống giỏ (chạy sau khi animation 1 kết thúc)
+                        const dropItem = new Phaser.GameObjects.Sprite(scene, containerSprite.x, containerSprite.y - 180, item.sprite.texture.key);
+                        self.addAt(dropItem, 0);
+
+                        if (item.sprite.displayWidth && item.sprite.displayHeight) {
+                            dropItem.setDisplaySize(item.sprite.displayWidth * 0.8, item.sprite.displayHeight * 0.8);
+                        } else {
+                            dropItem.setScale(0.6);
+                        }
+
+                        scene.tweens.add({
+                            targets: dropItem,
+                            y: containerSprite.y,
+                            duration: 450,
+                            ease: 'Cubic.easeIn',
+                            onComplete: () => {
+                                if (dropItem) {
+                                    scene.tweens.add({
+                                        targets: dropItem,
+                                        scaleX: 0,
+                                        scaleY: 0,
+                                        alpha: 0,
+                                        duration: 150,
+                                        onComplete: () => {
+                                            dropItem.destroy();
+                                            if (onComplete) onComplete();
+                                        }
+                                    });
+                                } else {
+                                    if (onComplete) onComplete();
+                                }
+
+                                if (!self.scene) return;
+
+                                // Hiệu ứng giỏ đồ nảy lên nhẹ khi nhận được đồ
+                                scene.tweens.add({
+                                    targets: containerSprite,
+                                    scaleX: baseScaleX * 1.2,
+                                    scaleY: baseScaleY * 1.2,
+                                    duration: 100,
+                                    yoyo: true,
+                                    ease: 'Quad.easeOut'
+                                });
+
+                                // Chạy hiệu ứng lấp lánh (nếu có yêu cầu từ config)
+                                if (effect === 'sparkle') {
+                                    self.showSparkle(containerSprite.x, containerSprite.y);
+                                }
+                            }
+                        });
+                    }
                 });
 
-                // Chạy hiệu ứng lấp lánh (nếu có yêu cầu từ config)
-                if (effect === 'sparkle') {
-                    self.showSparkle(containerSprite.x, containerSprite.y);
-                }
-                
-                // Ẩn vật phẩm
-                item.sprite.setVisible(false);
+                // Tween fade out (bắt đầu sau 200ms của chặng bay 400ms)
+                scene.tweens.add({
+                    targets: item.sprite,
+                    alpha: 0,
+                    delay: 200,
+                    duration: 200,
+                    ease: 'Linear'
+                });
             }
         });
     }

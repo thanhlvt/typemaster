@@ -349,24 +349,41 @@ export class PlayScene extends Phaser.Scene {
         this.combo.checkMilestone(this);
         if (multiplier >= 2) this.combo.showPopup(this, multiplier);
 
-        // Kích hoạt tương tác gõ đúng trong Minigame
-        if (this.minigame) {
-            this.minigame.onWordComplete(this.targetWord, this.currentWordIndex + 1, totalWords);
-        }
-
         const targetSprite = this.minigame ? 
             (this.minigame.playerContainer || this.minigame.containerSprite || this.minigame.finishedSprite || this.monkey) 
             : this.monkey;
 
-        this.tweens.add({
-            targets: targetSprite,
-            y: targetSprite.y - 30,
-            duration: 200, yoyo: true, ease: 'Power2',
-            onComplete: () => this.nextWord()
-        });
+        const isLastWord = (this.currentWordIndex + 1 >= totalWords);
+        let nextStepCalled = false;
+        const triggerNext = () => {
+            if (nextStepCalled) return;
+            nextStepCalled = true;
+            this.nextWord();
+        };
+
+        if (this.minigame && isLastWord) {
+            // Kích hoạt minigame và truyền triggerNext làm callback kết thúc hiệu ứng
+            this.minigame.onWordComplete(this.targetWord, this.currentWordIndex + 1, totalWords, triggerNext);
+            
+            // Cài đặt fallback để đảm bảo luôn chuyển tiếp sau tối đa 2000ms đề phòng minigame không gọi callback
+            this.time.delayedCall(2000, triggerNext);
+        } else {
+            if (this.minigame) {
+                this.minigame.onWordComplete(this.targetWord, this.currentWordIndex + 1, totalWords);
+            }
+
+            this.tweens.add({
+                targets: targetSprite,
+                y: targetSprite.y - 30,
+                duration: 200, yoyo: true, ease: 'Power2',
+                onComplete: triggerNext
+            });
+        }
 
         showScorePopup(this, targetSprite, multiplier);
-        showBananaDrop(this, targetSprite);
+        if (!this.minigame) {
+            showBananaDrop(this, targetSprite);
+        }
     }
 
     handleFail() {

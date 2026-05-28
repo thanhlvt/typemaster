@@ -59,7 +59,8 @@ export class AssembleObjectGame extends BaseMinigame {
         });
     }
 
-    onWordComplete(word, currentWordIndex, totalWords) {
+    onWordComplete(word, currentWordIndex, totalWords, onComplete) {
+        this.onCompleteCallback = onComplete;
         // Tính toán xem tiến độ gõ tương ứng với bao nhiêu mảnh cần được lắp ráp
         const targetAssembled = Math.round((currentWordIndex / totalWords) * this.partsList.length);
 
@@ -67,6 +68,11 @@ export class AssembleObjectGame extends BaseMinigame {
             if (i < this.partsList.length && !this.partsList[i].assembled) {
                 this.assemblePart(this.partsList[i]);
             }
+        }
+
+        // Nếu đã hoàn thành tất cả bộ phận và không cần chạy thêm tween lắp ráp
+        if (this.assembledCount >= this.partsList.length) {
+            if (onComplete) onComplete();
         }
     }
 
@@ -135,7 +141,12 @@ export class AssembleObjectGame extends BaseMinigame {
                     duration: 250,
                     yoyo: true,
                     repeat: 1,
-                    ease: 'Quad.easeInOut'
+                    ease: 'Quad.easeInOut',
+                    onComplete: () => {
+                        if (self.scene && self.onCompleteCallback) {
+                            self.onCompleteCallback();
+                        }
+                    }
                 });
             }
         });

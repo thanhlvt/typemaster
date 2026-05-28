@@ -2,25 +2,26 @@
 // Mỗi minigame được định nghĩa với gameId và các tham số điều khiển hiển thị/tương tác riêng biệt
 
 export const MINIGAME_CONFIGS = {
+    // Lesson 0 - 13 (Group: Khu rừng, Chapter 1: Cây non, Boss: Sói Già)
     // Lesson 0: Minigame Thu thập đồ vật
     0: {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 4, width: 45, height: 45 }, 
-                { texture: 'mushroom_item', emoji: '🍄', count: 3 },
-                { texture: 'chestnut_item', emoji: '🌰', count: 3 }
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
+                image: 'basket.png',
                 emoji: '🧺',
-                x: 700,
-                y: 280,
-                width: 96,
-                height: 96
+                x: 920,
+                y: 340,
+                width: 180,
+                height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 500, minY: 120, maxY: 320 } // Khu vực rải đồ vật
+            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },

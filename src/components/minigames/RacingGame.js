@@ -110,7 +110,7 @@ export class RacingGame extends BaseMinigame {
         });
     }
 
-    onWordComplete(word, currentWordIndex, totalWords) {
+    onWordComplete(word, currentWordIndex, totalWords, onComplete) {
         // Tính toán vị trí X mới của người chơi dựa trên tiến độ gõ
         const progress = currentWordIndex / totalWords;
         const targetX = this.startX + progress * (this.endX - this.startX);
@@ -134,7 +134,12 @@ export class RacingGame extends BaseMinigame {
                 if (!self.scene) return;
                 // Nhấp nháy lửa ga khi tăng tốc
                 playerVehicleSprite.setTint(0xffd700);
-                scene.time.delayedCall(100, () => playerVehicleSprite.clearTint());
+                scene.time.delayedCall(100, () => {
+                    if (self.scene) {
+                        playerVehicleSprite.clearTint();
+                        if (onComplete) onComplete();
+                    }
+                });
             }
         });
     }
