@@ -6,6 +6,7 @@ export class BaseMinigame extends Phaser.GameObjects.Container {
         this.scene = scene;
         this.config = config;
         this.totalWords = 0;
+        this.skipSuccessJump = false;
 
         // Thêm container vào scene
         scene.add.existing(this);

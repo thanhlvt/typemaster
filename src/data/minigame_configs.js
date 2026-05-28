@@ -33,18 +33,50 @@ export const MINIGAME_CONFIGS = {
     1: {
         gameId: 'racing',
         config: {
-            playerVehicle: { texture: 'car_monkey', emoji: '🚗', type: 'car' }, // Hỗ trợ: car, boat, spaceship, airplane
-            enemyVehicle: { texture: 'car_boss', emoji: '🏎️', type: 'car' },
+            playerVehicle: { 
+                texture: 'car_monkey', 
+                image: 'car1.png', 
+                emoji: '🚗', 
+                type: 'car',
+                scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
+                flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
+                driverFlipX: false,  // Lật ngang người lái (true/false)
+                driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
+                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                vehicleOffsetX: 20,
+                vehicleOffsetY: -5
+            },
+            enemyVehicle: { 
+                texture: 'car_boss', 
+                image: 'car2.png', 
+                emoji: '🏎️', 
+                type: 'car',
+                scale: 0.45,         // Tỷ lệ kích thước của xe boss
+                flipX: true,         // Lật ngang xe boss
+                driverFlipX: true,  // Lật ngang boss
+                driverScale: 0.2,   // Tỷ lệ kích thước của boss
+                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                vehicleOffsetX: 20,
+                vehicleOffsetY: -5
+            },
             track: {
                 texture: 'race_track',
-                startX: 120,
-                endX: 680,
-                playerY: 160,
-                enemyY: 280
+                // Các loại đường đua hỗ trợ (track.type):
+                // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
+                // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
+                // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
+                type: 'road',
+                startX: 150,
+                endX: 820,
+                playerY: 220,
+                enemyY: 350,
+                height: 70
             }
         },
         interactions: {
-            onWordComplete: { action: 'move_forward' }, // Tự tính toán dựa trên tiến độ gõ
+            onWordComplete: { action: 'move_forward' },
             onTypeError: { action: 'slow_down', effect: 'smoke' }
         }
     },

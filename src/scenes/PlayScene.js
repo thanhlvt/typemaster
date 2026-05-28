@@ -254,6 +254,20 @@ export class PlayScene extends Phaser.Scene {
                     url: getAssetUrl(minigameConfig.config.container.image)
                 });
             }
+
+            // 1.5. Ảnh của phương tiện đua xe (Racing vehicles)
+            if (minigameConfig.config?.playerVehicle?.image) {
+                texturesToLoad.push({
+                    key: minigameConfig.config.playerVehicle.texture,
+                    url: getAssetUrl(minigameConfig.config.playerVehicle.image)
+                });
+            }
+            if (minigameConfig.config?.enemyVehicle?.image) {
+                texturesToLoad.push({
+                    key: minigameConfig.config.enemyVehicle.texture,
+                    url: getAssetUrl(minigameConfig.config.enemyVehicle.image)
+                });
+            }
             
             // 2. Ảnh của các đồ vật (items)
             if (Array.isArray(minigameConfig.config?.items)) {
@@ -372,12 +386,17 @@ export class PlayScene extends Phaser.Scene {
                 this.minigame.onWordComplete(this.targetWord, this.currentWordIndex + 1, totalWords);
             }
 
-            this.tweens.add({
-                targets: targetSprite,
-                y: targetSprite.y - 30,
-                duration: 200, yoyo: true, ease: 'Power2',
-                onComplete: triggerNext
-            });
+            if (this.minigame && this.minigame.skipSuccessJump) {
+                // Nếu minigame yêu cầu bỏ qua hiệu ứng nhảy nảy, chuyển tiếp ngay lập tức
+                triggerNext();
+            } else {
+                this.tweens.add({
+                    targets: targetSprite,
+                    y: targetSprite.y - 30,
+                    duration: 200, yoyo: true, ease: 'Power2',
+                    onComplete: triggerNext
+                });
+            }
         }
 
         showScorePopup(this, targetSprite, multiplier);

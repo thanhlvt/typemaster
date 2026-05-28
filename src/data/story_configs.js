@@ -24,7 +24,7 @@ export const STORY_CONFIGS = {
             { character: 'boss', text: "Ha! Chiếc xe cà tàng của ngươi làm sao thắng nổi siêu xe của ta!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Wow, chúng mình đã cán đích đầu tiên rồi! Bạn chạy nhanh thật đấy!" }
+            { character: 'monkey', text: "Wow, chúng mình đã về đích rồi! Bạn chạy nhanh thật đấy!" }
         ]
     },
     2: {
