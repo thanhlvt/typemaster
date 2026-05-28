@@ -175,6 +175,20 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
             });
         }
 
+        // 10. FrogJump images (frog, leaf)
+        if (minigameConfig.config?.frog?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.frog.texture || 'frog_frog_tex',
+                url: getAssetUrl(minigameConfig.config.frog.image)
+            });
+        }
+        if (minigameConfig.config?.leaf?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.leaf.texture || 'frog_leaf_tex',
+                url: getAssetUrl(minigameConfig.config.leaf.image)
+            });
+        }
+
         ensureTextures(scene, texturesToLoad, () => {
             const minigame = MinigameFactory.createMinigame(scene, minigameConfig.gameId, minigameConfig.config);
             if (minigame) {

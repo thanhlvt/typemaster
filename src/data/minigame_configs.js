@@ -270,8 +270,24 @@ export const MINIGAME_CONFIGS = {
     9: {
         gameId: 'frog_jump',
         config: {
-            leafEmoji: '🪷',
-            frogEmoji: '🐸'
+            leaf: {
+                texture: 'frog_leaf_tex',
+                image: 'leaf.png',
+                scale: 0.4,
+                emoji: '🪷'
+            },
+            frog: {
+                texture: 'frog_frog_tex',
+                image: 'frog.png',
+                scale: 0.3,
+                emoji: '🐸',
+                offsetX: 0,
+                offsetY: -20
+            },
+            x1: 100,
+            y1: 150,
+            x2: 920,
+            y2: 300
         },
         interactions: {
             onWordComplete: { action: 'jump_next_leaf' },
