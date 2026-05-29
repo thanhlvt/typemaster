@@ -922,38 +922,20 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                texture: 'truck_complete',
-                image: 'truck_complete.png',
-                emoji: '🚚',
+                texture: 'bridge_complete',
+                image: 'bridge_complete.png',
+                emoji: '🚧',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 1
             },
             parts: [
-                {
-                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
-                },
-                {
-                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
-                },
-                {
-                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
-                },
-                {
-                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
-                },
-                {
-                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
-                },
-                {
-                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
-                }
+                { id: 'bridge_part1', texture: 'bridge_part1', image: 'bridge_part1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 1 },
+                { id: 'bridge_part2', texture: 'bridge_part2', image: 'bridge_part2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 2 },
+                { id: 'bridge_part3', texture: 'bridge_part3', image: 'bridge_part3.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 3 },
+                { id: 'bridge_part4', texture: 'bridge_part4', image: 'bridge_part4.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 4 },
+                { id: 'bridge_part5', texture: 'bridge_part5', image: 'bridge_part5.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 5 },
+                { id: 'bridge_part6', texture: 'bridge_part6', image: 'bridge_part6.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '➖', offsetX: 0, offsetY: 0, order: 6 }
             ]
         },
         interactions: {
