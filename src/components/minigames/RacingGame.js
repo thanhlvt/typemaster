@@ -13,6 +13,7 @@ export class RacingGame extends BaseMinigame {
 
     create() {
         const { playerVehicle, enemyVehicle, track } = this.config;
+        const vehicleOver = this.config.vehicleOver !== false; // Mặc định vehicleOver = true
         const { startX, endX, playerY, enemyY } = track;
         this.startX = startX;
         this.endX = endX;
@@ -39,18 +40,18 @@ export class RacingGame extends BaseMinigame {
                 // Đường nước: Màu xanh dương của nước biển
                 this.trackGraphics.fillStyle(0x1d4ed8, 0.85);
                 this.trackGraphics.fillRoundedRect(startX - 20, laneTop, (endX - startX) + 60, this.laneHeight, 10);
-                
+
                 // Viền bọt sóng màu xanh nhạt
                 this.trackGraphics.lineStyle(3, 0x38bdf8, 0.6);
                 this.trackGraphics.strokeRoundedRect(startX - 20, laneTop, (endX - startX) + 60, this.laneHeight, 10);
-                
+
                 // Vẽ các gợn sóng màu trắng/cyan nhạt bằng nét vẽ hình sin
                 this.trackGraphics.lineStyle(2, 0xe0f2fe, 0.7);
                 const waveLength = 20;
                 const waveGap = 15;
                 const amplitude = 4;
                 const frequency = 0.3;
-                
+
                 for (let startXVal = startX - 10; startXVal < endX + 30; startXVal += waveLength + waveGap) {
                     this.trackGraphics.beginPath();
                     this.trackGraphics.moveTo(startXVal, y);
@@ -64,11 +65,11 @@ export class RacingGame extends BaseMinigame {
                 // Đường trên không: Màu tím vũ trụ mờ ảo pha neon
                 this.trackGraphics.fillStyle(0x581c87, 0.8);
                 this.trackGraphics.fillRoundedRect(startX - 20, laneTop, (endX - startX) + 60, this.laneHeight, 10);
-                
+
                 // Viền phát sáng màu hồng neon
                 this.trackGraphics.lineStyle(3, 0xf472b6, 0.75);
                 this.trackGraphics.strokeRoundedRect(startX - 20, laneTop, (endX - startX) + 60, this.laneHeight, 10);
-                
+
                 // Vẽ các chấm tròn phát sáng màu vàng nhạt
                 this.trackGraphics.fillStyle(0xfef08a, 0.9);
                 const dotGap = 25;
@@ -79,7 +80,7 @@ export class RacingGame extends BaseMinigame {
                 // Đường bộ (road): Mặc định là nhựa đường xám và vạch trắng đứt quãng
                 this.trackGraphics.fillStyle(0x334155, 1);
                 this.trackGraphics.fillRoundedRect(startX - 20, laneTop, (endX - startX) + 60, this.laneHeight, 10);
-                
+
                 // Viền xám nhạt
                 this.trackGraphics.lineStyle(2, 0x64748b, 0.5);
                 this.trackGraphics.strokeRoundedRect(startX - 20, laneTop, (endX - startX) + 60, this.laneHeight, 10);
@@ -100,11 +101,11 @@ export class RacingGame extends BaseMinigame {
             const fyStart = y - this.laneHeight / 2;
             const barWidth = 16;
             const barHeight = this.laneHeight;
-            
+
             // Vẽ nền màu trắng cho vạch đích
             this.trackGraphics.fillStyle(0xffffff, 1);
             this.trackGraphics.fillRect(fx, fyStart, barWidth, barHeight);
-            
+
             // Vẽ các ô vuông màu đen xen kẽ (chia chiều cao làm 6 hàng ô vuông)
             this.trackGraphics.fillStyle(0x000000, 1);
             const sqWidth = 8;
@@ -121,7 +122,7 @@ export class RacingGame extends BaseMinigame {
         // Vẽ Cờ Đích (Checkered Flag) bằng emoji treo phía trên vạch đích để đánh dấu
         const flagKey = this.createEmojiTexture('finish_flag', '🏁', 36);
         const flagYOffset = this.laneHeight / 2 + 15;
-        
+
         this.playerFlagSprite = this.scene.add.sprite(endX + 8, playerY - flagYOffset, flagKey)
             .setScale(0.8)
             .setDepth(106);
@@ -133,40 +134,50 @@ export class RacingGame extends BaseMinigame {
         this.add(this.enemyFlagSprite);
 
         // 2. Tạo Phương tiện của Người chơi (Khỉ + Xe)
-        const playerVehicleKey = playerVehicle.image 
-            ? playerVehicle.texture 
+        const playerVehicleKey = playerVehicle.image
+            ? playerVehicle.texture
             : (playerVehicle.emoji ? this.createEmojiTexture(playerVehicle.texture, playerVehicle.emoji, 56) : playerVehicle.texture);
 
         this.playerContainer = this.scene.add.container(startX + this.playerVehicleOffsetX, playerY + this.playerVehicleOffsetY).setDepth(110);
-        
-        // Tạo người lái (Khỉ) trước để hiển thị ở lớp dưới (depth thấp hơn xe)
+
+        // Tạo người lái (Khỉ)
         const monkeySkin = this.scene.monkey?.texture?.key || 'monkey_1';
         const pDriverOX = playerVehicle.driverOffsetX !== undefined ? playerVehicle.driverOffsetX : -10;
         const pDriverOY = playerVehicle.driverOffsetY !== undefined ? playerVehicle.driverOffsetY : -22;
         const pDriverScale = playerVehicle.driverScale !== undefined ? playerVehicle.driverScale : 0.18;
-        
+
         this.playerDriverSprite = this.scene.add.sprite(pDriverOX, pDriverOY, monkeySkin)
             .setScale(pDriverScale)
             .setOrigin(0.5);
         if (playerVehicle.driverFlipX !== undefined) {
             this.playerDriverSprite.setFlipX(playerVehicle.driverFlipX);
         }
-        this.playerContainer.add(this.playerDriverSprite);
 
-        // Tạo Xe sau để hiển thị đè lên người lái (để khỉ ngồi bên trong xe)
+        // Tạo Xe
         const pVehicleScale = playerVehicle.scale !== undefined ? playerVehicle.scale : 0.85;
         this.playerVehicleSprite = this.scene.add.sprite(0, 0, playerVehicleKey)
             .setScale(pVehicleScale);
         if (playerVehicle.flipX !== undefined) {
             this.playerVehicleSprite.setFlipX(playerVehicle.flipX);
         }
-        this.playerContainer.add(this.playerVehicleSprite);
-        
+
+        if (vehicleOver) {
+            this.playerDriverSprite.setDepth(111);
+            this.playerVehicleSprite.setDepth(112);
+            this.playerContainer.add(this.playerDriverSprite);
+            this.playerContainer.add(this.playerVehicleSprite);
+        } else {
+            this.playerDriverSprite.setDepth(112);
+            this.playerVehicleSprite.setDepth(111);
+            this.playerContainer.add(this.playerVehicleSprite);
+            this.playerContainer.add(this.playerDriverSprite);
+        }
+
         this.add(this.playerContainer);
 
         // 3. Tạo Phương tiện của Đối thủ (Boss + Xe)
-        const enemyVehicleKey = enemyVehicle.image 
-            ? enemyVehicle.texture 
+        const enemyVehicleKey = enemyVehicle.image
+            ? enemyVehicle.texture
             : (enemyVehicle.emoji ? this.createEmojiTexture(enemyVehicle.texture, enemyVehicle.emoji, 56) : enemyVehicle.texture);
 
         this.enemyContainer = this.scene.add.container(startX + this.enemyVehicleOffsetX, enemyY + this.enemyVehicleOffsetY).setDepth(110);
@@ -176,7 +187,7 @@ export class RacingGame extends BaseMinigame {
         const group = getGroupForChapter(chapter);
         const bossTexture = `boss_${group ? group.id : 1}`;
 
-        // Tạo boss trước (lớp dưới)
+        // Tạo boss
         const eDriverOX = enemyVehicle.driverOffsetX !== undefined ? enemyVehicle.driverOffsetX : -10;
         const eDriverOY = enemyVehicle.driverOffsetY !== undefined ? enemyVehicle.driverOffsetY : -22;
         const eDriverScale = enemyVehicle.driverScale !== undefined ? enemyVehicle.driverScale : 0.18;
@@ -187,16 +198,26 @@ export class RacingGame extends BaseMinigame {
         if (enemyVehicle.driverFlipX !== undefined) {
             this.enemyDriverSprite.setFlipX(enemyVehicle.driverFlipX);
         }
-        this.enemyContainer.add(this.enemyDriverSprite);
 
-        // Tạo Xe Boss sau (lớp trên)
+        // Tạo Xe Boss
         const eVehicleScale = enemyVehicle.scale !== undefined ? enemyVehicle.scale : 0.85;
         this.enemyVehicleSprite = this.scene.add.sprite(0, 0, enemyVehicleKey)
             .setScale(eVehicleScale);
         if (enemyVehicle.flipX !== undefined) {
             this.enemyVehicleSprite.setFlipX(enemyVehicle.flipX);
         }
-        this.enemyContainer.add(this.enemyVehicleSprite);
+
+        if (vehicleOver) {
+            this.enemyDriverSprite.setDepth(111);
+            this.enemyVehicleSprite.setDepth(112);
+            this.enemyContainer.add(this.enemyDriverSprite);
+            this.enemyContainer.add(this.enemyVehicleSprite);
+        } else {
+            this.enemyDriverSprite.setDepth(112);
+            this.enemyVehicleSprite.setDepth(111);
+            this.enemyContainer.add(this.enemyVehicleSprite);
+            this.enemyContainer.add(this.enemyDriverSprite);
+        }
 
         this.add(this.enemyContainer);
 
@@ -213,7 +234,7 @@ export class RacingGame extends BaseMinigame {
             repeat: -1,
             ease: 'Sine.easeInOut'
         });
-        
+
         this.scene.tweens.add({
             targets: this.playerDriverSprite,
             y: this.playerDriverSprite.y + 1.5,
@@ -231,7 +252,7 @@ export class RacingGame extends BaseMinigame {
             repeat: -1,
             ease: 'Sine.easeInOut'
         });
-        
+
         this.scene.tweens.add({
             targets: this.enemyDriverSprite,
             y: this.enemyDriverSprite.y + 1.5,
@@ -261,7 +282,7 @@ export class RacingGame extends BaseMinigame {
             },
             onComplete: () => {
                 if (!self.scene) return;
-                
+
                 // Nhấp nháy lửa ga khi tăng tốc
                 self.playerVehicleSprite.setTint(0xffd700);
                 scene.time.delayedCall(100, () => {
@@ -290,7 +311,7 @@ export class RacingGame extends BaseMinigame {
     onWordComplete(word, currentWordIndex, totalWords, onComplete) {
         // Cập nhật tiến độ của người chơi
         this.playerProgress = currentWordIndex / totalWords;
-        
+
         // Khi gõ đúng, boss cũng di chuyển nhưng rất chậm (20% tốc độ thông thường)
         this.bossProgress = Math.min(this.bossProgress + (1 / totalWords) * 0.2, 1.0);
 
@@ -299,10 +320,10 @@ export class RacingGame extends BaseMinigame {
 
     onTypeError(char) {
         const totalWords = this.totalWords || 10;
-        
+
         // Khi gõ sai, boss sẽ được di chuyển lên trước (tăng thêm 40% của một bước tiến, giới hạn ở đích)
         this.bossProgress = Math.min(this.bossProgress + (1 / totalWords) * 0.4, 1.0);
-        
+
         // Người chơi bị giật lùi lại phía sau (giảm 30% của một bước tiến, giới hạn ở vạch xuất phát)
         this.playerProgress = Math.max(this.playerProgress - (1 / totalWords) * 0.3, 0.0);
 

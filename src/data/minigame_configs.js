@@ -8,7 +8,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -33,10 +33,10 @@ export const MINIGAME_CONFIGS = {
     1: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -47,10 +47,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -85,27 +85,39 @@ export const MINIGAME_CONFIGS = {
     2: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -414,9 +426,9 @@ export const MINIGAME_CONFIGS = {
         gameId: 'bubble_shooter',
         config: {
             bubble: {
-                texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                texture: 'spiky_shoot_tex',
+                image: 'spiky.png',
+                scale: 0.7,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -464,10 +476,10 @@ export const MINIGAME_CONFIGS = {
     18: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -478,10 +490,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -545,7 +557,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             insect: {
                 texture: 'catch_insect_tex',
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
                 emoji: '🦋'
             },
@@ -575,27 +587,39 @@ export const MINIGAME_CONFIGS = {
     21: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -638,8 +662,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'strawberry_item', image: 'strawberry.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -664,8 +687,8 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                texture: 'rescue_rabbit_tex',
-                image: 'rabbit.png',
+                texture: 'rescue_bird_tex',
+                image: 'bird.png',
                 scale: 0.8,
                 animalEmoji: '🐰'
             },
@@ -705,27 +728,39 @@ export const MINIGAME_CONFIGS = {
     26: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
-                image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+            finishedObject: {
+                texture: 'shield_complete',
+                image: 'shield_complete.png',
+                emoji: '🛡️',
+                x: 490,
+                y: 220,
+                scale: 0.65
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'shield_part1', texture: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'shield_part2', texture: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2
+                },
+                {
+                    id: 'shield_part3', texture: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3
+                },
+                {
+                    id: 'shield_part4', texture: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4
+                },
+                {
+                    id: 'shield_part5', texture: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5
+                },
+                {
+                    id: 'shield_part6', texture: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🚨', offsetX: 0, offsetY: 0, order: 6
+                }
             ]
         },
         interactions: {
@@ -766,8 +801,9 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 3, width: 96, height: 96 },
+                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 3, width: 80, height: 80 },
+                { texture: 'strawberry_item', image: 'strawberry.png', emoji: '🍄', count: 3, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -810,8 +846,8 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                texture: 'rescue_rabbit_tex',
-                image: 'rabbit.png',
+                texture: 'rescue_bird_tex',
+                image: 'bird.png',
                 scale: 0.8,
                 animalEmoji: '🐰'
             },
@@ -834,33 +870,32 @@ export const MINIGAME_CONFIGS = {
     32: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
-                type: 'car',
+            vehicleOver: false,
+            playerVehicle: {
+                texture: 'leaf_monkey',
+                image: 'leaf.png',
+                emoji: '🚗',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
-                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -37,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
-                type: 'car',
+            enemyVehicle: {
+                texture: 'leaf_boss',
+                image: 'leaf.png',
+                emoji: '🏎️',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
                 driverScale: 0.2,   // Tỷ lệ kích thước của boss
-                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -40,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             track: {
                 texture: 'race_track',
@@ -868,7 +903,7 @@ export const MINIGAME_CONFIGS = {
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'water',
                 startX: 150,
                 endX: 820,
                 playerY: 220,
@@ -886,27 +921,39 @@ export const MINIGAME_CONFIGS = {
     33: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -1041,7 +1088,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -1083,27 +1130,39 @@ export const MINIGAME_CONFIGS = {
     40: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -1219,7 +1278,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -1244,10 +1303,11 @@ export const MINIGAME_CONFIGS = {
     47: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            vehicleOver: true,
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -1258,10 +1318,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -1375,27 +1435,39 @@ export const MINIGAME_CONFIGS = {
     51: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -1453,27 +1525,39 @@ export const MINIGAME_CONFIGS = {
     54: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -1579,10 +1663,10 @@ export const MINIGAME_CONFIGS = {
     60: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -1593,10 +1677,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -1690,27 +1774,39 @@ export const MINIGAME_CONFIGS = {
     63: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -1753,7 +1849,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -1813,27 +1909,39 @@ export const MINIGAME_CONFIGS = {
     68: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -1981,10 +2089,10 @@ export const MINIGAME_CONFIGS = {
     75: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -1995,10 +2103,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -2063,7 +2171,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -2105,27 +2213,39 @@ export const MINIGAME_CONFIGS = {
     79: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -2183,27 +2303,39 @@ export const MINIGAME_CONFIGS = {
     82: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -2309,10 +2441,10 @@ export const MINIGAME_CONFIGS = {
     88: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -2323,10 +2455,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -2450,7 +2582,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -2535,27 +2667,39 @@ export const MINIGAME_CONFIGS = {
     96: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -2569,7 +2713,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -2670,10 +2814,10 @@ export const MINIGAME_CONFIGS = {
     102: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -2684,10 +2828,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -2781,27 +2925,39 @@ export const MINIGAME_CONFIGS = {
     105: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -2844,7 +3000,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -2904,27 +3060,39 @@ export const MINIGAME_CONFIGS = {
     110: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -3030,10 +3198,10 @@ export const MINIGAME_CONFIGS = {
     116: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -3044,10 +3212,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -3141,27 +3309,39 @@ export const MINIGAME_CONFIGS = {
     119: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -3204,7 +3384,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -3264,27 +3444,39 @@ export const MINIGAME_CONFIGS = {
     124: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -3339,10 +3531,10 @@ export const MINIGAME_CONFIGS = {
     128: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -3353,10 +3545,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -3410,7 +3602,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -3556,27 +3748,39 @@ export const MINIGAME_CONFIGS = {
     135: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -3631,27 +3835,39 @@ export const MINIGAME_CONFIGS = {
     138: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -3757,10 +3973,10 @@ export const MINIGAME_CONFIGS = {
     144: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -3771,10 +3987,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -3837,7 +4053,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -3923,27 +4139,39 @@ export const MINIGAME_CONFIGS = {
     149: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -3991,27 +4219,39 @@ export const MINIGAME_CONFIGS = {
     152: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -4117,10 +4357,10 @@ export const MINIGAME_CONFIGS = {
     158: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -4131,10 +4371,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -4258,7 +4498,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -4283,27 +4523,39 @@ export const MINIGAME_CONFIGS = {
     163: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -4351,27 +4603,39 @@ export const MINIGAME_CONFIGS = {
     166: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -4477,10 +4741,10 @@ export const MINIGAME_CONFIGS = {
     172: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -4491,10 +4755,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -4618,7 +4882,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -4643,27 +4907,39 @@ export const MINIGAME_CONFIGS = {
     177: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -4711,27 +4987,39 @@ export const MINIGAME_CONFIGS = {
     180: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -4837,10 +5125,10 @@ export const MINIGAME_CONFIGS = {
     186: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -4851,10 +5139,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -4978,7 +5266,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -5003,27 +5291,39 @@ export const MINIGAME_CONFIGS = {
     191: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -5071,27 +5371,39 @@ export const MINIGAME_CONFIGS = {
     194: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -5197,10 +5509,10 @@ export const MINIGAME_CONFIGS = {
     200: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -5211,10 +5523,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -5338,7 +5650,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -5363,27 +5675,39 @@ export const MINIGAME_CONFIGS = {
     205: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -5431,27 +5755,39 @@ export const MINIGAME_CONFIGS = {
     208: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -5557,10 +5893,10 @@ export const MINIGAME_CONFIGS = {
     214: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -5571,10 +5907,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -5698,7 +6034,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -5723,27 +6059,39 @@ export const MINIGAME_CONFIGS = {
     219: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -5791,27 +6139,39 @@ export const MINIGAME_CONFIGS = {
     222: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -5917,10 +6277,10 @@ export const MINIGAME_CONFIGS = {
     228: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -5931,10 +6291,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -6058,7 +6418,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -6083,27 +6443,39 @@ export const MINIGAME_CONFIGS = {
     233: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -6151,27 +6523,39 @@ export const MINIGAME_CONFIGS = {
     236: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -6277,10 +6661,10 @@ export const MINIGAME_CONFIGS = {
     242: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -6291,10 +6675,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -6418,7 +6802,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -6443,27 +6827,39 @@ export const MINIGAME_CONFIGS = {
     247: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -6511,27 +6907,39 @@ export const MINIGAME_CONFIGS = {
     250: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -6637,10 +7045,10 @@ export const MINIGAME_CONFIGS = {
     256: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -6651,10 +7059,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -6778,7 +7186,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -6803,27 +7211,39 @@ export const MINIGAME_CONFIGS = {
     261: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -6871,27 +7291,39 @@ export const MINIGAME_CONFIGS = {
     264: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -6997,10 +7429,10 @@ export const MINIGAME_CONFIGS = {
     270: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -7011,10 +7443,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -7138,7 +7570,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -7163,27 +7595,39 @@ export const MINIGAME_CONFIGS = {
     275: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -7231,27 +7675,39 @@ export const MINIGAME_CONFIGS = {
     278: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -7357,10 +7813,10 @@ export const MINIGAME_CONFIGS = {
     284: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -7371,10 +7827,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -7498,7 +7954,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -7523,27 +7979,39 @@ export const MINIGAME_CONFIGS = {
     289: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -7591,27 +8059,39 @@ export const MINIGAME_CONFIGS = {
     292: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -7717,10 +8197,10 @@ export const MINIGAME_CONFIGS = {
     298: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -7731,10 +8211,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -7858,7 +8338,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -7883,27 +8363,39 @@ export const MINIGAME_CONFIGS = {
     303: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -7951,27 +8443,39 @@ export const MINIGAME_CONFIGS = {
     306: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -8077,10 +8581,10 @@ export const MINIGAME_CONFIGS = {
     312: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -8091,10 +8595,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -8218,7 +8722,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -8243,27 +8747,39 @@ export const MINIGAME_CONFIGS = {
     317: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -8311,27 +8827,39 @@ export const MINIGAME_CONFIGS = {
     320: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -8437,10 +8965,10 @@ export const MINIGAME_CONFIGS = {
     326: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -8451,10 +8979,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -8578,7 +9106,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -8603,27 +9131,39 @@ export const MINIGAME_CONFIGS = {
     331: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -8671,27 +9211,39 @@ export const MINIGAME_CONFIGS = {
     334: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -8797,10 +9349,10 @@ export const MINIGAME_CONFIGS = {
     340: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -8811,10 +9363,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -8938,7 +9490,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -8963,27 +9515,39 @@ export const MINIGAME_CONFIGS = {
     345: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -9031,27 +9595,39 @@ export const MINIGAME_CONFIGS = {
     348: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -9157,10 +9733,10 @@ export const MINIGAME_CONFIGS = {
     354: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -9171,10 +9747,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -9298,7 +9874,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -9323,27 +9899,39 @@ export const MINIGAME_CONFIGS = {
     359: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -9391,27 +9979,39 @@ export const MINIGAME_CONFIGS = {
     362: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -9517,10 +10117,10 @@ export const MINIGAME_CONFIGS = {
     368: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -9531,10 +10131,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -9658,7 +10258,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -9683,27 +10283,39 @@ export const MINIGAME_CONFIGS = {
     373: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -9751,27 +10363,39 @@ export const MINIGAME_CONFIGS = {
     376: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -9877,10 +10501,10 @@ export const MINIGAME_CONFIGS = {
     382: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -9891,10 +10515,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -10018,7 +10642,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -10043,27 +10667,39 @@ export const MINIGAME_CONFIGS = {
     387: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -10111,27 +10747,39 @@ export const MINIGAME_CONFIGS = {
     390: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -10237,10 +10885,10 @@ export const MINIGAME_CONFIGS = {
     396: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -10251,10 +10899,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -10378,7 +11026,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -10403,27 +11051,39 @@ export const MINIGAME_CONFIGS = {
     401: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -10471,27 +11131,39 @@ export const MINIGAME_CONFIGS = {
     404: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -10597,10 +11269,10 @@ export const MINIGAME_CONFIGS = {
     410: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -10611,10 +11283,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -10738,7 +11410,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -10763,27 +11435,39 @@ export const MINIGAME_CONFIGS = {
     415: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -10831,27 +11515,39 @@ export const MINIGAME_CONFIGS = {
     418: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -10957,10 +11653,10 @@ export const MINIGAME_CONFIGS = {
     424: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -10971,10 +11667,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -11098,7 +11794,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -11123,27 +11819,39 @@ export const MINIGAME_CONFIGS = {
     429: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -11191,27 +11899,39 @@ export const MINIGAME_CONFIGS = {
     432: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -11317,10 +12037,10 @@ export const MINIGAME_CONFIGS = {
     438: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -11331,10 +12051,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -11458,7 +12178,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -11483,27 +12203,39 @@ export const MINIGAME_CONFIGS = {
     443: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -11551,27 +12283,39 @@ export const MINIGAME_CONFIGS = {
     446: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -11677,10 +12421,10 @@ export const MINIGAME_CONFIGS = {
     452: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -11691,10 +12435,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -11818,7 +12562,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -11843,27 +12587,39 @@ export const MINIGAME_CONFIGS = {
     457: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -11911,27 +12667,39 @@ export const MINIGAME_CONFIGS = {
     460: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -12037,10 +12805,10 @@ export const MINIGAME_CONFIGS = {
     466: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -12051,10 +12819,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -12178,7 +12946,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -12203,27 +12971,39 @@ export const MINIGAME_CONFIGS = {
     471: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -12271,27 +13051,39 @@ export const MINIGAME_CONFIGS = {
     474: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -12397,10 +13189,10 @@ export const MINIGAME_CONFIGS = {
     480: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -12411,10 +13203,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -12538,7 +13330,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -12563,27 +13355,39 @@ export const MINIGAME_CONFIGS = {
     485: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -12631,27 +13435,39 @@ export const MINIGAME_CONFIGS = {
     488: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -12757,10 +13573,10 @@ export const MINIGAME_CONFIGS = {
     494: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -12771,10 +13587,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -12898,7 +13714,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -12923,27 +13739,39 @@ export const MINIGAME_CONFIGS = {
     499: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -12991,27 +13819,39 @@ export const MINIGAME_CONFIGS = {
     502: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -13117,10 +13957,10 @@ export const MINIGAME_CONFIGS = {
     508: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -13131,10 +13971,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -13258,7 +14098,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -13283,27 +14123,39 @@ export const MINIGAME_CONFIGS = {
     513: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -13351,27 +14203,39 @@ export const MINIGAME_CONFIGS = {
     516: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -13477,10 +14341,10 @@ export const MINIGAME_CONFIGS = {
     522: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -13491,10 +14355,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -13618,7 +14482,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -13643,27 +14507,39 @@ export const MINIGAME_CONFIGS = {
     527: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -13711,27 +14587,39 @@ export const MINIGAME_CONFIGS = {
     530: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -13837,10 +14725,10 @@ export const MINIGAME_CONFIGS = {
     536: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -13851,10 +14739,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -13978,7 +14866,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -14003,27 +14891,39 @@ export const MINIGAME_CONFIGS = {
     541: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -14071,27 +14971,39 @@ export const MINIGAME_CONFIGS = {
     544: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -14197,10 +15109,10 @@ export const MINIGAME_CONFIGS = {
     550: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -14211,10 +15123,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -14338,7 +15250,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -14363,27 +15275,39 @@ export const MINIGAME_CONFIGS = {
     555: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -14431,27 +15355,39 @@ export const MINIGAME_CONFIGS = {
     558: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -14557,10 +15493,10 @@ export const MINIGAME_CONFIGS = {
     564: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -14571,10 +15507,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -14698,7 +15634,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -14723,27 +15659,39 @@ export const MINIGAME_CONFIGS = {
     569: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -14791,27 +15739,39 @@ export const MINIGAME_CONFIGS = {
     572: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -14917,10 +15877,10 @@ export const MINIGAME_CONFIGS = {
     578: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -14931,10 +15891,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -15058,7 +16018,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -15083,27 +16043,39 @@ export const MINIGAME_CONFIGS = {
     583: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -15151,27 +16123,39 @@ export const MINIGAME_CONFIGS = {
     586: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -15277,10 +16261,10 @@ export const MINIGAME_CONFIGS = {
     592: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -15291,10 +16275,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -15418,7 +16402,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -15443,27 +16427,39 @@ export const MINIGAME_CONFIGS = {
     597: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -15511,27 +16507,39 @@ export const MINIGAME_CONFIGS = {
     600: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -15637,10 +16645,10 @@ export const MINIGAME_CONFIGS = {
     606: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -15651,10 +16659,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -15778,7 +16786,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -15803,27 +16811,39 @@ export const MINIGAME_CONFIGS = {
     611: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -15871,27 +16891,39 @@ export const MINIGAME_CONFIGS = {
     614: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -15997,10 +17029,10 @@ export const MINIGAME_CONFIGS = {
     620: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -16011,10 +17043,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -16138,7 +17170,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -16163,27 +17195,39 @@ export const MINIGAME_CONFIGS = {
     625: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -16231,27 +17275,39 @@ export const MINIGAME_CONFIGS = {
     628: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -16357,10 +17413,10 @@ export const MINIGAME_CONFIGS = {
     634: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -16371,10 +17427,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -16498,7 +17554,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -16523,27 +17579,39 @@ export const MINIGAME_CONFIGS = {
     639: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -16591,27 +17659,39 @@ export const MINIGAME_CONFIGS = {
     642: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -16717,10 +17797,10 @@ export const MINIGAME_CONFIGS = {
     648: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -16731,10 +17811,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -16858,7 +17938,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -16883,27 +17963,39 @@ export const MINIGAME_CONFIGS = {
     653: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -16951,27 +18043,39 @@ export const MINIGAME_CONFIGS = {
     656: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -17077,10 +18181,10 @@ export const MINIGAME_CONFIGS = {
     662: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -17091,10 +18195,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -17218,7 +18322,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -17243,27 +18347,39 @@ export const MINIGAME_CONFIGS = {
     667: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -17311,27 +18427,39 @@ export const MINIGAME_CONFIGS = {
     670: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -17437,10 +18565,10 @@ export const MINIGAME_CONFIGS = {
     676: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -17451,10 +18579,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -17578,7 +18706,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -17603,27 +18731,39 @@ export const MINIGAME_CONFIGS = {
     681: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -17671,27 +18811,39 @@ export const MINIGAME_CONFIGS = {
     684: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -17797,10 +18949,10 @@ export const MINIGAME_CONFIGS = {
     690: {
         gameId: 'racing',
         config: {
-            playerVehicle: { 
-                texture: 'car_monkey', 
-                image: 'car1.png', 
-                emoji: '🚗', 
+            playerVehicle: {
+                texture: 'car_monkey',
+                image: 'car1.png',
+                emoji: '🚗',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
@@ -17811,10 +18963,10 @@ export const MINIGAME_CONFIGS = {
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
-            enemyVehicle: { 
-                texture: 'car_boss', 
-                image: 'car2.png', 
-                emoji: '🏎️', 
+            enemyVehicle: {
+                texture: 'car_boss',
+                image: 'car2.png',
+                emoji: '🏎️',
                 type: 'car',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
@@ -17938,7 +19090,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 }, 
+                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
                 { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
             ],
             container: {
@@ -17963,27 +19115,39 @@ export const MINIGAME_CONFIGS = {
     695: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {
@@ -18031,27 +19195,39 @@ export const MINIGAME_CONFIGS = {
     698: {
         gameId: 'assemble_object',
         config: {
-            finishedObject: { 
-                texture: 'truck_complete', 
+            finishedObject: {
+                texture: 'truck_complete',
                 image: 'truck_complete.png',
-                emoji: '🚚', 
-                x: 490, 
-                y: 220, 
-                scale: 0.8 
+                emoji: '🚚',
+                x: 490,
+                y: 220,
+                scale: 0.8
             },
             parts: [
-                { id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2 },
-                { id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3 },
-                { id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4 },
-                { id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0, 
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5 },
-                { id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0, 
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6 }
+                {
+                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                },
+                {
+                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                },
+                {
+                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                },
+                {
+                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                },
+                {
+                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                },
+                {
+                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                }
             ]
         },
         interactions: {

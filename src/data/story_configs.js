@@ -176,19 +176,19 @@ export const STORY_CONFIGS = {
     18: {
         minigame: 'racing',
         preGame: [
-            { character: 'monkey', text: "Mình thấy bóng Sói Già lấp ló chạy trốn phía trước. Cưỡi lên lưng bạn Đà Điểu và đua tốc độ đuổi theo hắn thôi!" }
+            { character: 'monkey', text: "Mình thấy bóng Sói Già lấp ló chạy trốn phía trước. Lên xe và đua tốc độ đuổi theo hắn thôi!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Đà Điểu chạy nhanh như gió! Chúng ta đang bám rất sát Sói Già rồi." }
+            { character: 'monkey', text: "Chiếc xe chạy nhanh như gió! Chúng ta đang bám rất sát Sói Già rồi." }
         ]
     },
     19: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Sói Già đã phá hỏng cây cầu gỗ. Chúng ta cần dùng phép thuật để làm một nhánh dây leo vươn dài ra thành cầu vắt ngang." }
+            { character: 'monkey', text: "Sói Già đã phá hỏng cây cầu gỗ. Chúng ta cần trồng một cái cây thật lớn để làm cây cầu nối qua bờ bên kia." }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây leo đã kết thành một cây cầu vô cùng vững chắc. Bước qua thôi!" }
+            { character: 'monkey', text: "Cây đã mọc thành một cây cầu vô cùng vững chắc. Bước qua thôi!" }
         ]
     },
     20: {
@@ -203,16 +203,16 @@ export const STORY_CONFIGS = {
     21: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Sói Già lúc tháo chạy đã tông hỏng chiếc xe kéo hạt dẻ của bạn Sóc. Hãy gõ đúng để ráp lại từng bộ phận giúp bạn ấy nào." }
+            { character: 'monkey', text: "Sói Già lúc tháo chạy đã tông hỏng chiếc xe tải chở hạt dẻ của bạn Sóc. Hãy gõ đúng để ráp lại từng bộ phận giúp bạn ấy nào." }
         ],
         postGame: [
-            { character: 'monkey', text: "Chiếc xe kéo lại lành lặn và bon bon trên đường rồi. Sóc con vui lắm!" }
+            { character: 'monkey', text: "Chiếc xe tải lại lành lặn và bon bon trên đường rồi. Sóc con vui lắm!" }
         ]
     },
     22: {
         minigame: 'frog_jump',
         preGame: [
-            { character: 'monkey', text: "Trước mặt là một vũng bùn lầy đầy gai nhọn do Sói tạo ra. Nhờ các bạn Nhái bén dẫn đường nhảy qua những tảng đá an toàn nhé!" }
+            { character: 'monkey', text: "Trước mặt là một vũng bùn lầy đầy gai nhọn do Sói tạo ra. Nhờ các bạn Ếch dẫn đường nhảy qua những lá sen an toàn nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Cú nhảy cuối cùng hoàn hảo! Không ai bị lấm lem bùn đất cả." }
@@ -260,8 +260,9 @@ export const STORY_CONFIGS = {
     28: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Ôi không! Sói Già đang dùng quạt khổng lồ thổi bay hết Lá Xanh. Cây cối đang khóc kìa!" },
-            { character: 'monkey', text: "Hãy gõ phím để tạo phép thuật, gắn lại những chiếc Lá Xanh lên cành nhé." }
+            { character: 'monkey', text: "Ôi không! Sói Già đang dùng quạt khổng lồ thổi bay hết cây đi rồi. Cây cối đang khóc kìa!" },
+            { character: 'boss', text: "Ha ha! Rừng cây của các ngươi sẽ bay đi hết cho mà xem!" },
+            { character: 'monkey', text: "Hãy gõ phím để trồng lên những cây xanh lớn khoẻ mạnh nhé." }
         ],
         postGame: [
             { character: 'monkey', text: "Cây cối đã xanh tươi trở lại. Sói Già không thể phá hoại sức sống của khu rừng!" }
@@ -271,7 +272,7 @@ export const STORY_CONFIGS = {
         minigame: 'collect_items',
         preGame: [
             { character: 'boss', text: "Gió lốc của ta sẽ cuốn phăng mọi thứ thức ăn dự trữ của các ngươi!" },
-            { character: 'monkey', text: "Nhanh tay nhặt lại những quả dại bị gió thổi bay vào giỏ trước khi chúng rơi xuống vách đá!" }
+            { character: 'monkey', text: "Nhanh tay nhặt lại thức ăn vào giỏ trước khi chúng bị thổi bay hết đi!" }
         ],
         postGame: [
             { character: 'monkey', text: "Phù! May quá, thức ăn đã được thu thập đủ. Không ai bị đói cả." }
@@ -290,11 +291,11 @@ export const STORY_CONFIGS = {
     31: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Gió to quá làm tổ của bạn Chim Sâu bị rơi và mắc kẹt trong đống cành khô." },
-            { character: 'monkey', text: "Gõ thật chuẩn để gỡ các cành cây và cứu bạn ấy ra nhé!" }
+            { character: 'monkey', text: "Gió to quá làm tổ của bạn Chim Sâu bị rơi và bị Sói Già giam lại rồi." },
+            { character: 'monkey', text: "Gõ thật chuẩn để cứu bạn ấy ra nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Chim Sâu đã an toàn bay lên bầu trời. Tiếp tục đuổi theo Sói Già thôi!" }
+            { character: 'monkey', text: "Chim Sâu đã được cứu. Cảm ơn các bạn!" }
         ]
     },
     32: {
