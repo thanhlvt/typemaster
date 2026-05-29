@@ -1,13 +1,34 @@
 import { BaseMinigame } from './BaseMinigame';
+import { showBananaDrop } from '../../utils/PlayScorePopup';
 import * as Phaser from 'phaser';
 
 export class ClearFogGame extends BaseMinigame {
     constructor(scene, config) {
         super(scene, config);
         this.fogsList = [];
+        this.monkeySprite = null;
+        this.playerContainer = null;
     }
 
     create() {
+        // 0. Tạo skin khỉ con ở bên trái màn hình
+        const monkeySkin = this.scene.monkey?.texture?.key || 'monkey_1';
+        this.monkeySprite = this.scene.add.sprite(110, 290, monkeySkin)
+            .setScale(0.55)
+            .setDepth(115);
+        this.add(this.monkeySprite);
+        this.playerContainer = this.monkeySprite; // Hướng các tween nhảy và score popup vào khỉ con
+
+        // Hoạt ảnh thở bồng bềnh nhẹ cho khỉ
+        this.scene.tweens.add({
+            targets: this.monkeySprite,
+            y: this.monkeySprite.y + 3,
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
+
         const fogEmoji = this.config?.fogEmoji || '🌫️';
         const count = this.totalWords || 8;
 
@@ -31,8 +52,9 @@ export class ClearFogGame extends BaseMinigame {
             : (this.config?.scale !== undefined ? this.config.scale : 1.5);
 
         // 3. Tạo các đám sương mù phủ ngẫu nhiên trong vùng chỉ định
+        const adjustedX1 = Math.max(x1, 160);
         for (let i = 0; i < count; i++) {
-            const rx = Phaser.Math.Between(x1, x2);
+            const rx = Phaser.Math.Between(adjustedX1, x2);
             const ry = Phaser.Math.Between(y1, y2);
 
             const randomScale = Phaser.Math.FloatBetween(baseScale * 0.8, baseScale * 1.2);
@@ -64,6 +86,10 @@ export class ClearFogGame extends BaseMinigame {
     }
 
     onWordComplete(word, currentWordIndex, totalWords) {
+        if (this.monkeySprite) {
+            showBananaDrop(this.scene, this.monkeySprite);
+        }
+
         const uncleared = this.fogsList.filter(f => !f.cleared);
         if (uncleared.length > 0) {
             const targetFog = uncleared[0];
@@ -84,7 +110,8 @@ export class ClearFogGame extends BaseMinigame {
             const y2 = this.config?.y2 !== undefined ? this.config.y2 
                 : (this.config?.area?.y2 !== undefined ? this.config.area.y2 : 270);
 
-            const cx = (x1 + x2) / 2;
+            const adjustedX1 = Math.max(x1, 160);
+            const cx = (adjustedX1 + x2) / 2;
             const cy = (y1 + y2) / 2;
 
             // Dừng tween bay nhẹ cũ
@@ -112,6 +139,15 @@ export class ClearFogGame extends BaseMinigame {
     }
 
     onTypeError(char) {
+        if (this.monkeySprite) {
+            this.monkeySprite.setTint(0xff0000);
+            this.scene.time.delayedCall(200, () => {
+                if (this.monkeySprite) {
+                    this.monkeySprite.clearTint();
+                }
+            });
+        }
+
         // Gõ sai -> Các đám sương mù tối sầm lại cảnh báo
         this.fogsList.forEach(fog => {
             if (!fog.cleared) {
@@ -121,5 +157,14 @@ export class ClearFogGame extends BaseMinigame {
                 });
             }
         });
+    }
+
+    destroy() {
+        if (this.monkeySprite) {
+            this.monkeySprite.destroy();
+        }
+        this.monkeySprite = null;
+        this.playerContainer = null;
+        super.destroy();
     }
 }

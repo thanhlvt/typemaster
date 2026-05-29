@@ -1,4 +1,5 @@
 import { BaseMinigame } from './BaseMinigame';
+import { showBananaDrop } from '../../utils/PlayScorePopup';
 import * as Phaser from 'phaser';
 
 export class GrowPlantGame extends BaseMinigame {
@@ -6,10 +7,30 @@ export class GrowPlantGame extends BaseMinigame {
         super(scene, config);
         this.plantSprite = null;
         this.stages = [];
+        this.monkeySprite = null;
+        this.playerContainer = null;
     }
 
     create() {
         const plantConfig = this.config?.plant || {};
+
+        // 0. Tạo skin khỉ con ở bên trái màn hình
+        const monkeySkin = this.scene.monkey?.texture?.key || 'monkey_1';
+        this.monkeySprite = this.scene.add.sprite(110, 290, monkeySkin)
+            .setScale(0.55)
+            .setDepth(115);
+        this.add(this.monkeySprite);
+        this.playerContainer = this.monkeySprite; // Hướng các tween nhảy và score popup vào khỉ con
+
+        // Hoạt ảnh thở bồng bềnh nhẹ cho khỉ
+        this.scene.tweens.add({
+            targets: this.monkeySprite,
+            y: this.monkeySprite.y + 3,
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
         const x = this.config?.x || 400;
         const y = this.config?.y || 230;
 
@@ -49,6 +70,11 @@ export class GrowPlantGame extends BaseMinigame {
 
     onWordComplete(word, currentWordIndex, totalWords) {
         const progress = currentWordIndex / totalWords;
+
+        // Thả quả chuối rơi xuống khỉ con tương tự khi chơi không có minigame
+        if (this.monkeySprite) {
+            showBananaDrop(this.scene, this.monkeySprite);
+        }
         const scene = this.scene;
         const x = this.config?.x || 400;
         const y = this.config?.y || 230;
@@ -134,5 +160,21 @@ export class GrowPlantGame extends BaseMinigame {
                 }
             }
         });
+
+        // Hiệu ứng chớp đỏ khỉ con khi gõ sai giống như khi chơi không có minigame
+        if (this.monkeySprite) {
+            this.monkeySprite.setTint(0xff0000);
+            this.scene.time.delayedCall(200, () => {
+                if (this.monkeySprite) {
+                    this.monkeySprite.clearTint();
+                }
+            });
+        }
+    }
+
+    destroy() {
+        this.monkeySprite = null;
+        this.playerContainer = null;
+        super.destroy();
     }
 }

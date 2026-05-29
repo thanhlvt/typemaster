@@ -361,8 +361,8 @@ export const STORY_CONFIGS = {
     38: {
         minigame: 'collect_items',
         preGame: [
-            { character: 'monkey', text: "Những giọt sương mai đọng trên Lá Xanh chứa sức mạnh phép thuật tự nhiên." },
-            { character: 'monkey', text: "Thu thập thật nhiều sương mai để tiếp thêm năng lượng chuẩn bị đánh bại Sói Già nhé!" }
+            { character: 'monkey', text: "Những cây nấm ở đây chứa sức mạnh phép thuật tự nhiên." },
+            { character: 'monkey', text: "Thu thập thật nhiều cây nấm để tiếp thêm năng lượng chuẩn bị đánh bại Sói Già nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Năng lượng đã đầy tràn! Sức mạnh của Lá Xanh đang chảy trong chúng ta." }

@@ -1,4 +1,5 @@
 import { BaseMinigame } from './BaseMinigame';
+import { showBananaDrop } from '../../utils/PlayScorePopup';
 
 export class AssembleObjectGame extends BaseMinigame {
     constructor(scene, config) {
@@ -6,15 +7,35 @@ export class AssembleObjectGame extends BaseMinigame {
         this.partsList = [];
         this.assembledCount = 0;
         this.onCompleteCallback = null;
+        this.monkeySprite = null;
+        this.playerContainer = null;
     }
 
     create() {
         const { finishedObject, parts } = this.config;
 
+        // 0. Tạo skin khỉ con ở bên trái màn hình
+        const monkeySkin = this.scene.monkey?.texture?.key || 'monkey_1';
+        this.monkeySprite = this.scene.add.sprite(110, 290, monkeySkin)
+            .setScale(0.55)
+            .setDepth(115);
+        this.add(this.monkeySprite);
+        this.playerContainer = this.monkeySprite; // Hướng các tween nhảy và score popup vào khỉ con
+
+        // Hoạt ảnh thở bồng bềnh nhẹ cho khỉ
+        this.scene.tweens.add({
+            targets: this.monkeySprite,
+            y: this.monkeySprite.y + 3,
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
+
         // 1. Tạo texture chính của vật phẩm hoàn chỉnh (để ẩn đi ban đầu)
         const finishedKey = this.scene.textures.exists(finishedObject.texture)
             ? finishedObject.texture
-            : (finishedObject.emoji 
+            : (finishedObject.emoji
                 ? this.createEmojiTexture(finishedObject.texture, finishedObject.emoji, 110)
                 : finishedObject.texture);
 
@@ -46,7 +67,7 @@ export class AssembleObjectGame extends BaseMinigame {
         sortedParts.forEach((part, index) => {
             const partKey = this.scene.textures.exists(part.texture)
                 ? part.texture
-                : (part.emoji 
+                : (part.emoji
                     ? this.createEmojiTexture(part.texture, part.emoji, 48)
                     : part.texture);
 
@@ -85,9 +106,16 @@ export class AssembleObjectGame extends BaseMinigame {
     onWordComplete(word, currentWordIndex, totalWords, onComplete) {
         this.onCompleteCallback = onComplete;
         const prevAssembledCount = this.assembledCount;
-        
+
         // Tính toán xem tiến độ gõ tương ứng với bao nhiêu mảnh cần được lắp ráp
         const targetAssembled = Math.round((currentWordIndex / totalWords) * this.partsList.length);
+
+        if (targetAssembled > prevAssembledCount) {
+            // Thả quả chuối rơi xuống khỉ con tương tự khi chơi không có minigame
+            if (this.monkeySprite) {
+                showBananaDrop(this.scene, this.monkeySprite);
+            }
+        }
 
         for (let i = 0; i < targetAssembled; i++) {
             if (i < this.partsList.length && !this.partsList[i].assembled) {
@@ -210,5 +238,21 @@ export class AssembleObjectGame extends BaseMinigame {
                 });
             }
         });
+
+        // Hiệu ứng chớp đỏ khỉ con khi gõ sai giống như khi chơi không có minigame
+        if (this.monkeySprite) {
+            this.monkeySprite.setTint(0xff0000);
+            scene.time.delayedCall(200, () => {
+                if (this.monkeySprite) {
+                    this.monkeySprite.clearTint();
+                }
+            });
+        }
+    }
+
+    destroy(fromScene) {
+        this.monkeySprite = null;
+        this.playerContainer = null;
+        super.destroy(fromScene);
     }
 }

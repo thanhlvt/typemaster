@@ -1,21 +1,42 @@
 import { BaseMinigame } from './BaseMinigame';
+import { showBananaDrop } from '../../utils/PlayScorePopup';
 
 export class CollectItemsGame extends BaseMinigame {
     constructor(scene, config) {
         super(scene, config);
         this.itemsList = [];
+        this.monkeySprite = null;
+        this.playerContainer = null;
     }
 
     create() {
         const { items, container, area } = this.config;
-        
+
+        // 0. Tạo skin khỉ con ở bên trái màn hình
+        const monkeySkin = this.scene.monkey?.texture?.key || 'monkey_1';
+        this.monkeySprite = this.scene.add.sprite(110, 290, monkeySkin)
+            .setScale(0.55)
+            .setDepth(115);
+        this.add(this.monkeySprite);
+        this.playerContainer = this.monkeySprite; // Hướng tween nhảy và score popup vào khỉ con
+
+        // Hoạt ảnh thở bồng bềnh nhẹ cho khỉ
+        this.scene.tweens.add({
+            targets: this.monkeySprite,
+            y: this.monkeySprite.y + 3,
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
+
         // 1. Tạo texture cho container và đặt vào màn hình
         const containerKey = this.scene.textures.exists(container.texture)
             ? container.texture
-            : (container.emoji 
+            : (container.emoji
                 ? this.createEmojiTexture(container.texture, container.emoji, 80)
                 : container.texture);
-        
+
         this.containerSprite = this.scene.add.sprite(container.x, container.y, containerKey);
         if (container.width !== undefined && container.height !== undefined) {
             this.containerSprite.setDisplaySize(container.width, container.height);
@@ -34,14 +55,14 @@ export class CollectItemsGame extends BaseMinigame {
         items.forEach(itemConfig => {
             const itemKey = this.scene.textures.exists(itemConfig.texture)
                 ? itemConfig.texture
-                : (itemConfig.emoji 
+                : (itemConfig.emoji
                     ? this.createEmojiTexture(itemConfig.texture, itemConfig.emoji, 48)
                     : itemConfig.texture);
-            
+
             for (let i = 0; i < itemConfig.count; i++) {
                 const rx = Phaser.Math.Between(minX, maxX);
                 const ry = Phaser.Math.Between(minY, maxY);
-                
+
                 const itemSprite = this.scene.add.sprite(rx, ry, itemKey);
                 if (itemConfig.width !== undefined && itemConfig.height !== undefined) {
                     itemSprite.setDisplaySize(itemConfig.width, itemConfig.height);
@@ -50,7 +71,7 @@ export class CollectItemsGame extends BaseMinigame {
                 } else {
                     itemSprite.setScale(0.8);
                 }
-                
+
                 const randomAngle = Phaser.Math.Between(-45, 45);
                 itemSprite.setAngle(randomAngle);
                 itemSprite.setDepth(111);
@@ -83,9 +104,14 @@ export class CollectItemsGame extends BaseMinigame {
         const currentCount = this.getCollectedCount();
 
         if (targetCount > currentCount) {
+            // Thả quả chuối rơi xuống khỉ con tương tự khi chơi không có minigame
+            if (this.monkeySprite) {
+                showBananaDrop(this.scene, this.monkeySprite);
+            }
+
             const needed = targetCount - currentCount;
             let count = 0;
-            
+
             for (let i = 0; i < this.itemsList.length; i++) {
                 if (!this.itemsList[i].collected) {
                     const isLastCollectedInBatch = (count === needed - 1);
@@ -215,30 +241,48 @@ export class CollectItemsGame extends BaseMinigame {
             }
         });
 
+        // Hiệu ứng chớp đỏ khỉ con khi gõ sai giống như khi chơi không có minigame
+        if (this.monkeySprite) {
+            this.monkeySprite.setTint(0xff0000);
+            this.scene.time.delayedCall(200, () => {
+                if (this.monkeySprite) {
+                    this.monkeySprite.clearTint();
+                }
+            });
+        }
+
         // Hiệu ứng chớp đỏ nhẹ trên giỏ đồ (nếu cấu hình yêu cầu)
         if (this.config.interactions?.onTypeError?.effect === 'red_flash') {
             this.containerSprite.setTint(0xff8888);
             this.scene.time.delayedCall(150, () => {
-                this.containerSprite.clearTint();
+                if (this.containerSprite) {
+                    this.containerSprite.clearTint();
+                }
             });
         }
+    }
+
+    destroy(fromScene) {
+        this.monkeySprite = null;
+        this.playerContainer = null;
+        super.destroy(fromScene);
     }
 
     showSparkle(x, y) {
         const particles = this.scene.add.graphics().setDepth(120);
         const colors = [0xFBBF24, 0x34D399, 0x60A5FA, 0xF472B6];
-        
+
         for (let i = 0; i < 8; i++) {
             const color = Phaser.Math.RND.pick(colors);
             const angle = Phaser.Math.DegToRad(i * 45);
             const speed = Phaser.Math.Between(40, 90);
-            
+
             particles.fillStyle(color, 1);
             particles.fillCircle(x, y, Phaser.Math.Between(3, 6));
-            
+
             const px = x;
             const py = y;
-            
+
             this.scene.tweens.add({
                 targets: particles,
                 alpha: 0,

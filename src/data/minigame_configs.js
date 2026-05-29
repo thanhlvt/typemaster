@@ -21,7 +21,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -202,7 +202,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 100, maxY: 290 }
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -575,7 +575,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -674,7 +674,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -815,7 +815,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -981,24 +981,22 @@ export const MINIGAME_CONFIGS = {
     35: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
                 texture: 'frog_leaf_tex',
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'leaf2.png',
+                scale: 0.6,
                 emoji: '🪷'
             },
-            frog: {
-                texture: 'frog_frog_tex',
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                emoji: '🐸',
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -58
             },
             x1: 100,
-            y1: 150,
+            y1: 120,
             x2: 920,
-            y2: 300
+            y2: 340
         },
         interactions: {
             onWordComplete: { action: 'jump_next_leaf' },
@@ -1012,7 +1010,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             insect: {
                 texture: 'catch_insect_tex',
-                image: 'butterfly.png',
+                image: 'bee.png',
                 scale: 0.3,
                 emoji: '🦋'
             },
@@ -1030,7 +1028,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 130, maxY: 300 }
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -1070,8 +1068,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 7, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -1083,7 +1080,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -1113,37 +1110,37 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                texture: 'truck_complete',
-                image: 'truck_complete.png',
-                emoji: '🚚',
+                texture: 'shield_complete',
+                image: 'shield_complete.png',
+                emoji: '🛡️',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    id: 'shield_part1', texture: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
                     emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
                 },
                 {
-                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', texture: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2
                 },
                 {
-                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', texture: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3
                 },
                 {
-                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', texture: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4
                 },
                 {
-                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', texture: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5
                 },
                 {
-                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', texture: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🚨', offsetX: 0, offsetY: 0, order: 6
                 }
             ]
         },
@@ -1273,7 +1270,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -1376,7 +1373,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -1744,7 +1741,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -1844,7 +1841,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -2008,7 +2005,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -2166,7 +2163,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -2495,7 +2492,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -2577,7 +2574,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -2708,7 +2705,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -2895,7 +2892,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -2995,7 +2992,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -3279,7 +3276,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -3379,7 +3376,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -3597,7 +3594,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -3629,7 +3626,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -4048,7 +4045,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -4080,7 +4077,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -4438,7 +4435,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -4493,7 +4490,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -4822,7 +4819,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -4877,7 +4874,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -5206,7 +5203,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -5261,7 +5258,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -5590,7 +5587,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -5645,7 +5642,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -5974,7 +5971,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -6029,7 +6026,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -6358,7 +6355,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -6413,7 +6410,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -6742,7 +6739,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -6797,7 +6794,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -7126,7 +7123,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -7181,7 +7178,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -7510,7 +7507,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -7565,7 +7562,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -7894,7 +7891,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -7949,7 +7946,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -8278,7 +8275,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -8333,7 +8330,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -8662,7 +8659,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -8717,7 +8714,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -9046,7 +9043,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -9101,7 +9098,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -9430,7 +9427,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -9485,7 +9482,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -9814,7 +9811,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -9869,7 +9866,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -10198,7 +10195,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -10253,7 +10250,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -10582,7 +10579,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -10637,7 +10634,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -10966,7 +10963,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -11021,7 +11018,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -11350,7 +11347,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -11405,7 +11402,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -11734,7 +11731,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -11789,7 +11786,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -12118,7 +12115,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -12173,7 +12170,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -12502,7 +12499,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -12557,7 +12554,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -12886,7 +12883,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -12941,7 +12938,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -13270,7 +13267,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -13325,7 +13322,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -13654,7 +13651,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -13709,7 +13706,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -14038,7 +14035,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -14093,7 +14090,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -14422,7 +14419,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -14477,7 +14474,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -14806,7 +14803,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -14861,7 +14858,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -15190,7 +15187,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -15245,7 +15242,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -15574,7 +15571,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -15629,7 +15626,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -15958,7 +15955,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -16013,7 +16010,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -16342,7 +16339,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -16397,7 +16394,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -16726,7 +16723,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -16781,7 +16778,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -17110,7 +17107,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -17165,7 +17162,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -17494,7 +17491,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -17549,7 +17546,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -17878,7 +17875,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -17933,7 +17930,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -18262,7 +18259,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -18317,7 +18314,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -18646,7 +18643,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -18701,7 +18698,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },
@@ -19030,7 +19027,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 100, maxX: 700, minY: 100, maxY: 290 }
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'catch_insect' },
@@ -19085,7 +19082,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 100, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
         interactions: {
             onWordComplete: { action: 'collect_to_container', effect: 'sparkle' },

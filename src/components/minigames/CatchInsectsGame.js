@@ -1,4 +1,5 @@
 import { BaseMinigame } from './BaseMinigame';
+import { showBananaDrop } from '../../utils/PlayScorePopup';
 import * as Phaser from 'phaser';
 
 export class CatchInsectsGame extends BaseMinigame {
@@ -7,9 +8,29 @@ export class CatchInsectsGame extends BaseMinigame {
         this.insectsList = [];
         this.netSprite = null;
         this.jarSprite = null;
+        this.monkeySprite = null;
+        this.playerContainer = null;
     }
 
     create() {
+        // 0. Tạo skin khỉ con ở bên trái màn hình
+        const monkeySkin = this.scene.monkey?.texture?.key || 'monkey_1';
+        this.monkeySprite = this.scene.add.sprite(110, 290, monkeySkin)
+            .setScale(0.55)
+            .setDepth(115);
+        this.add(this.monkeySprite);
+        this.playerContainer = this.monkeySprite; // Hướng các tween nhảy và score popup vào khỉ con
+
+        // Hoạt ảnh thở bồng bềnh nhẹ cho khỉ
+        this.scene.tweens.add({
+            targets: this.monkeySprite,
+            y: this.monkeySprite.y + 3,
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
+
         const insectConfig = this.config?.insect || {};
         const netConfig = this.config?.net || {};
         const jarConfig = this.config?.jar || {};
@@ -57,7 +78,7 @@ export class CatchInsectsGame extends BaseMinigame {
         this.add(this.netSprite);
 
         // 5. Tạo các côn trùng bay tự do
-        const minX = this.config?.area?.minX || 100;
+        const minX = Math.max(this.config?.area?.minX || 100, 160);
         const maxX = this.config?.area?.maxX || 550;
         const minY = this.config?.area?.minY || 100;
         const maxY = this.config?.area?.maxY || 280;
@@ -92,6 +113,10 @@ export class CatchInsectsGame extends BaseMinigame {
     }
 
     onWordComplete(word, currentWordIndex, totalWords) {
+        if (this.monkeySprite) {
+            showBananaDrop(this.scene, this.monkeySprite);
+        }
+
         const uncaught = this.insectsList.filter(ins => !ins.caught);
         if (uncaught.length > 0) {
             const target = uncaught[0];
@@ -177,6 +202,15 @@ export class CatchInsectsGame extends BaseMinigame {
     }
 
     onTypeError(char) {
+        if (this.monkeySprite) {
+            this.monkeySprite.setTint(0xff0000);
+            this.scene.time.delayedCall(200, () => {
+                if (this.monkeySprite) {
+                    this.monkeySprite.clearTint();
+                }
+            });
+        }
+
         // Gõ sai -> Các chú côn trùng giật mình bay vút sang chỗ khác rồi quay lại
         this.insectsList.forEach(ins => {
             if (!ins.caught) {
@@ -190,5 +224,14 @@ export class CatchInsectsGame extends BaseMinigame {
                 });
             }
         });
+    }
+
+    destroy() {
+        if (this.monkeySprite) {
+            this.monkeySprite.destroy();
+        }
+        this.monkeySprite = null;
+        this.playerContainer = null;
+        super.destroy();
     }
 }

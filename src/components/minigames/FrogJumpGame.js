@@ -6,44 +6,127 @@ export class FrogJumpGame extends BaseMinigame {
         this.leavesList = [];
         this.frogSprite = null;
         this.currentLeafIdx = 0;
+        this.decorations = null;
+        this.clouds = null;
+        this.winds = null;
     }
 
     create() {
         const count = this.totalWords || 10;
         const leafConfig = this.config?.leaf || {};
-        const frogConfig = this.config?.frog || {};
 
-        const leafEmoji = leafConfig.emoji || this.config?.leafEmoji || '🪷'; 
-        const frogEmoji = frogConfig.emoji || this.config?.frogEmoji || '🐸';
+        const leafEmoji = leafConfig.emoji || this.config?.leafEmoji || '🪷';
         const leafTex = leafConfig.texture || 'frog_leaf_tex';
-        const frogTex = frogConfig.texture || 'frog_frog_tex';
 
         this.leafScale = leafConfig.scale !== undefined ? leafConfig.scale : 1.1;
-        this.frogScale = frogConfig.scale !== undefined ? frogConfig.scale : 1.2;
-        this.frogOffsetX = frogConfig.offsetX !== undefined ? frogConfig.offsetX : 0;
-        this.frogOffsetY = frogConfig.offsetY !== undefined ? frogConfig.offsetY : -12;
 
         const leafKey = this.scene.textures.exists(leafTex)
             ? leafTex
             : this.createEmojiTexture(leafTex, leafEmoji, 56);
-        const frogKey = this.scene.textures.exists(frogTex)
-            ? frogTex
-            : this.createEmojiTexture(frogTex, frogEmoji, 48);
 
-        // Tạo dòng nước bằng graphics dựa theo các tham số x1, y1, x2, y2
+        let frogKey;
+        if (!this.config?.frog) {
+            const monkeyConfig = this.config?.monkey || {};
+            frogKey = this.scene.monkey?.texture?.key || 'monkey_1';
+            this.frogScale = monkeyConfig.scale !== undefined ? monkeyConfig.scale : 0.3;
+            this.frogOffsetX = monkeyConfig.offsetX !== undefined ? monkeyConfig.offsetX : 0;
+            this.frogOffsetY = monkeyConfig.offsetY !== undefined ? monkeyConfig.offsetY : -12;
+        } else {
+            const frogConfig = this.config.frog;
+            const frogEmoji = frogConfig.emoji || this.config?.frogEmoji || '🐸';
+            const frogTex = frogConfig.texture || 'frog_frog_tex';
+            this.frogScale = frogConfig.scale !== undefined ? frogConfig.scale : 1.2;
+            this.frogOffsetX = frogConfig.offsetX !== undefined ? frogConfig.offsetX : 0;
+            this.frogOffsetY = frogConfig.offsetY !== undefined ? frogConfig.offsetY : -12;
+            frogKey = this.scene.textures.exists(frogTex)
+                ? frogTex
+                : this.createEmojiTexture(frogTex, frogEmoji, 48);
+        }
+
+        // Tạo môi trường nền (water/air) dựa theo tham số x1, y1, x2, y2
         const x1 = this.config?.x1 !== undefined ? this.config.x1 : 50;
         const y1 = this.config?.y1 !== undefined ? this.config.y1 : 160;
         const x2 = this.config?.x2 !== undefined ? this.config.x2 : 750;
         const y2 = this.config?.y2 !== undefined ? this.config.y2 : 280;
 
-        const water = this.scene.add.graphics();
-        water.fillStyle(0x2563EB, 0.4); // Xanh lam nhạt
-        water.fillRect(x1, y1, x2 - x1, y2 - y1);
-        this.add(water);
+        const trackType = (this.config?.track?.type || this.config?.type || 'water').toLowerCase();
+
+        if (trackType === 'air') {
+            // Nền không gian tím/hồng nhạt
+            const airBg = this.scene.add.graphics();
+            airBg.fillStyle(0x581c87, 0.35);
+            airBg.fillRect(x1, y1, x2 - x1, y2 - y1);
+            this.add(airBg);
+
+            // Tạo các đám mây trôi lơ lửng
+            this.clouds = [];
+            const cloudKey = this.createEmojiTexture('dec_cloud', '☁️', 40);
+            for (let i = 0; i < 5; i++) {
+                const cx = Phaser.Math.Between(x1, x2);
+                const cy = Phaser.Math.Between(y1 + 10, y2 - 25);
+                const speed = Phaser.Math.FloatBetween(0.15, 0.4);
+                const cloudSprite = this.scene.add.sprite(cx, cy, cloudKey)
+                    .setDepth(108)
+                    .setAlpha(Phaser.Math.FloatBetween(0.5, 0.85))
+                    .setScale(Phaser.Math.FloatBetween(0.8, 1.2));
+                this.add(cloudSprite);
+                this.clouds.push({ sprite: cloudSprite, speed });
+            }
+
+            // Tạo các làn gió thổi trôi ngang
+            this.winds = [];
+            const windKey = this.createEmojiTexture('dec_wind', '💨', 28);
+            for (let i = 0; i < 3; i++) {
+                const wx = Phaser.Math.Between(x1, x2);
+                const wy = Phaser.Math.Between(y1 + 10, y2 - 20);
+                const speed = Phaser.Math.FloatBetween(1.0, 1.8);
+                const windSprite = this.scene.add.sprite(wx, wy, windKey)
+                    .setDepth(108)
+                    .setAlpha(Phaser.Math.FloatBetween(0.3, 0.5))
+                    .setScale(Phaser.Math.FloatBetween(0.8, 1.1));
+                this.add(windSprite);
+                this.winds.push({ sprite: windSprite, speed });
+            }
+        } else {
+            // Nước (water - mặc định)
+            const water = this.scene.add.graphics();
+            water.fillStyle(0x2563EB, 0.4); // Xanh lam nhạt
+            water.fillRect(x1, y1, x2 - x1, y2 - y1);
+            this.add(water);
+
+            // Tạo thêm lá trôi và bèo xung quanh
+            this.decorations = [];
+            const decTexLeaf = this.createEmojiTexture('dec_leaf', '🍃', 48);
+            const decTexClover = this.createEmojiTexture('dec_clover', '🍀', 48);
+
+            for (let i = 0; i < 8; i++) {
+                const decX = Phaser.Math.Between(x1 + 30, x2 - 30);
+                const decY = Phaser.Math.Between(y1 + 15, y2 - 15);
+                const textureKey = i % 2 === 0 ? decTexLeaf : decTexClover;
+                const scale = i % 2 === 0 ? 0.55 : 0.45;
+                const decSprite = this.scene.add.sprite(decX, decY, textureKey)
+                    .setDepth(108)
+                    .setAlpha(0.7)
+                    .setScale(scale)
+                    .setAngle(Phaser.Math.Between(0, 360));
+                this.add(decSprite);
+
+                this.scene.tweens.add({
+                    targets: decSprite,
+                    y: decY + Phaser.Math.Between(3, 6),
+                    angle: decSprite.angle + Phaser.Math.Between(-10, 10),
+                    duration: 1200 + Phaser.Math.Between(0, 400),
+                    yoyo: true,
+                    repeat: -1,
+                    ease: 'Sine.easeInOut'
+                });
+                this.decorations.push(decSprite);
+            }
+        }
 
         // 1. Tạo các lá sen xếp hàng từ trái qua phải, phân bổ trong lòng suối nước
-        const startX = x1 + 50;
-        const endX = x2 - 50;
+        const startX = x1 + 80;
+        const endX = x2 - 80;
         const gapX = (endX - startX) / Math.max(1, count - 1);
         const y = (y1 + y2) / 2;
 
@@ -78,7 +161,7 @@ export class FrogJumpGame extends BaseMinigame {
             .setDepth(112)
             .setScale(this.frogScale);
         this.add(this.frogSprite);
-        
+
         this.scene.events.on('update', this.update, this);
         this.currentLeafIdx = 0;
     }
@@ -92,7 +175,7 @@ export class FrogJumpGame extends BaseMinigame {
         if (currentWordIndex >= totalWords) {
             scene.tweens.killTweensOf(frog);
             const jumpTargetX = scene.scale.width + 120;
-            
+
             scene.tweens.add({
                 targets: frog,
                 x: jumpTargetX,
@@ -187,7 +270,33 @@ export class FrogJumpGame extends BaseMinigame {
     }
 
     update() {
-        if (!this.scene || !this.frogSprite || this.leavesList.length === 0) return;
+        if (!this.scene) return;
+
+        // Cập nhật chuyển động của mây và gió trong chế độ air
+        const x1 = this.config?.x1 !== undefined ? this.config.x1 : 50;
+        const x2 = this.config?.x2 !== undefined ? this.config.x2 : 750;
+
+        if (this.clouds) {
+            this.clouds.forEach(c => {
+                c.sprite.x -= c.speed;
+                if (c.sprite.x < x1 - 30) {
+                    c.sprite.x = x2 + 30;
+                    c.sprite.y = Phaser.Math.Between(this.config?.y1 !== undefined ? this.config.y1 : 160 + 10, (this.config?.y2 !== undefined ? this.config.y2 : 280) - 25);
+                }
+            });
+        }
+
+        if (this.winds) {
+            this.winds.forEach(w => {
+                w.sprite.x -= w.speed;
+                if (w.sprite.x < x1 - 30) {
+                    w.sprite.x = x2 + 30;
+                    w.sprite.y = Phaser.Math.Between(this.config?.y1 !== undefined ? this.config.y1 : 160 + 10, (this.config?.y2 !== undefined ? this.config.y2 : 280) - 20);
+                }
+            });
+        }
+
+        if (!this.frogSprite || this.leavesList.length === 0) return;
         const currentLeaf = this.leavesList[this.currentLeafIdx];
         if (currentLeaf && !this.scene.tweens.isTweening(this.frogSprite)) {
             this.frogSprite.x = currentLeaf.sprite.x + this.frogOffsetX;
@@ -199,6 +308,9 @@ export class FrogJumpGame extends BaseMinigame {
         if (this.scene) {
             this.scene.events.off('update', this.update, this);
         }
+        this.decorations = null;
+        this.clouds = null;
+        this.winds = null;
         super.destroy();
     }
 }

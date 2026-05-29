@@ -1,4 +1,5 @@
 import { BaseMinigame } from './BaseMinigame';
+import { showBananaDrop } from '../../utils/PlayScorePopup';
 import * as Phaser from 'phaser';
 
 export class RescueAnimalsGame extends BaseMinigame {
@@ -8,10 +9,30 @@ export class RescueAnimalsGame extends BaseMinigame {
         this.cageSprite = null;
         this.maskGraphics = null;
         this.cageProgress = 0;
+        this.monkeySprite = null;
+        this.playerContainer = null;
     }
 
     create() {
         const animalConfig = this.config?.animal || {};
+
+        // 0. Tạo skin khỉ con ở bên trái màn hình
+        const monkeySkin = this.scene.monkey?.texture?.key || 'monkey_1';
+        this.monkeySprite = this.scene.add.sprite(110, 290, monkeySkin)
+            .setScale(0.55)
+            .setDepth(115);
+        this.add(this.monkeySprite);
+        this.playerContainer = this.monkeySprite; // Hướng các tween nhảy và score popup vào khỉ con
+
+        // Hoạt ảnh thở bồng bềnh nhẹ cho khỉ
+        this.scene.tweens.add({
+            targets: this.monkeySprite,
+            y: this.monkeySprite.y + 3,
+            duration: 1000,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut'
+        });
         const cageConfig = this.config?.cage || {};
 
         const animalEmoji = animalConfig.emoji || this.config?.animalEmoji || '🐰';
@@ -32,25 +53,25 @@ export class RescueAnimalsGame extends BaseMinigame {
             : (cageEmoji ? this.createEmojiTexture(cageTex, cageEmoji, 72) : cageTex);
 
         // 2. Phân tích tỉ lệ scale cấu hình
-        this.animalScaleX = animalConfig.scaleX !== undefined ? animalConfig.scaleX 
-            : (animalConfig.scale !== undefined ? animalConfig.scale 
-            : (this.config?.animalScaleX !== undefined ? this.config.animalScaleX 
-            : (this.config?.animalScale !== undefined ? this.config.animalScale : 1.2)));
+        this.animalScaleX = animalConfig.scaleX !== undefined ? animalConfig.scaleX
+            : (animalConfig.scale !== undefined ? animalConfig.scale
+                : (this.config?.animalScaleX !== undefined ? this.config.animalScaleX
+                    : (this.config?.animalScale !== undefined ? this.config.animalScale : 1.2)));
 
-        this.animalScaleY = animalConfig.scaleY !== undefined ? animalConfig.scaleY 
-            : (animalConfig.scale !== undefined ? animalConfig.scale 
-            : (this.config?.animalScaleY !== undefined ? this.config.animalScaleY 
-            : (this.config?.animalScale !== undefined ? this.config.animalScale : 1.2)));
+        this.animalScaleY = animalConfig.scaleY !== undefined ? animalConfig.scaleY
+            : (animalConfig.scale !== undefined ? animalConfig.scale
+                : (this.config?.animalScaleY !== undefined ? this.config.animalScaleY
+                    : (this.config?.animalScale !== undefined ? this.config.animalScale : 1.2)));
 
-        this.cageScaleX = cageConfig.scaleX !== undefined ? cageConfig.scaleX 
-            : (cageConfig.scale !== undefined ? cageConfig.scale 
-            : (this.config?.cageScaleX !== undefined ? this.config.cageScaleX 
-            : (this.config?.cageScale !== undefined ? this.config.cageScale : 1.3)));
+        this.cageScaleX = cageConfig.scaleX !== undefined ? cageConfig.scaleX
+            : (cageConfig.scale !== undefined ? cageConfig.scale
+                : (this.config?.cageScaleX !== undefined ? this.config.cageScaleX
+                    : (this.config?.cageScale !== undefined ? this.config.cageScale : 1.3)));
 
-        this.cageScaleY = cageConfig.scaleY !== undefined ? cageConfig.scaleY 
-            : (cageConfig.scale !== undefined ? cageConfig.scale 
-            : (this.config?.cageScaleY !== undefined ? this.config.cageScaleY 
-            : (this.config?.cageScale !== undefined ? this.config.cageScale : 1.3)));
+        this.cageScaleY = cageConfig.scaleY !== undefined ? cageConfig.scaleY
+            : (cageConfig.scale !== undefined ? cageConfig.scale
+                : (this.config?.cageScaleY !== undefined ? this.config.cageScaleY
+                    : (this.config?.cageScale !== undefined ? this.config.cageScale : 1.3)));
 
         // 3. Tạo con thú ẩn ở trong
         this.animalSprite = this.scene.add.sprite(x, y + 10, animalKey)
@@ -68,14 +89,14 @@ export class RescueAnimalsGame extends BaseMinigame {
         this.cageProgress = 0;
         this.maskGraphics = this.scene.make.graphics();
         this.updateMask();
-        
+
         const mask = this.maskGraphics.createGeometryMask();
         this.cageSprite.setMask(mask);
     }
 
     updateMask() {
         if (!this.maskGraphics || !this.cageSprite) return;
-        
+
         this.maskGraphics.clear();
         this.maskGraphics.fillStyle(0xffffff);
 
@@ -94,6 +115,11 @@ export class RescueAnimalsGame extends BaseMinigame {
 
     onWordComplete(word, currentWordIndex, totalWords) {
         const progress = currentWordIndex / totalWords;
+
+        // Thả quả chuối rơi xuống khỉ con tương tự khi chơi không có minigame
+        if (this.monkeySprite) {
+            showBananaDrop(this.scene, this.monkeySprite);
+        }
         const self = this;
         const startX = this.config?.x || 400;
 
@@ -165,6 +191,16 @@ export class RescueAnimalsGame extends BaseMinigame {
                 }
             }
         });
+
+        // Hiệu ứng chớp đỏ khỉ con khi gõ sai giống như khi chơi không có minigame
+        if (this.monkeySprite) {
+            this.monkeySprite.setTint(0xff0000);
+            this.scene.time.delayedCall(200, () => {
+                if (this.monkeySprite) {
+                    this.monkeySprite.clearTint();
+                }
+            });
+        }
     }
 
     destroy() {
@@ -172,6 +208,8 @@ export class RescueAnimalsGame extends BaseMinigame {
             this.maskGraphics.destroy();
             this.maskGraphics = null;
         }
+        this.monkeySprite = null;
+        this.playerContainer = null;
         super.destroy();
     }
 }
