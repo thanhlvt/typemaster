@@ -155,11 +155,6 @@ export const MINIGAME_CONFIGS = {
     4: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -337,13 +332,7 @@ export const MINIGAME_CONFIGS = {
     // Lesson 11: Minigame Nuôi trồng cây thần cuối cùng
     11: {
         gameId: 'grow_plant',
-        gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -528,11 +517,6 @@ export const MINIGAME_CONFIGS = {
     19: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -773,11 +757,6 @@ export const MINIGAME_CONFIGS = {
     28: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -1040,11 +1019,6 @@ export const MINIGAME_CONFIGS = {
     37: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -1154,7 +1128,7 @@ export const MINIGAME_CONFIGS = {
     42: {
         gameId: 'clear_fog',
         config: {
-            fogEmoji: '🌫️',
+            fogEmoji: '🫧',
             fogScale: 2,
             x1: 200,
             y1: 140,
@@ -1173,14 +1147,14 @@ export const MINIGAME_CONFIGS = {
         config: {
             animal: {
                 texture: 'rescue_rabbit_tex',
-                image: 'rabbit.png',
-                scale: 0.8,
-                animalEmoji: '🐰'
+                image: 'owl.png',
+                scale: 1,
+                animalEmoji: '🦉'
             },
             cage: {
                 texture: 'rescue_cage_tex',
-                image: 'cage.png',
-                scale: 1,
+                image: 'bush.png',
+                scale: 0.8,
                 cageEmoji: '📦'
             },
             x: 490,
@@ -1229,11 +1203,6 @@ export const MINIGAME_CONFIGS = {
     45: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -1257,8 +1226,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'goldenball_item', image: 'goldenball.png', emoji: '🍌', count: 5, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -1337,8 +1305,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -1355,7 +1323,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             insect: {
                 texture: 'catch_insect_tex',
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
                 emoji: '🦋'
             },
@@ -1385,19 +1353,17 @@ export const MINIGAME_CONFIGS = {
     50: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
                 texture: 'frog_leaf_tex',
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'leaf2.png',
+                scale: 0.5,
                 emoji: '🪷'
             },
-            frog: {
-                texture: 'frog_frog_tex',
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                emoji: '🐸',
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -58
             },
             x1: 100,
             y1: 150,
@@ -1477,11 +1443,6 @@ export const MINIGAME_CONFIGS = {
     53: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -1694,11 +1655,6 @@ export const MINIGAME_CONFIGS = {
     61: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -1933,11 +1889,6 @@ export const MINIGAME_CONFIGS = {
     70: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -2255,11 +2206,6 @@ export const MINIGAME_CONFIGS = {
     81: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -2504,11 +2450,6 @@ export const MINIGAME_CONFIGS = {
     90: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -2845,11 +2786,6 @@ export const MINIGAME_CONFIGS = {
     103: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -3229,11 +3165,6 @@ export const MINIGAME_CONFIGS = {
     117: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -3671,11 +3602,6 @@ export const MINIGAME_CONFIGS = {
     133: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -4004,11 +3930,6 @@ export const MINIGAME_CONFIGS = {
     145: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -4388,11 +4309,6 @@ export const MINIGAME_CONFIGS = {
     159: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -4772,11 +4688,6 @@ export const MINIGAME_CONFIGS = {
     173: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -5156,11 +5067,6 @@ export const MINIGAME_CONFIGS = {
     187: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -5540,11 +5446,6 @@ export const MINIGAME_CONFIGS = {
     201: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -5924,11 +5825,6 @@ export const MINIGAME_CONFIGS = {
     215: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -6308,11 +6204,6 @@ export const MINIGAME_CONFIGS = {
     229: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -6692,11 +6583,6 @@ export const MINIGAME_CONFIGS = {
     243: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -7076,11 +6962,6 @@ export const MINIGAME_CONFIGS = {
     257: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -7460,11 +7341,6 @@ export const MINIGAME_CONFIGS = {
     271: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -7844,11 +7720,6 @@ export const MINIGAME_CONFIGS = {
     285: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -8228,11 +8099,6 @@ export const MINIGAME_CONFIGS = {
     299: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -8612,11 +8478,6 @@ export const MINIGAME_CONFIGS = {
     313: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -8996,11 +8857,6 @@ export const MINIGAME_CONFIGS = {
     327: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -9380,11 +9236,6 @@ export const MINIGAME_CONFIGS = {
     341: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -9764,11 +9615,6 @@ export const MINIGAME_CONFIGS = {
     355: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -10148,11 +9994,6 @@ export const MINIGAME_CONFIGS = {
     369: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -10532,11 +10373,6 @@ export const MINIGAME_CONFIGS = {
     383: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -10916,11 +10752,6 @@ export const MINIGAME_CONFIGS = {
     397: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -11300,11 +11131,6 @@ export const MINIGAME_CONFIGS = {
     411: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -11684,11 +11510,6 @@ export const MINIGAME_CONFIGS = {
     425: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -12068,11 +11889,6 @@ export const MINIGAME_CONFIGS = {
     439: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -12452,11 +12268,6 @@ export const MINIGAME_CONFIGS = {
     453: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -12836,11 +12647,6 @@ export const MINIGAME_CONFIGS = {
     467: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -13220,11 +13026,6 @@ export const MINIGAME_CONFIGS = {
     481: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -13604,11 +13405,6 @@ export const MINIGAME_CONFIGS = {
     495: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -13988,11 +13784,6 @@ export const MINIGAME_CONFIGS = {
     509: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -14372,11 +14163,6 @@ export const MINIGAME_CONFIGS = {
     523: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -14756,11 +14542,6 @@ export const MINIGAME_CONFIGS = {
     537: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -15140,11 +14921,6 @@ export const MINIGAME_CONFIGS = {
     551: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -15524,11 +15300,6 @@ export const MINIGAME_CONFIGS = {
     565: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -15908,11 +15679,6 @@ export const MINIGAME_CONFIGS = {
     579: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -16292,11 +16058,6 @@ export const MINIGAME_CONFIGS = {
     593: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -16676,11 +16437,6 @@ export const MINIGAME_CONFIGS = {
     607: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -17060,11 +16816,6 @@ export const MINIGAME_CONFIGS = {
     621: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -17444,11 +17195,6 @@ export const MINIGAME_CONFIGS = {
     635: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -17828,11 +17574,6 @@ export const MINIGAME_CONFIGS = {
     649: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -18212,11 +17953,6 @@ export const MINIGAME_CONFIGS = {
     663: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -18596,11 +18332,6 @@ export const MINIGAME_CONFIGS = {
     677: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
@@ -18980,11 +18711,6 @@ export const MINIGAME_CONFIGS = {
     691: {
         gameId: 'grow_plant',
         config: {
-            cloud: {
-                texture: 'grow_cloud_tex',
-                image: 'cloud.png',
-                scale: 0.35
-            },
             plant: {
                 stages: [
                     { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },

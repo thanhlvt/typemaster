@@ -16,7 +16,7 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
         }
 
         const texturesToLoad = [];
-        
+
         const getAssetUrl = (imagePath) => {
             if (imagePath.startsWith('assets/')) {
                 return imagePath;
@@ -45,7 +45,7 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
                 url: getAssetUrl(minigameConfig.config.enemyVehicle.image)
             });
         }
-        
+
         // 2. Item images
         if (Array.isArray(minigameConfig.config?.items)) {
             minigameConfig.config.items.forEach(item => {
@@ -103,7 +103,7 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
             });
         }
 
-        // 6. GrowPlant images (plant, pot, cloud, stages)
+        // 6. GrowPlant images (plant, pot, stages)
         if (minigameConfig.config?.plant?.image) {
             texturesToLoad.push({
                 key: minigameConfig.config.plant.texture || 'grow_plant_final_tex',

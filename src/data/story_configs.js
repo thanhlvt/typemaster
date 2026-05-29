@@ -413,11 +413,11 @@ export const STORY_CONFIGS = {
     44: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'boss', text: "Rìu của ta chưa đủ nhanh, ta sẽ thả bầy mối khổng lồ ra gặm rễ cây!" },
-            { character: 'monkey', text: "Sói Già thật xảo quyệt! Dùng búa gõ trúng lũ mối đang chui lên để bảo vệ rễ Cổ Thụ nhé!" }
+            { character: 'boss', text: "Rìu của ta chưa đủ nhanh, ta sẽ thả bầy chuột chũi ra gặm rễ cây!" },
+            { character: 'monkey', text: "Sói Già thật xảo quyệt! Dùng búa gõ trúng lũ chuột chũi đang chui lên để bảo vệ rễ Cổ Thụ nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bầy mối đã bị đuổi đi hết. Rễ cây tạm thời được an toàn." }
+            { character: 'monkey', text: "Bầy chuột chũi đã bị đuổi đi hết. Rễ cây tạm thời được an toàn." }
         ]
     },
     45: {
@@ -426,7 +426,7 @@ export const STORY_CONFIGS = {
             { character: 'monkey', text: "Những vết chặt của Sói Già làm Cổ Thụ đau đớn. Hãy dùng phép thuật gọi mưa xuân để chữa lành cho cây." }
         ],
         postGame: [
-            { character: 'monkey', text: "Thật kỳ diệu! Các vết xước đã liền lại và mọc ra những chồi non mới." }
+            { character: 'monkey', text: "Thật kỳ diệu! Các vết xước đã liền lại và mọc ra những cây non mới." }
         ]
     },
     46: {
@@ -441,10 +441,10 @@ export const STORY_CONFIGS = {
     47: {
         minigame: 'racing',
         preGame: [
-            { character: 'monkey', text: "Bám chắc vào bạn Sóc Đỏ nhé! Chúng ta sẽ chạy đua dọc theo thân cây Cổ Thụ khổng lồ này để bắt kịp Sói Già." }
+            { character: 'monkey', text: "Lên xe thôi, chúng ta cần bắt kịp Sói Già!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Sóc Đỏ leo trèo giỏi quá! Chúng ta đã ở rất gần hắn rồi." }
+            { character: 'monkey', text: "Giỏi quá! Chúng ta đã ở rất gần hắn rồi." }
         ]
     },
     48: {
@@ -460,20 +460,20 @@ export const STORY_CONFIGS = {
     49: {
         minigame: 'catch_insects',
         preGame: [
-            { character: 'monkey', text: "Đường lên ngọn cây phải đi qua một hốc cây rất tối. Hãy bắt vài bạn bướm phát sáng để soi đường nhé." }
+            { character: 'monkey', text: "Đường lên ngọn cây phải đi qua một hốc cây rất tối. Hãy bắt vài bạn đom đóm phát sáng để soi đường nhé." }
         ],
         postGame: [
-            { character: 'monkey', text: "Hốc cây đã sáng bừng lên. Cảm ơn những người bạn bướm tuyệt đẹp!" }
+            { character: 'monkey', text: "Hốc cây đã sáng bừng lên. Cảm ơn những người bạn đom đóm!" }
         ]
     },
     50: {
         minigame: 'frog_jump',
         preGame: [
-            { character: 'monkey', text: "Phía trước là những tai nấm linh chi khổng lồ mọc trên vỏ cây. Phải nhảy qua chúng để đi tiếp." },
-            { character: 'monkey', text: "Cẩn thận gõ đúng nhịp để không bị trượt chân rơi xuống tận gốc cây nhé!" }
+            { character: 'monkey', text: "Phía trước là những chiếc lá khổng lồ mọc trên ngọn cây. Phải nhảy qua chúng để đi tiếp." },
+            { character: 'monkey', text: "Cẩn thận gõ đúng nhịp để không bị trượt chân rơi xuống dưới nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Những tai nấm thật nhún nhảy như lò xo vậy. Chúng ta đã lên được một tầng cao mới." }
+            { character: 'monkey', text: "Những chiếc lá thật nhún nhảy như lò xo vậy. Chúng ta đã lên được một tầng cao mới." }
         ]
     },
     51: {
