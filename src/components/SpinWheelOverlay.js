@@ -5,18 +5,18 @@ import { ProgressManager, UNLOCK_THRESHOLDS } from '../utils/ProgressManager';
  * Reward probability table (weights sum to 100)
  */
 const REWARD_TABLE = [
-    { bananas: 0,  weight: 1, label: 'Hãy cố gắng lần sau! 😅' },
-    { bananas: 1,  weight: 5 },
-    { bananas: 2,  weight: 7 },
-    { bananas: 3,  weight: 9 },
-    { bananas: 5,  weight: 15 },
-    { bananas: 6,  weight: 20 },
-    { bananas: 8,  weight: 15 },
-    { bananas: 9,  weight: 11 },
+    { bananas: 0, weight: 1, label: 'Chúc may mắn lần sau! 😅' },
+    { bananas: 1, weight: 5 },
+    { bananas: 2, weight: 7 },
+    { bananas: 3, weight: 9 },
+    { bananas: 5, weight: 15 },
+    { bananas: 6, weight: 20 },
+    { bananas: 8, weight: 15 },
+    { bananas: 9, weight: 11 },
     { bananas: 10, weight: 8 },
     { bananas: 15, weight: 6 },
     { bananas: 20, weight: 2 },
-    { bananas: 0,  weight: 1, skin: true, label: '🐒 Skin khỉ mới!' }
+    { bananas: 0, weight: 1, skin: true, label: '🐒 Skin khỉ mới!' }
 ];
 
 const CHEST_CONFIGS = [

@@ -62,7 +62,6 @@ export class AssembleObjectGame extends BaseMinigame {
 
         // Dàn hàng các mảnh ghép ở hàng đợi phía dưới màn hình
         const startQueueX = targetX - (sortedParts.length - 1) * 50;
-        const queueY = targetY + 110;
 
         sortedParts.forEach((part, index) => {
             const partKey = this.scene.textures.exists(part.texture)
@@ -73,7 +72,7 @@ export class AssembleObjectGame extends BaseMinigame {
 
             // Vị trí nằm ở khay linh kiện bên dưới
             const qx = startQueueX + index * 120;
-            const qy = queueY;
+            const qy = targetY + (part.partOffsetY !== undefined ? part.partOffsetY : 110);
 
             const partSprite = this.scene.add.sprite(qx, qy, partKey)
                 .setAlpha(0.6) // Hơi mờ biểu thị chưa lắp

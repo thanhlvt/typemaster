@@ -528,8 +528,8 @@ export const STORY_CONFIGS = {
     57: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Bạn Nhím con đang bị kẹt giữa vòng vây của những cây nấm độc do Sói Già trồng." },
-            { character: 'monkey', text: "Hãy gõ đúng để nhổ bỏ những cây nấm độc và giải cứu Nhím con ra ngoài an toàn!" }
+            { character: 'monkey', text: "Bạn Nhím con đang bị kẹt giữa vòng vây của bụi rậm do Sói Già trồng." },
+            { character: 'monkey', text: "Hãy gõ đúng để nhổ bỏ bụi rậm và giải cứu Nhím con ra ngoài an toàn!" }
         ],
         postGame: [
             { character: 'monkey', text: "Nhím con đã thoát ra được. Cảm ơn bạn đã nhanh tay giúp đỡ!" }
@@ -739,11 +739,11 @@ export const STORY_CONFIGS = {
     79: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Sói Già đã đập vỡ cỗ xe hoa bằng gỗ của các bạn Ong Mật." },
-            { character: 'monkey', text: "Cùng gõ đúng để ráp từng bánh xe và thùng xe lại giúp các bạn ấy vận chuyển mật nhé." }
+            { character: 'monkey', text: "Sói Già đã đập vỡ Thùng Gỗ đựng mật khổng lồ của các bạn Ong Mật." },
+            { character: 'monkey', text: "Cùng gõ đúng để ráp các ván gỗ và đai sắt lại thành chiếc thùng hoàn chỉnh giúp các bạn ấy nhé." }
         ],
         postGame: [
-            { character: 'monkey', text: "Cỗ xe hoa đã được sửa chữa hoàn toàn. Các bạn Ong Mật rất biết ơn chúng ta." }
+            { character: 'monkey', text: "Thùng đựng mật đã được sửa chữa vô cùng chắc chắn. Các bạn Ong Mật rất biết ơn chúng ta." }
         ]
     },
     80: {
@@ -759,7 +759,7 @@ export const STORY_CONFIGS = {
     81: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Pháo đài của Sói Già nằm trên vách đá cao. Hãy dùng phép thuật gieo hạt giống cây hoa leo khổng lồ!" }
+            { character: 'monkey', text: "Pháo đài của Sói Già nằm trên vách đá cao. Hãy dùng phép thuật gieo hạt giống cây khổng lồ!" }
         ],
         postGame: [
             { character: 'monkey', text: "Dây leo đầy hoa đã bám chắc vào vách đá, tạo thành một con đường tuyệt đẹp dẫn lên pháo đài." }

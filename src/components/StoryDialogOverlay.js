@@ -47,13 +47,13 @@ export class StoryDialogOverlay extends Phaser.GameObjects.Container {
 
         // ── Avatar Nhân vật ──
         // Khỉ bên trái
-        this.monkeyMascot = scene.add.sprite(150, height - 150, this.monkeySkin)
+        this.monkeyMascot = scene.add.sprite(130, height - 150, this.monkeySkin)
             .setScale(0.65)
             .setOrigin(0.5)
             .setScrollFactor(0)
             .setDepth(203)
             .setVisible(this.hasMonkey);
-            
+
         // Boss bên phải
         this.bossMascot = scene.add.sprite(width - 150, height - 150, this.bossTexture)
             .setScale(0.65)
@@ -96,7 +96,7 @@ export class StoryDialogOverlay extends Phaser.GameObjects.Container {
             .setDepth(206);
 
         this.nextZone.on('pointerover', () => this._drawNextBtn(0xFBBF24));
-        this.nextZone.on('pointerout',  () => this._drawNextBtn(0xF59E0B));
+        this.nextZone.on('pointerout', () => this._drawNextBtn(0xF59E0B));
         this.nextZone.on('pointerup', () => {
             scene.sound.play('key_sound');
             this._nextStep();
@@ -207,7 +207,7 @@ export class StoryDialogOverlay extends Phaser.GameObjects.Container {
         const { width, height } = this.scene.scale;
         const bubbleW = 540;
         const bubbleH = 220;
-        
+
         // Nếu là Khỉ thì bong bóng dịch sang phải, Boss thì dịch sang trái
         const bubbleX = isMonkey ? 230 : width - 230 - bubbleW;
         const bubbleY = height - bubbleH - 40;
@@ -335,9 +335,9 @@ export class StoryDialogOverlay extends Phaser.GameObjects.Container {
             this.typingTimer.destroy();
             this.typingTimer = null;
         }
-        
+
         this.active = false;
-        
+
         // Hủy đăng ký sự kiện bàn phím
         this.scene.input.keyboard.off('keydown', this.onKeyDown);
 

@@ -16,7 +16,6 @@ function getLastUnlockedBg(lessonStats) {
 
 function getCriticalAssets() {
     const bgs = new Set(['bg_1_1']);  // always have fallback
-    const skins = new Set(['monkey_1']); // always have fallback
 
     try {
         // Current chapter background
@@ -37,15 +36,7 @@ function getCriticalAssets() {
         }
     } catch (_) {}
 
-    try {
-        // Equipped monkey skin
-        const equipped = JSON.parse(localStorage.getItem('typemaster_equipped_skins'));
-        if (equipped && equipped.monkey && equipped.monkey !== 'random') {
-            skins.add(equipped.monkey);
-        }
-    } catch (_) {}
-
-    return { bgs: [...bgs], skins: [...skins] };
+    return { bgs: [...bgs] };
 }
 
 export class BootScene extends Phaser.Scene {
@@ -72,12 +63,12 @@ export class BootScene extends Phaser.Scene {
         loadingText.setOrigin(0.5, 0.5);
 
         // Load critical backgrounds and skins only
-        const { bgs, skins } = getCriticalAssets();
+        const { bgs } = getCriticalAssets();
         for (const key of bgs) {
             this.load.image(key, `assets/${key}.jpg`);
         }
-        for (const key of skins) {
-            this.load.image(key, `assets/${key}.png`);
+        for (let i = 1; i <= 10; i++) {
+            this.load.image(`monkey_${i}`, `assets/monkey_${i}.png`);
         }
         this.load.image('banana', 'assets/banana.png');
         this.load.image('hand_left', 'assets/hand_left.png');

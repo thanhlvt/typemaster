@@ -909,12 +909,12 @@ export const MINIGAME_CONFIGS = {
                 scale: 1
             },
             parts: [
-                { id: 'bridge_part1', texture: 'bridge_part1', image: 'bridge_part1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 1 },
-                { id: 'bridge_part2', texture: 'bridge_part2', image: 'bridge_part2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 2 },
-                { id: 'bridge_part3', texture: 'bridge_part3', image: 'bridge_part3.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 3 },
-                { id: 'bridge_part4', texture: 'bridge_part4', image: 'bridge_part4.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 4 },
-                { id: 'bridge_part5', texture: 'bridge_part5', image: 'bridge_part5.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 5 },
-                { id: 'bridge_part6', texture: 'bridge_part6', image: 'bridge_part6.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '➖', offsetX: 0, offsetY: 0, order: 6 }
+                { id: 'bridge_part1', texture: 'bridge_part1', image: 'bridge_part1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 1, partOffsetY: 110 },
+                { id: 'bridge_part2', texture: 'bridge_part2', image: 'bridge_part2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 2, partOffsetY: 150 },
+                { id: 'bridge_part3', texture: 'bridge_part3', image: 'bridge_part3.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 3, partOffsetY: 140 },
+                { id: 'bridge_part4', texture: 'bridge_part4', image: 'bridge_part4.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 4, partOffsetY: 90 },
+                { id: 'bridge_part5', texture: 'bridge_part5', image: 'bridge_part5.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '🪵', offsetX: 0, offsetY: 0, order: 5, partOffsetY: 110 },
+                { id: 'bridge_part6', texture: 'bridge_part6', image: 'bridge_part6.png', scaleX: 0.7, scaleY: 0.7, angle: 0, emoji: '➖', offsetX: 0, offsetY: 0, order: 6, partOffsetY: 150 }
             ]
         },
         interactions: {
@@ -1391,27 +1391,27 @@ export const MINIGAME_CONFIGS = {
             parts: [
                 {
                     id: 'ladder_path1', texture: 'ladder_path1', image: 'ladder_path1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1, partOffsetY: 110
                 },
                 {
                     id: 'ladder_path2', texture: 'ladder_path2', image: 'ladder_path2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2, partOffsetY: 105
                 },
                 {
                     id: 'ladder_path3', texture: 'ladder_path3', image: 'ladder_path3.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3, partOffsetY: 190
                 },
                 {
                     id: 'ladder_path4', texture: 'ladder_path4', image: 'ladder_path4.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4, partOffsetY: 160
                 },
                 {
                     id: 'ladder_path5', texture: 'ladder_path5', image: 'ladder_path5.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5
+                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5, partOffsetY: 140
                 },
                 {
                     id: 'ladder_path6', texture: 'ladder_path6', image: 'ladder_path6.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🚨', offsetX: 0, offsetY: -0, order: 6
+                    emoji: '🚨', offsetX: 0, offsetY: -0, order: 6, partOffsetY: 110
                 }
             ]
         },
@@ -1476,27 +1476,27 @@ export const MINIGAME_CONFIGS = {
             parts: [
                 {
                     id: 'armor_part1', texture: 'armor_part1', image: 'armor_part1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1, partOffsetY: 120
                 },
                 {
                     id: 'armor_part2', texture: 'armor_part2', image: 'armor_part2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2, partOffsetY: 200
                 },
                 {
                     id: 'armor_part3', texture: 'armor_part3', image: 'armor_part3.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3, partOffsetY: 110
                 },
                 {
                     id: 'armor_part4', texture: 'armor_part4', image: 'armor_part4.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4, partOffsetY: 110
                 },
                 {
                     id: 'armor_part5', texture: 'armor_part5', image: 'armor_part5.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5
+                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5, partOffsetY: 55
                 },
                 {
                     id: 'armor_part6', texture: 'armor_part6', image: 'armor_part6.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🚨', offsetX: 0, offsetY: 0, order: 6
+                    emoji: '🚨', offsetX: 0, offsetY: 0, order: 6, partOffsetY: 55
                 }
             ]
         },
@@ -1528,15 +1528,15 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                texture: 'rescue_rabbit_tex',
-                image: 'rabbit.png',
-                scale: 0.8,
-                animalEmoji: '🐰'
+                texture: 'rescue_hedgehodge_tex',
+                image: 'hedgehodge.png',
+                scale: 1,
+                animalEmoji: '🦔'
             },
             cage: {
-                texture: 'rescue_cage_tex',
-                image: 'cage.png',
-                scale: 1,
+                texture: 'rescue_bush_tex',
+                image: 'bush.png',
+                scale: 0.7,
                 cageEmoji: '📦'
             },
             x: 490,
@@ -1603,31 +1603,32 @@ export const MINIGAME_CONFIGS = {
     60: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
                 texture: 'car_monkey',
-                image: 'car1.png',
+                image: 'ladybug.png',
                 emoji: '🚗',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
-                flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
+                scale: 0.4,         // Tỷ lệ kích thước của chiếc xe
+                flipX: false,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
-                driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
-                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverScale: 0.22,   // Tỷ lệ kích thước người lái (khỉ)
+                driverOffsetX: -20,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -45,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
             enemyVehicle: {
                 texture: 'car_boss',
-                image: 'car2.png',
+                image: 'ladybug.png',
                 emoji: '🏎️',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của xe boss
-                flipX: true,         // Lật ngang xe boss
+                scale: 0.4,         // Tỷ lệ kích thước của xe boss
+                flipX: false,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
-                driverScale: 0.2,   // Tỷ lệ kích thước của boss
-                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverScale: 0.22,   // Tỷ lệ kích thước của boss
+                driverOffsetX: -20,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -55,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
@@ -1637,12 +1638,12 @@ export const MINIGAME_CONFIGS = {
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'air',
                 startX: 150,
                 endX: 820,
-                playerY: 220,
+                playerY: 180,
                 enemyY: 350,
-                height: 70
+                height: 100
             }
         },
         interactions: {
@@ -1657,11 +1658,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
-                    { texture: 'grow_tree2', image: 'tree2.png', scale: 0.3 },
-                    { texture: 'grow_tree3', image: 'tree3.png', scale: 0.6 },
-                    { texture: 'grow_tree4', image: 'tree4.png', scale: 0.7 },
-                    { texture: 'grow_tree5', image: 'tree5.png', scale: 0.75 }
+                    { texture: 'crystal_mushroom_1', image: 'crystal_mushroom_1.png', scale: 0.9 },
+                    { texture: 'crystal_mushroom_2', image: 'crystal_mushroom_2.png', scale: 0.9 },
+                    { texture: 'crystal_mushroom_3', image: 'crystal_mushroom_3.png', scale: 0.9 },
+                    { texture: 'crystal_mushroom_4', image: 'crystal_mushroom_4.png', scale: 0.9 },
+                    { texture: 'crystal_mushroom_5', image: 'crystal_mushroom_5.png', scale: 0.9 }
                 ]
             },
             x: 490,
@@ -1679,14 +1680,14 @@ export const MINIGAME_CONFIGS = {
         config: {
             insect: {
                 texture: 'catch_insect_tex',
-                image: 'butterfly.png',
-                scale: 0.3,
+                image: 'mosquito.png',
+                scale: 0.4,
                 emoji: '🦋'
             },
             net: {
                 texture: 'catch_net_tex',
                 image: 'net.png',
-                scale: 0.3,
+                scale: 0.4,
                 emoji: '🕸️'
             },
             jar: {
@@ -1710,37 +1711,29 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                texture: 'truck_complete',
-                image: 'truck_complete.png',
+                texture: 'umbrella_completed',
+                image: 'umbrella_completed.png',
                 emoji: '🚚',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 1
             },
             parts: [
                 {
-                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                    id: 'umbrella_part1', texture: 'umbrella_part1', image: 'umbrella_part1.png', scaleX: 0.8, scaleY: 0.8, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1, partOffsetY: 110
                 },
                 {
-                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                    id: 'umbrella_part2', texture: 'umbrella_part2', image: 'umbrella_part2.png', scaleX: 0.8, scaleY: 0.8, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2, partOffsetY: 150
                 },
                 {
-                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                    id: 'umbrella_part3', texture: 'umbrella_part3', image: 'umbrella_part3.png', scaleX: 0.8, scaleY: 0.8, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3, partOffsetY: 125
                 },
                 {
-                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
-                },
-                {
-                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
-                },
-                {
-                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                    id: 'umbrella_part4', texture: 'umbrella_part4', image: 'umbrella_part4.png', scaleX: 0.8, scaleY: 0.8, angle: 0,
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4, partOffsetY: 110
                 }
             ]
         },
@@ -1754,24 +1747,22 @@ export const MINIGAME_CONFIGS = {
     64: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
                 texture: 'frog_leaf_tex',
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'leaf3_mushroom.png',
+                scale: 0.7,
                 emoji: '🪷'
             },
-            frog: {
-                texture: 'frog_frog_tex',
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                emoji: '🐸',
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -85
             },
             x1: 100,
-            y1: 150,
+            y1: 170,
             x2: 920,
-            y2: 300
+            y2: 320
         },
         interactions: {
             onWordComplete: { action: 'jump_next_leaf' },
@@ -1784,8 +1775,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 7, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -1828,8 +1818,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'mushroom.png',
+                scale: 0.4,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -1845,37 +1835,37 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                texture: 'truck_complete',
-                image: 'truck_complete.png',
-                emoji: '🚚',
+                texture: 'shield_complete',
+                image: 'shield_complete.png',
+                emoji: '🛡️',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    id: 'shield_part1', texture: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
                     emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
                 },
                 {
-                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', texture: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2
                 },
                 {
-                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', texture: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3
                 },
                 {
-                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', texture: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4
                 },
                 {
-                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', texture: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5
                 },
                 {
-                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', texture: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🚨', offsetX: 0, offsetY: 0, order: 6
                 }
             ]
         },
@@ -1891,15 +1881,15 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { texture: 'grow_tree1', image: 'tree1.png', scale: 0.4 },
-                    { texture: 'grow_tree2', image: 'tree2.png', scale: 0.3 },
-                    { texture: 'grow_tree3', image: 'tree3.png', scale: 0.6 },
-                    { texture: 'grow_tree4', image: 'tree4.png', scale: 0.7 },
-                    { texture: 'grow_tree5', image: 'tree5.png', scale: 0.75 }
+                    { texture: 'grow_tree1', image: 'flower_tree1.png', scale: 0.7 },
+                    { texture: 'grow_tree2', image: 'flower_tree2.png', scale: 0.7 },
+                    { texture: 'grow_tree3', image: 'flower_tree3.png', scale: 0.7 },
+                    { texture: 'grow_tree4', image: 'flower_tree4.png', scale: 0.7 },
+                    { texture: 'grow_tree5', image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
-            y: 390
+            y: 400
         },
         interactions: {
             onWordComplete: { action: 'water_plant' },
@@ -1913,18 +1903,18 @@ export const MINIGAME_CONFIGS = {
         config: {
             animal: {
                 texture: 'rescue_rabbit_tex',
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'butterfly.png',
+                scale: 0.7,
                 animalEmoji: '🐰'
             },
             cage: {
                 texture: 'rescue_cage_tex',
-                image: 'cage.png',
-                scale: 1,
+                image: 'spider_web.png',
+                scale: 0.7,
                 cageEmoji: '📦'
             },
             x: 490,
-            y: 230
+            y: 240
         },
         interactions: {
             onWordComplete: { action: 'break_cage' },
@@ -1938,7 +1928,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             insect: {
                 texture: 'catch_insect_tex',
-                image: 'butterfly.png',
+                image: 'flies.png',
                 scale: 0.3,
                 emoji: '🦋'
             },
@@ -2019,31 +2009,32 @@ export const MINIGAME_CONFIGS = {
     75: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
                 texture: 'car_monkey',
-                image: 'car1.png',
+                image: 'grasshopper.png',
                 emoji: '🚗',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
-                flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
+                scale: 0.4,         // Tỷ lệ kích thước của chiếc xe
+                flipX: false,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
-                driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
+                driverScale: 0.22,   // Tỷ lệ kích thước người lái (khỉ)
                 driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetY: -35,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
             enemyVehicle: {
                 texture: 'car_boss',
-                image: 'car2.png',
+                image: 'grasshopper.png',
                 emoji: '🏎️',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của xe boss
-                flipX: true,         // Lật ngang xe boss
+                scale: 0.4,         // Tỷ lệ kích thước của xe boss
+                flipX: false,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
-                driverScale: 0.2,   // Tỷ lệ kích thước của boss
+                driverScale: 0.22,   // Tỷ lệ kích thước của boss
                 driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetY: -40,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
@@ -2053,12 +2044,12 @@ export const MINIGAME_CONFIGS = {
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'air',
                 startX: 150,
                 endX: 820,
-                playerY: 220,
+                playerY: 180,
                 enemyY: 350,
-                height: 70
+                height: 100
             }
         },
         interactions: {
@@ -2074,16 +2065,13 @@ export const MINIGAME_CONFIGS = {
             leaf: {
                 texture: 'frog_leaf_tex',
                 image: 'leaf.png',
-                scale: 0.4,
+                scale: 0.5,
                 emoji: '🪷'
             },
-            frog: {
-                texture: 'frog_frog_tex',
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                emoji: '🐸',
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -60
             },
             x1: 100,
             y1: 150,
@@ -2101,12 +2089,11 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'honey_item', image: 'honey.png', emoji: '🍌', count: 6, width: 64, height: 64 }
             ],
             container: {
-                texture: 'basket_container',
-                image: 'basket.png',
+                texture: 'jar2_container',
+                image: 'jar2.png',
                 emoji: '🧺',
                 x: 920,
                 y: 340,
@@ -2144,37 +2131,29 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                texture: 'truck_complete',
-                image: 'truck_complete.png',
+                texture: 'barrel_complete',
+                image: 'barrel_complete.png',
                 emoji: '🚚',
                 x: 490,
-                y: 220,
-                scale: 0.8
+                y: 180,
+                scale: 0.35
             },
             parts: [
                 {
-                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                    id: 'barrel_part1', texture: 'barrel_part1', image: 'barrel_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                    id: 'barrel_part2', texture: 'barrel_part2', image: 'barrel_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2, partOffsetY: 180
                 },
                 {
-                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                    id: 'barrel_part3', texture: 'barrel_part3', image: 'barrel_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3, partOffsetY: 210
                 },
                 {
-                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
-                },
-                {
-                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
-                },
-                {
-                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                    id: 'barrel_part4', texture: 'barrel_part4', image: 'barrel_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4, partOffsetY: 230
                 }
             ]
         },
@@ -2190,7 +2169,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'urchin.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -2229,37 +2208,37 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                texture: 'truck_complete',
-                image: 'truck_complete.png',
-                emoji: '🚚',
+                texture: 'shield_complete',
+                image: 'shield_complete.png',
+                emoji: '🛡️',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', texture: 'truck_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', texture: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟩', offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', texture: 'truck_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', texture: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', texture: 'truck_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '⚫', offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', texture: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '⚫', offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', texture: 'truck_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🟦', offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', texture: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🟦', offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', texture: 'truck_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    emoji: '🍌', offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', texture: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🍌', offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', texture: 'truck_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    emoji: '🚨', offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', texture: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    emoji: '🚨', offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
