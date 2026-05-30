@@ -26,23 +26,29 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
 
         // 1. Container image
         if (minigameConfig.config?.container?.image) {
+            const imgName = minigameConfig.config.container.image;
+            const containerKey = 'container_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.container.texture,
-                url: getAssetUrl(minigameConfig.config.container.image)
+                key: containerKey,
+                url: getAssetUrl(imgName)
             });
         }
 
         // 1.5. Racing vehicle images
         if (minigameConfig.config?.playerVehicle?.image) {
+            const imgName = minigameConfig.config.playerVehicle.image;
+            const key = 'racing_player_vehicle_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.playerVehicle.texture,
-                url: getAssetUrl(minigameConfig.config.playerVehicle.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
         if (minigameConfig.config?.enemyVehicle?.image) {
+            const imgName = minigameConfig.config.enemyVehicle.image;
+            const key = 'racing_enemy_vehicle_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.enemyVehicle.texture,
-                url: getAssetUrl(minigameConfig.config.enemyVehicle.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
@@ -60,9 +66,11 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
 
         // 3. FinishedObject image (Assemble)
         if (minigameConfig.config?.finishedObject?.image) {
+            const imgName = minigameConfig.config.finishedObject.image;
+            const key = 'finished_obj_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.finishedObject.texture,
-                url: getAssetUrl(minigameConfig.config.finishedObject.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
@@ -70,8 +78,9 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
         if (Array.isArray(minigameConfig.config?.parts)) {
             minigameConfig.config.parts.forEach(part => {
                 if (part.image) {
+                    const key = 'part_tex_' + part.image.replace(/[^a-zA-Z0-9]/g, '_');
                     texturesToLoad.push({
-                        key: part.texture,
+                        key: key,
                         url: getAssetUrl(part.image)
                     });
                 }
@@ -80,125 +89,160 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
 
         // 5. Animal & Cage images (Rescue)
         if (minigameConfig.config?.animal?.image) {
+            const imgName = minigameConfig.config.animal.image;
+            const key = 'rescue_animal_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.animal.texture || 'rescue_animal_tex',
-                url: getAssetUrl(minigameConfig.config.animal.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         } else if (minigameConfig.config?.animalImage) {
+            const imgName = minigameConfig.config.animalImage;
+            const key = 'rescue_animal_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.animalTexture || 'rescue_animal_tex',
-                url: getAssetUrl(minigameConfig.config.animalImage)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
         if (minigameConfig.config?.cage?.image) {
+            const imgName = minigameConfig.config.cage.image;
+            const key = 'rescue_cage_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.cage.texture || 'rescue_cage_tex',
-                url: getAssetUrl(minigameConfig.config.cage.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         } else if (minigameConfig.config?.cageImage) {
+            const imgName = minigameConfig.config.cageImage;
+            const key = 'rescue_cage_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.cageTexture || 'rescue_cage_tex',
-                url: getAssetUrl(minigameConfig.config.cageImage)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
         // 6. GrowPlant images (plant, pot, stages)
         if (minigameConfig.config?.plant?.image) {
+            const imgName = minigameConfig.config.plant.image;
+            const key = 'grow_plant_final_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.plant.texture || 'grow_plant_final_tex',
-                url: getAssetUrl(minigameConfig.config.plant.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
         if (Array.isArray(minigameConfig.config?.plant?.stages)) {
             minigameConfig.config.plant.stages.forEach((stage, idx) => {
                 if (stage.image) {
+                    const key = 'grow_plant_stage_' + idx + '_' + stage.image.replace(/[^a-zA-Z0-9]/g, '_');
                     texturesToLoad.push({
-                        key: stage.texture || `grow_plant_stage_${idx}`,
+                        key: key,
                         url: getAssetUrl(stage.image)
                     });
                 }
             });
         }
         if (minigameConfig.config?.pot?.image) {
+            const imgName = minigameConfig.config.pot.image;
+            const key = 'grow_pot_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.pot.texture || 'grow_pot_tex',
-                url: getAssetUrl(minigameConfig.config.pot.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
         // 7. CatchInsects images (insect, net, jar)
         if (minigameConfig.config?.insect?.image) {
+            const imgName = minigameConfig.config.insect.image;
+            const key = 'catch_insect_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.insect.texture || 'catch_insect_tex',
-                url: getAssetUrl(minigameConfig.config.insect.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
         if (minigameConfig.config?.net?.image) {
+            const imgName = minigameConfig.config.net.image;
+            const key = 'catch_net_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.net.texture || 'catch_net_tex',
-                url: getAssetUrl(minigameConfig.config.net.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
         if (minigameConfig.config?.jar?.image) {
+            const imgName = minigameConfig.config.jar.image;
+            const key = 'catch_jar_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.jar.texture || 'catch_jar_tex',
-                url: getAssetUrl(minigameConfig.config.jar.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
         // 8. WhackMole images (hole, mole, hammer)
         if (minigameConfig.config?.hole?.image) {
+            const imgName = minigameConfig.config.hole.image;
+            const key = 'mole_hole_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.hole.texture || 'mole_hole_tex',
-                url: getAssetUrl(minigameConfig.config.hole.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
         if (minigameConfig.config?.mole?.image) {
+            const imgName = minigameConfig.config.mole.image;
+            const key = 'mole_mole_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.mole.texture || 'mole_mole_tex',
-                url: getAssetUrl(minigameConfig.config.mole.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
         if (minigameConfig.config?.hammer?.image) {
+            const imgName = minigameConfig.config.hammer.image;
+            const key = 'mole_hammer_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.hammer.texture || 'mole_hammer_tex',
-                url: getAssetUrl(minigameConfig.config.hammer.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
         // 9. BubbleShooter images (bubble)
         if (minigameConfig.config?.bubble?.image) {
+            const imgName = minigameConfig.config.bubble.image;
+            const bubbleKey = 'bubble_shoot_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.bubble.texture || 'bubble_shoot_tex',
-                url: getAssetUrl(minigameConfig.config.bubble.image)
+                key: bubbleKey,
+                url: getAssetUrl(imgName)
             });
         }
 
         // 10. FrogJump images (frog, leaf)
         if (minigameConfig.config?.frog?.image) {
+            const imgName = minigameConfig.config.frog.image;
+            const key = 'frog_frog_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.frog.texture || 'frog_frog_tex',
-                url: getAssetUrl(minigameConfig.config.frog.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
         if (minigameConfig.config?.leaf?.image) {
+            const imgName = minigameConfig.config.leaf.image;
+            const key = 'frog_leaf_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.leaf.texture || 'frog_leaf_tex',
-                url: getAssetUrl(minigameConfig.config.leaf.image)
+                key: key,
+                url: getAssetUrl(imgName)
             });
         }
 
         // 11. ClearFog images
         if (minigameConfig.config?.image) {
+            const imgName = minigameConfig.config.image;
+            const fogKey = 'clear_fog_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.texture || 'clear_fog_tex',
-                url: getAssetUrl(minigameConfig.config.image)
+                key: fogKey,
+                url: getAssetUrl(imgName)
             });
         } else if (minigameConfig.config?.fog?.image) {
+            const imgName = minigameConfig.config.fog.image;
+            const fogKey = 'clear_fog_tex_' + imgName.replace(/[^a-zA-Z0-9]/g, '_');
             texturesToLoad.push({
-                key: minigameConfig.config.fog.texture || 'clear_fog_tex',
-                url: getAssetUrl(minigameConfig.config.fog.image)
+                key: fogKey,
+                url: getAssetUrl(imgName)
             });
         }
 

@@ -32,8 +32,10 @@ export class ClearFogGame extends BaseMinigame {
         const count = this.totalWords || 8;
 
         // Xác định texture key
-        let fogKey = this.config?.texture || this.config?.fog?.texture || 'clear_fog_tex';
         const fogImage = this.config?.image || this.config?.fog?.image;
+        let fogKey = fogImage
+            ? 'clear_fog_tex_' + fogImage.replace(/[^a-zA-Z0-9]/g, '_')
+            : (this.config?.texture || this.config?.fog?.texture || 'clear_fog_tex');
         const fogEmoji = this.config?.fogEmoji || this.config?.fog?.emoji || '🌫️';
 
         if (fogImage && this.scene.textures.exists(fogKey)) {

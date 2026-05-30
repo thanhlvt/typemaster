@@ -33,11 +33,14 @@ export class AssembleObjectGame extends BaseMinigame {
         });
 
         // 1. Tạo texture chính của vật phẩm hoàn chỉnh (để ẩn đi ban đầu)
-        const finishedKey = this.scene.textures.exists(finishedObject.texture)
-            ? finishedObject.texture
-            : (finishedObject.emoji
-                ? this.createEmojiTexture(finishedObject.texture, finishedObject.emoji, 110)
-                : finishedObject.texture);
+        const defFinishedTex = finishedObject.texture || 'finished_obj_tex';
+        const finishedKey = finishedObject.image
+            ? 'finished_obj_tex_' + finishedObject.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (this.scene.textures.exists(defFinishedTex)
+                ? defFinishedTex
+                : (finishedObject.emoji
+                    ? this.createEmojiTexture(defFinishedTex, finishedObject.emoji, 110)
+                    : defFinishedTex));
 
         this.finishedSprite = this.scene.add.sprite(finishedObject.x, finishedObject.y, finishedKey)
             .setAlpha(0) // Ẩn ban đầu
@@ -64,11 +67,14 @@ export class AssembleObjectGame extends BaseMinigame {
         const startQueueX = targetX - (sortedParts.length - 1) * 50;
 
         sortedParts.forEach((part, index) => {
-            const partKey = this.scene.textures.exists(part.texture)
-                ? part.texture
-                : (part.emoji
-                    ? this.createEmojiTexture(part.texture, part.emoji, 48)
-                    : part.texture);
+            const defPartTex = part.texture || ('part_tex_' + part.id);
+            const partKey = part.image
+                ? 'part_tex_' + part.image.replace(/[^a-zA-Z0-9]/g, '_')
+                : (this.scene.textures.exists(defPartTex)
+                    ? defPartTex
+                    : (part.emoji
+                        ? this.createEmojiTexture(defPartTex, part.emoji, 48)
+                        : defPartTex));
 
             // Vị trí nằm ở khay linh kiện bên dưới
             const qx = startQueueX + index * 120;

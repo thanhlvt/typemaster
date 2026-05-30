@@ -2306,7 +2306,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -2536,8 +2536,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'urchin.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -2674,7 +2674,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -2948,8 +2948,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock.png',
+                scale: 0.5,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -3054,7 +3054,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -3328,8 +3328,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -3486,7 +3486,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -3821,7 +3821,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -4095,8 +4095,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'urchin.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -4201,7 +4201,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -4475,7 +4475,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'wood.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -4581,7 +4581,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'fog4.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -4855,8 +4855,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -4961,8 +4961,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'fog4.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -5235,7 +5235,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'wood.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -5341,7 +5341,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'stone.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -5615,7 +5615,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'wood.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -5721,7 +5721,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'stone.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -5995,7 +5995,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'rock.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -6101,8 +6101,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'pine.png',
+                scale: 0.5,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -6375,7 +6375,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'wood.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -6481,7 +6481,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'rock.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -6755,7 +6755,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'rock.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -6861,7 +6861,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -7135,7 +7135,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'rock.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -7241,8 +7241,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'thunderball.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -7515,8 +7515,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'ice.png',
+                scale: 0.7,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -7621,8 +7621,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'snowball.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -7895,8 +7895,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'ice.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -8001,7 +8001,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -8275,8 +8275,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'scythe.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -8381,7 +8381,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -8655,9 +8655,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'meteorite.png',
                 scale: 0.8,
-                emoji: '🫧'
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -9035,7 +9036,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'urchin.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -9141,7 +9142,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -9415,9 +9416,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
-                emoji: '🫧'
+                image: 'meteorite.png',
+                scale: 0.6,
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -9795,9 +9797,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bolide.png',
                 scale: 0.8,
-                emoji: '🫧'
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -9901,7 +9904,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -10175,9 +10178,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bolide.png',
                 scale: 0.8,
-                emoji: '🫧'
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -10281,7 +10285,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -10555,9 +10559,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'meteorite.png',
                 scale: 0.8,
-                emoji: '🫧'
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -10935,7 +10940,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'urchin.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -11041,7 +11046,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'fog4.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -11315,8 +11320,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'urchin.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -11421,8 +11426,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'fog4.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -11695,8 +11700,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'shell.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -11801,8 +11806,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'urchin.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -12075,7 +12080,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'coral.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -12181,7 +12186,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -12455,8 +12460,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -12561,8 +12566,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'fog4.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -12835,8 +12840,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -13215,8 +13220,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock2.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -13321,8 +13326,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'tnt.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -13595,8 +13600,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'mace.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -13701,8 +13706,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'tnt.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -13975,8 +13980,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'mace.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -14081,9 +14086,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
-                emoji: '🫧'
+                image: 'fireball.png',
+                scale: 0.6,
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -14355,8 +14361,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock2.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -14461,7 +14467,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bomb.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -14735,7 +14741,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'rock2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -14841,7 +14847,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bomb.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -15115,8 +15121,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock2.png',
+                scale: 0.7,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -15221,7 +15227,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bomb.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -15495,8 +15501,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'mace.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -15601,7 +15607,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'tnt.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -15875,7 +15881,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'rock2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -16255,8 +16261,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock2.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -16361,8 +16367,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'bottle.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -16635,8 +16641,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'thunderball.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -16741,7 +16747,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'blackhole.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -17015,8 +17021,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'ice.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -17121,8 +17127,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'ice.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -17395,9 +17401,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
-                emoji: '🫧'
+                image: 'fireball.png',
+                scale: 0.6,
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -17501,7 +17508,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -17775,7 +17782,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bubble2.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -17881,7 +17888,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'bottle.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -18155,8 +18162,8 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
-                scale: 0.8,
+                image: 'rock2.png',
+                scale: 0.6,
                 emoji: '🫧'
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
@@ -18535,9 +18542,10 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'meteorite.png',
                 scale: 0.8,
-                emoji: '🫧'
+                emoji: '🫧',
+                randomAngle: false
             },
             area: { minX: 150, maxX: 800, minY: 120, maxY: 320 }
         },
@@ -18641,7 +18649,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'thunderball.png',
                 scale: 0.8,
                 emoji: '🫧'
             },
@@ -18915,7 +18923,7 @@ export const MINIGAME_CONFIGS = {
         config: {
             bubble: {
                 texture: 'bubble_shoot_tex',
-                image: 'bubble.png',
+                image: 'thunderball.png',
                 scale: 0.8,
                 emoji: '🫧'
             },

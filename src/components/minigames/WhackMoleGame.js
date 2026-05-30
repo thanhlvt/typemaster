@@ -20,9 +20,15 @@ export class WhackMoleGame extends BaseMinigame {
         const moleEmoji = moleConfig.emoji || this.config?.moleEmoji || '🐹';
         const hammerEmoji = hammerConfig.emoji || this.config?.hammerEmoji || '🔨';
 
-        const holeTex = holeConfig.texture || 'mole_hole_tex';
-        const moleTex = moleConfig.texture || 'mole_mole_tex';
-        const hammerTex = hammerConfig.texture || 'mole_hammer_tex';
+        const holeTex = holeConfig.image
+            ? 'mole_hole_tex_' + holeConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (holeConfig.texture || 'mole_hole_tex');
+        const moleTex = moleConfig.image
+            ? 'mole_mole_tex_' + moleConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (moleConfig.texture || 'mole_mole_tex');
+        const hammerTex = hammerConfig.image
+            ? 'mole_hammer_tex_' + hammerConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (hammerConfig.texture || 'mole_hammer_tex');
 
         // 1. Tạo texture từ cache hoặc emoji
         const holeKey = this.scene.textures.exists(holeTex)

@@ -134,9 +134,10 @@ export class RacingGame extends BaseMinigame {
         this.add(this.enemyFlagSprite);
 
         // 2. Tạo Phương tiện của Người chơi (Khỉ + Xe)
+        const defPlayerTex = playerVehicle.texture || 'car_monkey';
         const playerVehicleKey = playerVehicle.image
-            ? playerVehicle.texture
-            : (playerVehicle.emoji ? this.createEmojiTexture(playerVehicle.texture, playerVehicle.emoji, 56) : playerVehicle.texture);
+            ? 'racing_player_vehicle_' + playerVehicle.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (playerVehicle.emoji ? this.createEmojiTexture(defPlayerTex, playerVehicle.emoji, 56) : defPlayerTex);
 
         this.playerContainer = this.scene.add.container(startX + this.playerVehicleOffsetX, playerY + this.playerVehicleOffsetY).setDepth(110);
 
@@ -176,9 +177,10 @@ export class RacingGame extends BaseMinigame {
         this.add(this.playerContainer);
 
         // 3. Tạo Phương tiện của Đối thủ (Boss + Xe)
+        const defEnemyTex = enemyVehicle.texture || 'car_boss';
         const enemyVehicleKey = enemyVehicle.image
-            ? enemyVehicle.texture
-            : (enemyVehicle.emoji ? this.createEmojiTexture(enemyVehicle.texture, enemyVehicle.emoji, 56) : enemyVehicle.texture);
+            ? 'racing_enemy_vehicle_' + enemyVehicle.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (enemyVehicle.emoji ? this.createEmojiTexture(defEnemyTex, enemyVehicle.emoji, 56) : defEnemyTex);
 
         this.enemyContainer = this.scene.add.container(startX + this.enemyVehicleOffsetX, enemyY + this.enemyVehicleOffsetY).setDepth(110);
 
@@ -329,9 +331,7 @@ export class RacingGame extends BaseMinigame {
 
         this.animateVehicles(250);
 
-        if (this.config.interactions?.onTypeError?.effect === 'smoke') {
-            this.emitSmoke(this.playerContainer.x - 30, this.playerY + this.playerVehicleOffsetY);
-        }
+        this.emitSmoke(this.playerContainer.x - 30, this.playerY + this.playerVehicleOffsetY);
     }
 
     emitSmoke(x, y) {

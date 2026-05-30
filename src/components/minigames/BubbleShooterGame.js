@@ -9,8 +9,11 @@ export class BubbleShooterGame extends BaseMinigame {
     create() {
         const bubbleConfig = this.config?.bubble || {};
         const bubbleEmoji = bubbleConfig.emoji || this.config?.bubbleEmoji || '🫧';
-        const bubbleTex = bubbleConfig.texture || 'bubble_shoot_tex';
+        const bubbleTex = bubbleConfig.image
+            ? 'bubble_shoot_tex_' + bubbleConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (bubbleConfig.texture || 'bubble_shoot_tex');
         const bubbleScale = bubbleConfig.scale !== undefined ? bubbleConfig.scale : 1.0;
+        const randomAngleEnabled = bubbleConfig.randomAngle !== false;
 
         const count = this.totalWords || 10;
         
@@ -28,10 +31,12 @@ export class BubbleShooterGame extends BaseMinigame {
             const ry = Phaser.Math.Between(minY, maxY);
 
             const randomScale = bubbleScale * Phaser.Math.FloatBetween(0.8, 1);
+            const randomAngle = randomAngleEnabled ? Phaser.Math.Between(-180, 180) : 0;
 
             const bubbleSprite = this.scene.add.sprite(rx, ry, bubbleKey)
                 .setDepth(111)
-                .setScale(randomScale);
+                .setScale(randomScale)
+                .setAngle(randomAngle);
             this.add(bubbleSprite);
 
             // Cho bong bóng bay lơ lửng nhẹ nhàng
@@ -49,7 +54,8 @@ export class BubbleShooterGame extends BaseMinigame {
                 sprite: bubbleSprite,
                 popped: false,
                 startX: rx,
-                startY: ry
+                startY: ry,
+                startAngle: randomAngle
             });
         }
     }

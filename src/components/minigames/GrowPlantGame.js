@@ -38,7 +38,9 @@ export class GrowPlantGame extends BaseMinigame {
         this.stages = [];
         if (Array.isArray(plantConfig.stages)) {
             plantConfig.stages.forEach((stage, idx) => {
-                const stageTex = stage.texture || `grow_plant_stage_${idx}`;
+                const stageTex = stage.image
+                    ? 'grow_plant_stage_' + idx + '_' + stage.image.replace(/[^a-zA-Z0-9]/g, '_')
+                    : (stage.texture || `grow_plant_stage_${idx}`);
                 const stageScale = stage.scale !== undefined ? stage.scale : 1.0;
                 this.stages.push({
                     textureKey: stageTex,

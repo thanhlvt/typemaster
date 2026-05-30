@@ -4843,11 +4843,11 @@ export const STORY_CONFIGS = {
     515: {
         minigame: 'bubble_shooter',
         preGame: [
-            { character: 'monkey', text: "Hắn đang điên cuồng phóng những ngọn giáo sắt nhọn hoắt từ trên cao xuống." },
-            { character: 'monkey', text: "Ngắm thật chuẩn và bắn gãy những ngọn giáo sắt đó giữa không trung để dọn đường tiến lên!" }
+            { character: 'monkey', text: "Hắn đang điên cuồng phóng những quả chuỳ sắt hoắt từ trên cao xuống." },
+            { character: 'monkey', text: "Ngắm thật chuẩn và bắn gãy những quả chuỳ sắt đó giữa không trung để dọn đường tiến lên!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Giáo sắt vỡ vụn thành từng mảnh. Tướng Cướp đã cạn kiệt vũ khí tấn công từ xa rồi." }
+            { character: 'monkey', text: "Những quả chuỳ sắt vỡ vụn thành từng mảnh. Tướng Cướp đã cạn kiệt vũ khí tấn công từ xa rồi." }
         ]
     },
     516: {
@@ -4975,11 +4975,11 @@ export const STORY_CONFIGS = {
     529: {
         minigame: 'bubble_shooter',
         preGame: [
-            { character: 'monkey', text: "Hắn đang điên cuồng phóng những quả cầu gai thép từ trên sân thượng xuống để cản đường." },
-            { character: 'monkey', text: "Ngắm thật chuẩn và bắn nát những quả cầu gai đó giữa không trung để dọn đường tiến lên!" }
+            { character: 'monkey', text: "Hắn đang điên cuồng phóng những tảng đá từ trên sân thượng xuống để cản đường." },
+            { character: 'monkey', text: "Ngắm thật chuẩn và bắn nát những tảng đá đó giữa không trung để dọn đường tiến lên!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu gai thép vỡ vụn thành sắt gỉ. Tướng Cướp đã cạn kiệt vũ khí để ném rồi." }
+            { character: 'monkey', text: "Tảng đá vỡ vụn thành sắt gỉ. Tướng Cướp đã cạn kiệt vũ khí để ném rồi." }
         ]
     },
     530: {
@@ -5503,11 +5503,11 @@ export const STORY_CONFIGS = {
     585: {
         minigame: 'bubble_shooter',
         preGame: [
-            { character: 'monkey', text: "Hắn đang vung vẩy những thanh phi tiêu độc cuối cùng trong tuyệt vọng." },
-            { character: 'monkey', text: "Ngắm thật chuẩn và bắn gãy những thanh phi tiêu đó giữa không trung để tước vũ khí của hắn!" }
+            { character: 'monkey', text: "Hắn đang vung vẩy những hòn đá cuối cùng trong tuyệt vọng." },
+            { character: 'monkey', text: "Ngắm thật chuẩn và bắn nổ những hòn đá đó giữa không trung để tước vũ khí của hắn!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Phi tiêu rơi lả tả thành đống sắt vụn. Trận chiến đã thực sự ngã ngũ." }
+            { character: 'monkey', text: "Hòn đá rơi lả tả thành đống sắt vụn. Trận chiến đã thực sự ngã ngũ." }
         ]
     },
     586: {
@@ -5678,10 +5678,10 @@ export const STORY_CONFIGS = {
         minigame: 'bubble_shooter',
         preGame: [
             { character: 'boss', text: "Nhận lấy cơn mưa acid vũ trụ này đi! Bầu khí quyển của các ngươi sẽ bị ăn mòn!" },
-            { character: 'monkey', text: "Hắn đang thả các bọc acid khổng lồ! Ngắm bắn vỡ chúng ngay trên không trung trước khi chúng rơi xuống!" }
+            { character: 'monkey', text: "Hắn đang thả các chai acid khổng lồ! Ngắm bắn vỡ chúng ngay trên không trung trước khi chúng rơi xuống!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Các bọc acid đã nổ tung thành hơi nước vô hại. Bầu trời Trái Đất vẫn hoàn toàn trong lành." }
+            { character: 'monkey', text: "Các chai acid đã nổ tung thành hơi nước vô hại. Bầu trời Trái Đất vẫn hoàn toàn trong lành." }
         ]
     },
     605: {
@@ -6205,11 +6205,11 @@ export const STORY_CONFIGS = {
     660: {
         minigame: 'bubble_shooter',
         preGame: [
-            { character: 'boss', text: "Nhận lấy những quả bom acid sinh học này đi! Bộ đồ vũ trụ của các ngươi sẽ bị ăn mòn!" },
-            { character: 'monkey', text: "Hắn đang bắn bom acid từ trên cao! Ngắm bắn vỡ chúng ngay trước khi chúng rơi trúng chúng ta!" }
+            { character: 'boss', text: "Nhận lấy những chai acid sinh học này đi! Bộ đồ vũ trụ của các ngươi sẽ bị ăn mòn!" },
+            { character: 'monkey', text: "Hắn đang ném các chai acid từ trên cao! Ngắm bắn vỡ chúng ngay trước khi chúng rơi trúng chúng ta!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Những quả bom đã nổ tung thành chất lỏng vô hại. Đồ bảo hộ của chúng ta vẫn an toàn." }
+            { character: 'monkey', text: "Những chai acid đã nổ tung thành chất lỏng vô hại. Đồ bảo hộ của chúng ta vẫn an toàn." }
         ]
     },
     661: {

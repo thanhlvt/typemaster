@@ -40,9 +40,15 @@ export class CatchInsectsGame extends BaseMinigame {
         const jarEmoji = jarConfig.emoji || this.config?.jarEmoji || '🏺'; 
         const count = this.totalWords || 8;
 
-        const insectTex = insectConfig.texture || 'catch_insect_tex';
-        const netTex = netConfig.texture || 'catch_net_tex';
-        const jarTex = jarConfig.texture || 'catch_jar_tex';
+        const insectTex = insectConfig.image
+            ? 'catch_insect_tex_' + insectConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (insectConfig.texture || 'catch_insect_tex');
+        const netTex = netConfig.image
+            ? 'catch_net_tex_' + netConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (netConfig.texture || 'catch_net_tex');
+        const jarTex = jarConfig.image
+            ? 'catch_jar_tex_' + jarConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (jarConfig.texture || 'catch_jar_tex');
 
         // 1. Tạo texture từ cache hoặc emoji
         const insectKey = this.scene.textures.exists(insectTex)

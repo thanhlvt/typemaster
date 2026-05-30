@@ -16,7 +16,9 @@ export class FrogJumpGame extends BaseMinigame {
         const leafConfig = this.config?.leaf || {};
 
         const leafEmoji = leafConfig.emoji || this.config?.leafEmoji || '🪷';
-        const leafTex = leafConfig.texture || 'frog_leaf_tex';
+        const leafTex = leafConfig.image
+            ? 'frog_leaf_tex_' + leafConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+            : (leafConfig.texture || 'frog_leaf_tex');
 
         this.leafScale = leafConfig.scale !== undefined ? leafConfig.scale : 1.1;
 
@@ -34,7 +36,9 @@ export class FrogJumpGame extends BaseMinigame {
         } else {
             const frogConfig = this.config.frog;
             const frogEmoji = frogConfig.emoji || this.config?.frogEmoji || '🐸';
-            const frogTex = frogConfig.texture || 'frog_frog_tex';
+            const frogTex = frogConfig.image
+                ? 'frog_frog_tex_' + frogConfig.image.replace(/[^a-zA-Z0-9]/g, '_')
+                : (frogConfig.texture || 'frog_frog_tex');
             this.frogScale = frogConfig.scale !== undefined ? frogConfig.scale : 1.2;
             this.frogOffsetX = frogConfig.offsetX !== undefined ? frogConfig.offsetX : 0;
             this.frogOffsetY = frogConfig.offsetY !== undefined ? frogConfig.offsetY : -12;

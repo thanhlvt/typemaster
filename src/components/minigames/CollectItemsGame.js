@@ -31,11 +31,15 @@ export class CollectItemsGame extends BaseMinigame {
         });
 
         // 1. Tạo texture cho container và đặt vào màn hình
-        const containerKey = this.scene.textures.exists(container.texture)
-            ? container.texture
-            : (container.emoji
-                ? this.createEmojiTexture(container.texture, container.emoji, 80)
-                : container.texture);
+        const containerImg = container.image;
+        const defTex = container.texture || 'basket_container';
+        const containerKey = containerImg
+            ? 'container_tex_' + containerImg.replace(/[^a-zA-Z0-9]/g, '_')
+            : (this.scene.textures.exists(defTex)
+                ? defTex
+                : (container.emoji
+                    ? this.createEmojiTexture(defTex, container.emoji, 80)
+                    : defTex));
 
         this.containerSprite = this.scene.add.sprite(container.x, container.y, containerKey);
         if (container.width !== undefined && container.height !== undefined) {
@@ -131,7 +135,6 @@ export class CollectItemsGame extends BaseMinigame {
         const containerSprite = this.containerSprite;
         const baseScaleX = containerSprite.scaleX;
         const baseScaleY = containerSprite.scaleY;
-        const effect = this.config.interactions?.onWordComplete?.effect;
         const self = this;
 
         // 1. Animation tại chỗ: Phóng to trước, sau đó mới bay lên và fade out khi được một nửa quãng đường
@@ -202,10 +205,8 @@ export class CollectItemsGame extends BaseMinigame {
                                     ease: 'Quad.easeOut'
                                 });
 
-                                // Chạy hiệu ứng lấp lánh (nếu có yêu cầu từ config)
-                                if (effect === 'sparkle') {
-                                    self.showSparkle(containerSprite.x, containerSprite.y);
-                                }
+                                // Chạy hiệu ứng lấp lánh mặc định
+                                self.showSparkle(containerSprite.x, containerSprite.y);
                             }
                         });
                     }
@@ -251,15 +252,13 @@ export class CollectItemsGame extends BaseMinigame {
             });
         }
 
-        // Hiệu ứng chớp đỏ nhẹ trên giỏ đồ (nếu cấu hình yêu cầu)
-        if (this.config.interactions?.onTypeError?.effect === 'red_flash') {
-            this.containerSprite.setTint(0xff8888);
-            this.scene.time.delayedCall(150, () => {
-                if (this.containerSprite) {
-                    this.containerSprite.clearTint();
-                }
-            });
-        }
+        // Hiệu ứng chớp đỏ nhẹ trên giỏ đồ mặc định
+        this.containerSprite.setTint(0xff8888);
+        this.scene.time.delayedCall(150, () => {
+            if (this.containerSprite) {
+                this.containerSprite.clearTint();
+            }
+        });
     }
 
     destroy(fromScene) {
