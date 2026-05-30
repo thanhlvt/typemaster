@@ -18,7 +18,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Lesson 1: Minigame Đua xe vượt ải
@@ -407,7 +407,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 21
@@ -483,7 +483,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 24
@@ -586,7 +586,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 30
@@ -772,7 +772,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 39
@@ -907,7 +907,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 47
@@ -982,7 +982,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 50
@@ -1248,7 +1248,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 63
@@ -1316,7 +1316,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 66
@@ -1431,7 +1431,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 73
@@ -1544,7 +1544,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 78
@@ -1776,7 +1776,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 90
@@ -1832,7 +1832,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 93
@@ -1927,7 +1927,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 99
@@ -2043,7 +2043,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -2056,7 +2056,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 105
@@ -2132,7 +2132,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 108
@@ -2321,7 +2321,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'grasshopper.png',
                 scale: 0.3,
             },
             net: {
@@ -2334,7 +2334,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 119
@@ -2410,7 +2410,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 122
@@ -2570,7 +2570,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 131
@@ -2578,12 +2578,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
-                scale: 0.3,
+                image: 'jellyfish.png',
+                scale: 0.5,
             },
             net: {
                 image: 'net.png',
-                scale: 0.3,
+                scale: 0.5,
             },
             jar: {
                 image: 'jar.png',
@@ -2591,7 +2591,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 132
@@ -2892,7 +2892,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 147
@@ -2900,7 +2900,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -2913,7 +2913,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 148
@@ -3160,7 +3160,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'mosquito.png',
                 scale: 0.3,
             },
             net: {
@@ -3173,7 +3173,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 161
@@ -3211,7 +3211,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 163
@@ -3438,7 +3438,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'mosquito.png',
                 scale: 0.3,
             },
             net: {
@@ -3451,7 +3451,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 175
@@ -3489,7 +3489,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 177
@@ -3716,7 +3716,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -3729,7 +3729,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 189
@@ -3767,7 +3767,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 191
@@ -3994,7 +3994,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -4007,7 +4007,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 203
@@ -4045,7 +4045,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 205
@@ -4285,7 +4285,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 217
@@ -4323,7 +4323,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 219
@@ -4550,7 +4550,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'ladybug.png',
                 scale: 0.3,
             },
             net: {
@@ -4563,7 +4563,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 231
@@ -4601,7 +4601,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 233
@@ -4841,7 +4841,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 245
@@ -4879,7 +4879,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 247
@@ -5106,7 +5106,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -5119,7 +5119,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 259
@@ -5157,7 +5157,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 261
@@ -5384,7 +5384,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -5397,7 +5397,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 273
@@ -5435,7 +5435,7 @@ export const MINIGAME_CONFIGS = {
                 height: 200
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 275
@@ -5662,7 +5662,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -5675,7 +5675,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 287
@@ -5713,7 +5713,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 289
@@ -5940,7 +5940,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -5953,7 +5953,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 301
@@ -5991,7 +5991,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 303
@@ -6218,7 +6218,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -6231,7 +6231,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 315
@@ -6269,7 +6269,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 317
@@ -6510,7 +6510,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 329
@@ -6548,7 +6548,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 331
@@ -6775,7 +6775,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -6788,7 +6788,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 343
@@ -6826,7 +6826,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 345
@@ -7067,7 +7067,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 357
@@ -7105,7 +7105,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 359
@@ -7333,7 +7333,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -7346,7 +7346,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 371
@@ -7384,7 +7384,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 373
@@ -7612,7 +7612,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -7625,7 +7625,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 385
@@ -7663,7 +7663,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 387
@@ -7891,12 +7891,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
-                scale: 0.3,
+                image: 'jellyfish.png',
+                scale: 0.5,
             },
             net: {
                 image: 'net.png',
-                scale: 0.3,
+                scale: 0.5,
             },
             jar: {
                 image: 'jar.png',
@@ -7904,7 +7904,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 399
@@ -7942,7 +7942,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 401
@@ -8169,7 +8169,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'plankton.png',
                 scale: 0.3,
             },
             net: {
@@ -8182,7 +8182,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 413
@@ -8220,7 +8220,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 415
@@ -8447,12 +8447,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
-                scale: 0.3,
+                image: 'jellyfish.png',
+                scale: 0.5,
             },
             net: {
                 image: 'net.png',
-                scale: 0.3,
+                scale: 0.5,
             },
             jar: {
                 image: 'jar.png',
@@ -8460,7 +8460,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 427
@@ -8498,7 +8498,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 429
@@ -8725,12 +8725,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
-                scale: 0.3,
+                image: 'jellyfish.png',
+                scale: 0.5,
             },
             net: {
                 image: 'net.png',
-                scale: 0.3,
+                scale: 0.5,
             },
             jar: {
                 image: 'jar.png',
@@ -8738,7 +8738,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 441
@@ -8776,7 +8776,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 443
@@ -9003,7 +9003,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'jellyfish.png',
                 scale: 0.3,
             },
             net: {
@@ -9016,7 +9016,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 455
@@ -9054,7 +9054,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 457
@@ -9281,7 +9281,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -9294,7 +9294,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 469
@@ -9332,7 +9332,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 471
@@ -9559,7 +9559,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'jellyfish.png',
                 scale: 0.3,
             },
             net: {
@@ -9572,7 +9572,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 483
@@ -9610,7 +9610,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 485
@@ -9837,7 +9837,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -9850,7 +9850,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 497
@@ -9888,7 +9888,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 499
@@ -10115,7 +10115,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -10128,7 +10128,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 511
@@ -10166,7 +10166,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 513
@@ -10394,7 +10394,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -10407,7 +10407,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 525
@@ -10445,7 +10445,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 527
@@ -10672,7 +10672,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -10685,7 +10685,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 539
@@ -10723,7 +10723,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 541
@@ -10963,7 +10963,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 553
@@ -11001,7 +11001,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 555
@@ -11228,7 +11228,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'fairy.png',
                 scale: 0.3,
             },
             net: {
@@ -11241,7 +11241,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 567
@@ -11279,7 +11279,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 569
@@ -11506,7 +11506,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'firefly.png',
                 scale: 0.3,
             },
             net: {
@@ -11519,7 +11519,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 581
@@ -11557,7 +11557,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 583
@@ -11784,7 +11784,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'star.png',
                 scale: 0.3,
             },
             net: {
@@ -11797,7 +11797,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 595
@@ -11835,7 +11835,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 597
@@ -12062,7 +12062,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'star2.png',
                 scale: 0.3,
             },
             net: {
@@ -12075,7 +12075,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 609
@@ -12113,7 +12113,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 611
@@ -12340,7 +12340,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'star.png',
                 scale: 0.3,
             },
             net: {
@@ -12353,7 +12353,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 623
@@ -12391,7 +12391,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 625
@@ -12618,7 +12618,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'star2.png',
                 scale: 0.3,
             },
             net: {
@@ -12631,7 +12631,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 637
@@ -12669,7 +12669,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 639
@@ -12897,7 +12897,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'star.png',
                 scale: 0.3,
             },
             net: {
@@ -12910,7 +12910,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 651
@@ -12948,7 +12948,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 653
@@ -13175,7 +13175,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'ladybug.png',
                 scale: 0.3,
             },
             net: {
@@ -13188,7 +13188,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 665
@@ -13226,7 +13226,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 667
@@ -13453,7 +13453,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'plasma.png',
                 scale: 0.3,
             },
             net: {
@@ -13466,7 +13466,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 679
@@ -13504,7 +13504,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 681
@@ -13732,7 +13732,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'catch_insects',
         config: {
             insect: {
-                image: 'butterfly.png',
+                image: 'star.png',
                 scale: 0.3,
             },
             net: {
@@ -13745,7 +13745,7 @@ export const MINIGAME_CONFIGS = {
             },
             jarX: 940,
             jarY: 330,
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 693
@@ -13783,7 +13783,7 @@ export const MINIGAME_CONFIGS = {
                 height: 180
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
-            area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
+            area: { minX: 180, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
         },
     },
     // Tự động đồng bộ từ File 1: Lesson 695

@@ -1371,10 +1371,10 @@ export const STORY_CONFIGS = {
         minigame: 'catch_insects',
         preGame: [
             { character: 'monkey', text: "Dưới những tán lá sen khổng lồ này thật thiếu ánh sáng." },
-            { character: 'monkey', text: "Hãy dùng vợt mời các bạn chuồn chuồn kim đến soi đường cho chúng ta đi tiếp." }
+            { character: 'monkey', text: "Hãy dùng vợt mời các bạn đom đóm kim đến soi đường cho chúng ta đi tiếp." }
         ],
         postGame: [
-            { character: 'monkey', text: "Đàn chuồn chuồn bay lượn lấp lánh như những ngọn đèn nhỏ. Cảm ơn các bạn!" }
+            { character: 'monkey', text: "Đàn đom đóm bay lượn lấp lánh như những ngọn đèn nhỏ. Cảm ơn các bạn!" }
         ]
     },
     148: {
