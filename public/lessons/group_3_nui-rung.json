@@ -6,23 +6,19 @@
       "content": [
         {
           "display": "nắng tốt dưa mưa tốt lúa",
-          "keys": "nawngs toots duwa muwa toots luas",
-          "reward": "yellow_banana"
+          "keys": "nawngs toots duwa muwa toots luas"
         },
         {
           "display": "nắng chóng trưa mưa chóng tối",
-          "keys": "nawngs chongs truwa muwa chongs toois",
-          "reward": "yellow_banana"
+          "keys": "nawngs chongs truwa muwa chongs toois"
         },
         {
           "display": "trăng quầng thì hạn",
-          "keys": "trawng quaangf thif hanj",
-          "reward": "yellow_banana"
+          "keys": "trawng quaangf thif hanj"
         },
         {
           "display": "trăng tán thì mưa",
-          "keys": "trawng tans thif muwa",
-          "reward": "yellow_banana"
+          "keys": "trawng tans thif muwa"
         }
       ]
     },
@@ -32,23 +28,19 @@
       "content": [
         {
           "display": "đêm tháng năm chưa nằm đã sáng",
-          "keys": "ddeem thangs nawm chuwa nawmf ddax sangs",
-          "reward": "yellow_banana"
+          "keys": "ddeem thangs nawm chuwa nawmf ddax sangs"
         },
         {
           "display": "ngày tháng mười chưa cười",
-          "keys": "ngayf thangs muwowif chuwa cuwowif",
-          "reward": "yellow_banana"
+          "keys": "ngayf thangs muwowif chuwa cuwowif"
         },
         {
           "display": "đã tối",
-          "keys": "ddax toois",
-          "reward": "yellow_banana"
+          "keys": "ddax toois"
         },
         {
           "display": "ếch kêu uôm uôm",
-          "keys": "eechs keeu uoom uoom",
-          "reward": "yellow_banana"
+          "keys": "eechs keeu uoom uoom"
         }
       ]
     },
@@ -58,23 +50,19 @@
       "content": [
         {
           "display": "ao chuôm đầy nước",
-          "keys": "ao chuoom ddaayf nuwowcs",
-          "reward": "yellow_banana"
+          "keys": "ao chuoom ddaayf nuwowcs"
         },
         {
           "display": "chuồn chuồn bay thấp",
-          "keys": "chuoonf chuoonf bay thaaps",
-          "reward": "yellow_banana"
+          "keys": "chuoonf chuoonf bay thaaps"
         },
         {
           "display": "thì mưa",
-          "keys": "thif muwa",
-          "reward": "yellow_banana"
+          "keys": "thif muwa"
         },
         {
           "display": "bay cao thì nắng",
-          "keys": "bay cao thif nawngs",
-          "reward": "yellow_banana"
+          "keys": "bay cao thif nawngs"
         }
       ]
     },
@@ -84,23 +72,19 @@
       "content": [
         {
           "display": "bay vừa thì râm",
-          "keys": "bay vuwaf thif raam",
-          "reward": "yellow_banana"
+          "keys": "bay vuwaf thif raam"
         },
         {
           "display": "mống đông vồng tây",
-          "keys": "moongs ddoong voongf taay",
-          "reward": "yellow_banana"
+          "keys": "moongs ddoong voongf taay"
         },
         {
           "display": "chớp đông nhay nháy",
-          "keys": "chowps ddoong nhay nhays",
-          "reward": "yellow_banana"
+          "keys": "chowps ddoong nhay nhays"
         },
         {
           "display": "gà gáy thì sáng",
-          "keys": "gaf gays thif sangs",
-          "reward": "yellow_banana"
+          "keys": "gaf gays thif sangs"
         }
       ]
     },
@@ -110,23 +94,19 @@
       "content": [
         {
           "display": "chim hót thì xuân",
-          "keys": "chim hots thif xuaan",
-          "reward": "yellow_banana"
+          "keys": "chim hots thif xuaan"
         },
         {
           "display": "hoa nở thì đẹp",
-          "keys": "hoa nowr thif ddepj",
-          "reward": "yellow_banana"
+          "keys": "hoa nowr thif ddepj"
         },
         {
           "display": "quả chín thì thơm",
-          "keys": "quar chins thif thowm",
-          "reward": "yellow_banana"
+          "keys": "quar chins thif thowm"
         },
         {
           "display": "gió thổi mây bay",
-          "keys": "gios thooir maay bay",
-          "reward": "yellow_banana"
+          "keys": "gios thooir maay bay"
         }
       ]
     },
@@ -136,23 +116,19 @@
       "content": [
         {
           "display": "mưa dầm dề",
-          "keys": "muwa daamf deef",
-          "reward": "yellow_banana"
+          "keys": "muwa daamf deef"
         },
         {
           "display": "nắng cháy da",
-          "keys": "nawngs chays da",
-          "reward": "yellow_banana"
+          "keys": "nawngs chays da"
         },
         {
           "display": "rét run cầm cập",
-          "keys": "rets run caamf caapj",
-          "reward": "yellow_banana"
+          "keys": "rets run caamf caapj"
         },
         {
           "display": "bốn mùa xuân hạ",
-          "keys": "boons muaf xuaan haj",
-          "reward": "yellow_banana"
+          "keys": "boons muaf xuaan haj"
         }
       ]
     },
@@ -162,23 +138,19 @@
       "content": [
         {
           "display": "thu đông luân chuyển",
-          "keys": "thu ddoong luaan chuyeenr",
-          "reward": "yellow_banana"
+          "keys": "thu ddoong luaan chuyeenr"
         },
         {
           "display": "đất lành chim đậu",
-          "keys": "ddaats lanhf chim ddaauj",
-          "reward": "yellow_banana"
+          "keys": "ddaats lanhf chim ddaauj"
         },
         {
           "display": "nước chảy đá mòn",
-          "keys": "nuwowcs chayr ddas monf",
-          "reward": "yellow_banana"
+          "keys": "nuwowcs chayr ddas monf"
         },
         {
           "display": "biển bạc rừng vàng",
-          "keys": "bieenr bacj ruwngf vangf",
-          "reward": "yellow_banana"
+          "keys": "bieenr bacj ruwngf vangf"
         }
       ]
     },
@@ -188,23 +160,19 @@
       "content": [
         {
           "display": "ăn quả nhớ kẻ trồng cây",
-          "keys": "awn quar nhows ker troongf caay",
-          "reward": "yellow_banana"
+          "keys": "awn quar nhows ker troongf caay"
         },
         {
           "display": "uống nước nhớ nguồn",
-          "keys": "uoongs nuwowcs nhows nguoonf",
-          "reward": "yellow_banana"
+          "keys": "uoongs nuwowcs nhows nguoonf"
         },
         {
           "display": "ăn khoai nhớ kẻ cho dây",
-          "keys": "awn khoai nhows ker cho daay",
-          "reward": "yellow_banana"
+          "keys": "awn khoai nhows ker cho daay"
         },
         {
           "display": "mà trồng",
-          "keys": "maf troongf",
-          "reward": "yellow_banana"
+          "keys": "maf troongf"
         }
       ]
     },
@@ -214,23 +182,19 @@
       "content": [
         {
           "display": "đói cho sạch rách cho thơm",
-          "keys": "ddois cho sachj rachs cho thowm",
-          "reward": "yellow_banana"
+          "keys": "ddois cho sachj rachs cho thowm"
         },
         {
           "display": "giấy rách phải giữ lấy lề",
-          "keys": "giaays rachs phair giuwx laays leef",
-          "reward": "yellow_banana"
+          "keys": "giaays rachs phair giuwx laays leef"
         },
         {
           "display": "tốt gỗ hơn tốt nước sơn",
-          "keys": "toots goox hown toots nuwowcs sown",
-          "reward": "yellow_banana"
+          "keys": "toots goox hown toots nuwowcs sown"
         },
         {
           "display": "thật thà là cha quỷ quái",
-          "keys": "thaatj thaf laf cha quyr quais",
-          "reward": "yellow_banana"
+          "keys": "thaatj thaf laf cha quyr quais"
         }
       ]
     },
@@ -240,23 +204,19 @@
       "content": [
         {
           "display": "nhân đức là gốc",
-          "keys": "nhaan dduwcs laf goocs",
-          "reward": "yellow_banana"
+          "keys": "nhaan dduwcs laf goocs"
         },
         {
           "display": "giàu sang là ngọn",
-          "keys": "giauf sang laf ngonj",
-          "reward": "yellow_banana"
+          "keys": "giauf sang laf ngonj"
         },
         {
           "display": "tu thân tích đức",
-          "keys": "tu thaan tichs dduwcs",
-          "reward": "yellow_banana"
+          "keys": "tu thaan tichs dduwcs"
         },
         {
           "display": "lương tâm thanh thản",
-          "keys": "luwowng taam thanh thanr",
-          "reward": "yellow_banana"
+          "keys": "luwowng taam thanh thanr"
         }
       ]
     },
@@ -266,23 +226,19 @@
       "content": [
         {
           "display": "chết trong còn hơn sống đục",
-          "keys": "cheets trong conf hown soongs dducj",
-          "reward": "yellow_banana"
+          "keys": "cheets trong conf hown soongs dducj"
         },
         {
           "display": "trọng nghĩa khinh tài",
-          "keys": "trongj nghiax khinh taif",
-          "reward": "yellow_banana"
+          "keys": "trongj nghiax khinh taif"
         },
         {
           "display": "không tham của người",
-          "keys": "khoong tham cuar nguwowif",
-          "reward": "yellow_banana"
+          "keys": "khoong tham cuar nguwowif"
         },
         {
           "display": "không kiêu khi thắng",
-          "keys": "khoong kieeu khi thawngs",
-          "reward": "yellow_banana"
+          "keys": "khoong kieeu khi thawngs"
         }
       ]
     },
@@ -292,23 +248,19 @@
       "content": [
         {
           "display": "không nản khi thua",
-          "keys": "khoong nanr khi thua",
-          "reward": "yellow_banana"
+          "keys": "khoong nanr khi thua"
         },
         {
           "display": "giúp người là giúp mình",
-          "keys": "giups nguwowif laf giups minhf",
-          "reward": "yellow_banana"
+          "keys": "giups nguwowif laf giups minhf"
         },
         {
           "display": "làm việc thiện",
-          "keys": "lamf vieecj thieenj",
-          "reward": "yellow_banana"
+          "keys": "lamf vieecj thieenj"
         },
         {
           "display": "tích thiện phùng thiện",
-          "keys": "tichs thieenj phungf thieenj",
-          "reward": "yellow_banana"
+          "keys": "tichs thieenj phungf thieenj"
         }
       ]
     },
@@ -318,23 +270,19 @@
       "content": [
         {
           "display": "ác giả ác báo",
-          "keys": "acs giar acs baos",
-          "reward": "yellow_banana"
+          "keys": "acs giar acs baos"
         },
         {
           "display": "lưới trời lồng lộng",
-          "keys": "luwowis trowif loongf loongj",
-          "reward": "yellow_banana"
+          "keys": "luwowis trowif loongf loongj"
         },
         {
           "display": "thưa mà khó lọt",
-          "keys": "thuwa maf khos lotj",
-          "reward": "yellow_banana"
+          "keys": "thuwa maf khos lotj"
         },
         {
           "display": "biết sai thì sửa",
-          "keys": "bieets sai thif suwar",
-          "reward": "yellow_banana"
+          "keys": "bieets sai thif suwar"
         }
       ]
     },
@@ -344,23 +292,19 @@
       "content": [
         {
           "display": "lòng dạ thẳng ngay",
-          "keys": "longf daj thawngr ngay",
-          "reward": "yellow_banana"
+          "keys": "longf daj thawngr ngay"
         },
         {
           "display": "cây ngay không sợ",
-          "keys": "caay ngay khoong sowj",
-          "reward": "yellow_banana"
+          "keys": "caay ngay khoong sowj"
         },
         {
           "display": "chết đứng",
-          "keys": "cheets dduwngs",
-          "reward": "yellow_banana"
+          "keys": "cheets dduwngs"
         },
         {
           "display": "người ngay nói thật",
-          "keys": "nguwowif ngay nois thaatj",
-          "reward": "yellow_banana"
+          "keys": "nguwowif ngay nois thaatj"
         }
       ]
     },
@@ -370,23 +314,19 @@
       "content": [
         {
           "display": "sông có khúc người có lúc",
-          "keys": "soong cos khucs nguwowif cos lucs",
-          "reward": "yellow_banana"
+          "keys": "soong cos khucs nguwowif cos lucs"
         },
         {
           "display": "vỏ quýt dày có móng tay nhọn",
-          "keys": "vor quyts dayf cos mongs tay nhonj",
-          "reward": "yellow_banana"
+          "keys": "vor quyts dayf cos mongs tay nhonj"
         },
         {
           "display": "mềm nắn rắn buông",
-          "keys": "meemf nawns rawns buoong",
-          "reward": "yellow_banana"
+          "keys": "meemf nawns rawns buoong"
         },
         {
           "display": "đi một ngày đàng học một sàng khôn",
-          "keys": "ddi mootj ngayf ddangf hocj mootj sangf khoon",
-          "reward": "yellow_banana"
+          "keys": "ddi mootj ngayf ddangf hocj mootj sangf khoon"
         }
       ]
     },
@@ -396,23 +336,19 @@
       "content": [
         {
           "display": "được voi đòi tiên",
-          "keys": "dduwowcj voi ddoif tieen",
-          "reward": "yellow_banana"
+          "keys": "dduwowcj voi ddoif tieen"
         },
         {
           "display": "đứng núi này trông núi nọ",
-          "keys": "dduwngs nuis nayf troong nuis noj",
-          "reward": "yellow_banana"
+          "keys": "dduwngs nuis nayf troong nuis noj"
         },
         {
           "display": "của đi thay người",
-          "keys": "cuar ddi thay nguwowif",
-          "reward": "yellow_banana"
+          "keys": "cuar ddi thay nguwowif"
         },
         {
           "display": "trong cái rủi có cái may",
-          "keys": "trong cais ruir cos cais may",
-          "reward": "yellow_banana"
+          "keys": "trong cais ruir cos cais may"
         }
       ]
     },
@@ -422,23 +358,19 @@
       "content": [
         {
           "display": "liệu cơm gắp mắm",
-          "keys": "lieeuj cowm gawps mawms",
-          "reward": "yellow_banana"
+          "keys": "lieeuj cowm gawps mawms"
         },
         {
           "display": "khéo co thì ấm",
-          "keys": "kheos co thif aams",
-          "reward": "yellow_banana"
+          "keys": "kheos co thif aams"
         },
         {
           "display": "biết người biết ta",
-          "keys": "bieets nguwowif bieets ta",
-          "reward": "yellow_banana"
+          "keys": "bieets nguwowif bieets ta"
         },
         {
           "display": "trăm trận trăm thắng",
-          "keys": "trawm traanj trawm thawngs",
-          "reward": "yellow_banana"
+          "keys": "trawm traanj trawm thawngs"
         }
       ]
     },
@@ -448,23 +380,19 @@
       "content": [
         {
           "display": "tiền mất tật mang",
-          "keys": "tieenf maats taatj mang",
-          "reward": "yellow_banana"
+          "keys": "tieenf maats taatj mang"
         },
         {
           "display": "tiền nào của nấy",
-          "keys": "tieenf naof cuar naays",
-          "reward": "yellow_banana"
+          "keys": "tieenf naof cuar naays"
         },
         {
           "display": "của rẻ là của ôi",
-          "keys": "cuar rer laf cuar ooi",
-          "reward": "yellow_banana"
+          "keys": "cuar rer laf cuar ooi"
         },
         {
           "display": "đừng nghe lời nịnh",
-          "keys": "dduwngf nghe lowif ninhj",
-          "reward": "yellow_banana"
+          "keys": "dduwngf nghe lowif ninhj"
         }
       ]
     },
@@ -474,23 +402,19 @@
       "content": [
         {
           "display": "hãy tin lời thật",
-          "keys": "hayx tin lowif thaatj",
-          "reward": "yellow_banana"
+          "keys": "hayx tin lowif thaatj"
         },
         {
           "display": "phòng bệnh hơn chữa bệnh",
-          "keys": "phongf beenhj hown chuwax beenhj",
-          "reward": "yellow_banana"
+          "keys": "phongf beenhj hown chuwax beenhj"
         },
         {
           "display": "cẩn tắc vô ưu",
-          "keys": "caanr tawcs voo uwu",
-          "reward": "yellow_banana"
+          "keys": "caanr tawcs voo uwu"
         },
         {
           "display": "thời gian là vàng",
-          "keys": "thowif gian laf vangf",
-          "reward": "yellow_banana"
+          "keys": "thowif gian laf vangf"
         }
       ]
     },
@@ -500,23 +424,19 @@
       "content": [
         {
           "display": "đừng để mai sau",
-          "keys": "dduwngf ddeer mai sau",
-          "reward": "yellow_banana"
+          "keys": "dduwngf ddeer mai sau"
         },
         {
           "display": "việc hôm nay chớ để ngày mai",
-          "keys": "vieecj hoom nay chows ddeer ngayf mai",
-          "reward": "yellow_banana"
+          "keys": "vieecj hoom nay chows ddeer ngayf mai"
         },
         {
           "display": "sai một li đi một dặm",
-          "keys": "sai mootj li ddi mootj dawmj",
-          "reward": "yellow_banana"
+          "keys": "sai mootj li ddi mootj dawmj"
         },
         {
           "display": "mất bò mới lo làm chuồng",
-          "keys": "maats bof mowis lo lamf chuoongf",
-          "reward": "yellow_banana"
+          "keys": "maats bof mowis lo lamf chuoongf"
         }
       ]
     },
@@ -526,23 +446,19 @@
       "content": [
         {
           "display": "sự đã rồi",
-          "keys": "suwj ddax rooif",
-          "reward": "yellow_banana"
+          "keys": "suwj ddax rooif"
         },
         {
           "display": "hối không kịp",
-          "keys": "hoois khoong kipj",
-          "reward": "yellow_banana"
+          "keys": "hoois khoong kipj"
         },
         {
           "display": "biết đủ là vui",
-          "keys": "bieets ddur laf vui",
-          "reward": "yellow_banana"
+          "keys": "bieets ddur laf vui"
         },
         {
           "display": "tham thì thâm",
-          "keys": "tham thif thaam",
-          "reward": "yellow_banana"
+          "keys": "tham thif thaam"
         }
       ]
     },
@@ -552,23 +468,19 @@
       "content": [
         {
           "display": "quê hương là chùm khế ngọt",
-          "keys": "quee huwowng laf chumf khees ngotj",
-          "reward": "yellow_banana"
+          "keys": "quee huwowng laf chumf khees ngotj"
         },
         {
           "display": "đi đâu cũng nhớ về quê",
-          "keys": "ddi ddaau cungx nhows veef quee",
-          "reward": "yellow_banana"
+          "keys": "ddi ddaau cungx nhows veef quee"
         },
         {
           "display": "yêu nước thương dân",
-          "keys": "yeeu nuwowcs thuwowng daan",
-          "reward": "yellow_banana"
+          "keys": "yeeu nuwowcs thuwowng daan"
         },
         {
           "display": "quốc có quốc pháp",
-          "keys": "quoocs cos quoocs phaps",
-          "reward": "yellow_banana"
+          "keys": "quoocs cos quoocs phaps"
         }
       ]
     },
@@ -578,23 +490,19 @@
       "content": [
         {
           "display": "gia có gia quy",
-          "keys": "gia cos gia quy",
-          "reward": "yellow_banana"
+          "keys": "gia cos gia quy"
         },
         {
           "display": "đất nước thanh bình",
-          "keys": "ddaats nuwowcs thanh binhf",
-          "reward": "yellow_banana"
+          "keys": "ddaats nuwowcs thanh binhf"
         },
         {
           "display": "nhân dân ấm no",
-          "keys": "nhaan daan aams no",
-          "reward": "yellow_banana"
+          "keys": "nhaan daan aams no"
         },
         {
           "display": "giữ gìn bờ cõi",
-          "keys": "giuwx ginf bowf coix",
-          "reward": "yellow_banana"
+          "keys": "giuwx ginf bowf coix"
         }
       ]
     },
@@ -604,23 +512,19 @@
       "content": [
         {
           "display": "bảo vệ giang sơn",
-          "keys": "baor veej giang sown",
-          "reward": "yellow_banana"
+          "keys": "baor veej giang sown"
         },
         {
           "display": "vạn vật sinh sôi",
-          "keys": "vanj vaatj sinh sooi",
-          "reward": "yellow_banana"
+          "keys": "vanj vaatj sinh sooi"
         },
         {
           "display": "thái bình thịnh trị",
-          "keys": "thais binhf thinhj trij",
-          "reward": "yellow_banana"
+          "keys": "thais binhf thinhj trij"
         },
         {
           "display": "hào khí đông a",
-          "keys": "haof khis ddoong a",
-          "reward": "yellow_banana"
+          "keys": "haof khis ddoong a"
         }
       ]
     },
@@ -630,23 +534,19 @@
       "content": [
         {
           "display": "tinh thần dân tộc",
-          "keys": "tinh thaanf daan toocj",
-          "reward": "yellow_banana"
+          "keys": "tinh thaanf daan toocj"
         },
         {
           "display": "anh hùng hào kiệt",
-          "keys": "anh hungf haof kieetj",
-          "reward": "yellow_banana"
+          "keys": "anh hungf haof kieetj"
         },
         {
           "display": "danh lam thắng cảnh",
-          "keys": "danh lam thawngs canhr",
-          "reward": "yellow_banana"
+          "keys": "danh lam thawngs canhr"
         },
         {
           "display": "vẻ đẹp non sông",
-          "keys": "ver ddepj non soong",
-          "reward": "yellow_banana"
+          "keys": "ver ddepj non soong"
         }
       ]
     },
@@ -656,23 +556,19 @@
       "content": [
         {
           "display": "tự hào nguồn cội",
-          "keys": "tuwj haof nguoonf cooij",
-          "reward": "yellow_banana"
+          "keys": "tuwj haof nguoonf cooij"
         },
         {
           "display": "con rồng cháu tiên",
-          "keys": "con roongf chaus tieen",
-          "reward": "yellow_banana"
+          "keys": "con roongf chaus tieen"
         },
         {
           "display": "giang sơn gấm vóc",
-          "keys": "giang sown gaams vocs",
-          "reward": "yellow_banana"
+          "keys": "giang sown gaams vocs"
         },
         {
           "display": "tận trung với nước",
-          "keys": "taanj trung vowis nuwowcs",
-          "reward": "yellow_banana"
+          "keys": "taanj trung vowis nuwowcs"
         }
       ]
     },
@@ -682,23 +578,19 @@
       "content": [
         {
           "display": "tận hiếu với dân",
-          "keys": "taanj hieeus vowis daan",
-          "reward": "yellow_banana"
+          "keys": "taanj hieeus vowis daan"
         },
         {
           "display": "đoàn kết một lòng",
-          "keys": "ddoanf keets mootj longf",
-          "reward": "yellow_banana"
+          "keys": "ddoanf keets mootj longf"
         },
         {
           "display": "xây dựng tương lai",
-          "keys": "xaay duwngj tuwowng lai",
-          "reward": "yellow_banana"
+          "keys": "xaay duwngj tuwowng lai"
         },
         {
           "display": "giàu mạnh văn minh",
-          "keys": "giauf manhj vawn minh",
-          "reward": "yellow_banana"
+          "keys": "giauf manhj vawn minh"
         }
       ]
     },
@@ -708,23 +600,19 @@
       "content": [
         {
           "display": "văn hiến ngàn năm",
-          "keys": "vawn hieens nganf nawm",
-          "reward": "yellow_banana"
+          "keys": "vawn hieens nganf nawm"
         },
         {
           "display": "địa linh nhân kiệt",
-          "keys": "ddiaj linh nhaan kieetj",
-          "reward": "yellow_banana"
+          "keys": "ddiaj linh nhaan kieetj"
         },
         {
           "display": "biển đảo quê hương",
-          "keys": "bieenr ddaor quee huwowng",
-          "reward": "yellow_banana"
+          "keys": "bieenr ddaor quee huwowng"
         },
         {
           "display": "mãi mãi xanh tươi",
-          "keys": "maix maix xanh tuwowi",
-          "reward": "yellow_banana"
+          "keys": "maix maix xanh tuwowi"
         }
       ]
     },
@@ -734,23 +622,19 @@
       "content": [
         {
           "display": "yêu nhau mấy núi cũng trèo",
-          "keys": "yeeu nhau maays nuis cungx treof",
-          "reward": "yellow_banana"
+          "keys": "yeeu nhau maays nuis cungx treof"
         },
         {
           "display": "mấy sông cũng lội",
-          "keys": "maays soong cungx looij",
-          "reward": "yellow_banana"
+          "keys": "maays soong cungx looij"
         },
         {
           "display": "mấy đèo cũng qua",
-          "keys": "maays ddeof cungx qua",
-          "reward": "yellow_banana"
+          "keys": "maays ddeof cungx qua"
         },
         {
           "display": "yêu nhau yêu cả đường đi",
-          "keys": "yeeu nhau yeeu car dduwowngf ddi",
-          "reward": "yellow_banana"
+          "keys": "yeeu nhau yeeu car dduwowngf ddi"
         }
       ]
     },
@@ -760,23 +644,19 @@
       "content": [
         {
           "display": "ghét nhau ghét cả tông ty",
-          "keys": "ghets nhau ghets car toong ty",
-          "reward": "yellow_banana"
+          "keys": "ghets nhau ghets car toong ty"
         },
         {
           "display": "họ hàng",
-          "keys": "hoj hangf",
-          "reward": "yellow_banana"
+          "keys": "hoj hangf"
         },
         {
           "display": "vợ chồng nghĩa nặng tình sâu",
-          "keys": "vowj choongf nghiax nawngj tinhf saau",
-          "reward": "yellow_banana"
+          "keys": "vowj choongf nghiax nawngj tinhf saau"
         },
         {
           "display": "thương nhau lắm cắn nhau đau",
-          "keys": "thuwowng nhau lawms cawns nhau ddau",
-          "reward": "yellow_banana"
+          "keys": "thuwowng nhau lawms cawns nhau ddau"
         }
       ]
     },
@@ -786,23 +666,19 @@
       "content": [
         {
           "display": "xa mặt cách lòng",
-          "keys": "xa mawtj cachs longf",
-          "reward": "yellow_banana"
+          "keys": "xa mawtj cachs longf"
         },
         {
           "display": "một lòng một dạ",
-          "keys": "mootj longf mootj daj",
-          "reward": "yellow_banana"
+          "keys": "mootj longf mootj daj"
         },
         {
           "display": "thủy chung son sắt",
-          "keys": "thuyr chung son sawts",
-          "reward": "yellow_banana"
+          "keys": "thuyr chung son sawts"
         },
         {
           "display": "trăm năm hạnh phúc",
-          "keys": "trawm nawm hanhj phucs",
-          "reward": "yellow_banana"
+          "keys": "trawm nawm hanhj phucs"
         }
       ]
     },
@@ -812,23 +688,19 @@
       "content": [
         {
           "display": "đầu bạc răng long",
-          "keys": "ddaauf bacj rawng long",
-          "reward": "yellow_banana"
+          "keys": "ddaauf bacj rawng long"
         },
         {
           "display": "duyên nợ tiền định",
-          "keys": "duyeen nowj tieenf ddinhj",
-          "reward": "yellow_banana"
+          "keys": "duyeen nowj tieenf ddinhj"
         },
         {
           "display": "trai tài gái sắc",
-          "keys": "trai taif gais sawcs",
-          "reward": "yellow_banana"
+          "keys": "trai taif gais sawcs"
         },
         {
           "display": "xứng đôi vừa lứa",
-          "keys": "xuwngs ddooi vuwaf luwas",
-          "reward": "yellow_banana"
+          "keys": "xuwngs ddooi vuwaf luwas"
         }
       ]
     },
@@ -838,23 +710,19 @@
       "content": [
         {
           "display": "tình trong như đã",
-          "keys": "tinhf trong nhuw ddax",
-          "reward": "yellow_banana"
+          "keys": "tinhf trong nhuw ddax"
         },
         {
           "display": "mặt ngoài còn e",
-          "keys": "mawtj ngoaif conf e",
-          "reward": "yellow_banana"
+          "keys": "mawtj ngoaif conf e"
         },
         {
           "display": "yêu đơn phương",
-          "keys": "yeeu ddown phuwowng",
-          "reward": "yellow_banana"
+          "keys": "yeeu ddown phuwowng"
         },
         {
           "display": "thương thầm nhớ trộm",
-          "keys": "thuwowng thaamf nhows troomj",
-          "reward": "yellow_banana"
+          "keys": "thuwowng thaamf nhows troomj"
         }
       ]
     },
@@ -864,23 +732,19 @@
       "content": [
         {
           "display": "tình yêu là vĩnh cửu",
-          "keys": "tinhf yeeu laf vinhx cuwur",
-          "reward": "yellow_banana"
+          "keys": "tinhf yeeu laf vinhx cuwur"
         },
         {
           "display": "mặn nồng thắm thiết",
-          "keys": "mawnj noongf thawms thieets",
-          "reward": "yellow_banana"
+          "keys": "mawnj noongf thawms thieets"
         },
         {
           "display": "gắn bó trọn đời",
-          "keys": "gawns bos tronj ddowif",
-          "reward": "yellow_banana"
+          "keys": "gawns bos tronj ddowif"
         },
         {
           "display": "không rời không xa",
-          "keys": "khoong rowif khoong xa",
-          "reward": "yellow_banana"
+          "keys": "khoong rowif khoong xa"
         }
       ]
     },
@@ -890,23 +754,19 @@
       "content": [
         {
           "display": "chia ngọt sẻ bùi",
-          "keys": "chia ngotj ser buif",
-          "reward": "yellow_banana"
+          "keys": "chia ngotj ser buif"
         },
         {
           "display": "vượt qua gian khó",
-          "keys": "vuwowtj qua gian khos",
-          "reward": "yellow_banana"
+          "keys": "vuwowtj qua gian khos"
         },
         {
           "display": "hạnh phúc gia đình",
-          "keys": "hanhj phucs gia ddinhf",
-          "reward": "yellow_banana"
+          "keys": "hanhj phucs gia ddinhf"
         },
         {
           "display": "ấm áp tình thân",
-          "keys": "aams aps tinhf thaan",
-          "reward": "yellow_banana"
+          "keys": "aams aps tinhf thaan"
         }
       ]
     },
@@ -916,23 +776,19 @@
       "content": [
         {
           "display": "uống nước nhớ nguồn",
-          "keys": "uoongs nuwowcs nhows nguoonf",
-          "reward": "yellow_banana"
+          "keys": "uoongs nuwowcs nhows nguoonf"
         },
         {
           "display": "ăn quả nhớ kẻ trồng cây",
-          "keys": "awn quar nhows ker troongf caay",
-          "reward": "yellow_banana"
+          "keys": "awn quar nhows ker troongf caay"
         },
         {
           "display": "ăn khoai nhớ kẻ cho dây",
-          "keys": "awn khoai nhows ker cho daay",
-          "reward": "yellow_banana"
+          "keys": "awn khoai nhows ker cho daay"
         },
         {
           "display": "ăn cơm nhớ kẻ cày bừa",
-          "keys": "awn cowm nhows ker cayf buwaf",
-          "reward": "yellow_banana"
+          "keys": "awn cowm nhows ker cayf buwaf"
         }
       ]
     },
@@ -942,23 +798,19 @@
       "content": [
         {
           "display": "nhớ ơn thầy cô",
-          "keys": "nhows own thaayf coo",
-          "reward": "yellow_banana"
+          "keys": "nhows own thaayf coo"
         },
         {
           "display": "công cha nghĩa mẹ",
-          "keys": "coong cha nghiax mej",
-          "reward": "yellow_banana"
+          "keys": "coong cha nghiax mej"
         },
         {
           "display": "ơn sâu nghĩa nặng",
-          "keys": "own saau nghiax nawngj",
-          "reward": "yellow_banana"
+          "keys": "own saau nghiax nawngj"
         },
         {
           "display": "đáp đền tiếp nối",
-          "keys": "ddaps ddeenf tieeps noois",
-          "reward": "yellow_banana"
+          "keys": "ddaps ddeenf tieeps noois"
         }
       ]
     },
@@ -968,23 +820,19 @@
       "content": [
         {
           "display": "không quên nguồn cội",
-          "keys": "khoong queen nguoonf cooij",
-          "reward": "yellow_banana"
+          "keys": "khoong queen nguoonf cooij"
         },
         {
           "display": "biết ơn cuộc sống",
-          "keys": "bieets own cuoocj soongs",
-          "reward": "yellow_banana"
+          "keys": "bieets own cuoocj soongs"
         },
         {
           "display": "giúp đỡ mọi người",
-          "keys": "giups ddowx moij nguwowif",
-          "reward": "yellow_banana"
+          "keys": "giups ddowx moij nguwowif"
         },
         {
           "display": "tri ân tổ tiên",
-          "keys": "tri aan toor tieen",
-          "reward": "yellow_banana"
+          "keys": "tri aan toor tieen"
         }
       ]
     },
@@ -994,23 +842,19 @@
       "content": [
         {
           "display": "truyền thống lâu đời",
-          "keys": "truyeenf thoongs laau ddowif",
-          "reward": "yellow_banana"
+          "keys": "truyeenf thoongs laau ddowif"
         },
         {
           "display": "lòng thành dâng kính",
-          "keys": "longf thanhf daang kinhs",
-          "reward": "yellow_banana"
+          "keys": "longf thanhf daang kinhs"
         },
         {
           "display": "thành tâm hướng thiện",
-          "keys": "thanhf taam huwowngs thieenj",
-          "reward": "yellow_banana"
+          "keys": "thanhf taam huwowngs thieenj"
         },
         {
           "display": "nhớ người giúp mình",
-          "keys": "nhows nguwowif giups minhf",
-          "reward": "yellow_banana"
+          "keys": "nhows nguwowif giups minhf"
         }
       ]
     },
@@ -1020,23 +864,19 @@
       "content": [
         {
           "display": "lúc gian nan nhất",
-          "keys": "lucs gian nan nhaats",
-          "reward": "yellow_banana"
+          "keys": "lucs gian nan nhaats"
         },
         {
           "display": "ân nhân quý giá",
-          "keys": "aan nhaan quys gias",
-          "reward": "yellow_banana"
+          "keys": "aan nhaan quys gias"
         },
         {
           "display": "như ngọc như vàng",
-          "keys": "nhuw ngocj nhuw vangf",
-          "reward": "yellow_banana"
+          "keys": "nhuw ngocj nhuw vangf"
         },
         {
           "display": "trân trọng tình cảm",
-          "keys": "traan trongj tinhf camr",
-          "reward": "yellow_banana"
+          "keys": "traan trongj tinhf camr"
         }
       ]
     },
@@ -1046,23 +886,19 @@
       "content": [
         {
           "display": "khắc cốt ghi tâm",
-          "keys": "khawcs coots ghi taam",
-          "reward": "yellow_banana"
+          "keys": "khawcs coots ghi taam"
         },
         {
           "display": "suốt đời không quên",
-          "keys": "suoots ddowif khoong queen",
-          "reward": "yellow_banana"
+          "keys": "suoots ddowif khoong queen"
         },
         {
           "display": "biết ơn là đẹp",
-          "keys": "bieets own laf ddepj",
-          "reward": "yellow_banana"
+          "keys": "bieets own laf ddepj"
         },
         {
           "display": "sống có nghĩa tình",
-          "keys": "soongs cos nghiax tinhf",
-          "reward": "yellow_banana"
+          "keys": "soongs cos nghiax tinhf"
         }
       ]
     },
@@ -1072,23 +908,19 @@
       "content": [
         {
           "display": "trước sau như một",
-          "keys": "truwowcs sau nhuw mootj",
-          "reward": "yellow_banana"
+          "keys": "truwowcs sau nhuw mootj"
         },
         {
           "display": "lòng dạ thẳng ngay",
-          "keys": "longf daj thawngr ngay",
-          "reward": "yellow_banana"
+          "keys": "longf daj thawngr ngay"
         },
         {
           "display": "luôn nhớ về sau",
-          "keys": "luoon nhows veef sau",
-          "reward": "yellow_banana"
+          "keys": "luoon nhows veef sau"
         },
         {
           "display": "mãi mãi tri ân",
-          "keys": "maix maix tri aan",
-          "reward": "yellow_banana"
+          "keys": "maix maix tri aan"
         }
       ]
     },
@@ -1098,23 +930,19 @@
       "content": [
         {
           "display": "có công mài sắt",
-          "keys": "cos coong maif sawts",
-          "reward": "yellow_banana"
+          "keys": "cos coong maif sawts"
         },
         {
           "display": "có ngày nên kim",
-          "keys": "cos ngayf neen kim",
-          "reward": "yellow_banana"
+          "keys": "cos ngayf neen kim"
         },
         {
           "display": "có chí thì nên",
-          "keys": "cos chis thif neen",
-          "reward": "yellow_banana"
+          "keys": "cos chis thif neen"
         },
         {
           "display": "chớ thấy sóng cả",
-          "keys": "chows thaays songs car",
-          "reward": "yellow_banana"
+          "keys": "chows thaays songs car"
         }
       ]
     },
@@ -1124,23 +952,19 @@
       "content": [
         {
           "display": "mà ngã tay chèo",
-          "keys": "maf ngax tay cheof",
-          "reward": "yellow_banana"
+          "keys": "maf ngax tay cheof"
         },
         {
           "display": "nước chảy đá mòn",
-          "keys": "nuwowcs chayr ddas monf",
-          "reward": "yellow_banana"
+          "keys": "nuwowcs chayr ddas monf"
         },
         {
           "display": "kiên trì nhẫn nại",
-          "keys": "kieen trif nhaanx naij",
-          "reward": "yellow_banana"
+          "keys": "kieen trif nhaanx naij"
         },
         {
           "display": "việc gì cũng xong",
-          "keys": "vieecj gif cungx xong",
-          "reward": "yellow_banana"
+          "keys": "vieecj gif cungx xong"
         }
       ]
     },
@@ -1150,23 +974,19 @@
       "content": [
         {
           "display": "bền gan vững chí",
-          "keys": "beenf gan vuwngx chis",
-          "reward": "yellow_banana"
+          "keys": "beenf gan vuwngx chis"
         },
         {
           "display": "vững lòng bền chí",
-          "keys": "vuwngx longf beenf chis",
-          "reward": "yellow_banana"
+          "keys": "vuwngx longf beenf chis"
         },
         {
           "display": "thất bại là mẹ thành công",
-          "keys": "thaats baij laf mej thanhf coong",
-          "reward": "yellow_banana"
+          "keys": "thaats baij laf mej thanhf coong"
         },
         {
           "display": "vạn sự khởi đầu nan",
-          "keys": "vanj suwj khowir ddaauf nan",
-          "reward": "yellow_banana"
+          "keys": "vanj suwj khowir ddaauf nan"
         }
       ]
     },
@@ -1176,23 +996,19 @@
       "content": [
         {
           "display": "không bỏ cuộc",
-          "keys": "khoong bor cuoocj",
-          "reward": "yellow_banana"
+          "keys": "khoong bor cuoocj"
         },
         {
           "display": "quyết tâm đến cùng",
-          "keys": "quyeets taam ddeens cungf",
-          "reward": "yellow_banana"
+          "keys": "quyeets taam ddeens cungf"
         },
         {
           "display": "vượt qua thử thách",
-          "keys": "vuwowtj qua thuwr thachs",
-          "reward": "yellow_banana"
+          "keys": "vuwowtj qua thuwr thachs"
         },
         {
           "display": "chiến thắng chính mình",
-          "keys": "chieens thawngs chinhs minhf",
-          "reward": "yellow_banana"
+          "keys": "chieens thawngs chinhs minhf"
         }
       ]
     },
@@ -1202,23 +1018,19 @@
       "content": [
         {
           "display": "chinh phục đỉnh cao",
-          "keys": "chinh phucj ddinhr cao",
-          "reward": "yellow_banana"
+          "keys": "chinh phucj ddinhr cao"
         },
         {
           "display": "mài sắt nên kim",
-          "keys": "maif sawts neen kim",
-          "reward": "yellow_banana"
+          "keys": "maif sawts neen kim"
         },
         {
           "display": "từng bước vững chắc",
-          "keys": "tuwngf buwowcs vuwngx chawcs",
-          "reward": "yellow_banana"
+          "keys": "tuwngf buwowcs vuwngx chawcs"
         },
         {
           "display": "tiến về phía trước",
-          "keys": "tieens veef phias truwowcs",
-          "reward": "yellow_banana"
+          "keys": "tieens veef phias truwowcs"
         }
       ]
     },
@@ -1228,23 +1040,19 @@
       "content": [
         {
           "display": "gian nan rèn luyện",
-          "keys": "gian nan renf luyeenj",
-          "reward": "yellow_banana"
+          "keys": "gian nan renf luyeenj"
         },
         {
           "display": "mới thành công",
-          "keys": "mowis thanhf coong",
-          "reward": "yellow_banana"
+          "keys": "mowis thanhf coong"
         },
         {
           "display": "lửa thử vàng",
-          "keys": "luwar thuwr vangf",
-          "reward": "yellow_banana"
+          "keys": "luwar thuwr vangf"
         },
         {
           "display": "gian nan thử sức",
-          "keys": "gian nan thuwr suwcs",
-          "reward": "yellow_banana"
+          "keys": "gian nan thuwr suwcs"
         }
       ]
     },
@@ -1254,23 +1062,19 @@
       "content": [
         {
           "display": "không ngại khó khăn",
-          "keys": "khoong ngaij khos khawn",
-          "reward": "yellow_banana"
+          "keys": "khoong ngaij khos khawn"
         },
         {
           "display": "không sợ khổ cực",
-          "keys": "khoong sowj khoor cuwcj",
-          "reward": "yellow_banana"
+          "keys": "khoong sowj khoor cuwcj"
         },
         {
           "display": "đạt được mục tiêu",
-          "keys": "ddatj dduwowcj mucj tieeu",
-          "reward": "yellow_banana"
+          "keys": "ddatj dduwowcj mucj tieeu"
         },
         {
           "display": "viên mãn cuối cùng",
-          "keys": "vieen manx cuoois cungf",
-          "reward": "yellow_banana"
+          "keys": "vieen manx cuoois cungf"
         }
       ]
     },
@@ -1280,23 +1084,19 @@
       "content": [
         {
           "display": "buôn tàu bán bè",
-          "keys": "buoon tauf bans bef",
-          "reward": "yellow_banana"
+          "keys": "buoon tauf bans bef"
         },
         {
           "display": "không bằng ăn dè hà tiện",
-          "keys": "khoong bawngf awn def haf tieenj",
-          "reward": "yellow_banana"
+          "keys": "khoong bawngf awn def haf tieenj"
         },
         {
           "display": "tích tiểu thành đại",
-          "keys": "tichs tieeur thanhf ddaij",
-          "reward": "yellow_banana"
+          "keys": "tichs tieeur thanhf ddaij"
         },
         {
           "display": "kiến tha lâu đầy tổ",
-          "keys": "kieens tha laau ddaayf toor",
-          "reward": "yellow_banana"
+          "keys": "kieens tha laau ddaayf toor"
         }
       ]
     },
@@ -1306,23 +1106,19 @@
       "content": [
         {
           "display": "khéo ăn thì no",
-          "keys": "kheos awn thif no",
-          "reward": "yellow_banana"
+          "keys": "kheos awn thif no"
         },
         {
           "display": "khéo co thì ấm",
-          "keys": "kheos co thif aams",
-          "reward": "yellow_banana"
+          "keys": "kheos co thif aams"
         },
         {
           "display": "của bền tại người",
-          "keys": "cuar beenf taij nguwowif",
-          "reward": "yellow_banana"
+          "keys": "cuar beenf taij nguwowif"
         },
         {
           "display": "tiết kiệm là quốc sách",
-          "keys": "tieets kieemj laf quoocs sachs",
-          "reward": "yellow_banana"
+          "keys": "tieets kieemj laf quoocs sachs"
         }
       ]
     },
@@ -1332,23 +1128,19 @@
       "content": [
         {
           "display": "ăn chắc mặc bền",
-          "keys": "awn chawcs mawcj beenf",
-          "reward": "yellow_banana"
+          "keys": "awn chawcs mawcj beenf"
         },
         {
           "display": "thắt lưng buộc bụng",
-          "keys": "thawts luwng buoocj bungj",
-          "reward": "yellow_banana"
+          "keys": "thawts luwng buoocj bungj"
         },
         {
           "display": "chắt chiu từng đồng",
-          "keys": "chawts chiu tuwngf ddoongf",
-          "reward": "yellow_banana"
+          "keys": "chawts chiu tuwngf ddoongf"
         },
         {
           "display": "chắt chiu dành dụm",
-          "keys": "chawts chiu danhf dumj",
-          "reward": "yellow_banana"
+          "keys": "chawts chiu danhf dumj"
         }
       ]
     },
@@ -1358,23 +1150,19 @@
       "content": [
         {
           "display": "không nên hoang phí",
-          "keys": "khoong neen hoang phis",
-          "reward": "yellow_banana"
+          "keys": "khoong neen hoang phis"
         },
         {
           "display": "của một đồng công một nén",
-          "keys": "cuar mootj ddoongf coong mootj nens",
-          "reward": "yellow_banana"
+          "keys": "cuar mootj ddoongf coong mootj nens"
         },
         {
           "display": "tích cốc phòng cơ",
-          "keys": "tichs coocs phongf cow",
-          "reward": "yellow_banana"
+          "keys": "tichs coocs phongf cow"
         },
         {
           "display": "tích y phòng hàn",
-          "keys": "tichs y phongf hanf",
-          "reward": "yellow_banana"
+          "keys": "tichs y phongf hanf"
         }
       ]
     },
@@ -1384,23 +1172,19 @@
       "content": [
         {
           "display": "tiết kiệm thời gian",
-          "keys": "tieets kieemj thowif gian",
-          "reward": "yellow_banana"
+          "keys": "tieets kieemj thowif gian"
         },
         {
           "display": "tiết kiệm công sức",
-          "keys": "tieets kieemj coong suwcs",
-          "reward": "yellow_banana"
+          "keys": "tieets kieemj coong suwcs"
         },
         {
           "display": "không xài hoang phí",
-          "keys": "khoong xaif hoang phis",
-          "reward": "yellow_banana"
+          "keys": "khoong xaif hoang phis"
         },
         {
           "display": "biết lo xa",
-          "keys": "bieets lo xa",
-          "reward": "yellow_banana"
+          "keys": "bieets lo xa"
         }
       ]
     },
@@ -1410,23 +1194,19 @@
       "content": [
         {
           "display": "lo khi còn sớm",
-          "keys": "lo khi conf sowms",
-          "reward": "yellow_banana"
+          "keys": "lo khi conf sowms"
         },
         {
           "display": "phòng khi túng thiếu",
-          "keys": "phongf khi tungs thieeus",
-          "reward": "yellow_banana"
+          "keys": "phongf khi tungs thieeus"
         },
         {
           "display": "để dành khi đau",
-          "keys": "ddeer danhf khi ddau",
-          "reward": "yellow_banana"
+          "keys": "ddeer danhf khi ddau"
         },
         {
           "display": "làm khi lành",
-          "keys": "lamf khi lanhf",
-          "reward": "yellow_banana"
+          "keys": "lamf khi lanhf"
         }
       ]
     },
@@ -1436,23 +1216,19 @@
       "content": [
         {
           "display": "của để dành",
-          "keys": "cuar ddeer danhf",
-          "reward": "yellow_banana"
+          "keys": "cuar ddeer danhf"
         },
         {
           "display": "giàu nhờ tiết kiệm",
-          "keys": "giauf nhowf tieets kieemj",
-          "reward": "yellow_banana"
+          "keys": "giauf nhowf tieets kieemj"
         },
         {
           "display": "nghèo vì hoang phí",
-          "keys": "ngheof vif hoang phis",
-          "reward": "yellow_banana"
+          "keys": "ngheof vif hoang phis"
         },
         {
           "display": "biết đủ là vui",
-          "keys": "bieets ddur laf vui",
-          "reward": "yellow_banana"
+          "keys": "bieets ddur laf vui"
         }
       ]
     },
@@ -1462,23 +1238,19 @@
       "content": [
         {
           "display": "lời nói chẳng mất tiền mua",
-          "keys": "lowif nois chawngr maats tieenf mua",
-          "reward": "yellow_banana"
+          "keys": "lowif nois chawngr maats tieenf mua"
         },
         {
           "display": "lựa lời mà nói cho vừa",
-          "keys": "luwaj lowif maf nois cho vuwaf",
-          "reward": "yellow_banana"
+          "keys": "luwaj lowif maf nois cho vuwaf"
         },
         {
           "display": "lòng nhau",
-          "keys": "longf nhau",
-          "reward": "yellow_banana"
+          "keys": "longf nhau"
         },
         {
           "display": "ăn có nhai nói có nghĩ",
-          "keys": "awn cos nhai nois cos nghix",
-          "reward": "yellow_banana"
+          "keys": "awn cos nhai nois cos nghix"
         }
       ]
     },
@@ -1488,23 +1260,19 @@
       "content": [
         {
           "display": "đi thưa về trình",
-          "keys": "ddi thuwa veef trinhf",
-          "reward": "yellow_banana"
+          "keys": "ddi thuwa veef trinhf"
         },
         {
           "display": "kính trên nhường dưới",
-          "keys": "kinhs treen nhuwowngf duwowis",
-          "reward": "yellow_banana"
+          "keys": "kinhs treen nhuwowngf duwowis"
         },
         {
           "display": "gọi dạ bảo vâng",
-          "keys": "goij daj baor vaang",
-          "reward": "yellow_banana"
+          "keys": "goij daj baor vaang"
         },
         {
           "display": "lễ phép ngoan ngoãn",
-          "keys": "leex pheps ngoan ngoanx",
-          "reward": "yellow_banana"
+          "keys": "leex pheps ngoan ngoanx"
         }
       ]
     },
@@ -1514,23 +1282,19 @@
       "content": [
         {
           "display": "học ăn học nói",
-          "keys": "hocj awn hocj nois",
-          "reward": "yellow_banana"
+          "keys": "hocj awn hocj nois"
         },
         {
           "display": "học gói học mở",
-          "keys": "hocj gois hocj mowr",
-          "reward": "yellow_banana"
+          "keys": "hocj gois hocj mowr"
         },
         {
           "display": "ăn trông nồi ngồi trông hướng",
-          "keys": "awn troong nooif ngooif troong huwowngs",
-          "reward": "yellow_banana"
+          "keys": "awn troong nooif ngooif troong huwowngs"
         },
         {
           "display": "cười người hôm trước",
-          "keys": "cuwowif nguwowif hoom truwowcs",
-          "reward": "yellow_banana"
+          "keys": "cuwowif nguwowif hoom truwowcs"
         }
       ]
     },
@@ -1540,23 +1304,19 @@
       "content": [
         {
           "display": "hôm sau người cười",
-          "keys": "hoom sau nguwowif cuwowif",
-          "reward": "yellow_banana"
+          "keys": "hoom sau nguwowif cuwowif"
         },
         {
           "display": "đừng khinh người nghèo",
-          "keys": "dduwngf khinh nguwowif ngheof",
-          "reward": "yellow_banana"
+          "keys": "dduwngf khinh nguwowif ngheof"
         },
         {
           "display": "không nên kiêu ngạo",
-          "keys": "khoong neen kieeu ngaoj",
-          "reward": "yellow_banana"
+          "keys": "khoong neen kieeu ngaoj"
         },
         {
           "display": "luôn luôn khiêm tốn",
-          "keys": "luoon luoon khieem toons",
-          "reward": "yellow_banana"
+          "keys": "luoon luoon khieem toons"
         }
       ]
     },
@@ -1566,23 +1326,19 @@
       "content": [
         {
           "display": "biết lỗi biết sửa",
-          "keys": "bieets looix bieets suwar",
-          "reward": "yellow_banana"
+          "keys": "bieets looix bieets suwar"
         },
         {
           "display": "xin lỗi chân thành",
-          "keys": "xin looix chaan thanhf",
-          "reward": "yellow_banana"
+          "keys": "xin looix chaan thanhf"
         },
         {
           "display": "cảm ơn sâu sắc",
-          "keys": "camr own saau sawcs",
-          "reward": "yellow_banana"
+          "keys": "camr own saau sawcs"
         },
         {
           "display": "lắng nghe thấu hiểu",
-          "keys": "lawngs nghe thaaus hieeur",
-          "reward": "yellow_banana"
+          "keys": "lawngs nghe thaaus hieeur"
         }
       ]
     },
@@ -1592,23 +1348,19 @@
       "content": [
         {
           "display": "nói lời hay",
-          "keys": "nois lowif hay",
-          "reward": "yellow_banana"
+          "keys": "nois lowif hay"
         },
         {
           "display": "làm việc tốt",
-          "keys": "lamf vieecj toots",
-          "reward": "yellow_banana"
+          "keys": "lamf vieecj toots"
         },
         {
           "display": "đối nhân xử thế",
-          "keys": "ddoois nhaan xuwr thees",
-          "reward": "yellow_banana"
+          "keys": "ddoois nhaan xuwr thees"
         },
         {
           "display": "khéo léo tinh tế",
-          "keys": "kheos leos tinh tees",
-          "reward": "yellow_banana"
+          "keys": "kheos leos tinh tees"
         }
       ]
     },
@@ -1618,23 +1370,19 @@
       "content": [
         {
           "display": "tránh gây hiềm khích",
-          "keys": "tranhs gaay hieemf khichs",
-          "reward": "yellow_banana"
+          "keys": "tranhs gaay hieemf khichs"
         },
         {
           "display": "giữ gìn hoà khí",
-          "keys": "giuwx ginf hoaf khis",
-          "reward": "yellow_banana"
+          "keys": "giuwx ginf hoaf khis"
         },
         {
           "display": "dĩ hoà vi quý",
-          "keys": "dix hoaf vi quys",
-          "reward": "yellow_banana"
+          "keys": "dix hoaf vi quys"
         },
         {
           "display": "sống đẹp lòng người",
-          "keys": "soongs ddepj longf nguwowif",
-          "reward": "yellow_banana"
+          "keys": "soongs ddepj longf nguwowif"
         }
       ]
     },
@@ -1644,23 +1392,19 @@
       "content": [
         {
           "display": "thời gian là vàng bạc",
-          "keys": "thowif gian laf vangf bacj",
-          "reward": "yellow_banana"
+          "keys": "thowif gian laf vangf bacj"
         },
         {
           "display": "thời gian trôi nhanh",
-          "keys": "thowif gian trooi nhanh",
-          "reward": "yellow_banana"
+          "keys": "thowif gian trooi nhanh"
         },
         {
           "display": "như bóng câu cửa sổ",
-          "keys": "nhuw bongs caau cuwar soor",
-          "reward": "yellow_banana"
+          "keys": "nhuw bongs caau cuwar soor"
         },
         {
           "display": "đừng lãng phí thời gian",
-          "keys": "dduwngf langx phis thowif gian",
-          "reward": "yellow_banana"
+          "keys": "dduwngf langx phis thowif gian"
         }
       ]
     },
@@ -1670,23 +1414,19 @@
       "content": [
         {
           "display": "việc hôm nay chớ để ngày mai",
-          "keys": "vieecj hoom nay chows ddeer ngayf mai",
-          "reward": "yellow_banana"
+          "keys": "vieecj hoom nay chows ddeer ngayf mai"
         },
         {
           "display": "một phút quý giá",
-          "keys": "mootj phuts quys gias",
-          "reward": "yellow_banana"
+          "keys": "mootj phuts quys gias"
         },
         {
           "display": "ngàn vàng không đổi",
-          "keys": "nganf vangf khoong ddooir",
-          "reward": "yellow_banana"
+          "keys": "nganf vangf khoong ddooir"
         },
         {
           "display": "thời gian đi không trở lại",
-          "keys": "thowif gian ddi khoong trowr laij",
-          "reward": "yellow_banana"
+          "keys": "thowif gian ddi khoong trowr laij"
         }
       ]
     },
@@ -1696,23 +1436,19 @@
       "content": [
         {
           "display": "trân trọng từng phút giây",
-          "keys": "traan trongj tuwngf phuts giaay",
-          "reward": "yellow_banana"
+          "keys": "traan trongj tuwngf phuts giaay"
         },
         {
           "display": "sử dụng thời gian hợp lý",
-          "keys": "suwr dungj thowif gian howpj lys",
-          "reward": "yellow_banana"
+          "keys": "suwr dungj thowif gian howpj lys"
         },
         {
           "display": "làm việc có kế hoạch",
-          "keys": "lamf vieecj cos kees hoachj",
-          "reward": "yellow_banana"
+          "keys": "lamf vieecj cos kees hoachj"
         },
         {
           "display": "đừng để thời gian trôi vô ích",
-          "keys": "dduwngf ddeer thowif gian trooi voo ichs",
-          "reward": "yellow_banana"
+          "keys": "dduwngf ddeer thowif gian trooi voo ichs"
         }
       ]
     },
@@ -1722,23 +1458,19 @@
       "content": [
         {
           "display": "thanh xuân ngắn ngủi",
-          "keys": "thanh xuaan ngawns nguir",
-          "reward": "yellow_banana"
+          "keys": "thanh xuaan ngawns nguir"
         },
         {
           "display": "tuổi trẻ tài cao",
-          "keys": "tuooir trer taif cao",
-          "reward": "yellow_banana"
+          "keys": "tuooir trer taif cao"
         },
         {
           "display": "già néo đứt dây",
-          "keys": "giaf neos dduwts daay",
-          "reward": "yellow_banana"
+          "keys": "giaf neos dduwts daay"
         },
         {
           "display": "đến lúc phải đi",
-          "keys": "ddeens lucs phair ddi",
-          "reward": "yellow_banana"
+          "keys": "ddeens lucs phair ddi"
         }
       ]
     },
@@ -1748,23 +1480,19 @@
       "content": [
         {
           "display": "thời gian chữa lành",
-          "keys": "thowif gian chuwax lanhf",
-          "reward": "yellow_banana"
+          "keys": "thowif gian chuwax lanhf"
         },
         {
           "display": "mọi vết thương",
-          "keys": "moij veets thuwowng",
-          "reward": "yellow_banana"
+          "keys": "moij veets thuwowng"
         },
         {
           "display": "đợi chờ là hạnh phúc",
-          "keys": "ddowij chowf laf hanhj phucs",
-          "reward": "yellow_banana"
+          "keys": "ddowij chowf laf hanhj phucs"
         },
         {
           "display": "kiên nhẫn chờ đợi",
-          "keys": "kieen nhaanx chowf ddowij",
-          "reward": "yellow_banana"
+          "keys": "kieen nhaanx chowf ddowij"
         }
       ]
     },
@@ -1774,23 +1502,19 @@
       "content": [
         {
           "display": "thời cơ chín muồi",
-          "keys": "thowif cow chins muooif",
-          "reward": "yellow_banana"
+          "keys": "thowif cow chins muooif"
         },
         {
           "display": "nắm bắt cơ hội",
-          "keys": "nawms bawts cow hooij",
-          "reward": "yellow_banana"
+          "keys": "nawms bawts cow hooij"
         },
         {
           "display": "không nên chậm trễ",
-          "keys": "khoong neen chaamj treex",
-          "reward": "yellow_banana"
+          "keys": "khoong neen chaamj treex"
         },
         {
           "display": "nhanh chân thì được",
-          "keys": "nhanh chaan thif dduwowcj",
-          "reward": "yellow_banana"
+          "keys": "nhanh chaan thif dduwowcj"
         }
       ]
     },
@@ -1800,23 +1524,19 @@
       "content": [
         {
           "display": "chậm chân thì mất",
-          "keys": "chaamj chaan thif maats",
-          "reward": "yellow_banana"
+          "keys": "chaamj chaan thif maats"
         },
         {
           "display": "thời gian công bằng",
-          "keys": "thowif gian coong bawngf",
-          "reward": "yellow_banana"
+          "keys": "thowif gian coong bawngf"
         },
         {
           "display": "với tất cả mọi người",
-          "keys": "vowis taats car moij nguwowif",
-          "reward": "yellow_banana"
+          "keys": "vowis taats car moij nguwowif"
         },
         {
           "display": "tận dụng triệt để",
-          "keys": "taanj dungj trieetj ddeer",
-          "reward": "yellow_banana"
+          "keys": "taanj dungj trieetj ddeer"
         }
       ]
     },
@@ -1826,23 +1546,19 @@
       "content": [
         {
           "display": "mèo mù vớ cá rán",
-          "keys": "meof muf vows cas rans",
-          "reward": "yellow_banana"
+          "keys": "meof muf vows cas rans"
         },
         {
           "display": "chó ngáp phải ruồi",
-          "keys": "chos ngaps phair ruooif",
-          "reward": "yellow_banana"
+          "keys": "chos ngaps phair ruooif"
         },
         {
           "display": "buồn ngủ gặp chiếu manh",
-          "keys": "buoonf ngur gawpj chieeus manh",
-          "reward": "yellow_banana"
+          "keys": "buoonf ngur gawpj chieeus manh"
         },
         {
           "display": "cầu được ước thấy",
-          "keys": "caauf dduwowcj uwowcs thaays",
-          "reward": "yellow_banana"
+          "keys": "caauf dduwowcj uwowcs thaays"
         }
       ]
     },
@@ -1852,23 +1568,19 @@
       "content": [
         {
           "display": "vạn sự như ý",
-          "keys": "vanj suwj nhuw ys",
-          "reward": "yellow_banana"
+          "keys": "vanj suwj nhuw ys"
         },
         {
           "display": "may hơn khôn",
-          "keys": "may hown khoon",
-          "reward": "yellow_banana"
+          "keys": "may hown khoon"
         },
         {
           "display": "thánh nhân đãi kẻ khờ",
-          "keys": "thanhs nhaan ddaix ker khowf",
-          "reward": "yellow_banana"
+          "keys": "thanhs nhaan ddaix ker khowf"
         },
         {
           "display": "trong cái rủi có cái may",
-          "keys": "trong cais ruir cos cais may",
-          "reward": "yellow_banana"
+          "keys": "trong cais ruir cos cais may"
         }
       ]
     },
@@ -1878,23 +1590,19 @@
       "content": [
         {
           "display": "số hưởng",
-          "keys": "soos huwowngr",
-          "reward": "yellow_banana"
+          "keys": "soos huwowngr"
         },
         {
           "display": "quý nhân phù trợ",
-          "keys": "quys nhaan phuf trowj",
-          "reward": "yellow_banana"
+          "keys": "quys nhaan phuf trowj"
         },
         {
           "display": "gặp may mắn",
-          "keys": "gawpj may mawns",
-          "reward": "yellow_banana"
+          "keys": "gawpj may mawns"
         },
         {
           "display": "mọi việc thuận lợi",
-          "keys": "moij vieecj thuaanj lowij",
-          "reward": "yellow_banana"
+          "keys": "moij vieecj thuaanj lowij"
         }
       ]
     },
@@ -1904,23 +1612,19 @@
       "content": [
         {
           "display": "xuôi chèo mát mái",
-          "keys": "xuooi cheof mats mais",
-          "reward": "yellow_banana"
+          "keys": "xuooi cheof mats mais"
         },
         {
           "display": "thuận buồm xuôi gió",
-          "keys": "thuaanj buoomf xuooi gios",
-          "reward": "yellow_banana"
+          "keys": "thuaanj buoomf xuooi gios"
         },
         {
           "display": "đắc tài đắc lộc",
-          "keys": "ddawcs taif ddawcs loocj",
-          "reward": "yellow_banana"
+          "keys": "ddawcs taif ddawcs loocj"
         },
         {
           "display": "vạn sự hanh thông",
-          "keys": "vanj suwj hanh thoong",
-          "reward": "yellow_banana"
+          "keys": "vanj suwj hanh thoong"
         }
       ]
     },
@@ -1930,23 +1634,19 @@
       "content": [
         {
           "display": "may mắn mỉm cười",
-          "keys": "may mawns mimr cuwowif",
-          "reward": "yellow_banana"
+          "keys": "may mawns mimr cuwowif"
         },
         {
           "display": "vượt qua hoạn nạn",
-          "keys": "vuwowtj qua hoanj nanj",
-          "reward": "yellow_banana"
+          "keys": "vuwowtj qua hoanj nanj"
         },
         {
           "display": "biến hoạ thành phúc",
-          "keys": "bieens hoaj thanhf phucs",
-          "reward": "yellow_banana"
+          "keys": "bieens hoaj thanhf phucs"
         },
         {
           "display": "vận may đã đến",
-          "keys": "vaanj may ddax ddeens",
-          "reward": "yellow_banana"
+          "keys": "vaanj may ddax ddeens"
         }
       ]
     },
@@ -1956,23 +1656,19 @@
       "content": [
         {
           "display": "không ngờ tới",
-          "keys": "khoong ngowf towis",
-          "reward": "yellow_banana"
+          "keys": "khoong ngowf towis"
         },
         {
           "display": "bất ngờ thú vị",
-          "keys": "baats ngowf thus vij",
-          "reward": "yellow_banana"
+          "keys": "baats ngowf thus vij"
         },
         {
           "display": "niềm vui ngập tràn",
-          "keys": "nieemf vui ngaapj tranf",
-          "reward": "yellow_banana"
+          "keys": "nieemf vui ngaapj tranf"
         },
         {
           "display": "may mắn liên tiếp",
-          "keys": "may mawns lieen tieeps",
-          "reward": "yellow_banana"
+          "keys": "may mawns lieen tieeps"
         }
       ]
     },
@@ -1982,23 +1678,19 @@
       "content": [
         {
           "display": "phúc lộc thọ",
-          "keys": "phucs loocj thoj",
-          "reward": "yellow_banana"
+          "keys": "phucs loocj thoj"
         },
         {
           "display": "toàn vẹn",
-          "keys": "toanf venj",
-          "reward": "yellow_banana"
+          "keys": "toanf venj"
         },
         {
           "display": "hưởng phúc lành",
-          "keys": "huwowngr phucs lanhf",
-          "reward": "yellow_banana"
+          "keys": "huwowngr phucs lanhf"
         },
         {
           "display": "cuộc sống tốt đẹp",
-          "keys": "cuoocj soongs toots ddepj",
-          "reward": "yellow_banana"
+          "keys": "cuoocj soongs toots ddepj"
         }
       ]
     },
@@ -2008,23 +1700,19 @@
       "content": [
         {
           "display": "gieo nhân nào gặt quả nấy",
-          "keys": "gieo nhaan naof gawtj quar naays",
-          "reward": "yellow_banana"
+          "keys": "gieo nhaan naof gawtj quar naays"
         },
         {
           "display": "ác giả ác báo",
-          "keys": "acs giar acs baos",
-          "reward": "yellow_banana"
+          "keys": "acs giar acs baos"
         },
         {
           "display": "tích thiện phùng thiện",
-          "keys": "tichs thieenj phungf thieenj",
-          "reward": "yellow_banana"
+          "keys": "tichs thieenj phungf thieenj"
         },
         {
           "display": "lưới trời lồng lộng",
-          "keys": "luwowis trowif loongf loongj",
-          "reward": "yellow_banana"
+          "keys": "luwowis trowif loongf loongj"
         }
       ]
     },
@@ -2034,23 +1722,19 @@
       "content": [
         {
           "display": "thưa mà khó lọt",
-          "keys": "thuwa maf khos lotj",
-          "reward": "yellow_banana"
+          "keys": "thuwa maf khos lotj"
         },
         {
           "display": "đời cha ăn mặn",
-          "keys": "ddowif cha awn mawnj",
-          "reward": "yellow_banana"
+          "keys": "ddowif cha awn mawnj"
         },
         {
           "display": "đời con khát nước",
-          "keys": "ddowif con khats nuwowcs",
-          "reward": "yellow_banana"
+          "keys": "ddowif con khats nuwowcs"
         },
         {
           "display": "ăn mặn khát nước",
-          "keys": "awn mawnj khats nuwowcs",
-          "reward": "yellow_banana"
+          "keys": "awn mawnj khats nuwowcs"
         }
       ]
     },
@@ -2060,23 +1744,19 @@
       "content": [
         {
           "display": "quýt làm cam chịu",
-          "keys": "quyts lamf cam chiuj",
-          "reward": "yellow_banana"
+          "keys": "quyts lamf cam chiuj"
         },
         {
           "display": "gieo gió gặp bão",
-          "keys": "gieo gios gawpj baox",
-          "reward": "yellow_banana"
+          "keys": "gieo gios gawpj baox"
         },
         {
           "display": "quả báo nhãn tiền",
-          "keys": "quar baos nhanx tieenf",
-          "reward": "yellow_banana"
+          "keys": "quar baos nhanx tieenf"
         },
         {
           "display": "gieo nhân lành",
-          "keys": "gieo nhaan lanhf",
-          "reward": "yellow_banana"
+          "keys": "gieo nhaan lanhf"
         }
       ]
     },
@@ -2086,23 +1766,19 @@
       "content": [
         {
           "display": "gặt quả ngọt",
-          "keys": "gawtj quar ngotj",
-          "reward": "yellow_banana"
+          "keys": "gawtj quar ngotj"
         },
         {
           "display": "làm việc thiện",
-          "keys": "lamf vieecj thieenj",
-          "reward": "yellow_banana"
+          "keys": "lamf vieecj thieenj"
         },
         {
           "display": "được phúc báo",
-          "keys": "dduwowcj phucs baos",
-          "reward": "yellow_banana"
+          "keys": "dduwowcj phucs baos"
         },
         {
           "display": "làm việc ác",
-          "keys": "lamf vieecj acs",
-          "reward": "yellow_banana"
+          "keys": "lamf vieecj acs"
         }
       ]
     },
@@ -2112,23 +1788,19 @@
       "content": [
         {
           "display": "gánh hậu quả",
-          "keys": "ganhs haauj quar",
-          "reward": "yellow_banana"
+          "keys": "ganhs haauj quar"
         },
         {
           "display": "luật nhân quả",
-          "keys": "luaatj nhaan quar",
-          "reward": "yellow_banana"
+          "keys": "luaatj nhaan quar"
         },
         {
           "display": "không sai chạy",
-          "keys": "khoong sai chayj",
-          "reward": "yellow_banana"
+          "keys": "khoong sai chayj"
         },
         {
           "display": "trước sau như một",
-          "keys": "truwowcs sau nhuw mootj",
-          "reward": "yellow_banana"
+          "keys": "truwowcs sau nhuw mootj"
         }
       ]
     },
@@ -2138,23 +1810,19 @@
       "content": [
         {
           "display": "cẩn thận lời nói",
-          "keys": "caanr thaanj lowif nois",
-          "reward": "yellow_banana"
+          "keys": "caanr thaanj lowif nois"
         },
         {
           "display": "cẩn thận hành động",
-          "keys": "caanr thaanj hanhf ddoongj",
-          "reward": "yellow_banana"
+          "keys": "caanr thaanj hanhf ddoongj"
         },
         {
           "display": "tích đức cho con cháu",
-          "keys": "tichs dduwcs cho con chaus",
-          "reward": "yellow_banana"
+          "keys": "tichs dduwcs cho con chaus"
         },
         {
           "display": "sống lương thiện",
-          "keys": "soongs luwowng thieenj",
-          "reward": "yellow_banana"
+          "keys": "soongs luwowng thieenj"
         }
       ]
     },
@@ -2164,23 +1832,19 @@
       "content": [
         {
           "display": "tâm hồn thanh thản",
-          "keys": "taam hoonf thanh thanr",
-          "reward": "yellow_banana"
+          "keys": "taam hoonf thanh thanr"
         },
         {
           "display": "không thẹn với lòng",
-          "keys": "khoong thenj vowis longf",
-          "reward": "yellow_banana"
+          "keys": "khoong thenj vowis longf"
         },
         {
           "display": "không thẹn với trời",
-          "keys": "khoong thenj vowis trowif",
-          "reward": "yellow_banana"
+          "keys": "khoong thenj vowis trowif"
         },
         {
           "display": "luôn luôn hướng thiện",
-          "keys": "luoon luoon huwowngs thieenj",
-          "reward": "yellow_banana"
+          "keys": "luoon luoon huwowngs thieenj"
         }
       ]
     },
@@ -2190,23 +1854,19 @@
       "content": [
         {
           "display": "một cây làm chẳng nên non",
-          "keys": "mootj caay lamf chawngr neen non",
-          "reward": "yellow_banana"
+          "keys": "mootj caay lamf chawngr neen non"
         },
         {
           "display": "ba cây chụm lại",
-          "keys": "ba caay chumj laij",
-          "reward": "yellow_banana"
+          "keys": "ba caay chumj laij"
         },
         {
           "display": "nên hòn núi cao",
-          "keys": "neen honf nuis cao",
-          "reward": "yellow_banana"
+          "keys": "neen honf nuis cao"
         },
         {
           "display": "đoàn kết là sống",
-          "keys": "ddoanf keets laf soongs",
-          "reward": "yellow_banana"
+          "keys": "ddoanf keets laf soongs"
         }
       ]
     },
@@ -2216,23 +1876,19 @@
       "content": [
         {
           "display": "chia rẽ là chết",
-          "keys": "chia rex laf cheets",
-          "reward": "yellow_banana"
+          "keys": "chia rex laf cheets"
         },
         {
           "display": "hợp quần gây sức mạnh",
-          "keys": "howpj quaanf gaay suwcs manhj",
-          "reward": "yellow_banana"
+          "keys": "howpj quaanf gaay suwcs manhj"
         },
         {
           "display": "đồng lòng tát biển đông",
-          "keys": "ddoongf longf tats bieenr ddoong",
-          "reward": "yellow_banana"
+          "keys": "ddoongf longf tats bieenr ddoong"
         },
         {
           "display": "cũng cạn",
-          "keys": "cungx canj",
-          "reward": "yellow_banana"
+          "keys": "cungx canj"
         }
       ]
     },
@@ -2242,23 +1898,19 @@
       "content": [
         {
           "display": "lá lành đùm lá rách",
-          "keys": "las lanhf ddumf las rachs",
-          "reward": "yellow_banana"
+          "keys": "las lanhf ddumf las rachs"
         },
         {
           "display": "nhường cơm sẻ áo",
-          "keys": "nhuwowngf cowm ser aos",
-          "reward": "yellow_banana"
+          "keys": "nhuwowngf cowm ser aos"
         },
         {
           "display": "thương người như thể thương thân",
-          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan",
-          "reward": "yellow_banana"
+          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan"
         },
         {
           "display": "bầu ơi thương lấy bí cùng",
-          "keys": "baauf owi thuwowng laays bis cungf",
-          "reward": "yellow_banana"
+          "keys": "baauf owi thuwowng laays bis cungf"
         }
       ]
     },
@@ -2268,23 +1920,19 @@
       "content": [
         {
           "display": "tuy rằng khác giống",
-          "keys": "tuy rawngf khacs gioongs",
-          "reward": "yellow_banana"
+          "keys": "tuy rawngf khacs gioongs"
         },
         {
           "display": "nhưng chung một giàn",
-          "keys": "nhuwng chung mootj gianf",
-          "reward": "yellow_banana"
+          "keys": "nhuwng chung mootj gianf"
         },
         {
           "display": "đông tay vỗ nên bộp",
-          "keys": "ddoong tay voox neen boopj",
-          "reward": "yellow_banana"
+          "keys": "ddoong tay voox neen boopj"
         },
         {
           "display": "góp sức chung tay",
-          "keys": "gops suwcs chung tay",
-          "reward": "yellow_banana"
+          "keys": "gops suwcs chung tay"
         }
       ]
     },
@@ -2294,23 +1942,19 @@
       "content": [
         {
           "display": "sát cánh bên nhau",
-          "keys": "sats canhs been nhau",
-          "reward": "yellow_banana"
+          "keys": "sats canhs been nhau"
         },
         {
           "display": "tương thân tương ái",
-          "keys": "tuwowng thaan tuwowng ais",
-          "reward": "yellow_banana"
+          "keys": "tuwowng thaan tuwowng ais"
         },
         {
           "display": "giúp đỡ lẫn nhau",
-          "keys": "giups ddowx laanx nhau",
-          "reward": "yellow_banana"
+          "keys": "giups ddowx laanx nhau"
         },
         {
           "display": "vượt qua gian khó",
-          "keys": "vuwowtj qua gian khos",
-          "reward": "yellow_banana"
+          "keys": "vuwowtj qua gian khos"
         }
       ]
     },
@@ -2320,23 +1964,19 @@
       "content": [
         {
           "display": "cùng nhau xây dựng",
-          "keys": "cungf nhau xaay duwngj",
-          "reward": "yellow_banana"
+          "keys": "cungf nhau xaay duwngj"
         },
         {
           "display": "đất nước mạnh giàu",
-          "keys": "ddaats nuwowcs manhj giauf",
-          "reward": "yellow_banana"
+          "keys": "ddaats nuwowcs manhj giauf"
         },
         {
           "display": "đoàn kết một lòng",
-          "keys": "ddoanf keets mootj longf",
-          "reward": "yellow_banana"
+          "keys": "ddoanf keets mootj longf"
         },
         {
           "display": "không gì ngăn cản",
-          "keys": "khoong gif ngawn canr",
-          "reward": "yellow_banana"
+          "keys": "khoong gif ngawn canr"
         }
       ]
     },
@@ -2346,23 +1986,19 @@
       "content": [
         {
           "display": "sức mạnh tập thể",
-          "keys": "suwcs manhj taapj theer",
-          "reward": "yellow_banana"
+          "keys": "suwcs manhj taapj theer"
         },
         {
           "display": "là vô hạn",
-          "keys": "laf voo hanj",
-          "reward": "yellow_banana"
+          "keys": "laf voo hanj"
         },
         {
           "display": "chiến thắng mọi kẻ thù",
-          "keys": "chieens thawngs moij ker thuf",
-          "reward": "yellow_banana"
+          "keys": "chieens thawngs moij ker thuf"
         },
         {
           "display": "vững bước tương lai",
-          "keys": "vuwngx buwowcs tuwowng lai",
-          "reward": "yellow_banana"
+          "keys": "vuwngx buwowcs tuwowng lai"
         }
       ]
     },
@@ -2372,23 +2008,19 @@
       "content": [
         {
           "display": "ăn có nhai nói có nghĩ",
-          "keys": "awn cos nhai nois cos nghix",
-          "reward": "yellow_banana"
+          "keys": "awn cos nhai nois cos nghix"
         },
         {
           "display": "đi một ngày đàng",
-          "keys": "ddi mootj ngayf ddangf",
-          "reward": "yellow_banana"
+          "keys": "ddi mootj ngayf ddangf"
         },
         {
           "display": "học một sàng khôn",
-          "keys": "hocj mootj sangf khoon",
-          "reward": "yellow_banana"
+          "keys": "hocj mootj sangf khoon"
         },
         {
           "display": "cẩn tắc vô ưu",
-          "keys": "caanr tawcs voo uwu",
-          "reward": "yellow_banana"
+          "keys": "caanr tawcs voo uwu"
         }
       ]
     },
@@ -2398,23 +2030,19 @@
       "content": [
         {
           "display": "phòng bệnh hơn chữa bệnh",
-          "keys": "phongf beenhj hown chuwax beenhj",
-          "reward": "yellow_banana"
+          "keys": "phongf beenhj hown chuwax beenhj"
         },
         {
           "display": "sai một li đi một dặm",
-          "keys": "sai mootj li ddi mootj dawmj",
-          "reward": "yellow_banana"
+          "keys": "sai mootj li ddi mootj dawmj"
         },
         {
           "display": "biết lỗi biết sửa",
-          "keys": "bieets looix bieets suwar",
-          "reward": "yellow_banana"
+          "keys": "bieets looix bieets suwar"
         },
         {
           "display": "người ngay nói thật",
-          "keys": "nguwowif ngay nois thaatj",
-          "reward": "yellow_banana"
+          "keys": "nguwowif ngay nois thaatj"
         }
       ]
     },
@@ -2424,23 +2052,19 @@
       "content": [
         {
           "display": "thật thà là cha quỷ quái",
-          "keys": "thaatj thaf laf cha quyr quais",
-          "reward": "yellow_banana"
+          "keys": "thaatj thaf laf cha quyr quais"
         },
         {
           "display": "liệu cơm gắp mắm",
-          "keys": "lieeuj cowm gawps mawms",
-          "reward": "yellow_banana"
+          "keys": "lieeuj cowm gawps mawms"
         },
         {
           "display": "khéo co thì ấm",
-          "keys": "kheos co thif aams",
-          "reward": "yellow_banana"
+          "keys": "kheos co thif aams"
         },
         {
           "display": "tốt gỗ hơn tốt nước sơn",
-          "keys": "toots goox hown toots nuwowcs sown",
-          "reward": "yellow_banana"
+          "keys": "toots goox hown toots nuwowcs sown"
         }
       ]
     },
@@ -2450,23 +2074,19 @@
       "content": [
         {
           "display": "đừng nghe lời nịnh",
-          "keys": "dduwngf nghe lowif ninhj",
-          "reward": "yellow_banana"
+          "keys": "dduwngf nghe lowif ninhj"
         },
         {
           "display": "hãy tin lời thật",
-          "keys": "hayx tin lowif thaatj",
-          "reward": "yellow_banana"
+          "keys": "hayx tin lowif thaatj"
         },
         {
           "display": "việc hôm nay chớ để ngày mai",
-          "keys": "vieecj hoom nay chows ddeer ngayf mai",
-          "reward": "yellow_banana"
+          "keys": "vieecj hoom nay chows ddeer ngayf mai"
         },
         {
           "display": "tiết kiệm thời gian",
-          "keys": "tieets kieemj thowif gian",
-          "reward": "yellow_banana"
+          "keys": "tieets kieemj thowif gian"
         }
       ]
     },
@@ -2476,23 +2096,19 @@
       "content": [
         {
           "display": "trân trọng tình bạn",
-          "keys": "traan trongj tinhf banj",
-          "reward": "yellow_banana"
+          "keys": "traan trongj tinhf banj"
         },
         {
           "display": "biết ơn nguồn cội",
-          "keys": "bieets own nguoonf cooij",
-          "reward": "yellow_banana"
+          "keys": "bieets own nguoonf cooij"
         },
         {
           "display": "sống lương thiện",
-          "keys": "soongs luwowng thieenj",
-          "reward": "yellow_banana"
+          "keys": "soongs luwowng thieenj"
         },
         {
           "display": "tích đức cho sau",
-          "keys": "tichs dduwcs cho sau",
-          "reward": "yellow_banana"
+          "keys": "tichs dduwcs cho sau"
         }
       ]
     },
@@ -2502,23 +2118,19 @@
       "content": [
         {
           "display": "kiên trì nhẫn nại",
-          "keys": "kieen trif nhaanx naij",
-          "reward": "yellow_banana"
+          "keys": "kieen trif nhaanx naij"
         },
         {
           "display": "vượt qua khó khăn",
-          "keys": "vuwowtj qua khos khawn",
-          "reward": "yellow_banana"
+          "keys": "vuwowtj qua khos khawn"
         },
         {
           "display": "tự tin vào mình",
-          "keys": "tuwj tin vaof minhf",
-          "reward": "yellow_banana"
+          "keys": "tuwj tin vaof minhf"
         },
         {
           "display": "không ngừng học hỏi",
-          "keys": "khoong nguwngf hocj hoir",
-          "reward": "yellow_banana"
+          "keys": "khoong nguwngf hocj hoir"
         }
       ]
     },
@@ -2528,23 +2140,19 @@
       "content": [
         {
           "display": "đối nhân xử thế",
-          "keys": "ddoois nhaan xuwr thees",
-          "reward": "yellow_banana"
+          "keys": "ddoois nhaan xuwr thees"
         },
         {
           "display": "khéo léo tinh tế",
-          "keys": "kheos leos tinh tees",
-          "reward": "yellow_banana"
+          "keys": "kheos leos tinh tees"
         },
         {
           "display": "giữ gìn sức khoẻ",
-          "keys": "giuwx ginf suwcs khoer",
-          "reward": "yellow_banana"
+          "keys": "giuwx ginf suwcs khoer"
         },
         {
           "display": "cuộc sống an vui",
-          "keys": "cuoocj soongs an vui",
-          "reward": "yellow_banana"
+          "keys": "cuoocj soongs an vui"
         }
       ]
     }
