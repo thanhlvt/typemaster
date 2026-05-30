@@ -57,11 +57,12 @@ export class CollectItemsGame extends BaseMinigame {
         const maxY = area?.maxY || 320;
 
         items.forEach(itemConfig => {
-            const itemKey = this.scene.textures.exists(itemConfig.texture)
-                ? itemConfig.texture
+            const defItemTex = itemConfig.texture || (itemConfig.image ? 'item_tex_' + itemConfig.image.replace(/[^a-zA-Z0-9]/g, '_') : 'banana_item');
+            const itemKey = this.scene.textures.exists(defItemTex)
+                ? defItemTex
                 : (itemConfig.emoji
-                    ? this.createEmojiTexture(itemConfig.texture, itemConfig.emoji, 48)
-                    : itemConfig.texture);
+                    ? this.createEmojiTexture(defItemTex, itemConfig.emoji, 48)
+                    : defItemTex);
 
             for (let i = 0; i < itemConfig.count; i++) {
                 const rx = Phaser.Math.Between(minX, maxX);

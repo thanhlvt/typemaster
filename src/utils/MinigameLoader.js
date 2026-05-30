@@ -56,8 +56,9 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
         if (Array.isArray(minigameConfig.config?.items)) {
             minigameConfig.config.items.forEach(item => {
                 if (item.image) {
+                    const key = item.texture || 'item_tex_' + item.image.replace(/[^a-zA-Z0-9]/g, '_');
                     texturesToLoad.push({
-                        key: item.texture,
+                        key: key,
                         url: getAssetUrl(item.image)
                     });
                 }

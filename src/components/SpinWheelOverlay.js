@@ -543,11 +543,13 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
             duration: 400,
             ease: 'Back.easeOut',
             onComplete: () => {
+                if (!this.scene) return;
                 this._triggerBananaRain();
                 this._triggerMonkeyJump();
 
                 // Trigger pop animation conditionally based on reward type
                 if (reward.skin && sprite) {
+                    if (!this.scene) return;
                     this.scene.tweens.add({
                         targets: sprite,
                         scaleX: 0.35,
@@ -555,6 +557,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
                         duration: 400,
                         ease: 'Back.easeOut',
                         onComplete: () => {
+                            if (!this.scene) return;
                             this.scene.tweens.add({
                                 targets: sprite,
                                 scaleX: 0.25,
@@ -565,6 +568,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
                         }
                     });
                 } else if (reward.bananas > 0 && rewardMainText) {
+                    if (!this.scene) return;
                     this.scene.tweens.add({
                         targets: rewardMainText,
                         scaleX: 1.35,
@@ -572,6 +576,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
                         duration: 400,
                         ease: 'Back.easeOut',
                         onComplete: () => {
+                            if (!this.scene) return;
                             this.scene.tweens.add({
                                 targets: rewardMainText,
                                 scaleX: 1.0,
@@ -613,7 +618,7 @@ export class SpinWheelOverlay extends Phaser.GameObjects.Container {
     }
 
     _triggerMonkeyJump() {
-        if (this.scene.monkey) {
+        if (this.scene && this.scene.monkey) {
             const origY = this.scene.monkey.y;
             this.scene.tweens.add({
                 targets: this.scene.monkey,

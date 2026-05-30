@@ -40,17 +40,19 @@ export class RescueAnimalsGame extends BaseMinigame {
         const x = this.config?.x || 400;
         const y = this.config?.y || 250;
 
-        const animalTex = animalConfig.texture || this.config?.animalTexture || 'rescue_animal_tex';
-        const cageTex = cageConfig.texture || this.config?.cageTexture || 'rescue_cage_tex';
+        const animalImg = animalConfig.image || this.config?.animalImage;
+        const defAnimalTex = animalConfig.texture || (animalImg ? 'rescue_animal_tex_' + animalImg.replace(/[^a-zA-Z0-9]/g, '_') : 'rescue_animal_tex');
+        const cageImg = cageConfig.image || this.config?.cageImage;
+        const defCageTex = cageConfig.texture || (cageImg ? 'rescue_cage_tex_' + cageImg.replace(/[^a-zA-Z0-9]/g, '_') : 'rescue_cage_tex');
 
         // 1. Tạo texture từ cache hoặc emoji
-        const animalKey = this.scene.textures.exists(animalTex)
-            ? animalTex
-            : (animalEmoji ? this.createEmojiTexture(animalTex, animalEmoji, 64) : animalTex);
+        const animalKey = this.scene.textures.exists(defAnimalTex)
+            ? defAnimalTex
+            : (animalEmoji ? this.createEmojiTexture(defAnimalTex, animalEmoji, 64) : defAnimalTex);
 
-        const cageKey = this.scene.textures.exists(cageTex)
-            ? cageTex
-            : (cageEmoji ? this.createEmojiTexture(cageTex, cageEmoji, 72) : cageTex);
+        const cageKey = this.scene.textures.exists(defCageTex)
+            ? defCageTex
+            : (cageEmoji ? this.createEmojiTexture(defCageTex, cageEmoji, 72) : defCageTex);
 
         // 2. Phân tích tỉ lệ scale cấu hình
         this.animalScaleX = animalConfig.scaleX !== undefined ? animalConfig.scaleX
