@@ -48,15 +48,15 @@ export class StoryDialogOverlay extends Phaser.GameObjects.Container {
         // ── Avatar Nhân vật ──
         // Khỉ bên trái
         this.monkeyMascot = scene.add.sprite(130, height - 150, this.monkeySkin)
-            .setScale(0.65)
+            .setScale(0.6)
             .setOrigin(0.5)
             .setScrollFactor(0)
             .setDepth(203)
             .setVisible(this.hasMonkey);
 
         // Boss bên phải
-        this.bossMascot = scene.add.sprite(width - 150, height - 150, this.bossTexture)
-            .setScale(0.65)
+        this.bossMascot = scene.add.sprite(width - 130, height - 150, this.bossTexture)
+            .setScale(0.6)
             .setOrigin(0.5)
             .setScrollFactor(0)
             .setDepth(203)
@@ -187,18 +187,18 @@ export class StoryDialogOverlay extends Phaser.GameObjects.Container {
         // Cập nhật hoạt ảnh và hiển thị nhân vật nói chuyện
         if (isMonkey) {
             if (this.hasMonkey) {
-                this.monkeyMascot.setAlpha(1).setScale(0.7);
+                this.monkeyMascot.setAlpha(1).setScale(0.6);
                 this._bounceMascot(this.monkeyMascot);
             }
             if (this.hasBoss) {
-                this.bossMascot.setAlpha(0.75).setScale(0.5);
+                this.bossMascot.setAlpha(0.75).setScale(0.45);
             }
         } else {
             if (this.hasMonkey) {
-                this.monkeyMascot.setAlpha(0.75).setScale(0.5);
+                this.monkeyMascot.setAlpha(0.75).setScale(0.45);
             }
             if (this.hasBoss) {
-                this.bossMascot.setAlpha(1).setScale(0.7);
+                this.bossMascot.setAlpha(1).setScale(0.6);
                 this._bounceMascot(this.bossMascot);
             }
         }

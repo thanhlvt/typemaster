@@ -858,11 +858,11 @@ export const STORY_CONFIGS = {
     92: {
         minigame: 'collect_items',
         preGame: [
-            { character: 'boss', text: "Đừng hòng lấy được phấn hoa thần kỳ để hồi phục sức mạnh!" },
-            { character: 'monkey', text: "Nhanh tay gõ phím thu thập những hạt phấn hoa lấp lánh đang rơi xuống vào giỏ." }
+            { character: 'boss', text: "Đừng hòng lấy được những bông hoa thần kỳ để hồi phục sức mạnh!" },
+            { character: 'monkey', text: "Nhanh tay gõ phím thu thập những bông hoa lấp lánh đang rơi xuống vào giỏ." }
         ],
         postGame: [
-            { character: 'monkey', text: "Phấn hoa đã đầy giỏ. Sức mạnh của chúng ta đã được nạp đầy!" }
+            { character: 'monkey', text: "Những bông hoa đã đầy giỏ. Sức mạnh của chúng ta đã được nạp đầy!" }
         ]
     },
     93: {
@@ -1215,7 +1215,7 @@ export const STORY_CONFIGS = {
         minigame: 'collect_items',
         preGame: [
             { character: 'boss', text: "Đói bụng rồi chứ gì? Xung quanh đây ta đã ăn sạch thức ăn của Cá Vàng rồi!" },
-            { character: 'monkey', text: "Đừng mắc mưu hắn! Chúng ta hãy cẩn thận nhặt những viên tảo biển dinh dưỡng còn sót lại để tiếp thêm năng lượng." }
+            { character: 'monkey', text: "Đừng mắc mưu hắn! Chúng ta hãy cẩn thận nhặt những sợi tảo biển dinh dưỡng còn sót lại để tiếp thêm năng lượng." }
         ],
         postGame: [
             { character: 'monkey', text: "Giỏ đã đầy tảo biển thơm ngon. Đàn Cá Vàng sẽ không lo bị đói nữa!" }
@@ -2172,11 +2172,11 @@ export const STORY_CONFIGS = {
     232: {
         minigame: 'collect_items',
         preGame: [
-            { character: 'boss', text: "Hạt thông vàng này là nguồn sức mạnh của ta, các ngươi đừng mơ có được!" },
-            { character: 'monkey', text: "Hạt thông vàng chứa năng lượng rất lớn. Nhanh tay thu thập chúng vào túi trước khi Hổ cướp lại." }
+            { character: 'boss', text: "Quả hạt dẻ này là nguồn sức mạnh của ta, các ngươi đừng mơ có được!" },
+            { character: 'monkey', text: "Quả hạt dẻ chứa năng lượng rất lớn. Nhanh tay thu thập chúng vào giỏ trước khi Hổ cướp lại." }
         ],
         postGame: [
-            { character: 'monkey', text: "Túi đã đầy hạt thông vàng. Thể lực của chúng ta đang tràn trề!" }
+            { character: 'monkey', text: "Giỏ đã đầy quả hạt dẻ. Thể lực của chúng ta đang tràn trề!" }
         ]
     },
     233: {
@@ -3096,11 +3096,11 @@ export const STORY_CONFIGS = {
     330: {
         minigame: 'collect_items',
         preGame: [
-            { character: 'boss', text: "Ta sẽ phủ đen những viên Đá Mắt Cú này, các ngươi đừng mơ có được tầm nhìn tinh tường!" },
-            { character: 'monkey', text: "Đá Mắt Cú chứa năng lượng phép thuật! Nhanh tay thu thập chúng vào túi trước khi bị nhuốm đen." }
+            { character: 'boss', text: "Ta sẽ phủ đen những viên Đá cuội này, các ngươi đừng mơ có được tầm nhìn tinh tường!" },
+            { character: 'monkey', text: "Đá cuội này chứa năng lượng phép thuật! Nhanh tay thu thập chúng vào túi trước khi bị nhuốm đen." }
         ],
         postGame: [
-            { character: 'monkey', text: "Đã nhặt đủ Đá Mắt Cú. Đôi mắt chúng ta giờ đây có thể nhìn thấu mọi màn đêm!" }
+            { character: 'monkey', text: "Đã nhặt đủ Đá cuội. Đôi mắt chúng ta giờ đây có thể nhìn thấu mọi màn đêm!" }
         ]
     },
     331: {
@@ -3889,11 +3889,11 @@ export const STORY_CONFIGS = {
     414: {
         minigame: 'collect_items',
         preGame: [
-            { character: 'boss', text: "Ta sẽ quẫy đuôi hất tung những viên Ngọc Trai Đen này xuống đáy sâu, đừng hòng lấy được!" },
-            { character: 'monkey', text: "Ngọc Trai Đen chứa năng lượng đại dương vô tận! Nhanh tay nhặt chúng vào giỏ trước khi bị cuốn đi." }
+            { character: 'boss', text: "Ta sẽ quẫy đuôi hất tung những viên Ngọc Trai này xuống đáy sâu, đừng hòng lấy được!" },
+            { character: 'monkey', text: "Ngọc Trai chứa năng lượng đại dương vô tận! Nhanh tay nhặt chúng vào giỏ trước khi bị cuốn đi." }
         ],
         postGame: [
-            { character: 'monkey', text: "Đã thu thập đầy giỏ Ngọc Trai Đen. Sức mạnh của biển cả đang bùng lên trong chúng ta!" }
+            { character: 'monkey', text: "Đã thu thập đầy giỏ Ngọc Trai. Sức mạnh của biển cả đang bùng lên trong chúng ta!" }
         ]
     },
     415: {
@@ -4021,11 +4021,11 @@ export const STORY_CONFIGS = {
     428: {
         minigame: 'collect_items',
         preGame: [
-            { character: 'boss', text: "Ta sẽ đập vỡ những viên Ngọc Trai Hồng này, các ngươi đừng mong lấy được sức mạnh!" },
-            { character: 'monkey', text: "Ngọc Trai Hồng rất quý giá! Nhanh tay nhặt chúng vào túi trước khi bị Cá Mập phá hủy." }
+            { character: 'boss', text: "Ta sẽ đập vỡ những viên Ngọc Trai này, các ngươi đừng mong lấy được sức mạnh!" },
+            { character: 'monkey', text: "Ngọc Trai rất quý giá! Nhanh tay nhặt chúng vào giỏ trước khi bị Cá Mập phá hủy." }
         ],
         postGame: [
-            { character: 'monkey', text: "Đã nhặt đủ Ngọc Trai Hồng. Sức mạnh đại dương đang tràn trề trong cơ thể chúng ta." }
+            { character: 'monkey', text: "Đã nhặt đủ Ngọc Trai. Sức mạnh đại dương đang tràn trề trong cơ thể chúng ta." }
         ]
     },
     429: {

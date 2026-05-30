@@ -2491,8 +2491,8 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'flower_item', image: 'flower.png', emoji: '🍌', count: 5, width: 96, height: 96 },
+                { texture: 'flower2_item', image: 'flower2.png', emoji: '🍌', count: 5, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -2623,8 +2623,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'waterdrop_item', image: 'waterdrop.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -2905,8 +2904,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'pearl_item', image: 'pearl.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -3286,8 +3284,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'lapis_item', image: 'lapis.png', emoji: '🍌', count: 10, width: 96, height: 96 }            
             ],
             container: {
                 texture: 'basket_container',
@@ -3506,8 +3503,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'seaweed_item', image: 'seaweed.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -3949,8 +3945,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'lotus_seed_item', image: 'lotus_seed.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -4391,8 +4386,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'corn_item', image: 'corn.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -4772,8 +4766,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'pearl_item', image: 'pearl.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -5153,8 +5146,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -5534,8 +5526,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'banana_item', image: 'peach.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -5915,8 +5906,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -6296,8 +6286,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'pine_nuts_item', image: 'pine_nuts.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -6677,8 +6666,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'grass_item', image: 'grass.png', emoji: '🥬', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -7058,8 +7046,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'feather_item', image: 'feather.png', emoji: '🪶', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -7439,8 +7426,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'candy_cloud_item', image: 'candy_cloud.png', emoji: '🍬', count: 10, width: 92, height: 92 }
             ],
             container: {
                 texture: 'basket_container',
@@ -7448,8 +7434,8 @@ export const MINIGAME_CONFIGS = {
                 emoji: '🧺',
                 x: 920,
                 y: 340,
-                width: 180,
-                height: 180
+                width: 200,
+                height: 200
             },
             layout: 'scatter_random', // Rải ngẫu nhiên trên màn hình
             area: { minX: 160, maxX: 700, minY: 120, maxY: 340 } // Khu vực rải đồ vật
@@ -7820,8 +7806,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'strawberry_item', image: 'strawberry.png', emoji: '🍓', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -8201,8 +8186,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'waterdrop_item', image: 'waterdrop.png', emoji: '💦', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -8582,8 +8566,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -8963,8 +8946,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'stone_item', image: 'stone.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -9344,8 +9326,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -9725,8 +9706,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -10106,8 +10086,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -10487,8 +10466,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'star_dust_item', image: 'star_dust.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -10868,8 +10846,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'shell_item', image: 'shell.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -11249,8 +11226,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'pearl_item', image: 'pearl.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -11630,8 +11606,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'pearl_item', image: 'pearl.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -12011,8 +11986,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'pearl_item', image: 'pearl.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -12392,8 +12366,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'pearl_item', image: 'pearl.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -12773,8 +12746,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'sound_circle_item', image: 'sound_circle.png', emoji: '🍌', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -13154,8 +13126,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -13535,8 +13506,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'goldenkey_item', image: 'goldenkey.png', emoji: '🍌', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -13916,8 +13886,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'badge_item', image: 'badge.png', emoji: '🍌', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -14297,8 +14266,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'arrow_item', image: 'arrow.png', emoji: '🍌', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -14678,8 +14646,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'bell_item', image: 'bell.png', emoji: '🍌', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -15059,8 +15026,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'ruby_item', image: 'ruby.png', emoji: '🍌', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -15440,8 +15406,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'dragon_scale_item', image: 'dragon_scale.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -15821,8 +15786,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'badge_item', image: 'badge.png', emoji: '🍌', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -16202,8 +16166,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'plasma_item', image: 'plasma.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -16583,8 +16546,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '🍌', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
@@ -16964,8 +16926,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'moon_stone_item', image: 'moon_stone.png', emoji: '🍌', count: 8, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -17345,8 +17306,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '💎', count: 8, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -17726,8 +17686,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '💎', count: 10, width: 96, height: 96 }
             ],
             container: {
                 texture: 'basket_container',
@@ -18107,8 +18066,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '💎', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -18488,8 +18446,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'crystal_item', image: 'crystal.png', emoji: '💎', count: 10, width: 80, height: 80 }
             ],
             container: {
                 texture: 'basket_container',
@@ -18869,8 +18826,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { texture: 'banana_item', image: 'banana.png', emoji: '🍌', count: 5, width: 96, height: 96 },
-                { texture: 'mushroom_item', image: 'mushroom.png', emoji: '🍄', count: 5, width: 80, height: 80 }
+                { texture: 'infinite_piece_item', image: 'infinite_piece.png', emoji: '💎', count: 10, width: 72, height: 72 }
             ],
             container: {
                 texture: 'basket_container',
