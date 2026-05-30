@@ -29,10 +29,19 @@ export class ClearFogGame extends BaseMinigame {
             ease: 'Sine.easeInOut'
         });
 
-        const fogEmoji = this.config?.fogEmoji || '🌫️';
         const count = this.totalWords || 8;
 
-        const fogKey = this.createEmojiTexture('clear_fog_tex', fogEmoji, 80);
+        // Xác định texture key
+        let fogKey = this.config?.texture || this.config?.fog?.texture || 'clear_fog_tex';
+        const fogImage = this.config?.image || this.config?.fog?.image;
+        const fogEmoji = this.config?.fogEmoji || this.config?.fog?.emoji || '🌫️';
+
+        if (fogImage && this.scene.textures.exists(fogKey)) {
+            // Đã được load qua MinigameLoader
+        } else {
+            // Tạo emoji texture
+            fogKey = this.createEmojiTexture(fogKey, fogEmoji, 80);
+        }
 
         // 1. Xác định vùng không gian rải sương mù x1, y1, x2, y2
         const x1 = this.config?.x1 !== undefined ? this.config.x1 
@@ -49,7 +58,8 @@ export class ClearFogGame extends BaseMinigame {
 
         // 2. Xác định scale của đám sương mù
         const baseScale = this.config?.fogScale !== undefined ? this.config.fogScale 
-            : (this.config?.scale !== undefined ? this.config.scale : 1.5);
+            : (this.config?.scale !== undefined ? this.config.scale 
+                : (this.config?.fog?.scale !== undefined ? this.config.fog.scale : 1.5));
 
         // 3. Tạo các đám sương mù phủ ngẫu nhiên trong vùng chỉ định
         const adjustedX1 = Math.max(x1, 160);

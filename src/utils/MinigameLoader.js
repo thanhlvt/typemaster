@@ -189,6 +189,19 @@ export function setupMinigameAndStart(scene, minigameConfig, totalWords, onReady
             });
         }
 
+        // 11. ClearFog images
+        if (minigameConfig.config?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.texture || 'clear_fog_tex',
+                url: getAssetUrl(minigameConfig.config.image)
+            });
+        } else if (minigameConfig.config?.fog?.image) {
+            texturesToLoad.push({
+                key: minigameConfig.config.fog.texture || 'clear_fog_tex',
+                url: getAssetUrl(minigameConfig.config.fog.image)
+            });
+        }
+
         ensureTextures(scene, texturesToLoad, () => {
             const minigame = MinigameFactory.createMinigame(scene, minigameConfig.gameId, minigameConfig.config);
             if (minigame) {

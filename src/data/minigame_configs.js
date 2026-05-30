@@ -210,11 +210,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -356,11 +357,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -373,11 +375,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 0.6,
+            image: 'bush.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -696,11 +699,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -1067,11 +1071,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -1128,12 +1133,13 @@ export const MINIGAME_CONFIGS = {
     42: {
         gameId: 'clear_fog',
         config: {
-            fogEmoji: '🫧',
-            fogScale: 2,
-            x1: 200,
+            fogEmoji: '🌫️',
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -1511,11 +1517,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -1800,11 +1807,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -2114,11 +2122,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -2253,11 +2262,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -2507,11 +2517,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -2920,11 +2931,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog4.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -3000,11 +3012,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog4.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -3299,11 +3312,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -3379,11 +3393,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog4.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -3703,11 +3718,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -3765,11 +3781,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -4064,11 +4081,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -4144,11 +4162,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -4443,11 +4462,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -4523,11 +4543,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -4822,11 +4843,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -4902,11 +4924,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog5.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -5201,11 +5224,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -5281,11 +5305,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -5580,11 +5605,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -5660,11 +5686,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -5959,11 +5986,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -6039,11 +6067,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -6338,11 +6367,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -6418,11 +6448,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -6717,11 +6748,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -6797,11 +6829,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -7096,11 +7129,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -7176,11 +7210,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -7475,11 +7510,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -7555,11 +7591,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog8.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -7854,11 +7891,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog8.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -7934,11 +7972,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -8233,11 +8272,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -8313,11 +8353,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -8612,11 +8653,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -8692,11 +8734,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -8991,11 +9034,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -9071,11 +9115,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -9370,11 +9415,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -9450,11 +9496,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -9749,11 +9796,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -9829,11 +9877,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -10128,11 +10177,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -10208,11 +10258,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -10507,11 +10558,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -10587,11 +10639,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -10886,11 +10939,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -10966,11 +11020,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -11265,11 +11320,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -11345,11 +11401,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -11644,11 +11701,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog4.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -11724,11 +11782,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog4.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -12023,11 +12082,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -12103,11 +12163,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog4.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -12402,11 +12463,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog4.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -12482,11 +12544,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog5.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -12781,11 +12844,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -12861,11 +12925,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -13160,11 +13225,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -13240,11 +13306,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -13539,11 +13606,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -13619,11 +13687,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -13918,11 +13987,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -13998,11 +14068,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -14297,11 +14368,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -14377,11 +14449,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -14676,11 +14749,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -14756,11 +14830,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -15055,11 +15130,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -15135,11 +15211,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -15434,11 +15511,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -15514,11 +15592,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -15813,11 +15892,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -15893,11 +15973,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -16192,11 +16273,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -16272,11 +16354,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -16571,11 +16654,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -16651,11 +16735,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -16950,11 +17035,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog7.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -17030,11 +17116,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog8.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -17329,11 +17416,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -17409,11 +17497,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog3.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -17708,11 +17797,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -17788,11 +17878,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -18087,11 +18178,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -18167,11 +18259,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog2.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -18466,11 +18559,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -18546,11 +18640,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog1.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },
@@ -18845,11 +18940,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'clear_fog',
         config: {
             fogEmoji: '🌫️',
-            fogScale: 2,
-            x1: 200,
+            fogScale: 1,
+            image: 'fog6.png',
+            x1: 250,
             y1: 140,
             x2: 750,
-            y2: 330
+            y2: 270
         },
         interactions: {
             onWordComplete: { action: 'clear_fog_segment' },

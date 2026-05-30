@@ -5097,7 +5097,7 @@ export const STORY_CONFIGS = {
     542: {
         minigame: 'clear_fog',
         preGame: [
-            { character: 'boss', text: "Lỳ lợm thật! Cơn bão cát đen này sẽ cuốn phăng các ngươi khỏi đỉnh tháp!" },
+            { character: 'boss', text: "Lỳ lợm thật! Cơn bão cát này sẽ cuốn phăng các ngươi khỏi đỉnh tháp!" },
             { character: 'monkey', text: "Gió rít mạnh quá! Gõ thật nhanh tạo luồng gió đối nghịch xua tan bão cát đen này ngay!" }
         ],
         postGame: [
