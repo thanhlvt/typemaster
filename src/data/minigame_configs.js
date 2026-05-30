@@ -2698,11 +2698,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -3078,11 +3078,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -3567,11 +3567,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -3845,11 +3845,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -4605,11 +4605,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -4985,11 +4985,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -5365,7 +5365,7 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
+                image: 'snake.png',
                 scale: 0.35,
                 emoji: '🐭',
                 offsetX: 0,
@@ -6885,7 +6885,7 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
+                image: 'snake.png',
                 scale: 0.35,
                 emoji: '🐭',
                 offsetX: 0,
@@ -7265,7 +7265,7 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
+                image: 'snake.png',
                 scale: 0.35,
                 emoji: '🐭',
                 offsetX: 0,
@@ -8025,9 +8025,9 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'devilbat.png',
+                scale: 0.4,
+                emoji: '🦇',
                 offsetX: 0,
                 offsetY: -15
             },
@@ -8405,9 +8405,9 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'devilbat.png',
+                scale: 0.4,
+                emoji: '🦇',
                 offsetX: 0,
                 offsetY: -15
             },
@@ -8785,9 +8785,9 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'devilbat.png',
+                scale: 0.4,
+                emoji: '🦇',
                 offsetX: 0,
                 offsetY: -15
             },
@@ -9165,8 +9165,8 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'spider.png',
+                scale: 0.4,
                 emoji: '🐭',
                 offsetX: 0,
                 offsetY: -15
@@ -9545,11 +9545,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'demon.png',
+                scale: 0.4,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -25
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -9925,9 +9925,9 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'devilbat.png',
+                scale: 0.4,
+                emoji: '🦇',
                 offsetX: 0,
                 offsetY: -15
             },
@@ -10305,9 +10305,9 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'devilbat.png',
+                scale: 0.4,
+                emoji: '🦇',
                 offsetX: 0,
                 offsetY: -15
             },
@@ -10685,11 +10685,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -11065,11 +11065,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -11445,11 +11445,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'sea_urchin.png',
+                scale: 0.4,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -11825,11 +11825,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'sea_urchin.png',
+                scale: 0.4,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -12203,13 +12203,13 @@ export const MINIGAME_CONFIGS = {
                 scale: 0.4,
                 emoji: '🕳️'
             },
-            mole: {
+             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -12585,11 +12585,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'sea_urchin.png',
+                scale: 0.4,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -12963,13 +12963,13 @@ export const MINIGAME_CONFIGS = {
                 scale: 0.4,
                 emoji: '🕳️'
             },
-            mole: {
+             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'crab.png',
+                scale: 0.4,
+                emoji: '🦀',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: 0
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -14105,11 +14105,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'bandit.png',
+                scale: 0.6,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -23
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -14485,11 +14485,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'bandit.png',
+                scale: 0.6,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -23
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -14865,11 +14865,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'bandit.png',
+                scale: 0.6,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -23
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -15245,11 +15245,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'bandit.png',
+                scale: 0.6,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -23
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -15625,11 +15625,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
+                image: 'bandit.png',
+                scale: 0.6,
                 emoji: '🐭',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -23
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -16005,11 +16005,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -16385,11 +16385,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -16765,11 +16765,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -17145,11 +17145,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -17525,11 +17525,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -17905,11 +17905,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -18285,11 +18285,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',
@@ -18665,11 +18665,11 @@ export const MINIGAME_CONFIGS = {
             },
             mole: {
                 texture: 'mole_mole_tex',
-                image: 'mole.png',
-                scale: 0.35,
-                emoji: '🐭',
+                image: 'robot.png',
+                scale: 0.41,
+                emoji: '🤖',
                 offsetX: 0,
-                offsetY: -15
+                offsetY: -10
             },
             hammer: {
                 texture: 'mole_hammer_tex',

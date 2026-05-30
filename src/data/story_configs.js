@@ -176,7 +176,7 @@ export const STORY_CONFIGS = {
     18: {
         minigame: 'racing',
         preGame: [
-            { character: 'monkey', text: "Mình thấy bóng Sói Già lấp ló chạy trốn phía trước. Lên xe và đua tốc độ đuổi theo hắn thôi!" }
+            { character: 'monkey', text: "Mình thấy bóng Sói Già lấp ló chạy trốn phía trước. Lên xe đuổi theo hắn thôi!" }
         ],
         postGame: [
             { character: 'monkey', text: "Chiếc xe chạy nhanh như gió! Chúng ta đang bám rất sát Sói Già rồi." }
@@ -1233,11 +1233,11 @@ export const STORY_CONFIGS = {
     132: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Cá Sấu đang xúi giục đàn tôm hùm đất đào hang phá hỏng bờ sông kìa." },
-            { character: 'monkey', text: "Dùng búa gõ trúng đích lũ tôm hùm đất để lấp các cái hố lại nhé!" }
+            { character: 'monkey', text: "Cá Sấu đang xúi giục đàn cua đá đào hang phá hỏng bờ sông kìa." },
+            { character: 'monkey', text: "Dùng búa gõ trúng đích lũ cua đá để lấp các cái hố lại nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Đàn tôm hùm đất đã hoảng sợ lặn mất tăm. Bờ sông lại an toàn vững chắc." }
+            { character: 'monkey', text: "Đàn cua đá đã hoảng sợ lặn mất tăm. Bờ sông lại an toàn vững chắc." }
         ]
     },
     133: {
@@ -1594,11 +1594,11 @@ export const STORY_CONFIGS = {
     171: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ ếch độc tay sai của Cá Sấu đang bám vào mạn thuyền định đục lỗ kìa." },
+            { character: 'monkey', text: "Lũ cua đá tay sai của Cá Sấu đang bám vào mạn thuyền định đục lỗ kìa." },
             { character: 'monkey', text: "Dùng búa gõ trúng đầu chúng để đuổi đi, không để thuyền bị chìm nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bọn ếch độc đã nhảy hết xuống sông. Thuyền Nhỏ vẫn lành lặn." }
+            { character: 'monkey', text: "Bọn cua đá đã nhảy hết xuống sông. Thuyền Nhỏ vẫn lành lặn." }
         ]
     },
     172: {
@@ -1726,11 +1726,11 @@ export const STORY_CONFIGS = {
     185: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ cóc độc tay sai đang nhô đầu ra từ các hốc đá trên vách thác để phục kích." },
+            { character: 'monkey', text: "Lũ cua đá tay sai đang nhô đầu ra từ các hốc đá trên vách thác để phục kích." },
             { character: 'monkey', text: "Nhanh tay cầm búa, gõ trúng đầu chúng để dọn đường leo lên đỉnh thác nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ cóc độc đã sợ hãi thụt hết vào hang. Vách đá đã an toàn để leo." }
+            { character: 'monkey', text: "Lũ cua đá đã sợ hãi thụt hết vào hang. Vách đá đã an toàn để leo." }
         ]
     },
     186: {
@@ -1990,11 +1990,11 @@ export const STORY_CONFIGS = {
     213: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Hổ Hung Ác sai bầy chồn núi chui lên từ kẽ nứt cắn đứt dây thừng leo núi kìa." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đuổi bầy chồn chui tọt lại xuống hang!" }
+            { character: 'monkey', text: "Hổ Hung Ác sai bầy chuột chũi chui lên từ kẽ nứt cắn đứt dây thừng leo núi kìa." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đuổi bầy chuột chui tọt lại xuống hang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bầy chồn đã chạy mất tăm, dây thừng leo núi vẫn an toàn để sử dụng." }
+            { character: 'monkey', text: "Bầy chuột đã chạy mất tăm, dây thừng leo núi vẫn an toàn để sử dụng." }
         ]
     },
     214: {
@@ -2122,11 +2122,11 @@ export const STORY_CONFIGS = {
     227: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Hổ Hung Ác đang xúi giục bầy cáo đỏ đào bới phá hỏng rễ các cây thông cổ thụ." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ cáo để đuổi chúng đi bảo vệ khu rừng nhé!" }
+            { character: 'monkey', text: "Hổ Hung Ác đang xúi giục bầy chuột chũi đào bới phá hỏng rễ các cây thông cổ thụ." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ chuột chũi để đuổi chúng đi bảo vệ khu rừng nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bầy cáo đã bỏ chạy tán loạn. Rễ cây thông đã được bảo vệ vững chắc." }
+            { character: 'monkey', text: "Bầy chuột chũi đã bỏ chạy tán loạn. Rễ cây thông đã được bảo vệ vững chắc." }
         ]
     },
     228: {
@@ -2254,11 +2254,11 @@ export const STORY_CONFIGS = {
     241: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Hổ xua lũ chồn núi lên cắn nát bãi cỏ non, nguồn thức ăn của bầy hươu." },
-            { character: 'monkey', text: "Cầm búa lên và gõ trúng đầu lũ chồn để đuổi chúng đi, giữ lại bãi cỏ nhé!" }
+            { character: 'monkey', text: "Hổ xua lũ chuột chũi lên cắn nát bãi cỏ non, nguồn thức ăn của bầy hươu." },
+            { character: 'monkey', text: "Cầm búa lên và gõ trúng đầu lũ chuột chũi để đuổi chúng đi, giữ lại bãi cỏ nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ chồn đã sợ hãi bỏ chạy. Bãi cỏ non vẫn xanh mướt cho bầy hươu." }
+            { character: 'monkey', text: "Lũ chuột chũi đã sợ hãi bỏ chạy. Bãi cỏ non vẫn xanh mướt cho bầy hươu." }
         ]
     },
     242: {
@@ -2518,11 +2518,11 @@ export const STORY_CONFIGS = {
     269: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ dơi núi tay sai của Hổ đang lén lút chui ra từ các hốc mây định cắn đứt dây leo của chúng ta." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ dơi để đuổi chúng bay đi nơi khác ngay lập tức!" }
+            { character: 'monkey', text: "Lũ rắn tay sai của Hổ đang lén lút chui ra từ các hốc mây định cắn đứt dây leo của chúng ta." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ rắn để đuổi chúng bay đi nơi khác ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ dơi đã hoảng sợ bay tán loạn. Dây leo bảo hộ vẫn an toàn để chúng ta leo tiếp." }
+            { character: 'monkey', text: "Lũ rắn đã hoảng sợ bay tán loạn. Dây leo bảo hộ vẫn an toàn để chúng ta leo tiếp." }
         ]
     },
     270: {
@@ -2650,11 +2650,11 @@ export const STORY_CONFIGS = {
     283: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ chồn tuyết tay sai đang chui lên từ lớp tuyết dày định cắn hỏng túi đồ giữ ấm của chúng ta." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ chồn để đuổi chúng đi, bảo vệ đồ đạc nhé!" }
+            { character: 'monkey', text: "Lũ chuột chũi tay sai đang chui lên từ lớp tuyết dày định cắn hỏng túi đồ giữ ấm của chúng ta." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ chuột chũi để đuổi chúng đi, bảo vệ đồ đạc nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ chồn tuyết đã sợ hãi lặn sâu xuống lớp băng. Đồ đạc của chúng ta vẫn an toàn." }
+            { character: 'monkey', text: "Lũ chuột chũi đã sợ hãi lặn sâu xuống lớp băng. Đồ đạc của chúng ta vẫn an toàn." }
         ]
     },
     284: {
@@ -2914,11 +2914,11 @@ export const STORY_CONFIGS = {
     311: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ tiểu yêu bóng tối đang ngoi lên từ các kẽ nứt không gian để ăn cắp Bụi Sao." },
+            { character: 'monkey', text: "Lũ dơi quỷ đang ngoi lên từ các kẽ nứt không gian để ăn cắp Bụi Sao." },
             { character: 'monkey', text: "Lấy búa ra và gõ trúng đầu chúng để bảo vệ nguồn sáng của Thung lũng Sao Nhỏ!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ tiểu yêu đã sợ hãi lặn mất tăm. Bụi Sao vẫn tỏa sáng lấp lánh an toàn." }
+            { character: 'monkey', text: "Lũ dơi quỷ đã sợ hãi lặn mất tăm. Bụi Sao vẫn tỏa sáng lấp lánh an toàn." }
         ]
     },
     312: {
@@ -3046,11 +3046,11 @@ export const STORY_CONFIGS = {
     325: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ tiểu yêu bóng đêm đang bò ra từ các hốc cây cổ thụ định cướp đèn lồng của chúng ta." },
-            { character: 'monkey', text: "Cầm búa lên và gõ trúng đích để đánh đuổi lũ tiểu yêu chui tọt lại vào bóng tối nhé!" }
+            { character: 'monkey', text: "Lũ dơi quỷ đang bò ra từ các hốc cây cổ thụ định cướp đèn lồng của chúng ta." },
+            { character: 'monkey', text: "Cầm búa lên và gõ trúng đích để đánh đuổi lũ dơi quỷ chui tọt lại vào bóng tối nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ tiểu yêu đã hoảng sợ tháo chạy. Đèn lồng vẫn sáng rực rỡ bảo vệ cả đoàn." }
+            { character: 'monkey', text: "Lũ dơi quỷ đã hoảng sợ tháo chạy. Đèn lồng vẫn sáng rực rỡ bảo vệ cả đoàn." }
         ]
     },
     326: {
@@ -3707,11 +3707,11 @@ export const STORY_CONFIGS = {
     395: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ ốc mượn hồn tay sai của Cá Mập đang đào bới hỏng hết các lâu đài cát." },
-            { character: 'monkey', text: "Cầm búa lên và gõ trúng vỏ ốc để đuổi chúng đi, bảo vệ bãi biển sạch đẹp nhé!" }
+            { character: 'monkey', text: "Lũ cua tay sai của Cá Mập đang đào bới hỏng hết các lâu đài cát." },
+            { character: 'monkey', text: "Cầm búa lên và gõ trúng chúng để đuổi chúng đi, bảo vệ bãi biển sạch đẹp nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ ốc mượn hồn đã hoảng sợ chui tọt xuống cát. Lâu đài cát vẫn còn nguyên vẹn." }
+            { character: 'monkey', text: "Lũ cua đã hoảng sợ chui tọt xuống cát. Lâu đài cát vẫn còn nguyên vẹn." }
         ]
     },
     396: {
@@ -3839,11 +3839,11 @@ export const STORY_CONFIGS = {
     409: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ hải âu hung dữ tay sai của Cá Mập đang sà xuống định cướp thức ăn của bầy còng." },
-            { character: 'monkey', text: "Cầm búa lên và gõ trúng đích để đánh đuổi lũ hải âu đi, bảo vệ bãi còng nhé!" }
+            { character: 'monkey', text: "Lũ cua biển hung dữ tay sai của Cá Mập đang bò tới định cướp thức ăn của bầy còng." },
+            { character: 'monkey', text: "Cầm búa lên và gõ trúng đích để đánh đuổi lũ cua biển đi, bảo vệ bãi còng nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ hải âu đã hoảng sợ vỗ cánh bay đi mất. Bãi biển lại yên bình." }
+            { character: 'monkey', text: "Lũ cua biển đã hoảng sợ bò chạy tán loạn. Bãi biển lại yên bình." }
         ]
     },
     410: {
@@ -4103,11 +4103,11 @@ export const STORY_CONFIGS = {
     437: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ cá chình tay sai đang thò đầu ra từ các hốc san hô để cắn trộm." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu chúng để xua đuổi bầy cá chình ngay lập tức!" }
+            { character: 'monkey', text: "Lũ sao biển tay sai đang bò ra từ các hốc san hô để cản đường." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để xua đuổi bầy sao biển ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bầy cá chình đã sợ hãi lặn sâu vào hang. Lối đi đã an toàn hơn." }
+            { character: 'monkey', text: "Bầy sao biển đã sợ hãi lẩn trốn vào hang. Lối đi đã an toàn hơn." }
         ]
     },
     438: {
@@ -4235,11 +4235,11 @@ export const STORY_CONFIGS = {
     451: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ cá mặt quỷ tay sai đang trốn dưới lớp cát để tấn công lén bầy rùa đang ấp trứng." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu chúng để xua đuổi bầy cá mặt quỷ đi ngay lập tức!" }
+            { character: 'monkey', text: "Lũ cua đá tay sai đang trốn dưới lớp cát để tấn công lén bầy rùa đang ấp trứng." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu chúng để xua đuổi bầy cua đá đi ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bầy cá mặt quỷ đã sợ hãi lặn sâu xuống đáy. Bãi đẻ trứng của rùa đã được an toàn." }
+            { character: 'monkey', text: "Bầy cua đá đã sợ hãi lặn sâu xuống đáy. Bãi đẻ trứng của rùa đã được an toàn." }
         ]
     },
     452: {
@@ -4367,11 +4367,11 @@ export const STORY_CONFIGS = {
     465: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ cá ép hung hãn tay sai của Cá Mập đang bám chặt lấy mình các bạn Cá Heo để hút năng lượng." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu chúng để xua đuổi bầy cá ép đi, bảo vệ bầy Cá Heo nhé!" }
+            { character: 'monkey', text: "Lũ sao biển hung hãn tay sai của Cá Mập đang bám chặt lấy mình các bạn Cá Heo để hút năng lượng." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu chúng để xua đuổi bầy sao biển đi, bảo vệ bầy Cá Heo nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ cá ép đã hoảng sợ nhả ra và lặn mất tăm. Bầy Cá Heo đã bơi lội nhẹ nhàng trở lại." }
+            { character: 'monkey', text: "Lũ sao biển đã hoảng sợ nhả ra và lặn mất tăm. Bầy Cá Heo đã bơi lội nhẹ nhàng trở lại." }
         ]
     },
     466: {
@@ -4499,11 +4499,11 @@ export const STORY_CONFIGS = {
     479: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ cá lồng đèn ác quỷ tay sai của Cá Mập đang lao tới định cắn đứt dưỡng khí của chúng ta." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ cá lồng đèn để đuổi chúng lặn sâu xuống đáy vực!" }
+            { character: 'monkey', text: "Lũ cua đá tay sai của Cá Mập đang lao tới định cắn đứt dưỡng khí của chúng ta." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đầu lũ cua đá để đuổi chúng lặn sâu xuống đáy vực!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bầy cá ác quỷ đã khiếp sợ lẩn trốn. Không gian xung quanh lại an toàn." }
+            { character: 'monkey', text: "Bầy cua đá đã khiếp sợ lẩn trốn. Không gian xung quanh lại an toàn." }
         ]
     },
     480: {
@@ -4631,11 +4631,11 @@ export const STORY_CONFIGS = {
     493: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ tay sai của Tướng Cướp đang núp sau các tảng đá để bắn lén chúng ta." },
+            { character: 'monkey', text: "Lũ chuột chũi của Tướng Cướp đang núp sau các tảng đá để bắn lén chúng ta." },
             { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đánh đuổi bọn cướp cạn này đi chỗ khác!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ tay sai đã khiếp sợ bỏ chạy tán loạn. Xung quanh Cổng Đá đã tạm thời an toàn." }
+            { character: 'monkey', text: "Lũ chuột chũi đã khiếp sợ bỏ chạy tán loạn. Xung quanh Cổng Đá đã tạm thời an toàn." }
         ]
     },
     494: {
@@ -4763,11 +4763,11 @@ export const STORY_CONFIGS = {
     507: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ lâu la của Tướng Cướp đang chui lên từ các đường hầm bí mật để phá hoại kho vũ khí." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đuổi lũ trộm cướp này lặn xuống hầm ngay lập tức!" }
+            { character: 'monkey', text: "Lũ chuột chũi lâu la của Tướng Cướp đang chui lên từ các đường hầm bí mật để phá hoại kho vũ khí." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đuổi lũ chuột chũi này lặn xuống hầm ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ tay sai đã khiếp sợ chạy mất tăm. Kho vũ khí của các hiệp sĩ vẫn an toàn." }
+            { character: 'monkey', text: "Lũ chuột chũi đã khiếp sợ chạy mất tăm. Kho vũ khí của các hiệp sĩ vẫn an toàn." }
         ]
     },
     508: {
@@ -5687,11 +5687,11 @@ export const STORY_CONFIGS = {
     605: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ đĩa bay mini tay sai của Alien đang lao xuống định chọc thủng tầng ozone." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đập nát lũ đĩa bay này, bảo vệ bầu khí quyển!" }
+            { character: 'monkey', text: "Lũ bọ máy tay sai của Alien đang lao xuống định chọc thủng tầng ozone." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đập nát lũ bọ máy này, bảo vệ bầu khí quyển!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ đĩa bay đã bị đập nát thành phế liệu. Tầng ozone vẫn an toàn che chở cho chúng ta." }
+            { character: 'monkey', text: "Lũ bọ máy đã bị đập nát thành phế liệu. Tầng ozone vẫn an toàn che chở cho chúng ta." }
         ]
     },
     606: {
@@ -5819,7 +5819,7 @@ export const STORY_CONFIGS = {
     619: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ quái vật ngoài hành tinh tay sai đang chui lên từ các hố thiên thạch để đánh lén." },
+            { character: 'monkey', text: "Lũ bọ máy tay sai của Alien đang chui lên từ các hố thiên thạch để đánh lén." },
             { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đập chúng chui tọt xuống hố ngay lập tức!" }
         ],
         postGame: [
@@ -5951,11 +5951,11 @@ export const STORY_CONFIGS = {
     633: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ bọ băng tay sai đang chui lên cắn phá lớp vỏ bảo vệ của bộ đồ vũ trụ." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đuổi bầy bọ băng này lẩn trốn vào các khe nứt!" }
+            { character: 'monkey', text: "Lũ bọ máy tay sai của Alien đang chui lên cắn phá lớp vỏ bảo vệ của bộ đồ vũ trụ." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đuổi bầy bọ máy này lẩn trốn vào các khe nứt!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Bọ băng đã khiếp sợ chạy tán loạn. Đồ bảo hộ của chúng ta không bị tổn hại." }
+            { character: 'monkey', text: "Bọ máy đã khiếp sợ chạy tán loạn. Đồ bảo hộ của chúng ta không bị tổn hại." }
         ]
     },
     634: {
@@ -6083,8 +6083,8 @@ export const STORY_CONFIGS = {
     647: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ quái vật đá tay sai đang nấp sau các khối thiên thạch để phục kích." },
-            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đập tan bọn quái vật đá này ngay lập tức!" }
+            { character: 'monkey', text: "Lũ bọ máy tay sai của Alien đang nấp sau các khối thiên thạch để phục kích." },
+            { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đập tan bọn bọ máy này ngay lập tức!" }
         ],
         postGame: [
             { character: 'monkey', text: "Lũ tay sai đã khiếp sợ lùi lại sâu vào vành đai. Đường đi đã quang đãng hơn." }
@@ -6215,11 +6215,11 @@ export const STORY_CONFIGS = {
     661: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ quái vật xúc tu tay sai đang chui lên từ lòng đất xốp để tấn công lén." },
+            { character: 'monkey', text: "Lũ bọ máy tay sai đang chui lên từ lòng đất xốp để tấn công lén." },
             { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đập chúng chui tọt xuống dưới ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ xúc tu đã khiếp sợ lẩn trốn sâu dưới lòng đất. Bề mặt di chuyển đã an toàn." }
+            { character: 'monkey', text: "Lũ tay sai đã khiếp sợ lẩn trốn sâu dưới lòng đất. Bề mặt di chuyển đã an toàn." }
         ]
     },
     662: {
@@ -6347,11 +6347,11 @@ export const STORY_CONFIGS = {
     675: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ quái vật bức xạ tay sai đang chui lên từ các mảnh vỡ thiên thạch để đánh lén." },
+            { character: 'monkey', text: "Lũ bọ máy tay sai đang chui lên từ các mảnh vỡ thiên thạch để đánh lén." },
             { character: 'monkey', text: "Cầm búa lên, gõ trúng đích để đập chúng chui tọt xuống dưới ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ quái vật đã khiếp sợ lẩn trốn vào khoảng không. Khu vực xung quanh đã an toàn." }
+            { character: 'monkey', text: "Lũ bọ máy đã khiếp sợ lẩn trốn vào khoảng không. Khu vực xung quanh đã an toàn." }
         ]
     },
     676: {
@@ -6479,11 +6479,11 @@ export const STORY_CONFIGS = {
     689: {
         minigame: 'whack_mole',
         preGame: [
-            { character: 'monkey', text: "Lũ quái vật bóng tối tay sai đang chui ra từ các khe nứt không gian để cắn trộm." },
+            { character: 'monkey', text: "Lũ bọ máy tay sai đang chui ra từ các khe nứt không gian để cắn trộm." },
             { character: 'monkey', text: "Cầm búa lượng tử lên, gõ trúng đích để đập chúng chui lại vào các khe nứt ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lũ quái vật đã khiếp sợ lẩn trốn vào bóng tối. Khe nứt không gian đã được vá lại." }
+            { character: 'monkey', text: "Lũ bọ máy đã khiếp sợ lẩn trốn vào bóng tối. Khe nứt không gian đã được vá lại." }
         ]
     },
     690: {
