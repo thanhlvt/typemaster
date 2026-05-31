@@ -1672,12 +1672,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
+                image: 'butterfly.png',
                 scale: 0.8,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'cage2.png',
+                scale: 1.5,
             },
             x: 490,
             y: 230

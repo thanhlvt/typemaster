@@ -1008,1455 +1008,1951 @@
     },
     {
       "id": "level_34",
-      "title": "Câu ca dao ngắn",
+      "title": "Các loài chim rừng",
       "content": [
         {
-          "display": "bầu ơi thương lấy bí cùng",
-          "keys": "baauf owi thuwowng laays bis cungf"
+          "display": "chim sẻ",
+          "keys": "chim ser"
         },
         {
-          "display": "tuy rằng khác giống",
-          "keys": "tuy rawngf khacs gioongs"
+          "display": "bồ câu",
+          "keys": "boof caau"
         },
         {
-          "display": "nhưng chung một giàn",
-          "keys": "nhuwng chung mootj gianf"
+          "display": "gõ kiến",
+          "keys": "gox kieens"
         },
         {
-          "display": "công cha như núi thái sơn",
-          "keys": "coong cha nhuw nuis thais sown"
+          "display": "cú mèo",
+          "keys": "cus meof"
         },
         {
-          "display": "nghĩa mẹ như nước",
-          "keys": "nghiax mej nhuw nuwowcs"
+          "display": "chim ưng",
+          "keys": "chim uwng"
         },
         {
-          "display": "trong nguồn chảy ra",
-          "keys": "trong nguoonf chayr ra"
+          "display": "hoạ mi",
+          "keys": "hoaj mi"
         }
       ]
     },
     {
       "id": "level_35",
-      "title": "Thử thách tốc độ",
+      "title": "Thú hoang dã lớn",
       "content": [
         {
-          "display": "việt nam gấm hoa",
-          "keys": "vieetj nam gaams hoa"
+          "display": "voi rừng",
+          "keys": "voi ruwngf"
         },
         {
-          "display": "non sông hùng vĩ",
-          "keys": "non soong hungf vix"
+          "display": "hổ vằn",
+          "keys": "hoor vawnf"
         },
         {
-          "display": "biển bạc rừng vàng",
-          "keys": "bieenr bacj ruwngf vangf"
+          "display": "gấu đen",
+          "keys": "gaaus dden"
         },
         {
-          "display": "con rồng cháu tiên",
-          "keys": "con roongf chaus tieen"
+          "display": "hươu sao",
+          "keys": "huwowu sao"
+        },
+        {
+          "display": "báo gấm",
+          "keys": "baos gaams"
+        },
+        {
+          "display": "tê giác",
+          "keys": "tee giacs"
         }
       ]
     },
     {
       "id": "level_36",
-      "title": "Tình cảm gia đình",
+      "title": "Thú hoang dã nhỏ",
       "content": [
         {
-          "display": "con hiếu thảo cha mẹ vui",
-          "keys": "con hieeus thaor cha mej vui"
+          "display": "thỏ hoang",
+          "keys": "thor hoang"
         },
         {
-          "display": "gia đình hạnh phúc ấm áp",
-          "keys": "gia ddinhf hanhj phucs aams aps"
+          "display": "sóc nhỏ",
+          "keys": "socs nhor"
         },
         {
-          "display": "kính trên nhường dưới",
-          "keys": "kinhs treen nhuwowngf duwowis"
+          "display": "con cáo",
+          "keys": "con caos"
         },
         {
-          "display": "con ngoan trò giỏi",
-          "keys": "con ngoan trof gioir"
+          "display": "nhím gai",
+          "keys": "nhims gai"
+        },
+        {
+          "display": "chồn sương",
+          "keys": "choonf suwowng"
+        },
+        {
+          "display": "chuột túi",
+          "keys": "chuootj tuis"
         }
       ]
     },
     {
       "id": "level_37",
-      "title": "Vẻ đẹp quê hương",
+      "title": "Côn trùng & Sâu bọ",
       "content": [
         {
-          "display": "quê hương là chùm khế ngọt",
-          "keys": "quee huwowng laf chumf khees ngotj"
+          "display": "ong mật",
+          "keys": "ong maatj"
         },
         {
-          "display": "cánh đồng lúa chín vàng ươm",
-          "keys": "canhs ddoongf luas chins vangf uwowm"
+          "display": "kiến lửa",
+          "keys": "kieens luwar"
         },
         {
-          "display": "dòng sông xanh ngắt hiền hoà",
-          "keys": "dongf soong xanh ngawts hieenf hoaf"
+          "display": "bướm hoa",
+          "keys": "buwowms hoa"
         },
         {
-          "display": "núi non hùng vĩ bao la",
-          "keys": "nuis non hungf vix bao la"
+          "display": "ve sầu",
+          "keys": "ve saauf"
+        },
+        {
+          "display": "đom đóm",
+          "keys": "ddom ddoms"
+        },
+        {
+          "display": "chuồn chuồn",
+          "keys": "chuoonf chuoonf"
         }
       ]
     },
     {
       "id": "level_38",
-      "title": "Chăm chỉ học hành",
+      "title": "Các loài bò sát",
       "content": [
         {
-          "display": "đi một ngày đàng",
-          "keys": "ddi mootj ngayf ddangf"
+          "display": "rùa cạn",
+          "keys": "ruaf canj"
         },
         {
-          "display": "học một sàng khôn",
-          "keys": "hocj mootj sangf khoon"
+          "display": "tắc kè",
+          "keys": "tawcs kef"
         },
         {
-          "display": "sách là kho tàng tri thức",
-          "keys": "sachs laf kho tangf tri thuwcs"
+          "display": "kỳ đà",
+          "keys": "kyf ddaf"
         },
         {
-          "display": "học đi đôi với hành",
-          "keys": "hocj ddi ddooi vowis hanhf"
+          "display": "cá sấu",
+          "keys": "cas saaus"
         },
         {
-          "display": "muốn biết phải hỏi",
-          "keys": "muoons bieets phair hoir"
+          "display": "rắn cỏ",
+          "keys": "rawns cor"
+        },
+        {
+          "display": "thằn lằn",
+          "keys": "thawnf lawnf"
         }
       ]
     },
     {
       "id": "level_39",
-      "title": "Tình bạn đoàn kết",
+      "title": "Cây rừng cổ thụ",
       "content": [
         {
-          "display": "lá lành đùm lá rách",
-          "keys": "las lanhf ddumf las rachs"
+          "display": "cây sồi",
+          "keys": "caay sooif"
         },
         {
-          "display": "một cây làm chẳng nên non",
-          "keys": "mootj caay lamf chawngr neen non"
+          "display": "cây thông",
+          "keys": "caay thoong"
         },
         {
-          "display": "đoàn kết là sức mạnh",
-          "keys": "ddoanf keets laf suwcs manhj"
+          "display": "cây tùng",
+          "keys": "caay tungf"
         },
         {
-          "display": "tương thân tương ái",
-          "keys": "tuwowng thaan tuwowng ais"
+          "display": "cây tre",
+          "keys": "caay tre"
+        },
+        {
+          "display": "đại thụ",
+          "keys": "ddaij thuj"
+        },
+        {
+          "display": "cổ thụ",
+          "keys": "coor thuj"
         }
       ]
     },
     {
       "id": "level_40",
-      "title": "Thiên nhiên tươi đẹp",
+      "title": "Các loài hoa dại",
       "content": [
         {
-          "display": "hoa hồng khoe sắc thắm",
-          "keys": "hoa hoongf khoe sawcs thawms"
+          "display": "hoa sim",
+          "keys": "hoa sim"
         },
         {
-          "display": "nắng vàng rực rỡ sân trường",
-          "keys": "nawngs vangf ruwcj rowx saan truwowngf"
+          "display": "hoa ban",
+          "keys": "hoa ban"
         },
         {
-          "display": "mưa rơi tí tách trên hiên",
-          "keys": "muwa rowi tis tachs treen hieen"
+          "display": "cúc dại",
+          "keys": "cucs daij"
         },
         {
-          "display": "gió mát đêm trăng thanh",
-          "keys": "gios mats ddeem trawng thanh"
+          "display": "hoa sen",
+          "keys": "hoa sen"
+        },
+        {
+          "display": "hoa súng",
+          "keys": "hoa sungs"
+        },
+        {
+          "display": "phong lan",
+          "keys": "phong lan"
         }
       ]
     },
     {
       "id": "level_41",
-      "title": "Đạo lý làm người",
+      "title": "Bộ phận của cây",
       "content": [
         {
-          "display": "ăn quả nhớ kẻ trồng cây",
-          "keys": "awn quar nhows ker troongf caay"
+          "display": "lá xanh",
+          "keys": "las xanh"
         },
         {
-          "display": "uống nước nhớ nguồn",
-          "keys": "uoongs nuwowcs nhows nguoonf"
+          "display": "rễ cây",
+          "keys": "reex caay"
         },
         {
-          "display": "có chí thì nên",
-          "keys": "cos chis thif neen"
+          "display": "cành nhỏ",
+          "keys": "canhf nhor"
         },
         {
-          "display": "thất bại là mẹ thành công",
-          "keys": "thaats baij laf mej thanhf coong"
+          "display": "thân gỗ",
+          "keys": "thaan goox"
+        },
+        {
+          "display": "búp non",
+          "keys": "bups non"
+        },
+        {
+          "display": "quả chín",
+          "keys": "quar chins"
         }
       ]
     },
     {
       "id": "level_42",
-      "title": "Lời chúc tốt đẹp",
+      "title": "Các loài trái cây rừng",
       "content": [
         {
-          "display": "chúc mừng năm mới an khang",
-          "keys": "chucs muwngf nawm mowis an khang"
+          "display": "quả dâu",
+          "keys": "quar daau"
         },
         {
-          "display": "vạn sự như ý cát tường",
-          "keys": "vanj suwj nhuw ys cats tuwowngf"
+          "display": "quả vả",
+          "keys": "quar var"
         },
         {
-          "display": "sức khoẻ dồi dào hạnh phúc",
-          "keys": "suwcs khoer dooif daof hanhj phucs"
+          "display": "mâm xôi",
+          "keys": "maam xooi"
         },
         {
-          "display": "may mắn luôn mỉm cười",
-          "keys": "may mawns luoon mimr cuwowif"
+          "display": "bưởi rừng",
+          "keys": "buwowir ruwngf"
+        },
+        {
+          "display": "quả chuối",
+          "keys": "quar chuoois"
+        },
+        {
+          "display": "quả táo",
+          "keys": "quar taos"
         }
       ]
     },
     {
       "id": "level_43",
-      "title": "Thú vui tao nhã",
+      "title": "Các loài nấm rừng",
       "content": [
         {
-          "display": "thả diều trên đồng cỏ xanh",
-          "keys": "thar dieeuf treen ddoongf cor xanh"
+          "display": "nấm rơm",
+          "keys": "naams rowm"
         },
         {
-          "display": "tiếng sáo diều vi vu gió",
-          "keys": "tieengs saos dieeuf vi vu gios"
+          "display": "nấm hương",
+          "keys": "naams huwowng"
         },
         {
-          "display": "chạy tung tăng khắp bãi bồi",
-          "keys": "chayj tung tawng khawps baix booif"
+          "display": "nấm độc",
+          "keys": "naams ddoocj"
         },
         {
-          "display": "cánh diều bay cao tít tắp",
-          "keys": "canhs dieeuf bay cao tits tawps"
+          "display": "nấm đùi gà",
+          "keys": "naams dduif gaf"
+        },
+        {
+          "display": "linh chi",
+          "keys": "linh chi"
+        },
+        {
+          "display": "nấm tuyết",
+          "keys": "naams tuyeets"
         }
       ]
     },
     {
       "id": "level_44",
-      "title": "Chăm sóc cây cối",
+      "title": "Nguồn nước tự nhiên",
       "content": [
         {
-          "display": "tưới hoa cho lá xanh tươi",
-          "keys": "tuwowis hoa cho las xanh tuwowi"
+          "display": "dòng suối",
+          "keys": "dongf suoois"
         },
         {
-          "display": "nhổ cỏ cho cây chóng lớn",
-          "keys": "nhoor cor cho caay chongs lowns"
+          "display": "ngọn thác",
+          "keys": "ngonj thacs"
         },
         {
-          "display": "bắt sâu cho lá thêm mượt",
-          "keys": "bawts saau cho las theem muwowtj"
+          "display": "hồ nước",
+          "keys": "hoof nuwowcs"
         },
         {
-          "display": "vườn cây trái ngọt trĩu cành",
-          "keys": "vuwownf caay trais ngotj triux canhf"
+          "display": "vũng nước",
+          "keys": "vungx nuwowcs"
+        },
+        {
+          "display": "giọt sương",
+          "keys": "giotj suwowng"
+        },
+        {
+          "display": "nước mưa",
+          "keys": "nuwowcs muwa"
         }
       ]
     },
     {
       "id": "level_45",
-      "title": "Bảo vệ môi trường",
+      "title": "Đất đá & Địa hình",
       "content": [
         {
-          "display": "giữ gìn vệ sinh sạch sẽ",
-          "keys": "giuwx ginf veej sinh sachj sex"
+          "display": "vách đá",
+          "keys": "vachs ddas"
         },
         {
-          "display": "không xả rác bừa bãi nhé",
-          "keys": "khoong xar racs buwaf baix nhes"
+          "display": "hang động",
+          "keys": "hang ddoongj"
         },
         {
-          "display": "trồng thêm cây cho mát rượi",
-          "keys": "troongf theem caay cho mats ruwowij"
+          "display": "đất sét",
+          "keys": "ddaats sets"
         },
         {
-          "display": "bảo vệ nguồn nước trong xanh",
-          "keys": "baor veej nguoonf nuwowcs trong xanh"
+          "display": "sỏi đá",
+          "keys": "soir ddas"
+        },
+        {
+          "display": "đồi núi",
+          "keys": "ddooif nuis"
+        },
+        {
+          "display": "thung lũng",
+          "keys": "thung lungx"
         }
       ]
     },
     {
       "id": "level_46",
-      "title": "Trân trọng thời gian",
+      "title": "Thời tiết trong rừng",
       "content": [
         {
-          "display": "thời gian trôi đi không đợi",
-          "keys": "thowif gian trooi ddi khoong ddowij"
+          "display": "nắng sớm",
+          "keys": "nawngs sowms"
         },
         {
-          "display": "hãy trân trọng từng phút giây",
-          "keys": "hayx traan trongj tuwngf phuts giaay"
+          "display": "mưa rào",
+          "keys": "muwa raof"
         },
         {
-          "display": "chăm chỉ khi còn trẻ tuổi",
-          "keys": "chawm chir khi conf trer tuooir"
+          "display": "gió thổi",
+          "keys": "gios thooir"
         },
         {
-          "display": "tương lai tươi sáng đang chờ",
-          "keys": "tuwowng lai tuwowi sangs ddang chowf"
+          "display": "sương mù",
+          "keys": "suwowng muf"
+        },
+        {
+          "display": "mây che",
+          "keys": "maay che"
+        },
+        {
+          "display": "cầu vồng",
+          "keys": "caauf voongf"
         }
       ]
     },
     {
       "id": "level_47",
-      "title": "Ước mơ hồng",
+      "title": "Âm thanh tự nhiên",
       "content": [
         {
-          "display": "bay cao những giấc mơ hồng",
-          "keys": "bay cao nhuwngx giaacs mow hoongf"
+          "display": "chim hót",
+          "keys": "chim hots"
         },
         {
-          "display": "vươn tới những vì sao xa",
-          "keys": "vuwown towis nhuwngx vif sao xa"
+          "display": "suối reo",
+          "keys": "suoois reo"
         },
         {
-          "display": "khám phá thế giới bao la",
-          "keys": "khams phas thees giowis bao la"
+          "display": "gió thổi",
+          "keys": "gios thooir"
         },
         {
-          "display": "tự tin vững bước đường đời",
-          "keys": "tuwj tin vuwngx buwowcs dduwowngf ddowif"
+          "display": "thú gọi",
+          "keys": "thus goij"
+        },
+        {
+          "display": "lá rụng",
+          "keys": "las rungj"
+        },
+        {
+          "display": "mưa rơi",
+          "keys": "muwa rowi"
         }
       ]
     },
     {
       "id": "level_48",
-      "title": "Lòng kiên trì",
+      "title": "Cảm giác tự nhiên",
       "content": [
         {
-          "display": "nước chảy đá cũng phải mòn",
-          "keys": "nuwowcs chayr ddas cungx phair monf"
+          "display": "ấm áp",
+          "keys": "aams aps"
         },
         {
-          "display": "có công mài sắt",
-          "keys": "cos coong maif sawts"
+          "display": "mát mẻ",
+          "keys": "mats mer"
         },
         {
-          "display": "có ngày nên kim",
-          "keys": "cos ngayf neen kim"
+          "display": "lạnh giá",
+          "keys": "lanhj gias"
         },
         {
-          "display": "kiên trì sẽ gặt thành công",
-          "keys": "kieen trif sex gawtj thanhf coong"
+          "display": "ẩm ướt",
+          "keys": "aamr uwowts"
         },
         {
-          "display": "không ngại gian khổ khó khăn",
-          "keys": "khoong ngaij gian khoor khos khawn"
+          "display": "trong lành",
+          "keys": "trong lanhf"
+        },
+        {
+          "display": "dịu êm",
+          "keys": "diuj eem"
         }
       ]
     },
     {
       "id": "level_49",
-      "title": "Hạnh phúc quanh ta",
+      "title": "Màu sắc tự nhiên",
       "content": [
         {
-          "display": "niềm vui hiện diện quanh ta",
-          "keys": "nieemf vui hieenj dieenj quanh ta"
+          "display": "xanh lá",
+          "keys": "xanh las"
         },
         {
-          "display": "hạnh phúc từ những điều nhỏ",
-          "keys": "hanhj phucs tuwf nhuwngx ddieeuf nhor"
+          "display": "đỏ tươi",
+          "keys": "ddor tuwowi"
         },
         {
-          "display": "chia sẻ yêu thương cho đời",
-          "keys": "chia ser yeeu thuwowng cho ddowif"
+          "display": "vàng nhạt",
+          "keys": "vangf nhatj"
         },
         {
-          "display": "cuộc sống tươi đẹp biết bao",
-          "keys": "cuoocj soongs tuwowi ddepj bieets bao"
+          "display": "nâu đất",
+          "keys": "naau ddaats"
+        },
+        {
+          "display": "trắng xoá",
+          "keys": "trawngs xoas"
+        },
+        {
+          "display": "tím biếc",
+          "keys": "tims bieecs"
         }
       ]
     },
     {
       "id": "level_50",
-      "title": "Lời hay ý đẹp",
+      "title": "Ánh sáng & Bóng tối",
       "content": [
         {
-          "display": "lời nói chẳng mất tiền mua",
-          "keys": "lowif nois chawngr maats tieenf mua"
+          "display": "ánh nắng",
+          "keys": "anhs nawngs"
         },
         {
-          "display": "lựa lời mà nói",
-          "keys": "luwaj lowif maf nois"
+          "display": "bóng râm",
+          "keys": "bongs raam"
         },
         {
-          "display": "cho vừa lòng nhau",
-          "keys": "cho vuwaf longf nhau"
+          "display": "hoàng hôn",
+          "keys": "hoangf hoon"
         },
         {
-          "display": "người khôn nói tiếng dịu dàng",
-          "keys": "nguwowif khoon nois tieengs diuj dangf"
+          "display": "bình minh",
+          "keys": "binhf minh"
+        },
+        {
+          "display": "trăng sáng",
+          "keys": "trawng sangs"
+        },
+        {
+          "display": "sao đêm",
+          "keys": "sao ddeem"
         }
       ]
     },
     {
       "id": "level_51",
-      "title": "Tình yêu động vật",
+      "title": "Các mùa trong năm",
       "content": [
         {
-          "display": "con mèo lười nằm sưởi nắng",
-          "keys": "con meof luwowif nawmf suwowir nawngs"
+          "display": "mùa xuân",
+          "keys": "muaf xuaan"
         },
         {
-          "display": "chú chó nhỏ sủa gâu gâu",
-          "keys": "chus chos nhor suar gaau gaau"
+          "display": "mùa hạ",
+          "keys": "muaf haj"
         },
         {
-          "display": "đàn gà con lông vàng óng",
-          "keys": "ddanf gaf con loong vangf ongs"
+          "display": "mùa thu",
+          "keys": "muaf thu"
         },
         {
-          "display": "chim hót líu lo đầu cành",
-          "keys": "chim hots lius lo ddaauf canhf"
+          "display": "mùa đông",
+          "keys": "muaf ddoong"
+        },
+        {
+          "display": "giao mùa",
+          "keys": "giao muaf"
+        },
+        {
+          "display": "ngày mưa",
+          "keys": "ngayf muwa"
         }
       ]
     },
     {
       "id": "level_52",
-      "title": "Mùa hè rực rỡ",
+      "title": "Dụng cụ đi rừng",
       "content": [
         {
-          "display": "tiếng ve kêu râm ran hè",
-          "keys": "tieengs ve keeu raam ran hef"
+          "display": "ba lô",
+          "keys": "ba loo"
         },
         {
-          "display": "hoa phượng vĩ đỏ rực trời",
-          "keys": "hoa phuwowngj vix ddor ruwcj trowif"
+          "display": "la bàn",
+          "keys": "la banf"
         },
         {
-          "display": "em đi biển cùng gia đình",
-          "keys": "em ddi bieenr cungf gia ddinhf"
+          "display": "đèn pin",
+          "keys": "ddenf pin"
         },
         {
-          "display": "bầu trời xanh ngắt nắng vàng",
-          "keys": "baauf trowif xanh ngawts nawngs vangf"
+          "display": "dây thừng",
+          "keys": "daay thuwngf"
+        },
+        {
+          "display": "bản đồ",
+          "keys": "banr ddoof"
+        },
+        {
+          "display": "bình nước",
+          "keys": "binhf nuwowcs"
         }
       ]
     },
     {
       "id": "level_53",
-      "title": "Mùa thu dịu dàng",
+      "title": "Hoạt động khám phá",
       "content": [
         {
-          "display": "lá vàng rơi nhẹ trên đường",
-          "keys": "las vangf rowi nhej treen dduwowngf"
+          "display": "đi bộ",
+          "keys": "ddi booj"
         },
         {
-          "display": "gió thu thổi mát tâm hồn",
-          "keys": "gios thu thooir mats taam hoonf"
+          "display": "leo núi",
+          "keys": "leo nuis"
         },
         {
-          "display": "cánh đồng lúa chín thơm hương",
-          "keys": "canhs ddoongf luas chins thowm huwowng"
+          "display": "cắm trại",
+          "keys": "cawms traij"
         },
         {
-          "display": "bầu trời thu trong xanh quá",
-          "keys": "baauf trowif thu trong xanh quas"
+          "display": "ngắm cảnh",
+          "keys": "ngawms canhr"
+        },
+        {
+          "display": "chụp ảnh",
+          "keys": "chupj anhr"
+        },
+        {
+          "display": "băng rừng",
+          "keys": "bawng ruwngf"
         }
       ]
     },
     {
       "id": "level_54",
-      "title": "Mùa đông ấm áp",
+      "title": "Thành viên gia đình",
       "content": [
         {
-          "display": "bên bếp lửa hồng ấm áp",
-          "keys": "been beeps luwar hoongf aams aps"
+          "display": "ông bà",
+          "keys": "oong baf"
         },
         {
-          "display": "gió đông thổi lạnh ngoài kia",
-          "keys": "gios ddoong thooir lanhj ngoaif kia"
+          "display": "cha mẹ",
+          "keys": "cha mej"
         },
         {
-          "display": "em mặc áo len dày ấm",
-          "keys": "em mawcj aos len dayf aams"
+          "display": "anh em",
+          "keys": "anh em"
         },
         {
-          "display": "mọi người quây quần bên nhau",
-          "keys": "moij nguwowif quaay quaanf been nhau"
+          "display": "chị em",
+          "keys": "chij em"
+        },
+        {
+          "display": "cô chú",
+          "keys": "coo chus"
+        },
+        {
+          "display": "con cháu",
+          "keys": "con chaus"
         }
       ]
     },
     {
       "id": "level_55",
-      "title": "Mùa xuân tươi mới",
+      "title": "Đồ gỗ trong nhà",
       "content": [
         {
-          "display": "hoa mai nở rộ đón xuân",
-          "keys": "hoa mai nowr rooj ddons xuaan"
+          "display": "bàn gỗ",
+          "keys": "banf goox"
         },
         {
-          "display": "chim én bay về báo tin",
-          "keys": "chim ens bay veef baos tin"
+          "display": "ghế tựa",
+          "keys": "ghees tuwaj"
         },
         {
-          "display": "bé mặc quần áo mới",
-          "keys": "bes mawcj quaanf aos mowis"
+          "display": "giường ngủ",
+          "keys": "giuwowngf ngur"
         },
         {
-          "display": "cả nhà đi chúc tết ông",
-          "keys": "car nhaf ddi chucs teets oong"
+          "display": "tủ bếp",
+          "keys": "tur beeps"
+        },
+        {
+          "display": "cửa sổ",
+          "keys": "cuwar soor"
+        },
+        {
+          "display": "kệ sách",
+          "keys": "keej sachs"
         }
       ]
     },
     {
       "id": "level_56",
-      "title": "Kỷ niệm trường xưa",
+      "title": "Thiết bị gia dụng",
       "content": [
         {
-          "display": "hàng phượng vĩ đỏ thắm",
-          "keys": "hangf phuwowngj vix ddor thawms"
+          "display": "tủ lạnh",
+          "keys": "tur lanhj"
         },
         {
-          "display": "kỷ niệm ngày đầu đến lớp",
-          "keys": "kyr nieemj ngayf ddaauf ddeens lowps"
+          "display": "quạt máy",
+          "keys": "quatj mays"
         },
         {
-          "display": "thầy cô tận tình dạy bảo",
-          "keys": "thaayf coo taanj tinhf dayj baor"
+          "display": "đèn bàn",
+          "keys": "ddenf banf"
         },
         {
-          "display": "bạn bè cùng nhau tiến bộ",
-          "keys": "banj bef cungf nhau tieens booj"
+          "display": "bếp ga",
+          "keys": "beeps ga"
+        },
+        {
+          "display": "nồi cơm",
+          "keys": "nooif cowm"
+        },
+        {
+          "display": "phích nước",
+          "keys": "phichs nuwowcs"
         }
       ]
     },
     {
       "id": "level_57",
-      "title": "Tình yêu biển đảo",
+      "title": "Đồ dùng cá nhân",
       "content": [
         {
-          "display": "biển xanh sóng vỗ dạt dào",
-          "keys": "bieenr xanh songs voox datj daof"
+          "display": "quần áo",
+          "keys": "quaanf aos"
         },
         {
-          "display": "thuyền cá về bến đầy khoang",
-          "keys": "thuyeenf cas veef beens ddaayf khoang"
+          "display": "giày dép",
+          "keys": "giayf deps"
         },
         {
-          "display": "những hòn đảo xa vẫy gọi",
-          "keys": "nhuwngx honf ddaor xa vaayx goij"
+          "display": "mũ nón",
+          "keys": "mux nons"
         },
         {
-          "display": "ngư dân bám biển quê hương",
-          "keys": "nguw daan bams bieenr quee huwowng"
+          "display": "kính mắt",
+          "keys": "kinhs mawts"
+        },
+        {
+          "display": "đồng hồ",
+          "keys": "ddoongf hoof"
+        },
+        {
+          "display": "ví tiền",
+          "keys": "vis tieenf"
         }
       ]
     },
     {
       "id": "level_58",
-      "title": "Cánh đồng quê em",
+      "title": "Đồ dùng nhà bếp",
       "content": [
         {
-          "display": "cánh đồng lúa rộng mênh mông",
-          "keys": "canhs ddoongf luas roongj meenh moong"
+          "display": "chén bát",
+          "keys": "chens bats"
         },
         {
-          "display": "đàn cò bay lả bay la",
-          "keys": "ddanf cof bay lar bay la"
+          "display": "thìa muỗng",
+          "keys": "thiaf muoongx"
         },
         {
-          "display": "hương lúa thơm nồng trong gió",
-          "keys": "huwowng luas thowm noongf trong gios"
+          "display": "nồi niêu",
+          "keys": "nooif nieeu"
         },
         {
-          "display": "nông dân hăng hái cày bừa",
-          "keys": "noong daan hawng hais cayf buwaf"
+          "display": "dao kéo",
+          "keys": "dao keos"
+        },
+        {
+          "display": "thớt gỗ",
+          "keys": "thowts goox"
+        },
+        {
+          "display": "rổ tre",
+          "keys": "roor tre"
         }
       ]
     },
     {
       "id": "level_59",
-      "title": "Những con đường nhỏ",
+      "title": "Món ăn bữa chính",
       "content": [
         {
-          "display": "đường làng uốn lượn quanh co",
-          "keys": "dduwowngf langf uoons luwownj quanh co"
+          "display": "cơm nóng",
+          "keys": "cowm nongs"
         },
         {
-          "display": "hàng cây xanh mát rợp bóng",
-          "keys": "hangf caay xanh mats rowpj bongs"
+          "display": "canh rau",
+          "keys": "canh rau"
         },
         {
-          "display": "tiếng cười vang dậy xóm nhỏ",
-          "keys": "tieengs cuwowif vang daayj xoms nhor"
+          "display": "cá kho",
+          "keys": "cas kho"
         },
         {
-          "display": "bé đi học trên đường quê",
-          "keys": "bes ddi hocj treen dduwowngf quee"
+          "display": "thịt luộc",
+          "keys": "thitj luoocj"
+        },
+        {
+          "display": "trứng rán",
+          "keys": "truwngs rans"
+        },
+        {
+          "display": "đậu phụ",
+          "keys": "ddaauj phuj"
         }
       ]
     },
     {
       "id": "level_60",
-      "title": "Trò chơi dân gian",
+      "title": "Món ăn nhẹ & Tráng miệng",
       "content": [
         {
-          "display": "rồng rắn lên mây rộn rã",
-          "keys": "roongf rawns leen maay roonj rax"
+          "display": "bánh ngọt",
+          "keys": "banhs ngotj"
         },
         {
-          "display": "chi chi chành chành vui quá",
-          "keys": "chi chi chanhf chanhf vui quas"
+          "display": "sữa chua",
+          "keys": "suwax chua"
         },
         {
-          "display": "thả diều bắt bướm trên đồng",
-          "keys": "thar dieeuf bawts buwowms treen ddoongf"
+          "display": "chè đỗ",
+          "keys": "chef ddoox"
         },
         {
-          "display": "tuổi thơ dữ dội ngọt ngào",
-          "keys": "tuooir thow duwx dooij ngotj ngaof"
+          "display": "khoai nướng",
+          "keys": "khoai nuwowngs"
+        },
+        {
+          "display": "ngô luộc",
+          "keys": "ngoo luoocj"
+        },
+        {
+          "display": "kẹo ngọt",
+          "keys": "keoj ngotj"
         }
       ]
     },
     {
       "id": "level_61",
-      "title": "Nghề nghiệp tương lai",
+      "title": "Đồ uống giải khát",
       "content": [
         {
-          "display": "em mơ làm bác sĩ giỏi",
-          "keys": "em mow lamf bacs six gioir"
+          "display": "nước lọc",
+          "keys": "nuwowcs locj"
         },
         {
-          "display": "chữa bệnh giúp đỡ mọi người",
-          "keys": "chuwax beenhj giups ddowx moij nguwowif"
+          "display": "nước cam",
+          "keys": "nuwowcs cam"
         },
         {
-          "display": "ước mơ làm chú công an",
-          "keys": "uwowcs mow lamf chus coong an"
+          "display": "sữa tươi",
+          "keys": "suwax tuwowi"
         },
         {
-          "display": "bảo vệ bình yên phố phường",
-          "keys": "baor veej binhf yeen phoos phuwowngf"
+          "display": "trà nóng",
+          "keys": "traf nongs"
+        },
+        {
+          "display": "nước mía",
+          "keys": "nuwowcs mias"
+        },
+        {
+          "display": "nước dừa",
+          "keys": "nuwowcs duwaf"
         }
       ]
     },
     {
       "id": "level_62",
-      "title": "Bảo vệ hành tinh",
+      "title": "Trái cây vườn nhà",
       "content": [
         {
-          "display": "cùng nhau bảo vệ trái đất",
-          "keys": "cungf nhau baor veej trais ddaats"
+          "display": "quả đu đủ",
+          "keys": "quar ddu ddur"
         },
         {
-          "display": "trồng thêm thật nhiều cây xanh",
-          "keys": "troongf theem thaatj nhieeuf caay xanh"
+          "display": "quả xoài",
+          "keys": "quar xoaif"
         },
         {
-          "display": "tiết kiệm nước sạch bạn nhé",
-          "keys": "tieets kieemj nuwowcs sachj banj nhes"
+          "display": "quả mít",
+          "keys": "quar mits"
         },
         {
-          "display": "giữ cho môi trường luôn sạch",
-          "keys": "giuwx cho mooi truwowngf luoon sachj"
+          "display": "quả cam",
+          "keys": "quar cam"
+        },
+        {
+          "display": "quả nhãn",
+          "keys": "quar nhanx"
+        },
+        {
+          "display": "quả vải",
+          "keys": "quar vair"
         }
       ]
     },
     {
       "id": "level_63",
-      "title": "Niềm vui đến trường",
+      "title": "Rau củ nấu canh",
       "content": [
         {
-          "display": "tung tăng chân bước đến trường",
-          "keys": "tung tawng chaan buwowcs ddeens truwowngf"
+          "display": "rau cải",
+          "keys": "rau cair"
         },
         {
-          "display": "sách vở nằm gọn trong cặp",
-          "keys": "sachs vowr nawmf gonj trong cawpj"
+          "display": "bí ngô",
+          "keys": "bis ngoo"
         },
         {
-          "display": "gặp thầy gặp bạn thật vui",
-          "keys": "gawpj thaayf gawpj banj thaatj vui"
+          "display": "cà chua",
+          "keys": "caf chua"
         },
         {
-          "display": "mỗi ngày học thêm điều mới",
-          "keys": "mooix ngayf hocj theem ddieeuf mowis"
+          "display": "bắp cải",
+          "keys": "bawps cair"
+        },
+        {
+          "display": "củ cải",
+          "keys": "cur cair"
+        },
+        {
+          "display": "khoai tây",
+          "keys": "khoai taay"
         }
       ]
     },
     {
       "id": "level_64",
-      "title": "Những vì sao đêm",
+      "title": "Gia vị nấu ăn",
       "content": [
         {
-          "display": "lấp lánh những vì sao đêm",
-          "keys": "laaps lanhs nhuwngx vif sao ddeem"
+          "display": "muối ăn",
+          "keys": "muoois awn"
         },
         {
-          "display": "chị hằng ngồi gốc cây đa",
-          "keys": "chij hawngf ngooif goocs caay dda"
+          "display": "đường cát",
+          "keys": "dduwowngf cats"
         },
         {
-          "display": "ánh trăng soi sáng sân nhà",
-          "keys": "anhs trawng soi sangs saan nhaf"
+          "display": "nước mắm",
+          "keys": "nuwowcs mawms"
         },
         {
-          "display": "ngàn vì sao sáng lung linh",
-          "keys": "nganf vif sao sangs lung linh"
+          "display": "hành tỏi",
+          "keys": "hanhf toir"
+        },
+        {
+          "display": "củ gừng",
+          "keys": "cur guwngf"
+        },
+        {
+          "display": "quả ớt",
+          "keys": "quar owts"
         }
       ]
     },
     {
       "id": "level_65",
-      "title": "Vườn rau của bé",
+      "title": "Phòng ốc trong nhà",
       "content": [
         {
-          "display": "màu xanh tươi mát vườn rau",
-          "keys": "mauf xanh tuwowi mats vuwownf rau"
+          "display": "phòng khách",
+          "keys": "phongf khachs"
         },
         {
-          "display": "bắp cải xanh mướt mượt mà",
-          "keys": "bawps cair xanh muwowts muwowtj maf"
+          "display": "phòng ngủ",
+          "keys": "phongf ngur"
         },
         {
-          "display": "quả cà chua chín đỏ mọng",
-          "keys": "quar caf chua chins ddor mongj"
+          "display": "nhà bếp",
+          "keys": "nhaf beeps"
         },
         {
-          "display": "luống rau thơm ngát hương quê",
-          "keys": "luoongs rau thowm ngats huwowng quee"
+          "display": "nhà tắm",
+          "keys": "nhaf tawms"
+        },
+        {
+          "display": "sân trước",
+          "keys": "saan truwowcs"
+        },
+        {
+          "display": "vườn sau",
+          "keys": "vuwownf sau"
         }
       ]
     },
     {
       "id": "level_66",
-      "title": "Thể thao rèn luyện",
+      "title": "Đồ chơi trẻ em",
       "content": [
         {
-          "display": "chạy bộ mỗi sáng sớm mai",
-          "keys": "chayj booj mooix sangs sowms mai"
+          "display": "gấu bông",
+          "keys": "gaaus boong"
         },
         {
-          "display": "sức khoẻ là vàng bạn nhé",
-          "keys": "suwcs khoer laf vangf banj nhes"
+          "display": "búp bê",
+          "keys": "bups bee"
         },
         {
-          "display": "đá bóng cùng bạn thật vui",
-          "keys": "ddas bongs cungf banj thaatj vui"
+          "display": "bóng nhựa",
+          "keys": "bongs nhuwaj"
         },
         {
-          "display": "rèn luyện thân thể dẻo dai",
-          "keys": "renf luyeenj thaan theer deor dai"
+          "display": "xếp hình",
+          "keys": "xeeps hinhf"
+        },
+        {
+          "display": "ô tô",
+          "keys": "oo too"
+        },
+        {
+          "display": "thả diều",
+          "keys": "thar dieeuf"
         }
       ]
     },
     {
       "id": "level_67",
-      "title": "Lòng tốt quanh ta",
+      "title": "Hoạt động gia đình",
       "content": [
         {
-          "display": "giúp đỡ cụ già qua đường",
-          "keys": "giups ddowx cuj giaf qua dduwowngf"
+          "display": "dọn dẹp",
+          "keys": "donj depj"
         },
         {
-          "display": "nhường chỗ cho người cần hơn",
-          "keys": "nhuwowngf choox cho nguwowif caanf hown"
+          "display": "nấu ăn",
+          "keys": "naaus awn"
         },
         {
-          "display": "lời chào đi trước niềm vui",
-          "keys": "lowif chaof ddi truwowcs nieemf vui"
+          "display": "rửa bát",
+          "keys": "ruwar bats"
         },
         {
-          "display": "sống đẹp lòng người biết bao",
-          "keys": "soongs ddepj longf nguwowif bieets bao"
+          "display": "quét nhà",
+          "keys": "quets nhaf"
+        },
+        {
+          "display": "tưới cây",
+          "keys": "tuwowis caay"
+        },
+        {
+          "display": "lau nhà",
+          "keys": "lau nhaf"
         }
       ]
     },
     {
       "id": "level_68",
-      "title": "Nghệ thuật sáng tạo",
+      "title": "Thú cưng quen thuộc",
       "content": [
         {
-          "display": "vẽ tranh tô điểm cuộc đời",
-          "keys": "vex tranh too ddieemr cuoocj ddowif"
+          "display": "con mèo",
+          "keys": "con meof"
         },
         {
-          "display": "màu sắc rực rỡ vui tươi",
-          "keys": "mauf sawcs ruwcj rowx vui tuwowi"
+          "display": "con chó",
+          "keys": "con chos"
         },
         {
-          "display": "những nốt nhạc vang rộn rã",
-          "keys": "nhuwngx noots nhacj vang roonj rax"
+          "display": "chú thỏ",
+          "keys": "chus thor"
         },
         {
-          "display": "nghệ thuật làm đẹp tâm hồn",
-          "keys": "ngheej thuaatj lamf ddepj taam hoonf"
+          "display": "cá vàng",
+          "keys": "cas vangf"
+        },
+        {
+          "display": "chim sáo",
+          "keys": "chim saos"
+        },
+        {
+          "display": "rùa nhỏ",
+          "keys": "ruaf nhor"
         }
       ]
     },
     {
       "id": "level_69",
-      "title": "Khám phá không gian",
+      "title": "Đồ dùng học tập",
       "content": [
         {
-          "display": "con tàu bay vào vũ trụ",
-          "keys": "con tauf bay vaof vux truj"
+          "display": "bút chì",
+          "keys": "buts chif"
         },
         {
-          "display": "khám phá những hành tinh xa",
-          "keys": "khams phas nhuwngx hanhf tinh xa"
+          "display": "thước kẻ",
+          "keys": "thuwowcs ker"
         },
         {
-          "display": "phi hành gia thật dũng cảm",
-          "keys": "phi hanhf gia thaatj dungx camr"
+          "display": "sách bài",
+          "keys": "sachs baif"
         },
         {
-          "display": "khoa học soi sáng tương lai",
-          "keys": "khoa hocj soi sangs tuwowng lai"
+          "display": "vở ghi",
+          "keys": "vowr ghi"
+        },
+        {
+          "display": "hộp bút",
+          "keys": "hoopj buts"
+        },
+        {
+          "display": "tẩy chì",
+          "keys": "taayr chif"
         }
       ]
     },
     {
       "id": "level_70",
-      "title": "Tương lai rạng ngời",
+      "title": "Môn học tiểu học",
       "content": [
         {
-          "display": "cùng nhau xây dựng ngày mai",
-          "keys": "cungf nhau xaay duwngj ngayf mai"
+          "display": "toán học",
+          "keys": "toans hocj"
         },
         {
-          "display": "đất nước ngày càng giàu đẹp",
-          "keys": "ddaats nuwowcs ngayf cangf giauf ddepj"
+          "display": "văn học",
+          "keys": "vawn hocj"
         },
         {
-          "display": "tri thức chắp cánh ước mơ",
-          "keys": "tri thuwcs chawps canhs uwowcs mow"
+          "display": "lịch sử",
+          "keys": "lichj suwr"
         },
         {
-          "display": "vững bước tiến vào kỷ nguyên",
-          "keys": "vuwngx buwowcs tieens vaof kyr nguyeen"
+          "display": "địa lý",
+          "keys": "ddiaj lys"
+        },
+        {
+          "display": "âm nhạc",
+          "keys": "aam nhacj"
+        },
+        {
+          "display": "mỹ thuật",
+          "keys": "myx thuaatj"
         }
       ]
     },
     {
       "id": "level_71",
-      "title": "Đoàn kết",
+      "title": "Góc học tập",
       "content": [
         {
-          "display": "gần mực thì đen",
-          "keys": "gaanf muwcj thif dden"
+          "display": "bàn học",
+          "keys": "banf hocj"
         },
         {
-          "display": "gần đèn thì sáng",
-          "keys": "gaanf ddenf thif sangs"
+          "display": "đèn học",
+          "keys": "ddenf hocj"
         },
         {
-          "display": "chị ngã em nâng",
-          "keys": "chij ngax em naang"
+          "display": "giá sách",
+          "keys": "gias sachs"
         },
         {
-          "display": "môi hở răng lạnh",
-          "keys": "mooi howr rawng lanhj"
+          "display": "máy tính",
+          "keys": "mays tinhs"
+        },
+        {
+          "display": "bảng vẽ",
+          "keys": "bangr vex"
+        },
+        {
+          "display": "hộp màu",
+          "keys": "hoopj mauf"
         }
       ]
     },
     {
       "id": "level_72",
-      "title": "Học tập",
+      "title": "Khuôn viên trường",
       "content": [
         {
-          "display": "học thầy không tày học bạn",
-          "keys": "hocj thaayf khoong tayf hocj banj"
+          "display": "lớp học",
+          "keys": "lowps hocj"
         },
         {
-          "display": "tiên học lễ hậu học văn",
-          "keys": "tieen hocj leex haauj hocj vawn"
+          "display": "sân trường",
+          "keys": "saan truwowngf"
         },
         {
-          "display": "muốn lành nghề phải chăm học",
-          "keys": "muoons lanhf ngheef phair chawm hocj"
+          "display": "thư viện",
+          "keys": "thuw vieenj"
         },
         {
-          "display": "kiến tha lâu cũng đầy tổ",
-          "keys": "kieens tha laau cungx ddaayf toor"
+          "display": "nhà xe",
+          "keys": "nhaf xe"
+        },
+        {
+          "display": "cổng trường",
+          "keys": "coongr truwowngf"
+        },
+        {
+          "display": "vườn hoa",
+          "keys": "vuwownf hoa"
         }
       ]
     },
     {
       "id": "level_73",
-      "title": "Lòng biết ơn",
+      "title": "Thầy cô & Nhân sự",
       "content": [
         {
-          "display": "trọng thầy mới được làm thầy",
-          "keys": "trongj thaayf mowis dduwowcj lamf thaayf"
+          "display": "thầy giáo",
+          "keys": "thaayf giaos"
         },
         {
-          "display": "nhớ người cho cá cho cơm",
-          "keys": "nhows nguwowif cho cas cho cowm"
+          "display": "cô giáo",
+          "keys": "coo giaos"
         },
         {
-          "display": "ơn cha nghĩa mẹ cao vời",
-          "keys": "own cha nghiax mej cao vowif"
+          "display": "bảo vệ",
+          "keys": "baor veej"
         },
         {
-          "display": "đền đáp công ơn thầy cô",
-          "keys": "ddeenf ddaps coong own thaayf coo"
+          "display": "lao công",
+          "keys": "lao coong"
+        },
+        {
+          "display": "hiệu trưởng",
+          "keys": "hieeuj truwowngr"
+        },
+        {
+          "display": "học sinh",
+          "keys": "hocj sinh"
         }
       ]
     },
     {
       "id": "level_74",
-      "title": "Tính trung thực",
+      "title": "Bạn bè & Đội nhóm",
       "content": [
         {
-          "display": "đói cho sạch rách cho thơm",
-          "keys": "ddois cho sachj rachs cho thowm"
+          "display": "bạn thân",
+          "keys": "banj thaan"
         },
         {
-          "display": "thẳng như ruột ngựa",
-          "keys": "thawngr nhuw ruootj nguwaj"
+          "display": "bạn học",
+          "keys": "banj hocj"
         },
         {
-          "display": "một lần bất tín",
-          "keys": "mootj laanf baats tins"
+          "display": "lớp trưởng",
+          "keys": "lowps truwowngr"
         },
         {
-          "display": "vạn lần bất tin",
-          "keys": "vanj laanf baats tin"
+          "display": "tổ trưởng",
+          "keys": "toor truwowngr"
+        },
+        {
+          "display": "đội viên",
+          "keys": "ddooij vieen"
+        },
+        {
+          "display": "nhóm bạn",
+          "keys": "nhoms banj"
         }
       ]
     },
     {
       "id": "level_75",
-      "title": "Sự kiên trì",
+      "title": "Hình khối cơ bản",
       "content": [
         {
-          "display": "có công mài sắt",
-          "keys": "cos coong maif sawts"
+          "display": "hình tròn",
+          "keys": "hinhf tronf"
         },
         {
-          "display": "có ngày nên kim",
-          "keys": "cos ngayf neen kim"
+          "display": "hình vuông",
+          "keys": "hinhf vuoong"
         },
         {
-          "display": "chớ thấy sóng cả",
-          "keys": "chows thaays songs car"
+          "display": "tam giác",
+          "keys": "tam giacs"
         },
         {
-          "display": "mà ngã tay chèo",
-          "keys": "maf ngax tay cheof"
+          "display": "chữ nhật",
+          "keys": "chuwx nhaatj"
+        },
+        {
+          "display": "hình thoi",
+          "keys": "hinhf thoi"
+        },
+        {
+          "display": "hình sao",
+          "keys": "hinhf sao"
         }
       ]
     },
     {
       "id": "level_76",
-      "title": "Tình anh em",
+      "title": "Số đếm & Toán học",
       "content": [
         {
-          "display": "anh em như thể tay chân",
-          "keys": "anh em nhuw theer tay chaan"
+          "display": "phép cộng",
+          "keys": "pheps coongj"
         },
         {
-          "display": "rách lành đùm bọc",
-          "keys": "rachs lanhf ddumf bocj"
+          "display": "phép trừ",
+          "keys": "pheps truwf"
         },
         {
-          "display": "dở hay đỡ đần",
-          "keys": "dowr hay ddowx ddaanf"
+          "display": "phép nhân",
+          "keys": "pheps nhaan"
         },
         {
-          "display": "thuận vợ thuận chồng",
-          "keys": "thuaanj vowj thuaanj choongf"
+          "display": "phép chia",
+          "keys": "pheps chia"
+        },
+        {
+          "display": "chữ số",
+          "keys": "chuwx soos"
+        },
+        {
+          "display": "kết quả",
+          "keys": "keets quar"
         }
       ]
     },
     {
       "id": "level_77",
-      "title": "Đạo làm người",
+      "title": "Hoạt động học tập",
       "content": [
         {
-          "display": "giấy rách phải giữ lấy lề",
-          "keys": "giaays rachs phair giuwx laays leef"
+          "display": "đọc sách",
+          "keys": "ddocj sachs"
         },
         {
-          "display": "tôn sư trọng đạo",
-          "keys": "toon suw trongj ddaoj"
+          "display": "viết bài",
+          "keys": "vieets baif"
         },
         {
-          "display": "thương người như thể thương thân",
-          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan"
+          "display": "nghe giảng",
+          "keys": "nghe giangr"
         },
         {
-          "display": "bầu ơi thương lấy bí cùng",
-          "keys": "baauf owi thuwowng laays bis cungf"
+          "display": "phát biểu",
+          "keys": "phats bieeur"
+        },
+        {
+          "display": "làm bài",
+          "keys": "lamf baif"
+        },
+        {
+          "display": "ôn tập",
+          "keys": "oon taapj"
         }
       ]
     },
     {
       "id": "level_78",
-      "title": "Kinh nghiệm sống",
+      "title": "Hoạt động giờ chơi",
       "content": [
         {
-          "display": "thức khuya mới biết đêm dài",
-          "keys": "thuwcs khuya mowis bieets ddeem daif"
+          "display": "đá cầu",
+          "keys": "ddas caauf"
         },
         {
-          "display": "ở lâu mới biết lòng người",
-          "keys": "owr laau mowis bieets longf nguwowif"
+          "display": "nhảy dây",
+          "keys": "nhayr daay"
         },
         {
-          "display": "một kho vàng không bằng",
-          "keys": "mootj kho vangf khoong bawngf"
+          "display": "đuổi bắt",
+          "keys": "dduooir bawts"
         },
         {
-          "display": "một nang chữ",
-          "keys": "mootj nang chuwx"
+          "display": "trốn tìm",
+          "keys": "troons timf"
+        },
+        {
+          "display": "trò chuyện",
+          "keys": "trof chuyeenj"
+        },
+        {
+          "display": "đọc báo",
+          "keys": "ddocj baos"
         }
       ]
     },
     {
       "id": "level_79",
-      "title": "Đức tính tốt",
+      "title": "Thi cử & Đánh giá",
       "content": [
         {
-          "display": "thắng không kiêu",
-          "keys": "thawngs khoong kieeu"
+          "display": "bài thi",
+          "keys": "baif thi"
         },
         {
-          "display": "bại không nản",
-          "keys": "baij khoong nanr"
+          "display": "điểm số",
+          "keys": "ddieemr soos"
         },
         {
-          "display": "khiêm tốn là tự trọng",
-          "keys": "khieem toons laf tuwj trongj"
+          "display": "khen thưởng",
+          "keys": "khen thuwowngr"
         },
         {
-          "display": "ở hiền gặp lành",
-          "keys": "owr hieenf gawpj lanhf"
+          "display": "kỷ luật",
+          "keys": "kyr luaatj"
+        },
+        {
+          "display": "thi đua",
+          "keys": "thi ddua"
+        },
+        {
+          "display": "chứng chỉ",
+          "keys": "chuwngs chir"
         }
       ]
     },
     {
       "id": "level_80",
-      "title": "Lời ăn tiếng nói",
+      "title": "Đồ dùng mỹ thuật",
       "content": [
         {
-          "display": "lời chào cao hơn mâm cỗ",
-          "keys": "lowif chaof cao hown maam coox"
+          "display": "bút màu",
+          "keys": "buts mauf"
         },
         {
-          "display": "một câu nhịn chín câu lành",
-          "keys": "mootj caau nhinj chins caau lanhf"
+          "display": "giấy vẽ",
+          "keys": "giaays vex"
         },
         {
-          "display": "ăn có nhai nói có nghĩ",
-          "keys": "awn cos nhai nois cos nghix"
+          "display": "đất nặn",
+          "keys": "ddaats nawnj"
         },
         {
-          "display": "lời nói gió bay",
-          "keys": "lowif nois gios bay"
+          "display": "thủ công",
+          "keys": "thur coong"
+        },
+        {
+          "display": "hồ dán",
+          "keys": "hoof dans"
+        },
+        {
+          "display": "cọ vẽ",
+          "keys": "coj vex"
         }
       ]
     },
     {
       "id": "level_81",
-      "title": "Quan hệ xóm giềng",
+      "title": "Nhạc cụ âm nhạc",
       "content": [
         {
-          "display": "bán anh em xa",
-          "keys": "bans anh em xa"
+          "display": "đàn tranh",
+          "keys": "ddanf tranh"
         },
         {
-          "display": "mua láng giềng gần",
-          "keys": "mua langs gieengf gaanf"
+          "display": "sáo trúc",
+          "keys": "saos trucs"
         },
         {
-          "display": "tình làng nghĩa xóm",
-          "keys": "tinhf langf nghiax xoms"
+          "display": "trống trường",
+          "keys": "troongs truwowngf"
         },
         {
-          "display": "tối lửa tắt đèn có nhau",
-          "keys": "toois luwar tawts ddenf cos nhau"
+          "display": "kèn nhỏ",
+          "keys": "kenf nhor"
+        },
+        {
+          "display": "đàn ghi ta",
+          "keys": "ddanf ghi ta"
+        },
+        {
+          "display": "dương cầm",
+          "keys": "duwowng caamf"
         }
       ]
     },
     {
       "id": "level_82",
-      "title": "Ý chí vươn lên",
+      "title": "Hoạt động thể chất",
       "content": [
         {
-          "display": "dám nghĩ dám làm",
-          "keys": "dams nghix dams lamf"
+          "display": "chạy bộ",
+          "keys": "chayj booj"
         },
         {
-          "display": "vạn sự khởi đầu nan",
-          "keys": "vanj suwj khowir ddaauf nan"
+          "display": "thể dục",
+          "keys": "theer ducj"
         },
         {
-          "display": "gian nan tỏ mặt anh hùng",
-          "keys": "gian nan tor mawtj anh hungf"
+          "display": "bóng đá",
+          "keys": "bongs ddas"
         },
         {
-          "display": "mưu sự tại nhân",
-          "keys": "muwu suwj taij nhaan"
+          "display": "bơi lội",
+          "keys": "bowi looij"
+        },
+        {
+          "display": "cầu lông",
+          "keys": "caauf loong"
+        },
+        {
+          "display": "cờ vua",
+          "keys": "cowf vua"
         }
       ]
     },
     {
       "id": "level_83",
-      "title": "Tiết kiệm & Tích lũy",
+      "title": "Sự kiện trường lớp",
       "content": [
         {
-          "display": "tích tiểu thành đại",
-          "keys": "tichs tieeur thanhf ddaij"
+          "display": "khai giảng",
+          "keys": "khai giangr"
         },
         {
-          "display": "góp gió thành bão",
-          "keys": "gops gios thanhf baox"
+          "display": "bế giảng",
+          "keys": "bees giangr"
         },
         {
-          "display": "năng nhặt chặt bị",
-          "keys": "nawng nhawtj chawtj bij"
+          "display": "dã ngoại",
+          "keys": "dax ngoaij"
         },
         {
-          "display": "khéo ăn thì no",
-          "keys": "kheos awn thif no"
+          "display": "hội khoẻ",
+          "keys": "hooij khoer"
         },
         {
-          "display": "khéo co thì ấm",
-          "keys": "kheos co thif aams"
+          "display": "biểu diễn",
+          "keys": "bieeur dieenx"
+        },
+        {
+          "display": "cắm trại",
+          "keys": "cawms traij"
         }
       ]
     },
     {
       "id": "level_84",
-      "title": "Cội nguồn & Gia đình",
+      "title": "Nghề nghiệp phổ biến",
       "content": [
         {
-          "display": "lá rụng về cội",
-          "keys": "las rungj veef cooij"
+          "display": "bác sĩ",
+          "keys": "bacs six"
         },
         {
-          "display": "trâu chậm uống nước đục",
-          "keys": "traau chaamj uoongs nuwowcs dducj"
+          "display": "giáo viên",
+          "keys": "giaos vieen"
         },
         {
-          "display": "con có cha như nhà có nóc",
-          "keys": "con cos cha nhuw nhaf cos nocs"
+          "display": "kỹ sư",
+          "keys": "kyx suw"
         },
         {
-          "display": "nước có nguồn cây có gốc",
-          "keys": "nuwowcs cos nguoonf caay cos goocs"
+          "display": "công nhân",
+          "keys": "coong nhaan"
+        },
+        {
+          "display": "nông dân",
+          "keys": "noong daan"
+        },
+        {
+          "display": "tài xế",
+          "keys": "taif xees"
         }
       ]
     },
     {
       "id": "level_85",
-      "title": "Sự công bằng",
+      "title": "Nghề nghiệp dịch vụ",
       "content": [
         {
-          "display": "gieo gió gặt bão",
-          "keys": "gieo gios gawtj baox"
+          "display": "đầu bếp",
+          "keys": "ddaauf beeps"
         },
         {
-          "display": "ác giả ác báo",
-          "keys": "acs giar acs baos"
+          "display": "thợ may",
+          "keys": "thowj may"
         },
         {
-          "display": "cây ngay không sợ chết đứng",
-          "keys": "caay ngay khoong sowj cheets dduwngs"
+          "display": "bán hàng",
+          "keys": "bans hangf"
         },
         {
-          "display": "lưới trời lồng lộng",
-          "keys": "luwowis trowif loongf loongj"
+          "display": "bưu tá",
+          "keys": "buwu tas"
+        },
+        {
+          "display": "thợ điện",
+          "keys": "thowj ddieenj"
+        },
+        {
+          "display": "cảnh sát",
+          "keys": "canhr sats"
         }
       ]
     },
     {
       "id": "level_86",
-      "title": "Trí tuệ & Tài năng",
+      "title": "Nghề nghiệp nghệ thuật",
       "content": [
         {
-          "display": "tài cao đức trọng",
-          "keys": "taif cao dduwcs trongj"
+          "display": "ca sĩ",
+          "keys": "ca six"
         },
         {
-          "display": "tuổi nhỏ làm việc nhỏ",
-          "keys": "tuooir nhor lamf vieecj nhor"
+          "display": "hoạ sĩ",
+          "keys": "hoaj six"
         },
         {
-          "display": "thông minh vốn sẵn tính trời",
-          "keys": "thoong minh voons sawnx tinhs trowif"
+          "display": "nhà thơ",
+          "keys": "nhaf thow"
         },
         {
-          "display": "học một biết mười",
-          "keys": "hocj mootj bieets muwowif"
+          "display": "diễn viên",
+          "keys": "dieenx vieen"
+        },
+        {
+          "display": "nhạc sĩ",
+          "keys": "nhacj six"
+        },
+        {
+          "display": "kiến trúc",
+          "keys": "kieens trucs"
         }
       ]
     },
     {
       "id": "level_87",
-      "title": "Sự chuẩn bị",
+      "title": "Phương tiện giao thông",
       "content": [
         {
-          "display": "phòng bệnh hơn chữa bệnh",
-          "keys": "phongf beenhj hown chuwax beenhj"
+          "display": "xe máy",
+          "keys": "xe mays"
         },
         {
-          "display": "cẩn tắc vô ưu",
-          "keys": "caanr tawcs voo uwu"
+          "display": "xe đạp",
+          "keys": "xe ddapj"
         },
         {
-          "display": "lo trước tính sau",
-          "keys": "lo truwowcs tinhs sau"
+          "display": "ô tô",
+          "keys": "oo too"
         },
         {
-          "display": "chuẩn bị kỹ càng",
-          "keys": "chuaanr bij kyx cangf"
+          "display": "xe buýt",
+          "keys": "xe buyts"
+        },
+        {
+          "display": "tàu hoả",
+          "keys": "tauf hoar"
+        },
+        {
+          "display": "máy bay",
+          "keys": "mays bay"
         }
       ]
     },
     {
       "id": "level_88",
-      "title": "Tình yêu quê hương",
+      "title": "Công trình công cộng",
       "content": [
         {
-          "display": "ta về ta tắm ao ta",
-          "keys": "ta veef ta tawms ao ta"
+          "display": "công viên",
+          "keys": "coong vieen"
         },
         {
-          "display": "dù trong dù đục",
-          "keys": "duf trong duf dducj"
+          "display": "rạp phim",
+          "keys": "rapj phim"
         },
         {
-          "display": "ao nhà vẫn hơn",
-          "keys": "ao nhaf vaanx hown"
+          "display": "bảo tàng",
+          "keys": "baor tangf"
         },
         {
-          "display": "đất lành chim đậu",
-          "keys": "ddaats lanhf chim ddaauj"
+          "display": "bệnh viện",
+          "keys": "beenhj vieenj"
         },
         {
-          "display": "quê hương là tất cả",
-          "keys": "quee huwowng laf taats car"
+          "display": "nhà ga",
+          "keys": "nhaf ga"
+        },
+        {
+          "display": "bưu điện",
+          "keys": "buwu ddieenj"
         }
       ]
     },
     {
       "id": "level_89",
-      "title": "Sự hoà thuận",
+      "title": "Cửa hàng buôn bán",
       "content": [
         {
-          "display": "hoà khí sinh tài",
-          "keys": "hoaf khis sinh taif"
+          "display": "chợ quê",
+          "keys": "chowj quee"
         },
         {
-          "display": "chồng thuận vợ hoà",
-          "keys": "choongf thuaanj vowj hoaf"
+          "display": "siêu thị",
+          "keys": "sieeu thij"
         },
         {
-          "display": "nhà có phúc mới có con ngoan",
-          "keys": "nhaf cos phucs mowis cos con ngoan"
+          "display": "tiệm bánh",
+          "keys": "tieemj banhs"
         },
         {
-          "display": "anh em thảo hiền",
-          "keys": "anh em thaor hieenf"
+          "display": "nhà sách",
+          "keys": "nhaf sachs"
+        },
+        {
+          "display": "quán nước",
+          "keys": "quans nuwowcs"
+        },
+        {
+          "display": "hiệu thuốc",
+          "keys": "hieeuj thuoocs"
         }
       ]
     },
     {
       "id": "level_90",
-      "title": "Tính cách con người",
+      "title": "Phẩm chất tốt đẹp",
       "content": [
         {
-          "display": "tốt gỗ hơn tốt nước sơn",
-          "keys": "toots goox hown toots nuwowcs sown"
+          "display": "chăm chỉ",
+          "keys": "chawm chir"
         },
         {
-          "display": "người đẹp vì lụa",
-          "keys": "nguwowif ddepj vif luaj"
+          "display": "thật thà",
+          "keys": "thaatj thaf"
         },
         {
-          "display": "tâm sinh tướng",
-          "keys": "taam sinh tuwowngs"
+          "display": "dũng cảm",
+          "keys": "dungx camr"
         },
         {
-          "display": "cái nết đánh chết cái đẹp",
-          "keys": "cais neets ddanhs cheets cais ddepj"
+          "display": "tự tin",
+          "keys": "tuwj tin"
+        },
+        {
+          "display": "khiêm tốn",
+          "keys": "khieem toons"
+        },
+        {
+          "display": "biết ơn",
+          "keys": "bieets own"
         }
       ]
     },
     {
       "id": "level_91",
-      "title": "Bài học đường đời",
+      "title": "Tình cảm xã hội",
       "content": [
         {
-          "display": "gần bùn mà chẳng hôi tanh",
-          "keys": "gaanf bunf maf chawngr hooi tanh"
+          "display": "yêu thương",
+          "keys": "yeeu thuwowng"
         },
         {
-          "display": "sông có khúc người có lúc",
-          "keys": "soong cos khucs nguwowif cos lucs"
+          "display": "giúp đỡ",
+          "keys": "giups ddowx"
         },
         {
-          "display": "ngựa non háu đá",
-          "keys": "nguwaj non haus ddas"
+          "display": "sẻ chia",
+          "keys": "ser chia"
         },
         {
-          "display": "đừng nhìn mặt mà bắt hình dong",
-          "keys": "dduwngf nhinf mawtj maf bawts hinhf dong"
+          "display": "kính trọng",
+          "keys": "kinhs trongj"
+        },
+        {
+          "display": "lễ phép",
+          "keys": "leex pheps"
+        },
+        {
+          "display": "hoà đồng",
+          "keys": "hoaf ddoongf"
         }
       ]
     },
     {
       "id": "level_92",
-      "title": "Nhận thức",
+      "title": "Trạng thái tinh thần",
       "content": [
         {
-          "display": "xem bói cho người",
-          "keys": "xem bois cho nguwowif"
+          "display": "vui vẻ",
+          "keys": "vui ver"
         },
         {
-          "display": "lại không xem bói mình",
-          "keys": "laij khoong xem bois minhf"
+          "display": "hạnh phúc",
+          "keys": "hanhj phucs"
         },
         {
-          "display": "ếch ngồi đáy giếng",
-          "keys": "eechs ngooif ddays gieengs"
+          "display": "bình yên",
+          "keys": "binhf yeen"
         },
         {
-          "display": "coi trời bằng vung",
-          "keys": "coi trowif bawngf vung"
+          "display": "háo hức",
+          "keys": "haos huwcs"
+        },
+        {
+          "display": "kiên nhẫn",
+          "keys": "kieen nhaanx"
+        },
+        {
+          "display": "phấn khởi",
+          "keys": "phaans khowir"
         }
       ]
     },
     {
       "id": "level_93",
-      "title": "Chăm chỉ & Lười biếng",
+      "title": "Khái niệm thời gian",
       "content": [
         {
-          "display": "tay làm hàm nhai",
-          "keys": "tay lamf hamf nhai"
+          "display": "hôm nay",
+          "keys": "hoom nay"
         },
         {
-          "display": "tay quai miệng trễ",
-          "keys": "tay quai mieengj treex"
+          "display": "ngày mai",
+          "keys": "ngayf mai"
         },
         {
-          "display": "lười biếng là mẹ nghèo khổ",
-          "keys": "luwowif bieengs laf mej ngheof khoor"
+          "display": "hôm qua",
+          "keys": "hoom qua"
         },
         {
-          "display": "chăm làm thì no",
-          "keys": "chawm lamf thif no"
+          "display": "tương lai",
+          "keys": "tuwowng lai"
+        },
+        {
+          "display": "quá khứ",
+          "keys": "quas khuws"
+        },
+        {
+          "display": "hiện tại",
+          "keys": "hieenj taij"
         }
       ]
     },
     {
       "id": "level_94",
-      "title": "Lòng tham & Hậu quả",
+      "title": "Các hướng đi",
       "content": [
         {
-          "display": "tham thì thâm",
-          "keys": "tham thif thaam"
+          "display": "phía đông",
+          "keys": "phias ddoong"
         },
         {
-          "display": "tham bát bỏ mâm",
-          "keys": "tham bats bor maam"
+          "display": "phía tây",
+          "keys": "phias taay"
         },
         {
-          "display": "được voi đòi tiên",
-          "keys": "dduwowcj voi ddoif tieen"
+          "display": "phía nam",
+          "keys": "phias nam"
         },
         {
-          "display": "trèo cao ngã đau",
-          "keys": "treof cao ngax ddau"
+          "display": "phía bắc",
+          "keys": "phias bawcs"
+        },
+        {
+          "display": "bên trái",
+          "keys": "been trais"
+        },
+        {
+          "display": "bên phải",
+          "keys": "been phair"
         }
       ]
     },
     {
       "id": "level_95",
-      "title": "Sự lựa chọn & Định mệnh",
+      "title": "Vệ sinh cá nhân",
       "content": [
         {
-          "display": "chọn mặt gửi vàng",
-          "keys": "chonj mawtj guwir vangf"
+          "display": "đánh răng",
+          "keys": "ddanhs rawng"
         },
         {
-          "display": "chạy trời không khỏi nắng",
-          "keys": "chayj trowif khoong khoir nawngs"
+          "display": "rửa mặt",
+          "keys": "ruwar mawtj"
         },
         {
-          "display": "hoạ vô đơn chí",
-          "keys": "hoaj voo ddown chis"
+          "display": "tắm gội",
+          "keys": "tawms gooij"
         },
         {
-          "display": "phúc bất trùng lai",
-          "keys": "phucs baats trungf lai"
+          "display": "rửa tay",
+          "keys": "ruwar tay"
+        },
+        {
+          "display": "chải tóc",
+          "keys": "chair tocs"
+        },
+        {
+          "display": "cắt móng",
+          "keys": "cawts mongs"
         }
       ]
     },
     {
       "id": "level_96",
-      "title": "Tình cảm & Đoàn kết",
+      "title": "Bảo vệ môi trường",
       "content": [
         {
-          "display": "yêu trẻ trẻ đến nhà",
-          "keys": "yeeu trer trer ddeens nhaf"
+          "display": "nhặt rác",
+          "keys": "nhawtj racs"
         },
         {
-          "display": "kính già già để tuổi cho",
-          "keys": "kinhs giaf giaf ddeer tuooir cho"
+          "display": "trồng cây",
+          "keys": "troongf caay"
         },
         {
-          "display": "một lòng một dạ",
-          "keys": "mootj longf mootj daj"
+          "display": "tiết kiệm",
+          "keys": "tieets kieemj"
         },
         {
-          "display": "chung sức chung lòng",
-          "keys": "chung suwcs chung longf"
+          "display": "phân loại",
+          "keys": "phaan loaij"
+        },
+        {
+          "display": "tái chế",
+          "keys": "tais chees"
+        },
+        {
+          "display": "lau dọn",
+          "keys": "lau donj"
         }
       ]
     },
     {
       "id": "level_97",
-      "title": "Sự thật & Lẽ phải",
+      "title": "Thói quen tốt",
       "content": [
         {
-          "display": "mắt thấy tai nghe",
-          "keys": "mawts thaays tai nghe"
+          "display": "dậy sớm",
+          "keys": "daayj sowms"
         },
         {
-          "display": "sự thật mất lòng",
-          "keys": "suwj thaatj maats longf"
+          "display": "ngủ đúng",
+          "keys": "ngur ddungs"
         },
         {
-          "display": "cây ngay bóng thẳng",
-          "keys": "caay ngay bongs thawngr"
+          "display": "tập thể",
+          "keys": "taapj theer"
         },
         {
-          "display": "nói có sách mách có chứng",
-          "keys": "nois cos sachs machs cos chuwngs"
+          "display": "ăn sạch",
+          "keys": "awn sachj"
+        },
+        {
+          "display": "uống chín",
+          "keys": "uoongs chins"
+        },
+        {
+          "display": "tự lập",
+          "keys": "tuwj laapj"
         }
       ]
     },
     {
       "id": "level_98",
-      "title": "Nghị lực & Hành động",
+      "title": "Mục tiêu học tập",
       "content": [
         {
-          "display": "chân cứng đá mềm",
-          "keys": "chaan cuwngs ddas meemf"
+          "display": "gõ nhanh",
+          "keys": "gox nhanh"
         },
         {
-          "display": "vượt nắng thắng mưa",
-          "keys": "vuwowtj nawngs thawngs muwa"
+          "display": "gõ đúng",
+          "keys": "gox ddungs"
         },
         {
-          "display": "quyết tâm sắt đá",
-          "keys": "quyeets taam sawts ddas"
+          "display": "tiến bộ",
+          "keys": "tieens booj"
         },
         {
-          "display": "gạo đã thành cơm",
-          "keys": "gaoj ddax thanhf cowm"
+          "display": "thành thạo",
+          "keys": "thanhf thaoj"
+        },
+        {
+          "display": "kiên trì",
+          "keys": "kieen trif"
+        },
+        {
+          "display": "thành công",
+          "keys": "thanhf coong"
         }
       ]
     }

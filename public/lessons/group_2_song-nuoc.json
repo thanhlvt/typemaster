@@ -19,6 +19,10 @@
         {
           "display": "cẩn thận không bao giờ thừa",
           "keys": "caanr thaanj khoong bao giowf thuwaf"
+        },
+        {
+          "display": "nhìn trước ngó sau",
+          "keys": "nhinf truwowcs ngos sau"
         }
       ]
     },
@@ -41,6 +45,10 @@
         {
           "display": "phúc lộc thọ toàn",
           "keys": "phucs loocj thoj toanf"
+        },
+        {
+          "display": "vạn sự như ý",
+          "keys": "vanj suwj nhuw ys"
         }
       ]
     },
@@ -54,7 +62,7 @@
         },
         {
           "display": "mỗi người một vẻ",
-          "keys": "mooxi nguwowif mootj ver"
+          "keys": "mooix nguwowif mootj ver"
         },
         {
           "display": "mười phân vẹn mười",
@@ -63,6 +71,10 @@
         {
           "display": "nhân vô thập toàn",
           "keys": "nhaan voo thaapj toanf"
+        },
+        {
+          "display": "sông lở cát bồi",
+          "keys": "soong lowr cats booif"
         }
       ]
     },
@@ -85,6 +97,10 @@
         {
           "display": "thời gian là vàng",
           "keys": "thowif gian laf vangf"
+        },
+        {
+          "display": "thời đến cản không kịp",
+          "keys": "thowif ddeens canr khoong kipj"
         }
       ]
     },
@@ -107,6 +123,10 @@
         {
           "display": "cội rễ bền chặt",
           "keys": "cooij reex beenf chawtj"
+        },
+        {
+          "display": "chị ngã em nâng",
+          "keys": "chij ngax em naang"
         }
       ]
     },
@@ -129,6 +149,10 @@
         {
           "display": "gieo nhân nào gặt quả nấy",
           "keys": "gieo nhaan naof gawtj quar naays"
+        },
+        {
+          "display": "cây ngay bóng thẳng",
+          "keys": "caay ngay bongs thawngr"
         }
       ]
     },
@@ -141,16 +165,20 @@
           "keys": "tre giaf mawng mocj"
         },
         {
-          "display": "con hơn cha",
-          "keys": "con hown cha"
-        },
-        {
-          "display": "là nhà có phúc",
-          "keys": "laf nhaf cos phucs"
-        },
-        {
           "display": "sóng sau đè sóng trước",
           "keys": "songs sau ddef songs truwowcs"
+        },
+        {
+          "display": "lá rụng về cội",
+          "keys": "las rungj veef cooij"
+        },
+        {
+          "display": "con hơn cha mẹ",
+          "keys": "con hown cha mej"
+        },
+        {
+          "display": "kế nghiệp cha ông",
+          "keys": "kees nghieepj cha oong"
         }
       ]
     },
@@ -167,12 +195,16 @@
           "keys": "luas chins cuis ddaauf"
         },
         {
-          "display": "núi cao còn có núi cao hơn",
-          "keys": "nuis cao conf cos nuis cao hown"
-        },
-        {
           "display": "biết người biết ta",
           "keys": "bieets nguwowif bieets ta"
+        },
+        {
+          "display": "kính lão đắc thọ",
+          "keys": "kinhs laox ddawcs thoj"
+        },
+        {
+          "display": "núi cao có núi cao hơn",
+          "keys": "nuis cao cos nuis cao hown"
         }
       ]
     },
@@ -189,12 +221,16 @@
           "keys": "mootj coong ddooi vieecj"
         },
         {
-          "display": "làm khi lành",
-          "keys": "lamf khi lanhf"
+          "display": "chăm làm thì có",
+          "keys": "chawm lamf thif cos"
         },
         {
-          "display": "để dành khi đau",
-          "keys": "ddeer danhf khi ddau"
+          "display": "siêng năng làm lụng",
+          "keys": "sieeng nawng lamf lungj"
+        },
+        {
+          "display": "chăm làm thì no",
+          "keys": "chawm lamf thif no"
         }
       ]
     },
@@ -217,6 +253,10 @@
         {
           "display": "cẩn thận củi lửa",
           "keys": "caanr thaanj cuir luwar"
+        },
+        {
+          "display": "kín cổng cao tường",
+          "keys": "kins coongr cao tuwowngf"
         }
       ]
     },
@@ -233,12 +273,16 @@
           "keys": "ba mej laf taats car"
         },
         {
-          "display": "con nuôi cha mẹ",
-          "keys": "con nuooi cha mej"
+          "display": "anh em như thể tay chân",
+          "keys": "anh em nhuw theer tay chaan"
         },
         {
-          "display": "kể công tháng ngày",
-          "keys": "keer coong thangs ngayf"
+          "display": "cha mẹ thương con cái",
+          "keys": "cha mej thuwowng con cais"
+        },
+        {
+          "display": "ấm áp tình thân gia đình",
+          "keys": "aams aps tinhf thaan gia ddinhf"
         }
       ]
     },
@@ -251,16 +295,20 @@
           "keys": "yeeu nhau maays nuis cungx treof"
         },
         {
-          "display": "mấy sông cũng lội",
-          "keys": "maays soong cungx looji"
-        },
-        {
-          "display": "mấy đèo cũng qua",
-          "keys": "maays ddeof cungx qua"
-        },
-        {
           "display": "đồng sức đồng lòng",
           "keys": "ddoongf suwcs ddoongf longf"
+        },
+        {
+          "display": "gừng cay muối mặn",
+          "keys": "guwngf cay muoois mawnj"
+        },
+        {
+          "display": "thủy chung như một",
+          "keys": "thuyr chung nhuw mootj"
+        },
+        {
+          "display": "một lòng một dạ",
+          "keys": "mootj longf mootj daj"
         }
       ]
     },
@@ -273,16 +321,20 @@
           "keys": "khoon ngoan ddoois ddaps nguwowif ngoaif"
         },
         {
-          "display": "gà cùng một mẹ",
-          "keys": "gaf cungf mootj mej"
-        },
-        {
-          "display": "chớ hoài đá nhau",
-          "keys": "chows hoaif ddas nhau"
-        },
-        {
           "display": "dĩ hoà vi quý",
           "keys": "dix hoaf vi quys"
+        },
+        {
+          "display": "một sự nhịn chín sự lành",
+          "keys": "mootj suwj nhinj chins suwj lanhf"
+        },
+        {
+          "display": "tôn trọng lẫn nhau",
+          "keys": "toon trongj laanx nhau"
+        },
+        {
+          "display": "ôn hoà nhã nhặn",
+          "keys": "oon hoaf nhax nhawnj"
         }
       ]
     },
@@ -299,12 +351,16 @@
           "keys": "sinh kys tuwr quy"
         },
         {
-          "display": "sống có đức mặc sức mà ăn",
-          "keys": "soongs cos dduwcs mawcj suwcs maf awn"
-        },
-        {
           "display": "đời người như giấc chiêm bao",
           "keys": "ddowif nguwowif nhuw giaacs chieem bao"
+        },
+        {
+          "display": "lá lành đùm lá rách",
+          "keys": "las lanhf ddumf las rachs"
+        },
+        {
+          "display": "ở hiền gặp lành",
+          "keys": "owr hieenf gawpj lanhf"
         }
       ]
     },
@@ -321,12 +377,16 @@
           "keys": "howpj quaanf gaay suwcs manhj"
         },
         {
-          "display": "một con ngựa đau",
-          "keys": "mootj con nguwaj ddau"
+          "display": "một cây làm chẳng nên non",
+          "keys": "mootj caay lamf chawngr neen non"
         },
         {
-          "display": "cả tàu bỏ cỏ",
-          "keys": "car tauf bor cor"
+          "display": "hòn núi cao hơn",
+          "keys": "honf nuis cao hown"
+        },
+        {
+          "display": "đoàn kết là sức mạnh",
+          "keys": "ddoanf keets laf suwcs manhj"
         }
       ]
     },
@@ -349,6 +409,10 @@
         {
           "display": "thánh nhân đãi kẻ khờ",
           "keys": "thanhs nhaan ddaix ker khowf"
+        },
+        {
+          "display": "thả hổ về rừng",
+          "keys": "thar hoor veef ruwngf"
         }
       ]
     },
@@ -371,6 +435,10 @@
         {
           "display": "quý vật tìm quý nhân",
           "keys": "quys vaatj timf quys nhaan"
+        },
+        {
+          "display": "vàng bạc có giá",
+          "keys": "vangf bacj cos gias"
         }
       ]
     },
@@ -393,6 +461,10 @@
         {
           "display": "trọn nghĩa vẹn tình",
           "keys": "tronj nghiax venj tinhf"
+        },
+        {
+          "display": "trước sau như một",
+          "keys": "truwowcs sau nhuw mootj"
         }
       ]
     },
@@ -415,6 +487,10 @@
         {
           "display": "muốn ăn thì lăn vào bếp",
           "keys": "muoons awn thif lawn vaof beeps"
+        },
+        {
+          "display": "tự lực cánh sinh",
+          "keys": "tuwj luwcj canhs sinh"
         }
       ]
     },
@@ -437,6 +513,10 @@
         {
           "display": "chia ngọt sẻ bùi",
           "keys": "chia ngotj ser buif"
+        },
+        {
+          "display": "giúp ngặt không giúp nghèo",
+          "keys": "giups ngawtj khoong giups ngheof"
         }
       ]
     },
@@ -453,12 +533,16 @@
           "keys": "quyts lamf cam chiuj"
         },
         {
-          "display": "đời cha ăn mặn",
-          "keys": "ddowif cha awn mawnj"
+          "display": "gieo gió gặt bão",
+          "keys": "gieo gios gawtj baox"
         },
         {
-          "display": "đời con khát nước",
-          "keys": "ddowif con khats nuwowcs"
+          "display": "ác giả ác báo",
+          "keys": "acs giar acs baos"
+        },
+        {
+          "display": "gieo nhân gặt quả",
+          "keys": "gieo nhaan gawtj quar"
         }
       ]
     },
@@ -481,6 +565,10 @@
         {
           "display": "vàng thật không sợ lửa",
           "keys": "vangf thaatj khoong sowj luwar"
+        },
+        {
+          "display": "thuốc đắng dã tật",
+          "keys": "thuoocs ddawngs dax taatj"
         }
       ]
     },
@@ -503,6 +591,10 @@
         {
           "display": "nồi nào úp vung nấy",
           "keys": "nooif naof ups vung naays"
+        },
+        {
+          "display": "nói có sách mách có chứng",
+          "keys": "nois cos sachs machs cos chuwngs"
         }
       ]
     },
@@ -525,6 +617,10 @@
         {
           "display": "thương nhau lắm cắn nhau đau",
           "keys": "thuwowng nhau lawms cawns nhau ddau"
+        },
+        {
+          "display": "uống nước nhớ nguồn",
+          "keys": "uoongs nuwowcs nhows nguoonf"
         }
       ]
     },
@@ -537,16 +633,20 @@
           "keys": "chuoonf chuoonf bay thaaps thif muwa"
         },
         {
-          "display": "bay cao thì nắng",
-          "keys": "bay cao thif nawngs"
+          "display": "sấm chớp báo bão",
+          "keys": "saams chowps baos baox"
         },
         {
-          "display": "bay vừa thì râm",
-          "keys": "bay vuwaf thif raam"
+          "display": "chuồn chuồn bay cao nắng",
+          "keys": "chuoonf chuoonf bay cao nawngs"
         },
         {
-          "display": "chớp đông nhay nháy",
-          "keys": "chowps ddoong nhay nhays"
+          "display": "chuồn chuồn bay vừa râm",
+          "keys": "chuoonf chuoonf bay vuwaf raam"
+        },
+        {
+          "display": "mây đen che lối",
+          "keys": "maay dden che loois"
         }
       ]
     },
@@ -559,16 +659,20 @@
           "keys": "gian nan renf luyeenj mowis thanhf"
         },
         {
-          "display": "lửa thử vàng",
-          "keys": "luwar thuwr vangf"
-        },
-        {
           "display": "gian nan thử sức",
           "keys": "gian nan thuwr suwcs"
         },
         {
           "display": "vững vàng tay lái",
           "keys": "vuwngx vangf tay lais"
+        },
+        {
+          "display": "có chí thì nên",
+          "keys": "cos chis thif neen"
+        },
+        {
+          "display": "gian nan rèn chí lớn",
+          "keys": "gian nan renf chis lowns"
         }
       ]
     },
@@ -585,12 +689,16 @@
           "keys": "cuwowif nguwowif chows vooij cuwowif laau"
         },
         {
-          "display": "cười người hôm trước",
-          "keys": "cuwowif nguwowif hoom truwowcs"
+          "display": "kính trên nhường dưới",
+          "keys": "kinhs treen nhuwowngf duwowis"
         },
         {
-          "display": "hôm sau người cười",
-          "keys": "hoom sau nguwowif cuwowif"
+          "display": "sống lạc quan vui vẻ",
+          "keys": "soongs lacj quan vui ver"
+        },
+        {
+          "display": "mỉm cười đón ngày mới",
+          "keys": "mimr cuwowif ddons ngayf mowis"
         }
       ]
     },
@@ -613,6 +721,10 @@
         {
           "display": "sum họp gia đình",
           "keys": "sum hopj gia ddinhf"
+        },
+        {
+          "display": "tống cựu nghênh tân",
+          "keys": "toongs cuwuj ngheenh taan"
         }
       ]
     },
@@ -629,12 +741,16 @@
           "keys": "cas chuoois ddawms dduoois vif con"
         },
         {
-          "display": "nuôi con mới biết lòng cha mẹ",
-          "keys": "nuooi con mowis bieets longf cha mej"
+          "display": "mẹ hiền con thảo",
+          "keys": "mej hieenf con thaor"
         },
         {
-          "display": "chỗ ướt mẹ nằm",
-          "keys": "choox uwowts mej nawmf"
+          "display": "công cha nghĩa mẹ",
+          "keys": "coong cha nghiax mej"
+        },
+        {
+          "display": "lòng cha mẹ bao la",
+          "keys": "longf cha mej bao la"
         }
       ]
     },
@@ -647,16 +763,20 @@
           "keys": "phungj duwowngx sowms chieeuf"
         },
         {
-          "display": "khi già yếu đuối",
-          "keys": "khi giaf yeeus dduoois"
-        },
-        {
           "display": "chăm sóc mẹ cha",
           "keys": "chawm socs mej cha"
         },
         {
           "display": "lòng thành dâng kính",
           "keys": "longf thanhf daang kinhs"
+        },
+        {
+          "display": "ơn sâu nghĩa nặng",
+          "keys": "own saau nghiax nawngj"
+        },
+        {
+          "display": "phụng dưỡng cha mẹ",
+          "keys": "phungj duwowngx cha mej"
         }
       ]
     },
@@ -679,6 +799,10 @@
         {
           "display": "đắt xắt ra miếng",
           "keys": "ddawts xawts ra mieengs"
+        },
+        {
+          "display": "tiền trao cháo múc",
+          "keys": "tieenf trao chaos mucs"
         }
       ]
     },
@@ -687,20 +811,24 @@
       "title": "Cách ứng xử",
       "content": [
         {
-          "display": "kính trên nhường dưới",
-          "keys": "kinhs treen nhuwowngf duwowis"
-        },
-        {
           "display": "gọi dạ bảo vâng",
           "keys": "goij daj baor vaang"
         },
         {
-          "display": "ăn trông nồi",
-          "keys": "awn troong nooif"
+          "display": "lựa lời mà nói",
+          "keys": "luwaj lowif maf nois"
         },
         {
-          "display": "ngồi trông hướng",
-          "keys": "ngooif troong huwowngs"
+          "display": "sông có khúc người có lúc",
+          "keys": "soong cos khucs nguwowif cos lucs"
+        },
+        {
+          "display": "ôn hoà lễ phép",
+          "keys": "oon hoaf leex pheps"
+        },
+        {
+          "display": "ăn nói lịch sự",
+          "keys": "awn nois lichj suwj"
         }
       ]
     },
@@ -717,12 +845,16 @@
           "keys": "da nguwaj bocj thaay"
         },
         {
-          "display": "đầu đội trời",
-          "keys": "ddaauf ddooij trowif"
+          "display": "gan vàng dạ sắt",
+          "keys": "gan vangf daj sawts"
         },
         {
-          "display": "chân đạp đất",
-          "keys": "chaan ddapj ddaats"
+          "display": "dũng cảm tiến lên",
+          "keys": "dungx camr tieens leen"
+        },
+        {
+          "display": "không ngại gian khổ",
+          "keys": "khoong ngaij gian khoor"
         }
       ]
     },
@@ -745,6 +877,10 @@
         {
           "display": "sông cạn đá mòn",
           "keys": "soong canj ddas monf"
+        },
+        {
+          "display": "thời cuộc thay đổi",
+          "keys": "thowif cuoocj thay ddooir"
         }
       ]
     },
@@ -761,12 +897,16 @@
           "keys": "sau cown muwa trowif laij sangs"
         },
         {
-          "display": "trong cái rủi",
-          "keys": "trong cais ruir"
+          "display": "chân cứng đá mềm",
+          "keys": "chaan cuwngs ddas meemf"
         },
         {
-          "display": "có cái may",
-          "keys": "cos cais may"
+          "display": "vạn sự khởi đầu nan",
+          "keys": "vanj suwj khowir ddaauf nan"
+        },
+        {
+          "display": "không nản lòng trước khó khăn",
+          "keys": "khoong nanr longf truwowcs khos khawn"
         }
       ]
     },
@@ -779,16 +919,20 @@
           "keys": "duf ai nois ngar nois nghieeng"
         },
         {
-          "display": "lòng ta vẫn vững",
-          "keys": "longf ta vaanx vuwngx"
-        },
-        {
-          "display": "như kiềng ba chân",
-          "keys": "nhuw kieengf ba chaan"
-        },
-        {
           "display": "vững như bàn thạch",
           "keys": "vuwngx nhuw banf thachj"
+        },
+        {
+          "display": "dù ai đi ngược về xuôi",
+          "keys": "duf ai ddi nguwowcj veef xuooi"
+        },
+        {
+          "display": "kiên định lập trường",
+          "keys": "kieen ddinhj laapj truwowngf"
+        },
+        {
+          "display": "không bao giờ bỏ cuộc",
+          "keys": "khoong bao giowf bor cuoocj"
         }
       ]
     },
@@ -809,8 +953,12 @@
           "keys": "caauf dduwowcj uwowcs thaays"
         },
         {
-          "display": "vạn sự như ý",
-          "keys": "vanj suwj nhuw ys"
+          "display": "may mắn mỉm cười",
+          "keys": "may mawns mimr cuwowif"
+        },
+        {
+          "display": "bất ngờ gặp may",
+          "keys": "baats ngowf gawpj may"
         }
       ]
     },
@@ -819,20 +967,24 @@
       "title": "Sự khoe khoang sớm",
       "content": [
         {
-          "display": "chưa đỗ ông nghè",
-          "keys": "chuwa ddoox oong nghef"
-        },
-        {
-          "display": "đã đe hàng tổng",
-          "keys": "ddax dde hangf toongr"
-        },
-        {
           "display": "cầm đèn chạy trước ô tô",
           "keys": "caamf ddenf chayj truwowcs oo too"
         },
         {
           "display": "nói trước bước không qua",
           "keys": "nois truwowcs buwowcs khoong qua"
+        },
+        {
+          "display": "thùng rỗng kêu to",
+          "keys": "thungf roongx keeu to"
+        },
+        {
+          "display": "ba hoa khoác lác",
+          "keys": "ba hoa khoacs lacs"
+        },
+        {
+          "display": "kiêu ngạo tự phụ",
+          "keys": "kieeu ngaoj tuwj phuj"
         }
       ]
     },
@@ -840,10 +992,6 @@
       "id": "level_137",
       "title": "Bản chất & Hiện tượng",
       "content": [
-        {
-          "display": "thùng rỗng kêu to",
-          "keys": "thungf roongx keeu to"
-        },
         {
           "display": "xanh vỏ đỏ lòng",
           "keys": "xanh vor ddor longf"
@@ -855,6 +1003,14 @@
         {
           "display": "treo đầu dê bán thịt chó",
           "keys": "treo ddaauf dee bans thitj chos"
+        },
+        {
+          "display": "tốt gỗ hơn tốt nước sơn",
+          "keys": "toots goox hown toots nuwowcs sown"
+        },
+        {
+          "display": "nhìn xa trông rộng",
+          "keys": "nhinf xa troong roongj"
         }
       ]
     },
@@ -877,6 +1033,10 @@
         {
           "display": "còn người còn của",
           "keys": "conf nguwowif conf cuar"
+        },
+        {
+          "display": "nỗ lực đến cùng",
+          "keys": "noox luwcj ddeens cungf"
         }
       ]
     },
@@ -889,16 +1049,20 @@
           "keys": "maats bof mowis lo lamf chuoongf"
         },
         {
-          "display": "sự đã rồi",
-          "keys": "suwj ddax rooif"
+          "display": "muộn còn hơn không",
+          "keys": "muoonj conf hown khoong"
         },
         {
-          "display": "hối không kịp",
-          "keys": "hoois khoong kipj"
+          "display": "hối hận muộn màng",
+          "keys": "hoois haanj muoonj mangf"
         },
         {
-          "display": "tiền hung hậu kiết",
-          "keys": "tieenf hung haauj kieets"
+          "display": "bài học đắt giá",
+          "keys": "baif hocj ddawts gias"
+        },
+        {
+          "display": "rút kinh nghiệm sâu sắc",
+          "keys": "ruts kinh nghieemj saau sawcs"
         }
       ]
     },
@@ -921,6 +1085,10 @@
         {
           "display": "mã đáo thành công",
           "keys": "max ddaos thanhf coong"
+        },
+        {
+          "display": "viên mãn tràn đầy",
+          "keys": "vieen manx tranf ddaayf"
         }
       ]
     },
@@ -937,12 +1105,16 @@
           "keys": "ba chimf bayr nooir"
         },
         {
-          "display": "chín lênh đênh",
-          "keys": "chins leenh ddeenh"
-        },
-        {
           "display": "sóng gió cuộc đời",
           "keys": "songs gios cuoocj ddowif"
+        },
+        {
+          "display": "vượt qua bão giông",
+          "keys": "vuwowtj qua baox gioong"
+        },
+        {
+          "display": "cuộc sống đầy thử thách",
+          "keys": "cuoocj soongs ddaayf thuwr thachs"
         }
       ]
     },
@@ -965,6 +1137,10 @@
         {
           "display": "vất vả ngược xuôi",
           "keys": "vaats var nguwowcj xuooi"
+        },
+        {
+          "display": "bán mặt cho đất",
+          "keys": "bans mawtj cho ddaats"
         }
       ]
     },
@@ -981,12 +1157,16 @@
           "keys": "nois lowif phair giuwx laays lowif"
         },
         {
-          "display": "đừng như con bướm",
-          "keys": "dduwngf nhuw con buwowms"
+          "display": "nói một đường làm một nẻo",
+          "keys": "nois mootj dduwowngf lamf mootj neor"
         },
         {
-          "display": "đậu rồi lại bay",
-          "keys": "ddaauj rooif laij bay"
+          "display": "nghĩ sao nói vậy",
+          "keys": "nghix sao nois vaayj"
+        },
+        {
+          "display": "chân thành mộc mạc",
+          "keys": "chaan thanhf moocj macj"
         }
       ]
     },
@@ -1009,6 +1189,10 @@
         {
           "display": "học gói học mở",
           "keys": "hocj gois hocj mowr"
+        },
+        {
+          "display": "học đi đôi với hành",
+          "keys": "hocj ddi ddooi vowis hanhf"
         }
       ]
     },
@@ -1021,16 +1205,20 @@
           "keys": "cuar minhf thif giuwx bo bo"
         },
         {
-          "display": "của người thì thả cho bò",
-          "keys": "cuar nguwowif thif thar cho bof"
-        },
-        {
           "display": "vơ vào cho đầy túi",
           "keys": "vow vaof cho ddaayf tuis"
         },
         {
           "display": "chỉ biết mình mình",
           "keys": "chir bieets minhf minhf"
+        },
+        {
+          "display": "ích kỷ hại nhân",
+          "keys": "ichs kyr haij nhaan"
+        },
+        {
+          "display": "chỉ biết thân mình",
+          "keys": "chir bieets thaan minhf"
         }
       ]
     },
@@ -1043,16 +1231,20 @@
           "keys": "awn khoong ngooif rooif"
         },
         {
-          "display": "lười như hủi",
-          "keys": "luwowif nhuw huir"
-        },
-        {
           "display": "làm biếng chảy thây",
           "keys": "lamf bieengs chayr thaay"
         },
         {
           "display": "ăn bám gia đình",
           "keys": "awn bams gia ddinhf"
+        },
+        {
+          "display": "há miệng chờ sung",
+          "keys": "has mieengj chowf sung"
+        },
+        {
+          "display": "lười làm ham chơi",
+          "keys": "luwowif lamf ham chowi"
         }
       ]
     },
@@ -1075,6 +1267,10 @@
         {
           "display": "hoang phí của công",
           "keys": "hoang phis cuar coong"
+        },
+        {
+          "display": "phung phí tiền bạc",
+          "keys": "phung phis tieenf bacj"
         }
       ]
     },
@@ -1083,20 +1279,24 @@
       "title": "Sự nhẫn nhịn",
       "content": [
         {
-          "display": "một sự nhịn chín sự lành",
-          "keys": "mootj suwj nhinj chins suwj lanhf"
-        },
-        {
-          "display": "nhẫn một chút sóng yên biển lặng",
-          "keys": "nhaanx mootj chuts songs yeen bieenr lawngj"
-        },
-        {
-          "display": "lùi một bước biển rộng trời cao",
-          "keys": "luif mootj buwowcs bieenr roongj trowif cao"
-        },
-        {
           "display": "chữ nhẫn là chữ vàng",
           "keys": "chuwx nhaanx laf chuwx vangf"
+        },
+        {
+          "display": "nhẫn nhịn là vàng",
+          "keys": "nhaanx nhinj laf vangf"
+        },
+        {
+          "display": "lùi bước tiến xa",
+          "keys": "luif buwowcs tieens xa"
+        },
+        {
+          "display": "chữ nhẫn đi đầu",
+          "keys": "chuwx nhaanx ddi ddaauf"
+        },
+        {
+          "display": "nhẫn nại vượt khó",
+          "keys": "nhaanx naij vuwowtj khos"
         }
       ]
     },
@@ -1119,6 +1319,10 @@
         {
           "display": "suy nghĩ trước sau",
           "keys": "suy nghix truwowcs sau"
+        },
+        {
+          "display": "kín như bưng",
+          "keys": "kins nhuw buwng"
         }
       ]
     },
@@ -1131,16 +1335,20 @@
           "keys": "baauf owi thuwowng laays bis cungf"
         },
         {
-          "display": "tuy rằng khác giống",
-          "keys": "tuy rawngf khacs gioongs"
-        },
-        {
-          "display": "nhưng chung một giàn",
-          "keys": "nhuwng chung mootj gianf"
-        },
-        {
           "display": "yêu thương đùm bọc",
           "keys": "yeeu thuwowng ddumf bocj"
+        },
+        {
+          "display": "thương người như thương thân",
+          "keys": "thuwowng nguwowif nhuw thuwowng thaan"
+        },
+        {
+          "display": "đồng bào tương ái",
+          "keys": "ddoongf baof tuwowng ais"
+        },
+        {
+          "display": "đoàn kết tương trợ",
+          "keys": "ddoanf keets tuwowng trowj"
         }
       ]
     },
@@ -1149,20 +1357,24 @@
       "title": "Lòng biết ơn",
       "content": [
         {
-          "display": "ăn bát cơm dẻo",
-          "keys": "awn bats cowm deor"
-        },
-        {
-          "display": "nhớ nẻo đường đi",
-          "keys": "nhows neor dduwowngf ddi"
-        },
-        {
           "display": "nhớ công ơn người",
           "keys": "nhows coong own nguwowif"
         },
         {
           "display": "đừng quên cội nguồn",
           "keys": "dduwngf queen cooij nguoonf"
+        },
+        {
+          "display": "ăn quả nhớ kẻ trồng cây",
+          "keys": "awn quar nhows ker troongf caay"
+        },
+        {
+          "display": "ăn cây nào rào cây đó",
+          "keys": "awn caay naof raof caay ddos"
+        },
+        {
+          "display": "ăn khoai nhớ kẻ cho dây",
+          "keys": "awn khoai nhows ker cho daay"
         }
       ]
     },
@@ -1185,6 +1397,10 @@
         {
           "display": "đồng cảm sẻ chia",
           "keys": "ddoongf camr ser chia"
+        },
+        {
+          "display": "thương người như thể thương thân",
+          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan"
         }
       ]
     },
@@ -1207,6 +1423,10 @@
         {
           "display": "sát cánh bên nhau",
           "keys": "sats canhs been nhau"
+        },
+        {
+          "display": "còn nhân tài còn hy vọng",
+          "keys": "conf nhaan taif conf hy vongj"
         }
       ]
     },
@@ -1229,6 +1449,10 @@
         {
           "display": "sự nghiệp thăng tiến",
           "keys": "suwj nghieepj thawng tieens"
+        },
+        {
+          "display": "thất bại là mẹ thành công",
+          "keys": "thaats baij laf mej thanhf coong"
         }
       ]
     },
@@ -1251,6 +1475,10 @@
         {
           "display": "vững lòng bền chí",
           "keys": "vuwngx longf beenf chis"
+        },
+        {
+          "display": "kiên trì bền bỉ",
+          "keys": "kieen trif beenf bir"
         }
       ]
     },
@@ -1259,20 +1487,24 @@
       "title": "Sự bao dung",
       "content": [
         {
-          "display": "oán cừu nên giải",
-          "keys": "oans cuwuf neen giair"
-        },
-        {
-          "display": "không nên kết",
-          "keys": "khoong neen keets"
-        },
-        {
-          "display": "đánh kẻ chạy đi",
-          "keys": "ddanhs ker chayj ddi"
-        },
-        {
           "display": "không đánh người chạy lại",
           "keys": "khoong ddanhs nguwowif chayj laij"
+        },
+        {
+          "display": "bao dung độ lượng",
+          "keys": "bao dung ddooj luwowngj"
+        },
+        {
+          "display": "vị tha nhân ái",
+          "keys": "vij tha nhaan ais"
+        },
+        {
+          "display": "tha thứ lỗi lầm",
+          "keys": "tha thuws looix laamf"
+        },
+        {
+          "display": "sống rộng lượng bao dung",
+          "keys": "soongs roongj luwowngj bao dung"
         }
       ]
     },
@@ -1289,12 +1521,16 @@
           "keys": "chawts chiu tuwngf ddoongf"
         },
         {
-          "display": "chắt chiu dành dụm",
-          "keys": "chawts chiu danhf dumj"
+          "display": "ăn dè hà tiện",
+          "keys": "awn def haf tieenj"
         },
         {
-          "display": "của một đồng công một nén",
-          "keys": "cuar mootj ddoongf coong mootj nens"
+          "display": "tiết kiệm của cải",
+          "keys": "tieets kieemj cuar cair"
+        },
+        {
+          "display": "tích tiểu thành đại",
+          "keys": "tichs tieeur thanhf ddaij"
         }
       ]
     },
@@ -1307,8 +1543,8 @@
           "keys": "giaays rachs phair giuwx laays leef"
         },
         {
-          "display": "chết trong còn hơn sống đục",
-          "keys": "cheets trong conf hown soongs dducj"
+          "display": "danh dự quý hơn vàng bạc",
+          "keys": "danh duwj quys hown vangf bacj"
         },
         {
           "display": "giữ gìn danh dự",
@@ -1317,6 +1553,10 @@
         {
           "display": "trọng nghĩa khinh tài",
           "keys": "trongj nghiax khinh taif"
+        },
+        {
+          "display": "chết vinh còn hơn sống nhục",
+          "keys": "cheets vinh conf hown soongs nhucj"
         }
       ]
     },
@@ -1333,12 +1573,16 @@
           "keys": "baij khoong nanr"
         },
         {
-          "display": "thua keo này ta bày keo khác",
-          "keys": "thua keo nayf ta bayf keo khacs"
-        },
-        {
           "display": "vững vàng bản lĩnh",
           "keys": "vuwngx vangf banr linhx"
+        },
+        {
+          "display": "sống cho đáng sống",
+          "keys": "soongs cho ddangs soongs"
+        },
+        {
+          "display": "sống đẹp mỗi ngày",
+          "keys": "soongs ddepj mooix ngayf"
         }
       ]
     },
@@ -1361,6 +1605,10 @@
         {
           "display": "mở mang kiến thức",
           "keys": "mowr mang kieens thuwcs"
+        },
+        {
+          "display": "học thầy không tày học bạn",
+          "keys": "hocj thaayf khoong tayf hocj banj"
         }
       ]
     },
@@ -1369,20 +1617,24 @@
       "title": "Lời chúc tốt đẹp",
       "content": [
         {
-          "display": "sức khoẻ dồi dào",
-          "keys": "suwcs khoer dooif daof"
-        },
-        {
           "display": "thân thể tráng kiện",
           "keys": "thaan theer trangs kieenj"
         },
         {
-          "display": "sống lâu trăm tuổi",
-          "keys": "soongs laau trawm tuooir"
-        },
-        {
           "display": "an khang thịnh vượng",
           "keys": "an khang thinhj vuwowngj"
+        },
+        {
+          "display": "sức khoẻ dồi dào",
+          "keys": "suwcs khoer dooif daof"
+        },
+        {
+          "display": "vạn thọ vô cương",
+          "keys": "vanj thoj voo cuwowng"
+        },
+        {
+          "display": "vạn sự cát tường",
+          "keys": "vanj suwj cats tuwowngf"
         }
       ]
     },
@@ -1405,6 +1657,10 @@
         {
           "display": "thẳng như ruột ngựa",
           "keys": "thawngr nhuw ruootj nguwaj"
+        },
+        {
+          "display": "hiền lành đức độ",
+          "keys": "hieenf lanhf dduwcs ddooj"
         }
       ]
     },
@@ -1427,6 +1683,10 @@
         {
           "display": "nhát như thỏ đế",
           "keys": "nhats nhuw thor ddees"
+        },
+        {
+          "display": "dũng cảm gan dạ",
+          "keys": "dungx camr gan daj"
         }
       ]
     },
@@ -1449,6 +1709,10 @@
         {
           "display": "tươi như hoa",
           "keys": "tuwowi nhuw hoa"
+        },
+        {
+          "display": "khiêm tốn học hỏi",
+          "keys": "khieem toons hocj hoir"
         }
       ]
     },
@@ -1471,6 +1735,10 @@
         {
           "display": "chậm như rùa",
           "keys": "chaamj nhuw ruaf"
+        },
+        {
+          "display": "thật thà ngay thẳng",
+          "keys": "thaatj thaf ngay thawngr"
         }
       ]
     },
@@ -1493,6 +1761,10 @@
         {
           "display": "khôn như cáo",
           "keys": "khoon nhuw caos"
+        },
+        {
+          "display": "chăm chỉ siêng năng",
+          "keys": "chawm chir sieeng nawng"
         }
       ]
     },
@@ -1500,10 +1772,6 @@
       "id": "level_167",
       "title": "Tính cách",
       "content": [
-        {
-          "display": "ngu như bò",
-          "keys": "ngu nhuw bof"
-        },
         {
           "display": "dữ như cọp",
           "keys": "duwx nhuw copj"
@@ -1515,6 +1783,14 @@
         {
           "display": "thật như đếm",
           "keys": "thaatj nhuw ddeems"
+        },
+        {
+          "display": "tự tin vươn lên",
+          "keys": "tuwj tin vuwown leen"
+        },
+        {
+          "display": "dũng cảm kiên cường",
+          "keys": "dungx camr kieen cuwowngf"
         }
       ]
     },
@@ -1537,6 +1813,10 @@
         {
           "display": "tự cao tự đại",
           "keys": "tuwj cao tuwj ddaij"
+        },
+        {
+          "display": "biết ơn nguồn cội",
+          "keys": "bieets own nguoonf cooij"
         }
       ]
     },
@@ -1544,10 +1824,6 @@
       "id": "level_169",
       "title": "Học tập",
       "content": [
-        {
-          "display": "học đi đôi với hành",
-          "keys": "hocj ddi ddooi vowis hanhf"
-        },
         {
           "display": "học hay cày giỏi",
           "keys": "hocj hay cayf gioir"
@@ -1559,6 +1835,14 @@
         {
           "display": "học tài thi phận",
           "keys": "hocj taif thi phaanj"
+        },
+        {
+          "display": "mỗi ngày một sàng khôn",
+          "keys": "mooix ngayf mootj sangf khoon"
+        },
+        {
+          "display": "siêng năng học hỏi",
+          "keys": "sieeng nawng hocj hoir"
         }
       ]
     },
@@ -1575,12 +1859,16 @@
           "keys": "vawn oon vox luyeenj"
         },
         {
-          "display": "dốt đến đâu học lâu cũng biết",
-          "keys": "doots ddeens ddaau hocj laau cungx bieets"
-        },
-        {
           "display": "không thầy đố mày làm nên",
           "keys": "khoong thaayf ddoos mayf lamf neen"
+        },
+        {
+          "display": "học tập suốt đời",
+          "keys": "hocj taapj suoots ddowif"
+        },
+        {
+          "display": "chăm học mỗi ngày",
+          "keys": "chawm hocj mooix ngayf"
         }
       ]
     },
@@ -1601,8 +1889,12 @@
           "keys": "awn vocs hocj hay"
         },
         {
-          "display": "dốt như bò",
-          "keys": "doots nhuw bof"
+          "display": "tự học tự rèn",
+          "keys": "tuwj hocj tuwj renf"
+        },
+        {
+          "display": "sách là người bạn",
+          "keys": "sachs laf nguwowif banj"
         }
       ]
     },
@@ -1615,16 +1907,20 @@
           "keys": "chawm hocj chawm lamf"
         },
         {
-          "display": "học ăn học nói",
-          "keys": "hocj awn hocj nois"
-        },
-        {
-          "display": "học gói học mở",
-          "keys": "hocj gois hocj mowr"
-        },
-        {
           "display": "đi một ngày đàng",
           "keys": "ddi mootj ngayf ddangf"
+        },
+        {
+          "display": "chăm chỉ học hành",
+          "keys": "chawm chir hocj hanhf"
+        },
+        {
+          "display": "mài sắt nên kim",
+          "keys": "maif sawts neen kim"
+        },
+        {
+          "display": "học hỏi không ngừng",
+          "keys": "hocj hoir khoong nguwngf"
         }
       ]
     },
@@ -1637,16 +1933,20 @@
           "keys": "hocj mootj sangf khoon"
         },
         {
-          "display": "học thầy không tày học bạn",
-          "keys": "hocj thaayf khoong tayf hocj banj"
-        },
-        {
           "display": "sách là kho tàng",
           "keys": "sachs laf kho tangf"
         },
         {
           "display": "kiến thức vô tận",
           "keys": "kieens thuwcs voo taanj"
+        },
+        {
+          "display": "học không bao giờ là muộn",
+          "keys": "hocj khoong bao giowf laf muoonj"
+        },
+        {
+          "display": "đọc sách mỗi ngày",
+          "keys": "ddocj sachs mooix ngayf"
         }
       ]
     },
@@ -1669,6 +1969,10 @@
         {
           "display": "đỗ đạt thành danh",
           "keys": "ddoox ddatj thanhf danh"
+        },
+        {
+          "display": "tri thức là sức mạnh",
+          "keys": "tri thuwcs laf suwcs manhj"
         }
       ]
     },
@@ -1685,12 +1989,16 @@
           "keys": "vinh quy bais toor"
         },
         {
-          "display": "chí công mài sắt",
-          "keys": "chis coong maif sawts"
+          "display": "mỗi ngày một bài học mới",
+          "keys": "mooix ngayf mootj baif hocj mowis"
         },
         {
-          "display": "có ngày nên kim",
-          "keys": "cos ngayf neen kim"
+          "display": "học tập là niềm vui",
+          "keys": "hocj taapj laf nieemf vui"
+        },
+        {
+          "display": "kiên trì học tập",
+          "keys": "kieen trif hocj taapj"
         }
       ]
     },
@@ -1699,20 +2007,24 @@
       "title": "Gia đình",
       "content": [
         {
-          "display": "anh em như thể tay chân",
-          "keys": "anh em nhuw theer tay chaan"
-        },
-        {
           "display": "rách lành đùm bọc",
           "keys": "rachs lanhf ddumf bocj"
         },
         {
-          "display": "dở hay đỡ đần",
-          "keys": "dowr hay ddowx ddaanf"
+          "display": "kính già yêu trẻ",
+          "keys": "kinhs giaf yeeu trer"
         },
         {
-          "display": "con hơn cha là nhà có phúc",
-          "keys": "con hown cha laf nhaf cos phucs"
+          "display": "gia đình có phúc",
+          "keys": "gia ddinhf cos phucs"
+        },
+        {
+          "display": "ấm áp tình thân",
+          "keys": "aams aps tinhf thaan"
+        },
+        {
+          "display": "anh em như tay chân",
+          "keys": "anh em nhuw tay chaan"
         }
       ]
     },
@@ -1725,16 +2037,20 @@
           "keys": "con nhaf toong khoong gioongs loong"
         },
         {
-          "display": "thì cũng giống cánh",
-          "keys": "thif cungx gioongs canhs"
-        },
-        {
           "display": "mẹ tròn con vuông",
           "keys": "mej tronf con vuoong"
         },
         {
-          "display": "cha mẹ sinh con trời sinh tính",
-          "keys": "cha mej sinh con trowif sinh tinhs"
+          "display": "chăm sóc con cái",
+          "keys": "chawm socs con cais"
+        },
+        {
+          "display": "kính yêu ông bà",
+          "keys": "kinhs yeeu oong baf"
+        },
+        {
+          "display": "trân trọng tổ tiên",
+          "keys": "traan trongj toor tieen"
         }
       ]
     },
@@ -1751,12 +2067,16 @@
           "keys": "sayr mej bus dif"
         },
         {
-          "display": "chị ngã em nâng",
-          "keys": "chij ngax em naang"
+          "display": "anh em như thể chân tay",
+          "keys": "anh em nhuw theer chaan tay"
         },
         {
-          "display": "máu chảy ruột mềm",
-          "keys": "maus chayr ruootj meemf"
+          "display": "con hiền cháu thảo",
+          "keys": "con hieenf chaus thaor"
+        },
+        {
+          "display": "cội nguồn gia đình",
+          "keys": "cooij nguoonf gia ddinhf"
         }
       ]
     },
@@ -1765,20 +2085,24 @@
       "title": "Gia đình",
       "content": [
         {
-          "display": "một giọt máu đào",
-          "keys": "mootj giotj maus ddaof"
-        },
-        {
-          "display": "hơn ao nước lã",
-          "keys": "hown ao nuwowcs lax"
-        },
-        {
-          "display": "con có cha như nhà có nóc",
-          "keys": "con cos cha nhuw nhaf cos nocs"
-        },
-        {
           "display": "con không cha như nòng nọc",
           "keys": "con khoong cha nhuw nongf nocj"
+        },
+        {
+          "display": "nước chảy về nguồn",
+          "keys": "nuwowcs chayr veef nguoonf"
+        },
+        {
+          "display": "gia hoà vạn sự hưng",
+          "keys": "gia hoaf vanj suwj huwng"
+        },
+        {
+          "display": "gia đình sum họp",
+          "keys": "gia ddinhf sum hopj"
+        },
+        {
+          "display": "tôn trọng người thân",
+          "keys": "toon trongj nguwowif thaan"
         }
       ]
     },
@@ -1786,10 +2110,6 @@
       "id": "level_180",
       "title": "Gia đình",
       "content": [
-        {
-          "display": "đứt đuôi",
-          "keys": "dduwts dduooi"
-        },
         {
           "display": "môi hở răng lạnh",
           "keys": "mooi howr rawng lanhj"
@@ -1799,8 +2119,16 @@
           "keys": "thuaanj vowj thuaanj choongf"
         },
         {
-          "display": "tát biển đông cũng cạn",
-          "keys": "tats bieenr ddoong cungx canj"
+          "display": "công cha nghĩa mẹ ơn thầy",
+          "keys": "coong cha nghiax mej own thaayf"
+        },
+        {
+          "display": "dạy dỗ con ngoan",
+          "keys": "dayj doox con ngoan"
+        },
+        {
+          "display": "gia phong nền nếp",
+          "keys": "gia phong neenf neeps"
         }
       ]
     },
@@ -1813,16 +2141,20 @@
           "keys": "anh em thaor hieenf"
         },
         {
-          "display": "lá lành đùm lá rách",
-          "keys": "las lanhf ddumf las rachs"
-        },
-        {
           "display": "gia đình là tổ ấm",
           "keys": "gia ddinhf laf toor aams"
         },
         {
           "display": "nuôi con khôn lớn",
           "keys": "nuooi con khoon lowns"
+        },
+        {
+          "display": "anh em hoà thuận",
+          "keys": "anh em hoaf thuaanj"
+        },
+        {
+          "display": "hiếu thảo cha mẹ",
+          "keys": "hieeus thaor cha mej"
         }
       ]
     },
@@ -1839,12 +2171,16 @@
           "keys": "tinhf thaam nhuw beer"
         },
         {
-          "display": "kính lão đắc thọ",
-          "keys": "kinhs laox ddawcs thoj"
-        },
-        {
           "display": "kính già già để tuổi cho",
           "keys": "kinhs giaf giaf ddeer tuooir cho"
+        },
+        {
+          "display": "phụng dưỡng song thân",
+          "keys": "phungj duwowngx song thaan"
+        },
+        {
+          "display": "tình cảm gia đình",
+          "keys": "tinhf camr gia ddinhf"
         }
       ]
     },
@@ -1867,6 +2203,10 @@
         {
           "display": "gần đèn thì rạng",
           "keys": "gaanf ddenf thif rangj"
+        },
+        {
+          "display": "bạn bè hoạn nạn có nhau",
+          "keys": "banj bef hoanj nanj cos nhau"
         }
       ]
     },
@@ -1887,8 +2227,12 @@
           "keys": "buoon cos banj bans cos phuwowngf"
         },
         {
-          "display": "một cây làm chẳng nên non",
-          "keys": "mootj caay lamf chawngr neen non"
+          "display": "tình bạn chân thành",
+          "keys": "tinhf banj chaan thanhf"
+        },
+        {
+          "display": "bạn bè tương trợ",
+          "keys": "banj bef tuwowng trowj"
         }
       ]
     },
@@ -1897,20 +2241,24 @@
       "title": "Bạn bè",
       "content": [
         {
-          "display": "ba cây chụm lại",
-          "keys": "ba caay chumj laij"
-        },
-        {
-          "display": "nên hòn núi cao",
-          "keys": "neen honf nuis cao"
-        },
-        {
           "display": "tứ hải giai huynh đệ",
           "keys": "tuws hair giai huynh ddeej"
         },
         {
           "display": "kết giao tâm giao",
           "keys": "keets giao taam giao"
+        },
+        {
+          "display": "giúp đỡ bạn bè",
+          "keys": "giups ddowx banj bef"
+        },
+        {
+          "display": "đồng lòng hiệp lực",
+          "keys": "ddoongf longf hieepj luwcj"
+        },
+        {
+          "display": "tình bạn thắm thiết",
+          "keys": "tinhf banj thawms thieets"
         }
       ]
     },
@@ -1918,10 +2266,6 @@
       "id": "level_186",
       "title": "Bạn bè",
       "content": [
-        {
-          "display": "chia ngọt sẻ bùi",
-          "keys": "chia ngotj ser buif"
-        },
         {
           "display": "đồng cam cộng khổ",
           "keys": "ddoongf cam coongj khoor"
@@ -1933,6 +2277,14 @@
         {
           "display": "tri kỷ tri âm",
           "keys": "tri kyr tri aam"
+        },
+        {
+          "display": "chia sẻ buồn vui",
+          "keys": "chia ser buoonf vui"
+        },
+        {
+          "display": "cùng nhau tiến bộ",
+          "keys": "cungf nhau tieens booj"
         }
       ]
     },
@@ -1955,6 +2307,10 @@
         {
           "display": "bạn xấu dễ thấy",
           "keys": "banj xaaus deex thaays"
+        },
+        {
+          "display": "tình bạn keo sơn",
+          "keys": "tinhf banj keo sown"
         }
       ]
     },
@@ -1977,6 +2333,10 @@
         {
           "display": "không rời không xa",
           "keys": "khoong rowif khoong xa"
+        },
+        {
+          "display": "đoàn kết một lòng",
+          "keys": "ddoanf keets mootj longf"
         }
       ]
     },
@@ -1999,6 +2359,10 @@
         {
           "display": "như ngọc như vàng",
           "keys": "nhuw ngocj nhuw vangf"
+        },
+        {
+          "display": "bạn bè chân thành",
+          "keys": "banj bef chaan thanhf"
         }
       ]
     },
@@ -2015,12 +2379,16 @@
           "keys": "tay quai mieengj treex"
         },
         {
-          "display": "ăn làm sao làm làm vậy",
-          "keys": "awn lamf sao lamf lamf vaayj"
+          "display": "siêng năng làm ăn",
+          "keys": "sieeng nawng lamf awn"
         },
         {
-          "display": "làm ruộng thì gia",
-          "keys": "lamf ruoongj thif gia"
+          "display": "siêng năng cần cù",
+          "keys": "sieeng nawng caanf cuf"
+        },
+        {
+          "display": "tay làm chân chạy",
+          "keys": "tay lamf chaan chayj"
         }
       ]
     },
@@ -2029,20 +2397,24 @@
       "title": "Lao động",
       "content": [
         {
-          "display": "làm nhà thì tốn",
-          "keys": "lamf nhaf thif toons"
-        },
-        {
           "display": "nhất canh trì nhị canh viên",
           "keys": "nhaats canh trif nhij canh vieen"
         },
         {
-          "display": "tam canh điền",
-          "keys": "tam canh ddieenf"
+          "display": "làm lụng vất vả",
+          "keys": "lamf lungj vaats var"
         },
         {
-          "display": "muốn ăn thì lăn vào bếp",
-          "keys": "muoons awn thif lawn vaof beeps"
+          "display": "lao động vinh quang",
+          "keys": "lao ddoongj vinh quang"
+        },
+        {
+          "display": "làm ăn lương thiện",
+          "keys": "lamf awn luwowng thieenj"
+        },
+        {
+          "display": "lao động sáng tạo",
+          "keys": "lao ddoongj sangs taoj"
         }
       ]
     },
@@ -2050,10 +2422,6 @@
       "id": "level_192",
       "title": "Lao động",
       "content": [
-        {
-          "display": "muốn giàu thì nuôi trâu cái",
-          "keys": "muoons giauf thif nuooi traau cais"
-        },
         {
           "display": "đầu tắt mặt tối",
           "keys": "ddaauf tawts mawtj toois"
@@ -2065,6 +2433,14 @@
         {
           "display": "chân lấm tay bùn",
           "keys": "chaan laams tay bunf"
+        },
+        {
+          "display": "chăm chỉ làm ăn",
+          "keys": "chawm chir lamf awn"
+        },
+        {
+          "display": "của cải làm ra",
+          "keys": "cuar cair lamf ra"
         }
       ]
     },
@@ -2077,16 +2453,20 @@
           "keys": "moof hooi nuwowcs mawts"
         },
         {
-          "display": "thức khuya dậy sớm",
-          "keys": "thuwcs khuya daayj sowms"
-        },
-        {
           "display": "siêng làm thì ấm",
           "keys": "sieeng lamf thif aams"
         },
         {
           "display": "siêng học thì thông",
           "keys": "sieeng hocj thif thoong"
+        },
+        {
+          "display": "lao động là vinh quang",
+          "keys": "lao ddoongj laf vinh quang"
+        },
+        {
+          "display": "chăm chỉ làm lụng",
+          "keys": "chawm chir lamf lungj"
         }
       ]
     },
@@ -2095,20 +2475,24 @@
       "title": "Lao động",
       "content": [
         {
-          "display": "cần cù bù thông minh",
-          "keys": "caanf cuf buf thoong minh"
+          "display": "chăm làm thì giàu",
+          "keys": "chawm lamf thif giauf"
         },
         {
-          "display": "làm khi lành để dành khi đau",
-          "keys": "lamf khi lanhf ddeer danhf khi ddau"
+          "display": "kiên trì lao động",
+          "keys": "kieen trif lao ddoongj"
         },
         {
-          "display": "tháng tám đói qua",
-          "keys": "thangs tams ddois qua"
+          "display": "làm lụng siêng năng",
+          "keys": "lamf lungj sieeng nawng"
         },
         {
-          "display": "tháng ba đói chết",
-          "keys": "thangs ba ddois cheets"
+          "display": "siêng năng lao động",
+          "keys": "sieeng nawng lao ddoongj"
+        },
+        {
+          "display": "chăm chỉ làm việc",
+          "keys": "chawm chir lamf vieecj"
         }
       ]
     },
@@ -2125,12 +2509,16 @@
           "keys": "lamf thaatj awn thaatj"
         },
         {
-          "display": "lao động là vinh quang",
-          "keys": "lao ddoongj laf vinh quang"
-        },
-        {
           "display": "có làm thì mới có ăn",
           "keys": "cos lamf thif mowis cos awn"
+        },
+        {
+          "display": "lao động hăng say",
+          "keys": "lao ddoongj hawng say"
+        },
+        {
+          "display": "bàn tay làm nên",
+          "keys": "banf tay lamf neen"
         }
       ]
     },
@@ -2139,20 +2527,24 @@
       "title": "Lao động",
       "content": [
         {
-          "display": "không dưng ai dễ",
-          "keys": "khoong duwng ai deex"
-        },
-        {
-          "display": "đem phần đến cho",
-          "keys": "ddem phaanf ddeens cho"
-        },
-        {
-          "display": "chăm làm thì giàu",
-          "keys": "chawm lamf thif giauf"
-        },
-        {
           "display": "lười làm thì đói",
           "keys": "luwowif lamf thif ddois"
+        },
+        {
+          "display": "siêng năng làm việc",
+          "keys": "sieeng nawng lamf vieecj"
+        },
+        {
+          "display": "tất cả của cải",
+          "keys": "taats car cuar cair"
+        },
+        {
+          "display": "thành quả lao động",
+          "keys": "thanhf quar lao ddoongj"
+        },
+        {
+          "display": "trân trọng lao động",
+          "keys": "traan trongj lao ddoongj"
         }
       ]
     }

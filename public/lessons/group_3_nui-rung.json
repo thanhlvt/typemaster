@@ -19,6 +19,10 @@
         {
           "display": "trăng tán thì mưa",
           "keys": "trawng tans thif muwa"
+        },
+        {
+          "display": "cầu vồng rực rỡ sau mưa",
+          "keys": "caauf voongf ruwcj rowx sau muwa"
         }
       ]
     },
@@ -27,20 +31,24 @@
       "title": "Thiên nhiên",
       "content": [
         {
-          "display": "đêm tháng năm chưa nằm đã sáng",
-          "keys": "ddeem thangs nawm chuwa nawmf ddax sangs"
-        },
-        {
-          "display": "ngày tháng mười chưa cười",
-          "keys": "ngayf thangs muwowif chuwa cuwowif"
-        },
-        {
-          "display": "đã tối",
-          "keys": "ddax toois"
-        },
-        {
           "display": "ếch kêu uôm uôm",
           "keys": "eechs keeu uoom uoom"
+        },
+        {
+          "display": "trời xanh mây trắng",
+          "keys": "trowif xanh maay trawngs"
+        },
+        {
+          "display": "nắng ấm xua tan rét lạnh",
+          "keys": "nawngs aams xua tan rets lanhj"
+        },
+        {
+          "display": "sương mù giăng lối",
+          "keys": "suwowng muf giawng loois"
+        },
+        {
+          "display": "bão bùng giông gió",
+          "keys": "baox bungf gioong gios"
         }
       ]
     },
@@ -53,16 +61,20 @@
           "keys": "ao chuoom ddaayf nuwowcs"
         },
         {
-          "display": "chuồn chuồn bay thấp",
-          "keys": "chuoonf chuoonf bay thaaps"
-        },
-        {
-          "display": "thì mưa",
-          "keys": "thif muwa"
-        },
-        {
           "display": "bay cao thì nắng",
           "keys": "bay cao thif nawngs"
+        },
+        {
+          "display": "mưa phùn gió bấc",
+          "keys": "muwa phunf gios baacs"
+        },
+        {
+          "display": "gió mát trăng thanh",
+          "keys": "gios mats trawng thanh"
+        },
+        {
+          "display": "nắng vàng rực rỡ",
+          "keys": "nawngs vangf ruwcj rowx"
         }
       ]
     },
@@ -85,6 +97,10 @@
         {
           "display": "gà gáy thì sáng",
           "keys": "gaf gays thif sangs"
+        },
+        {
+          "display": "cây cối xanh tươi",
+          "keys": "caay coois xanh tuwowi"
         }
       ]
     },
@@ -107,6 +123,10 @@
         {
           "display": "gió thổi mây bay",
           "keys": "gios thooir maay bay"
+        },
+        {
+          "display": "dòng sông êm đềm",
+          "keys": "dongf soong eem ddeemf"
         }
       ]
     },
@@ -129,6 +149,10 @@
         {
           "display": "bốn mùa xuân hạ",
           "keys": "boons muaf xuaan haj"
+        },
+        {
+          "display": "ngọn núi cao vút",
+          "keys": "ngonj nuis cao vuts"
         }
       ]
     },
@@ -151,6 +175,10 @@
         {
           "display": "biển bạc rừng vàng",
           "keys": "bieenr bacj ruwngf vangf"
+        },
+        {
+          "display": "cánh đồng bao la",
+          "keys": "canhs ddoongf bao la"
         }
       ]
     },
@@ -159,20 +187,24 @@
       "title": "Đạo đức",
       "content": [
         {
-          "display": "ăn quả nhớ kẻ trồng cây",
-          "keys": "awn quar nhows ker troongf caay"
+          "display": "giữ gìn phẩm hạnh",
+          "keys": "giuwx ginf phaamr hanhj"
         },
         {
-          "display": "uống nước nhớ nguồn",
-          "keys": "uoongs nuwowcs nhows nguoonf"
+          "display": "tiết trời mùa thu mát mẻ",
+          "keys": "tieets trowif muaf thu mats mer"
         },
         {
-          "display": "ăn khoai nhớ kẻ cho dây",
-          "keys": "awn khoai nhows ker cho daay"
+          "display": "mưa phùn nhẹ hạt mùa xuân",
+          "keys": "muwa phunf nhej hatj muaf xuaan"
         },
         {
-          "display": "mà trồng",
-          "keys": "maf troongf"
+          "display": "rét phùn gió bấc lạnh buốt",
+          "keys": "rets phunf gios baacs lanhj buoots"
+        },
+        {
+          "display": "khí hậu trong lành dễ chịu",
+          "keys": "khis haauj trong lanhf deex chiuj"
         }
       ]
     },
@@ -185,16 +217,20 @@
           "keys": "ddois cho sachj rachs cho thowm"
         },
         {
-          "display": "giấy rách phải giữ lấy lề",
-          "keys": "giaays rachs phair giuwx laays leef"
+          "display": "lương thiện là vàng",
+          "keys": "luwowng thieenj laf vangf"
         },
         {
-          "display": "tốt gỗ hơn tốt nước sơn",
-          "keys": "toots goox hown toots nuwowcs sown"
+          "display": "phố xá đông vui nhộn nhịp",
+          "keys": "phoos xas ddoong vui nhoonj nhipj"
         },
         {
-          "display": "thật thà là cha quỷ quái",
-          "keys": "thaatj thaf laf cha quyr quais"
+          "display": "người xe tấp nập ngược xuôi",
+          "keys": "nguwowif xe taaps naapj nguwowcj xuooi"
+        },
+        {
+          "display": "bảo vệ rừng xanh quê hương",
+          "keys": "baor veej ruwngf xanh quee huwowng"
         }
       ]
     },
@@ -217,6 +253,10 @@
         {
           "display": "lương tâm thanh thản",
           "keys": "luwowng taam thanh thanr"
+        },
+        {
+          "display": "nhân ái bao dung",
+          "keys": "nhaan ais bao dung"
         }
       ]
     },
@@ -225,20 +265,24 @@
       "title": "Đạo đức",
       "content": [
         {
-          "display": "chết trong còn hơn sống đục",
-          "keys": "cheets trong conf hown soongs dducj"
-        },
-        {
-          "display": "trọng nghĩa khinh tài",
-          "keys": "trongj nghiax khinh taif"
-        },
-        {
           "display": "không tham của người",
           "keys": "khoong tham cuar nguwowif"
         },
         {
           "display": "không kiêu khi thắng",
           "keys": "khoong kieeu khi thawngs"
+        },
+        {
+          "display": "bảo vệ môi trường xanh sạch",
+          "keys": "baor veej mooi truwowngf xanh sachj"
+        },
+        {
+          "display": "trồng cây gây rừng tươi tốt",
+          "keys": "troongf caay gaay ruwngf tuwowi toots"
+        },
+        {
+          "display": "tự tin tiến bước tương lai",
+          "keys": "tuwj tin tieens buwowcs tuwowng lai"
         }
       ]
     },
@@ -251,16 +295,20 @@
           "keys": "khoong nanr khi thua"
         },
         {
-          "display": "giúp người là giúp mình",
-          "keys": "giups nguwowif laf giups minhf"
-        },
-        {
-          "display": "làm việc thiện",
-          "keys": "lamf vieecj thieenj"
-        },
-        {
           "display": "tích thiện phùng thiện",
           "keys": "tichs thieenj phungf thieenj"
+        },
+        {
+          "display": "sống có đức nghĩa",
+          "keys": "soongs cos dduwcs nghiax"
+        },
+        {
+          "display": "khám phá điều hay lẽ phải",
+          "keys": "khams phas ddieeuf hay lex phair"
+        },
+        {
+          "display": "sức khoẻ dồi dào hạnh phúc",
+          "keys": "suwcs khoer dooif daof hanhj phucs"
         }
       ]
     },
@@ -268,10 +316,6 @@
       "id": "level_209",
       "title": "Đạo đức",
       "content": [
-        {
-          "display": "ác giả ác báo",
-          "keys": "acs giar acs baos"
-        },
         {
           "display": "lưới trời lồng lộng",
           "keys": "luwowis trowif loongf loongj"
@@ -283,6 +327,14 @@
         {
           "display": "biết sai thì sửa",
           "keys": "bieets sai thif suwar"
+        },
+        {
+          "display": "gieo nhân lành quả ngọt",
+          "keys": "gieo nhaan lanhf quar ngotj"
+        },
+        {
+          "display": "cuộc sống tươi đẹp mỗi ngày",
+          "keys": "cuoocj soongs tuwowi ddepj mooix ngayf"
         }
       ]
     },
@@ -295,16 +347,20 @@
           "keys": "longf daj thawngr ngay"
         },
         {
-          "display": "cây ngay không sợ",
-          "keys": "caay ngay khoong sowj"
+          "display": "luôn giữ lòng trung thực",
+          "keys": "luoon giuwx longf trung thuwcj"
         },
         {
-          "display": "chết đứng",
-          "keys": "cheets dduwngs"
+          "display": "tránh xa điều ác",
+          "keys": "tranhs xa ddieeuf acs"
         },
         {
-          "display": "người ngay nói thật",
-          "keys": "nguwowif ngay nois thaatj"
+          "display": "làm lành lánh dữ",
+          "keys": "lamf lanhf lanhs duwx"
+        },
+        {
+          "display": "hãy học sách tốt",
+          "keys": "hayx hocj sachs toots"
         }
       ]
     },
@@ -313,20 +369,24 @@
       "title": "Kinh nghiệm sống",
       "content": [
         {
-          "display": "sông có khúc người có lúc",
-          "keys": "soong cos khucs nguwowif cos lucs"
+          "display": "vỏ quýt dày móng tay nhọn",
+          "keys": "vor quyts dayf mongs tay nhonj"
         },
         {
-          "display": "vỏ quýt dày có móng tay nhọn",
-          "keys": "vor quyts dayf cos mongs tay nhonj"
+          "display": "chớ vội tin người",
+          "keys": "chows vooij tin nguwowif"
         },
         {
-          "display": "mềm nắn rắn buông",
-          "keys": "meemf nawns rawns buoong"
+          "display": "kinh nghiệm quý giá",
+          "keys": "kinh nghieemj quys gias"
         },
         {
-          "display": "đi một ngày đàng học một sàng khôn",
-          "keys": "ddi mootj ngayf ddangf hocj mootj sangf khoon"
+          "display": "hãy học sách nhanh",
+          "keys": "hayx hocj sachs nhanh"
+        },
+        {
+          "display": "nên học sách nhanh",
+          "keys": "neen hocj sachs nhanh"
         }
       ]
     },
@@ -349,6 +409,10 @@
         {
           "display": "trong cái rủi có cái may",
           "keys": "trong cais ruir cos cais may"
+        },
+        {
+          "display": "cần học sách nhanh",
+          "keys": "caanf hocj sachs nhanh"
         }
       ]
     },
@@ -357,20 +421,24 @@
       "title": "Kinh nghiệm sống",
       "content": [
         {
-          "display": "liệu cơm gắp mắm",
-          "keys": "lieeuj cowm gawps mawms"
-        },
-        {
           "display": "khéo co thì ấm",
           "keys": "kheos co thif aams"
         },
         {
-          "display": "biết người biết ta",
-          "keys": "bieets nguwowif bieets ta"
-        },
-        {
           "display": "trăm trận trăm thắng",
           "keys": "trawm traanj trawm thawngs"
+        },
+        {
+          "display": "phải học sách nhanh",
+          "keys": "phair hocj sachs nhanh"
+        },
+        {
+          "display": "luôn học sách nhanh",
+          "keys": "luoon hocj sachs nhanh"
+        },
+        {
+          "display": "chăm học sách nhanh",
+          "keys": "chawm hocj sachs nhanh"
         }
       ]
     },
@@ -379,20 +447,24 @@
       "title": "Kinh nghiệm sống",
       "content": [
         {
-          "display": "tiền mất tật mang",
-          "keys": "tieenf maats taatj mang"
-        },
-        {
-          "display": "tiền nào của nấy",
-          "keys": "tieenf naof cuar naays"
-        },
-        {
-          "display": "của rẻ là của ôi",
-          "keys": "cuar rer laf cuar ooi"
-        },
-        {
           "display": "đừng nghe lời nịnh",
           "keys": "dduwngf nghe lowif ninhj"
+        },
+        {
+          "display": "chậm mà chắc",
+          "keys": "chaamj maf chawcs"
+        },
+        {
+          "display": "siêng học sách nhanh",
+          "keys": "sieeng hocj sachs nhanh"
+        },
+        {
+          "display": "chuyên học sách nhanh",
+          "keys": "chuyeen hocj sachs nhanh"
+        },
+        {
+          "display": "quyết học sách nhanh",
+          "keys": "quyeets hocj sachs nhanh"
         }
       ]
     },
@@ -409,12 +481,16 @@
           "keys": "phongf beenhj hown chuwax beenhj"
         },
         {
-          "display": "cẩn tắc vô ưu",
-          "keys": "caanr tawcs voo uwu"
+          "display": "cố học sách nhanh",
+          "keys": "coos hocj sachs nhanh"
         },
         {
-          "display": "thời gian là vàng",
-          "keys": "thowif gian laf vangf"
+          "display": "gắng học sách nhanh",
+          "keys": "gawngs hocj sachs nhanh"
+        },
+        {
+          "display": "ra học sách nhanh",
+          "keys": "ra hocj sachs nhanh"
         }
       ]
     },
@@ -423,20 +499,24 @@
       "title": "Kinh nghiệm sống",
       "content": [
         {
-          "display": "đừng để mai sau",
-          "keys": "dduwngf ddeer mai sau"
+          "display": "suy nghĩ chín chắn",
+          "keys": "suy nghix chins chawns"
         },
         {
-          "display": "việc hôm nay chớ để ngày mai",
-          "keys": "vieecj hoom nay chows ddeer ngayf mai"
+          "display": "thành công bền bỉ",
+          "keys": "thanhf coong beenf bir"
         },
         {
-          "display": "sai một li đi một dặm",
-          "keys": "sai mootj li ddi mootj dawmj"
+          "display": "sức học sách nhanh",
+          "keys": "suwcs hocj sachs nhanh"
         },
         {
-          "display": "mất bò mới lo làm chuồng",
-          "keys": "maats bof mowis lo lamf chuoongf"
+          "display": "tự học sách nhanh",
+          "keys": "tuwj hocj sachs nhanh"
+        },
+        {
+          "display": "lo học sách nhanh",
+          "keys": "lo hocj sachs nhanh"
         }
       ]
     },
@@ -445,20 +525,24 @@
       "title": "Kinh nghiệm sống",
       "content": [
         {
-          "display": "sự đã rồi",
-          "keys": "suwj ddax rooif"
-        },
-        {
-          "display": "hối không kịp",
-          "keys": "hoois khoong kipj"
-        },
-        {
           "display": "biết đủ là vui",
           "keys": "bieets ddur laf vui"
         },
         {
           "display": "tham thì thâm",
           "keys": "tham thif thaam"
+        },
+        {
+          "display": "nỗ lực không ngừng",
+          "keys": "noox luwcj khoong nguwngf"
+        },
+        {
+          "display": "tương lai tươi sáng",
+          "keys": "tuwowng lai tuwowi sangs"
+        },
+        {
+          "display": "hãy hỏi sách nhanh",
+          "keys": "hayx hoir sachs nhanh"
         }
       ]
     },
@@ -481,6 +565,10 @@
         {
           "display": "quốc có quốc pháp",
           "keys": "quoocs cos quoocs phaps"
+        },
+        {
+          "display": "quê hương tươi đẹp",
+          "keys": "quee huwowng tuwowi ddepj"
         }
       ]
     },
@@ -488,10 +576,6 @@
       "id": "level_219",
       "title": "Đất nước",
       "content": [
-        {
-          "display": "gia có gia quy",
-          "keys": "gia cos gia quy"
-        },
         {
           "display": "đất nước thanh bình",
           "keys": "ddaats nuwowcs thanh binhf"
@@ -503,6 +587,14 @@
         {
           "display": "giữ gìn bờ cõi",
           "keys": "giuwx ginf bowf coix"
+        },
+        {
+          "display": "yêu mến non sông",
+          "keys": "yeeu meens non soong"
+        },
+        {
+          "display": "bản sắc văn hoá",
+          "keys": "banr sawcs vawn hoas"
         }
       ]
     },
@@ -525,6 +617,10 @@
         {
           "display": "hào khí đông a",
           "keys": "haof khis ddoong a"
+        },
+        {
+          "display": "giữ gìn truyền thống",
+          "keys": "giuwx ginf truyeenf thoongs"
         }
       ]
     },
@@ -547,6 +643,10 @@
         {
           "display": "vẻ đẹp non sông",
           "keys": "ver ddepj non soong"
+        },
+        {
+          "display": "non sông gấm vóc",
+          "keys": "non soong gaams vocs"
         }
       ]
     },
@@ -569,6 +669,10 @@
         {
           "display": "tận trung với nước",
           "keys": "taanj trung vowis nuwowcs"
+        },
+        {
+          "display": "bảo vệ biên cương",
+          "keys": "baor veej bieen cuwowng"
         }
       ]
     },
@@ -581,16 +685,20 @@
           "keys": "taanj hieeus vowis daan"
         },
         {
-          "display": "đoàn kết một lòng",
-          "keys": "ddoanf keets mootj longf"
-        },
-        {
           "display": "xây dựng tương lai",
           "keys": "xaay duwngj tuwowng lai"
         },
         {
           "display": "giàu mạnh văn minh",
           "keys": "giauf manhj vawn minh"
+        },
+        {
+          "display": "chăm chỉ rèn luyện",
+          "keys": "chawm chir renf luyeenj"
+        },
+        {
+          "display": "nên hỏi sách nhanh",
+          "keys": "neen hoir sachs nhanh"
         }
       ]
     },
@@ -613,6 +721,10 @@
         {
           "display": "mãi mãi xanh tươi",
           "keys": "maix maix xanh tuwowi"
+        },
+        {
+          "display": "lòng tin chiến thắng",
+          "keys": "longf tin chieens thawngs"
         }
       ]
     },
@@ -621,20 +733,24 @@
       "title": "Tình yêu",
       "content": [
         {
-          "display": "yêu nhau mấy núi cũng trèo",
-          "keys": "yeeu nhau maays nuis cungx treof"
-        },
-        {
-          "display": "mấy sông cũng lội",
-          "keys": "maays soong cungx looij"
-        },
-        {
-          "display": "mấy đèo cũng qua",
-          "keys": "maays ddeof cungx qua"
-        },
-        {
           "display": "yêu nhau yêu cả đường đi",
           "keys": "yeeu nhau yeeu car dduwowngf ddi"
+        },
+        {
+          "display": "yêu thương gắn bó",
+          "keys": "yeeu thuwowng gawns bos"
+        },
+        {
+          "display": "tình nghĩa phu thê",
+          "keys": "tinhf nghiax phu thee"
+        },
+        {
+          "display": "bên nhau trọn đời",
+          "keys": "been nhau tronj ddowif"
+        },
+        {
+          "display": "cần hỏi sách nhanh",
+          "keys": "caanf hoir sachs nhanh"
         }
       ]
     },
@@ -643,20 +759,24 @@
       "title": "Tình yêu",
       "content": [
         {
-          "display": "ghét nhau ghét cả tông ty",
-          "keys": "ghets nhau ghets car toong ty"
+          "display": "tình cảm đong đầy",
+          "keys": "tinhf camr ddong ddaayf"
         },
         {
-          "display": "họ hàng",
-          "keys": "hoj hangf"
+          "display": "phải hỏi sách nhanh",
+          "keys": "phair hoir sachs nhanh"
         },
         {
-          "display": "vợ chồng nghĩa nặng tình sâu",
-          "keys": "vowj choongf nghiax nawngj tinhf saau"
+          "display": "luôn hỏi sách nhanh",
+          "keys": "luoon hoir sachs nhanh"
         },
         {
-          "display": "thương nhau lắm cắn nhau đau",
-          "keys": "thuwowng nhau lawms cawns nhau ddau"
+          "display": "chăm hỏi sách nhanh",
+          "keys": "chawm hoir sachs nhanh"
+        },
+        {
+          "display": "siêng hỏi sách nhanh",
+          "keys": "sieeng hoir sachs nhanh"
         }
       ]
     },
@@ -669,16 +789,20 @@
           "keys": "xa mawtj cachs longf"
         },
         {
-          "display": "một lòng một dạ",
-          "keys": "mootj longf mootj daj"
-        },
-        {
           "display": "thủy chung son sắt",
           "keys": "thuyr chung son sawts"
         },
         {
           "display": "trăm năm hạnh phúc",
           "keys": "trawm nawm hanhj phucs"
+        },
+        {
+          "display": "yêu thương sâu đậm",
+          "keys": "yeeu thuwowng saau ddaamj"
+        },
+        {
+          "display": "chuyên hỏi sách nhanh",
+          "keys": "chuyeen hoir sachs nhanh"
         }
       ]
     },
@@ -686,10 +810,6 @@
       "id": "level_228",
       "title": "Tình yêu",
       "content": [
-        {
-          "display": "đầu bạc răng long",
-          "keys": "ddaauf bacj rawng long"
-        },
         {
           "display": "duyên nợ tiền định",
           "keys": "duyeen nowj tieenf ddinhj"
@@ -701,6 +821,14 @@
         {
           "display": "xứng đôi vừa lứa",
           "keys": "xuwngs ddooi vuwaf luwas"
+        },
+        {
+          "display": "chung thủy một lòng",
+          "keys": "chung thuyr mootj longf"
+        },
+        {
+          "display": "quyết hỏi sách nhanh",
+          "keys": "quyeets hoir sachs nhanh"
         }
       ]
     },
@@ -723,6 +851,10 @@
         {
           "display": "thương thầm nhớ trộm",
           "keys": "thuwowng thaamf nhows troomj"
+        },
+        {
+          "display": "cố hỏi sách nhanh",
+          "keys": "coos hoir sachs nhanh"
         }
       ]
     },
@@ -743,8 +875,12 @@
           "keys": "gawns bos tronj ddowif"
         },
         {
-          "display": "không rời không xa",
-          "keys": "khoong rowif khoong xa"
+          "display": "không ngừng vươn xa",
+          "keys": "khoong nguwngf vuwown xa"
+        },
+        {
+          "display": "gắng hỏi sách nhanh",
+          "keys": "gawngs hoir sachs nhanh"
         }
       ]
     },
@@ -752,10 +888,6 @@
       "id": "level_231",
       "title": "Tình yêu",
       "content": [
-        {
-          "display": "chia ngọt sẻ bùi",
-          "keys": "chia ngotj ser buif"
-        },
         {
           "display": "vượt qua gian khó",
           "keys": "vuwowtj qua gian khos"
@@ -765,8 +897,16 @@
           "keys": "hanhj phucs gia ddinhf"
         },
         {
-          "display": "ấm áp tình thân",
-          "keys": "aams aps tinhf thaan"
+          "display": "ra hỏi sách nhanh",
+          "keys": "ra hoir sachs nhanh"
+        },
+        {
+          "display": "sức hỏi sách nhanh",
+          "keys": "suwcs hoir sachs nhanh"
+        },
+        {
+          "display": "tự hỏi sách nhanh",
+          "keys": "tuwj hoir sachs nhanh"
         }
       ]
     },
@@ -775,20 +915,24 @@
       "title": "Lòng biết ơn",
       "content": [
         {
-          "display": "uống nước nhớ nguồn",
-          "keys": "uoongs nuwowcs nhows nguoonf"
-        },
-        {
-          "display": "ăn quả nhớ kẻ trồng cây",
-          "keys": "awn quar nhows ker troongf caay"
-        },
-        {
-          "display": "ăn khoai nhớ kẻ cho dây",
-          "keys": "awn khoai nhows ker cho daay"
-        },
-        {
           "display": "ăn cơm nhớ kẻ cày bừa",
           "keys": "awn cowm nhows ker cayf buwaf"
+        },
+        {
+          "display": "luôn nhớ ơn xưa",
+          "keys": "luoon nhows own xuwa"
+        },
+        {
+          "display": "biết ơn cha mẹ",
+          "keys": "bieets own cha mej"
+        },
+        {
+          "display": "ghi nhớ công ơn",
+          "keys": "ghi nhows coong own"
+        },
+        {
+          "display": "lo hỏi sách nhanh",
+          "keys": "lo hoir sachs nhanh"
         }
       ]
     },
@@ -801,16 +945,20 @@
           "keys": "nhows own thaayf coo"
         },
         {
-          "display": "công cha nghĩa mẹ",
-          "keys": "coong cha nghiax mej"
-        },
-        {
-          "display": "ơn sâu nghĩa nặng",
-          "keys": "own saau nghiax nawngj"
-        },
-        {
           "display": "đáp đền tiếp nối",
           "keys": "ddaps ddeenf tieeps noois"
+        },
+        {
+          "display": "tấm lòng tri ân",
+          "keys": "taams longf tri aan"
+        },
+        {
+          "display": "hãy làm sách nhanh",
+          "keys": "hayx lamf sachs nhanh"
+        },
+        {
+          "display": "nên làm sách nhanh",
+          "keys": "neen lamf sachs nhanh"
         }
       ]
     },
@@ -833,6 +981,10 @@
         {
           "display": "tri ân tổ tiên",
           "keys": "tri aan toor tieen"
+        },
+        {
+          "display": "trân trọng người giúp",
+          "keys": "traan trongj nguwowif giups"
         }
       ]
     },
@@ -845,16 +997,20 @@
           "keys": "truyeenf thoongs laau ddowif"
         },
         {
-          "display": "lòng thành dâng kính",
-          "keys": "longf thanhf daang kinhs"
-        },
-        {
           "display": "thành tâm hướng thiện",
           "keys": "thanhf taam huwowngs thieenj"
         },
         {
           "display": "nhớ người giúp mình",
           "keys": "nhows nguwowif giups minhf"
+        },
+        {
+          "display": "biết ơn sâu sắc",
+          "keys": "bieets own saau sawcs"
+        },
+        {
+          "display": "cần làm sách nhanh",
+          "keys": "caanf lamf sachs nhanh"
         }
       ]
     },
@@ -871,12 +1027,16 @@
           "keys": "aan nhaan quys gias"
         },
         {
-          "display": "như ngọc như vàng",
-          "keys": "nhuw ngocj nhuw vangf"
-        },
-        {
           "display": "trân trọng tình cảm",
           "keys": "traan trongj tinhf camr"
+        },
+        {
+          "display": "giữ gìn phẩm giá",
+          "keys": "giuwx ginf phaamr gias"
+        },
+        {
+          "display": "phải làm sách nhanh",
+          "keys": "phair lamf sachs nhanh"
         }
       ]
     },
@@ -899,6 +1059,10 @@
         {
           "display": "sống có nghĩa tình",
           "keys": "soongs cos nghiax tinhf"
+        },
+        {
+          "display": "luôn làm sách nhanh",
+          "keys": "luoon lamf sachs nhanh"
         }
       ]
     },
@@ -907,20 +1071,24 @@
       "title": "Lòng biết ơn",
       "content": [
         {
-          "display": "trước sau như một",
-          "keys": "truwowcs sau nhuw mootj"
-        },
-        {
-          "display": "lòng dạ thẳng ngay",
-          "keys": "longf daj thawngr ngay"
-        },
-        {
           "display": "luôn nhớ về sau",
           "keys": "luoon nhows veef sau"
         },
         {
           "display": "mãi mãi tri ân",
           "keys": "maix maix tri aan"
+        },
+        {
+          "display": "bình an cát tường",
+          "keys": "binhf an cats tuwowngf"
+        },
+        {
+          "display": "chăm làm sách nhanh",
+          "keys": "chawm lamf sachs nhanh"
+        },
+        {
+          "display": "siêng làm sách nhanh",
+          "keys": "sieeng lamf sachs nhanh"
         }
       ]
     },
@@ -929,20 +1097,24 @@
       "title": "Sự kiên trì",
       "content": [
         {
-          "display": "có công mài sắt",
-          "keys": "cos coong maif sawts"
-        },
-        {
           "display": "có ngày nên kim",
           "keys": "cos ngayf neen kim"
         },
         {
-          "display": "có chí thì nên",
-          "keys": "cos chis thif neen"
+          "display": "quyết chí vươn lên",
+          "keys": "quyeets chis vuwown leen"
         },
         {
-          "display": "chớ thấy sóng cả",
-          "keys": "chows thaays songs car"
+          "display": "chuyên làm sách nhanh",
+          "keys": "chuyeen lamf sachs nhanh"
+        },
+        {
+          "display": "quyết làm sách nhanh",
+          "keys": "quyeets lamf sachs nhanh"
+        },
+        {
+          "display": "cố làm sách nhanh",
+          "keys": "coos lamf sachs nhanh"
         }
       ]
     },
@@ -951,20 +1123,24 @@
       "title": "Sự kiên trì",
       "content": [
         {
-          "display": "mà ngã tay chèo",
-          "keys": "maf ngax tay cheof"
+          "display": "nỗ lực mỗi ngày",
+          "keys": "noox luwcj mooix ngayf"
         },
         {
-          "display": "nước chảy đá mòn",
-          "keys": "nuwowcs chayr ddas monf"
+          "display": "không ngừng cố gắng",
+          "keys": "khoong nguwngf coos gawngs"
         },
         {
-          "display": "kiên trì nhẫn nại",
-          "keys": "kieen trif nhaanx naij"
+          "display": "vượt qua gian lao",
+          "keys": "vuwowtj qua gian lao"
         },
         {
-          "display": "việc gì cũng xong",
-          "keys": "vieecj gif cungx xong"
+          "display": "gắng làm sách nhanh",
+          "keys": "gawngs lamf sachs nhanh"
+        },
+        {
+          "display": "ra làm sách nhanh",
+          "keys": "ra lamf sachs nhanh"
         }
       ]
     },
@@ -973,20 +1149,24 @@
       "title": "Sự kiên trì",
       "content": [
         {
-          "display": "bền gan vững chí",
-          "keys": "beenf gan vuwngx chis"
+          "display": "giữ vững lập trường",
+          "keys": "giuwx vuwngx laapj truwowngf"
         },
         {
-          "display": "vững lòng bền chí",
-          "keys": "vuwngx longf beenf chis"
+          "display": "sức làm sách nhanh",
+          "keys": "suwcs lamf sachs nhanh"
         },
         {
-          "display": "thất bại là mẹ thành công",
-          "keys": "thaats baij laf mej thanhf coong"
+          "display": "tự làm sách nhanh",
+          "keys": "tuwj lamf sachs nhanh"
         },
         {
-          "display": "vạn sự khởi đầu nan",
-          "keys": "vanj suwj khowir ddaauf nan"
+          "display": "lo làm sách nhanh",
+          "keys": "lo lamf sachs nhanh"
+        },
+        {
+          "display": "hãy đọc sách nhanh",
+          "keys": "hayx ddocj sachs nhanh"
         }
       ]
     },
@@ -1009,6 +1189,10 @@
         {
           "display": "chiến thắng chính mình",
           "keys": "chieens thawngs chinhs minhf"
+        },
+        {
+          "display": "chí tiến thủ lớn",
+          "keys": "chis tieens thur lowns"
         }
       ]
     },
@@ -1021,16 +1205,20 @@
           "keys": "chinh phucj ddinhr cao"
         },
         {
-          "display": "mài sắt nên kim",
-          "keys": "maif sawts neen kim"
-        },
-        {
           "display": "từng bước vững chắc",
           "keys": "tuwngf buwowcs vuwngx chawcs"
         },
         {
           "display": "tiến về phía trước",
           "keys": "tieens veef phias truwowcs"
+        },
+        {
+          "display": "quyết tâm chiến thắng",
+          "keys": "quyeets taam chieens thawngs"
+        },
+        {
+          "display": "nên đọc sách nhanh",
+          "keys": "neen ddocj sachs nhanh"
         }
       ]
     },
@@ -1039,20 +1227,24 @@
       "title": "Sự kiên trì",
       "content": [
         {
-          "display": "gian nan rèn luyện",
-          "keys": "gian nan renf luyeenj"
-        },
-        {
-          "display": "mới thành công",
-          "keys": "mowis thanhf coong"
-        },
-        {
           "display": "lửa thử vàng",
           "keys": "luwar thuwr vangf"
         },
         {
-          "display": "gian nan thử sức",
-          "keys": "gian nan thuwr suwcs"
+          "display": "cần đọc sách nhanh",
+          "keys": "caanf ddocj sachs nhanh"
+        },
+        {
+          "display": "phải đọc sách nhanh",
+          "keys": "phair ddocj sachs nhanh"
+        },
+        {
+          "display": "luôn đọc sách nhanh",
+          "keys": "luoon ddocj sachs nhanh"
+        },
+        {
+          "display": "chăm đọc sách nhanh",
+          "keys": "chawm ddocj sachs nhanh"
         }
       ]
     },
@@ -1075,6 +1267,10 @@
         {
           "display": "viên mãn cuối cùng",
           "keys": "vieen manx cuoois cungf"
+        },
+        {
+          "display": "lắng nghe thấu cảm",
+          "keys": "lawngs nghe thaaus camr"
         }
       ]
     },
@@ -1083,20 +1279,24 @@
       "title": "Tiết kiệm",
       "content": [
         {
-          "display": "buôn tàu bán bè",
-          "keys": "buoon tauf bans bef"
-        },
-        {
-          "display": "không bằng ăn dè hà tiện",
-          "keys": "khoong bawngf awn def haf tieenj"
-        },
-        {
-          "display": "tích tiểu thành đại",
-          "keys": "tichs tieeur thanhf ddaij"
-        },
-        {
           "display": "kiến tha lâu đầy tổ",
           "keys": "kieens tha laau ddaayf toor"
+        },
+        {
+          "display": "chi tiêu hợp lý",
+          "keys": "chi tieeu howpj lys"
+        },
+        {
+          "display": "tránh hoang phí của cải",
+          "keys": "tranhs hoang phis cuar cair"
+        },
+        {
+          "display": "siêng đọc sách nhanh",
+          "keys": "sieeng ddocj sachs nhanh"
+        },
+        {
+          "display": "chuyên đọc sách nhanh",
+          "keys": "chuyeen ddocj sachs nhanh"
         }
       ]
     },
@@ -1109,16 +1309,20 @@
           "keys": "kheos awn thif no"
         },
         {
-          "display": "khéo co thì ấm",
-          "keys": "kheos co thif aams"
-        },
-        {
-          "display": "của bền tại người",
-          "keys": "cuar beenf taij nguwowif"
-        },
-        {
           "display": "tiết kiệm là quốc sách",
           "keys": "tieets kieemj laf quoocs sachs"
+        },
+        {
+          "display": "tích lũy mỗi ngày",
+          "keys": "tichs luyx mooix ngayf"
+        },
+        {
+          "display": "tiết kiệm tiền của",
+          "keys": "tieets kieemj tieenf cuar"
+        },
+        {
+          "display": "quyết đọc sách nhanh",
+          "keys": "quyeets ddocj sachs nhanh"
         }
       ]
     },
@@ -1127,20 +1331,24 @@
       "title": "Tiết kiệm",
       "content": [
         {
-          "display": "ăn chắc mặc bền",
-          "keys": "awn chawcs mawcj beenf"
+          "display": "chi tiêu tiết kiệm",
+          "keys": "chi tieeu tieets kieemj"
         },
         {
-          "display": "thắt lưng buộc bụng",
-          "keys": "thawts luwng buoocj bungj"
+          "display": "tích cốc phòng bị",
+          "keys": "tichs coocs phongf bij"
         },
         {
-          "display": "chắt chiu từng đồng",
-          "keys": "chawts chiu tuwngf ddoongf"
+          "display": "cố đọc sách nhanh",
+          "keys": "coos ddocj sachs nhanh"
         },
         {
-          "display": "chắt chiu dành dụm",
-          "keys": "chawts chiu danhf dumj"
+          "display": "gắng đọc sách nhanh",
+          "keys": "gawngs ddocj sachs nhanh"
+        },
+        {
+          "display": "ra đọc sách nhanh",
+          "keys": "ra ddocj sachs nhanh"
         }
       ]
     },
@@ -1153,16 +1361,20 @@
           "keys": "khoong neen hoang phis"
         },
         {
-          "display": "của một đồng công một nén",
-          "keys": "cuar mootj ddoongf coong mootj nens"
-        },
-        {
           "display": "tích cốc phòng cơ",
           "keys": "tichs coocs phongf cow"
         },
         {
           "display": "tích y phòng hàn",
           "keys": "tichs y phongf hanf"
+        },
+        {
+          "display": "giữ gìn của công",
+          "keys": "giuwx ginf cuar coong"
+        },
+        {
+          "display": "tránh xa lãng phí",
+          "keys": "tranhs xa langx phis"
         }
       ]
     },
@@ -1185,6 +1397,10 @@
         {
           "display": "biết lo xa",
           "keys": "bieets lo xa"
+        },
+        {
+          "display": "bao dung nhân ái",
+          "keys": "bao dung nhaan ais"
         }
       ]
     },
@@ -1207,6 +1423,10 @@
         {
           "display": "làm khi lành",
           "keys": "lamf khi lanhf"
+        },
+        {
+          "display": "thân thiện nhã nhặn",
+          "keys": "thaan thieenj nhax nhawnj"
         }
       ]
     },
@@ -1227,8 +1447,12 @@
           "keys": "ngheof vif hoang phis"
         },
         {
-          "display": "biết đủ là vui",
-          "keys": "bieets ddur laf vui"
+          "display": "sức đọc sách nhanh",
+          "keys": "suwcs ddocj sachs nhanh"
+        },
+        {
+          "display": "tự đọc sách nhanh",
+          "keys": "tuwj ddocj sachs nhanh"
         }
       ]
     },
@@ -1237,20 +1461,24 @@
       "title": "Ứng xử",
       "content": [
         {
-          "display": "lời nói chẳng mất tiền mua",
-          "keys": "lowif nois chawngr maats tieenf mua"
+          "display": "nhã nhặn lịch thiệp",
+          "keys": "nhax nhawnj lichj thieepj"
         },
         {
-          "display": "lựa lời mà nói cho vừa",
-          "keys": "luwaj lowif maf nois cho vuwaf"
+          "display": "cư xử ôn hoà",
+          "keys": "cuw xuwr oon hoaf"
         },
         {
-          "display": "lòng nhau",
-          "keys": "longf nhau"
+          "display": "lo đọc sách nhanh",
+          "keys": "lo ddocj sachs nhanh"
         },
         {
-          "display": "ăn có nhai nói có nghĩ",
-          "keys": "awn cos nhai nois cos nghix"
+          "display": "hãy viết sách nhanh",
+          "keys": "hayx vieets sachs nhanh"
+        },
+        {
+          "display": "nên viết sách nhanh",
+          "keys": "neen vieets sachs nhanh"
         }
       ]
     },
@@ -1259,20 +1487,24 @@
       "title": "Ứng xử",
       "content": [
         {
-          "display": "đi thưa về trình",
-          "keys": "ddi thuwa veef trinhf"
-        },
-        {
-          "display": "kính trên nhường dưới",
-          "keys": "kinhs treen nhuwowngf duwowis"
-        },
-        {
-          "display": "gọi dạ bảo vâng",
-          "keys": "goij daj baor vaang"
-        },
-        {
           "display": "lễ phép ngoan ngoãn",
           "keys": "leex pheps ngoan ngoanx"
+        },
+        {
+          "display": "cần viết sách nhanh",
+          "keys": "caanf vieets sachs nhanh"
+        },
+        {
+          "display": "phải viết sách nhanh",
+          "keys": "phair vieets sachs nhanh"
+        },
+        {
+          "display": "luôn viết sách nhanh",
+          "keys": "luoon vieets sachs nhanh"
+        },
+        {
+          "display": "chăm viết sách nhanh",
+          "keys": "chawm vieets sachs nhanh"
         }
       ]
     },
@@ -1281,20 +1513,24 @@
       "title": "Ứng xử",
       "content": [
         {
-          "display": "học ăn học nói",
-          "keys": "hocj awn hocj nois"
-        },
-        {
-          "display": "học gói học mở",
-          "keys": "hocj gois hocj mowr"
-        },
-        {
           "display": "ăn trông nồi ngồi trông hướng",
           "keys": "awn troong nooif ngooif troong huwowngs"
         },
         {
-          "display": "cười người hôm trước",
-          "keys": "cuwowif nguwowif hoom truwowcs"
+          "display": "cư xử có văn hoá",
+          "keys": "cuw xuwr cos vawn hoas"
+        },
+        {
+          "display": "giao tiếp nhã nhặn",
+          "keys": "giao tieeps nhax nhawnj"
+        },
+        {
+          "display": "siêng viết sách nhanh",
+          "keys": "sieeng vieets sachs nhanh"
+        },
+        {
+          "display": "chuyên viết sách nhanh",
+          "keys": "chuyeen vieets sachs nhanh"
         }
       ]
     },
@@ -1303,20 +1539,24 @@
       "title": "Ứng xử",
       "content": [
         {
-          "display": "hôm sau người cười",
-          "keys": "hoom sau nguwowif cuwowif"
-        },
-        {
-          "display": "đừng khinh người nghèo",
-          "keys": "dduwngf khinh nguwowif ngheof"
-        },
-        {
           "display": "không nên kiêu ngạo",
           "keys": "khoong neen kieeu ngaoj"
         },
         {
           "display": "luôn luôn khiêm tốn",
           "keys": "luoon luoon khieem toons"
+        },
+        {
+          "display": "khiêm nhường lễ độ",
+          "keys": "khieem nhuwowngf leex ddooj"
+        },
+        {
+          "display": "cư xử chuẩn mực",
+          "keys": "cuw xuwr chuaanr muwcj"
+        },
+        {
+          "display": "quyết viết sách nhanh",
+          "keys": "quyeets vieets sachs nhanh"
         }
       ]
     },
@@ -1339,6 +1579,10 @@
         {
           "display": "lắng nghe thấu hiểu",
           "keys": "lawngs nghe thaaus hieeur"
+        },
+        {
+          "display": "bầu trời trong xanh",
+          "keys": "baauf trowif trong xanh"
         }
       ]
     },
@@ -1361,6 +1605,10 @@
         {
           "display": "khéo léo tinh tế",
           "keys": "kheos leos tinh tees"
+        },
+        {
+          "display": "sóng vỗ rì rào",
+          "keys": "songs voox rif raof"
         }
       ]
     },
@@ -1377,12 +1625,16 @@
           "keys": "giuwx ginf hoaf khis"
         },
         {
-          "display": "dĩ hoà vi quý",
-          "keys": "dix hoaf vi quys"
-        },
-        {
           "display": "sống đẹp lòng người",
           "keys": "soongs ddepj longf nguwowif"
+        },
+        {
+          "display": "tôn trọng lẽ phải",
+          "keys": "toon trongj lex phair"
+        },
+        {
+          "display": "cố viết sách nhanh",
+          "keys": "coos vieets sachs nhanh"
         }
       ]
     },
@@ -1391,20 +1643,24 @@
       "title": "Thời gian",
       "content": [
         {
-          "display": "thời gian là vàng bạc",
-          "keys": "thowif gian laf vangf bacj"
-        },
-        {
-          "display": "thời gian trôi nhanh",
-          "keys": "thowif gian trooi nhanh"
-        },
-        {
-          "display": "như bóng câu cửa sổ",
-          "keys": "nhuw bongs caau cuwar soor"
-        },
-        {
           "display": "đừng lãng phí thời gian",
           "keys": "dduwngf langx phis thowif gian"
+        },
+        {
+          "display": "tuổi trẻ nỗ lực",
+          "keys": "tuooir trer noox luwcj"
+        },
+        {
+          "display": "trân trọng thời gian",
+          "keys": "traan trongj thowif gian"
+        },
+        {
+          "display": "thời gian vô giá",
+          "keys": "thowif gian voo gias"
+        },
+        {
+          "display": "gieo nhân lành gặt quả ngọt",
+          "keys": "gieo nhaan lanhf gawtj quar ngotj"
         }
       ]
     },
@@ -1412,10 +1668,6 @@
       "id": "level_261",
       "title": "Thời gian",
       "content": [
-        {
-          "display": "việc hôm nay chớ để ngày mai",
-          "keys": "vieecj hoom nay chows ddeer ngayf mai"
-        },
         {
           "display": "một phút quý giá",
           "keys": "mootj phuts quys gias"
@@ -1427,6 +1679,14 @@
         {
           "display": "thời gian đi không trở lại",
           "keys": "thowif gian ddi khoong trowr laij"
+        },
+        {
+          "display": "sử dụng thời gian tốt",
+          "keys": "suwr dungj thowif gian toots"
+        },
+        {
+          "display": "không nên trì hoãn",
+          "keys": "khoong neen trif hoanx"
         }
       ]
     },
@@ -1439,16 +1699,20 @@
           "keys": "traan trongj tuwngf phuts giaay"
         },
         {
-          "display": "sử dụng thời gian hợp lý",
-          "keys": "suwr dungj thowif gian howpj lys"
-        },
-        {
           "display": "làm việc có kế hoạch",
           "keys": "lamf vieecj cos kees hoachj"
         },
         {
-          "display": "đừng để thời gian trôi vô ích",
-          "keys": "dduwngf ddeer thowif gian trooi voo ichs"
+          "display": "tuổi trẻ trôi nhanh",
+          "keys": "tuooir trer trooi nhanh"
+        },
+        {
+          "display": "tiết kiệm từng giây",
+          "keys": "tieets kieemj tuwngf giaay"
+        },
+        {
+          "display": "gieo gió gặp bão quả báo",
+          "keys": "gieo gios gawpj baox quar baos"
         }
       ]
     },
@@ -1471,6 +1735,10 @@
         {
           "display": "đến lúc phải đi",
           "keys": "ddeens lucs phair ddi"
+        },
+        {
+          "display": "mỗi giây mỗi phút",
+          "keys": "mooix giaay mooix phuts"
         }
       ]
     },
@@ -1479,20 +1747,24 @@
       "title": "Thời gian",
       "content": [
         {
-          "display": "thời gian chữa lành",
-          "keys": "thowif gian chuwax lanhf"
-        },
-        {
-          "display": "mọi vết thương",
-          "keys": "moij veets thuwowng"
-        },
-        {
           "display": "đợi chờ là hạnh phúc",
           "keys": "ddowij chowf laf hanhj phucs"
         },
         {
           "display": "kiên nhẫn chờ đợi",
           "keys": "kieen nhaanx chowf ddowij"
+        },
+        {
+          "display": "quý trọng thời gian",
+          "keys": "quys trongj thowif gian"
+        },
+        {
+          "display": "thời gian trôi mau",
+          "keys": "thowif gian trooi mau"
+        },
+        {
+          "display": "gặp vận may lớn",
+          "keys": "gawpj vaanj may lowns"
         }
       ]
     },
@@ -1515,6 +1787,10 @@
         {
           "display": "nhanh chân thì được",
           "keys": "nhanh chaan thif dduwowcj"
+        },
+        {
+          "display": "hanh thông mọi việc",
+          "keys": "hanh thoong moij vieecj"
         }
       ]
     },
@@ -1537,6 +1813,10 @@
         {
           "display": "tận dụng triệt để",
           "keys": "taanj dungj trieetj ddeer"
+        },
+        {
+          "display": "lộc trời ban tặng",
+          "keys": "loocj trowif ban tawngj"
         }
       ]
     },
@@ -1545,20 +1825,24 @@
       "title": "May mắn",
       "content": [
         {
-          "display": "mèo mù vớ cá rán",
-          "keys": "meof muf vows cas rans"
+          "display": "vận may gõ cửa",
+          "keys": "vaanj may gox cuwar"
         },
         {
-          "display": "chó ngáp phải ruồi",
-          "keys": "chos ngaps phair ruooif"
+          "display": "gắng viết sách nhanh",
+          "keys": "gawngs vieets sachs nhanh"
         },
         {
-          "display": "buồn ngủ gặp chiếu manh",
-          "keys": "buoonf ngur gawpj chieeus manh"
+          "display": "ra viết sách nhanh",
+          "keys": "ra vieets sachs nhanh"
         },
         {
-          "display": "cầu được ước thấy",
-          "keys": "caauf dduwowcj uwowcs thaays"
+          "display": "sức viết sách nhanh",
+          "keys": "suwcs vieets sachs nhanh"
+        },
+        {
+          "display": "tự viết sách nhanh",
+          "keys": "tuwj vieets sachs nhanh"
         }
       ]
     },
@@ -1567,20 +1851,24 @@
       "title": "May mắn",
       "content": [
         {
-          "display": "vạn sự như ý",
-          "keys": "vanj suwj nhuw ys"
+          "display": "may mắn bất ngờ",
+          "keys": "may mawns baats ngowf"
         },
         {
-          "display": "may hơn khôn",
-          "keys": "may hown khoon"
+          "display": "lo viết sách nhanh",
+          "keys": "lo vieets sachs nhanh"
         },
         {
-          "display": "thánh nhân đãi kẻ khờ",
-          "keys": "thanhs nhaan ddaix ker khowf"
+          "display": "hãy nghe sách nhanh",
+          "keys": "hayx nghe sachs nhanh"
         },
         {
-          "display": "trong cái rủi có cái may",
-          "keys": "trong cais ruir cos cais may"
+          "display": "nên nghe sách nhanh",
+          "keys": "neen nghe sachs nhanh"
+        },
+        {
+          "display": "cần nghe sách nhanh",
+          "keys": "caanf nghe sachs nhanh"
         }
       ]
     },
@@ -1603,6 +1891,10 @@
         {
           "display": "mọi việc thuận lợi",
           "keys": "moij vieecj thuaanj lowij"
+        },
+        {
+          "display": "phải nghe sách nhanh",
+          "keys": "phair nghe sachs nhanh"
         }
       ]
     },
@@ -1623,8 +1915,12 @@
           "keys": "ddawcs taif ddawcs loocj"
         },
         {
-          "display": "vạn sự hanh thông",
-          "keys": "vanj suwj hanh thoong"
+          "display": "làm thiện được phúc báo",
+          "keys": "lamf thieenj dduwowcj phucs baos"
+        },
+        {
+          "display": "luôn nghe sách nhanh",
+          "keys": "luoon nghe sachs nhanh"
         }
       ]
     },
@@ -1633,20 +1929,24 @@
       "title": "May mắn",
       "content": [
         {
-          "display": "may mắn mỉm cười",
-          "keys": "may mawns mimr cuwowif"
-        },
-        {
           "display": "vượt qua hoạn nạn",
           "keys": "vuwowtj qua hoanj nanj"
         },
         {
-          "display": "biến hoạ thành phúc",
-          "keys": "bieens hoaj thanhf phucs"
-        },
-        {
           "display": "vận may đã đến",
           "keys": "vaanj may ddax ddeens"
+        },
+        {
+          "display": "làm ác gánh hậu quả",
+          "keys": "lamf acs ganhs haauj quar"
+        },
+        {
+          "display": "chăm nghe sách nhanh",
+          "keys": "chawm nghe sachs nhanh"
+        },
+        {
+          "display": "siêng nghe sách nhanh",
+          "keys": "sieeng nghe sachs nhanh"
         }
       ]
     },
@@ -1669,6 +1969,10 @@
         {
           "display": "may mắn liên tiếp",
           "keys": "may mawns lieen tieeps"
+        },
+        {
+          "display": "nhân quả tuần hoàn",
+          "keys": "nhaan quar tuaanf hoanf"
         }
       ]
     },
@@ -1677,20 +1981,24 @@
       "title": "May mắn",
       "content": [
         {
-          "display": "phúc lộc thọ",
-          "keys": "phucs loocj thoj"
-        },
-        {
-          "display": "toàn vẹn",
-          "keys": "toanf venj"
-        },
-        {
           "display": "hưởng phúc lành",
           "keys": "huwowngr phucs lanhf"
         },
         {
           "display": "cuộc sống tốt đẹp",
           "keys": "cuoocj soongs toots ddepj"
+        },
+        {
+          "display": "thiện ác phân minh",
+          "keys": "thieenj acs phaan minh"
+        },
+        {
+          "display": "tích đức tích thiện",
+          "keys": "tichs dduwcs tichs thieenj"
+        },
+        {
+          "display": "gieo nhân tốt",
+          "keys": "gieo nhaan toots"
         }
       ]
     },
@@ -1699,20 +2007,24 @@
       "title": "Nhân quả",
       "content": [
         {
-          "display": "gieo nhân nào gặt quả nấy",
-          "keys": "gieo nhaan naof gawtj quar naays"
+          "display": "gặt hái quả tốt",
+          "keys": "gawtj hais quar toots"
         },
         {
-          "display": "ác giả ác báo",
-          "keys": "acs giar acs baos"
+          "display": "gieo thiện gặt lành",
+          "keys": "gieo thieenj gawtj lanhf"
         },
         {
-          "display": "tích thiện phùng thiện",
-          "keys": "tichs thieenj phungf thieenj"
+          "display": "chuyên nghe sách nhanh",
+          "keys": "chuyeen nghe sachs nhanh"
         },
         {
-          "display": "lưới trời lồng lộng",
-          "keys": "luwowis trowif loongf loongj"
+          "display": "quyết nghe sách nhanh",
+          "keys": "quyeets nghe sachs nhanh"
+        },
+        {
+          "display": "cố nghe sách nhanh",
+          "keys": "coos nghe sachs nhanh"
         }
       ]
     },
@@ -1721,20 +2033,24 @@
       "title": "Nhân quả",
       "content": [
         {
-          "display": "thưa mà khó lọt",
-          "keys": "thuwa maf khos lotj"
+          "display": "đồng tâm hiệp lực",
+          "keys": "ddoongf taam hieepj luwcj"
         },
         {
-          "display": "đời cha ăn mặn",
-          "keys": "ddowif cha awn mawnj"
+          "display": "chung sức chung lòng",
+          "keys": "chung suwcs chung longf"
         },
         {
-          "display": "đời con khát nước",
-          "keys": "ddowif con khats nuwowcs"
+          "display": "đoàn kết tạo sức mạnh",
+          "keys": "ddoanf keets taoj suwcs manhj"
         },
         {
-          "display": "ăn mặn khát nước",
-          "keys": "awn mawnj khats nuwowcs"
+          "display": "gắng nghe sách nhanh",
+          "keys": "gawngs nghe sachs nhanh"
+        },
+        {
+          "display": "ra nghe sách nhanh",
+          "keys": "ra nghe sachs nhanh"
         }
       ]
     },
@@ -1743,20 +2059,24 @@
       "title": "Nhân quả",
       "content": [
         {
-          "display": "quýt làm cam chịu",
-          "keys": "quyts lamf cam chiuj"
-        },
-        {
-          "display": "gieo gió gặp bão",
-          "keys": "gieo gios gawpj baox"
-        },
-        {
           "display": "quả báo nhãn tiền",
           "keys": "quar baos nhanx tieenf"
         },
         {
-          "display": "gieo nhân lành",
-          "keys": "gieo nhaan lanhf"
+          "display": "đùm bọc lẫn nhau",
+          "keys": "ddumf bocj laanx nhau"
+        },
+        {
+          "display": "công minh chính đại rõ ràng",
+          "keys": "coong minh chinhs ddaij rox rangf"
+        },
+        {
+          "display": "sức nghe sách nhanh",
+          "keys": "suwcs nghe sachs nhanh"
+        },
+        {
+          "display": "tự nghe sách nhanh",
+          "keys": "tuwj nghe sachs nhanh"
         }
       ]
     },
@@ -1765,20 +2085,24 @@
       "title": "Nhân quả",
       "content": [
         {
-          "display": "gặt quả ngọt",
-          "keys": "gawtj quar ngotj"
+          "display": "giúp đỡ người hoạn nạn",
+          "keys": "giups ddowx nguwowif hoanj nanj"
         },
         {
-          "display": "làm việc thiện",
-          "keys": "lamf vieecj thieenj"
+          "display": "tương trợ lẫn nhau hằng ngày",
+          "keys": "tuwowng trowj laanx nhau hawngf ngayf"
         },
         {
-          "display": "được phúc báo",
-          "keys": "dduwowcj phucs baos"
+          "display": "học hỏi điều hay",
+          "keys": "hocj hoir ddieeuf hay"
         },
         {
-          "display": "làm việc ác",
-          "keys": "lamf vieecj acs"
+          "display": "tránh xa thói xấu",
+          "keys": "tranhs xa thois xaaus"
+        },
+        {
+          "display": "sống có trách nhiệm",
+          "keys": "soongs cos trachs nhieemj"
         }
       ]
     },
@@ -1786,10 +2110,6 @@
       "id": "level_278",
       "title": "Nhân quả",
       "content": [
-        {
-          "display": "gánh hậu quả",
-          "keys": "ganhs haauj quar"
-        },
         {
           "display": "luật nhân quả",
           "keys": "luaatj nhaan quar"
@@ -1799,8 +2119,16 @@
           "keys": "khoong sai chayj"
         },
         {
-          "display": "trước sau như một",
-          "keys": "truwowcs sau nhuw mootj"
+          "display": "cố gắng vươn lên",
+          "keys": "coos gawngs vuwown leen"
+        },
+        {
+          "display": "quyết tâm học hỏi nhanh",
+          "keys": "quyeets taam hocj hoir nhanh"
+        },
+        {
+          "display": "cố gắng học hỏi nhanh",
+          "keys": "coos gawngs hocj hoir nhanh"
         }
       ]
     },
@@ -1823,6 +2151,10 @@
         {
           "display": "sống lương thiện",
           "keys": "soongs luwowng thieenj"
+        },
+        {
+          "display": "nỗ lực học hỏi nhanh",
+          "keys": "noox luwcj hocj hoir nhanh"
         }
       ]
     },
@@ -1845,6 +2177,10 @@
         {
           "display": "luôn luôn hướng thiện",
           "keys": "luoon luoon huwowngs thieenj"
+        },
+        {
+          "display": "kiên trì học hỏi nhanh",
+          "keys": "kieen trif hocj hoir nhanh"
         }
       ]
     },
@@ -1853,20 +2189,24 @@
       "title": "Đoàn kết",
       "content": [
         {
-          "display": "một cây làm chẳng nên non",
-          "keys": "mootj caay lamf chawngr neen non"
+          "display": "chăm chỉ học hỏi nhanh",
+          "keys": "chawm chir hocj hoir nhanh"
         },
         {
-          "display": "ba cây chụm lại",
-          "keys": "ba caay chumj laij"
+          "display": "quyết tâm rèn luyện nhanh",
+          "keys": "quyeets taam renf luyeenj nhanh"
         },
         {
-          "display": "nên hòn núi cao",
-          "keys": "neen honf nuis cao"
+          "display": "cố gắng rèn luyện nhanh",
+          "keys": "coos gawngs renf luyeenj nhanh"
         },
         {
-          "display": "đoàn kết là sống",
-          "keys": "ddoanf keets laf soongs"
+          "display": "lo nghe sách nhanh",
+          "keys": "lo nghe sachs nhanh"
+        },
+        {
+          "display": "hãy nói sách nhanh",
+          "keys": "hayx nois sachs nhanh"
         }
       ]
     },
@@ -1875,20 +2215,24 @@
       "title": "Đoàn kết",
       "content": [
         {
-          "display": "chia rẽ là chết",
-          "keys": "chia rex laf cheets"
+          "display": "nỗ lực rèn luyện nhanh",
+          "keys": "noox luwcj renf luyeenj nhanh"
         },
         {
-          "display": "hợp quần gây sức mạnh",
-          "keys": "howpj quaanf gaay suwcs manhj"
+          "display": "kiên trì rèn luyện nhanh",
+          "keys": "kieen trif renf luyeenj nhanh"
         },
         {
-          "display": "đồng lòng tát biển đông",
-          "keys": "ddoongf longf tats bieenr ddoong"
+          "display": "thưởng phạt phân minh đúng đắn",
+          "keys": "thuwowngr phatj phaan minh ddungs ddawns"
         },
         {
-          "display": "cũng cạn",
-          "keys": "cungx canj"
+          "display": "nên nói sách nhanh",
+          "keys": "neen nois sachs nhanh"
+        },
+        {
+          "display": "cần nói sách nhanh",
+          "keys": "caanf nois sachs nhanh"
         }
       ]
     },
@@ -1897,20 +2241,24 @@
       "title": "Đoàn kết",
       "content": [
         {
-          "display": "lá lành đùm lá rách",
-          "keys": "las lanhf ddumf las rachs"
+          "display": "quyết tâm vươn lên nhanh",
+          "keys": "quyeets taam vuwown leen nhanh"
         },
         {
-          "display": "nhường cơm sẻ áo",
-          "keys": "nhuwowngf cowm ser aos"
+          "display": "thấu tình đạt lý vẹn đôi",
+          "keys": "thaaus tinhf ddatj lys venj ddooi"
         },
         {
-          "display": "thương người như thể thương thân",
-          "keys": "thuwowng nguwowif nhuw theer thuwowng thaan"
+          "display": "phải nói sách nhanh",
+          "keys": "phair nois sachs nhanh"
         },
         {
-          "display": "bầu ơi thương lấy bí cùng",
-          "keys": "baauf owi thuwowng laays bis cungf"
+          "display": "luôn nói sách nhanh",
+          "keys": "luoon nois sachs nhanh"
+        },
+        {
+          "display": "chăm nói sách nhanh",
+          "keys": "chawm nois sachs nhanh"
         }
       ]
     },
@@ -1919,20 +2267,24 @@
       "title": "Đoàn kết",
       "content": [
         {
-          "display": "tuy rằng khác giống",
-          "keys": "tuy rawngf khacs gioongs"
+          "display": "nỗ lực vươn lên nhanh",
+          "keys": "noox luwcj vuwown leen nhanh"
         },
         {
-          "display": "nhưng chung một giàn",
-          "keys": "nhuwng chung mootj gianf"
+          "display": "kiên trì vươn lên nhanh",
+          "keys": "kieen trif vuwown leen nhanh"
         },
         {
-          "display": "đông tay vỗ nên bộp",
-          "keys": "ddoong tay voox neen boopj"
+          "display": "chăm chỉ vươn lên nhanh",
+          "keys": "chawm chir vuwown leen nhanh"
         },
         {
-          "display": "góp sức chung tay",
-          "keys": "gops suwcs chung tay"
+          "display": "mọi người bình đẳng như nhau",
+          "keys": "moij nguwowif binhf ddawngr nhuw nhau"
+        },
+        {
+          "display": "siêng nói sách nhanh",
+          "keys": "sieeng nois sachs nhanh"
         }
       ]
     },
@@ -1940,10 +2292,6 @@
       "id": "level_285",
       "title": "Đoàn kết",
       "content": [
-        {
-          "display": "sát cánh bên nhau",
-          "keys": "sats canhs been nhau"
-        },
         {
           "display": "tương thân tương ái",
           "keys": "tuwowng thaan tuwowng ais"
@@ -1953,8 +2301,16 @@
           "keys": "giups ddowx laanx nhau"
         },
         {
-          "display": "vượt qua gian khó",
-          "keys": "vuwowtj qua gian khos"
+          "display": "quyết tâm làm việc nhanh",
+          "keys": "quyeets taam lamf vieecj nhanh"
+        },
+        {
+          "display": "cố gắng làm việc nhanh",
+          "keys": "coos gawngs lamf vieecj nhanh"
+        },
+        {
+          "display": "chuyên nói sách nhanh",
+          "keys": "chuyeen nois sachs nhanh"
         }
       ]
     },
@@ -1971,12 +2327,16 @@
           "keys": "ddaats nuwowcs manhj giauf"
         },
         {
-          "display": "đoàn kết một lòng",
-          "keys": "ddoanf keets mootj longf"
-        },
-        {
           "display": "không gì ngăn cản",
           "keys": "khoong gif ngawn canr"
+        },
+        {
+          "display": "nỗ lực làm việc nhanh",
+          "keys": "noox luwcj lamf vieecj nhanh"
+        },
+        {
+          "display": "kiên trì làm việc nhanh",
+          "keys": "kieen trif lamf vieecj nhanh"
         }
       ]
     },
@@ -1999,6 +2359,10 @@
         {
           "display": "vững bước tương lai",
           "keys": "vuwngx buwowcs tuwowng lai"
+        },
+        {
+          "display": "quyết nói sách nhanh",
+          "keys": "quyeets nois sachs nhanh"
         }
       ]
     },
@@ -2007,20 +2371,24 @@
       "title": "Lời khuyên",
       "content": [
         {
-          "display": "ăn có nhai nói có nghĩ",
-          "keys": "awn cos nhai nois cos nghix"
+          "display": "quyết tâm tiến bước nhanh",
+          "keys": "quyeets taam tieens buwowcs nhanh"
         },
         {
-          "display": "đi một ngày đàng",
-          "keys": "ddi mootj ngayf ddangf"
+          "display": "cố gắng tiến bước nhanh",
+          "keys": "coos gawngs tieens buwowcs nhanh"
         },
         {
-          "display": "học một sàng khôn",
-          "keys": "hocj mootj sangf khoon"
+          "display": "nỗ lực tiến bước nhanh",
+          "keys": "noox luwcj tieens buwowcs nhanh"
         },
         {
-          "display": "cẩn tắc vô ưu",
-          "keys": "caanr tawcs voo uwu"
+          "display": "kiên trì tiến bước nhanh",
+          "keys": "kieen trif tieens buwowcs nhanh"
+        },
+        {
+          "display": "cố nói sách nhanh",
+          "keys": "coos nois sachs nhanh"
         }
       ]
     },
@@ -2029,20 +2397,24 @@
       "title": "Lời khuyên",
       "content": [
         {
-          "display": "phòng bệnh hơn chữa bệnh",
-          "keys": "phongf beenhj hown chuwax beenhj"
+          "display": "chăm chỉ tiến bước nhanh",
+          "keys": "chawm chir tieens buwowcs nhanh"
         },
         {
-          "display": "sai một li đi một dặm",
-          "keys": "sai mootj li ddi mootj dawmj"
+          "display": "buông bỏ hận thù oán ghét",
+          "keys": "buoong bor haanj thuf oans ghets"
         },
         {
-          "display": "biết lỗi biết sửa",
-          "keys": "bieets looix bieets suwar"
+          "display": "gắng nói sách nhanh",
+          "keys": "gawngs nois sachs nhanh"
         },
         {
-          "display": "người ngay nói thật",
-          "keys": "nguwowif ngay nois thaatj"
+          "display": "ra nói sách nhanh",
+          "keys": "ra nois sachs nhanh"
+        },
+        {
+          "display": "sức nói sách nhanh",
+          "keys": "suwcs nois sachs nhanh"
         }
       ]
     },
@@ -2051,20 +2423,24 @@
       "title": "Lời khuyên",
       "content": [
         {
-          "display": "thật thà là cha quỷ quái",
-          "keys": "thaatj thaf laf cha quyr quais"
+          "display": "thắng không kiêu bại không nản",
+          "keys": "thawngs khoong kieeu baij khoong nanr"
         },
         {
-          "display": "liệu cơm gắp mắm",
-          "keys": "lieeuj cowm gawps mawms"
+          "display": "nhã nhặn ôn hoà lễ phép",
+          "keys": "nhax nhawnj oon hoaf leex pheps"
         },
         {
-          "display": "khéo co thì ấm",
-          "keys": "kheos co thif aams"
+          "display": "lựa lời nói năng nhẹ nhàng",
+          "keys": "luwaj lowif nois nawng nhej nhangf"
         },
         {
-          "display": "tốt gỗ hơn tốt nước sơn",
-          "keys": "toots goox hown toots nuwowcs sown"
+          "display": "thời gian vàng ngọc quý giá",
+          "keys": "thowif gian vangf ngocj quys gias"
+        },
+        {
+          "display": "thời gian trôi nhanh như gió",
+          "keys": "thowif gian trooi nhanh nhuw gios"
         }
       ]
     },
@@ -2073,20 +2449,24 @@
       "title": "Lời khuyên",
       "content": [
         {
-          "display": "đừng nghe lời nịnh",
-          "keys": "dduwngf nghe lowif ninhj"
+          "display": "vượt qua mọi thử thách lớn",
+          "keys": "vuwowtj qua moij thuwr thachs lowns"
         },
         {
-          "display": "hãy tin lời thật",
-          "keys": "hayx tin lowif thaatj"
+          "display": "quyết tâm đi tới cùng nhé",
+          "keys": "quyeets taam ddi towis cungf nhes"
         },
         {
-          "display": "việc hôm nay chớ để ngày mai",
-          "keys": "vieecj hoom nay chows ddeer ngayf mai"
+          "display": "may hơn khôn nhờ trời giúp",
+          "keys": "may hown khoon nhowf trowif giups"
         },
         {
-          "display": "tiết kiệm thời gian",
-          "keys": "tieets kieemj thowif gian"
+          "display": "rừng vàng biển bạc giàu đẹp",
+          "keys": "ruwngf vangf bieenr bacj giauf ddepj"
+        },
+        {
+          "display": "tự nói sách nhanh",
+          "keys": "tuwj nois sachs nhanh"
         }
       ]
     },
@@ -2095,20 +2475,24 @@
       "title": "Lời khuyên",
       "content": [
         {
-          "display": "trân trọng tình bạn",
-          "keys": "traan trongj tinhf banj"
-        },
-        {
-          "display": "biết ơn nguồn cội",
-          "keys": "bieets own nguoonf cooij"
-        },
-        {
-          "display": "sống lương thiện",
-          "keys": "soongs luwowng thieenj"
-        },
-        {
           "display": "tích đức cho sau",
           "keys": "tichs dduwcs cho sau"
+        },
+        {
+          "display": "hoa nở đón nắng ban mai",
+          "keys": "hoa nowr ddons nawngs ban mai"
+        },
+        {
+          "display": "quả chín thơm ngon trĩu cành",
+          "keys": "quar chins thowm ngon triux canhf"
+        },
+        {
+          "display": "lo nói sách nhanh",
+          "keys": "lo nois sachs nhanh"
+        },
+        {
+          "display": "hãy nghĩ sách nhanh",
+          "keys": "hayx nghix sachs nhanh"
         }
       ]
     },
@@ -2116,10 +2500,6 @@
       "id": "level_293",
       "title": "Lời khuyên",
       "content": [
-        {
-          "display": "kiên trì nhẫn nại",
-          "keys": "kieen trif nhaanx naij"
-        },
         {
           "display": "vượt qua khó khăn",
           "keys": "vuwowtj qua khos khawn"
@@ -2131,6 +2511,14 @@
         {
           "display": "không ngừng học hỏi",
           "keys": "khoong nguwngf hocj hoir"
+        },
+        {
+          "display": "chim hót véo von bình minh",
+          "keys": "chim hots veos von binhf minh"
+        },
+        {
+          "display": "dòng sông hiền hoà uốn lượn",
+          "keys": "dongf soong hieenf hoaf uoons luwownj"
         }
       ]
     },
@@ -2139,20 +2527,24 @@
       "title": "Lời khuyên",
       "content": [
         {
-          "display": "đối nhân xử thế",
-          "keys": "ddoois nhaan xuwr thees"
-        },
-        {
-          "display": "khéo léo tinh tế",
-          "keys": "kheos leos tinh tees"
-        },
-        {
           "display": "giữ gìn sức khoẻ",
           "keys": "giuwx ginf suwcs khoer"
         },
         {
           "display": "cuộc sống an vui",
           "keys": "cuoocj soongs an vui"
+        },
+        {
+          "display": "cánh đồng lúa chín vàng tươi",
+          "keys": "canhs ddoongf luas chins vangf tuwowi"
+        },
+        {
+          "display": "ánh nắng chan hoà ấm áp",
+          "keys": "anhs nawngs chan hoaf aams aps"
+        },
+        {
+          "display": "giọt sương ban mai long lanh",
+          "keys": "giotj suwowng ban mai long lanh"
         }
       ]
     }
