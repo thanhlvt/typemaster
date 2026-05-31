@@ -709,8 +709,8 @@ export const STORY_CONFIGS = {
     76: {
         minigame: 'frog_jump',
         preGame: [
-            { character: 'monkey', text: "Một đầm lầy cản đường chúng ta. Chỉ có những đài hoa súng lơ lửng trên mặt nước." },
-            { character: 'monkey', text: "Gõ đúng chữ để nhảy cẩn thận qua từng đài hoa súng sang bờ bên kia nhé!" }
+            { character: 'monkey', text: "Một đầm lầy cản đường chúng ta. Chỉ có những lá hoa súng lơ lửng trên mặt nước." },
+            { character: 'monkey', text: "Gõ đúng chữ để nhảy cẩn thận qua từng lá hoa súng sang bờ bên kia nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Khéo léo lắm! Cả nhóm đã sang được bờ mà không bị ướt chút nào." }
@@ -888,8 +888,8 @@ export const STORY_CONFIGS = {
     95: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Một đàn bướm mang sức mạnh ánh sáng đang bị kẹt dưới tảng đá lớn." },
-            { character: 'monkey', text: "Gõ đúng để phá vỡ tảng đá, giải phóng sức mạnh ánh sáng của các bạn ấy!" }
+            { character: 'monkey', text: "Một đàn bướm mang sức mạnh ánh sáng đang bị giữ trong lồng kính." },
+            { character: 'monkey', text: "Gõ đúng để đập vỡ cái lồng kính, giải phóng sức mạnh ánh sáng của các bạn ấy!" }
         ],
         postGame: [
             { character: 'monkey', text: "Sức mạnh ánh sáng đã hội tụ lại bên chúng ta. Chuẩn bị cho trận chiến cuối cùng!" }

@@ -1,25 +1,18 @@
 /**
- * Check lesson content against structural rules for groups 2–7:
+ * Check lesson content against structural rules for src/data/lessons.js, id: level_99 to id: level_700:
  *   1. Each level must have exactly 5 sentences
  *   2. Each sentence must have at most 6 words
  *   3. No two sentences (across all groups) may share more than 4 words in common
  *
  * Usage:
- *   node scripts/check-rules.js                  — checks all group_2 through group_7 files
- *   node scripts/check-rules.js public/lessons/group_2_song-nuoc.json ...
+ *   node scripts/check-rules.js                  — checks  rules
  */
 
-import { readFileSync, readdirSync } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, join, basename } from 'path';
+import { fileURLToPath, pathToFileURL } from 'url';
+import { dirname, join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
-
-function loadGroup(filePath) {
-    const data = JSON.parse(readFileSync(filePath, 'utf8'));
-    return { file: basename(filePath), lessons: data.lessons };
-}
 
 function words(sentence) {
     return sentence.trim().split(/\s+/).filter(Boolean);
@@ -36,18 +29,13 @@ function sharedWordList(a, b) {
     return [...new Set(words(a))].filter(w => setB.has(w));
 }
 
-// ── Load files ────────────────────────────────────────────────────────────────
+const { lessons } = await import(pathToFileURL(join(root, 'src/data/lessons.js')).href);
 
-let filePaths = process.argv.slice(2);
-if (filePaths.length === 0) {
-    const dir = join(root, 'public/lessons');
-    filePaths = readdirSync(dir)
-        .filter(f => /^group_[2-7].*\.json$/.test(f))
-        .sort()
-        .map(f => join(dir, f));
-}
+// Filter out Group 1 for structural rules (which are only for groups 2–7)
+// Wait, Group 1 levels are 'level_1' to 'level_101'
+const filteredLessons = lessons.filter(l => !l.id.match(/^level_([1-9]|[1-9][0-9]|100|101)$/));
 
-const groups = filePaths.map(loadGroup);
+const groups = [{ file: 'src/data/lessons.js', lessons: filteredLessons }];
 
 // ── Rule checks ───────────────────────────────────────────────────────────────
 

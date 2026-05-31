@@ -1800,15 +1800,15 @@ export const MINIGAME_CONFIGS = {
     91: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'flower3.png',
+                scale: 0.6,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -60
             },
             x1: 100,
             y1: 150,
@@ -1863,12 +1863,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
+                image: 'butterfly.png',
                 scale: 0.8,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'cage2.png',
+                scale: 1.5,
             },
             x: 490,
             y: 230
@@ -1935,12 +1935,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'smallfishes.png',
+                scale: 1,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'net2.png',
+                scale: 1.5,
             },
             x: 490,
             y: 230
@@ -2213,11 +2213,11 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
+                image: 'otter.png',
                 scale: 0.8,
             },
             cage: {
-                image: 'cage.png',
+                image: 'moss.png',
                 scale: 1,
             },
             x: 490,
@@ -2491,12 +2491,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'smallfishes.png',
+                scale: 1,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'net2.png',
+                scale: 1.5,
             },
             x: 490,
             y: 230

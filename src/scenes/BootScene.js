@@ -1,5 +1,7 @@
 import * as Phaser from 'phaser';
 import { CHAPTERS, getChapterBgKey, getChapterForLesson } from '../data/chapters';
+import { lessons } from '../data/lessons';
+import { rules } from '../data/rules';
 
 function getLastUnlockedBg(lessonStats) {
     let lastKey = 'bg_1_1';
@@ -97,21 +99,6 @@ export class BootScene extends Phaser.Scene {
         this.load.audio('music_6', 'assets/music_6.mp3');
         this.load.audio('music_7', 'assets/music_7.mp3');
         
-        // Load manifest
-        this.load.json('manifest', 'data.json');
-        
-        // Listen for manifest completion to load sub-files
-        this.load.on('filecomplete-json-manifest', (key, type, data) => {
-            if (data.rulesFile) {
-                this.load.json('rules', data.rulesFile);
-            }
-            if (data.lessonFiles) {
-                data.lessonFiles.forEach((file, index) => {
-                    this.load.json(`lessons_chunk_${index}`, file);
-                });
-            }
-        });
-        
         // Progress bar
         const progressBar = this.add.graphics();
         const progressBox = this.add.graphics();
@@ -125,23 +112,9 @@ export class BootScene extends Phaser.Scene {
         });
 
         this.load.on('complete', () => {
-            // Reassemble gameData from parts
-            const manifest = this.cache.json.get('manifest');
-            const rules = this.cache.json.get('rules');
-            const allLessons = [];
-            
-            if (manifest && manifest.lessonFiles) {
-                manifest.lessonFiles.forEach((_, index) => {
-                    const chunk = this.cache.json.get(`lessons_chunk_${index}`);
-                    if (chunk && chunk.lessons) {
-                        allLessons.push(...chunk.lessons);
-                    }
-                });
-            }
-
             this.cache.json.add('gameData', {
-                lessons: allLessons,
-                telex_rules: rules ? rules.telex_rules : {}
+                lessons: lessons,
+                telex_rules: rules
             });
 
             progressBar.destroy();

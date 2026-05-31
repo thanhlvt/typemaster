@@ -1,26 +1,19 @@
-import { readFileSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const lessonsDir = join(__dirname, '../public/lessons');
+const root = join(__dirname, '..');
 
-const files = readdirSync(lessonsDir)
-  .filter(f => f.endsWith('.json'))
-  .sort();
+const { lessons } = await import(pathToFileURL(join(root, 'src/data/lessons.js')).href);
 
-for (const file of files) {
-  const groupName = file.replace('.json', '');
-  const data = JSON.parse(readFileSync(join(lessonsDir, file), 'utf8'));
+console.log(`\n${'='.repeat(60)}`);
+console.log(`ALL LESSONS`);
+console.log('='.repeat(60));
 
-  console.log(`\n${'='.repeat(60)}`);
-  console.log(`GROUP: ${groupName}`);
-  console.log('='.repeat(60));
-
-  for (const lesson of data.lessons) {
-    console.log(`\n[${lesson.id}] ${lesson.title}`);
-    for (const item of lesson.content) {
-      console.log(`  - ${item.display}`);
-    }
+for (const lesson of lessons) {
+  console.log(`\n[${lesson.id}] ${lesson.title}`);
+  for (const item of lesson.content) {
+    console.log(`  - ${item.display}`);
   }
 }
+
