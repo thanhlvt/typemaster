@@ -1883,32 +1883,32 @@ export const MINIGAME_CONFIGS = {
                 image: 'scepter_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 1
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'scepter_part1', image: 'scepter_part1.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 100
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'scepter_part2', image: 'scepter_part2.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 120
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'scepter_part3', image: 'scepter_part3.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 140
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'scepter_part4', image: 'scepter_part4.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 160
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
+                    id: 'scepter_part5', image: 'scepter_part5.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 180
                 },
                 {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'scepter_part6', image: 'scepter_part6.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 190
                 }
             ]
         },
@@ -2064,35 +2064,31 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'raft_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 1
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'raft_part1', image: 'raft_part1.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 100
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'raft_part2', image: 'raft_part2.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 110
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'raft_part3', image: 'raft_part3.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 115
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'raft_part4', image: 'raft_part4.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 120
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
-                },
-                {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'raft_part5', image: 'raft_part5.png', scaleX: 1, scaleY: 1, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 160
                 }
             ]
         },
@@ -2163,35 +2159,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -2341,35 +2337,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -2440,35 +2436,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -2656,35 +2652,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -2722,35 +2718,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -2863,11 +2859,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -2938,35 +2934,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -2999,35 +2995,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -3216,35 +3212,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -3277,35 +3273,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -3494,35 +3490,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -3555,35 +3551,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -3771,35 +3767,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -3832,35 +3828,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4049,35 +4045,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4110,35 +4106,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4327,35 +4323,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4388,35 +4384,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4605,35 +4601,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4666,35 +4662,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4883,35 +4879,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -4944,35 +4940,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -5161,35 +5157,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -5222,35 +5218,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -5439,35 +5435,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -5500,35 +5496,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -5717,35 +5713,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -5778,35 +5774,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -5995,35 +5991,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -6056,35 +6052,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -6198,11 +6194,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -6273,35 +6269,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -6335,35 +6331,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -6477,11 +6473,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -6552,35 +6548,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -6613,35 +6609,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -6755,11 +6751,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -6830,35 +6826,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -6892,35 +6888,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -7034,11 +7030,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -7109,35 +7105,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -7171,35 +7167,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -7313,11 +7309,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -7388,35 +7384,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -7450,35 +7446,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -7592,11 +7588,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -7667,35 +7663,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -7729,35 +7725,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -7871,11 +7867,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -7946,35 +7942,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8007,35 +8003,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8149,11 +8145,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -8224,35 +8220,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8285,35 +8281,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8427,11 +8423,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -8502,35 +8498,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8563,35 +8559,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8705,11 +8701,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -8780,35 +8776,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8841,35 +8837,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -8983,11 +8979,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -9058,35 +9054,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -9119,35 +9115,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -9261,11 +9257,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -9336,35 +9332,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -9397,35 +9393,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -9539,11 +9535,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree5.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -9614,35 +9610,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -9675,35 +9671,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -9892,35 +9888,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -9953,35 +9949,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -10170,35 +10166,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -10231,35 +10227,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -10449,35 +10445,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -10510,35 +10506,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -10727,35 +10723,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -10788,35 +10784,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11005,35 +11001,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11066,35 +11062,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11208,11 +11204,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree7.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -11283,35 +11279,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11344,35 +11340,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11561,35 +11557,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11622,35 +11618,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11764,11 +11760,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree7.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -11839,35 +11835,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -11900,35 +11896,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -12042,11 +12038,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -12117,35 +12113,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -12178,35 +12174,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -12320,11 +12316,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree7.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -12395,35 +12391,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -12456,35 +12452,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -12598,11 +12594,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -12673,35 +12669,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -12735,35 +12731,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -12877,11 +12873,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree7.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -12952,35 +12948,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -13013,35 +13009,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -13230,35 +13226,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -13291,35 +13287,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -13433,11 +13429,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree7.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -13508,35 +13504,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -13570,35 +13566,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -13712,11 +13708,11 @@ export const MINIGAME_CONFIGS = {
         config: {
             plant: {
                 stages: [
-                    { image: 'tree1.png', scale: 0.4 },
-                    { image: 'tree2.png', scale: 0.3 },
-                    { image: 'tree3.png', scale: 0.6 },
-                    { image: 'tree4.png', scale: 0.7 },
-                    { image: 'tree5.png', scale: 0.75 }
+                    { image: 'flower_tree1.png', scale: 0.7 },
+                    { image: 'flower_tree2.png', scale: 0.7 },
+                    { image: 'flower_tree3.png', scale: 0.7 },
+                    { image: 'flower_tree4.png', scale: 0.7 },
+                    { image: 'flower_tree6.png', scale: 0.7 }
                 ]
             },
             x: 490,
@@ -13787,35 +13783,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -13848,37 +13844,37 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'shield_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.8
+                scale: 0.65
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
-    }
+    },
 };

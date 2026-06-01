@@ -839,10 +839,10 @@ export const STORY_CONFIGS = {
     90: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Phía trước là một vách đá dốc đứng. Hãy dùng phép thuật gieo hạt để một cây hoa dây leo mọc lên." }
+            { character: 'monkey', text: "Phía trước là một vách đá dốc đứng. Hãy dùng phép thuật gieo hạt để một cây cao mọc lên." }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây leo đầy hoa đã mọc đủ cao để làm chiếc thang đưa chúng ta lên đỉnh vách đá." }
+            { character: 'monkey', text: "Cây đã mọc đủ cao để làm chiếc thang đưa chúng ta lên đỉnh vách đá." }
         ]
     },
     91: {
@@ -960,11 +960,11 @@ export const STORY_CONFIGS = {
     103: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Phía trước nước chảy xiết quá. Chúng ta cần những đài hoa súng để làm cầu phao." },
-            { character: 'monkey', text: "Dùng phép thuật gieo hạt, gõ đúng để hoa súng nở rộ trên mặt nước nhé." }
+            { character: 'monkey', text: "Phía trước nước chảy xiết quá. Chúng ta cần những cây cổ thụ để làm cầu phao." },
+            { character: 'monkey', text: "Dùng phép thuật gieo hạt, gõ đúng để cây cổ thụ mọc trên mặt nước nhé." }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu phao hoa súng đã hoàn thành. Bước qua thật cẩn thận nào." }
+            { character: 'monkey', text: "Cây cổ thụ đã hoàn thành. Bước qua thật cẩn thận nào." }
         ]
     },
     104: {
@@ -1093,10 +1093,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Dòng suối phía trước rộng quá, chúng ta không thể bơi qua được." },
-            { character: 'monkey', text: "Hãy dùng phép thuật gọi mưa để những đài hoa súng khổng lồ mọc lên làm cầu vắt ngang nhé." }
+            { character: 'monkey', text: "Hãy dùng phép thuật gọi mưa để những cây cổ thụ khổng lồ mọc lên làm cầu vắt ngang nhé." }
         ],
         postGame: [
-            { character: 'monkey', text: "Chiếc cầu hoa súng thật rực rỡ và vững chắc. Cùng bước qua thôi!" }
+            { character: 'monkey', text: "Chiếc cầu cây cổ thụ thật vững chắc. Cùng bước qua thôi!" }
         ]
     },
     118: {
@@ -1243,10 +1243,10 @@ export const STORY_CONFIGS = {
     133: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Cá Sấu đã phá hỏng cây cầu phao. Chúng ta cần dùng phép thuật để làm một bông hoa súng khổng lồ vươn lên giữa dòng." }
+            { character: 'monkey', text: "Cá Sấu đã phá hỏng cây cầu phao. Chúng ta cần dùng phép thuật để làm một cây gỗ khổng lồ vươn lên giữa dòng." }
         ],
         postGame: [
-            { character: 'monkey', text: "Hoa súng đã nở rộ thành một điểm tựa vô cùng vững chắc. Bước qua thôi!" }
+            { character: 'monkey', text: "Cây gỗ đã vươn lên thành một điểm tựa vô cùng vững chắc. Bước qua thôi!" }
         ]
     },
     134: {
@@ -1351,10 +1351,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Khoảng cách giữa các đài sen xa quá. Chúng ta cần một lối đi mới." },
-            { character: 'monkey', text: "Dùng phép thuật gõ phím để gọi một nụ sen khổng lồ nở rộ vươn lên làm cầu nối nhé." }
+            { character: 'monkey', text: "Dùng phép thuật gõ phím để gọi cây hoa khổng lồ nở rộ vươn lên làm cầu nối nhé." }
         ],
         postGame: [
-            { character: 'monkey', text: "Hoa sen nở bung tuyệt đẹp, tạo thành một bước đệm hoàn hảo cho chúng ta." }
+            { character: 'monkey', text: "Cây hoa nở bung tuyệt đẹp, tạo thành một bước đệm hoàn hảo cho chúng ta." }
         ]
     },
     146: {
@@ -1482,11 +1482,11 @@ export const STORY_CONFIGS = {
     159: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Một đoạn cầu tre bị Cá Sấu hất văng mất rồi. Chúng ta cần những cây tre mới." },
-            { character: 'monkey', text: "Dùng phép thuật gieo măng, gõ phím để tre lớn nhanh đan thành nhịp cầu mới nối lại đường đi." }
+            { character: 'monkey', text: "Một đoạn cầu tre bị Cá Sấu hất văng mất rồi. Chúng ta cần cây cầu mới." },
+            { character: 'monkey', text: "Dùng phép thuật, gõ phím để cây lớn nhanh đan thành nhịp cầu mới nối lại đường đi." }
         ],
         postGame: [
-            { character: 'monkey', text: "Tre mọc lên nhanh chóng và uốn cong thành nhịp cầu tuyệt đẹp. Bước qua thôi!" }
+            { character: 'monkey', text: "Cây mọc lên nhanh chóng và uốn cong thành nhịp cầu tuyệt đẹp. Bước qua thôi!" }
         ]
     },
     160: {
@@ -1614,11 +1614,11 @@ export const STORY_CONFIGS = {
     173: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Dòng nước chảy xiết quá, thuyền đang bị cuốn đi. Cần mỏ neo để giữ lại!" },
-            { character: 'monkey', text: "Dùng phép thuật gieo hạt cây đước, gõ phím để rễ cây vươn sâu xuống đáy sông làm neo giữ thuyền." }
+            { character: 'monkey', text: "Dòng nước chảy xiết quá, thuyền đang bị cuốn đi. Hãy tìm cây cầu đi qua!" },
+            { character: 'monkey', text: "Dùng phép thuật gieo hạt cây, gõ phím để cây mọc lớn lên làm cây cầu qua sông." }
         ],
         postGame: [
-            { character: 'monkey', text: "Rễ đước bám rất chắc. Thuyền đã dừng lại an toàn trước thác nước nguy hiểm." }
+            { character: 'monkey', text: "Cây mọc lên làm cầu chắc chắn. Thuyền đã dừng lại an toàn trước thác nước nguy hiểm." }
         ]
     },
     174: {
@@ -1747,10 +1747,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Vách đá trơn tuột, chúng ta không thể tự leo lên được nữa." },
-            { character: 'monkey', text: "Hãy gieo hạt giống phép thuật, gõ đúng để dây leo khổng lồ mọc ra bám chặt vào vách thác!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống phép thuật, gõ đúng để cây mọc cao lên làm thang leo!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây leo vô cùng dẻo dai. Bám chắc vào, chúng ta cùng trèo lên nào!" }
+            { character: 'monkey', text: "Cây mọc lên cao vút. Bám chắc vào, chúng ta cùng leo lên nào!" }
         ]
     },
     188: {
@@ -1879,10 +1879,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một vách đá cao dựng đứng cản đường. Chúng ta không thể trèo tay không được." },
-            { character: 'monkey', text: "Hãy gieo hạt măng, gõ đúng để cây tre khổng lồ mọc vút lên làm chiếc thang tự nhiên nhé!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây, gõ đúng để cây mọc cao lên làm thang leo!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Thang tre vô cùng chắc chắn. Cùng bám vào và trèo lên vách đá thôi." }
+            { character: 'monkey', text: "Thang cây vô cùng chắc chắn. Cùng bám vào và trèo lên vách đá thôi." }
         ]
     },
     202: {
@@ -2011,10 +2011,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một hẻm vực quá rộng cản đường, chúng ta không thể nhảy qua được." },
-            { character: 'monkey', text: "Hãy gieo hạt giống mây trời, gõ đúng để dây leo mây đan thành chiếc cầu vắt ngang vực!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây cổ thu, gõ đúng để cây mọc lên làm cầu vắt ngang vực!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu dây leo mây rất chắc chắn và dẻo dai. Bước qua cẩn thận nhé." }
+            { character: 'monkey', text: "Cây cầu vô cùng chắc chắn. Bước qua cẩn thận nhé." }
         ]
     },
     216: {
@@ -2142,11 +2142,11 @@ export const STORY_CONFIGS = {
     229: {
         minigame: 'grow_plant',
         preGame: [
-            { character: 'monkey', text: "Một dòng suối cạn cắt ngang Rừng Thông. Chúng ta cần một lối đi." },
-            { character: 'monkey', text: "Hãy gieo hạt giống, gõ đúng để một mầm thông vươn dài thành thân cây làm cầu vắt ngang." }
+            { character: 'monkey', text: "Một dòng suối cạn cắt ngang khu rừng. Chúng ta cần một lối đi." },
+            { character: 'monkey', text: "Hãy gieo hạt giống, gõ đúng để một mầm cây vươn dài thành thân cây làm cầu vắt ngang." }
         ],
         postGame: [
-            { character: 'monkey', text: "Thân thông vô cùng vững chãi. Cùng bước qua cầu thật cẩn thận nhé." }
+            { character: 'monkey', text: "Thân cây vô cùng vững chãi. Cùng bước qua cầu thật cẩn thận nhé." }
         ]
     },
     230: {
@@ -2539,10 +2539,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khoảng không rộng lớn cản bước. Không có đường để sang tầng mây phía đối diện." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Đậu Thần, gõ đúng để cây mọc vút lên làm chiếc cầu bắc ngang trời nhé!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây khổng lồ, gõ đúng để cây mọc vút lên làm chiếc cầu bắc ngang trời!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cây Đậu Thần đã vươn tới tận tầng mây bên kia. Bước qua thật cẩn thận để không bị ngã." }
+            { character: 'monkey', text: "Cây khổng lồ đã vươn tới tận tầng mây bên kia. Bước qua thật cẩn thận để không bị ngã." }
         ]
     },
     272: {
@@ -2671,10 +2671,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khe nứt băng giá sâu thẳm cản đường. Chúng ta không thể nhảy qua được." },
-            { character: 'monkey', text: "Hãy gieo hạt giống cây thông tuyết, gõ đúng để cây mọc vươn ngang làm cầu bắc qua khe nứt!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây cổ thụ, gõ đúng để cây mọc vươn ngang làm cầu bắc qua khe nứt!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cây thông tuyết vô cùng vững chãi. Cùng bước qua cầu thật cẩn thận kẻo trơn trượt nhé." }
+            { character: 'monkey', text: "Cây cổ thụ vô cùng vững chãi. Cùng bước qua cầu thật cẩn thận kẻo trơn trượt nhé." }
         ]
     },
     286: {
@@ -2803,7 +2803,7 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khe nứt không gian tối tăm cản đường. Chúng ta không thể tự bay qua." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Sao Băng, gõ đúng để một cây Dạ Quang vươn cành làm cầu bắc qua!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống Cây Ngàn Sao, gõ đúng để cây vươn cành làm cầu bắc qua!" }
         ],
         postGame: [
             { character: 'monkey', text: "Cây Dạ Quang tỏa sáng rực rỡ và vô cùng vững chãi. Cùng bước qua cầu ánh sáng này thôi." }
@@ -2935,7 +2935,7 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Phía trước là một hố đen thu nhỏ cản đường, chúng ta không thể bay qua." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Tinh Tú, gõ đúng để một Cây Cầu Ánh Sao vươn dài bắc ngang qua hố đen!" }
+            { character: 'monkey', text: "Hãy gieo hạt Cây Ngàn sao, gõ đúng để cây vươn dài bắc ngang qua hố đen!" }
         ],
         postGame: [
             { character: 'monkey', text: "Cây Cầu Ánh Sao rực rỡ và vô cùng kiên cố. Bước qua thật cẩn thận nhé." }
@@ -3067,10 +3067,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một hẻm vực sâu hun hút không có đáy. Chúng ta không thể bay qua được." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Nấm Phát Sáng, gõ đúng để nấm khổng lồ mọc lên làm cầu vắt ngang vực!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống Cây Ngàn Sao, gõ đúng để cây vươn dài làm cầu vắt ngang vực!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Chiếc cầu Nấm Phát Sáng vừa đẹp vừa vững chãi. Cùng bước qua cẩn thận nào." }
+            { character: 'monkey', text: "Cây Cầu Ánh Sao vừa đẹp vừa vững chãi. Cùng bước qua cẩn thận nào." }
         ]
     },
     328: {
@@ -3200,10 +3200,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một hẻm núi tối tăm chắn ngang đường, không có cầu để qua." },
-            { character: 'monkey', text: "Hãy gieo hạt giống phép thuật, gõ phím để một cây dây leo dạ quang mọc lên vắt ngang hẻm núi nhé!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống phép thuật, gõ phím để một cây hoa thần kỳ mọc lên vắt ngang hẻm núi nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây leo dạ quang bám rất chắc chắn. Cùng cẩn thận bước qua hẻm núi nào." }
+            { character: 'monkey', text: "Cây hoa thần kỳ tỏa sáng rực rỡ và vô cùng vững chãi. Cùng cẩn thận bước qua hẻm núi nào." }
         ]
     },
     342: {
@@ -3332,10 +3332,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khoảng không vũ trụ sâu thẳm cản bước. Không có điểm tựa nào để đi tiếp." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Mặt Trăng, gõ đúng để một Dây Leo Bạc vươn dài làm cầu bắc ngang!" }
+            { character: 'monkey', text: "Hãy gieo cây Ngàn sao, gõ đúng để một cây vươn dài làm cầu bắc ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây Leo Bạc tỏa ra ánh sáng dịu nhẹ và vô cùng vững chãi. Cùng bước qua thật cẩn thận." }
+            { character: 'monkey', text: "Cây Ngàn Sao tỏa ra ánh sáng dịu nhẹ và vô cùng vững chãi. Cùng bước qua thật cẩn thận." }
         ]
     },
     356: {
@@ -3464,10 +3464,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khoảng không tối tăm không đáy đang chắn ngang đường. Chúng ta không thể nhảy qua." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Thiên Hà, gõ đúng để một Dây Leo Ánh Sáng mọc vút lên làm cầu vắt ngang vực!" }
+            { character: 'monkey', text: "Hãy gieo cây Ngàn sao, gõ đúng để một Cây Ngàn Sao mọc vút lên làm cầu vắt ngang vực!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây Leo Ánh Sáng lung linh và vô cùng vững chãi. Cùng bước qua cầu thật cẩn thận nhé." }
+            { character: 'monkey', text: "Cây Ngàn Sao tỏa sáng rực rỡ và vô cùng vững chãi. Cùng bước qua cầu thật cẩn thận nhé." }
         ]
     },
     370: {
@@ -3596,10 +3596,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một vết nứt không gian khổng lồ chắn ngang đường, không thể bay qua được." },
-            { character: 'monkey', text: "Gieo Hạt Giống Ngân Hà, gõ đúng để Dây Leo Tinh Tú vươn dài làm cầu vắt ngang vết nứt!" }
+            { character: 'monkey', text: "Gieo hạt cây Ngàn sao, gõ đúng để một Cây Ngàn Sao mọc vút lên làm cầu vắt ngang vết nứt!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây Leo Tinh Tú lung linh và vô cùng vững chãi. Cùng bước qua cầu ánh sáng thật cẩn thận nhé." }
+            { character: 'monkey', text: "Cây Ngàn Sao tỏa sáng rực rỡ và vô cùng vững chãi. Cùng bước qua cầu ánh sáng thật cẩn thận nhé." }
         ]
     },
     384: {
@@ -3728,10 +3728,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một vũng nước thủy triều sâu ngập đầy sứa độc cản đường. Không thể lội qua được." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Dừa, gõ đúng để một cây dừa mọc ngả ngang làm chiếc cầu bắc qua vũng nước!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây Ngàn sao, gõ đúng để một Cây Ngàn Sao mọc ngả ngang làm chiếc cầu bắc qua vũng nước!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Thân cây dừa rất cong và vững chắc. Cùng bước qua cầu cẩn thận để không rơi xuống nhé." }
+            { character: 'monkey', text: "Thân cây Ngàn sao rất cong và vững chắc. Cùng bước qua cầu cẩn thận để không rơi xuống nhé." }
         ]
     },
     398: {
@@ -3860,10 +3860,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một lạch nước sâu ngập đầy sứa độc cản đường. Chúng ta không thể lội qua được." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Rong Biển, gõ đúng để rong biển mọc đan vào nhau thành chiếc cầu bắc qua lạch nước!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây Hoa thần kỳ, gõ đúng để cây vươn dài thành chiếc cầu bắc qua lạch nước!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu rong biển rất dai và vững chắc. Cùng bước qua cầu cẩn thận để không rơi xuống nhé." }
+            { character: 'monkey', text: "Cầu Hoa rất dai và vững chắc. Cùng bước qua cầu cẩn thận để không rơi xuống nhé." }
         ]
     },
     412: {
@@ -3992,10 +3992,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khe nứt sâu thẳm cản đường, chúng ta không thể bơi qua vùng nước xiết này." },
-            { character: 'monkey', text: "Hãy gieo hạt giống phép thuật, gõ đúng để một nhánh san hô mọc vươn ra làm cầu nối nhé!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây Hoa thần kỳ, gõ đúng để cây mọc vươn ra làm cầu nối nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Nhánh san hô vô cùng vững chắc. Cùng cẩn thận bước qua khe nứt nào." }
+            { character: 'monkey', text: "Cây Hoa rất vững chắc. Cùng cẩn thận bước qua khe nứt nào." }
         ]
     },
     426: {
@@ -4124,10 +4124,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khe vực sâu hun hút dưới đáy biển chắn ngang đường đi." },
-            { character: 'monkey', text: "Gieo hạt mầm san hô, gõ phím để chúng lớn nhanh đan thành cây cầu bắc qua vực!" }
+            { character: 'monkey', text: "Gieo hạt mầm Hoa thần kỳ, gõ phím để chúng lớn nhanh đan thành cây cầu bắc qua vực!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu san hô vô cùng vững chắc. Cùng cẩn thận bơi qua khe vực nhé." }
+            { character: 'monkey', text: "Cây Hoa vô cùng vững chắc. Cùng cẩn thận đi qua khe vực nhé." }
         ]
     },
     440: {
@@ -4256,10 +4256,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một hẻm vực nứt gãy dưới đáy biển chắn ngang, dòng chảy ở đây xiết quá không thể bơi qua." },
-            { character: 'monkey', text: "Hãy gieo hạt giống tảo bẹ, gõ phím để chúng mọc dài vắt ngang hẻm vực làm chiếc cầu!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây Hoa thần kỳ, gõ phím để chúng mọc dài vắt ngang hẻm vực làm chiếc cầu!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu tảo bẹ vô cùng dai và chắc chắn. Cùng cẩn thận bám vào và vượt qua vực sâu nào." }
+            { character: 'monkey', text: "Cầu Hoa vô cùng dai và chắc chắn. Cùng cẩn thận bám vào và vượt qua vực sâu nào." }
         ]
     },
     454: {
@@ -4388,10 +4388,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một dòng hải lưu ngầm chảy xiết chia cắt đường đi. Chúng ta không thể tự bơi qua được." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Rong Biển Khổng Lồ, gõ phím để chúng mọc đan vào nhau làm chiếc cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống Hoa khổng lồ, gõ phím để chúng mọc đan vào nhau làm chiếc cầu vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu rong biển vô cùng dai và chắc chắn. Cùng cẩn thận bám vào và vượt qua dòng hải lưu nào." }
+            { character: 'monkey', text: "Cầu Hoa vô cùng dai và chắc chắn. Cùng cẩn thận đi qua dòng hải lưu nào." }
         ]
     },
     468: {
@@ -4520,10 +4520,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một rãnh vực đại dương sâu thẳm cắt ngang, dòng nước quá mạnh không thể tự bơi qua." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống San Hô Khổng Lồ, gõ đúng để nó vươn mình làm chiếc cầu bắc ngang vực!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây Hoa khổng lồ, gõ đúng để nó vươn mình làm chiếc cầu bắc ngang vực!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu san hô vô cùng vững chãi. Cùng bám chặt và cẩn thận băng qua rãnh vực nhé." }
+            { character: 'monkey', text: "Cầu Hoa vô cùng vững chắc. Cùng bám chặt và cẩn thận băng qua rãnh vực nhé." }
         ]
     },
     482: {
@@ -4652,10 +4652,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một con hào sâu đầy gai nhọn chắn ngang đường tới cổng chính. Không thể nhảy qua được." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Dây Leo Thành Cổ, gõ đúng để chúng mọc bám vào tường đá làm cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây khổng lồ, gõ đúng để chúng mọc cao lên làm cầu vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Dây leo cực kỳ dẻo dai và chắc chắn. Cùng cẩn thận bước qua con hào nào." }
+            { character: 'monkey', text: "Cây khổng lồ cực kỳ dẻo dai và chắc chắn. Cùng cẩn thận bước qua con hào nào." }
         ]
     },
     496: {
@@ -4784,10 +4784,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một rãnh nước cạn đầy chông sắt chắn ngang lối đi. Không thể nhảy qua được." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Dây Leo Thép, gõ đúng để chúng mọc bện vào nhau thành chiếc cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây khổng lồ, gõ đúng để chúng mọc cao lên làm cầu vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu dây leo vô cùng chắc chắn và kiên cố. Cùng bước qua rãnh chông cẩn thận nào." }
+            { character: 'monkey', text: "Cây khổng lồ cực kỳ dẻo dai và chắc chắn. Cùng bước qua rãnh chông cẩn thận nào." }
         ]
     },
     510: {
@@ -4916,10 +4916,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khoảng không sâu thẳm giữa hai tháp cản đường. Cầu treo đã bị hắn chặt đứt." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Dây Leo Phép Thuật, gõ đúng để chúng mọc bện thành cây cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây khổng lồ, gõ đúng để chúng mọc bện thành cây cầu vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu dây leo vô cùng kiên cố. Cùng cẩn thận bước qua khoảng không sâu thẳm này nào." }
+            { character: 'monkey', text: "Cầu cây khổng lồ vô cùng kiên cố. Cùng cẩn thận bước qua khoảng không sâu thẳm này nào." }
         ]
     },
     524: {
@@ -5048,10 +5048,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Đoạn cầu thang gỗ đã bị hắn phá gãy, tạo thành một khoảng trống lớn nguy hiểm." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Dây Leo Thạch Tường, gõ đúng để chúng mọc bám vào đá làm cầu bắc ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây Thần Kỳ, gõ đúng để chúng mọc cao lên làm cầu bắc ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu dây leo rất bám và kiên cố. Cùng cẩn thận bước qua khoảng trống sâu thẳm này." }
+            { character: 'monkey', text: "Cầu cây thần kỳ rất bám và kiên cố. Cùng cẩn thận bước qua khoảng trống sâu thẳm này." }
         ]
     },
     538: {
@@ -5180,10 +5180,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một cái bẫy vực sâu đột ngột mở ra chắn ngang hành lang. Không thể nhảy qua được." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Dây Leo Hoàng Kim, gõ đúng để chúng mọc bện thành cây cầu vắt ngang vực!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây Thần Kỳ, gõ đúng để chúng mọc cao thành cây cầu vắt ngang vực!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu dây leo ánh vàng vô cùng kiên cố. Cùng cẩn thận bước qua khoảng trống sâu thẳm này." }
+            { character: 'monkey', text: "Cầu cây thần kỳ vô cùng kiên cố. Cùng cẩn thận bước qua khoảng trống sâu thẳm này." }
         ]
     },
     552: {
@@ -5444,7 +5444,7 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Khoảng sân thượng này đã bị sập một mảng lớn. Hắn định dùng phi thân để bay qua." },
-            { character: 'monkey', text: "Hãy gieo hạt giống Cây Cầu Quả Cảm, gõ đúng để chúng mọc bện lại thành cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống Cây Khổng lồ, gõ đúng để chúng mọc bện lại thành cầu vắt ngang!" }
         ],
         postGame: [
             { character: 'monkey', text: "Cây cầu vô cùng vững chãi. Chúng ta tiếp tục ép sát Tướng Cướp." }
@@ -5576,10 +5576,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một vành đai rác vũ trụ dày đặc chắn ngang quỹ đạo, Tên Lửa không thể tự đâm xuyên qua." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Cây Trọng Lực, gõ đúng để nó vươn nhánh tạo thành ống luồng an toàn!" }
+            { character: 'monkey', text: "Hãy gieo Hạt Giống Cây Tinh Thể, gõ đúng để nó vươn nhánh tạo thành ống luồng an toàn!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Nhánh cây trọng lực đẩy dạt rác vũ trụ sang hai bên. Tên Lửa dễ dàng bay xuyên qua." }
+            { character: 'monkey', text: "Nhánh cây tinh thể đẩy dạt rác vũ trụ sang hai bên. Tên Lửa dễ dàng bay xuyên qua." }
         ]
     },
     594: {
@@ -5708,10 +5708,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Sóng xung kích từ phi thuyền của hắn đã tạo ra một vực thẳm lớn cản đường." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Thần Thụ Gaia, gõ đúng để rễ cây khổng lồ vươn ra làm cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt giống cây Ngàn Sao, gõ đúng để rễ cây khổng lồ vươn ra làm cầu vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Rễ Thần Thụ vô cùng vững chãi và đầy sức sống. Cùng cẩn thận bước qua vực thẳm nào." }
+            { character: 'monkey', text: "Cầu cây ngàn sao vô cùng vững chãi và đầy sức sống. Cùng cẩn thận bước qua vực thẳm nào." }
         ]
     },
     608: {
@@ -5972,10 +5972,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khe nứt sâu thẳm tỏa ra khí lạnh âm độ chắn ngang lối đi." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Cầu Vồng, gõ phím để tia sáng vắt ngang tạo thành cầu năng lượng!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây Sao tinh tú, gõ phím để tia sáng vắt ngang tạo thành cầu năng lượng!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu vồng năng lượng vô cùng kiên cố và ấm áp. Cùng cẩn thận bước qua khe nứt nào." }
+            { character: 'monkey', text: "Cầu Sao tinh tú vô cùng kiên cố và ấm áp. Cùng cẩn thận bước qua khe nứt nào." }
         ]
     },
     636: {
@@ -6104,10 +6104,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một hố đen mini đang hút mọi thứ, tạo ra một hẻm vực không gian không thể vượt qua." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Ánh Sáng, gõ đúng để tia sáng kết nối thành cây cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo Hạt Giống Tinh thể, gõ đúng để tia sáng kết nối thành cây cầu vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu ánh sáng vô cùng kiên cố. Cùng cẩn thận lướt qua hẻm vực tử thần này." }
+            { character: 'monkey', text: "Cầu tinh thể vô cùng kiên cố. Cùng cẩn thận lướt qua hẻm vực tử thần này." }
         ]
     },
     650: {
@@ -6236,10 +6236,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một hố dung nham sinh học phát sáng chắn ngang đường. Không thể nhảy qua được." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Dây Leo Không Gian, gõ đúng để chúng vươn nhánh tạo thành cây cầu vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo hạt cây Khổng lồ, gõ đúng để chúng vươn nhánh tạo thành cây cầu vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cầu dây leo kỳ lạ nhưng vô cùng vững chãi. Cùng cẩn thận bước qua hố dung nham nào." }
+            { character: 'monkey', text: "Cầu cây thần kỳ vô cùng vững chãi. Cùng cẩn thận bước qua hố dung nham nào." }
         ]
     },
     664: {
@@ -6500,10 +6500,10 @@ export const STORY_CONFIGS = {
         minigame: 'grow_plant',
         preGame: [
             { character: 'monkey', text: "Một khoảng không hư vô tĩnh lặng chắn ngang đường, không có bất kỳ điểm tựa nào để đi tiếp." },
-            { character: 'monkey', text: "Hãy gieo Hạt Giống Cây Cầu Ngân Hà, gõ đúng để các vì sao kết nối lại thành lối đi vắt ngang!" }
+            { character: 'monkey', text: "Hãy gieo Hạt Giống Cây Cầu Ngàn sao, gõ đúng để các vì sao kết nối lại thành lối đi vắt ngang!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cây cầu ngân hà vô cùng rực rỡ và vững chắc. Cùng cẩn thận lướt qua khoảng không hư vô này." }
+            { character: 'monkey', text: "Cây cầu ngàn sao vô cùng rực rỡ và vững chắc. Cùng cẩn thận lướt qua khoảng không hư vô này." }
         ]
     },
     692: {
