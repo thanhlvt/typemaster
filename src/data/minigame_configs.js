@@ -1720,27 +1720,28 @@ export const MINIGAME_CONFIGS = {
     88: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
-                image: 'car1.png',
+                image: 'grasshopper.png',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
-                flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
+                scale: 0.4,         // Tỷ lệ kích thước của chiếc xe
+                flipX: false,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
-                driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
+                driverScale: 0.22,   // Tỷ lệ kích thước người lái (khỉ)
                 driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetY: -35,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
             enemyVehicle: {
-                image: 'car2.png',
+                image: 'grasshopper.png',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của xe boss
-                flipX: true,         // Lật ngang xe boss
+                scale: 0.4,         // Tỷ lệ kích thước của xe boss
+                flipX: false,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
-                driverScale: 0.2,   // Tỷ lệ kích thước của boss
+                driverScale: 0.22,   // Tỷ lệ kích thước của boss
                 driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetY: -40,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
@@ -1749,12 +1750,12 @@ export const MINIGAME_CONFIGS = {
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'air',
                 startX: 150,
                 endX: 820,
-                playerY: 220,
+                playerY: 180,
                 enemyY: 350,
-                height: 70
+                height: 100
             }
         },
     },
@@ -1879,35 +1880,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'truck_complete.png',
+                image: 'scepter_complete.png',
                 x: 490,
                 y: 220,
                 scale: 0.8
             },
             parts: [
                 {
-                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1
+                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
                 },
                 {
-                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -105, offsetY: 30, order: 2
+                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
                 },
                 {
-                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 90, offsetY: 30, order: 3
+                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
                 },
                 {
-                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: -93, offsetY: -63, order: 4
+                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
                 },
                 {
-                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
-                    offsetX: 78, offsetY: -85, order: 5
+                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
                 },
                 {
-                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
-                    offsetX: -62, offsetY: -152, order: 6
+                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
                 }
             ]
         },
@@ -1983,36 +1984,35 @@ export const MINIGAME_CONFIGS = {
     102: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
-                image: 'car1.png',
-                type: 'car',
+                image: 'leaf.png',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
-                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -37,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             enemyVehicle: {
-                image: 'car2.png',
-                type: 'car',
+                image: 'leaf.png',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
                 driverScale: 0.2,   // Tỷ lệ kích thước của boss
-                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -40,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             track: {
                 // Các loại đường đua hỗ trợ (track.type):
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'water',
                 startX: 150,
                 endX: 820,
                 playerY: 220,
@@ -2101,15 +2101,15 @@ export const MINIGAME_CONFIGS = {
     106: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -2261,27 +2261,26 @@ export const MINIGAME_CONFIGS = {
     116: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
-                image: 'car1.png',
-                type: 'car',
+                image: 'wood.png',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
-                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -47,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
             enemyVehicle: {
-                image: 'car2.png',
-                type: 'car',
+                image: 'wood.png',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
                 driverScale: 0.2,   // Tỷ lệ kích thước của boss
-                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -50,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
@@ -2290,12 +2289,12 @@ export const MINIGAME_CONFIGS = {
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'water',
                 startX: 150,
                 endX: 820,
                 playerY: 220,
                 enemyY: 350,
-                height: 70
+                height: 90
             }
         },
     },
@@ -2506,36 +2505,35 @@ export const MINIGAME_CONFIGS = {
     128: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
-                image: 'car1.png',
-                type: 'car',
+                image: 'leaf.png',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
-                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -37,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             enemyVehicle: {
-                image: 'car2.png',
-                type: 'car',
+                image: 'leaf.png',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
                 driverScale: 0.2,   // Tỷ lệ kích thước của boss
-                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -40,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             track: {
                 // Các loại đường đua hỗ trợ (track.type):
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'water',
                 startX: 150,
                 endX: 820,
                 playerY: 220,
@@ -2822,36 +2820,35 @@ export const MINIGAME_CONFIGS = {
     144: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
-                image: 'car1.png',
-                type: 'car',
+                image: 'leaf.png',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
                 flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
-                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -37,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             enemyVehicle: {
-                image: 'car2.png',
-                type: 'car',
+                image: 'leaf.png',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
                 flipX: true,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
                 driverScale: 0.2,   // Tỷ lệ kích thước của boss
-                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -40,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             track: {
                 // Các loại đường đua hỗ trợ (track.type):
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'water',
                 startX: 150,
                 endX: 820,
                 playerY: 220,
@@ -3379,26 +3376,26 @@ export const MINIGAME_CONFIGS = {
         gameId: 'racing',
         config: {
             playerVehicle: {
-                image: 'car1.png',
+                image: 'boat.png',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
-                flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
+                scale: 0.3,         // Tỷ lệ kích thước của chiếc xe
+                flipX: false,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
                 driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetY: -32,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
             enemyVehicle: {
-                image: 'car2.png',
+                image: 'boat.png',
                 type: 'car',
-                scale: 0.45,         // Tỷ lệ kích thước của xe boss
-                flipX: true,         // Lật ngang xe boss
+                scale: 0.3,         // Tỷ lệ kích thước của xe boss
+                flipX: false,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
                 driverScale: 0.2,   // Tỷ lệ kích thước của boss
                 driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetY: -35,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },
@@ -3407,7 +3404,7 @@ export const MINIGAME_CONFIGS = {
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'water',
                 startX: 150,
                 endX: 820,
                 playerY: 220,
@@ -3656,41 +3653,40 @@ export const MINIGAME_CONFIGS = {
     186: {
         gameId: 'racing',
         config: {
+            vehicleOver: false,
             playerVehicle: {
-                image: 'car1.png',
-                type: 'car',
+                image: 'carp.png',
                 scale: 0.45,         // Tỷ lệ kích thước của chiếc xe
-                flipX: true,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
+                flipX: false,         // Lật ngang xe (true: quay sang phải, false: mặc định sang trái)
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
-                driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của khỉ so với tâm xe
+                driverOffsetY: -37,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             enemyVehicle: {
-                image: 'car2.png',
-                type: 'car',
+                image: 'carp.png',
                 scale: 0.45,         // Tỷ lệ kích thước của xe boss
-                flipX: true,         // Lật ngang xe boss
+                flipX: false,         // Lật ngang xe boss
                 driverFlipX: true,  // Lật ngang boss
                 driverScale: 0.2,   // Tỷ lệ kích thước của boss
-                driverOffsetX: -10,   // Khoảng lệch ngang của boss so với tâm xe
-                driverOffsetY: -30,   // Khoảng lệch dọc của boss so với tâm xe
+                driverOffsetX: 0,   // Khoảng lệch ngang của boss so với tâm xe
+                driverOffsetY: -50,   // Khoảng lệch dọc của boss so với tâm xe
                 vehicleOffsetX: 20,
-                vehicleOffsetY: -5
+                vehicleOffsetY: 0
             },
             track: {
                 // Các loại đường đua hỗ trợ (track.type):
                 // - 'road' : Đường bộ (mặc định nhựa xám, vạch đứt khúc màu trắng)
                 // - 'water': Đường nước (nước xanh dương, viền bọt sóng xanh nhạt, sóng gợn nhẹ)
                 // - 'air'  : Đường trên không (màu tím vũ trụ, viền neon hồng phát sáng, chấm tròn lấp lánh)
-                type: 'road',
+                type: 'water',
                 startX: 150,
                 endX: 820,
                 playerY: 220,
                 enemyY: 350,
-                height: 70
+                height: 80
             }
         },
     },
@@ -3942,7 +3938,7 @@ export const MINIGAME_CONFIGS = {
                 driverFlipX: false,  // Lật ngang người lái (true/false)
                 driverScale: 0.2,   // Tỷ lệ kích thước người lái (khỉ)
                 driverOffsetX: -10,   // Khoảng lệch ngang của khỉ so với tâm xe
-                driverOffsetY: -27,   // Khoảng lệch dọc của khỉ so với tâm xe
+                driverOffsetY: -30,   // Khoảng lệch dọc của khỉ so với tâm xe
                 vehicleOffsetX: 20,
                 vehicleOffsetY: -5
             },

@@ -820,7 +820,7 @@ export const STORY_CONFIGS = {
     88: {
         minigame: 'racing',
         preGame: [
-            { character: 'monkey', text: "Sói Già đang tháo chạy lên đỉnh đồi. Cùng cưỡi lên lưng Bướm Khổng Lồ bay đuổi theo hắn nào!" }
+            { character: 'monkey', text: "Sói Già đang tháo chạy lên đỉnh đồi. Cùng cưỡi lên lưng Châu Chấu bay đuổi theo hắn nào!" }
         ],
         postGame: [
             { character: 'monkey', text: "Tốc độ bay thật chóng mặt! Hắn không thể thoát khỏi chúng ta đâu." }
@@ -1473,10 +1473,10 @@ export const STORY_CONFIGS = {
         minigame: 'racing',
         preGame: [
             { character: 'monkey', text: "Cá Sấu đang trườn rất nhanh trên cầu để bỏ trốn. Hắn định phá cầu từ bờ bên kia!" },
-            { character: 'monkey', text: "Cùng nhảy lên ván trượt tre và đua tốc độ đuổi theo hắn ngay lập tức!" }
+            { character: 'monkey', text: "Cùng nhảy lên xe và đua tốc độ đuổi theo hắn ngay lập tức!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lướt trên cầu tre thật thích! Chúng ta đang bám sát gót hắn rồi." }
+            { character: 'monkey', text: "Xe chạy nhanh quá! Chúng ta đang bám sát gót hắn rồi." }
         ]
     },
     159: {
@@ -1868,11 +1868,11 @@ export const STORY_CONFIGS = {
     200: {
         minigame: 'racing',
         preGame: [
-            { character: 'monkey', text: "Hổ Hung Ác đang bỏ chạy lên sườn dốc. Cùng cưỡi lên lưng bạn Lợn Rừng khổng lồ!" },
+            { character: 'monkey', text: "Hổ Hung Ác đang bỏ chạy lên sườn dốc. Nhảy lên xe và đuổi theo hắn!" },
             { character: 'monkey', text: "Gõ phím tăng tốc lướt qua những bụi rậm để đuổi kịp hắn nào!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Lợn Rừng chạy khỏe quá! Khoảng cách với Hổ Hung Ác đang hẹp dần." }
+            { character: 'monkey', text: "Chiếc xe chạy nhanh như gió. Khoảng cách với Hổ Hung Ác đang hẹp dần." }
         ]
     },
     201: {
