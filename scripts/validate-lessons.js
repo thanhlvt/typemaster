@@ -29,6 +29,20 @@ function validateLessons(lessons) {
 
     for (const lesson of lessons) {
         for (const item of lesson.content) {
+            // keys must contain only ASCII (a-z, space) — no Vietnamese diacritics
+            if (/[^\x00-\x7F]/.test(item.keys)) {
+                results.failed++;
+                results.errors.push({
+                    lesson: lesson.id,
+                    title: lesson.title,
+                    display: item.display,
+                    keys: item.keys,
+                    converted: null,
+                    note: 'keys chứa ký tự tiếng Việt có dấu (phải là telex ASCII)',
+                });
+                continue;
+            }
+
             const converted = convertKeys(item.keys);
             if (converted === item.display) {
                 results.passed++;
@@ -58,7 +72,11 @@ for (const e of r.errors) {
     console.log(`  [${e.lesson}] ${e.title}`);
     console.log(`    display:   "${e.display}"`);
     console.log(`    keys:      "${e.keys}"`);
-    console.log(`    converted: "${e.converted}"`);
+    if (e.note) {
+        console.log(`    ⚠ ${e.note}`);
+    } else {
+        console.log(`    converted: "${e.converted}"`);
+    }
 }
 
 console.log(`\n${'─'.repeat(50)}`);

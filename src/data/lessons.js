@@ -3336,8 +3336,8 @@ export const lessons = [
         "keys": "mootj caay lamf chawngr neen non"
       },
       {
-        "display": "hòn núi cao hơn",
-        "keys": "honf nuis cao hown"
+        "display": "góp sức dời non lấp bể",
+        "keys": "gops suwcs dowif non laaps beer"
       },
       {
         "display": "đoàn kết là sức mạnh",
@@ -3514,8 +3514,8 @@ export const lessons = [
         "keys": "nguwowif ngay nois thaatj"
       },
       {
-        "display": "thật thà là cha quỷ quái",
-        "keys": "thaatj thaf laf cha quyr quais"
+        "display": "thật thà thẳng thắn mọi nơi",
+        "keys": "thaatj thaf thawngr thawns moij nowi"
       },
       {
         "display": "vàng thật không sợ lửa",
@@ -4979,7 +4979,7 @@ export const lessons = [
       },
       {
         "display": "tình thân hữu gia đình",
-        "keys": "tình thân hữu gia đình"
+        "keys": "tinhf thaan huwux gia ddinhf"
       }
     ]
   },
@@ -5023,7 +5023,7 @@ export const lessons = [
       },
       {
         "display": "gắn bó keo sơn bền",
-        "keys": "gắn bó keo sơn bền"
+        "keys": "gawns bos keo sown beenf"
       },
       {
         "display": "con hiền cháu thảo",
@@ -5342,8 +5342,8 @@ export const lessons = [
         "keys": "sieeng nawng caanf cuf"
       },
       {
-        "display": "tay làm chân chạy",
-        "keys": "tay lamf chaan chayj"
+        "display": "chân đi tay làm",
+        "keys": "chaan ddi tay lamf"
       }
     ]
   },
@@ -5456,8 +5456,8 @@ export const lessons = [
     "title": "Lao động",
     "content": [
       {
-        "display": "làm giả ăn thật",
-        "keys": "lamf giar awn thaatj"
+        "display": "làm thật ăn chắc",
+        "keys": "lamf thaatj awn chawcs"
       },
       {
         "display": "làm thật ăn thật",
@@ -6448,8 +6448,8 @@ export const lessons = [
         "keys": "nhows own thaayf coo"
       },
       {
-        "display": "đáp đền tiếp nối",
-        "keys": "ddaps ddeenf tieeps noois"
+        "display": "đền đáp tiếp nối truyền thống",
+        "keys": "ddeenf ddaps tieeps noois truyeenf thoongs"
       },
       {
         "display": "tấm lòng tri ân",
@@ -6522,8 +6522,8 @@ export const lessons = [
     "title": "Lòng biết ơn",
     "content": [
       {
-        "display": "lúc gian nan nhất",
-        "keys": "lucs gian nan nhaats"
+        "display": "thành công nhớ lúc gian nan",
+        "keys": "thanhf coong nhows lucs gian nan"
       },
       {
         "display": "ân nhân quý giá",
@@ -6772,8 +6772,8 @@ export const lessons = [
         "keys": "vieen manx cuoois cungf"
       },
       {
-        "display": "lắng nghe thấu cảm",
-        "keys": "lawngs nghe thaaus camr"
+        "display": "bền bỉ kiên trì mỗi ngày",
+        "keys": "beenf bir kieen trif mooix ngayf"
       }
     ]
   },
@@ -7310,8 +7310,8 @@ export const lessons = [
         "keys": "thowif gian coong bawngf"
       },
       {
-        "display": "với tất cả mọi người",
-        "keys": "vowis taats car moij nguwowif"
+        "display": "thời gian ai cũng bằng nhau",
+        "keys": "thowif gian ai cungx bawngf nhau"
       },
       {
         "display": "tận dụng triệt để",
@@ -7614,12 +7614,12 @@ export const lessons = [
     "title": "Nhân quả",
     "content": [
       {
-        "display": "luật nhân quả",
-        "keys": "luaatj nhaan quar"
+        "display": "luật nhân quả luôn đúng",
+        "keys": "luaatj nhaan quar luoon ddungs"
       },
       {
-        "display": "không sai chạy",
-        "keys": "khoong sai chayj"
+        "display": "hãy nhớ làm việc thiện",
+        "keys": "hayx nhows lamf vieecj thieenj"
       },
       {
         "display": "cố gắng vươn lên",
@@ -8151,7 +8151,7 @@ export const lessons = [
       },
       {
         "display": "chân thành không dối gian",
-        "keys": "chân thành không dối gian"
+        "keys": "chaan thanhf khoong doois gian"
       }
     ]
   },
@@ -8970,8 +8970,8 @@ export const lessons = [
         "keys": "oans cuwuf neen giair"
       },
       {
-        "display": "đánh kẻ chạy đi",
-        "keys": "ddanhs ker chayj ddi"
+        "display": "tha thứ xua tan oán cừu",
+        "keys": "tha thuws xua tan oans cuwuf"
       },
       {
         "display": "lòng tốt xoa dịu nỗi đau",
@@ -9268,8 +9268,8 @@ export const lessons = [
         "keys": "nguwowif taif thaatj suwj"
       },
       {
-        "display": "can đảm vượt qua giông bão",
-        "keys": "can ddamr vuwowtj qua gioong baox"
+        "display": "khiêm tốn học hỏi mỗi ngày",
+        "keys": "khieem toons hocj hoir mooix ngayf"
       }
     ]
   },
@@ -9320,8 +9320,8 @@ export const lessons = [
         "keys": "khieem toons dduwowcj toon trongj"
       },
       {
-        "display": "bước đi hiên ngang vững chãi",
-        "keys": "buwowcs ddi hieen ngang vuwngx chaix"
+        "display": "khiêm tốn lắng nghe luyện tập",
+        "keys": "khieem toons lawngs nghe luyeenj taapj"
       }
     ]
   },
@@ -9564,8 +9564,8 @@ export const lessons = [
     "title": "Nghề nghiệp",
     "content": [
       {
-        "display": "làm ruộng thì gia",
-        "keys": "lamf ruoongj thif gia"
+        "display": "làm ruộng xây dựng gia tài",
+        "keys": "lamf ruoongj xaay duwngj gia taif"
       },
       {
         "display": "làm nhà thì tốn",
@@ -9788,8 +9788,8 @@ export const lessons = [
         "keys": "aamr thuwcj gawns keets gia ddinhf"
       },
       {
-        "display": "chăm sóc bản thân chu đáo",
-        "keys": "chawm socs banr thaan chu ddaos"
+        "display": "ăn uống điều độ sống khoẻ",
+        "keys": "awn uoongs ddieeuf ddooj soongs khoer"
       }
     ]
   },
@@ -9911,7 +9911,7 @@ export const lessons = [
       },
       {
         "display": "tinh thần luôn yêu đời",
-        "keys": "tinh thần luôn yêu đời"
+        "keys": "tinh thaanf luoon yeeu ddowif"
       },
       {
         "display": "khám sức khoẻ định kỳ đều",
@@ -10205,7 +10205,7 @@ export const lessons = [
       },
       {
         "display": "giữ gìn sinh thái xanh",
-        "keys": "giữ gìn sinh thái xanh"
+        "keys": "giuwx ginf sinh thais xanh"
       }
     ]
   },
@@ -10846,8 +10846,8 @@ export const lessons = [
         "keys": "ngayf thangs muwowif chuwa cuwowif toois"
       },
       {
-        "display": "sống lương thiện gặt lành quả",
-        "keys": "soongs luwowng thieenj gawtj lanhf quar"
+        "display": "bầu trời trong xanh sau mưa",
+        "keys": "baauf trowif trong xanh sau muwa"
       },
       {
         "display": "sương mù phủ kín buổi sáng",
@@ -10902,8 +10902,8 @@ export const lessons = [
         "keys": "gios muaf veef rets lanhj thaaus"
       },
       {
-        "display": "bầu trời xanh sau cơn mưa",
-        "keys": "baauf trowif xanh sau cown muwa"
+        "display": "mưa khiến thời tiết mát mẻ",
+        "keys": "muwa khieens thowif tieets mats mer"
       },
       {
         "display": "sấm sét báo hiệu mưa về",
@@ -11084,8 +11084,8 @@ export const lessons = [
         "keys": "aams aps tinhf nguwowif"
       },
       {
-        "display": "cơ hội học tập rộng mở",
-        "keys": "cow hooij hocj taapj roongj mowr"
+        "display": "làng quê ngày càng đổi thay",
+        "keys": "langf quee ngayf cangf ddooir thay"
       },
       {
         "display": "đồng quê bình yên mộc mạc",
@@ -11348,8 +11348,8 @@ export const lessons = [
         "keys": "tri aan nhuwngx ddieeuf nhor bes"
       },
       {
-        "display": "nhớ ơn người dựng nước xây",
-        "keys": "nhows own nguwowif duwngj nuwowcs xaay"
+        "display": "ơn người dựng xây đất nước",
+        "keys": "own nguwowif duwngj xaay ddaats nuwowcs"
       }
     ]
   },
@@ -11396,12 +11396,12 @@ export const lessons = [
         "keys": "bieets own laf nets ddepj nguwowif"
       },
       {
-        "display": "đạt được thành quả tốt đẹp",
-        "keys": "ddatj dduwowcj thanhf quar toots ddepj"
+        "display": "nhớ ơn thầy cô dạy dỗ",
+        "keys": "nhows own thaayf coo dayj doox"
       },
       {
-        "display": "nỗ lực học tập rèn luyện",
-        "keys": "noox luwcj hocj taapj renf luyeenj"
+        "display": "ơn người giúp ta trưởng thành",
+        "keys": "own nguwowif giups ta truwowngr thanhf"
       }
     ]
   },
@@ -11414,20 +11414,20 @@ export const lessons = [
         "keys": "aan nghiax venj toanf"
       },
       {
-        "display": "vượt khó vươn lên mỗi ngày",
-        "keys": "vuwowtj khos vuwown leen mooix ngayf"
+        "display": "tri ân những người đi trước",
+        "keys": "tri aan nhuwngx nguwowif ddi truwowcs"
       },
       {
-        "display": "nỗ lực sẽ có kết quả",
-        "keys": "noox luwcj sex cos keets quar"
+        "display": "ơn nghĩa nặng tựa non cao",
+        "keys": "own nghiax nawngj tuwaj non cao"
       },
       {
-        "display": "không từ bỏ ước mơ thôi",
-        "keys": "khoong tuwf bor uwowcs mow thooi"
+        "display": "nhớ ơn cha mẹ sinh thành",
+        "keys": "nhows own cha mej sinh thanhf"
       },
       {
-        "display": "bền chí vượt mọi bão giông",
-        "keys": "beenf chis vuwowtj moij baox gioong"
+        "display": "cảm ơn đời những điều nhỏ",
+        "keys": "camr own ddowif nhuwngx ddieeuf nhor"
       }
     ]
   },
@@ -11444,16 +11444,16 @@ export const lessons = [
         "keys": "traan trongj suwj giups ddowx xuwa"
       },
       {
-        "display": "chí kiên cường làm việc lớn",
-        "keys": "chis kieen cuwowngf lamf vieecj lowns"
+        "display": "trân trọng tình người giúp đỡ",
+        "keys": "traan trongj tinhf nguwowif giups ddowx"
       },
       {
-        "display": "nhẫn nại giải quyết khó khăn",
-        "keys": "nhaanx naij giair quyeets khos khawn"
+        "display": "sống đẹp để đáp ơn người",
+        "keys": "soongs ddepj ddeer ddaps own nguwowif"
       },
       {
-        "display": "bước tiếp không hề lùi bước",
-        "keys": "buwowcs tieeps khoong heef luif buwowcs"
+        "display": "mang ơn mãi không thể quên",
+        "keys": "mang own maix khoong theer queen"
       }
     ]
   },
@@ -11478,8 +11478,8 @@ export const lessons = [
         "keys": "chawm socs dayj doox neen nguwowif"
       },
       {
-        "display": "người kiên trì luôn chiến thắng",
-        "keys": "nguwowif kieen trif luoon chieens thawngs"
+        "display": "biết ơn thầy nuôi chí lớn",
+        "keys": "bieets own thaayf nuooi chis lowns"
       }
     ]
   },
@@ -11504,8 +11504,8 @@ export const lessons = [
         "keys": "bieets own moij nguwowif"
       },
       {
-        "display": "kiên định con đường đã chọn",
-        "keys": "kieen ddinhj con dduwowngf ddax chonj"
+        "display": "mang ơn đất nước quê hương",
+        "keys": "mang own ddaats nuwowcs quee huwowng"
       }
     ]
   },
@@ -11930,16 +11930,16 @@ export const lessons = [
     "title": "Ứng xử",
     "content": [
       {
-        "display": "cười người hôm trước",
-        "keys": "cuwowif nguwowif hoom truwowcs"
+        "display": "đừng cười người hoàn cảnh khó",
+        "keys": "dduwngf cuwowif nguwowif hoanf canhr khos"
       },
       {
         "display": "khéo léo không làm phật ý",
         "keys": "kheos leos khoong lamf phaatj ys"
       },
       {
-        "display": "khoan nhường cho người khác",
-        "keys": "khoan nhuwowngf cho nguwowif khacs"
+        "display": "biết nhường cho người khác",
+        "keys": "bieets nhuwowngf cho nguwowif khacs"
       },
       {
         "display": "đối xử tốt nhận tốt",
@@ -11956,8 +11956,8 @@ export const lessons = [
     "title": "Ứng xử",
     "content": [
       {
-        "display": "hôm sau người cười",
-        "keys": "hoom sau nguwowif cuwowif"
+        "display": "lịch sự mềm mỏng nhã nhặn",
+        "keys": "lichj suwj meemf mongr nhax nhawnj"
       },
       {
         "display": "lời nói cân nhắc trước",
@@ -12164,8 +12164,8 @@ export const lessons = [
     "title": "Thời gian",
     "content": [
       {
-        "display": "thời gian chữa lành",
-        "keys": "thowif gian chuwax lanhf"
+        "display": "thời gian chữa lành vết thương",
+        "keys": "thowif gian chuwax lanhf veets thuwowng"
       },
       {
         "display": "hãy quý trọng hôm nay",
@@ -12354,8 +12354,8 @@ export const lessons = [
         "keys": "thieenj taam tichs vaanj may"
       },
       {
-        "display": "may mắn đến người kiên",
-        "keys": "may mawns ddeens nguwowif kieen"
+        "display": "may mắn cho người kiên trì",
+        "keys": "may mawns cho nguwowif kieen trif"
       },
       {
         "display": "duyên lành gặp điều quý",
@@ -12428,8 +12428,8 @@ export const lessons = [
         "keys": "nhaan quar coong bawngf maix maix"
       },
       {
-        "display": "gieo bão gió mạnh về sau",
-        "keys": "gieo baox gios manhj veef sau"
+        "display": "hãy tin vào điều thiện",
+        "keys": "hayx tin vaof ddieeuf thieenj"
       },
       {
         "display": "làm điều thiện được hưởng phúc",
@@ -13204,8 +13204,8 @@ export const lessons = [
     "title": "Thành công",
     "content": [
       {
-        "display": "thành công rực rỡ",
-        "keys": "thanhf coong ruwcj rowx"
+        "display": "thành công rực rỡ xứng đáng",
+        "keys": "thanhf coong ruwcj rowx xuwngs ddangs"
       },
       {
         "display": "học hỏi để vươn xa hơn",
@@ -13256,24 +13256,24 @@ export const lessons = [
     "title": "Thành công",
     "content": [
       {
-        "display": "tiết kiệm của cải thời gian",
-        "keys": "tieets kieemj cuar cair thowif gian"
+        "display": "kiên trì đạt được thành công",
+        "keys": "kieen trif ddatj dduwowcj thanhf coong"
       },
       {
         "display": "thật thà ngay thẳng tự tin",
         "keys": "thaatj thaf ngay thawngr tuwj tin"
       },
       {
-        "display": "biết ơn nguồn cội sinh thành",
-        "keys": "bieets own nguoonf cooij sinh thanhf"
+        "display": "thành công nhờ có nền tảng",
+        "keys": "thanhf coong nhowf cos neenf tangr"
       },
       {
-        "display": "bình an cát tường suốt đời",
-        "keys": "binhf an cats tuwowngf suoots ddowif"
+        "display": "nỗ lực bền bỉ đến thành công",
+        "keys": "noox luwcj beenf bir ddeens thanhf coong"
       },
       {
-        "display": "vạn sự như ý hanh thông",
-        "keys": "vanj suwj nhuw ys hanh thoong"
+        "display": "vượt khó vươn lên thành đạt",
+        "keys": "vuwowtj khos vuwown leen thanhf ddatj"
       }
     ]
   },
@@ -13290,12 +13290,12 @@ export const lessons = [
         "keys": "kieen trif hocj taapj renf luyeenj"
       },
       {
-        "display": "lắng nghe thấu hiểu bao dung",
-        "keys": "lawngs nghe thaaus hieeur bao dung"
+        "display": "thành quả xứng đáng công sức",
+        "keys": "thanhf quar xuwngs ddangs coong suwcs"
       },
       {
-        "display": "nhã nhặn lịch thiệp cư xử",
-        "keys": "nhax nhawnj lichj thieepj cuw xuwr"
+        "display": "cố gắng mỗi ngày thành công",
+        "keys": "coos gawngs mooix ngayf thanhf coong"
       },
       {
         "display": "siêng năng làm việc thành công",
@@ -13308,8 +13308,8 @@ export const lessons = [
     "title": "Thành công",
     "content": [
       {
-        "display": "hạnh phúc viên mãn",
-        "keys": "hanhj phucs vieen manx"
+        "display": "thành công trọn vẹn viên mãn",
+        "keys": "thanhf coong tronj venj vieen manx"
       },
       {
         "display": "lao động vinh quang tự hào",
@@ -13386,24 +13386,24 @@ export const lessons = [
     "title": "Thất bại",
     "content": [
       {
-        "display": "da ngựa bọc thây anh dũng",
-        "keys": "da nguwaj bocj thaay anh dungx"
+        "display": "không ngã lòng trước thất bại",
+        "keys": "khoong ngax longf truwowcs thaats baij"
       },
       {
-        "display": "gan vàng dạ sắt không lùi",
-        "keys": "gan vangf daj sawts khoong luif"
+        "display": "dù thất bại vẫn không lùi",
+        "keys": "duf thaats baij vaanx khoong luif"
       },
       {
         "display": "không sợ nguy hiểm khó khăn",
         "keys": "khoong sowj nguy hieemr khos khawn"
       },
       {
-        "display": "dũng cảm đứng lên đấu tranh",
-        "keys": "dungx camr dduwngs leen ddaaus tranh"
+        "display": "từ thất bại đứng lên tiếp",
+        "keys": "tuwf thaats baij dduwngs leen tieeps"
       },
       {
-        "display": "can đảm bảo vệ lẽ phải",
-        "keys": "can ddamr baor veej lex phair"
+        "display": "thất bại giúp ta trưởng thành",
+        "keys": "thaats baij giups ta truwowngr thanhf"
       }
     ]
   },
@@ -13428,8 +13428,8 @@ export const lessons = [
         "keys": "dams nghix dams lamf dams chiuj"
       },
       {
-        "display": "anh hùng hào kiệt hiên ngang",
-        "keys": "anh hungf haof kieetj hieen ngang"
+        "display": "vượt lên sau mỗi thất bại",
+        "keys": "vuwowtj leen sau mooix thaats baij"
       }
     ]
   },
@@ -13454,8 +13454,8 @@ export const lessons = [
         "keys": "dungx khis vuwowtj qua moij nguy"
       },
       {
-        "display": "học một biết mười nhanh trí",
-        "keys": "hocj mootj bieets muwowif nhanh tris"
+        "display": "học từ mỗi lần thất bại",
+        "keys": "hocj tuwf mooix laanf thaats baij"
       }
     ]
   },
@@ -13524,8 +13524,8 @@ export const lessons = [
         "keys": "can ddamr khoong sowj gian nan"
       },
       {
-        "display": "dám nghĩ dám làm dám chịu",
-        "keys": "dams nghix dams lamf dams chiuj"
+        "display": "bước ra khỏi vùng an toàn",
+        "keys": "buwowcs ra khoir vungf an toanf"
       },
       {
         "display": "bước qua nỗi sợ trong lòng",
@@ -14270,16 +14270,16 @@ export const lessons = [
     "title": "Sự khiêm tốn",
     "content": [
       {
-        "display": "yêu quý trân trọng tình bạn",
-        "keys": "yeeu quys traan trongj tinhf banj"
+        "display": "trọng người hơn trọng mình",
+        "keys": "trongj nguwowif hown trongj minhf"
       },
       {
-        "display": "bạn bè cùng nhau tiến bộ",
-        "keys": "banj bef cungf nhau tieens booj"
+        "display": "không tự đề cao bản thân",
+        "keys": "khoong tuwj ddeef cao banr thaan"
       },
       {
-        "display": "tình bạn thắm thiết keo sơn",
-        "keys": "tinhf banj thawms thieets keo sown"
+        "display": "lắng nghe ý kiến người khác",
+        "keys": "lawngs nghe ys kieens nguwowif khacs"
       },
       {
         "display": "khiêm tốn là đức quý nhất",
@@ -15422,8 +15422,8 @@ export const lessons = [
         "keys": "tieenf bacj phaan minh"
       },
       {
-        "display": "ái tình dứt khoát",
-        "keys": "ais tinhf duwts khoats"
+        "display": "chi tiêu vui chơi cẩn trọng",
+        "keys": "chi tieeu vui chowi caanr trongj"
       },
       {
         "display": "tiền bạc cần tiết kiệm thôi",
@@ -15760,8 +15760,8 @@ export const lessons = [
         "keys": "anhs sao toar sangs ruwcj rowx"
       },
       {
-        "display": "ánh sao rất nóng bức",
-        "keys": "anhs sao raats nongs buwcs"
+        "display": "ánh sao lung linh về đêm",
+        "keys": "anhs sao lung linh veef ddeem"
       },
       {
         "display": "ngân hà chứa nhiều bí ẩn",
@@ -15778,8 +15778,8 @@ export const lessons = [
     "title": "Khám phá không gian",
     "content": [
       {
-        "display": "mặt trời vụt qua rất nhanh",
-        "keys": "mawtj trowif vutj qua raats nhanh"
+        "display": "thiên thạch vụt qua rất nhanh",
+        "keys": "thieen thachj vutj qua raats nhanh"
       },
       {
         "display": "vũ trụ vô cùng huyền bí",
@@ -15804,16 +15804,16 @@ export const lessons = [
     "title": "Các hành tinh",
     "content": [
       {
-        "display": "bóng tối luôn luôn tối tăm",
-        "keys": "bongs toois luoon luoon toois tawm"
+        "display": "sao mộc là hành tinh lớn",
+        "keys": "sao moocj laf hanhf tinh lowns"
       },
       {
-        "display": "ngôi sao sáng lấp lánh",
-        "keys": "ngooi sao sangs laaps lanhs"
+        "display": "sao hoả có màu đỏ",
+        "keys": "sao hoar cos mauf ddor"
       },
       {
-        "display": "chòm sao toả nhiệt liên tục",
-        "keys": "chomf sao toar nhieetj lieen tucj"
+        "display": "hành tinh quay quanh mặt trời",
+        "keys": "hanhf tinh quay quanh mawtj trowif"
       },
       {
         "display": "chòm sao lướt nhanh qua",
@@ -16106,8 +16106,8 @@ export const lessons = [
         "keys": "thieen thachj raats nongs bongr"
       },
       {
-        "display": "phi công tìm hành tinh mới",
-        "keys": "phi coong timf hanhf tinh mowis"
+        "display": "tàu vũ trụ bay lên cao",
+        "keys": "tauf vux truj bay leen cao"
       }
     ]
   },
@@ -16232,8 +16232,8 @@ export const lessons = [
         "keys": "sao moocj to vaf nawngj nhaats"
       },
       {
-        "display": "sao thủy cần được bảo vệ",
-        "keys": "sao thuyr caanf dduwowcj baor veej"
+        "display": "sao thủy quay gần mặt trời",
+        "keys": "sao thuyr quay gaanf mawtj trowif"
       },
       {
         "display": "mặt trăng có nhiều cơn bão",
@@ -16302,8 +16302,8 @@ export const lessons = [
         "keys": "anhs sao cos nhieetj ddooj cao"
       },
       {
-        "display": "mặt trăng có nhiều vệ tinh",
-        "keys": "mawtj trawng cos nhieeuf veej tinh"
+        "display": "mặt trăng bay quanh trái đất",
+        "keys": "mawtj trawng bay quanh trais ddaats"
       },
       {
         "display": "sao chổi chiếu sáng không gian",
@@ -16332,8 +16332,8 @@ export const lessons = [
         "keys": "ddiaj caauf bao bocj baauf khis"
       },
       {
-        "display": "phi công nghiên cứu vũ trụ",
-        "keys": "phi coong nghieen cuwus vux truj"
+        "display": "phi hành gia và vũ trụ",
+        "keys": "phi hanhf gia vaf vux truj"
       },
       {
         "display": "thiên thạch vô cùng chói chang",
@@ -16544,8 +16544,8 @@ export const lessons = [
         "keys": "thees giowis ta raats hoanhf trangs"
       },
       {
-        "display": "thiên vương là sao băng giá",
-        "keys": "thieen vuwowng laf sao bawng gias"
+        "display": "thiên vương là hành tinh băng",
+        "keys": "thieen vuwowng laf hanhf tinh bawng"
       },
       {
         "display": "vệ tinh nhìn được rất xa",
@@ -16562,8 +16562,8 @@ export const lessons = [
         "keys": "mawtj trowif mang theo anhs sangs"
       },
       {
-        "display": "sao mộc hành tinh lớn nhất",
-        "keys": "sao moocj hanhf tinh lowns nhaats"
+        "display": "trái đất bốn tỉ năm tuổi",
+        "keys": "trais ddaats boons tir nawm tuooir"
       },
       {
         "display": "thiên vương cách trái đất xa",
@@ -16912,8 +16912,8 @@ export const lessons = [
         "keys": "thieen thachj luoon luoon toar sangs"
       },
       {
-        "display": "con người sống ở trạm không",
-        "keys": "con nguwowif soongs owr tramj khoong"
+        "display": "con người trên trạm vũ trụ",
+        "keys": "con nguwowif treen tramj vux truj"
       }
     ]
   },
@@ -17094,8 +17094,8 @@ export const lessons = [
         "keys": "thieen vuwowng quay quanh mawtj trowif"
       },
       {
-        "display": "sao thủy quay quanh mặt trời",
-        "keys": "sao thuyr quay quanh mawtj trowif"
+        "display": "năm sao thủy rất ngắn",
+        "keys": "nawm sao thuyr raats ngawns"
       }
     ]
   },
@@ -17224,8 +17224,8 @@ export const lessons = [
         "keys": "ddiaj caauf laf hanhf tinh nuwowcs"
       },
       {
-        "display": "chị hằng có vành đai đẹp",
-        "keys": "chij hawngf cos vanhf ddai ddepj"
+        "display": "sao thổ có vành đai đẹp",
+        "keys": "sao thoor cos vanhf ddai ddepj"
       }
     ]
   },
@@ -17446,8 +17446,8 @@ export const lessons = [
         "keys": "chij hawngf raats laf nongs buwcs"
       },
       {
-        "display": "mặt trăng vòng quanh trái đất",
-        "keys": "mawtj trawng vongf quanh trais ddaats"
+        "display": "mặt trăng nhỏ hơn trái đất",
+        "keys": "mawtj trawng nhor hown trais ddaats"
       },
       {
         "display": "quỹ đạo tuân theo quy luật",
@@ -17562,8 +17562,8 @@ export const lessons = [
         "keys": "vif sao ddepj lung linh"
       },
       {
-        "display": "sao thủy lên xuống mỗi ngày",
-        "keys": "sao thuyr leen xuoongs mooix ngayf"
+        "display": "sao thủy trong hệ mặt trời",
+        "keys": "sao thuyr trong heej mawtj trowif"
       }
     ]
   },
@@ -17632,8 +17632,8 @@ export const lessons = [
         "keys": "hair vuwowng raats hoanhf trangs"
       },
       {
-        "display": "nguyệt thực toả sáng trên trời",
-        "keys": "nguyeetj thuwcj toar sangs treen trowif"
+        "display": "ngắm nguyệt thực trên bầu trời",
+        "keys": "ngawms nguyeetj thuwcj treen baauf trowif"
       },
       {
         "display": "mặt trăng không có vành đai",
@@ -17740,8 +17740,8 @@ export const lessons = [
         "keys": "mawtj trowif owr raats xa xooi"
       },
       {
-        "display": "thiên thạch vụt qua rất nhanh",
-        "keys": "thieen thachj vutj qua raats nhanh"
+        "display": "nhiều thiên thạch trong không gian",
+        "keys": "nhieeuf thieen thachj trong khoong gian"
       },
       {
         "display": "ngân hà rất bao la",
@@ -17948,8 +17948,8 @@ export const lessons = [
         "keys": "ddiaj caauf cos nhieeuf cown baox"
       },
       {
-        "display": "chị hằng chứa nhiều đại dương",
-        "keys": "chij hawngf chuwas nhieeuf ddaij duwowng"
+        "display": "chị hằng chứa nhiều miệng hố",
+        "keys": "chij hawngf chuwas nhieeuf mieengj hoos"
       },
       {
         "display": "bóng tối vô cùng đáng sợ",
@@ -18252,16 +18252,16 @@ export const lessons = [
         "keys": "teen luwar bay vongf quanh"
       },
       {
-        "display": "lỗ đen mãi mãi trường tồn",
-        "keys": "loox dden maix maix truwowngf toonf"
+        "display": "lỗ đen nhiều trong vũ trụ",
+        "keys": "loox dden nhieeuf trong vux truj"
       },
       {
         "display": "hố đen rất tĩnh lặng",
         "keys": "hoos dden raats tinhx lawngj"
       },
       {
-        "display": "thiên vương ảnh hưởng thủy triều",
-        "keys": "thieen vuwowng anhr huwowngr thuyr trieeuf"
+        "display": "thiên vương trong hệ mặt trời",
+        "keys": "thieen vuwowng trong heej mawtj trowif"
       },
       {
         "display": "chị hằng có nhiều vệ tinh",
@@ -18416,8 +18416,8 @@ export const lessons = [
         "keys": "nhaatj thuwcj khoong theer thay ddooir"
       },
       {
-        "display": "chị hằng có nhiều miệng hố",
-        "keys": "chij hawngf cos nhieeuf mieengj hoos"
+        "display": "bề mặt mặt trăng mấp mô",
+        "keys": "beef mawtj mawtj trawng maaps moo"
       },
       {
         "display": "chị hằng mọc và lặn đêm",
@@ -18446,8 +18446,8 @@ export const lessons = [
         "keys": "mawtj trawng leen xuoongs mooix ngayf"
       },
       {
-        "display": "thiên vương chiếu sáng ban đêm",
-        "keys": "thieen vuwowng chieeus sangs ban ddeem"
+        "display": "chị hằng trên bầu trời sao",
+        "keys": "chij hawngf treen baauf trowif sao"
       }
     ]
   },
@@ -18564,8 +18564,8 @@ export const lessons = [
         "keys": "vux truj luoon luoon gianx nowr"
       },
       {
-        "display": "mặt trăng có nhiều đám mây",
-        "keys": "mawtj trawng cos nhieeuf ddams maay"
+        "display": "mặt trăng nhiều miệng núi lửa",
+        "keys": "mawtj trawng nhieeuf mieengj nuis luwar"
       },
       {
         "display": "cực quang vô cùng đặc biệt",
