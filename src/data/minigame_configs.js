@@ -204,6 +204,7 @@ export const MINIGAME_CONFIGS = {
     9: {
         gameId: 'frog_jump',
         config: {
+            type: 'road',
             leaf: {
                 image: 'leaf.png',
                 scale: 0.4,
@@ -2374,15 +2375,15 @@ export const MINIGAME_CONFIGS = {
     120: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -2631,15 +2632,16 @@ export const MINIGAME_CONFIGS = {
     134: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
             frog: {
                 image: 'frog.png',
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -40
             },
             x1: 100,
             y1: 150,
@@ -2915,13 +2917,12 @@ export const MINIGAME_CONFIGS = {
         config: {
             leaf: {
                 image: 'leaf.png',
-                scale: 0.4,
+                scale: 0.5,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -60
             },
             x1: 100,
             y1: 150,
@@ -3175,13 +3176,12 @@ export const MINIGAME_CONFIGS = {
         config: {
             leaf: {
                 image: 'leaf.png',
-                scale: 0.4,
+                scale: 0.5,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -60
             },
             x1: 100,
             y1: 150,
@@ -3451,15 +3451,15 @@ export const MINIGAME_CONFIGS = {
     175: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -3728,15 +3728,15 @@ export const MINIGAME_CONFIGS = {
     189: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -3828,38 +3828,39 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'scepter_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.65
+                scale: 1
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'scepter_part1', image: 'scepter_part1.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 100
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'scepter_part2', image: 'scepter_part2.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 120
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'scepter_part3', image: 'scepter_part3.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 140
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'scepter_part4', image: 'scepter_part4.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 160
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
+                    id: 'scepter_part5', image: 'scepter_part5.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 180
                 },
                 {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'scepter_part6', image: 'scepter_part6.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 190
                 }
             ]
         },
+
     },
     // Tự động đồng bộ từ File 1: Lesson 196
     196: {
@@ -4006,15 +4007,15 @@ export const MINIGAME_CONFIGS = {
     203: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -4284,15 +4285,15 @@ export const MINIGAME_CONFIGS = {
     217: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -4562,15 +4563,15 @@ export const MINIGAME_CONFIGS = {
     231: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -4840,15 +4841,15 @@ export const MINIGAME_CONFIGS = {
     245: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -5118,15 +5119,15 @@ export const MINIGAME_CONFIGS = {
     259: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
+                image: 'fog1.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -5396,15 +5397,15 @@ export const MINIGAME_CONFIGS = {
     273: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
+                image: 'fog1.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -5674,15 +5675,15 @@ export const MINIGAME_CONFIGS = {
     287: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
+                image: 'iceberg.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -5952,15 +5953,15 @@ export const MINIGAME_CONFIGS = {
     301: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
+                image: 'iceberg.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
-                offsetX: 0,
-                offsetY: -20
+                offsetX: -5,
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -6230,15 +6231,15 @@ export const MINIGAME_CONFIGS = {
     315: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
+                image: 'planet.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -80
             },
             x1: 100,
             y1: 150,
@@ -6509,15 +6510,15 @@ export const MINIGAME_CONFIGS = {
     329: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'wood.png',
+                scale: 0.5,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -70
             },
             x1: 100,
             y1: 150,
@@ -6787,15 +6788,15 @@ export const MINIGAME_CONFIGS = {
     343: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'flower3.png',
+                scale: 0.5,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -7066,15 +7067,15 @@ export const MINIGAME_CONFIGS = {
     357: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
+                image: 'planet.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -80
             },
             x1: 100,
             y1: 150,
@@ -7345,15 +7346,15 @@ export const MINIGAME_CONFIGS = {
     371: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
+                image: 'planet.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -80
             },
             x1: 100,
             y1: 150,
@@ -7624,15 +7625,15 @@ export const MINIGAME_CONFIGS = {
     385: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
+                image: 'planet.png',
                 scale: 0.4,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -80
             },
             x1: 100,
             y1: 150,
@@ -7903,15 +7904,15 @@ export const MINIGAME_CONFIGS = {
     399: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -8181,15 +8182,15 @@ export const MINIGAME_CONFIGS = {
     413: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'sand.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -8459,15 +8460,15 @@ export const MINIGAME_CONFIGS = {
     427: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'shell.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -8737,15 +8738,15 @@ export const MINIGAME_CONFIGS = {
     441: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'coral.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -9015,15 +9016,15 @@ export const MINIGAME_CONFIGS = {
     455: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -9293,15 +9294,15 @@ export const MINIGAME_CONFIGS = {
     469: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'coral.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -9571,15 +9572,15 @@ export const MINIGAME_CONFIGS = {
     483: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -9849,15 +9850,15 @@ export const MINIGAME_CONFIGS = {
     497: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -10127,15 +10128,15 @@ export const MINIGAME_CONFIGS = {
     511: {
         gameId: 'frog_jump',
         config: {
+            type: 'road',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -75
             },
             x1: 100,
             y1: 150,
@@ -10227,35 +10228,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'armor_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.65
+                scale: 0.8
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'armor_part1', image: 'armor_part1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 120
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'armor_part2', image: 'armor_part2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 200
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'armor_part3', image: 'armor_part3.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 110
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'armor_part4', image: 'armor_part4.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 110
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
+                    id: 'armor_part5', image: 'armor_part5.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 55
                 },
                 {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'armor_part6', image: 'armor_part6.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 55
                 }
             ]
         },
@@ -10406,15 +10407,15 @@ export const MINIGAME_CONFIGS = {
     525: {
         gameId: 'frog_jump',
         config: {
+            type: 'road',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -75
             },
             x1: 100,
             y1: 150,
@@ -10684,15 +10685,15 @@ export const MINIGAME_CONFIGS = {
     539: {
         gameId: 'frog_jump',
         config: {
+            type: 'road',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'wood.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -75
             },
             x1: 100,
             y1: 150,
@@ -10962,15 +10963,15 @@ export const MINIGAME_CONFIGS = {
     553: {
         gameId: 'frog_jump',
         config: {
+            type: 'road',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -75
             },
             x1: 100,
             y1: 150,
@@ -11240,15 +11241,15 @@ export const MINIGAME_CONFIGS = {
     567: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -75
             },
             x1: 100,
             y1: 150,
@@ -11518,15 +11519,15 @@ export const MINIGAME_CONFIGS = {
     581: {
         gameId: 'frog_jump',
         config: {
+            type: 'road',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -75
             },
             x1: 100,
             y1: 150,
@@ -11618,35 +11619,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'cup_complete.png',
                 x: 490,
-                y: 220,
-                scale: 0.65
+                y: 200,
+                scale: 0.6
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'cup_part1', image: 'cup_part1.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 110
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'cup_part2', image: 'cup_part2.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 140
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'cup_part3', image: 'cup_part3.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 190
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'cup_part4', image: 'cup_part4.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 175
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
+                    id: 'cup_part5', image: 'cup_part5.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 175
                 },
                 {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'cup_part6', image: 'cup_part6.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 175
                 }
             ]
         },
@@ -11796,15 +11797,15 @@ export const MINIGAME_CONFIGS = {
     595: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'space_station.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -12074,15 +12075,15 @@ export const MINIGAME_CONFIGS = {
     609: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'space_station.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -12352,15 +12353,15 @@ export const MINIGAME_CONFIGS = {
     623: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -12630,15 +12631,15 @@ export const MINIGAME_CONFIGS = {
     637: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -12909,15 +12910,15 @@ export const MINIGAME_CONFIGS = {
     651: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'iceberg.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -13187,15 +13188,15 @@ export const MINIGAME_CONFIGS = {
     665: {
         gameId: 'frog_jump',
         config: {
+            type: 'water',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'mushroom.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -80
             },
             x1: 100,
             y1: 150,
@@ -13465,15 +13466,15 @@ export const MINIGAME_CONFIGS = {
     679: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'rock2.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,
@@ -13744,15 +13745,15 @@ export const MINIGAME_CONFIGS = {
     693: {
         gameId: 'frog_jump',
         config: {
+            type: 'air',
             leaf: {
-                image: 'leaf.png',
-                scale: 0.4,
+                image: 'planet.png',
+                scale: 0.45,
             },
-            frog: {
-                image: 'frog.png',
+            monkey: {
                 scale: 0.3,
                 offsetX: 0,
-                offsetY: -20
+                offsetY: -65
             },
             x1: 100,
             y1: 150,

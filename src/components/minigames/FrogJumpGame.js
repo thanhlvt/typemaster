@@ -91,6 +91,34 @@ export class FrogJumpGame extends BaseMinigame {
                 this.add(windSprite);
                 this.winds.push({ sprite: windSprite, speed });
             }
+        } else if (trackType === 'road') {
+            // Nền đường đất sét/đường bộ ấm (earthy brown/clay)
+            const roadBg = this.scene.add.graphics();
+            roadBg.fillStyle(0x855845, 0.4); // Warm clay road
+            roadBg.fillRect(x1, y1, x2 - x1, y2 - y1);
+            // Border line for the road
+            roadBg.lineStyle(3, 0x6e473b, 0.6);
+            roadBg.strokeRect(x1, y1, x2 - x1, y2 - y1);
+            this.add(roadBg);
+
+            // Tạo một số sỏi đá rải rác trên đường
+            this.decorations = [];
+            const stoneColors = [0x78716c, 0xa8a29e, 0x57534e, 0xd6d3d1]; // Stone colors (stone-600, stone-500, stone-800, stone-300)
+            for (let i = 0; i < 12; i++) {
+                const decX = Phaser.Math.Between(x1 + 20, x2 - 20);
+                const decY = Phaser.Math.Between(y1 + 10, y2 - 10);
+                const radius = Phaser.Math.Between(4, 9);
+                const color = Phaser.Math.RND.pick(stoneColors);
+
+                const pebble = this.scene.add.graphics();
+                pebble.fillStyle(color, 0.85);
+                pebble.fillCircle(decX, decY, radius);
+                pebble.lineStyle(1.2, 0x44403c, 0.7);
+                pebble.strokeCircle(decX, decY, radius);
+                pebble.setDepth(108);
+                this.add(pebble);
+                this.decorations.push(pebble);
+            }
         } else {
             // Nước (water - mặc định)
             const water = this.scene.add.graphics();
@@ -138,20 +166,40 @@ export class FrogJumpGame extends BaseMinigame {
             const lx = startX + i * gapX;
             const ly = y + (i % 2 === 0 ? 10 : -10); // Hơi dích dắc cho sinh động
 
+            if (trackType === 'road') {
+                // Vẽ một số sỏi đất nhỏ xếp chồng làm bệ đỡ phía dưới leaf
+                const soilGraphics = this.scene.add.graphics();
+                const soilColors = [0x5c4033, 0x7c2d12, 0x6e473b, 0x8b5a2b, 0xa16207]; // shades of brown/clay/gold
+                for (let j = 0; j < 4; j++) {
+                    const offsetX = Phaser.Math.Between(-20, 20);
+                    const offsetY = Phaser.Math.Between(0, 18); // offset downwards relative to leaf center
+                    const radius = Phaser.Math.Between(6, 12);
+                    const color = Phaser.Math.RND.pick(soilColors);
+                    soilGraphics.fillStyle(color, 0.95);
+                    soilGraphics.fillCircle(lx + offsetX, ly + offsetY, radius);
+                    soilGraphics.lineStyle(1.5, 0x3b2314, 0.9);
+                    soilGraphics.strokeCircle(lx + offsetX, ly + offsetY, radius);
+                }
+                soilGraphics.setDepth(109);
+                this.add(soilGraphics);
+            }
+
             const leafSprite = this.scene.add.sprite(lx, ly, leafKey)
                 .setDepth(110)
                 .setScale(this.leafScale);
             this.add(leafSprite);
 
-            // Cho lá sen bồng bềnh nhẹ trên nước
-            this.scene.tweens.add({
-                targets: leafSprite,
-                y: ly + 4,
-                duration: 1000 + i * 100,
-                yoyo: true,
-                repeat: -1,
-                ease: 'Sine.easeInOut'
-            });
+            if (trackType !== 'road') {
+                // Cho lá sen bồng bềnh nhẹ trên nước
+                this.scene.tweens.add({
+                    targets: leafSprite,
+                    y: ly + 4,
+                    duration: 1000 + i * 100,
+                    yoyo: true,
+                    repeat: -1,
+                    ease: 'Sine.easeInOut'
+                });
+            }
 
             this.leavesList.push({ x: lx, y: ly, sprite: leafSprite });
         }

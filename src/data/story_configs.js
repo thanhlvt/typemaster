@@ -1031,10 +1031,10 @@ export const STORY_CONFIGS = {
         minigame: 'assemble_object',
         preGame: [
             { character: 'monkey', text: "Cá Sấu đang đợi ở đầm lầy lớn phía trước. Lần này phải chuẩn bị thật kỹ." },
-            { character: 'monkey', text: "Hãy ghép các mảnh vỏ sò cứng cáp lại thành một chiếc thuyền chiến bọc thép để đối đầu với hắn nào!" }
+            { character: 'monkey', text: "Hãy ghép các mảnh gỗ cứng cáp lại thành một chiếc khiên để đối đầu với hắn nào!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Thuyền chiến vỏ sò đã sẵn sàng! Cùng rẽ sóng tiến lên và đánh bại Cá Sấu thôi!" }
+            { character: 'monkey', text: "Khiên gỗ đã sẵn sàng! Cùng rẽ sóng tiến lên và đánh bại Cá Sấu thôi!" }
         ]
     },
     // Lesson 112 - 124 (Group: Sông nước, Chapter 9:  'Suối mát', Boss: Cá Sấu)
@@ -1502,8 +1502,8 @@ export const STORY_CONFIGS = {
     161: {
         minigame: 'frog_jump',
         preGame: [
-            { character: 'monkey', text: "Mặt cầu ở đây bị phá hỏng, chỉ còn lại những cọc tre nhô lên mặt nước." },
-            { character: 'monkey', text: "Gõ đúng nhịp để nhảy khéo léo qua từng cọc tre, giữ thăng bằng đừng để rơi xuống nhé!" }
+            { character: 'monkey', text: "Mặt cầu ở đây bị phá hỏng, chỉ còn lại những những chiếc lá trôi trên mặt nước." },
+            { character: 'monkey', text: "Gõ đúng nhịp để nhảy khéo léo qua từng chiếc lá, giữ thăng bằng đừng để rơi xuống nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Hay lắm! Những cú nhảy vô cùng chuẩn xác. Không ai bị ngã xuống sông." }
@@ -2822,8 +2822,8 @@ export const STORY_CONFIGS = {
     301: {
         minigame: 'frog_jump',
         preGame: [
-            { character: 'monkey', text: "Dưới chân là những hòn đá lơ lửng trên dải tinh vân mờ ảo." },
-            { character: 'monkey', text: "Gõ đúng nhịp để nhảy khéo léo qua các tảng đá phát sáng, đừng bước hụt vào khoảng không nhé!" }
+            { character: 'monkey', text: "Dưới chân là những hòn đá băng lơ lửng trên dải tinh vân mờ ảo." },
+            { character: 'monkey', text: "Gõ đúng nhịp để nhảy khéo léo qua các tảng băng phát sáng, đừng bước hụt vào khoảng không nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Thật chính xác! Đôi chân linh hoạt đã giúp chúng ta vượt qua dải tinh vân an toàn." }
@@ -3219,8 +3219,8 @@ export const STORY_CONFIGS = {
     343: {
         minigame: 'frog_jump',
         preGame: [
-            { character: 'monkey', text: "Phía trước là đầm lầy bóng tối tĩnh lặng, chỉ có vài đài hoa súng phát sáng có thể giẫm lên." },
-            { character: 'monkey', text: "Gõ đúng nhịp để nhảy thật khéo qua các đài hoa súng, tuyệt đối đừng để trượt chân!" }
+            { character: 'monkey', text: "Phía trước là đầm lầy bóng tối tĩnh lặng, chỉ có vài đài hoa phát sáng có thể giẫm lên." },
+            { character: 'monkey', text: "Gõ đúng nhịp để nhảy thật khéo qua các đài hoa, tuyệt đối đừng để trượt chân!" }
         ],
         postGame: [
             { character: 'monkey', text: "Thật nhịp nhàng! Đôi chân linh hoạt đã giúp chúng ta vượt qua đầm lầy an toàn." }
@@ -5199,8 +5199,8 @@ export const STORY_CONFIGS = {
     553: {
         minigame: 'frog_jump',
         preGame: [
-            { character: 'monkey', text: "Phía trước là sàn gạch có gắn bẫy mũi tên độc, chỉ có vài ô gạch xanh là an toàn." },
-            { character: 'monkey', text: "Gõ đúng nhịp để búng người nhảy chuẩn xác lên các ô gạch xanh, tuyệt đối đừng bước sai!" }
+            { character: 'monkey', text: "Phía trước là sàn gạch có gắn bẫy mũi tên độc, chỉ có vài hòn đá nhô ra là an toàn." },
+            { character: 'monkey', text: "Gõ đúng nhịp để búng người nhảy chuẩn xác lên các hòn đá, tuyệt đối đừng bước sai!" }
         ],
         postGame: [
             { character: 'monkey', text: "Những bước nhảy thật hoàn hảo! Chúng ta đã vượt qua đoạn hành lang nguy hiểm an toàn." }
