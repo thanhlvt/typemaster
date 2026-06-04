@@ -1112,11 +1112,11 @@ export const STORY_CONFIGS = {
     119: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Cá Sấu bơi ngang qua đã húc vỡ guồng nước quay của khu rừng." },
-            { character: 'monkey', text: "Gõ phím thật chính xác để ghép các thanh tre lại, sửa chữa guồng nước giúp muôn loài." }
+            { character: 'monkey', text: "Cá Sấu bơi ngang qua đã húc cái bè của Rùa rồi." },
+            { character: 'monkey', text: "Gõ phím thật chính xác để sửa chữa cái bè giúp Rùa nhé." }
         ],
         postGame: [
-            { character: 'monkey', text: "Guồng nước đã quay đều trở lại, mang nước mát đi khắp khu rừng. Tuyệt vời!" }
+            { character: 'monkey', text: "Cái bè đã sửa xong, chúng ta cùng qua sông thôi." }
         ]
     },
     120: {
@@ -1261,16 +1261,17 @@ export const STORY_CONFIGS = {
     135: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Cá Sấu lúc tháo chạy đã đập vỡ cỗ xe rong biển của Cá Vàng trưởng bản. Hãy gõ đúng để ráp lại từng bộ phận giúp bác ấy nào." }
+            { character: 'monkey', text: "Cá Sấu lúc tháo chạy đã làm hỏng cây cầu bắt qua sông." },
+            { character: 'monkey', text: "Gõ đúng các từ để sửa lại cây cầu giúp chúng ta qua sông nào." }
         ],
         postGame: [
-            { character: 'monkey', text: "Cỗ xe lại lành lặn và êm ái trên dòng nước rồi. Bác Cá Vàng vui lắm!" }
+            { character: 'monkey', text: "Cây cầu đã sửa xong. Chúng ta mau chóng qua sông đuổi theo Cá Sấu thôi!" }
         ]
     },
     136: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Nghe có tiếng kêu cứu! Nữ hoàng Cá Vàng đang bị nhốt trong vỏ trai khổng lồ. Chúng ta phải giải cứu ngay!" }
+            { character: 'monkey', text: "Nghe có tiếng kêu cứu! Nữ hoàng Cá Vàng đang bị Cá Sấu bắt. Chúng ta phải giải cứu ngay!" }
         ],
         postGame: [
             { character: 'monkey', text: "Nữ hoàng Cá Vàng đã thoát ra ngoài. Chúng ta sắp đuổi kịp kẻ đầu sỏ rồi!" }
@@ -1310,8 +1311,8 @@ export const STORY_CONFIGS = {
     141: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Trời ơi! Cá Sấu đã dùng cuống sen dai dẳng trói chặt bạn Ếch Xanh lại rồi." },
-            { character: 'monkey', text: "Gõ thật chuẩn để cắt đứt cuống sen và cứu bạn Ếch ra ngoài nhé!" }
+            { character: 'monkey', text: "Trời ơi! Cá Sấu đã bắt bạn Ếch Xanh lại rồi." },
+            { character: 'monkey', text: "Gõ thật chuẩn để cắt đứt lưới và cứu bạn Ếch ra ngoài nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Ếch Xanh đã tự do nhảy nhót. Cá Sấu thật tàn nhẫn với các loài vật nhỏ!" }
@@ -1390,11 +1391,11 @@ export const STORY_CONFIGS = {
     149: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Chiếc xuồng lá của chúng ta bị va đập rách mất rồi." },
-            { character: 'monkey', text: "Hãy nhanh chóng dùng những đoạn ngó sen và lá sen mới ráp lại thành một chiếc xuồng kiên cố hơn." }
+            { character: 'monkey', text: "Chiếc bè của chúng ta bị va đập rách mất rồi." },
+            { character: 'monkey', text: "Hãy nhanh chóng dùng những đoạn gỗ ráp lại thành một chiếc bè kiên cố hơn." }
         ],
         postGame: [
-            { character: 'monkey', text: "Xuồng ngó sen đã hoàn tất. Vừa đẹp lại vừa chắc chắn, tiếp tục hành trình nào!" }
+            { character: 'monkey', text: "Chiếc bè đã hoàn tất. Vừa đẹp lại vừa chắc chắn, tiếp tục hành trình nào!" }
         ]
     },
     150: {
@@ -1442,8 +1443,8 @@ export const STORY_CONFIGS = {
     155: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Bọn tay sai của Cá Sấu đã trói bạn Cò Trắng vào nhịp cầu bằng những sợi dây leo kìa." },
-            { character: 'monkey', text: "Gõ đúng các từ để cắt đứt dây leo và cứu bạn ấy ra trước khi cầu sập nhé!" }
+            { character: 'monkey', text: "Bọn tay sai của Cá Sấu đã trói bạn Cò Trắng bằng những sợi dây leo kìa." },
+            { character: 'monkey', text: "Gõ đúng các từ để cắt đứt dây leo và cứu bạn ấy ra nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Cò Trắng đã vỗ cánh bay lên an toàn. Tiếp tục tiến lên thôi!" }
@@ -1522,11 +1523,11 @@ export const STORY_CONFIGS = {
     163: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Chiếc lồng tre nhốt cá của bác Ngư Phủ bị Cá Sấu cắn rách tơi tả." },
-            { character: 'monkey', text: "Hãy gõ phím để ghép các nan tre lại, đan thành một chiếc lồng mới thật chắc chắn giúp bác ấy." }
+            { character: 'monkey', text: "Chiếc thuyền gỗ của bác Ngư Phủ bị Cá Sấu cắn rách tơi tả." },
+            { character: 'monkey', text: "Hãy gõ phím để ghép các nan gỗ lại, đan thành một chiếc thuyền mới thật chắc chắn giúp bác ấy." }
         ],
         postGame: [
-            { character: 'monkey', text: "Chiếc lồng tre mới rất hoàn hảo. Bác Ngư Phủ gửi lời cảm ơn chúng ta." }
+            { character: 'monkey', text: "Chiếc thuyền gỗ mới rất hoàn hảo. Bác Ngư Phủ gửi lời cảm ơn chúng ta." }
         ]
     },
     164: {
@@ -1654,11 +1655,11 @@ export const STORY_CONFIGS = {
     177: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Cơn sóng dữ của Cá Sấu đã làm rách cánh buồm rồi." },
-            { character: 'monkey', text: "Hãy gõ phím để ráp các mảnh vải bạt lại, giúp thuyền căng buồm đón gió đi tiếp!" }
+            { character: 'monkey', text: "Cơn sóng dữ của Cá Sấu đã làm rách thuyền gỗ rồi." },
+            { character: 'monkey', text: "Hãy gõ phím để ráp các mảnh gỗ và đóng chặt lại, giúp thuyền cứng cáp đi tiếp!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cánh buồm đã được sửa xong. Thuyền Nhỏ lại no gió rẽ sóng tiến về phía trước." }
+            { character: 'monkey', text: "Thuyền gỗ lại chắc chắn. Chúng ta cùng tiếp tục rẽ sóng tiến về phía trước!" }
         ]
     },
     178: {
@@ -1786,11 +1787,11 @@ export const STORY_CONFIGS = {
     191: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Chiếc cần cẩu bằng gỗ giúp vượt qua vách đá cuối cùng đã bị Cá Sấu phá hỏng." },
-            { character: 'monkey', text: "Hãy gõ phím để ghép các bánh răng và thanh gỗ lại, khởi động chiếc cần cẩu nhé!" }
+            { character: 'monkey', text: "Chiếc bè gỗ giúp vượt qua vách đá cuối cùng đã bị Cá Sấu phá hỏng." },
+            { character: 'monkey', text: "Hãy gõ phím để ghép các bánh răng và thanh gỗ lại, khởi động chiếc bè nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cần cẩu đã hoạt động trơn tru. Đỉnh Thác Bạc ở ngay phía trên chúng ta rồi." }
+            { character: 'monkey', text: "Bè gỗ đã ghép xong. Chúng ta cùng nhau vượt qua vách đá cuối cùng. Đỉnh Thác Bạc ở ngay phía trên chúng ta rồi." }
         ]
     },
     192: {
@@ -1918,11 +1919,11 @@ export const STORY_CONFIGS = {
     205: {
         minigame: 'assemble_object',
         preGame: [
-            { character: 'monkey', text: "Chiếc xe kéo củi của bác Gấu Chó bị Hổ Hung Ác dẫm nát tươm rồi." },
-            { character: 'monkey', text: "Hãy gõ phím ráp các khúc gỗ cứng lại để sửa chiếc xe giúp bác ấy vận chuyển đồ nhé." }
+            { character: 'monkey', text: "Chiếc xe ô tô tải của bác Gấu Chó bị Hổ Hung Ác dẫm nát tươm rồi." },
+            { character: 'monkey', text: "Hãy gõ phím ráp các thanh kim loại và bánh xe lại để sửa chiếc xe giúp bác ấy vận chuyển đồ nhé." }
         ],
         postGame: [
-            { character: 'monkey', text: "Xe kéo đã được sửa xong. Bác Gấu Chó rất cảm kích và chỉ đường cho chúng ta." }
+            { character: 'monkey', text: "Xe ô tô tải đã được sửa xong. Bác Gấu Chó rất cảm kích và chỉ đường cho chúng ta." }
         ]
     },
     206: {

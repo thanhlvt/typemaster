@@ -2338,35 +2338,31 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'raft_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.65
+                scale: 1
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'raft_part1', image: 'raft_part1.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 100
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'raft_part2', image: 'raft_part2.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 110
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'raft_part3', image: 'raft_part3.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 115
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'raft_part4', image: 'raft_part4.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 120
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
-                },
-                {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'raft_part5', image: 'raft_part5.png', scaleX: 1, scaleY: 1, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 160
                 }
             ]
         },
@@ -2654,36 +2650,18 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'bridge_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.65
+                scale: 1
             },
             parts: [
-                {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
-                },
-                {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
-                },
-                {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
-                },
-                {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
-                },
-                {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
-                },
-                {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
-                }
+                { id: 'bridge_part1', image: 'bridge_part1.png', scaleX: 0.7, scaleY: 0.7, angle: 0, offsetX: 0, offsetY: 0, order: 1, partOffsetY: 110 },
+                { id: 'bridge_part2', image: 'bridge_part2.png', scaleX: 0.7, scaleY: 0.7, angle: 0, offsetX: 0, offsetY: 0, order: 2, partOffsetY: 150 },
+                { id: 'bridge_part3', image: 'bridge_part3.png', scaleX: 0.7, scaleY: 0.7, angle: 0, offsetX: 0, offsetY: 0, order: 3, partOffsetY: 140 },
+                { id: 'bridge_part4', image: 'bridge_part4.png', scaleX: 0.7, scaleY: 0.7, angle: 0, offsetX: 0, offsetY: 0, order: 4, partOffsetY: 90 },
+                { id: 'bridge_part5', image: 'bridge_part5.png', scaleX: 0.7, scaleY: 0.7, angle: 0, offsetX: 0, offsetY: 0, order: 5, partOffsetY: 110 },
+                { id: 'bridge_part6', image: 'bridge_part6.png', scaleX: 0.7, scaleY: 0.7, angle: 0, offsetX: 0, offsetY: 0, order: 6, partOffsetY: 150 }
             ]
         },
     },
@@ -2692,12 +2670,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'goldfish.png',
+                scale: 0.5,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'net2.png',
+                scale: 1.5,
             },
             x: 490,
             y: 230
@@ -2770,12 +2748,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'frog.png',
+                scale: 0.6,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'net2.png',
+                scale: 1.5,
             },
             x: 490,
             y: 230
@@ -2935,35 +2913,31 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'raft_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.65
+                scale: 1
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'raft_part1', image: 'raft_part1.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 100
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'raft_part2', image: 'raft_part2.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 110
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'raft_part3', image: 'raft_part3.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 115
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'raft_part4', image: 'raft_part4.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 120
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
-                },
-                {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'raft_part5', image: 'raft_part5.png', scaleX: 1, scaleY: 1, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 160
                 }
             ]
         },
@@ -3046,12 +3020,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'flamingo.png',
+                scale: 0.6,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'bush.png',
+                scale: 0.8,
             },
             x: 490,
             y: 230
@@ -3212,35 +3186,31 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'boat_complete.png',
                 x: 490,
-                y: 220,
+                y: 200,
                 scale: 0.65
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'boat_part1', image: 'boat_part1.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 125
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'boat_part2', image: 'boat_part2.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 130
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'boat_part3', image: 'boat_part3.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 150
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'boat_part4', image: 'boat_part4.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 140
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
-                },
-                {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'boat_part5', image: 'boat_part5.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 150
                 }
             ]
         },
@@ -3490,35 +3460,31 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'boat_complete.png',
                 x: 490,
-                y: 220,
+                y: 200,
                 scale: 0.65
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'boat_part1', image: 'boat_part1.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 125
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'boat_part2', image: 'boat_part2.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 130
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'boat_part3', image: 'boat_part3.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 150
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'boat_part4', image: 'boat_part4.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 140
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
-                },
-                {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'boat_part5', image: 'boat_part5.png', scaleX: 0.5, scaleY: 0.5, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 150
                 }
             ]
         },
@@ -3767,35 +3733,31 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'raft_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.65
+                scale: 1
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'raft_part1', image: 'raft_part1.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 100
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'raft_part2', image: 'raft_part2.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 110
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'raft_part3', image: 'raft_part3.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 115
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'raft_part4', image: 'raft_part4.png', scaleX: 0.9, scaleY: 0.9, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 120
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
-                },
-                {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'raft_part5', image: 'raft_part5.png', scaleX: 1, scaleY: 1, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 160
                 }
             ]
         },
@@ -4046,35 +4008,35 @@ export const MINIGAME_CONFIGS = {
         gameId: 'assemble_object',
         config: {
             finishedObject: {
-                image: 'shield_complete.png',
+                image: 'truck_complete.png',
                 x: 490,
                 y: 220,
-                scale: 0.65
+                scale: 0.8
             },
             parts: [
                 {
-                    id: 'shield_part1', image: 'shield_part1.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 1, partOffsetY: 140
+                    id: 'part_body', image: 'truck_body.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 0, offsetY: 0, order: 1
                 },
                 {
-                    id: 'shield_part2', image: 'shield_part2.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 2, partOffsetY: 160
+                    id: 'part_wheel1', image: 'truck_wheel1.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: -105, offsetY: 30, order: 2
                 },
                 {
-                    id: 'shield_part3', image: 'shield_part3.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 3, partOffsetY: 145
+                    id: 'part_wheel2', image: 'truck_wheel2.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 90, offsetY: 30, order: 3
                 },
                 {
-                    id: 'shield_part4', image: 'shield_part4.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 4, partOffsetY: 115
+                    id: 'part_cabin', image: 'truck_cabin.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: -93, offsetY: -63, order: 4
                 },
                 {
-                    id: 'shield_part5', image: 'shield_part5.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 5, partOffsetY: 105
+                    id: 'part_cargo', image: 'truck_cargo.png', scaleX: 0.7, scaleY: 0.7, angle: 0,
+                    offsetX: 78, offsetY: -85, order: 5
                 },
                 {
-                    id: 'shield_part6', image: 'shield_part6.png', scaleX: 0.4, scaleY: 0.4, angle: 0,
-                    offsetX: 0, offsetY: 0, order: 6, partOffsetY: 115
+                    id: 'part_siren', image: 'truck_siren.png', scaleX: 1.2, scaleY: 1.2, angle: 0,
+                    offsetX: -62, offsetY: -152, order: 6
                 }
             ]
         },
