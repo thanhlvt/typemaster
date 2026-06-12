@@ -2392,7 +2392,7 @@ export const MINIGAME_CONFIGS = {
         gameId: 'collect_items',
         config: {
             items: [
-                { image: 'lapis.png', count: 10, width: 96, height: 96 }            
+                { image: 'lapis.png', count: 10, width: 96, height: 96 }
             ],
             container: {
                 image: 'basket.png',
@@ -3293,12 +3293,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
+                image: 'turtoise.png',
                 scale: 0.8,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'net2.png',
+                scale: 1.3,
             },
             x: 490,
             y: 230
@@ -3567,12 +3567,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'goldfish.png',
+                scale: 0.5,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'net2.png',
+                scale: 1.5,
             },
             x: 490,
             y: 230
@@ -3841,12 +3841,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
-                scale: 0.8,
+                image: 'dear.png',
+                scale: 0.95,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'cage3.png',
+                scale: 0.7,
             },
             x: 490,
             y: 230
@@ -4123,8 +4123,8 @@ export const MINIGAME_CONFIGS = {
                 scale: 0.8,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'bush.png',
+                scale: 0.8,
             },
             x: 490,
             y: 230
@@ -4397,12 +4397,12 @@ export const MINIGAME_CONFIGS = {
         gameId: 'rescue_animals',
         config: {
             animal: {
-                image: 'rabbit.png',
+                image: 'squirrel.png',
                 scale: 0.8,
             },
             cage: {
-                image: 'cage.png',
-                scale: 1,
+                image: 'cage3.png',
+                scale: 0.7,
             },
             x: 490,
             y: 230
@@ -8880,7 +8880,7 @@ export const MINIGAME_CONFIGS = {
                 image: 'hole.png',
                 scale: 0.4,
             },
-             mole: {
+            mole: {
                 image: 'crab.png',
                 scale: 0.4,
                 offsetX: 0,
@@ -9436,7 +9436,7 @@ export const MINIGAME_CONFIGS = {
                 image: 'hole.png',
                 scale: 0.4,
             },
-             mole: {
+            mole: {
                 image: 'crab.png',
                 scale: 0.4,
                 offsetX: 0,

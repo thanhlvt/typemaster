@@ -1443,8 +1443,8 @@ export const STORY_CONFIGS = {
     155: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Bọn tay sai của Cá Sấu đã trói bạn Cò Trắng bằng những sợi dây leo kìa." },
-            { character: 'monkey', text: "Gõ đúng các từ để cắt đứt dây leo và cứu bạn ấy ra nhé!" }
+            { character: 'monkey', text: "Bọn tay sai của Cá Sấu đã nhốt bạn Cò Trắng vào bụi rậm kìa." },
+            { character: 'monkey', text: "Gõ đúng các từ để nhổ bụi rậm cứu bạn ấy ra nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Cò Trắng đã vỗ cánh bay lên an toàn. Tiếp tục tiến lên thôi!" }
@@ -1575,8 +1575,8 @@ export const STORY_CONFIGS = {
     169: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Cá Sấu đã dùng dây thừng trói chặt bạn Rùa Con vào cột neo thuyền." },
-            { character: 'monkey', text: "Gõ đúng để cởi trói và giải cứu Rùa Con trước khi nước lên nhé!" }
+            { character: 'monkey', text: "Cá Sấu đã giăng lưới bắt mất bạn Rùa Con rồi." },
+            { character: 'monkey', text: "Gõ đúng để gỡ lưới và giải cứu Rùa Con trước khi nước dâng cao nhé!" }
         ],
         postGame: [
             { character: 'monkey', text: "Rùa Con đã an toàn bơi xuống nước. Chúng ta phải ngăn Cá Sấu lại!" }
@@ -1707,11 +1707,11 @@ export const STORY_CONFIGS = {
     183: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Nhìn kìa! Một bạn Cá Chép đang bị mắc kẹt trong lưới rêu của Cá Sấu." },
+            { character: 'monkey', text: "Nhìn kìa! Một bạn Cá Vàng đang bị mắc kẹt trong lưới của Cá Sấu." },
             { character: 'monkey', text: "Dòng thác đang đổ xuống rất mạnh, gõ đúng để cắt lưới cứu bạn ấy ngay!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Cá Chép đã quẫy đuôi bơi ngược dòng an toàn. Chúng ta làm tốt lắm!" }
+            { character: 'monkey', text: "Cá Vàng đã quẫy đuôi bơi ngược dòng an toàn. Chúng ta làm tốt lắm!" }
         ]
     },
     184: {
@@ -1971,11 +1971,11 @@ export const STORY_CONFIGS = {
     211: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Ôi không! Bạn Sơn Dương đang bị kẹt dưới một tảng đá nhỏ lăn xuống từ vách núi." },
-            { character: 'monkey', text: "Hãy gõ thật chính xác để hợp sức đẩy tảng đá ra và giải cứu bạn ấy!" }
+            { character: 'monkey', text: "Ôi không! Bạn Thỏ Nâu đang bị kẹt trong một bụi gai." },
+            { character: 'monkey', text: "Hãy gõ thật chính xác để nhổ bụi gai và giải cứu bạn ấy!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Sơn Dương đã thoát nạn và nhảy tót lên vách núi an toàn. Tuyệt vời!" }
+            { character: 'monkey', text: "Thỏ Nâu đã thoát nạn và nhảy tót lên vách núi an toàn. Tuyệt vời!" }
         ]
     },
     212: {
@@ -2103,11 +2103,11 @@ export const STORY_CONFIGS = {
     225: {
         minigame: 'rescue_animals',
         preGame: [
-            { character: 'monkey', text: "Trời ơi! Bạn Sóc Nâu bị Hổ Hung Ác dùng nhựa thông siêu dính bẫy chặt vào gốc cây rồi." },
-            { character: 'monkey', text: "Gõ thật chính xác để làm tan chảy lớp nhựa và giải cứu bạn Sóc ra ngoài nhé!" }
+            { character: 'monkey', text: "Trời ơi! Bạn Sóc bị Hổ Hung Ác nhốt vào lồng rồi." },
+            { character: 'monkey', text: "Gõ thật chính xác để mở khóa lồng và giải cứu bạn Sóc ra ngoài nhé!" }
         ],
         postGame: [
-            { character: 'monkey', text: "Sóc Nâu đã tung tăng trèo lên cành cây an toàn. Tiếng gầm của Hổ lại vang lên kìa!" }
+            { character: 'monkey', text: "Sóc đã tung tăng trèo lên cành cây an toàn. Tiếng gầm của Hổ lại vang lên kìa!" }
         ]
     },
     226: {
